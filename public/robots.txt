@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://md.ccwu.cc/sitemap.xml
