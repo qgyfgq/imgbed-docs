@@ -1,3 +1,7 @@
+---
+description: "Nederlandse ImgBed-documentatie voor afbeeldingshosting en bestandsopslag met Cloudflare, uploadkanalen, API-tokens, openbare galerie, willekeurige-afbeeldingen-API, back-ups, OCR en bloginstellingen."
+---
+
 # ImgBed
 
 Een alles-in-een tool voor persoonlijke contenthosting, gebouwd op het Cloudflare-ecosysteem.
@@ -21,6 +25,17 @@ Ons oorspronkelijke doel is dat iedereen een eigen site kan hebben voor het host
 
 Dit project wordt nog steeds verbeterd. Onze mogelijkheden zijn beperkt, maar we doen ons best om elke functie duidelijk, stabiel en prettig bruikbaar te maken. Als ImgBed je helpt om makkelijker je eigen plek voor afbeeldingshosting, blog of bestandsdeling te hebben, zijn we daar erg blij mee.
 
+## Belangrijke handleidingen
+
+- [Implementatie en snel starten](/nl-NL/)
+- [Uploadkanalen instellen](/nl-NL/upload/)
+- [Bestanden uploaden met een API-token](/nl-NL/Safety/api-token-upload)
+- [Bestanden beheren met een API-token](/nl-NL/Safety/api-token-file-management)
+- [Willekeurige-afbeeldingen-API en openbare galerie](/nl-NL/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2-opslag instellen](/nl-NL/upload/cloudflare-r2)
+- [WebDAV-toegang tot de site](/nl-NL/Safety/webdav-site-access)
+- [Blog instellen](/nl-NL/Other/blog)
+
 ## Aan de slag
 
 Implementeer ImgBed via <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed implementeren"><img src="../image/部署按钮.png" alt="ImgBed implementeren"></a> en krijg snel je eigen dienst voor afbeeldings- en bestandshosting.
@@ -33,4 +48,3 @@ Met dank aan de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarS
 
 - 🐛 Bugs of functieverzoeken: meld ze via [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Ander contact: axibayuit@gmail.com
-

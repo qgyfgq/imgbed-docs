@@ -1,3 +1,7 @@
+---
+description: "مستندات فارسی ImgBed برای میزبانی تصویر و فایل روی Cloudflare، کانال‌های آپلود، توکن API، گالری عمومی، API تصویر تصادفی، پشتیبان‌گیری، OCR و راه‌اندازی وبلاگ."
+---
+
 # ImgBed
 
 ابزاری همه‌کاره برای میزبانی محتوای شخصی، ساخته‌شده بر پایه اکوسیستم Cloudflare.
@@ -21,6 +25,17 @@ ImgBed از آپلود تصویر و مدیریت لینک شروع شد. اکن
 
 این پروژه همچنان در حال بهبود است. توان ما محدود است، اما تمام تلاش خود را می‌کنیم تا هر قابلیت روشن، پایدار و خوش‌دست باشد. اگر ImgBed به شما کمک کند راحت‌تر میزبان تصویر، وبلاگ یا فضای اشتراک‌گذاری فایل خودتان را داشته باشید، بسیار خوشحال می‌شویم.
 
+## راهنماهای اصلی
+
+- [استقرار و شروع سریع](/fa/)
+- [تنظیم کانال‌های آپلود](/fa/upload/)
+- [آپلود فایل با توکن API](/fa/Safety/api-token-upload)
+- [مدیریت فایل با توکن API](/fa/Safety/api-token-file-management)
+- [API تصویر تصادفی و گالری عمومی](/fa/Other/random-image-api-and-public-gallery)
+- [تنظیم فضای ذخیره‌سازی Cloudflare R2](/fa/upload/cloudflare-r2)
+- [دسترسی به سایت از طریق WebDAV](/fa/Safety/webdav-site-access)
+- [راه‌اندازی وبلاگ](/fa/Other/blog)
+
 ## شروع استفاده
 
 با <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="استقرار ImgBed"><img src="../image/部署按钮.png" alt="استقرار ImgBed"></a> ImgBed را مستقر کنید و سریع سرویس میزبانی تصویر و فایل خودتان را داشته باشید.
@@ -33,5 +48,4 @@ ImgBed از آپلود تصویر و مدیریت لینک شروع شد. اکن
 
 - 🐛 باگ یا پیشنهاد قابلیت: در [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) ثبت کنید
 - 📧 تماس دیگر: axibayuit@gmail.com
-
 

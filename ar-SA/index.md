@@ -1,3 +1,7 @@
+---
+description: "توثيق ImgBed بالعربية لاستضافة الصور والملفات على Cloudflare، وإعداد قنوات الرفع، ورموز API، والمعرض العام، وواجهة الصور العشوائية، والنسخ الاحتياطي، وOCR، والمدونة."
+---
+
 # ImgBed
 
 أداة شاملة لاستضافة المحتوى الشخصي مبنية على منظومة Cloudflare.
@@ -21,6 +25,17 @@
 
 ما زال هذا المشروع يتحسن باستمرار. قدراتنا محدودة، لكننا سنبذل كل ما نستطيع لجعل كل ميزة واضحة ومستقرة وسهلة الاستخدام. إذا ساعدك ImgBed على امتلاك مساحة صور أو مدونة أو مساحة مشاركة ملفات خاصة بك بسهولة أكبر، فسنكون سعداء جدا.
 
+## أدلة أساسية
+
+- [النشر والبدء السريع](/ar-SA/)
+- [إعداد قنوات الرفع](/ar-SA/upload/)
+- [رفع الملفات باستخدام رمز API](/ar-SA/Safety/api-token-upload)
+- [إدارة الملفات باستخدام رمز API](/ar-SA/Safety/api-token-file-management)
+- [واجهة الصور العشوائية والمعرض العام](/ar-SA/Other/random-image-api-and-public-gallery)
+- [إعداد تخزين Cloudflare R2](/ar-SA/upload/cloudflare-r2)
+- [الوصول إلى الموقع عبر WebDAV](/ar-SA/Safety/webdav-site-access)
+- [إعداد المدونة](/ar-SA/Other/blog)
+
 ## ابدأ التجربة
 
 استخدم <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="نشر ImgBed"><img src="../image/部署按钮.png" alt="نشر ImgBed"></a> لنشر ImgBed، واحصل بسرعة على خدمة خاصة بك لاستضافة الصور والملفات.
@@ -33,5 +48,4 @@
 
 - 🐛 للأخطاء أو اقتراحات الميزات: يرجى الإرسال عبر [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 تواصل آخر: axibayuit@gmail.com
-
 

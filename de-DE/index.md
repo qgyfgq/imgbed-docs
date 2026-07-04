@@ -1,3 +1,7 @@
+---
+description: "Deutsche ImgBed-Dokumentation für Bildhosting und Dateihosting mit Cloudflare, Upload-Kanäle, API-Token, öffentliche Galerie, Zufallsbild-API, Sicherungen, OCR und Blog-Einrichtung."
+---
+
 # ImgBed
 
 Ein umfassendes persönliches Content-Hosting-Tool auf Basis des Cloudflare-Ökosystems.
@@ -21,6 +25,17 @@ Unser ursprüngliches Ziel ist es, dass jeder eine eigene Website zum Hosten von
 
 Dieses Projekt wird weiterhin verbessert. Unsere Möglichkeiten sind begrenzt, aber wir werden unser Bestes tun, um jede Funktion klar, stabil und gut nutzbar zu machen. Wenn ImgBed Ihnen hilft, einfacher einen eigenen Bildhost, Blog oder Dateifreigabebereich zu besitzen, freut uns das sehr.
 
+## Wichtige Anleitungen
+
+- [Bereitstellung und Schnellstart](/de-DE/)
+- [Upload-Kanäle einrichten](/de-DE/upload/)
+- [Dateien mit API-Token hochladen](/de-DE/Safety/api-token-upload)
+- [Dateien mit API-Token verwalten](/de-DE/Safety/api-token-file-management)
+- [Zufallsbild-API und öffentliche Galerie](/de-DE/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2-Speicher einrichten](/de-DE/upload/cloudflare-r2)
+- [WebDAV-Zugriff auf die Website](/de-DE/Safety/webdav-site-access)
+- [Blog einrichten](/de-DE/Other/blog)
+
 ## Jetzt starten
 
 Stellen Sie ImgBed über <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed bereitstellen"><img src="../image/部署按钮.png" alt="ImgBed bereitstellen"></a> bereit und erhalten Sie schnell Ihren eigenen Dienst für Bild- und Datei-Hosting.
@@ -33,4 +48,3 @@ Wir danken den Open-Source-Projekten [CloudFlare-ImgBed](https://github.com/MarS
 
 - 🐛 Bugs oder Funktionsvorschläge: bitte in [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) melden
 - 📧 Sonstiger Kontakt: axibayuit@gmail.com
-

@@ -1,3 +1,7 @@
+---
+description: "Documentação do ImgBed em português do Brasil para hospedar imagens e arquivos na Cloudflare, configurar canais de envio, tokens de API, galeria pública, API de imagem aleatória, backups, OCR e blog."
+---
+
 # ImgBed
 
 Uma ferramenta completa de hospedagem de conteúdo pessoal baseada no ecossistema Cloudflare.
@@ -21,6 +25,17 @@ Nosso objetivo inicial é permitir que cada pessoa tenha seu próprio site de ho
 
 Este projeto continua em evolução. Nossa capacidade é limitada, mas vamos nos esforçar ao máximo para deixar cada recurso claro, estável e fácil de usar. Se o ImgBed ajudar você a ter seu próprio host de imagens, blog ou espaço de compartilhamento de arquivos com mais facilidade, ficaremos muito felizes.
 
+## Guias principais
+
+- [Implantação e primeiros passos](/pt-BR/)
+- [Configuração de canais de envio](/pt-BR/upload/)
+- [Enviar arquivos com token de API](/pt-BR/Safety/api-token-upload)
+- [Gerenciar arquivos com token de API](/pt-BR/Safety/api-token-file-management)
+- [API de imagem aleatória e galeria pública](/pt-BR/Other/random-image-api-and-public-gallery)
+- [Configuração de armazenamento no Cloudflare R2](/pt-BR/upload/cloudflare-r2)
+- [Acesso ao site por WebDAV](/pt-BR/Safety/webdav-site-access)
+- [Configuração do blog](/pt-BR/Other/blog)
+
 ## Comece a usar
 
 Implante o ImgBed em <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Implantar ImgBed"><img src="../image/部署按钮.png" alt="Implantar ImgBed"></a> e tenha rapidamente seu próprio serviço de hospedagem de imagens e arquivos.
@@ -33,5 +48,4 @@ Agradecemos as contribuições dos projetos de código aberto [CloudFlare-ImgBed
 
 - 🐛 Bugs ou sugestões: envie em [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Outro contato: axibayuit@gmail.com
-
 

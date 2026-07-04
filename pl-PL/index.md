@@ -1,3 +1,7 @@
+---
+description: "Polska dokumentacja ImgBed dotycząca hostingu obrazów i plików w Cloudflare, kanałów wysyłania, tokenów API, galerii publicznej, API losowych obrazów, kopii zapasowych, OCR i konfiguracji bloga."
+---
+
 # ImgBed
 
 Wszechstronne narzędzie do hostingu osobistych treści, oparte na ekosystemie Cloudflare.
@@ -21,6 +25,17 @@ Naszą pierwotną intencją jest to, aby każdy mógł mieć własną stronę do
 
 Ten projekt nadal się rozwija. Nasze możliwości są ograniczone, ale zrobimy wszystko, aby każda funkcja była jasna, stabilna i wygodna w użyciu. Jeśli ImgBed pomoże Ci łatwiej mieć własny hosting obrazów, blog lub przestrzeń do udostępniania plików, będziemy bardzo szczęśliwi.
 
+## Najważniejsze poradniki
+
+- [Wdrożenie i szybki start](/pl-PL/)
+- [Konfiguracja kanałów wysyłania](/pl-PL/upload/)
+- [Wysyłanie plików za pomocą tokenu API](/pl-PL/Safety/api-token-upload)
+- [Zarządzanie plikami za pomocą tokenu API](/pl-PL/Safety/api-token-file-management)
+- [API losowych obrazów i galeria publiczna](/pl-PL/Other/random-image-api-and-public-gallery)
+- [Konfiguracja magazynu Cloudflare R2](/pl-PL/upload/cloudflare-r2)
+- [Dostęp do witryny przez WebDAV](/pl-PL/Safety/webdav-site-access)
+- [Konfiguracja bloga](/pl-PL/Other/blog)
+
 ## Zacznij korzystać
 
 Wdróż ImgBed przez <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Wdróż ImgBed"><img src="../image/部署按钮.png" alt="Wdróż ImgBed"></a> i szybko uruchom własną usługę hostingu obrazów oraz plików.
@@ -33,5 +48,4 @@ Dziękujemy projektom open source [CloudFlare-ImgBed](https://github.com/MarSeve
 
 - 🐛 Błędy lub sugestie funkcji: zgłoś w [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Inny kontakt: axibayuit@gmail.com
-
 

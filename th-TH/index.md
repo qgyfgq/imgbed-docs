@@ -1,3 +1,7 @@
+---
+description: "เอกสาร ImgBed ภาษาไทยสำหรับโฮสต์รูปภาพและไฟล์บน Cloudflare ตั้งค่าช่องทางอัปโหลด โทเค็น API แกลเลอรีสาธารณะ API รูปภาพสุ่ม การสำรองข้อมูล OCR และบล็อก"
+---
+
 # ImgBed
 
 เครื่องมือโฮสต์คอนเทนต์ส่วนตัวแบบครบในตัวเดียว บนระบบนิเวศของ Cloudflare
@@ -21,6 +25,17 @@ ImgBed เริ่มต้นจากการอัปโหลดรูป�
 
 โปรเจกต์นี้ยังพัฒนาอย่างต่อเนื่อง ความสามารถของเรามีจำกัด แต่เราจะพยายามเต็มที่ให้ทุกฟีเจอร์ชัดเจน เสถียร และใช้งานดี หาก ImgBed ช่วยให้คุณมีพื้นที่โฮสต์รูป บล็อก หรือแชร์ไฟล์ของตัวเองได้ง่ายขึ้น เราจะดีใจมาก
 
+## คู่มือหลัก
+
+- [การปรับใช้และเริ่มต้นอย่างรวดเร็ว](/th-TH/)
+- [การตั้งค่าช่องทางอัปโหลด](/th-TH/upload/)
+- [อัปโหลดไฟล์ด้วยโทเค็น API](/th-TH/Safety/api-token-upload)
+- [จัดการไฟล์ด้วยโทเค็น API](/th-TH/Safety/api-token-file-management)
+- [API รูปภาพสุ่มและแกลเลอรีสาธารณะ](/th-TH/Other/random-image-api-and-public-gallery)
+- [การตั้งค่าพื้นที่จัดเก็บ Cloudflare R2](/th-TH/upload/cloudflare-r2)
+- [เข้าถึงไซต์ผ่าน WebDAV](/th-TH/Safety/webdav-site-access)
+- [การตั้งค่าบล็อก](/th-TH/Other/blog)
+
 ## เริ่มใช้งาน
 
 ปรับใช้ ImgBed ผ่าน <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ปรับใช้ ImgBed"><img src="../image/部署按钮.png" alt="ปรับใช้ ImgBed"></a> เพื่อมีบริการฝากรูปและไฟล์ของคุณเองได้อย่างรวดเร็ว
@@ -33,4 +48,3 @@ ImgBed เริ่มต้นจากการอัปโหลดรูป�
 
 - 🐛 ปัญหาหรือข้อเสนอแนะฟีเจอร์: ส่งที่ [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 ติดต่ออื่น ๆ: axibayuit@gmail.com
-

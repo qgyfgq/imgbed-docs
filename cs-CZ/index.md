@@ -1,3 +1,7 @@
+---
+description: "Česká dokumentace ImgBed pro hostování obrázků a souborů na Cloudflare, nastavení kanálů pro nahrávání, tokeny API, veřejnou galerii, API náhodných obrázků, zálohy, OCR a blog."
+---
+
 # ImgBed
 
 Univerzální nástroj pro osobní hosting obsahu postavený na ekosystému Cloudflare.
@@ -21,6 +25,17 @@ Naším původním záměrem je, aby každý mohl mít vlastní web pro hostová
 
 Projekt se stále zlepšuje. Naše možnosti jsou omezené, ale uděláme maximum pro to, aby každá funkce byla jasná, stabilní a příjemná k použití. Pokud vám ImgBed pomůže snadněji získat vlastní hosting obrázků, blog nebo prostor pro sdílení souborů, budeme velmi rádi.
 
+## Hlavní návody
+
+- [Nasazení a rychlý start](/cs-CZ/)
+- [Nastavení kanálů pro nahrávání](/cs-CZ/upload/)
+- [Nahrávání souborů pomocí tokenu API](/cs-CZ/Safety/api-token-upload)
+- [Správa souborů pomocí tokenu API](/cs-CZ/Safety/api-token-file-management)
+- [API náhodných obrázků a veřejná galerie](/cs-CZ/Other/random-image-api-and-public-gallery)
+- [Nastavení úložiště Cloudflare R2](/cs-CZ/upload/cloudflare-r2)
+- [Přístup k webu přes WebDAV](/cs-CZ/Safety/webdav-site-access)
+- [Nastavení blogu](/cs-CZ/Other/blog)
+
 ## Začněte používat
 
 Nasaďte ImgBed přes <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Nasadit ImgBed"><img src="../image/部署按钮.png" alt="Nasadit ImgBed"></a> a rychle získejte vlastní službu pro hostování obrázků a souborů.
@@ -33,5 +48,4 @@ Děkujeme open-source projektům [CloudFlare-ImgBed](https://github.com/MarSeven
 
 - 🐛 Chyby nebo návrhy funkcí: pošlete do [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Jiný kontakt: axibayuit@gmail.com
-
 

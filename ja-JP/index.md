@@ -1,3 +1,7 @@
+---
+description: "ImgBed 日本語ドキュメント。Cloudflare を使った画像ホスティング、ファイルホスティング、保存先チャネル、API トークン、公開ギャラリー、ランダム画像 API、バックアップ、OCR、ブログ設定を解説します。"
+---
+
 # ImgBed
 
 Cloudflare エコシステムを基盤にした、オールインワンの個人向けコンテンツホスティングツールです。
@@ -21,6 +25,17 @@ ImgBed は画像アップロードとリンク管理から始まり、今では�
 
 このプロジェクトは今も継続的に改善されています。私たちの力には限りがありますが、すべての機能を分かりやすく、安定して、使いやすくするために全力を尽くします。ImgBed があなた自身の画像ホスト、ブログ、ファイル共有スペースをより簡単に持つ助けになれば、とても嬉しいです。
 
+## 主要ガイド
+
+- [デプロイとクイックスタート](/ja-JP/)
+- [アップロード先チャネルの設定](/ja-JP/upload/)
+- [API トークンでファイルをアップロード](/ja-JP/Safety/api-token-upload)
+- [API トークンでファイルを管理](/ja-JP/Safety/api-token-file-management)
+- [ランダム画像 API と公開ギャラリー](/ja-JP/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 ストレージ設定](/ja-JP/upload/cloudflare-r2)
+- [WebDAV でのサイトアクセス](/ja-JP/Safety/webdav-site-access)
+- [ブログ機能の設定](/ja-JP/Other/blog)
+
 ## 使い始める
 
 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed をデプロイ"><img src="../image/部署按钮.png" alt="ImgBed をデプロイ"></a> から ImgBed をデプロイして、自分専用の画像・ファイルホスティングサービスをすばやく用意できます。
@@ -33,5 +48,4 @@ ImgBed は画像アップロードとリンク管理から始まり、今では�
 
 - 🐛 不具合や機能提案：[GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) に投稿してください
 - 📧 その他の連絡先：axibayuit@gmail.com
-
 

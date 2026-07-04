@@ -1,3 +1,7 @@
+---
+description: "Dokumentasi ImgBed Bahasa Melayu untuk pengehosan imej dan fail di Cloudflare, saluran muat naik, token API, galeri awam, API imej rawak, sandaran, OCR dan tetapan blog."
+---
+
 # ImgBed
 
 Alat serba lengkap untuk pengehosan kandungan peribadi, dibina atas ekosistem Cloudflare.
@@ -21,6 +25,17 @@ Matlamat asal kami ialah membantu setiap orang memiliki tapak pengehosan gambar 
 
 Projek ini masih terus diperbaiki. Keupayaan kami terhad, tetapi kami akan cuba sebaik mungkin untuk menjadikan setiap ciri jelas, stabil dan mudah digunakan. Jika ImgBed membantu anda memiliki ruang pengehosan imej, blog atau perkongsian fail sendiri dengan lebih mudah, kami sangat gembira.
 
+## Panduan utama
+
+- [Pelancaran dan mula pantas](/ms-MY/)
+- [Tetapan saluran muat naik](/ms-MY/upload/)
+- [Muat naik fail dengan token API](/ms-MY/Safety/api-token-upload)
+- [Urus fail dengan token API](/ms-MY/Safety/api-token-file-management)
+- [API imej rawak dan galeri awam](/ms-MY/Other/random-image-api-and-public-gallery)
+- [Tetapan storan Cloudflare R2](/ms-MY/upload/cloudflare-r2)
+- [Akses laman melalui WebDAV](/ms-MY/Safety/webdav-site-access)
+- [Tetapan blog](/ms-MY/Other/blog)
+
 ## Mula guna
 
 Laksanakan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Laksanakan ImgBed"><img src="../image/部署按钮.png" alt="Laksanakan ImgBed"></a> untuk segera memiliki perkhidmatan pengehosan imej dan fail sendiri.
@@ -33,5 +48,4 @@ Terima kasih kepada projek sumber terbuka [CloudFlare-ImgBed](https://github.com
 
 - 🐛 Pepijat atau cadangan ciri: hantar di [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Hubungan lain: axibayuit@gmail.com
-
 

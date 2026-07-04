@@ -1,3 +1,7 @@
+---
+description: "Türkçe ImgBed belgeleri: Cloudflare üzerinde görsel ve dosya barındırma, yükleme kanalları, API belirteçleri, herkese açık galeri, rastgele görsel API'si, yedekleme, OCR ve blog kurulumu."
+---
+
 # ImgBed
 
 Cloudflare ekosistemi üzerine kurulu, her şeyi kapsayan kişisel içerik barındırma aracı.
@@ -21,6 +25,17 @@ Başlangıçtaki amacımız, herkesin kendine ait bir görsel barındırma ve do
 
 Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelliği açık, kararlı ve kullanımı iyi hale getirmek için elimizden geleni yapacağız. ImgBed kendi görsel barındırma alanınıza, blogunuza veya dosya paylaşım alanınıza daha kolay sahip olmanıza yardımcı olursa çok mutlu oluruz.
 
+## Temel kılavuzlar
+
+- [Dağıtım ve hızlı başlangıç](/tr-TR/)
+- [Yükleme kanallarını yapılandırma](/tr-TR/upload/)
+- [API belirteciyle dosya yükleme](/tr-TR/Safety/api-token-upload)
+- [API belirteciyle dosya yönetimi](/tr-TR/Safety/api-token-file-management)
+- [Rastgele görsel API'si ve herkese açık galeri](/tr-TR/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 depolama yapılandırması](/tr-TR/upload/cloudflare-r2)
+- [WebDAV ile site erişimi](/tr-TR/Safety/webdav-site-access)
+- [Blog kurulumu](/tr-TR/Other/blog)
+
 ## Kullanmaya başlayın
 
 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed’i dağıt"><img src="../image/部署按钮.png" alt="ImgBed’i dağıt"></a> üzerinden ImgBed’i dağıtarak hızla kendi görsel ve dosya barındırma hizmetinize sahip olun.
@@ -33,5 +48,4 @@ Açık kaynak projeleri [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudF
 
 - 🐛 Hata veya özellik önerileri: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) üzerinden gönderin
 - 📧 Diğer iletişim: axibayuit@gmail.com
-
 

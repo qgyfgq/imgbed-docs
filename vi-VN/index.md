@@ -1,3 +1,7 @@
+---
+description: "Tài liệu ImgBed tiếng Việt về lưu trữ hình ảnh và tệp trên Cloudflare, kênh tải lên, mã API, thư viện công khai, API ảnh ngẫu nhiên, sao lưu, OCR và thiết lập blog."
+---
+
 # ImgBed
 
 Công cụ lưu trữ nội dung cá nhân toàn diện, xây dựng trên hệ sinh thái Cloudflare.
@@ -21,6 +25,17 @@ Mục tiêu ban đầu của chúng tôi là giúp mọi người đều có m�
 
 Dự án này vẫn đang tiếp tục hoàn thiện. Khả năng của chúng tôi có giới hạn, nhưng chúng tôi sẽ cố hết sức để từng tính năng rõ ràng, ổn định và dễ dùng. Nếu ImgBed giúp bạn dễ dàng sở hữu nơi lưu ảnh, blog hoặc không gian chia sẻ tệp riêng, chúng tôi sẽ rất vui.
 
+## Hướng dẫn chính
+
+- [Triển khai và bắt đầu nhanh](/vi-VN/)
+- [Thiết lập kênh tải lên](/vi-VN/upload/)
+- [Tải tệp lên bằng mã API](/vi-VN/Safety/api-token-upload)
+- [Quản lý tệp bằng mã API](/vi-VN/Safety/api-token-file-management)
+- [API ảnh ngẫu nhiên và thư viện công khai](/vi-VN/Other/random-image-api-and-public-gallery)
+- [Thiết lập lưu trữ Cloudflare R2](/vi-VN/upload/cloudflare-r2)
+- [Truy cập trang qua WebDAV](/vi-VN/Safety/webdav-site-access)
+- [Thiết lập blog](/vi-VN/Other/blog)
+
 ## Bắt đầu sử dụng
 
 Triển khai ImgBed qua <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Triển khai ImgBed"><img src="../image/部署按钮.png" alt="Triển khai ImgBed"></a> để nhanh chóng có dịch vụ lưu trữ ảnh và tệp của riêng bạn.
@@ -33,5 +48,4 @@ Xin cảm ơn đóng góp của các dự án mã nguồn mở [CloudFlare-ImgBe
 
 - 🐛 Lỗi hoặc đề xuất tính năng: gửi tại [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Liên hệ khác: axibayuit@gmail.com
-
 

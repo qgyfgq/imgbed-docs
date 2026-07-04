@@ -1,3 +1,7 @@
+---
+description: "ImgBed की हिन्दी दस्तावेज़ीकरण: Cloudflare पर इमेज और फ़ाइल होस्टिंग, अपलोड चैनल, API टोकन, सार्वजनिक गैलरी, रैंडम इमेज API, बैकअप, OCR और ब्लॉग सेटअप।"
+---
+
 # ImgBed
 
 Cloudflare इकोसिस्टम पर आधारित एक संपूर्ण व्यक्तिगत सामग्री होस्टिंग उपकरण।
@@ -21,6 +25,17 @@ ImgBed की शुरुआत तस्वीर अपलोड और ल�
 
 यह परियोजना अभी भी लगातार बेहतर हो रही है। हमारी क्षमता सीमित है, लेकिन हम हर सुविधा को स्पष्ट, स्थिर और उपयोग में आसान बनाने की पूरी कोशिश करेंगे। अगर ImgBed आपको अपना चित्र होस्टिंग स्थान, ब्लॉग या फ़ाइल साझा करने की जगह आसानी से बनाने में मदद करे, तो हमें बहुत खुशी होगी।
 
+## मुख्य मार्गदर्शिकाएँ
+
+- [डिप्लॉयमेंट और त्वरित शुरुआत](/hi/)
+- [अपलोड चैनल सेटअप](/hi/upload/)
+- [API टोकन से फ़ाइल अपलोड](/hi/Safety/api-token-upload)
+- [API टोकन से फ़ाइल प्रबंधन](/hi/Safety/api-token-file-management)
+- [रैंडम इमेज API और सार्वजनिक गैलरी](/hi/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 स्टोरेज सेटअप](/hi/upload/cloudflare-r2)
+- [WebDAV के ज़रिए साइट एक्सेस](/hi/Safety/webdav-site-access)
+- [ब्लॉग सेटअप](/hi/Other/blog)
+
 ## शुरू करें
 
 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed डिप्लॉय करें"><img src="../image/部署按钮.png" alt="ImgBed डिप्लॉय करें"></a> से ImgBed डिप्लॉय करें और जल्दी ही अपनी तस्वीर व फ़ाइल होस्टिंग सेवा शुरू करें।
@@ -33,5 +48,4 @@ ImgBed की शुरुआत तस्वीर अपलोड और ल�
 
 - 🐛 समस्या या सुविधा सुझाव: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) में भेजें
 - 📧 अन्य संपर्क: axibayuit@gmail.com
-
 

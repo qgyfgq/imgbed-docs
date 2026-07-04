@@ -1,3 +1,7 @@
+---
+description: "ImgBed 中文文档，介绍 Cloudflare 图床部署、文件托管、上传渠道、API 令牌、公开图库、随机图片接口、备份、OCR 和博客搭建。"
+---
+
 # ImgBed
 
 基于 Cloudflare 生态的全能个人内容托管工具。
@@ -21,6 +25,17 @@
 
 这个项目仍在持续完善。我们能力有限，但会尽全力把每一个功能都做清楚、做稳定、做好用。如果 ImgBed 能帮你更轻松地拥有自己的图床、博客或文件分享空间，我们会非常开心。
 
+## 重点指南
+
+- [部署与快速开始](/cn/)
+- [上传渠道配置](/cn/upload/)
+- [API 令牌上传文件](/cn/Safety/api-token-upload)
+- [API 令牌文件管理](/cn/Safety/api-token-file-management)
+- [随机图片接口与公开图库](/cn/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 存储配置](/cn/upload/cloudflare-r2)
+- [WebDAV 站点访问](/cn/Safety/webdav-site-access)
+- [博客功能说明](/cn/Other/blog)
+
 ## 开始体验
 
 通过 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="部署 ImgBed"><img src="../image/部署按钮.png" alt="部署 ImgBed"></a> 部署 ImgBed，快速拥有自己的图床与文件托管服务。
@@ -33,4 +48,3 @@
 
 - 🐛 遇到 Bug 或功能建议：请提交 [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 其他联系：axibayuit@gmail.com
-

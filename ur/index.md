@@ -1,3 +1,7 @@
+---
+description: "اردو ImgBed دستاویزات: Cloudflare پر تصاویر اور فائلوں کی ہوسٹنگ، اپ لوڈ چینلز، API ٹوکن، عوامی گیلری، بے ترتیب تصویر API، بیک اپ، OCR اور بلاگ سیٹ اپ۔"
+---
+
 # ImgBed
 
 Cloudflare ماحولیاتی نظام پر مبنی ایک مکمل ذاتی مواد ہوسٹنگ ٹول۔
@@ -21,6 +25,17 @@ ImgBed کی شروعات تصویر اپ لوڈ اور لنک مینجمنٹ س�
 
 یہ منصوبہ مسلسل بہتر ہو رہا ہے۔ ہماری صلاحیت محدود ہے، لیکن ہم ہر فیچر کو واضح، مستحکم اور استعمال میں آسان بنانے کی پوری کوشش کریں گے۔ اگر ImgBed آپ کو اپنا تصویر ہوسٹنگ مقام، بلاگ یا فائل شیئرنگ جگہ آسانی سے رکھنے میں مدد دے، تو ہمیں بہت خوشی ہوگی۔
 
+## اہم رہنما
+
+- [تنصیب اور فوری آغاز](/ur/)
+- [اپ لوڈ چینلز کی ترتیب](/ur/upload/)
+- [API ٹوکن سے فائل اپ لوڈ](/ur/Safety/api-token-upload)
+- [API ٹوکن سے فائلوں کا انتظام](/ur/Safety/api-token-file-management)
+- [بے ترتیب تصویر API اور عوامی گیلری](/ur/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 اسٹوریج کی ترتیب](/ur/upload/cloudflare-r2)
+- [WebDAV کے ذریعے سائٹ تک رسائی](/ur/Safety/webdav-site-access)
+- [بلاگ سیٹ اپ](/ur/Other/blog)
+
 ## استعمال شروع کریں
 
 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed تعینات کریں"><img src="../image/部署按钮.png" alt="ImgBed تعینات کریں"></a> سے ImgBed تعینات کریں اور جلد اپنی تصویر اور فائل ہوسٹنگ سروس حاصل کریں۔
@@ -33,5 +48,4 @@ ImgBed کی شروعات تصویر اپ لوڈ اور لنک مینجمنٹ س�
 
 - 🐛 خرابی یا فیچر کی تجویز: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) میں بھیجیں
 - 📧 دیگر رابطہ: axibayuit@gmail.com
-
 

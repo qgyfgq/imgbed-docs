@@ -1,3 +1,7 @@
+---
+description: "ImgBed documentation for Cloudflare image hosting, file hosting, storage channels, API tokens, public gallery, random image API, backups, OCR, and blog setup."
+---
+
 # ImgBed
 
 An all-in-one personal content hosting tool built on the Cloudflare ecosystem.
@@ -21,6 +25,17 @@ Our original goal is to help everyone have their own image hosting and file shar
 
 This project is still being improved. Our ability is limited, but we will do our best to make every feature clear, stable, and pleasant to use. If ImgBed helps you own your own image host, blog, or file sharing space more easily, we will be very happy.
 
+## Essential Guides
+
+- [Deployment and quick start](/en/)
+- [Upload channel setup](/en/upload/)
+- [Upload files with an API token](/en/Safety/api-token-upload)
+- [Manage files with an API token](/en/Safety/api-token-file-management)
+- [Random image API and public gallery](/en/Other/random-image-api-and-public-gallery)
+- [Cloudflare R2 storage setup](/en/upload/cloudflare-r2)
+- [WebDAV site access](/en/Safety/webdav-site-access)
+- [Blog setup](/en/Other/blog)
+
 ## Start Using
 
 Deploy ImgBed from <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Deploy ImgBed"><img src="../image/部署按钮.png" alt="Deploy ImgBed"></a> and quickly get your own image hosting and file hosting service.
@@ -33,5 +48,4 @@ Special thanks to the open source projects [CloudFlare-ImgBed](https://github.co
 
 - 🐛 Bugs or feature requests: please submit [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Other contact: axibayuit@gmail.com
-
 
