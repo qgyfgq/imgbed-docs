@@ -25,6 +25,14 @@ ImgBed เริ่มต้นจากการอัปโหลดรูป�
 
 โปรเจกต์นี้ยังพัฒนาอย่างต่อเนื่อง ความสามารถของเรามีจำกัด แต่เราจะพยายามเต็มที่ให้ทุกฟีเจอร์ชัดเจน เสถียร และใช้งานดี หาก ImgBed ช่วยให้คุณมีพื้นที่โฮสต์รูป บล็อก หรือแชร์ไฟล์ของตัวเองได้ง่ายขึ้น เราจะดีใจมาก
 
+## เริ่มใช้งาน
+
+ปรับใช้ ImgBed ผ่าน <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ปรับใช้ ImgBed"><img src="../image/部署按钮.png" alt="ปรับใช้ ImgBed"></a> เพื่อมีบริการฝากรูปและไฟล์ของคุณเองได้อย่างรวดเร็ว
+
+## ขอบคุณโอเพนซอร์ส
+
+ขอขอบคุณโปรเจกต์โอเพนซอร์ส [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) และ [Mizuki](https://github.com/LyraVoid/Mizuki) สำหรับการมีส่วนร่วม
+
 ## คู่มือหลัก
 
 - [การปรับใช้และเริ่มต้นอย่างรวดเร็ว](/th-TH/)
@@ -35,14 +43,6 @@ ImgBed เริ่มต้นจากการอัปโหลดรูป�
 - [การตั้งค่าพื้นที่จัดเก็บ Cloudflare R2](/th-TH/upload/cloudflare-r2)
 - [เข้าถึงไซต์ผ่าน WebDAV](/th-TH/Safety/webdav-site-access)
 - [การตั้งค่าบล็อก](/th-TH/Other/blog)
-
-## เริ่มใช้งาน
-
-ปรับใช้ ImgBed ผ่าน <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ปรับใช้ ImgBed"><img src="../image/部署按钮.png" alt="ปรับใช้ ImgBed"></a> เพื่อมีบริการฝากรูปและไฟล์ของคุณเองได้อย่างรวดเร็ว
-
-## ขอบคุณโอเพนซอร์ส
-
-ขอขอบคุณโปรเจกต์โอเพนซอร์ส [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) และ [Mizuki](https://github.com/LyraVoid/Mizuki) สำหรับการมีส่วนร่วม
 
 ## ความคิดเห็น
 

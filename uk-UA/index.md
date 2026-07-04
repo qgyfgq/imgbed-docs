@@ -25,6 +25,14 @@ ImgBed починався із завантаження зображень і к
 
 Проєкт і далі вдосконалюється. Наші можливості обмежені, але ми зробимо все можливе, щоб кожна функція була зрозумілою, стабільною та зручною. Якщо ImgBed допоможе вам легше мати власний хостинг зображень, блог або простір для обміну файлами, ми будемо дуже раді.
 
+## Почати користування
+
+Розгорніть ImgBed через <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Розгорнути ImgBed"><img src="../image/部署按钮.png" alt="Розгорнути ImgBed"></a> і швидко отримайте власний сервіс для хостингу зображень і файлів.
+
+## Подяка проєктам з відкритим кодом
+
+Дякуємо проєктам з відкритим кодом [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) і [Mizuki](https://github.com/LyraVoid/Mizuki) за їхній внесок.
+
 ## Основні посібники
 
 - [Розгортання і швидкий старт](/uk-UA/)
@@ -35,14 +43,6 @@ ImgBed починався із завантаження зображень і к
 - [Налаштування сховища Cloudflare R2](/uk-UA/upload/cloudflare-r2)
 - [Доступ до сайту через WebDAV](/uk-UA/Safety/webdav-site-access)
 - [Налаштування блогу](/uk-UA/Other/blog)
-
-## Почати користування
-
-Розгорніть ImgBed через <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Розгорнути ImgBed"><img src="../image/部署按钮.png" alt="Розгорнути ImgBed"></a> і швидко отримайте власний сервіс для хостингу зображень і файлів.
-
-## Подяка проєктам з відкритим кодом
-
-Дякуємо проєктам з відкритим кодом [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) і [Mizuki](https://github.com/LyraVoid/Mizuki) за їхній внесок.
 
 ## Відгуки
 

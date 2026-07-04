@@ -25,6 +25,14 @@ ImgBed از آپلود تصویر و مدیریت لینک شروع شد. اکن
 
 این پروژه همچنان در حال بهبود است. توان ما محدود است، اما تمام تلاش خود را می‌کنیم تا هر قابلیت روشن، پایدار و خوش‌دست باشد. اگر ImgBed به شما کمک کند راحت‌تر میزبان تصویر، وبلاگ یا فضای اشتراک‌گذاری فایل خودتان را داشته باشید، بسیار خوشحال می‌شویم.
 
+## شروع استفاده
+
+با <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="استقرار ImgBed"><img src="../image/部署按钮.png" alt="استقرار ImgBed"></a> ImgBed را مستقر کنید و سریع سرویس میزبانی تصویر و فایل خودتان را داشته باشید.
+
+## سپاس از متن‌باز
+
+از پروژه‌های متن‌باز [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) و [Mizuki](https://github.com/LyraVoid/Mizuki) بابت مشارکتشان سپاسگزاریم.
+
 ## راهنماهای اصلی
 
 - [استقرار و شروع سریع](/fa/)
@@ -36,16 +44,7 @@ ImgBed از آپلود تصویر و مدیریت لینک شروع شد. اکن
 - [دسترسی به سایت از طریق WebDAV](/fa/Safety/webdav-site-access)
 - [راه‌اندازی وبلاگ](/fa/Other/blog)
 
-## شروع استفاده
-
-با <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="استقرار ImgBed"><img src="../image/部署按钮.png" alt="استقرار ImgBed"></a> ImgBed را مستقر کنید و سریع سرویس میزبانی تصویر و فایل خودتان را داشته باشید.
-
-## سپاس از متن‌باز
-
-از پروژه‌های متن‌باز [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) و [Mizuki](https://github.com/LyraVoid/Mizuki) بابت مشارکتشان سپاسگزاریم.
-
 ## بازخورد
 
 - 🐛 باگ یا پیشنهاد قابلیت: در [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) ثبت کنید
 - 📧 تماس دیگر: axibayuit@gmail.com
-

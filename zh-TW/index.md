@@ -25,6 +25,14 @@ description: "ImgBed 繁體中文文件，說明 Cloudflare 圖床部署、檔�
 
 這個專案仍在持續完善。我們能力有限，但會盡全力把每一個功能都做清楚、做穩定、做好用。如果 ImgBed 能幫你更輕鬆地擁有自己的圖床、部落格或檔案分享空間，我們會非常開心。
 
+## 開始體驗
+
+透過 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="部署 ImgBed"><img src="../image/部署按钮.png" alt="部署 ImgBed"></a> 部署 ImgBed，快速擁有自己的圖床與檔案託管服務。
+
+## 開源致謝
+
+在此感謝開源專案 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 和 [Mizuki](https://github.com/LyraVoid/Mizuki) 的貢獻。
+
 ## 重點指南
 
 - [部署與快速開始](/zh-TW/)
@@ -36,16 +44,7 @@ description: "ImgBed 繁體中文文件，說明 Cloudflare 圖床部署、檔�
 - [WebDAV 站點存取](/zh-TW/Safety/webdav-site-access)
 - [部落格功能說明](/zh-TW/Other/blog)
 
-## 開始體驗
-
-透過 <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="部署 ImgBed"><img src="../image/部署按钮.png" alt="部署 ImgBed"></a> 部署 ImgBed，快速擁有自己的圖床與檔案託管服務。
-
-## 開源致謝
-
-在此感謝開源專案 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 和 [Mizuki](https://github.com/LyraVoid/Mizuki) 的貢獻。
-
 ## 問題回報
 
 - 🐛 遇到 Bug 或功能建議：請提交 [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 其他聯絡：axibayuit@gmail.com
-

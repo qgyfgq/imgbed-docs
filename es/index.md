@@ -25,6 +25,14 @@ Nuestra idea inicial es que cualquier persona pueda tener su propio sitio para a
 
 Este proyecto sigue mejorando. Nuestra capacidad es limitada, pero haremos todo lo posible para que cada función sea clara, estable y fácil de usar. Si ImgBed te ayuda a tener con menos esfuerzo tu propio alojamiento de imágenes, blog o espacio para compartir archivos, nos hará muy felices.
 
+## Empezar a usarlo
+
+Despliega ImgBed desde <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Desplegar ImgBed"><img src="../image/部署按钮.png" alt="Desplegar ImgBed"></a> y consigue rápidamente tu propio servicio de alojamiento de imágenes y archivos.
+
+## Agradecimientos de código abierto
+
+Agradecemos las contribuciones de los proyectos de código abierto [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) y [Mizuki](https://github.com/LyraVoid/Mizuki).
+
 ## Guías principales
 
 - [Despliegue e inicio rápido](/es/)
@@ -35,14 +43,6 @@ Este proyecto sigue mejorando. Nuestra capacidad es limitada, pero haremos todo 
 - [Configuración de almacenamiento en Cloudflare R2](/es/upload/cloudflare-r2)
 - [Acceso al sitio mediante WebDAV](/es/Safety/webdav-site-access)
 - [Configuración del blog](/es/Other/blog)
-
-## Empezar a usarlo
-
-Despliega ImgBed desde <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Desplegar ImgBed"><img src="../image/部署按钮.png" alt="Desplegar ImgBed"></a> y consigue rápidamente tu propio servicio de alojamiento de imágenes y archivos.
-
-## Agradecimientos de código abierto
-
-Agradecemos las contribuciones de los proyectos de código abierto [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) y [Mizuki](https://github.com/LyraVoid/Mizuki).
 
 ## Comentarios
 

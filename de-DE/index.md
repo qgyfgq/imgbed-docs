@@ -25,6 +25,14 @@ Unser ursprüngliches Ziel ist es, dass jeder eine eigene Website zum Hosten von
 
 Dieses Projekt wird weiterhin verbessert. Unsere Möglichkeiten sind begrenzt, aber wir werden unser Bestes tun, um jede Funktion klar, stabil und gut nutzbar zu machen. Wenn ImgBed Ihnen hilft, einfacher einen eigenen Bildhost, Blog oder Dateifreigabebereich zu besitzen, freut uns das sehr.
 
+## Jetzt starten
+
+Stellen Sie ImgBed über <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed bereitstellen"><img src="../image/部署按钮.png" alt="ImgBed bereitstellen"></a> bereit und erhalten Sie schnell Ihren eigenen Dienst für Bild- und Datei-Hosting.
+
+## Dank an Open Source
+
+Wir danken den Open-Source-Projekten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) und [Mizuki](https://github.com/LyraVoid/Mizuki) für ihre Beiträge.
+
 ## Wichtige Anleitungen
 
 - [Bereitstellung und Schnellstart](/de-DE/)
@@ -35,14 +43,6 @@ Dieses Projekt wird weiterhin verbessert. Unsere Möglichkeiten sind begrenzt, a
 - [Cloudflare R2-Speicher einrichten](/de-DE/upload/cloudflare-r2)
 - [WebDAV-Zugriff auf die Website](/de-DE/Safety/webdav-site-access)
 - [Blog einrichten](/de-DE/Other/blog)
-
-## Jetzt starten
-
-Stellen Sie ImgBed über <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed bereitstellen"><img src="../image/部署按钮.png" alt="ImgBed bereitstellen"></a> bereit und erhalten Sie schnell Ihren eigenen Dienst für Bild- und Datei-Hosting.
-
-## Dank an Open Source
-
-Wir danken den Open-Source-Projekten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) und [Mizuki](https://github.com/LyraVoid/Mizuki) für ihre Beiträge.
 
 ## Rückmeldung
 

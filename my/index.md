@@ -25,6 +25,14 @@ ImgBed သည် ရုပ်ပုံတင်ခြင်းနှင့် �
 
 ဤပရောဂျက်သည် ဆက်လက်တိုးတက်နေဆဲဖြစ်သည်။ ကျွန်ုပ်တို့၏ စွမ်းရည်မှာ ကန့်သတ်ချက်ရှိသော်လည်း လုပ်ဆောင်ချက်တိုင်းကို ရှင်းလင်း၊ တည်ငြိမ်ပြီး အသုံးပြုရလွယ်ကူအောင် အကောင်းဆုံးကြိုးစားသွားပါမည်။ ImgBed က သင့်ကို ကိုယ်ပိုင်ရုပ်ပုံသိမ်းဆည်းမျှဝေရန် နေရာ၊ ဘလော့ဂ် သို့မဟုတ် ဖိုင်မျှဝေရာနေရာတစ်ခု ပိုလွယ်ကူစွာ ပိုင်ဆိုင်နိုင်အောင် ကူညီပေးနိုင်ပါက ကျွန်ုပ်တို့ အလွန်ဝမ်းသာပါမည်။
 
+## စတင်အသုံးပြုရန်
+
+<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed ကို ဖြန့်ချိရန်"><img src="../image/部署按钮.png" alt="ImgBed ကို ဖြန့်ချိရန်"></a> မှ ImgBed ကို ဖြန့်ချိပြီး ကိုယ်ပိုင်ရုပ်ပုံနှင့် ဖိုင်သိမ်းဆည်းမျှဝေရန် ဝန်ဆောင်မှုကို လျင်မြန်စွာ ရယူပါ။
+
+## ဖွင့်လှစ်ရင်းမြစ်အတွက် ကျေးဇူးတင်ခြင်း
+
+ဖွင့်လှစ်ရင်းမြစ်ပရောဂျက်များဖြစ်သော [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) နှင့် [Mizuki](https://github.com/LyraVoid/Mizuki) တို့၏ ပံ့ပိုးမှုများအတွက် ကျေးဇူးတင်ပါသည်။
+
 ## အဓိကလမ်းညွှန်များ
 
 - [တပ်ဆင်ခြင်းနှင့် အမြန်စတင်ခြင်း](/my/)
@@ -36,16 +44,7 @@ ImgBed သည် ရုပ်ပုံတင်ခြင်းနှင့် �
 - [WebDAV မှတစ်ဆင့် ဆိုက်ဝင်ရောက်ခြင်း](/my/Safety/webdav-site-access)
 - [ဘလော့ဂ်တည်ဆောက်ခြင်း](/my/Other/blog)
 
-## စတင်အသုံးပြုရန်
-
-<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed ကို ဖြန့်ချိရန်"><img src="../image/部署按钮.png" alt="ImgBed ကို ဖြန့်ချိရန်"></a> မှ ImgBed ကို ဖြန့်ချိပြီး ကိုယ်ပိုင်ရုပ်ပုံနှင့် ဖိုင်သိမ်းဆည်းမျှဝေရန် ဝန်ဆောင်မှုကို လျင်မြန်စွာ ရယူပါ။
-
-## ဖွင့်လှစ်ရင်းမြစ်အတွက် ကျေးဇူးတင်ခြင်း
-
-ဖွင့်လှစ်ရင်းမြစ်ပရောဂျက်များဖြစ်သော [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) နှင့် [Mizuki](https://github.com/LyraVoid/Mizuki) တို့၏ ပံ့ပိုးမှုများအတွက် ကျေးဇူးတင်ပါသည်။
-
 ## တုံ့ပြန်ချက်
 
 - 🐛 ပြဿနာ သို့မဟုတ် လုပ်ဆောင်ချက်အကြံပြုချက်: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) တွင် တင်ပြပါ
 - 📧 အခြားဆက်သွယ်ရန်: axibayuit@gmail.com
-

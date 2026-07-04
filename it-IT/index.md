@@ -25,6 +25,14 @@ Il nostro obiettivo iniziale è permettere a chiunque di avere un proprio sito p
 
 Questo progetto continua a migliorare. Le nostre capacità sono limitate, ma faremo del nostro meglio per rendere ogni funzione chiara, stabile e piacevole da usare. Se ImgBed ti aiuta ad avere più facilmente il tuo spazio per ospitare immagini, blog o file condivisi, ne saremo molto felici.
 
+## Inizia a usare ImgBed
+
+Distribuisci ImgBed da <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Distribuisci ImgBed"><img src="../image/部署按钮.png" alt="Distribuisci ImgBed"></a> e ottieni rapidamente il tuo servizio di hosting per immagini e file.
+
+## Ringraziamenti open source
+
+Ringraziamo i progetti open source [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) e [Mizuki](https://github.com/LyraVoid/Mizuki) per il loro contributo.
+
 ## Guide principali
 
 - [Distribuzione e avvio rapido](/it-IT/)
@@ -36,16 +44,7 @@ Questo progetto continua a migliorare. Le nostre capacità sono limitate, ma far
 - [Accesso al sito tramite WebDAV](/it-IT/Safety/webdav-site-access)
 - [Configurazione del blog](/it-IT/Other/blog)
 
-## Inizia a usare ImgBed
-
-Distribuisci ImgBed da <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Distribuisci ImgBed"><img src="../image/部署按钮.png" alt="Distribuisci ImgBed"></a> e ottieni rapidamente il tuo servizio di hosting per immagini e file.
-
-## Ringraziamenti open source
-
-Ringraziamo i progetti open source [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) e [Mizuki](https://github.com/LyraVoid/Mizuki) per il loro contributo.
-
 ## Segnalazioni
 
 - 🐛 Errori o suggerimenti: inviali su [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Altro contatto: axibayuit@gmail.com
-

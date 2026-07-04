@@ -25,6 +25,14 @@ Mục tiêu ban đầu của chúng tôi là giúp mọi người đều có m�
 
 Dự án này vẫn đang tiếp tục hoàn thiện. Khả năng của chúng tôi có giới hạn, nhưng chúng tôi sẽ cố hết sức để từng tính năng rõ ràng, ổn định và dễ dùng. Nếu ImgBed giúp bạn dễ dàng sở hữu nơi lưu ảnh, blog hoặc không gian chia sẻ tệp riêng, chúng tôi sẽ rất vui.
 
+## Bắt đầu sử dụng
+
+Triển khai ImgBed qua <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Triển khai ImgBed"><img src="../image/部署按钮.png" alt="Triển khai ImgBed"></a> để nhanh chóng có dịch vụ lưu trữ ảnh và tệp của riêng bạn.
+
+## Cảm ơn mã nguồn mở
+
+Xin cảm ơn đóng góp của các dự án mã nguồn mở [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) và [Mizuki](https://github.com/LyraVoid/Mizuki).
+
 ## Hướng dẫn chính
 
 - [Triển khai và bắt đầu nhanh](/vi-VN/)
@@ -36,16 +44,7 @@ Dự án này vẫn đang tiếp tục hoàn thiện. Khả năng của chúng t
 - [Truy cập trang qua WebDAV](/vi-VN/Safety/webdav-site-access)
 - [Thiết lập blog](/vi-VN/Other/blog)
 
-## Bắt đầu sử dụng
-
-Triển khai ImgBed qua <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Triển khai ImgBed"><img src="../image/部署按钮.png" alt="Triển khai ImgBed"></a> để nhanh chóng có dịch vụ lưu trữ ảnh và tệp của riêng bạn.
-
-## Cảm ơn mã nguồn mở
-
-Xin cảm ơn đóng góp của các dự án mã nguồn mở [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) và [Mizuki](https://github.com/LyraVoid/Mizuki).
-
 ## Góp ý
 
 - 🐛 Lỗi hoặc đề xuất tính năng: gửi tại [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Liên hệ khác: axibayuit@gmail.com
-

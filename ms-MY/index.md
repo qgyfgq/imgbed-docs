@@ -25,6 +25,14 @@ Matlamat asal kami ialah membantu setiap orang memiliki tapak pengehosan gambar 
 
 Projek ini masih terus diperbaiki. Keupayaan kami terhad, tetapi kami akan cuba sebaik mungkin untuk menjadikan setiap ciri jelas, stabil dan mudah digunakan. Jika ImgBed membantu anda memiliki ruang pengehosan imej, blog atau perkongsian fail sendiri dengan lebih mudah, kami sangat gembira.
 
+## Mula guna
+
+Laksanakan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Laksanakan ImgBed"><img src="../image/部署按钮.png" alt="Laksanakan ImgBed"></a> untuk segera memiliki perkhidmatan pengehosan imej dan fail sendiri.
+
+## Penghargaan sumber terbuka
+
+Terima kasih kepada projek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki) atas sumbangan mereka.
+
 ## Panduan utama
 
 - [Pelancaran dan mula pantas](/ms-MY/)
@@ -36,16 +44,7 @@ Projek ini masih terus diperbaiki. Keupayaan kami terhad, tetapi kami akan cuba 
 - [Akses laman melalui WebDAV](/ms-MY/Safety/webdav-site-access)
 - [Tetapan blog](/ms-MY/Other/blog)
 
-## Mula guna
-
-Laksanakan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Laksanakan ImgBed"><img src="../image/部署按钮.png" alt="Laksanakan ImgBed"></a> untuk segera memiliki perkhidmatan pengehosan imej dan fail sendiri.
-
-## Penghargaan sumber terbuka
-
-Terima kasih kepada projek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki) atas sumbangan mereka.
-
 ## Maklum balas
 
 - 🐛 Pepijat atau cadangan ciri: hantar di [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Hubungan lain: axibayuit@gmail.com
-

@@ -25,6 +25,14 @@ Başlangıçtaki amacımız, herkesin kendine ait bir görsel barındırma ve do
 
 Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelliği açık, kararlı ve kullanımı iyi hale getirmek için elimizden geleni yapacağız. ImgBed kendi görsel barındırma alanınıza, blogunuza veya dosya paylaşım alanınıza daha kolay sahip olmanıza yardımcı olursa çok mutlu oluruz.
 
+## Kullanmaya başlayın
+
+<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed’i dağıt"><img src="../image/部署按钮.png" alt="ImgBed’i dağıt"></a> üzerinden ImgBed’i dağıtarak hızla kendi görsel ve dosya barındırma hizmetinize sahip olun.
+
+## Açık kaynak teşekkürleri
+
+Açık kaynak projeleri [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) ve [Mizuki](https://github.com/LyraVoid/Mizuki) katkıları için teşekkür ederiz.
+
 ## Temel kılavuzlar
 
 - [Dağıtım ve hızlı başlangıç](/tr-TR/)
@@ -36,16 +44,7 @@ Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelli�
 - [WebDAV ile site erişimi](/tr-TR/Safety/webdav-site-access)
 - [Blog kurulumu](/tr-TR/Other/blog)
 
-## Kullanmaya başlayın
-
-<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed’i dağıt"><img src="../image/部署按钮.png" alt="ImgBed’i dağıt"></a> üzerinden ImgBed’i dağıtarak hızla kendi görsel ve dosya barındırma hizmetinize sahip olun.
-
-## Açık kaynak teşekkürleri
-
-Açık kaynak projeleri [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) ve [Mizuki](https://github.com/LyraVoid/Mizuki) katkıları için teşekkür ederiz.
-
 ## Geri bildirim
 
 - 🐛 Hata veya özellik önerileri: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) üzerinden gönderin
 - 📧 Diğer iletişim: axibayuit@gmail.com
-

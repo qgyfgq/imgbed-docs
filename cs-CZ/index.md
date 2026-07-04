@@ -25,6 +25,14 @@ Naším původním záměrem je, aby každý mohl mít vlastní web pro hostová
 
 Projekt se stále zlepšuje. Naše možnosti jsou omezené, ale uděláme maximum pro to, aby každá funkce byla jasná, stabilní a příjemná k použití. Pokud vám ImgBed pomůže snadněji získat vlastní hosting obrázků, blog nebo prostor pro sdílení souborů, budeme velmi rádi.
 
+## Začněte používat
+
+Nasaďte ImgBed přes <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Nasadit ImgBed"><img src="../image/部署按钮.png" alt="Nasadit ImgBed"></a> a rychle získejte vlastní službu pro hostování obrázků a souborů.
+
+## Poděkování open source
+
+Děkujeme open-source projektům [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) a [Mizuki](https://github.com/LyraVoid/Mizuki) za jejich přínos.
+
 ## Hlavní návody
 
 - [Nasazení a rychlý start](/cs-CZ/)
@@ -36,16 +44,7 @@ Projekt se stále zlepšuje. Naše možnosti jsou omezené, ale uděláme maximu
 - [Přístup k webu přes WebDAV](/cs-CZ/Safety/webdav-site-access)
 - [Nastavení blogu](/cs-CZ/Other/blog)
 
-## Začněte používat
-
-Nasaďte ImgBed přes <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Nasadit ImgBed"><img src="../image/部署按钮.png" alt="Nasadit ImgBed"></a> a rychle získejte vlastní službu pro hostování obrázků a souborů.
-
-## Poděkování open source
-
-Děkujeme open-source projektům [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) a [Mizuki](https://github.com/LyraVoid/Mizuki) za jejich přínos.
-
 ## Zpětná vazba
 
 - 🐛 Chyby nebo návrhy funkcí: pošlete do [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Jiný kontakt: axibayuit@gmail.com
-

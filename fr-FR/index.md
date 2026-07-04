@@ -25,6 +25,14 @@ Notre intention de départ est de permettre à chacun de disposer de son propre 
 
 Ce projet continue de s'améliorer. Nos moyens sont limités, mais nous ferons tout notre possible pour rendre chaque fonction claire, stable et agréable à utiliser. Si ImgBed vous aide à posséder plus facilement votre propre hébergement d'images, blog ou espace de partage de fichiers, nous en serons très heureux.
 
+## Commencer
+
+Déployez ImgBed depuis <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Déployer ImgBed"><img src="../image/部署按钮.png" alt="Déployer ImgBed"></a> pour disposer rapidement de votre propre service d’hébergement d’images et de fichiers.
+
+## Remerciements open source
+
+Merci aux projets open source [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) et [Mizuki](https://github.com/LyraVoid/Mizuki) pour leurs contributions.
+
 ## Guides principaux
 
 - [Déploiement et prise en main](/fr-FR/)
@@ -35,14 +43,6 @@ Ce projet continue de s'améliorer. Nos moyens sont limités, mais nous ferons t
 - [Configuration du stockage Cloudflare R2](/fr-FR/upload/cloudflare-r2)
 - [Accès au site par WebDAV](/fr-FR/Safety/webdav-site-access)
 - [Configuration du blog](/fr-FR/Other/blog)
-
-## Commencer
-
-Déployez ImgBed depuis <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Déployer ImgBed"><img src="../image/部署按钮.png" alt="Déployer ImgBed"></a> pour disposer rapidement de votre propre service d’hébergement d’images et de fichiers.
-
-## Remerciements open source
-
-Merci aux projets open source [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) et [Mizuki](https://github.com/LyraVoid/Mizuki) pour leurs contributions.
 
 ## Retours
 

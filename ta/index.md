@@ -25,6 +25,14 @@ ImgBed படம் பதிவேற்றம் மற்றும் இண�
 
 இந்தத் திட்டம் தொடர்ந்து மேம்படுத்தப்படுகிறது. எங்கள் திறன் வரம்புடையது, ஆனால் ஒவ்வொரு அம்சத்தையும் தெளிவான, நிலையான, பயன்படுத்த எளிதானதாக உருவாக்க முழு முயற்சி செய்வோம். ImgBed உங்கள் சொந்த படத் தங்குதளம், வலைப்பதிவு அல்லது கோப்பு பகிர்வு இடத்தை எளிதாகப் பெற உதவினால், எங்களுக்கு மிகவும் மகிழ்ச்சி.
 
+## பயன்படுத்தத் தொடங்குங்கள்
+
+<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed-ஐ வெளியிடு"><img src="../image/部署按钮.png" alt="ImgBed-ஐ வெளியிடு"></a> மூலம் ImgBed-ஐ வெளியிட்டு, உங்கள் சொந்த படம் மற்றும் கோப்பு தங்குதளச் சேவையை விரைவாகப் பெறுங்கள்.
+
+## திறந்த மூலத்திற்கு நன்றி
+
+திறந்த மூலத் திட்டங்களான [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) மற்றும் [Mizuki](https://github.com/LyraVoid/Mizuki) ஆகியவற்றின் பங்களிப்புக்கு நன்றி.
+
 ## முக்கிய வழிகாட்டிகள்
 
 - [நிறுவல் மற்றும் விரைவான தொடக்கம்](/ta/)
@@ -36,16 +44,7 @@ ImgBed படம் பதிவேற்றம் மற்றும் இண�
 - [WebDAV மூலம் தள அணுகல்](/ta/Safety/webdav-site-access)
 - [வலைப்பதிவு அமைப்பு](/ta/Other/blog)
 
-## பயன்படுத்தத் தொடங்குங்கள்
-
-<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed-ஐ வெளியிடு"><img src="../image/部署按钮.png" alt="ImgBed-ஐ வெளியிடு"></a> மூலம் ImgBed-ஐ வெளியிட்டு, உங்கள் சொந்த படம் மற்றும் கோப்பு தங்குதளச் சேவையை விரைவாகப் பெறுங்கள்.
-
-## திறந்த மூலத்திற்கு நன்றி
-
-திறந்த மூலத் திட்டங்களான [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) மற்றும் [Mizuki](https://github.com/LyraVoid/Mizuki) ஆகியவற்றின் பங்களிப்புக்கு நன்றி.
-
 ## கருத்து
 
 - 🐛 பிழை அல்லது அம்ச பரிந்துரை: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)-ல் அனுப்பவும்
 - 📧 மற்ற தொடர்பு: axibayuit@gmail.com
-

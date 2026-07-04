@@ -25,6 +25,14 @@ ImgBed-এর শুরু হয়েছিল ছবি আপলোড ও ল�
 
 এই প্রকল্প এখনও উন্নত হচ্ছে। আমাদের সামর্থ্য সীমিত, কিন্তু আমরা প্রতিটি ফিচার পরিষ্কার, স্থিতিশীল ও ব্যবহারবান্ধব করার জন্য সর্বোচ্চ চেষ্টা করব। ImgBed যদি আপনাকে নিজের ছবি হোস্টিং, ব্লগ বা ফাইল শেয়ারিং জায়গা আরও সহজে তৈরি করতে সাহায্য করে, আমরা খুব খুশি হব।
 
+## ব্যবহার শুরু করুন
+
+<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed ডিপ্লয়"><img src="../image/部署按钮.png" alt="ImgBed ডিপ্লয়"></a> থেকে ImgBed ডিপ্লয় করে দ্রুত নিজের ছবি ও ফাইল হোস্টিং সেবা চালু করুন।
+
+## ওপেন সোর্স কৃতজ্ঞতা
+
+ওপেন সোর্স প্রকল্প [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) এবং [Mizuki](https://github.com/LyraVoid/Mizuki)-এর অবদানের জন্য কৃতজ্ঞতা।
+
 ## প্রধান নির্দেশিকা
 
 - [ডিপ্লয়মেন্ট ও দ্রুত শুরু](/bn-BD/)
@@ -36,16 +44,7 @@ ImgBed-এর শুরু হয়েছিল ছবি আপলোড ও ল�
 - [WebDAV দিয়ে সাইট অ্যাক্সেস](/bn-BD/Safety/webdav-site-access)
 - [ব্লগ সেটআপ](/bn-BD/Other/blog)
 
-## ব্যবহার শুরু করুন
-
-<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed ডিপ্লয়"><img src="../image/部署按钮.png" alt="ImgBed ডিপ্লয়"></a> থেকে ImgBed ডিপ্লয় করে দ্রুত নিজের ছবি ও ফাইল হোস্টিং সেবা চালু করুন।
-
-## ওপেন সোর্স কৃতজ্ঞতা
-
-ওপেন সোর্স প্রকল্প [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) এবং [Mizuki](https://github.com/LyraVoid/Mizuki)-এর অবদানের জন্য কৃতজ্ঞতা।
-
 ## প্রতিক্রিয়া
 
 - 🐛 সমস্যা বা ফিচার প্রস্তাব: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)-এ জমা দিন
 - 📧 অন্যান্য যোগাযোগ: axibayuit@gmail.com
-

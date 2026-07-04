@@ -25,6 +25,14 @@ ImgBed د انځور پورته کولو او د تړونونو له مديري�
 
 دا پروژه لا هم ښه کېږي. زموږ توان محدود دی، خو هڅه کوو هره ځانګړنه روښانه، باثباته او د کارولو لپاره اسانه کړو. که ImgBed تاسې سره مرسته وکړي چې خپل د انځور کوربه‌توب ځای، بلاګ يا د فایل شریکولو فضا په اسانه ولرئ، موږ به ډېر خوشحاله شو.
 
+## کارول پیل کړئ
+
+له <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed خپور کړئ"><img src="../image/部署按钮.png" alt="ImgBed خپور کړئ"></a> څخه ImgBed خپور کړئ او ژر خپله د انځورونو او فایلونو د کوربه‌توب خدمت ولرئ.
+
+## د پرانيستې سرچينې مننه
+
+د پرانيستې سرچينې پروژو [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) او [Mizuki](https://github.com/LyraVoid/Mizuki) له ونډې مننه کوو.
+
 ## مهم لارښودونه
 
 - [ځای پر ځای کول او چټک پیل](/ps/)
@@ -36,16 +44,7 @@ ImgBed د انځور پورته کولو او د تړونونو له مديري�
 - [د WebDAV له لارې سایټ ته لاسرسی](/ps/Safety/webdav-site-access)
 - [د بلاګ جوړونه](/ps/Other/blog)
 
-## کارول پیل کړئ
-
-له <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed خپور کړئ"><img src="../image/部署按钮.png" alt="ImgBed خپور کړئ"></a> څخه ImgBed خپور کړئ او ژر خپله د انځورونو او فایلونو د کوربه‌توب خدمت ولرئ.
-
-## د پرانيستې سرچينې مننه
-
-د پرانيستې سرچينې پروژو [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) او [Mizuki](https://github.com/LyraVoid/Mizuki) له ونډې مننه کوو.
-
 ## غبرګون
 
 - 🐛 ستونزه يا د ځانګړنې وړاندیز: په [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) کې يې واستوئ
 - 📧 نور تماس: axibayuit@gmail.com
-

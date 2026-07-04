@@ -25,6 +25,14 @@ Our original goal is to help everyone have their own image hosting and file shar
 
 This project is still being improved. Our ability is limited, but we will do our best to make every feature clear, stable, and pleasant to use. If ImgBed helps you own your own image host, blog, or file sharing space more easily, we will be very happy.
 
+## Start Using
+
+Deploy ImgBed from <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Deploy ImgBed"><img src="../image/部署按钮.png" alt="Deploy ImgBed"></a> and quickly get your own image hosting and file hosting service.
+
+## Open Source Thanks
+
+Special thanks to the open source projects [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) and [Mizuki](https://github.com/LyraVoid/Mizuki) for their contributions.
+
 ## Essential Guides
 
 - [Deployment and quick start](/en/)
@@ -36,16 +44,7 @@ This project is still being improved. Our ability is limited, but we will do our
 - [WebDAV site access](/en/Safety/webdav-site-access)
 - [Blog setup](/en/Other/blog)
 
-## Start Using
-
-Deploy ImgBed from <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Deploy ImgBed"><img src="../image/部署按钮.png" alt="Deploy ImgBed"></a> and quickly get your own image hosting and file hosting service.
-
-## Open Source Thanks
-
-Special thanks to the open source projects [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) and [Mizuki](https://github.com/LyraVoid/Mizuki) for their contributions.
-
 ## Feedback
 
 - 🐛 Bugs or feature requests: please submit [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Other contact: axibayuit@gmail.com
-

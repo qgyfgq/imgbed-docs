@@ -25,6 +25,14 @@ Tujuan awal kami adalah membantu setiap orang memiliki situs hosting gambar dan 
 
 Proyek ini masih terus disempurnakan. Kemampuan kami terbatas, tetapi kami akan berusaha semaksimal mungkin agar setiap fitur jelas, stabil, dan enak digunakan. Jika ImgBed membantu Anda lebih mudah memiliki tempat hosting gambar, blog, atau ruang berbagi file sendiri, kami akan sangat senang.
 
+## Mulai mencoba
+
+Terapkan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Terapkan ImgBed"><img src="../image/部署按钮.png" alt="Terapkan ImgBed"></a> untuk segera memiliki layanan hosting gambar dan file sendiri.
+
+## Terima kasih untuk sumber terbuka
+
+Terima kasih kepada proyek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki) atas kontribusinya.
+
 ## Panduan utama
 
 - [Penerapan dan mulai cepat](/id-ID/)
@@ -36,16 +44,7 @@ Proyek ini masih terus disempurnakan. Kemampuan kami terbatas, tetapi kami akan 
 - [Akses situs melalui WebDAV](/id-ID/Safety/webdav-site-access)
 - [Pengaturan blog](/id-ID/Other/blog)
 
-## Mulai mencoba
-
-Terapkan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Terapkan ImgBed"><img src="../image/部署按钮.png" alt="Terapkan ImgBed"></a> untuk segera memiliki layanan hosting gambar dan file sendiri.
-
-## Terima kasih untuk sumber terbuka
-
-Terima kasih kepada proyek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki) atas kontribusinya.
-
 ## Umpan balik
 
 - 🐛 Masalah atau saran fitur: kirim di [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Kontak lain: axibayuit@gmail.com
-

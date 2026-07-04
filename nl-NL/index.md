@@ -25,6 +25,14 @@ Ons oorspronkelijke doel is dat iedereen een eigen site kan hebben voor het host
 
 Dit project wordt nog steeds verbeterd. Onze mogelijkheden zijn beperkt, maar we doen ons best om elke functie duidelijk, stabiel en prettig bruikbaar te maken. Als ImgBed je helpt om makkelijker je eigen plek voor afbeeldingshosting, blog of bestandsdeling te hebben, zijn we daar erg blij mee.
 
+## Aan de slag
+
+Implementeer ImgBed via <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed implementeren"><img src="../image/部署按钮.png" alt="ImgBed implementeren"></a> en krijg snel je eigen dienst voor afbeeldings- en bestandshosting.
+
+## Dank aan open source
+
+Met dank aan de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) en [Mizuki](https://github.com/LyraVoid/Mizuki) voor hun bijdragen.
+
 ## Belangrijke handleidingen
 
 - [Implementatie en snel starten](/nl-NL/)
@@ -35,14 +43,6 @@ Dit project wordt nog steeds verbeterd. Onze mogelijkheden zijn beperkt, maar we
 - [Cloudflare R2-opslag instellen](/nl-NL/upload/cloudflare-r2)
 - [WebDAV-toegang tot de site](/nl-NL/Safety/webdav-site-access)
 - [Blog instellen](/nl-NL/Other/blog)
-
-## Aan de slag
-
-Implementeer ImgBed via <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed implementeren"><img src="../image/部署按钮.png" alt="ImgBed implementeren"></a> en krijg snel je eigen dienst voor afbeeldings- en bestandshosting.
-
-## Dank aan open source
-
-Met dank aan de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) en [Mizuki](https://github.com/LyraVoid/Mizuki) voor hun bijdragen.
 
 ## Terugkoppeling
 

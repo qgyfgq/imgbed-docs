@@ -25,6 +25,14 @@ description: "توثيق ImgBed بالعربية لاستضافة الصور و�
 
 ما زال هذا المشروع يتحسن باستمرار. قدراتنا محدودة، لكننا سنبذل كل ما نستطيع لجعل كل ميزة واضحة ومستقرة وسهلة الاستخدام. إذا ساعدك ImgBed على امتلاك مساحة صور أو مدونة أو مساحة مشاركة ملفات خاصة بك بسهولة أكبر، فسنكون سعداء جدا.
 
+## ابدأ التجربة
+
+استخدم <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="نشر ImgBed"><img src="../image/部署按钮.png" alt="نشر ImgBed"></a> لنشر ImgBed، واحصل بسرعة على خدمة خاصة بك لاستضافة الصور والملفات.
+
+## شكر للمشاريع مفتوحة المصدر
+
+نتوجه بالشكر إلى مشروعي المصدر المفتوح [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) و [Mizuki](https://github.com/LyraVoid/Mizuki) على مساهمتهما.
+
 ## أدلة أساسية
 
 - [النشر والبدء السريع](/ar-SA/)
@@ -36,16 +44,7 @@ description: "توثيق ImgBed بالعربية لاستضافة الصور و�
 - [الوصول إلى الموقع عبر WebDAV](/ar-SA/Safety/webdav-site-access)
 - [إعداد المدونة](/ar-SA/Other/blog)
 
-## ابدأ التجربة
-
-استخدم <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="نشر ImgBed"><img src="../image/部署按钮.png" alt="نشر ImgBed"></a> لنشر ImgBed، واحصل بسرعة على خدمة خاصة بك لاستضافة الصور والملفات.
-
-## شكر للمشاريع مفتوحة المصدر
-
-نتوجه بالشكر إلى مشروعي المصدر المفتوح [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) و [Mizuki](https://github.com/LyraVoid/Mizuki) على مساهمتهما.
-
 ## الملاحظات
 
 - 🐛 للأخطاء أو اقتراحات الميزات: يرجى الإرسال عبر [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 تواصل آخر: axibayuit@gmail.com
-
