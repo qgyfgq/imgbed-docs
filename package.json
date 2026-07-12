@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev . --host 0.0.0.0",
-    "docs:build": "vitepress build .",
+    "docs:build": "vitepress build . && node scripts/format-sitemap.mjs",
     "docs:preview": "vitepress preview . --host 0.0.0.0"
   },
   "devDependencies": {
