@@ -30,6 +30,7 @@ export default defineConfig({
     }
   },
   head: [
+    ['link', { rel: 'icon', type: 'image/png', sizes: '64x64', href: '/favicon.png' }],
     ['meta', { name: 'theme-color', content: '#2563eb' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { property: 'og:site_name', content: siteName }],
