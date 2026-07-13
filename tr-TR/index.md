@@ -31,7 +31,7 @@ Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelli�
 
 ## Açık kaynak teşekkürleri
 
-Açık kaynak projeleri [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) ve [Mizuki](https://github.com/LyraVoid/Mizuki) katkıları için teşekkür ederiz.
+Bu proje, açık kaynaklı [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) ve [Mizuki](https://github.com/LyraVoid/Mizuki) projeleri temel alınarak geliştirilmiş olup proje ekibimiz tarafından kapalı kaynaklı yazılım olarak bağımsız biçimde sürdürülmekte ve dağıtılmaktadır. Açık kaynak topluluğuna katkılarından dolayı özgün yazarlara ve tüm katkıda bulunanlara içtenlikle teşekkür ederiz. Bu projeler size yardımcı olduysa özgün yazarları ve açık kaynak ekosisteminin sürdürülebilir gelişimini desteklemek için GitHub depolarına Star verebilirsiniz.
 
 ## Temel kılavuzlar
 
@@ -45,6 +45,8 @@ Açık kaynak projeleri [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudF
 - [Blog kurulumu](/tr-TR/Other/blog)
 
 ## Geri bildirim
+
+Bu projeyi kullanırken bir sorunla karşılaşırsanız lütfen bu projenin GitHub Issues sayfası veya aşağıdaki iletişim bilgileri üzerinden bildirin. Gereksiz rahatsızlığa yol açmamak için yukarıda belirtilen açık kaynak projelerinin yazarlarıyla veya bakım sorumlularıyla iletişime geçmeyin; bu sorunları çözme sorumluluğu bu projenin bakım ekibine aittir.
 
 - 🐛 Hata veya özellik önerileri: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) üzerinden gönderin
 - 📧 Diğer iletişim: axibayuit@gmail.com

@@ -31,7 +31,7 @@ Triển khai ImgBed qua <a class="imgbed-deploy-button" href="https://glow.ccwu.
 
 ## Cảm ơn mã nguồn mở
 
-Xin cảm ơn đóng góp của các dự án mã nguồn mở [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) và [Mizuki](https://github.com/LyraVoid/Mizuki).
+Dự án này được phát triển tiếp dựa trên các dự án mã nguồn mở [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) và [Mizuki](https://github.com/LyraVoid/Mizuki), đồng thời được đội ngũ của dự án tự duy trì và phát hành dưới dạng phần mềm nguồn đóng. Chúng tôi chân thành cảm ơn các tác giả ban đầu cùng toàn thể những người đóng góp vì những cống hiến của họ cho cộng đồng mã nguồn mở. Nếu những dự án này hữu ích với bạn, hãy cân nhắc tặng Star cho các kho GitHub tương ứng để ủng hộ tác giả ban đầu và sự phát triển lâu dài của hệ sinh thái mã nguồn mở.
 
 ## Hướng dẫn chính
 
@@ -45,6 +45,8 @@ Xin cảm ơn đóng góp của các dự án mã nguồn mở [CloudFlare-ImgBe
 - [Thiết lập blog](/vi-VN/Other/blog)
 
 ## Góp ý
+
+Nếu gặp sự cố trong quá trình sử dụng dự án này, vui lòng phản hồi qua GitHub Issues của chính dự án hoặc thông tin liên hệ bên dưới. Xin đừng liên hệ với tác giả hay người duy trì các dự án mã nguồn mở nêu trên để tránh làm phiền họ không cần thiết; đội ngũ duy trì dự án này sẽ chịu trách nhiệm xử lý các vấn đề liên quan.
 
 - 🐛 Lỗi hoặc đề xuất tính năng: gửi tại [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Liên hệ khác: axibayuit@gmail.com

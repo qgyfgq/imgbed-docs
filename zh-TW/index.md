@@ -31,7 +31,7 @@ description: "ImgBed 繁體中文文件，說明 Cloudflare 圖床部署、檔�
 
 ## 開源致謝
 
-在此感謝開源專案 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 和 [Mizuki](https://github.com/LyraVoid/Mizuki) 的貢獻。
+本專案基於開源專案 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) 和 [Mizuki](https://github.com/LyraVoid/Mizuki) 進行二次開發，並由本專案團隊以閉源形式獨立維護與發佈。在此感謝原專案作者及所有貢獻者對開源社群作出的貢獻。如果這些開源專案對你有所幫助，歡迎前往對應的 GitHub 儲存庫點亮 Star，以支持原作者及開源生態持續發展。
 
 ## 重點指南
 
@@ -45,6 +45,8 @@ description: "ImgBed 繁體中文文件，說明 Cloudflare 圖床部署、檔�
 - [部落格功能說明](/zh-TW/Other/blog)
 
 ## 問題回報
+
+如在使用本專案的過程中遇到問題，請透過本專案的 GitHub Issues 或下方聯絡方式回報。請勿聯絡上述開源專案的原作者或維護者，以免造成不必要的打擾；相關問題由本專案維護者負責處理。
 
 - 🐛 遇到 Bug 或功能建議：請提交 [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 其他聯絡：axibayuit@gmail.com

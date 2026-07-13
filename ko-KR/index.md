@@ -31,7 +31,7 @@ ImgBed의 출발점은 누구나 자신만의 이미지 호스팅 및 파일 공
 
 ## 오픈소스 감사
 
-오픈소스 프로젝트 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed)와 [Mizuki](https://github.com/LyraVoid/Mizuki)의 기여에 감사드립니다.
+이 프로젝트는 오픈소스 프로젝트 [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed)와 [Mizuki](https://github.com/LyraVoid/Mizuki)를 바탕으로 2차 개발되었으며, 본 프로젝트 팀이 비공개 소스 소프트웨어로 독립적으로 유지·배포합니다. 오픈소스 생태계에 기여해 주신 원저자와 모든 기여자 여러분께 진심으로 감사드립니다. 해당 프로젝트가 도움이 되었다면 각 GitHub 저장소에 Star를 남겨 원저자와 오픈소스 생태계의 지속적인 발전을 응원해 주세요.
 
 ## 주요 안내서
 
@@ -45,6 +45,8 @@ ImgBed의 출발점은 누구나 자신만의 이미지 호스팅 및 파일 공
 - [블로그 기능 설정](/ko-KR/Other/blog)
 
 ## 문제 피드백
+
+이 프로젝트를 사용하는 중 문제가 발생하면 본 프로젝트의 GitHub Issues 또는 아래 연락처로 알려 주세요. 불필요한 피해나 혼선을 막기 위해 위 오픈소스 프로젝트의 원저자나 유지관리자에게는 문의하지 마시기 바랍니다. 관련 문제는 본 프로젝트의 유지관리자가 직접 처리합니다.
 
 - 🐛 오류 또는 기능 제안: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)에 남겨 주세요
 - 📧 기타 연락: axibayuit@gmail.com

@@ -31,7 +31,7 @@ Terapkan ImgBed melalui <a class="imgbed-deploy-button" href="https://glow.ccwu.
 
 ## Terima kasih untuk sumber terbuka
 
-Terima kasih kepada proyek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki) atas kontribusinya.
+Proyek ini dikembangkan lebih lanjut berdasarkan proyek sumber terbuka [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) dan [Mizuki](https://github.com/LyraVoid/Mizuki), lalu dipelihara dan didistribusikan secara mandiri oleh tim proyek ini sebagai perangkat lunak sumber tertutup. Kami menyampaikan terima kasih yang tulus kepada para penulis asli dan seluruh kontributor atas sumbangsih mereka bagi komunitas sumber terbuka. Jika proyek-proyek tersebut bermanfaat bagi Anda, silakan beri Star pada repositori GitHub mereka untuk mendukung para penulis asli dan keberlanjutan ekosistem sumber terbuka.
 
 ## Panduan utama
 
@@ -45,6 +45,8 @@ Terima kasih kepada proyek sumber terbuka [CloudFlare-ImgBed](https://github.com
 - [Pengaturan blog](/id-ID/Other/blog)
 
 ## Umpan balik
+
+Jika Anda mengalami masalah saat menggunakan proyek ini, laporkan melalui GitHub Issues milik proyek ini atau informasi kontak di bawah. Mohon jangan menghubungi penulis maupun pengelola proyek sumber terbuka yang disebutkan di atas agar tidak mengganggu mereka; masalah tersebut menjadi tanggung jawab pengelola proyek ini.
 
 - 🐛 Masalah atau saran fitur: kirim di [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Kontak lain: axibayuit@gmail.com

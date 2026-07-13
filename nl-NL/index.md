@@ -31,7 +31,7 @@ Implementeer ImgBed via <a class="imgbed-deploy-button" href="https://glow.ccwu.
 
 ## Dank aan open source
 
-Met dank aan de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) en [Mizuki](https://github.com/LyraVoid/Mizuki) voor hun bijdragen.
+Dit project is verder ontwikkeld op basis van de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) en [Mizuki](https://github.com/LyraVoid/Mizuki), en wordt door ons projectteam zelfstandig onderhouden en uitgebracht als closed-sourcesoftware. Wij danken de oorspronkelijke auteurs en alle bijdragers hartelijk voor hun bijdrage aan de open-sourcegemeenschap. Zijn deze projecten nuttig voor u, geef hun GitHub-repository dan gerust een ster om de oorspronkelijke auteurs en de verdere ontwikkeling van het open-source-ecosysteem te ondersteunen.
 
 ## Belangrijke handleidingen
 
@@ -45,6 +45,8 @@ Met dank aan de open-sourceprojecten [CloudFlare-ImgBed](https://github.com/MarS
 - [Blog instellen](/nl-NL/Other/blog)
 
 ## Terugkoppeling
+
+Ervaart u een probleem bij het gebruik van dit project, meld dit dan via de GitHub Issues van dit project of via de onderstaande contactgegevens. Neem alstublieft geen contact op met de auteurs of beheerders van de hierboven genoemde open-sourceprojecten, zodat zij niet onnodig worden belast; de beheerders van dit project behandelen deze meldingen.
 
 - 🐛 Bugs of functieverzoeken: meld ze via [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Ander contact: axibayuit@gmail.com

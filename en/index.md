@@ -31,7 +31,7 @@ Deploy ImgBed from <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/re
 
 ## Open Source Thanks
 
-Special thanks to the open source projects [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) and [Mizuki](https://github.com/LyraVoid/Mizuki) for their contributions.
+This project is based on the open source projects [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) and [Mizuki](https://github.com/LyraVoid/Mizuki), and is independently maintained and distributed by this project team as closed-source software. We sincerely thank their original authors and contributors for their contributions to the open source community. If these projects have been helpful to you, please consider starring their GitHub repositories to support their original authors and the continued growth of the open source ecosystem.
 
 ## Essential Guides
 
@@ -45,6 +45,8 @@ Special thanks to the open source projects [CloudFlare-ImgBed](https://github.co
 - [Blog setup](/en/Other/blog)
 
 ## Feedback
+
+If you encounter any problems while using this project, please report them through this project's GitHub Issues or the contact information below. Please do not contact the authors or maintainers of the upstream open source projects, as this project's maintainers are responsible for handling these issues.
 
 - 🐛 Bugs or feature requests: please submit [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
 - 📧 Other contact: axibayuit@gmail.com

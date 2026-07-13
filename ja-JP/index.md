@@ -31,7 +31,7 @@ ImgBed は画像アップロードとリンク管理から始まり、今では�
 
 ## オープンソースへの謝辞
 
-オープンソースプロジェクト [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) と [Mizuki](https://github.com/LyraVoid/Mizuki) の貢献に感謝します。
+本プロジェクトは、オープンソースプロジェクト [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) と [Mizuki](https://github.com/LyraVoid/Mizuki) を基に二次開発したもので、本プロジェクトチームがクローズドソースとして独立して保守・提供しています。オープンソースコミュニティに貢献された原作者およびすべてのコントリビューターの皆様に、心より感謝申し上げます。これらのプロジェクトが役立った場合は、原作者とオープンソースエコシステムの継続的な発展を支援するため、各 GitHub リポジトリへの Star をご検討ください。
 
 ## 主要ガイド
 
@@ -45,6 +45,8 @@ ImgBed は画像アップロードとリンク管理から始まり、今では�
 - [ブログ機能の設定](/ja-JP/Other/blog)
 
 ## フィードバック
+
+本プロジェクトの利用中に問題が発生した場合は、本プロジェクトの GitHub Issues または下記の連絡先へお知らせください。不要なご迷惑を避けるため、上記オープンソースプロジェクトの原作者やメンテナーにはお問い合わせにならないようお願いいたします。問題への対応は本プロジェクトのメンテナーが行います。
 
 - 🐛 不具合や機能提案：[GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) に投稿してください
 - 📧 その他の連絡先：axibayuit@gmail.com
