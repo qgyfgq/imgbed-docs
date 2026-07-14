@@ -10,6 +10,12 @@ Different users may prefer different channels. If you want a simple setup, Teleg
 >
 > ![Click Rebuild Index during initialization](../../image/初始化点击重建索引.png)
 
+### Optional: Enable D1 Read Replication
+
+In the D1 database settings in the Cloudflare dashboard, enable Read Replication to speed up File Management, the Public Gallery, and the Random Image API. ImgBed works normally without it.
+
+![Enable D1 Read Replication](../../image/d1读取复制.png)
+
 - Prepare the storage account or API credentials you want to use.
 - Make sure your ImgBed domain is reachable, because OAuth-based channels need callback URLs.
 - After adding a channel, upload a test image first to confirm that files can be saved and opened correctly.

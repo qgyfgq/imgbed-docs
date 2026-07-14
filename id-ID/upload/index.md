@@ -10,6 +10,12 @@ Setiap pengguna dapat memilih kanal yang berbeda. Jika Anda menginginkan konfigu
 >
 > ![Klik Bangun Ulang Indeks saat inisialisasi](../../image/初始化点击重建索引.png)
 
+### Opsional: Aktifkan Replikasi Baca D1
+
+Di pengaturan basis data D1 pada dasbor Cloudflare, aktifkan "Read Replication" untuk mempercepat akses ke pengelolaan berkas, galeri publik, dan API gambar acak. ImgBed tetap berfungsi normal tanpa mengaktifkannya.
+
+![Aktifkan Replikasi Baca D1](../../image/d1读取复制.png)
+
 - Siapkan akun penyimpanan atau kredensial API yang diperlukan.
 - Pastikan domain ImgBed Anda dapat diakses, karena kanal berbasis OAuth memerlukan URL callback.
 - Setelah menambahkan kanal, unggah gambar uji terlebih dahulu untuk memastikan berkas tersimpan dan dapat dibuka dengan benar.

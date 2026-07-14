@@ -10,6 +10,12 @@ Pengguna yang berbeza mungkin memilih saluran yang berbeza. Jika anda mahu perse
 >
 > ![Klik Bina Semula Indeks semasa pemulaan](../../image/初始化点击重建索引.png)
 
+### Pilihan: Aktifkan replikasi bacaan D1
+
+Dalam tetapan pangkalan data D1 pada papan pemuka Cloudflare, aktifkan "Read Replication" untuk mempercepat akses kepada pengurusan fail, galeri awam dan API imej rawak. ImgBed tetap berfungsi seperti biasa tanpa mengaktifkannya.
+
+![Aktifkan replikasi bacaan D1](../../image/d1读取复制.png)
+
 - Sediakan akaun storan atau kelayakan API yang ingin digunakan.
 - Pastikan domain ImgBed anda boleh dicapai, kerana saluran berasaskan OAuth memerlukan URL callback.
 - Selepas menambah saluran, muat naik imej ujian terlebih dahulu untuk mengesahkan bahawa fail boleh disimpan dan dibuka dengan betul.

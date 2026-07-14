@@ -10,6 +10,12 @@ Cada usuario puede preferir canales distintos. Si desea una configuración senci
 >
 > ![Hacer clic en Reconstruir índice durante la inicialización](../../image/初始化点击重建索引.png)
 
+### Opcional: activar la replicación de lectura de D1
+
+En la configuración de la base de datos D1 del panel de Cloudflare, active la replicación de lectura para agilizar el acceso a la gestión de archivos, la galería pública y la API de imágenes aleatorias. ImgBed funciona con normalidad aunque no la active.
+
+![Activar la replicación de lectura de D1](../../image/d1读取复制.png)
+
 - Prepare la cuenta de almacenamiento o las credenciales de API que quiera usar.
 - Asegúrese de que su dominio de ImgBed sea accesible, porque los canales basados en OAuth necesitan URL de callback.
 - Después de añadir un canal, cargue primero una imagen de prueba para confirmar que los archivos se guardan y se abren correctamente.

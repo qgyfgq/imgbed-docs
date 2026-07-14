@@ -10,6 +10,12 @@ Welk kanaal het beste past, hangt af van je gebruik. Voor een eenvoudige start z
 >
 > ![Tijdens de initialisatie op Index opnieuw opbouwen klikken](../../image/初始化点击重建索引.png)
 
+### Optioneel: D1-leesreplicatie inschakelen
+
+Schakel in de D1-database-instellingen van het Cloudflare-dashboard leesreplicatie in om Bestandsbeheer, de openbare galerie en de willekeurige-afbeeldingen-API sneller toegankelijk te maken. ImgBed werkt ook zonder deze optie normaal.
+
+![D1-leesreplicatie inschakelen](../../image/d1读取复制.png)
+
 - Bereid het opslagaccount of de API-gegevens voor die je wilt gebruiken.
 - Controleer of je ImgBed-domein bereikbaar is, omdat OAuth-kanalen callback-URL's nodig hebben.
 - Upload na het toevoegen van een kanaal eerst een testafbeelding om te bevestigen dat opslaan en openen werkt.

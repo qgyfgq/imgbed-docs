@@ -10,6 +10,12 @@ Mỗi người có thể phù hợp với một kênh khác nhau. Nếu muốn b
 >
 > ![Nhấp Xây dựng lại chỉ mục khi khởi tạo](../../image/初始化点击重建索引.png)
 
+### Tùy chọn: bật tính năng sao chép phục vụ đọc của D1
+
+Trong phần cài đặt cơ sở dữ liệu D1 trên bảng điều khiển Cloudflare, hãy bật "Read Replication" để tăng tốc truy cập vào quản lý tệp, thư viện công khai và API ảnh ngẫu nhiên. ImgBed vẫn hoạt động bình thường nếu không bật tính năng này.
+
+![Bật tính năng sao chép phục vụ đọc của D1](../../image/d1读取复制.png)
+
 - Chuẩn bị tài khoản lưu trữ hoặc API credentials bạn muốn dùng.
 - Đảm bảo domain ImgBed của bạn truy cập được, vì các kênh OAuth cần callback URL.
 - Sau khi thêm kênh, hãy tải thử một ảnh để xác nhận tệp được lưu và mở đúng.

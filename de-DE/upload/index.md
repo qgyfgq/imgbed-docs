@@ -10,6 +10,12 @@ Je nach Nutzung passt ein anderer Kanal besser. Für einen einfachen Einstieg ei
 >
 > ![Bei der Initialisierung auf Index neu erstellen klicken](../../image/初始化点击重建索引.png)
 
+### Optional: D1-Lesereplikation aktivieren
+
+Aktivieren Sie in den D1-Datenbankeinstellungen des Cloudflare-Dashboards die Lesereplikation, um den Zugriff auf Dateiverwaltung, öffentliche Galerie und Zufallsbild-API zu beschleunigen. ImgBed funktioniert auch ohne diese Option normal.
+
+![D1-Lesereplikation aktivieren](../../image/d1读取复制.png)
+
 - Bereiten Sie das Speicherkonto oder die API-Zugangsdaten vor.
 - Stellen Sie sicher, dass Ihre ImgBed-Domain erreichbar ist, da OAuth-Kanäle Callback-URLs benötigen.
 - Laden Sie nach dem Hinzufügen eines Kanals zuerst ein Testbild hoch, um Speichern und Öffnen zu prüfen.

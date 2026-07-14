@@ -10,6 +10,12 @@ Różnym użytkownikom pasują różne kanały. Jeśli chcesz zacząć prosto, d
 >
 > ![Kliknięcie Odbuduj indeks podczas inicjalizacji](../../image/初始化点击重建索引.png)
 
+### Opcjonalnie: włącz replikację odczytu D1
+
+W ustawieniach bazy D1 w panelu Cloudflare włącz replikację odczytu, aby przyspieszyć dostęp do zarządzania plikami, galerii publicznej i API losowych obrazów. ImgBed działa prawidłowo również bez tej opcji.
+
+![Włącz replikację odczytu D1](../../image/d1读取复制.png)
+
 - Przygotuj konto przechowywania lub dane API, których chcesz użyć.
 - Sprawdź, czy domena ImgBed jest dostępna, ponieważ kanały OAuth wymagają adresów callback.
 - Po dodaniu kanału prześlij najpierw obraz testowy, aby potwierdzić zapis i dostęp.

@@ -10,6 +10,12 @@ Il canale migliore dipende dall'uso. Per iniziare in modo semplice, Telegram, Di
 >
 > ![Fare clic su Ricostruisci indice durante l’inizializzazione](../../image/初始化点击重建索引.png)
 
+### Facoltativo: attivare la replica in lettura D1
+
+Nelle impostazioni del database D1 nel pannello Cloudflare, attiva la replica in lettura per velocizzare l’accesso alla gestione dei file, alla galleria pubblica e all’API per immagini casuali. ImgBed funziona normalmente anche senza questa opzione.
+
+![Attivare la replica in lettura D1](../../image/d1读取复制.png)
+
 - Prepara l'account di archiviazione o le credenziali API da usare.
 - Verifica che il dominio ImgBed sia raggiungibile, perché i canali OAuth richiedono URL di callback.
 - Dopo aver aggiunto un canale, carica prima un'immagine di prova per controllare che salvataggio e apertura funzionino.

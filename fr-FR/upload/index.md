@@ -10,6 +10,12 @@ Chaque utilisateur peut préférer des canaux différents. Si vous souhaitez une
 >
 > ![Cliquer sur Reconstruire l’index pendant l’initialisation](../../image/初始化点击重建索引.png)
 
+### Facultatif : activer la réplication en lecture D1
+
+Dans les paramètres de la base D1 du tableau de bord Cloudflare, activez la réplication en lecture pour accélérer l’accès au gestionnaire de fichiers, à la galerie publique et à l’API d’image aléatoire. ImgBed fonctionne normalement sans cette option.
+
+![Activer la réplication en lecture D1](../../image/d1读取复制.png)
+
 - Préparez le compte de stockage ou les identifiants API nécessaires.
 - Assurez-vous que votre domaine ImgBed est accessible, car les canaux basés sur OAuth nécessitent des URL de retour.
 - Après avoir ajouté un canal, téléversez d’abord une image de test pour confirmer que les fichiers sont bien stockés et s’ouvrent correctement.

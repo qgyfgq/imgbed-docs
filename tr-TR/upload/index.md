@@ -10,6 +10,12 @@ Her kullanıcı için uygun kanal farklı olabilir. Basit bir başlangıç için
 >
 > ![Başlatma sırasında Dizini yeniden oluştur seçeneğine tıklama](../../image/初始化点击重建索引.png)
 
+### İsteğe bağlı: D1 okuma çoğaltmasını etkinleştirin
+
+Cloudflare panosundaki D1 veritabanı ayarlarından okuma çoğaltmasını etkinleştirerek dosya yönetimi, herkese açık galeri ve rastgele görsel API'sine erişimi hızlandırabilirsiniz. Bu özellik etkinleştirilmeden de ImgBed normal çalışır.
+
+![D1 okuma çoğaltmasını etkinleştirin](../../image/d1读取复制.png)
+
 - Kullanacağınız depolama hesabını veya API bilgilerini hazırlayın.
 - ImgBed alan adınızın erişilebilir olduğundan emin olun; OAuth tabanlı kanallar callback URL ister.
 - Kanalı ekledikten sonra önce bir test görseli yükleyerek dosyanın kaydedilip açıldığını doğrulayın.

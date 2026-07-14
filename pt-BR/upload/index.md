@@ -10,6 +10,12 @@ Cada pessoa pode preferir um canal diferente. Para começar de forma simples, Te
 >
 > ![Clicar em Reconstruir índice durante a inicialização](../../image/初始化点击重建索引.png)
 
+### Opcional: ativar a replicação de leitura do D1
+
+Nas configurações do banco D1 no painel da Cloudflare, ative a replicação de leitura para agilizar o acesso ao gerenciamento de arquivos, à galeria pública e à API de imagem aleatória. O ImgBed funciona normalmente mesmo sem essa opção.
+
+![Ativar a replicação de leitura do D1](../../image/d1读取复制.png)
+
 - Prepare a conta de armazenamento ou as credenciais de API que você pretende usar.
 - Verifique se o domínio do ImgBed está acessível, pois canais baseados em OAuth precisam de URLs de callback.
 - Depois de adicionar um canal, envie primeiro uma imagem de teste para confirmar que o arquivo é salvo e aberto corretamente.

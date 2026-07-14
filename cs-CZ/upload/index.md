@@ -10,6 +10,12 @@ Každému může vyhovovat jiný kanál. Pokud chcete jednoduchý začátek, zku
 >
 > ![Kliknutí na znovu sestavit index při inicializaci](../../image/初始化点击重建索引.png)
 
+### Volitelné: Zapnutí replikace čtení D1
+
+V nastavení databáze D1 v ovládacím panelu Cloudflare zapněte replikaci čtení. Může zrychlit správu souborů, veřejnou galerii a API náhodných obrázků. ImgBed bude normálně fungovat i bez této možnosti.
+
+![Zapnutí replikace čtení D1](../../image/d1读取复制.png)
+
 - Připravte si úložný účet nebo API údaje, které chcete použít.
 - Ověřte, že je vaše doména ImgBed dostupná, protože OAuth kanály potřebují URL zpětného volání.
 - Po přidání kanálu nejdříve nahrajte testovací obrázek a ověřte, že se soubor uloží a otevře.
