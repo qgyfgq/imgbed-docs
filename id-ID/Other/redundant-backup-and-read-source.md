@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Entri ini paling cocok untuk menambahkan cadangan ke satu folder atau ke semua file secara massal.
 
-Kanal cadangan dapat dipilih secara manual, atau Anda dapat memilih pengalihan otomatis dan membiarkan ImgBed mencari kanal cadangan yang sesuai.
+Kanal cadangan dapat dipilih secara manual, atau Anda dapat memilih pengalihan otomatis dan membiarkan ImgHost mencari kanal cadangan yang sesuai.
 
 ## Cadangan dari Detail File
 
@@ -90,4 +90,4 @@ Selama file cadangan masih tersedia, gambar, video, dan tautan unduhan tetap ber
 
 ## Apa yang Terjadi Saat File Dihapus
 
-Saat file dihapus, ImgBed menghapus file utama dan file cadangan.
+Saat file dihapus, ImgHost menghapus file utama dan file cadangan.

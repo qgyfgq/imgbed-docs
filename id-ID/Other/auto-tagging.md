@@ -41,7 +41,7 @@ Anda dapat menggunakan Space publik untuk sementara, tetapi Space publik digunak
 3. Klik menu tiga titik di sudut kanan atas.
 4. Pilih `Duplicate this Space`.
 5. Pertahankan nama Space bawaan atau pilih nama Anda sendiri, misalnya `wd-tagger`.
-6. Atur visibilitas ke `Public`. Space publik lebih mudah dipanggil oleh ImgBed.
+6. Atur visibilitas ke `Public`. Space publik lebih mudah dipanggil oleh ImgHost.
 7. Untuk awal, gunakan perangkat keras gratis bawaan. Tingkatkan nanti hanya jika antrean mulai jelas terasa.
 8. Buat Space dan tunggu proses build selesai.
 
@@ -51,7 +51,7 @@ Setelah build selesai, buka halaman Space Anda. URL biasanya terlihat seperti:
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Salin URL browser lalu tempelkan ke `Space URLs` di ImgBed.
+Salin URL browser lalu tempelkan ke `Space URLs` di ImgHost.
 
 ## Mengisi Beberapa Space URLs
 
@@ -65,7 +65,7 @@ Contoh:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL halaman Space yang sudah disalin. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | URL halaman Space hasil duplikasi milik Anda sendiri. |
 
-Anda dapat memasukkan beberapa URL. ImgBed menggunakan beberapa Space secara bersamaan, sehingga kecepatan dapat meningkat.
+Anda dapat memasukkan beberapa URL. ImgHost menggunakan beberapa Space secara bersamaan, sehingga kecepatan dapat meningkat.
 
 Jika salah satu Space sementara tidak tersedia, Space lain tetap dapat melanjutkan pemrosesan.
 
@@ -103,7 +103,7 @@ Jika tag terlalu sedikit, turunkan sedikit ambang tag umum.
 3. Klik mulai penandaan.
 4. Tunggu hingga progres selesai.
 
-Jika folder target kosong, ImgBed memproses semua folder.
+Jika folder target kosong, ImgHost memproses semua folder.
 
 Penandaan batch paling cocok untuk gambar lama. Untuk gambar baru, aktifkan penandaan otomatis saat upload agar Anda tidak perlu menjalankannya secara manual setiap kali.
 
@@ -121,19 +121,19 @@ Penandaan otomatis terutama memproses file gambar.
 
 Gambar yang sudah memiliki tag, orientasi, rating, lebar, dan tinggi lengkap akan dilewati untuk menghindari panggilan Space yang tidak perlu.
 
-Jika memungkinkan, ImgBed hanya mengisi informasi yang hilang. Misalnya, jika hanya orientasi yang hilang, ImgBed mencoba menambahkan orientasi tanpa memanggil seluruh alur tag konten.
+Jika memungkinkan, ImgHost hanya mengisi informasi yang hilang. Misalnya, jika hanya orientasi yang hilang, ImgHost mencoba menambahkan orientasi tanpa memanggil seluruh alur tag konten.
 
 ## Pertanyaan Umum
 
 ### Mengapa Perlu Menduplikasi Space Sendiri?
 
-Space publik digunakan bersama oleh banyak pengguna. Space hasil duplikasi milik Anda terutama digunakan oleh situs ImgBed Anda, sehingga biasanya lebih cepat dan lebih andal.
+Space publik digunakan bersama oleh banyak pengguna. Space hasil duplikasi milik Anda terutama digunakan oleh situs ImgHost Anda, sehingga biasanya lebih cepat dan lebih andal.
 
 ### Space Terus Memulai
 
 Setelah pertama kali dibuat, atau setelah lama tidak aktif, Space mungkin membutuhkan waktu untuk menyala.
 
-Buka halaman Space Anda terlebih dahulu. Setelah Space dapat mengenali gambar secara normal, kembali ke ImgBed dan mulai penandaan.
+Buka halaman Space Anda terlebih dahulu. Setelah Space dapat mengenali gambar secara normal, kembali ke ImgHost dan mulai penandaan.
 
 ### Bagaimana Cara Menyalin Space URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

@@ -1,6 +1,6 @@
 # Blog
 
-Tính năng blog thêm một trang blog độc lập vào trang ImgBed của bạn.
+Tính năng blog thêm một trang blog độc lập vào trang ImgHost của bạn.
 
 Sau khi bật, khách truy cập có thể mở:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Trang chủ blog](../../image/other/博客/博客首页.png)
 
-Blog được điều chỉnh từ dự án mã nguồn mở [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed viết lại và tích hợp với Vue để blog có thể chạy như một phần của trang lưu trữ ảnh.
+Blog được điều chỉnh từ dự án mã nguồn mở [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost viết lại và tích hợp với Vue để blog có thể chạy như một phần của trang lưu trữ ảnh.
 
 ## Cấu Hình Ở Đâu
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Chờ thông báo thành công.
 5. Mở `https://your-domain.com/blog/` để xem blog.
 
-Ở lần dùng đầu tiên, ImgBed sẽ chuẩn bị một kho GitHub riêng tư trong tài khoản đã chọn:
+Ở lần dùng đầu tiên, ImgHost sẽ chuẩn bị một kho GitHub riêng tư trong tài khoản đã chọn:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Quy trình thông thường:
 2. Vào kho riêng tư `imgbed-blog-config`.
 3. Chỉnh sửa hoặc thêm tệp bài viết.
 4. Tạo commit cho các thay đổi.
-5. Quay lại bảng quản trị ImgBed và nhấp `Update Blog`, hoặc nhấp ba lần vào logo ở góc trên bên trái của trang chủ blog để kích hoạt cập nhật blog.
+5. Quay lại bảng quản trị ImgHost và nhấp `Update Blog`, hoặc nhấp ba lần vào logo ở góc trên bên trái của trang chủ blog để kích hoạt cập nhật blog.
 
 `Update Blog` không ghi đè nội dung bạn đã viết. Nó khởi tạo kho khi cần và làm mới bộ nhớ đệm blog.
 
@@ -72,7 +72,7 @@ Thống kê truy cập hiển thị lượt xem bài viết và lượt truy c�
 
 Blog luôn nằm dưới đường dẫn `/blog/`.
 
-Ví dụ, nếu tên miền ImgBed của bạn là:
+Ví dụ, nếu tên miền ImgHost của bạn là:
 
 ```text
 https://image.example.com

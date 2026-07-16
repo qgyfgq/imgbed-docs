@@ -1,6 +1,6 @@
 # Listar e filtrar com API Token
 
-O script de listagem com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros que precisam ler dados do ImgBed. Ele usa apenas a permissão `list`; não faz upload de arquivos, não exclui arquivos, não altera configurações e não bloqueia nem libera upload para nenhum IP.
+O script de listagem com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros que precisam ler dados do ImgHost. Ele usa apenas a permissão `list`; não faz upload de arquivos, não exclui arquivos, não altera configurações e não bloqueia nem libera upload para nenhum IP.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed, por exemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
 | `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
 | `--retries <n>` | Não | Número de tentativas para falhas temporárias; padrão `3` |
 | `--timeout-ms <n>` | Não | Timeout de uma requisição; padrão `180000` |

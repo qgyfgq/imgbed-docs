@@ -4,19 +4,19 @@
 
 Dùng Cloudflare R2 khi:
 
-- ImgBed site của bạn đã deploy trên Cloudflare và bạn muốn lưu files trong một R2 bucket thuộc cùng Cloudflare account.
+- ImgHost site của bạn đã deploy trên Cloudflare và bạn muốn lưu files trong một R2 bucket thuộc cùng Cloudflare account.
 - Bạn không muốn cấu hình riêng S3 endpoint, access key và secret key.
 - Bạn muốn đọc và ghi qua Worker hoặc Pages R2 binding với ít bước thiết lập nhất.
 
 Tóm lại:
 
-R2 channel không được tạo thủ công trong ImgBed admin panel. Trước tiên bạn cần bind một R2 bucket vào Cloudflare project, và binding variable name phải là `img_r2`.
+R2 channel không được tạo thủ công trong ImgHost admin panel. Trước tiên bạn cần bind một R2 bucket vào Cloudflare project, và binding variable name phải là `img_r2`.
 
 ## Cần chuẩn bị gì trước khi bắt đầu
 
 - Một Cloudflare account.
 - Một R2 bucket đã có sẵn.
-- Quyền quản lý Cloudflare project nơi ImgBed được deploy.
+- Quyền quản lý Cloudflare project nơi ImgHost được deploy.
 
 ## Cấu hình trong Cloudflare
 
@@ -31,7 +31,7 @@ Bucket này là nơi lưu uploaded files.
 
 ![Tạo R2 bucket](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bind Bucket vào ImgBed Project
+### 2. Bind Bucket vào ImgHost Project
 
 Chọn vị trí binding theo deployment type:
 
@@ -51,9 +51,9 @@ Variable name phải chính xác là `img_r2`. Việc upload, đọc và xóa R2
 
 ### 3. Redeploy Project
 
-Sau khi save binding, redeploy ImgBed để Worker hoặc Pages runtime truy cập được `img_r2`.
+Sau khi save binding, redeploy ImgHost để Worker hoặc Pages runtime truy cập được `img_r2`.
 
-## Bạn sẽ thấy gì trong ImgBed
+## Bạn sẽ thấy gì trong ImgHost
 
 Khi R2 binding đã sẵn sàng, mở:
 
@@ -82,19 +82,19 @@ Hệ thống tự động tạo một fixed channel:
 | Quota limit | Kiểm soát R2 channel này có tham gia upload selection dựa trên capacity hay không. | Không |
 | Threshold | Dừng ghi vào channel này khi usage đạt percentage đã đặt. | Bắt buộc khi bật quota limits |
 
-Bạn có thể sao chép Account ID từ account information panel trong Cloudflare dashboard. Chỉ điền nếu muốn ImgBed query và enforce R2 quota usage.
+Bạn có thể sao chép Account ID từ account information panel trong Cloudflare dashboard. Chỉ điền nếu muốn ImgHost query và enforce R2 quota usage.
 
 ![Lấy Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Các bước thiết lập
 
 1. Tạo R2 bucket trong Cloudflare.
-2. Mở Cloudflare settings của ImgBed project.
+2. Mở Cloudflare settings của ImgHost project.
 3. Thêm R2 bucket binding.
 4. Đặt `Variable name` là `img_r2`.
 5. Chọn R2 bucket đã tạo.
-6. Save binding và redeploy ImgBed.
-7. Quay lại ImgBed -> Cài đặt hệ thống -> Cài đặt tải lên.
+6. Save binding và redeploy ImgHost.
+7. Quay lại ImgHost -> Cài đặt hệ thống -> Cài đặt tải lên.
 8. Xác nhận `Cloudflare R2` channel xuất hiện và đang bật.
 
 Nếu muốn R2 tham gia upload selection dựa trên capacity, bật quota limit rồi nhập Account ID, bucket name, quota limit và threshold trước khi save.

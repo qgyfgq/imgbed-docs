@@ -1,6 +1,6 @@
 # 部落格
 
-部落格功能會為你的 ImgBed 網站新增一個獨立的部落格頁面。
+部落格功能會為你的 ImgHost 網站新增一個獨立的部落格頁面。
 
 啟用後，訪客可以開啟：
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![部落格首頁](../../image/other/博客/博客首页.png)
 
-部落格改造自開源專案 [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki)。ImgBed 以 Vue 重寫並整合，使其能作為圖床網站的一部分執行。
+部落格改造自開源專案 [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki)。ImgHost 以 Vue 重寫並整合，使其能作為圖床網站的一部分執行。
 
 ## 在哪裡設定
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. 等待成功訊息。
 5. 開啟 `https://your-domain.com/blog/` 查看部落格。
 
-第一次使用時，ImgBed 會在所選帳號下準備一個私有 GitHub 儲存庫：
+第一次使用時，ImgHost 會在所選帳號下準備一個私有 GitHub 儲存庫：
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ imgbed-blog-config
 2. 進入私有 `imgbed-blog-config` 儲存庫。
 3. 編輯或新增文章檔案。
 4. 提交變更。
-5. 回到 ImgBed 管理面板並點選 `Update Blog`，或在部落格首頁左上角連點標誌三次以觸發部落格更新。
+5. 回到 ImgHost 管理面板並點選 `Update Blog`，或在部落格首頁左上角連點標誌三次以觸發部落格更新。
 
 `Update Blog` 不會覆蓋你已寫好的內容。它會在需要時初始化儲存庫，並重新整理部落格快取。
 
@@ -72,7 +72,7 @@ imgbed-blog-config
 
 部落格固定在 `/blog/` 路徑下提供服務。
 
-例如你的 ImgBed 網域是：
+例如你的 ImgHost 網域是：
 
 ```text
 https://image.example.com

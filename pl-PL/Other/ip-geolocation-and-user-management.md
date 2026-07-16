@@ -28,7 +28,7 @@ Nowszy przepływ geolokalizacji IP obsługuje wiele źródeł zamiast polegać n
 
 Wypełnij dane tylko dla usług, których potrzebujesz. Nie trzeba konfigurować każdego pola.
 
-Jeśli nie podasz żadnego klucza, ImgBed nadal spróbuje wbudowanych darmowych źródeł, ale stabilność, obsługa języków i dokładność mogą być niższe niż przy usłudze skonfigurowanej samodzielnie.
+Jeśli nie podasz żadnego klucza, ImgHost nadal spróbuje wbudowanych darmowych źródeł, ale stabilność, obsługa języków i dokładność mogą być niższe niż przy usłudze skonfigurowanej samodzielnie.
 
 ## Zalecane wybory
 
@@ -57,9 +57,9 @@ Znajdź identyfikator konta w panelu MaxMind i wygeneruj License Key na stronie 
 
 ![Konfiguracja klucza MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Po wygenerowaniu wklej Account ID i License Key do ImgBed i zapisz.
+Po wygenerowaniu wklej Account ID i License Key do ImgHost i zapisz.
 
-Darmowy plan MaxMind nadaje się do codziennego użycia, ale ma limity zapytań. Po przekroczeniu limitu ImgBed próbuje innych dostępnych źródeł.
+Darmowy plan MaxMind nadaje się do codziennego użycia, ale ma limity zapytań. Po przekroczeniu limitu ImgHost próbuje innych dostępnych źródeł.
 
 ## Konfiguracja ipapi
 
@@ -69,9 +69,9 @@ Otwórz konsolę ipapi i skopiuj widoczny tam klucz API.
 
 ![Konfiguracja ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Wklej go w polu `ipapi Key` w ImgBed i zapisz.
+Wklej go w polu `ipapi Key` w ImgHost i zapisz.
 
-ipapi obsługuje wielojęzyczną geolokalizację IP i jest przydatny, gdy chcesz pokazywać adresy w wybranym języku. Darmowy plan również ma limity. Gdy limit się skończy, ImgBed próbuje innych dostępnych źródeł.
+ipapi obsługuje wielojęzyczną geolokalizację IP i jest przydatny, gdy chcesz pokazywać adresy w wybranym języku. Darmowy plan również ma limity. Gdy limit się skończy, ImgHost próbuje innych dostępnych źródeł.
 
 ## Konfiguracja Tencent Map Key
 

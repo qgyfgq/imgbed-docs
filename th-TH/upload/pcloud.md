@@ -2,7 +2,7 @@
 
 ## เหมาะกับ
 
-- คุณมี pCloud account และต้องการให้ ImgBed จัดเก็บรูปภาพใน pCloud
+- คุณมี pCloud account และต้องการให้ ImgHost จัดเก็บรูปภาพใน pCloud
 - คุณสะดวกใช้ pCloud account email และ password เป็น credentials ของช่องทาง
 
 ## สิ่งที่ต้องเตรียมก่อน
@@ -70,7 +70,7 @@
 
 pCloud OAuth2 ไม่ได้เปิดให้บริการแบบ self-service โดยค่าเริ่มต้น ต้อง email ไปขอให้ pCloud enable
 
-Flow pCloud OAuth2 ปัจจุบันยังไม่รองรับ workflow ของ short-lived upload link ที่ ImgBed ต้องใช้ ช่องทางนี้จึงใช้ account email และ password login แทน
+Flow pCloud OAuth2 ปัจจุบันยังไม่รองรับ workflow ของ short-lived upload link ที่ ImgHost ต้องใช้ ช่องทางนี้จึงใช้ account email และ password login แทน
 
 ### ควรใช้ API Host ไหน?
 

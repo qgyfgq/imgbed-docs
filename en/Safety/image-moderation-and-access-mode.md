@@ -37,7 +37,7 @@ For private sites or sites with mature content, Adult mode may be appropriate. F
 
 ## What Enabling Moderation Does
 
-When moderation is enabled, ImgBed calls the selected moderation provider during upload and saves the detected age rating.
+When moderation is enabled, ImgHost calls the selected moderation provider during upload and saves the detected age rating.
 
 Main ratings:
 
@@ -66,7 +66,7 @@ Each provider has different requirements:
 - nsfwjs usually requires an API endpoint URL.
 - Sightengine requires an API user and API secret.
 
-Choose based on your account, availability, and detection quality. As long as moderation is enabled and configured correctly, ImgBed attempts to write an image rating during upload.
+Choose based on your account, availability, and detection quality. As long as moderation is enabled and configured correctly, ImgHost attempts to write an image rating during upload.
 
 ## Effect on the Public Gallery
 
@@ -85,16 +85,16 @@ This only affects normal public access. The admin panel still shows all files.
 
 Public file URLs are direct image links opened by visitors.
 
-If the file rating is allowed by the current access mode, ImgBed returns the original image.
+If the file rating is allowed by the current access mode, ImgHost returns the original image.
 
-If the rating is above the allowed level, normal public access does not return the original image. Instead, ImgBed returns the configured blocked result or placeholder image.
+If the rating is above the allowed level, normal public access does not return the original image. Instead, ImgHost returns the configured blocked result or placeholder image.
 
 Example:
 
 - The current mode is Child mode.
 - An image is rated R18.
 - A visitor opens the public URL directly.
-- ImgBed does not return the R18 original image to that visitor.
+- ImgHost does not return the R18 original image to that visitor.
 
 ![Restricted file image](../../image/Safety/文件受限图.png)
 

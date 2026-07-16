@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Esta entrada es la más adecuada para añadir copias de seguridad a una carpeta o a todos los archivos en lote.
 
-El canal de copia de seguridad puede seleccionarse manualmente, o puede elegir cambio automático y dejar que ImgBed encuentre un canal adecuado.
+El canal de copia de seguridad puede seleccionarse manualmente, o puede elegir cambio automático y dejar que ImgHost encuentre un canal adecuado.
 
 ## Copia de seguridad desde detalles de archivo
 
@@ -90,4 +90,4 @@ Mientras el archivo de copia de seguridad esté disponible, las imágenes, los v
 
 ## Qué ocurre al eliminar un archivo
 
-Cuando se elimina un archivo, ImgBed elimina tanto el archivo principal como el archivo de copia de seguridad.
+Cuando se elimina un archivo, ImgHost elimina tanto el archivo principal como el archivo de copia de seguridad.

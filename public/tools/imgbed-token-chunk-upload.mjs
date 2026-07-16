@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const MIB = 1024 * 1024;
-const USER_AGENT = 'ImgBed-Token-Chunk-Upload/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Chunk-Upload/1.0 Node';
 
 const TRUE_SESSION_CHANNELS = Object.freeze({
   telegram: { aliases: ['tg', 'telegram'], chunkSize: 18 * MIB },
@@ -26,14 +26,14 @@ const DIRECT_SESSION_CHANNELS = Object.freeze({
 });
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token upload tool
+  process.stdout.write(`ImgHost API Token upload tool
 
 Usage:
   node imgbed-token-chunk-upload.mjs --base-url <url> --token <token> --file <path> --channel <key>
   node imgbed-token-chunk-upload.mjs --base-url <url> --token <token> --list-channels
 
 Required:
-  --base-url <url>       ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>       ImgHost site URL, for example https://image.ai6.me
   --token <token>        API Token. You can also set IMGBED_API_TOKEN.
   --file <path>          Local file path.
   --channel <key>        Upload channel:

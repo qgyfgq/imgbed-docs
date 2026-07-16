@@ -7,7 +7,7 @@
 | Потрібно | Навіщо це потрібно |
 | --- | --- |
 | Обліковий запис GitLab | Для створення access token і володіння проєктом. |
-| GitLab Personal Access Token | ImgBed використовує його для доступу до GitLab API, створення проєктів і завантаження файлів у Generic Packages. |
+| GitLab Personal Access Token | ImgHost використовує його для доступу до GitLab API, створення проєктів і завантаження файлів у Generic Packages. |
 | Назва проєкту | Можна ввести тільки назву проєкту, наприклад `imgbed`. |
 
 ## Налаштування
@@ -26,7 +26,7 @@
 
 ![Вибір прав token](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## Крок 2. Заповніть канал GitLab Packages в ImgBed
+## Крок 2. Заповніть канал GitLab Packages в ImgHost
 
 Після вибору `GitLab Packages` у налаштуваннях завантаження заповніть поля так:
 
@@ -48,9 +48,9 @@
 
 | Поведінка системи | Опис |
 | --- | --- |
-| Коротка назва проєкту | ImgBed визначає поточний обліковий запис GitLab і розгортає значення до повного шляху проєкту. |
-| Повний шлях проєкту | ImgBed використовує шлях `username/project` саме в тому вигляді, у якому його введено. |
-| Перевірка проєкту | Якщо використовується шлях поточного особистого акаунта, ImgBed автоматично створює проєкт, коли його ще немає. Якщо повний шлях введено вручну, ImgBed використовує його напряму. |
+| Коротка назва проєкту | ImgHost визначає поточний обліковий запис GitLab і розгортає значення до повного шляху проєкту. |
+| Повний шлях проєкту | ImgHost використовує шлях `username/project` саме в тому вигляді, у якому його введено. |
+| Перевірка проєкту | Якщо використовується шлях поточного особистого акаунта, ImgHost автоматично створює проєкт, коли його ще немає. Якщо повний шлях введено вручну, ImgHost використовує його напряму. |
 | Публічний або приватний стан | Видимість проєкту синхронізується відповідно до поточного перемикача. |
 
 ## Короткий чекліст
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

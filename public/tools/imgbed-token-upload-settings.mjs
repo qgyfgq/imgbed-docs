@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-Upload-Settings/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Upload-Settings/1.0 Node';
 
 const CHANNELS = Object.freeze({
   telegram: { aliases: ['tg', 'telegram'] },
@@ -21,7 +21,7 @@ const CHANNELS = Object.freeze({
 });
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token upload settings tool
+  process.stdout.write(`ImgHost API Token upload settings tool
 
 Usage:
   node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --list
@@ -31,7 +31,7 @@ Usage:
   node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --load-balance <true|false> --channel <key> [--apply]
 
 Required:
-  --base-url <url>       ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>       ImgHost site URL, for example https://image.ai6.me
   --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
 
 Actions:

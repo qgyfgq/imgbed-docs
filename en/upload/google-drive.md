@@ -8,8 +8,8 @@ Before you start, prepare these items:
 | --- | --- |
 | A Google account | Used to access Google Cloud and authorize Google Drive |
 | A Google Cloud project | Used to enable the Drive API and create OAuth credentials |
-| An OAuth 2.0 client | Used by ImgBed to obtain the `Client ID`, `Client Secret`, and `Refresh Token` |
-| Your ImgBed domain | Used for the OAuth redirect URI. It must match the domain you actually use. |
+| An OAuth 2.0 client | Used by ImgHost to obtain the `Client ID`, `Client Secret`, and `Refresh Token` |
+| Your ImgHost domain | Used for the OAuth redirect URI. It must match the domain you actually use. |
 
 ## Setup Steps
 
@@ -38,7 +38,7 @@ Before you start, prepare these items:
 2. Create a new client.
 3. Set the application type to `Web application`.
 4. Give the client a recognizable name.
-5. For authorized JavaScript origins, enter your ImgBed URL, for example:
+5. For authorized JavaScript origins, enter your ImgHost URL, for example:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 After the client is created, copy these values:
 
-| Generated Value | ImgBed Field |
+| Generated Value | ImgHost Field |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ After the client is created, copy these values:
 
 In Upload Settings, choose `Google Drive` and fill in:
 
-| ImgBed Field | What To Enter |
+| ImgHost Field | What To Enter |
 | --- | --- |
 | Channel name | A name you can recognize, such as `Main Google Drive` |
 | Client ID | The Client ID from Google Cloud |
@@ -73,7 +73,7 @@ In Upload Settings, choose `Google Drive` and fill in:
 | Refresh Token | Leave it empty for now. Get it in the next step. |
 | Root directory | Optional. Defaults to `imgbed`. |
 
-![Fill client details in ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Fill client details in ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Step 5: Get the Refresh Token
 
@@ -82,7 +82,7 @@ In Upload Settings, choose `Google Drive` and fill in:
 3. Complete the authorization prompts.
 4. The callback page will show a `Refresh Token`.
 5. Copy it.
-6. Return to ImgBed and paste it into the `Refresh Token` field.
+6. Return to ImgHost and paste it into the `Refresh Token` field.
 
 ![Copy Refresh Token after authorization](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

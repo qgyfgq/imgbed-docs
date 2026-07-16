@@ -38,7 +38,7 @@
 5. போட் username உள்ளிடவும். பொதுவாக username `bot` என முடிவது வேண்டும்.
 6. போட் உருவானதும் `@BotFather` போட் டோக்கன் தரும்.
 
-அந்த டோக்கன்-ஐ ImgBed-ல் `Bot Token` ஆக நிரப்ப வேண்டும்.
+அந்த டோக்கன்-ஐ ImgHost-ல் `Bot Token` ஆக நிரப்ப வேண்டும்.
 
 ![சேமி the போட் டோக்கன்](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Public மற்றும் private சேனல்கள் இரண்டு
 4. message picker-ல் target சேனல் தேர்வு செய்து `@userinfobot`-க்கு அனுப்பவும்.
 5. result வந்ததும் `Id: -100...` என தொடங்கும் எண்ணை நகலெடுக்கவும்.
 
-`-100` என தொடங்கும் எண் தான் ImgBed-க்கு தேவையான `Session ID (Chat ID)`.
+`-100` என தொடங்கும் எண் தான் ImgHost-க்கு தேவையான `Session ID (Chat ID)`.
 
 ![சேனல் ID-ஐ பெறவும்](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed-ல் Telegram சேனல் நிரப்பவும்
+### 5. ImgHost-ல் Telegram சேனல் நிரப்பவும்
 
 கட்டமைப்பு dialog-க்கு திரும்பி புலங்களை இவ்வாறு நிரப்பவும்:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

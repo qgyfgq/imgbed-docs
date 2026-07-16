@@ -1,23 +1,23 @@
 # Cài đặt tải lên
 
-Cài đặt tải lên dùng để kết nối ImgBed với các kênh lưu trữ của bạn. Sau khi cấu hình, ảnh và tệp được tải lên sẽ được lưu vào dịch vụ bạn chọn. ImgBed quản lý liên kết truy cập, bản ghi tệp, bản xem trước, thư viện công khai, API ảnh ngẫu nhiên, truy cập WebDAV và các luồng liên quan.
+Cài đặt tải lên dùng để kết nối ImgHost với các kênh lưu trữ của bạn. Sau khi cấu hình, ảnh và tệp được tải lên sẽ được lưu vào dịch vụ bạn chọn. ImgHost quản lý liên kết truy cập, bản ghi tệp, bản xem trước, thư viện công khai, API ảnh ngẫu nhiên, truy cập WebDAV và các luồng liên quan.
 
 Mỗi người có thể phù hợp với một kênh khác nhau. Nếu muốn bắt đầu đơn giản, Telegram, Discord hoặc GitHub Releases là lựa chọn dễ dùng. Nếu bạn ưu tiên dung lượng, tốc độ và độ ổn định lâu dài, hãy cân nhắc Cloudflare R2, S3, OneDrive, Google Drive, Dropbox, Yandex, pCloud hoặc dịch vụ WebDAV riêng.
 
 ## Trước khi bắt đầu
 
-> Trước khi dùng ImgBed lần đầu, bạn phải vào trang khởi tạo và nhấp "Xây dựng lại chỉ mục" để bổ sung các bảng D1 cần thiết, tránh lỗi ở những chức năng sau.
+> Trước khi dùng ImgHost lần đầu, bạn phải vào trang khởi tạo và nhấp "Xây dựng lại chỉ mục" để bổ sung các bảng D1 cần thiết, tránh lỗi ở những chức năng sau.
 >
 > ![Nhấp Xây dựng lại chỉ mục khi khởi tạo](../../image/初始化点击重建索引.png)
 
 ### Tùy chọn: bật tính năng sao chép phục vụ đọc của D1
 
-Trong phần cài đặt cơ sở dữ liệu D1 trên bảng điều khiển Cloudflare, hãy bật "Read Replication" để tăng tốc truy cập vào quản lý tệp, thư viện công khai và API ảnh ngẫu nhiên. ImgBed vẫn hoạt động bình thường nếu không bật tính năng này.
+Trong phần cài đặt cơ sở dữ liệu D1 trên bảng điều khiển Cloudflare, hãy bật "Read Replication" để tăng tốc truy cập vào quản lý tệp, thư viện công khai và API ảnh ngẫu nhiên. ImgHost vẫn hoạt động bình thường nếu không bật tính năng này.
 
 ![Bật tính năng sao chép phục vụ đọc của D1](../../image/d1读取复制.png)
 
 - Chuẩn bị tài khoản lưu trữ hoặc API credentials bạn muốn dùng.
-- Đảm bảo domain ImgBed của bạn truy cập được, vì các kênh OAuth cần callback URL.
+- Đảm bảo domain ImgHost của bạn truy cập được, vì các kênh OAuth cần callback URL.
 - Sau khi thêm kênh, hãy tải thử một ảnh để xác nhận tệp được lưu và mở đúng.
 
 ## Danh sách kênh
@@ -40,4 +40,4 @@ Trong phần cài đặt cơ sở dữ liệu D1 trên bảng điều khiển Cl
 
 - Mỗi kênh tải lên cần chuẩn bị thông tin gì trước khi cấu hình.
 - Cách tạo ứng dụng, sao chép key hoặc cấp quyền Token trên nền tảng bên thứ ba.
-- Cách điền cấu hình vào ImgBed và kiểm tra việc tải lên.
+- Cách điền cấu hình vào ImgHost và kiểm tra việc tải lên.

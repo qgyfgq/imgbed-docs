@@ -38,7 +38,7 @@
 5. निर्देशों के अनुसार बॉट का उपयोगकर्ता नाम दर्ज करें। आम तौर पर इसका अंत `bot` से होना चाहिए।
 6. बॉट बन जाने के बाद `@BotFather` बॉट टोकन लौटाएगा।
 
-यही टोकन ImgBed में `Bot Token` के रूप में दर्ज करना है।
+यही टोकन ImgHost में `Bot Token` के रूप में दर्ज करना है।
 
 ![बॉट टोकन सहेजें](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. संदेश चयनकर्ता में लक्षित चैनल चुनें और उसे `@userinfobot` को भेजें।
 5. जब `@userinfobot` परिणाम लौटाए, तो `Id: -100...` के रूप में दिखने वाला नंबर कॉपी करें।
 
-`-100` से शुरू होने वाला नंबर ImgBed के लिए आवश्यक `Session ID (Chat ID)` है।
+`-100` से शुरू होने वाला नंबर ImgHost के लिए आवश्यक `Session ID (Chat ID)` है।
 
 ![Channel ID प्राप्त करें](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed में Telegram चैनल भरें
+### 5. ImgHost में Telegram चैनल भरें
 
 चैनल कॉन्फ़िगरेशन संवाद पर लौटें और फ़ील्ड इस तरह भरें:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

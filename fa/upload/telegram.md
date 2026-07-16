@@ -38,7 +38,7 @@
 5. طبق راهنما، نام کاربری ربات را وارد کنید. معمولاً باید به `bot` ختم شود.
 6. پس از ساخت ربات، `@BotFather` یک توکن ربات برمی‌گرداند.
 
-این توکن همان `Bot Token` است که باید در ImgBed وارد کنید.
+این توکن همان `Bot Token` است که باید در ImgHost وارد کنید.
 
 ![ذخیره توکن ربات](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. در انتخابگر پیام، کانال مقصد را انتخاب کنید و آن را به `@userinfobot` ارسال کنید.
 5. وقتی `@userinfobot` نتیجه را برگرداند، عددی را که به شکل `Id: -100...` نمایش داده می‌شود کپی کنید.
 
-عددی که با `-100` شروع می‌شود همان `Session ID (Chat ID)` موردنیاز ImgBed است.
+عددی که با `-100` شروع می‌شود همان `Session ID (Chat ID)` موردنیاز ImgHost است.
 
 ![دریافت Channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. تکمیل کانال Telegram در ImgBed
+### 5. تکمیل کانال Telegram در ImgHost
 
 به پنجره پیکربندی کانال برگردید و فیلدها را این‌گونه تکمیل کنید:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

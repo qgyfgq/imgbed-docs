@@ -1,6 +1,6 @@
 # Bestanden uploaden met API Token
 
-Uploaden met een API Token is bedoeld voor scripts, automatisering en programma's van derden. Je hoeft de webpagina niet te openen: met het ImgBed-adres, het Token, het bestandspad en een echt uploadkanaal kan het bestand worden geüpload en krijg je na afloop de bestandslink terug.
+Uploaden met een API Token is bedoeld voor scripts, automatisering en programma's van derden. Je hoeft de webpagina niet te openen: met het ImgHost-adres, het Token, het bestandspad en een echt uploadkanaal kan het bestand worden geüpload en krijg je na afloop de bestandslink terug.
 
 ![API Token bewerken](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site, bijvoorbeeld `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
 | `--file <path>` | Ja | Pad naar het lokale bestand |
 | `--channel <key>` | Ja | Uploadkanaal |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site |
 | `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
 | `--file <path>` | Ja | Pad naar het lokale bestand |
 | `--channel <key>` | Ja | Uploadkanaal |

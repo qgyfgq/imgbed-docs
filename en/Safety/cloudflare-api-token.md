@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Cloudflare API credentials allow ImgBed to purge Cloudflare CDN cache after files change.
+Cloudflare API credentials allow ImgHost to purge Cloudflare CDN cache after files change.
 
 ![Cloudflare API Token settings](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare may cache public image URLs.
 
 Caching makes image delivery faster, but it can also leave stale content visible for a while after you delete, block, replace, or move a file.
 
-After Cloudflare API credentials are configured, ImgBed attempts to purge the related Cloudflare cache when those operations finish.
+After Cloudflare API credentials are configured, ImgHost attempts to purge the related Cloudflare cache when those operations finish.
 
 This is useful when:
 
@@ -36,18 +36,18 @@ This is useful when:
 
 ## What Happens If You Leave It Empty
 
-ImgBed still works normally without this setting.
+ImgHost still works normally without this setting.
 
-The only difference is that ImgBed will not actively purge Cloudflare CDN cache. Visitors may continue to see old content until the Cloudflare cache expires naturally.
+The only difference is that ImgHost will not actively purge Cloudflare CDN cache. Visitors may continue to see old content until the Cloudflare cache expires naturally.
 
 ## How To Find the Zone ID
 
-The Zone ID is the Cloudflare Zone ID of the site used by your ImgBed domain.
+The Zone ID is the Cloudflare Zone ID of the site used by your ImgHost domain.
 
 1. Sign in to the Cloudflare dashboard.
-2. Open the site that contains your ImgBed domain.
+2. Open the site that contains your ImgHost domain.
 3. Find `Zone ID` on the site overview page.
-4. Copy it into the `Zone ID` field in ImgBed.
+4. Copy it into the `Zone ID` field in ImgHost.
 
 This is the site Zone ID, not the account ID.
 
@@ -66,7 +66,7 @@ Enter your Cloudflare Global API Key.
 3. Go to the API Tokens page.
 4. Find `Global API Key`.
 5. View and copy it.
-6. Paste it into the `API Key` field in ImgBed.
+6. Paste it into the `API Key` field in ImgHost.
 
 ![View global API key](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ If your domain does not use Cloudflare, or you do not mind CDN cache delay, you 
 
 Usually no.
 
-Wrong credentials only prevent ImgBed from purging Cloudflare cache. Upload and normal file access should continue to work.
+Wrong credentials only prevent ImgHost from purging Cloudflare cache. Upload and normal file access should continue to work.
 
 ### Why Can a Deleted Image Still Be Opened?
 
 The most common reason is that Cloudflare still has the old file cached.
 
-With correct Cloudflare API credentials, ImgBed purges the related URL cache when a file is deleted.
+With correct Cloudflare API credentials, ImgHost purges the related URL cache when a file is deleted.
 
 ### Why Do I Still See the Old Image After Replacing a File?
 
 This is also usually caused by CDN cache.
 
-After this setting is configured, ImgBed attempts to purge the old URL cache when a file with the same name is overwritten.
+After this setting is configured, ImgHost attempts to purge the old URL cache when a file with the same name is overwritten.

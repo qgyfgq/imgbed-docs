@@ -37,7 +37,7 @@ Pro soukromé weby nebo weby s obsahem pro dospělé může být vhodný režim 
 
 ## Co znamená zapnutí moderace
 
-Když je moderace zapnutá, ImgBed při uploadu zavolá vybraného poskytovatele moderace a uloží zjištěné věkové hodnocení.
+Když je moderace zapnutá, ImgHost při uploadu zavolá vybraného poskytovatele moderace a uloží zjištěné věkové hodnocení.
 
 Hlavní hodnocení:
 
@@ -66,7 +66,7 @@ Každý poskytovatel má jiné požadavky:
 - nsfwjs obvykle vyžaduje URL koncového bodu API.
 - Sightengine vyžaduje API user a API secret.
 
-Vyberte podle účtu, dostupnosti a kvality detekce. Pokud je moderace zapnutá a správně nastavená, ImgBed se pokusí při nahrávání zapsat hodnocení obrázku.
+Vyberte podle účtu, dostupnosti a kvality detekce. Pokud je moderace zapnutá a správně nastavená, ImgHost se pokusí při nahrávání zapsat hodnocení obrázku.
 
 ## Vliv na veřejnou galerii
 
@@ -85,16 +85,16 @@ Týká se to jen běžného veřejného přístupu. Administrace stále zobrazuj
 
 Veřejné URL souborů jsou přímé odkazy, které otevírají návštěvníci.
 
-Pokud je hodnocení souboru povoleno aktuálním režimem, ImgBed vrátí původní obrázek.
+Pokud je hodnocení souboru povoleno aktuálním režimem, ImgHost vrátí původní obrázek.
 
-Pokud je hodnocení nad povolenou úrovní, běžný veřejný přístup nevrátí původní obrázek. ImgBed místo toho vrátí nastavený blokovaný výsledek nebo náhradní obrázek.
+Pokud je hodnocení nad povolenou úrovní, běžný veřejný přístup nevrátí původní obrázek. ImgHost místo toho vrátí nastavený blokovaný výsledek nebo náhradní obrázek.
 
 Příklad:
 
 - Aktuální režim je režim pro děti.
 - Obrázek má hodnocení R18.
 - Návštěvník otevře veřejný URL přímo.
-- ImgBed tomuto návštěvníkovi nevrátí původní R18 obrázek.
+- ImgHost tomuto návštěvníkovi nevrátí původní R18 obrázek.
 
 ![Omezený obrázek souboru](../../image/Safety/文件受限图.png)
 

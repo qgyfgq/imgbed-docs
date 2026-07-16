@@ -1,6 +1,6 @@
 # Eliminare file con API Token
 
-L'eliminazione tramite API Token è pensata per script, automazioni e programmi di terze parti. Non serve aprire il pannello di amministrazione: bastano indirizzo del sito, API Token e ID file espliciti per eliminare uno o più file da ImgBed.
+L'eliminazione tramite API Token è pensata per script, automazioni e programmi di terze parti. Non serve aprire il pannello di amministrazione: bastano indirizzo del sito, API Token e ID file espliciti per eliminare uno o più file da ImgHost.
 
 L'eliminazione è un'operazione di scrittura. Dopo l'esecuzione del comando, i dati vengono rimossi davvero. È consigliabile usare prima `imgbed-token-list.mjs` per verificare i valori `fileId` da eliminare, poi passare questi ID allo script di eliminazione.
 
@@ -63,7 +63,7 @@ Dopo un'eliminazione riuscita, il server aggiorna automaticamente indici dei fil
 
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `--base-url <url>` | Sì | Indirizzo del sito ImgBed, ad esempio `https://image.ai6.me` |
+| `--base-url <url>` | Sì | Indirizzo del sito ImgHost, ad esempio `https://image.ai6.me` |
 | `--token <token>` | Sì | API Token; in alternativa usa la variabile d'ambiente `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Sì | ID del file da eliminare; può essere indicato più volte |
 | `--strictness <strict\|soft>` | No | Rigidità dell'eliminazione; predefinita `strict` |
@@ -80,10 +80,10 @@ Questo script elimina solo i valori `--file-id` passati esplicitamente. Non eseg
 
 | Modalità | Descrizione |
 | --- | --- |
-| `strict` | Modalità predefinita. Se l'eliminazione nello spazio remoto non riesce, il record ImgBed viene mantenuto per consentire un nuovo tentativo o una verifica |
-| `soft` | Se l'eliminazione nello spazio remoto non riesce, il record ImgBed viene comunque pulito e il risultato restituisce un avviso |
+| `strict` | Modalità predefinita. Se l'eliminazione nello spazio remoto non riesce, il record ImgHost viene mantenuto per consentire un nuovo tentativo o una verifica |
+| `soft` | Se l'eliminazione nello spazio remoto non riesce, il record ImgHost viene comunque pulito e il risultato restituisce un avviso |
 
-Se vuoi considerare riuscita l'operazione solo quando anche il file remoto viene eliminato, usa la modalità predefinita `strict`. Se una piattaforma remota non consente più l'eliminazione e vuoi solo pulire il record ImgBed, usa `soft`.
+Se vuoi considerare riuscita l'operazione solo quando anche il file remoto viene eliminato, usa la modalità predefinita `strict`. Se una piattaforma remota non consente più l'eliminazione e vuoi solo pulire il record ImgHost, usa `soft`.
 
 ## Esempi di utilizzo
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Pulire il record ImgBed anche se l'eliminazione nello spazio remoto fallisce:
+Pulire il record ImgHost anche se l'eliminazione nello spazio remoto fallisce:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Controllare `fileId` prima di eliminare
 
-Lo script di eliminazione richiede l'ID file di ImgBed. Puoi prima usare lo script di elenco per vedere i file in una cartella:
+Lo script di eliminazione richiede l'ID file di ImgHost. Puoi prima usare lo script di elenco per vedere i file in una cartella:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Il campo `name` nel risultato è di solito il `fileId` che puoi passare allo scr
 
 ### Perché l'eliminazione è fallita ma il file è ancora nell'elenco?
 
-Con la modalità predefinita `strict`, il record ImgBed viene mantenuto se l'eliminazione nello spazio remoto fallisce. Questo evita di eliminare solo l'indice locale mentre il file remoto continua a esistere. Dopo aver verificato che vuoi solo pulire il record ImgBed, riprova lo stesso `fileId` con `soft`.
+Con la modalità predefinita `strict`, il record ImgHost viene mantenuto se l'eliminazione nello spazio remoto fallisce. Questo evita di eliminare solo l'indice locale mentre il file remoto continua a esistere. Dopo aver verificato che vuoi solo pulire il record ImgHost, riprova lo stesso `fileId` con `soft`.
 
 ### Perché nel risultato ci sono avviso?
 

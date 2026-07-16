@@ -6,7 +6,7 @@
 | --- | --- |
 | Yandex hesabı | Giriş yapmak ve Yandex Disk'i yetkilendirmek için |
 | Yandex OAuth app | `Client ID` ve `Client Secret` oluşturmak için |
-| ImgBed alan adınız | OAuth redirect URI için |
+| ImgHost alan adınız | OAuth redirect URI için |
 | Kullanılabilir Yandex Disk depolama alanı | Dosyaların gerçekten saklanacağı yer |
 
 ## Kurulum Adımları
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### 2. Permissions Değerlerini Kontrol Edin
 
-Mevcut ImgBed Yandex entegrasyonu için `Yandex.Disk REST API` altında şu dört permission kalsın:
+Mevcut ImgHost Yandex entegrasyonu için `Yandex.Disk REST API` altında şu dört permission kalsın:
 
 | Permission | Amaç |
 | --- | --- |
-| `cloud_api:disk.app_folder` | ImgBed'in dosyaları app folder içinde saklamasına izin verir |
+| `cloud_api:disk.app_folder` | ImgHost'in dosyaları app folder içinde saklamasına izin verir |
 | `cloud_api:disk.read` | Dosyaları ve download links değerlerini okur |
 | `cloud_api:disk.write` | Dosya yükler, klasör oluşturur ve dosya siler |
 | `Access to information about Yandex.Disk` | Disk kotasını ve kullanılan alanı okur |
@@ -55,7 +55,7 @@ Temel yükleme, indirme, silme ve kota özellikleri çoğunlukla yukarıdaki dö
 
 App oluşturulduktan sonra şunları kopyalayın:
 
-| Yandex Alanı | ImgBed Alanı |
+| Yandex Alanı | ImgHost Alanı |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ App oluşturulduktan sonra şunları kopyalayın:
 
 Yükleme Ayarları'nda `Yandex` seçin ve şunları doldurun:
 
-| ImgBed Alanı | Ne girilir |
+| ImgHost Alanı | Ne girilir |
 | --- | --- |
 | Channel name | Tanınabilir bir ad, örneğin `Main Yandex` |
 | Client ID | Yandex app `Client ID` |
@@ -78,12 +78,12 @@ Yükleme Ayarları'nda `Yandex` seçin ve şunları doldurun:
 
 ### 5. Refresh Token Alın
 
-1. ImgBed'de `Get Token` düğmesine tıklayın.
+1. ImgHost'de `Get Token` düğmesine tıklayın.
 2. Bağlamak istediğiniz Yandex hesabıyla giriş yapın.
 3. Yetkilendirme istemini onaylayın.
 4. Callback sayfası bir `Refresh Token` gösterir.
 5. Bunu kopyalayın.
-6. ImgBed'e dönüp `Refresh Token` alanına yapıştırın.
+6. ImgHost'e dönüp `Refresh Token` alanına yapıştırın.
 
 ![Yetkilendirme sonrası refresh token kopyalama](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Kaynaklar

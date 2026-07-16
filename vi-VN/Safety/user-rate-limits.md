@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Bật giới hạn tần suất
 
-Sau khi bật `Bật giới hạn tần suất`, ImgBed theo dõi các lượt tải lên gần đây theo địa chỉ IP của người tải lên.
+Sau khi bật `Bật giới hạn tần suất`, ImgHost theo dõi các lượt tải lên gần đây theo địa chỉ IP của người tải lên.
 
 Giá trị mặc định:
 

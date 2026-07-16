@@ -8,8 +8,8 @@ La configuración de página controla la visualización del sitio, los valores p
 | --- | --- |
 | Título del sitio | Título que se muestra en la pestaña del navegador. |
 | Icono del sitio | Icono pequeño que se muestra en la pestaña del navegador. |
-| Nombre de ImgBed | Nombre que se muestra en las páginas de la interfaz pública. |
-| Logotipo de ImgBed | Imagen del logotipo que se muestra en las páginas de la interfaz pública. |
+| Nombre de ImgHost | Nombre que se muestra en las páginas de la interfaz pública. |
+| Logotipo de ImgHost | Imagen del logotipo que se muestra en las páginas de la interfaz pública. |
 | Enlace del logotipo | URL que se abre al hacer clic en el logotipo o en el avatar. |
 | Intervalo de cambio del fondo | Intervalo de rotación para varios fondos, en milisegundos. `60000` significa 60 segundos. |
 | Opacidad del fondo | Opacidad de la imagen de fondo de `0` a `1`. Los valores más bajos se ven más claros. |
@@ -63,5 +63,5 @@ El fondo de administración admite URL de imágenes. Se pueden separar varias UR
 | --- | --- |
 | Predeterminado | Prefijo aleatorio basado en tiempo + nombre de archivo original, como `1760000000000_cat.png`. |
 | Solo prefijo | Solo prefijo aleatorio basado en tiempo y extensión, como `1760000000000.png`. |
-| Solo nombre original | Conserva el nombre de archivo original, como `cat.png`. Si hay duplicados, ImgBed añade `(1)`, `(2)` y así sucesivamente. |
+| Solo nombre original | Conserva el nombre de archivo original, como `cat.png`. Si hay duplicados, ImgHost añade `(1)`, `(2)` y así sucesivamente. |
 | Enlace corto | Usa un ID corto de 8 caracteres con la extensión, como `a1b2c3d4.png`. |

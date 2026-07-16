@@ -64,7 +64,7 @@ Si ningún archivo coincide después del filtrado, la API no devuelve resultados
 
 La API de imágenes aleatorias almacena en caché los conjuntos de candidatos por directorio para mejorar la velocidad.
 
-Después de cambiar archivos, ImgBed actualiza la versión de caché del directorio y las solicitudes posteriores reconstruyen el conjunto de candidatos. Los directorios vacíos se almacenan brevemente en caché para evitar consultas repetidas.
+Después de cambiar archivos, ImgHost actualiza la versión de caché del directorio y las solicitudes posteriores reconstruyen el conjunto de candidatos. Los directorios vacíos se almacenan brevemente en caché para evitar consultas repetidas.
 
 ## Galería pública
 

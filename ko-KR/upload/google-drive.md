@@ -8,8 +8,8 @@
 | --- | --- |
 | Google 계정 | Google Cloud에 접근하고 Google Drive를 승인하는 데 사용합니다. |
 | Google Cloud 프로젝트 | Drive API를 활성화하고 OAuth 자격 증명을 만드는 데 사용합니다. |
-| OAuth 2.0 client | ImgBed가 `Client ID`, `Client Secret`, `Refresh Token`을 얻는 데 사용합니다. |
-| ImgBed 도메인 | OAuth redirect URI에 사용합니다. 실제 사용하는 도메인과 일치해야 합니다. |
+| OAuth 2.0 client | ImgHost가 `Client ID`, `Client Secret`, `Refresh Token`을 얻는 데 사용합니다. |
+| ImgHost 도메인 | OAuth redirect URI에 사용합니다. 실제 사용하는 도메인과 일치해야 합니다. |
 
 ## 설정 단계
 
@@ -38,7 +38,7 @@
 2. 새 client를 만듭니다.
 3. application type을 `Web application`으로 설정합니다.
 4. client에 알아보기 쉬운 이름을 지정합니다.
-5. authorized JavaScript origins에는 ImgBed URL을 입력합니다. 예:
+5. authorized JavaScript origins에는 ImgHost URL을 입력합니다. 예:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 client가 생성되면 다음 값을 복사합니다.
 
-| 생성된 값 | ImgBed 필드 |
+| 생성된 값 | ImgHost 필드 |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ client가 생성되면 다음 값을 복사합니다.
 
 업로드 설정에서 `Google Drive`를 선택하고 다음을 입력합니다.
 
-| ImgBed 필드 | 입력할 내용 |
+| ImgHost 필드 | 입력할 내용 |
 | --- | --- |
 | 채널 이름 | 알아보기 쉬운 이름. 예: `Main Google Drive` |
 | Client ID | Google Cloud의 Client ID |
@@ -73,7 +73,7 @@ client가 생성되면 다음 값을 복사합니다.
 | Refresh Token | 지금은 비워 둡니다. 다음 단계에서 받습니다. |
 | Root directory | 선택 사항. 기본값은 `imgbed`입니다. |
 
-![ImgBed에 client 세부 정보 입력](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![ImgHost에 client 세부 정보 입력](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## 단계 5: Refresh Token 받기
 
@@ -82,7 +82,7 @@ client가 생성되면 다음 값을 복사합니다.
 3. 승인 요청을 완료합니다.
 4. callback 페이지에 `Refresh Token`이 표시됩니다.
 5. 복사합니다.
-6. ImgBed로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
+6. ImgHost로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
 
 ![승인 후 Refresh Token 복사](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

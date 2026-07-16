@@ -2,7 +2,7 @@
 
 La transferencia de enlaces magnet descarga archivos desde un enlace magnet y los sube automáticamente al canal de almacenamiento en la nube que elija.
 
-Es útil para transferir episodios de anime, vídeos, archivos comprimidos y archivos similares. Pegue un enlace magnet e ImgBed creará una tarea de descarga en segundo plano. Cuando termine la descarga, el archivo se subirá a ImgBed y el enlace final aparecerá en la lista de subidas.
+Es útil para transferir episodios de anime, vídeos, archivos comprimidos y archivos similares. Pegue un enlace magnet e ImgHost creará una tarea de descarga en segundo plano. Cuando termine la descarga, el archivo se subirá a ImgHost y el enlace final aparecerá en la lista de subidas.
 
 ![Transferencia de enlaces magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Cuando los ajustes estén listos, vuelva a la página principal y pegue un enlac
 1. Pegue el enlace magnet en el cuadro de subida de la página principal.
 2. Asegúrese de que el modo esté configurado como `Transfer`.
 3. Haga clic en subir.
-4. Espere a que ImgBed cree la tarea magnet.
+4. Espere a que ImgHost cree la tarea magnet.
 5. Cuando la tarea se inicie, use el panel flotante `Magnet Tasks` en la esquina inferior derecha para consultar el progreso.
 
 La descarga y la subida pueden tardar. La velocidad depende del recurso magnet, del entorno de ejecución de GitHub y del canal de almacenamiento en la nube seleccionado.
@@ -72,7 +72,7 @@ Estados comunes:
 
 ## Consejos
 
-- Si un enlace magnet contiene varios archivos, ImgBed prioriza el archivo principal completado para mostrarlo.
+- Si un enlace magnet contiene varios archivos, ImgHost prioriza el archivo principal completado para mostrarlo.
 - Los archivos grandes tardan más. Espere a que la tarea termine antes de actualizar la página.
 - Si el recurso magnet no tiene pares disponibles, puede ser muy lento o fallar.
 - Si la cuenta en la nube se queda sin cuota, la autorización ha caducado o el directorio de subida es incorrecto, la tarea puede fallar.

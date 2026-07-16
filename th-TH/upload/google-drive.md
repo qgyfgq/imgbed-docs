@@ -8,8 +8,8 @@
 | --- | --- |
 | Google account | ใช้เข้าถึง Google Cloud และ authorize Google Drive |
 | Google Cloud project | ใช้ enable Drive API และสร้าง OAuth credentials |
-| OAuth 2.0 client | ImgBed ใช้รับ `Client ID`, `Client Secret` และ `Refresh Token` |
-| ImgBed domain ของคุณ | ใช้เป็น OAuth redirect URI ต้องตรงกับ domain ที่ใช้งานจริง |
+| OAuth 2.0 client | ImgHost ใช้รับ `Client ID`, `Client Secret` และ `Refresh Token` |
+| ImgHost domain ของคุณ | ใช้เป็น OAuth redirect URI ต้องตรงกับ domain ที่ใช้งานจริง |
 
 ## ขั้นตอนตั้งค่า
 
@@ -38,7 +38,7 @@
 2. สร้าง client ใหม่
 3. ตั้ง application type เป็น `Web application`
 4. ตั้งชื่อ client ให้จำง่าย
-5. สำหรับ authorized JavaScript origins ให้ใส่ ImgBed URL เช่น:
+5. สำหรับ authorized JavaScript origins ให้ใส่ ImgHost URL เช่น:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 หลังสร้าง client แล้ว ให้คัดลอกค่าเหล่านี้:
 
-| ค่าที่สร้างขึ้น | ฟิลด์ ImgBed |
+| ค่าที่สร้างขึ้น | ฟิลด์ ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ https://img.example.com/api/oauth/google/callback
 
 ใน Upload Settings เลือก `Google Drive` แล้วกรอก:
 
-| ฟิลด์ ImgBed | ใส่อะไร |
+| ฟิลด์ ImgHost | ใส่อะไร |
 | --- | --- |
 | Channel name | ชื่อที่จำง่าย เช่น `Main Google Drive` |
 | Client ID | Client ID จาก Google Cloud |
@@ -73,7 +73,7 @@ https://img.example.com/api/oauth/google/callback
 | Refresh Token | เว้นว่างไว้ก่อน รับในขั้นตอนถัดไป |
 | Root directory | ไม่บังคับ ค่าเริ่มต้นคือ `imgbed` |
 
-![กรอกรายละเอียด client ใน ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![กรอกรายละเอียด client ใน ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## ขั้นตอนที่ 5: รับ Refresh Token
 
@@ -82,7 +82,7 @@ https://img.example.com/api/oauth/google/callback
 3. ทำ authorization prompts ให้เสร็จ
 4. หน้า callback จะแสดง `Refresh Token`
 5. คัดลอก token นั้น
-6. กลับไปที่ ImgBed แล้ววางในฟิลด์ `Refresh Token`
+6. กลับไปที่ ImgHost แล้ววางในฟิลด์ `Refresh Token`
 
 ![คัดลอก Refresh Token หลัง authorization](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

@@ -1,6 +1,6 @@
 # Autenticación y gestión de dispositivos de inicio de sesión
 
-La gestión de autenticación y la gestión de dispositivos de inicio de sesión protegen el panel de administración de ImgBed, la entrada pública de subida y el acceso WebDAV.
+La gestión de autenticación y la gestión de dispositivos de inicio de sesión protegen el panel de administración de ImgHost, la entrada pública de subida y el acceso WebDAV.
 
 Use esta página para configurar credenciales de acceso, revisar los dispositivos que han iniciado sesión y revocar sesiones antiguas cuando sea necesario.
 
@@ -42,7 +42,7 @@ Cuando se configura una contraseña de subida:
 
 - Los visitantes deben introducir la contraseña antes de usar la página de subida.
 - La subida solo está disponible después de aceptar la contraseña.
-- Si las sesiones de dispositivos del lado del usuario están activadas, ImgBed registra ese dispositivo de usuario.
+- Si las sesiones de dispositivos del lado del usuario están activadas, ImgHost registra ese dispositivo de usuario.
 
 Cambiar la contraseña de subida invalida las sesiones antiguas del lado del usuario. Los visitantes tendrán que introducir la nueva contraseña otra vez.
 

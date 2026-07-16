@@ -7,7 +7,7 @@
 | المتطلب | الغرض |
 | --- | --- |
 | حساب GitHub | لإنشاء رمز وصول وامتلاك المستودع. |
-| GitHub Access Token | يستخدمه ImgBed للوصول إلى GitHub API وإنشاء releases ورفع الملفات. |
+| GitHub Access Token | يستخدمه ImgHost للوصول إلى GitHub API وإنشاء releases ورفع الملفات. |
 | اسم المستودع | يمكن إدخال اسم المستودع فقط، مثل `image`. |
 
 ## خطوات الإعداد
@@ -27,7 +27,7 @@
 
 ![إضافة صلاحيات GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## الخطوة 2: املأ قناة GitHub Releases في ImgBed
+## الخطوة 2: املأ قناة GitHub Releases في ImgHost
 
 بعد اختيار `GitHub Releases` في إعدادات الرفع، املأ الحقول كما يلي:
 
@@ -49,9 +49,9 @@
 
 | سلوك النظام | الوصف |
 | --- | --- |
-| اسم مستودع قصير | يحدد ImgBed حساب GitHub الحالي ويوسّع القيمة إلى مسار مستودع كامل. |
-| مسار مستودع كامل | يستخدم ImgBed مسار `username/repository` كما أُدخل. |
-| فحص المستودع | إذا استخدمت مسار الحساب الشخصي الحالي، ينشئ ImgBed المستودع تلقائيًا عند عدم وجوده. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
+| اسم مستودع قصير | يحدد ImgHost حساب GitHub الحالي ويوسّع القيمة إلى مسار مستودع كامل. |
+| مسار مستودع كامل | يستخدم ImgHost مسار `username/repository` كما أُدخل. |
+| فحص المستودع | إذا استخدمت مسار الحساب الشخصي الحالي، ينشئ ImgHost المستودع تلقائيًا عند عدم وجوده. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
 | حالة العام/الخاص | تتم مزامنة ظهور المستودع حسب المفتاح الحالي. |
 
 ## قائمة تحقق سريعة
@@ -61,9 +61,9 @@
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

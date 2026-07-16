@@ -6,7 +6,7 @@
 | --- | --- |
 | Účet Yandex | Pro přihlášení a autorizaci Yandex Disk |
 | OAuth aplikace Yandex | Pro vytvoření `Client ID` a `Client Secret` |
-| Vaše doména ImgBed | Pro OAuth redirect URI |
+| Vaše doména ImgHost | Pro OAuth redirect URI |
 | Dostupné místo v Yandex Disk | Skutečné úložiště pro soubory |
 
 ## Nastavení
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### Krok 2: Potvrďte oprávnění
 
-Pro aktuální integraci Yandex v ImgBed ponechte pod `Yandex.Disk REST API` tato čtyři oprávnění:
+Pro aktuální integraci Yandex v ImgHost ponechte pod `Yandex.Disk REST API` tato čtyři oprávnění:
 
 | Oprávnění | Účel |
 | --- | --- |
-| `cloud_api:disk.app_folder` | Umožní ImgBed ukládat soubory do složky aplikace |
+| `cloud_api:disk.app_folder` | Umožní ImgHost ukládat soubory do složky aplikace |
 | `cloud_api:disk.read` | Čte soubory a odkazy ke stažení |
 | `cloud_api:disk.write` | Nahrává soubory, vytváří složky a maže soubory |
 | `Access to information about Yandex.Disk` | Čte kapacitu disku a využité místo |
@@ -55,7 +55,7 @@ Nahrávání, stahování, mazání a kapacita závisejí hlavně na čtyřech o
 
 Po vytvoření aplikace zkopírujte:
 
-| Pole Yandex | Pole ImgBed |
+| Pole Yandex | Pole ImgHost |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ Po vytvoření aplikace zkopírujte:
 
 V Nastavení nahrávání vyberte `Yandex` a vyplňte:
 
-| Pole ImgBed | Co zadat |
+| Pole ImgHost | Co zadat |
 | --- | --- |
 | Název kanálu | Srozumitelný název, například `Main Yandex` |
 | Client ID | `Client ID` aplikace Yandex |
@@ -78,12 +78,12 @@ V Nastavení nahrávání vyberte `Yandex` a vyplňte:
 
 ### Krok 5: Získejte Refresh Token
 
-1. V ImgBed klikněte na `Get Token`.
+1. V ImgHost klikněte na `Get Token`.
 2. Přihlaste se k účtu Yandex, který chcete připojit.
 3. Potvrďte autorizaci.
 4. Stránka callbacku zobrazí `Refresh Token`.
 5. Zkopírujte ho.
-6. Vraťte se do ImgBed a vložte ho do pole `Refresh Token`.
+6. Vraťte se do ImgHost a vložte ho do pole `Refresh Token`.
 
 ![Kopírování Refresh Token po autorizaci](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Odkazy

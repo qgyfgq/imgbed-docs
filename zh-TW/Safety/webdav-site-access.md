@@ -1,9 +1,9 @@
 # WebDAV 設定與存取
-安全設定裡的 WebDAV 是把 ImgBed 站台開成一個 WebDAV 存取入口。
+安全設定裡的 WebDAV 是把 ImgHost 站台開成一個 WebDAV 存取入口。
 
-設定後，你可以在 Windows、macOS、手機檔案管理器或支援 WebDAV 的用戶端裡，把 ImgBed 當成遠端資料夾使用，直接瀏覽、上傳、刪除和管理檔案。
+設定後，你可以在 Windows、macOS、手機檔案管理器或支援 WebDAV 的用戶端裡，把 ImgHost 當成遠端資料夾使用，直接瀏覽、上傳、刪除和管理檔案。
 
-這裡的 WebDAV 是「站台存取入口」，不是上傳設定裡的「WebDAV 儲存渠道」。上傳渠道的 WebDAV 是把第三方 WebDAV 服務當作儲存位置；安全設定裡的 WebDAV 是讓你的 ImgBed 站台對外提供 WebDAV 存取。
+這裡的 WebDAV 是「站台存取入口」，不是上傳設定裡的「WebDAV 儲存渠道」。上傳渠道的 WebDAV 是把第三方 WebDAV 服務當作儲存位置；安全設定裡的 WebDAV 是讓你的 ImgHost 站台對外提供 WebDAV 存取。
 
 ## 功能入口
 
@@ -31,9 +31,9 @@ https://your-domain.com/dav
 
 適合這些情境：
 
-- 在電腦檔案總管裡直接查看 ImgBed 檔案。
+- 在電腦檔案總管裡直接查看 ImgHost 檔案。
 - 把圖片拖進 WebDAV 目錄完成上傳。
-- 像整理本機資料夾一樣整理 ImgBed 目錄。
+- 像整理本機資料夾一樣整理 ImgHost 目錄。
 - 使用支援 WebDAV 的軟體同步或管理圖片。
 - 不打開後台，也能透過檔案管理器存取圖床內容。
 
@@ -43,7 +43,7 @@ https://your-domain.com/dav
 
 開啟後，WebDAV 入口才會生效。
 
-關閉後，用戶端無法透過 WebDAV 連接 ImgBed。
+關閉後，用戶端無法透過 WebDAV 連接 ImgHost。
 
 ### 使用者名稱和密碼
 
@@ -69,7 +69,7 @@ https://your-domain.com/dav
 
 預設渠道用於 WebDAV 上傳檔案。
 
-當你從 Windows 或其他 WebDAV 用戶端把檔案複製到 ImgBed 目錄時，系統會把檔案上傳到這裡選的預設渠道。
+當你從 Windows 或其他 WebDAV 用戶端把檔案複製到 ImgHost 目錄時，系統會把檔案上傳到這裡選的預設渠道。
 
 如果沒有選預設渠道，WebDAV 可以瀏覽，但上傳可能會失敗。
 

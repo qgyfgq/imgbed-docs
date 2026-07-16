@@ -1,6 +1,6 @@
 # API Token 파일 업로드
 
-API Token 업로드는 스크립트, 자동화 작업, 외부 프로그램에서 ImgBed로 파일을 올릴 때 사용합니다. 웹 화면을 열지 않아도 사이트 주소, Token, 로컬 파일 경로, 실제 업로드 채널을 지정하면 파일을 업로드하고 결과로 파일 URL을 받을 수 있습니다.
+API Token 업로드는 스크립트, 자동화 작업, 외부 프로그램에서 ImgHost로 파일을 올릴 때 사용합니다. 웹 화면을 열지 않아도 사이트 주소, Token, 로컬 파일 경로, 실제 업로드 채널을 지정하면 파일을 업로드하고 결과로 파일 URL을 받을 수 있습니다.
 
 ![API Token 편집](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
-| `--base-url <url>` | 예 | ImgBed 사이트 주소. 예: `https://image.ai6.me` |
+| `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
 | `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--file <path>` | 예 | 로컬 파일 경로 |
 | `--channel <key>` | 예 | 업로드 채널 |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
-| `--base-url <url>` | 예 | ImgBed 사이트 주소 |
+| `--base-url <url>` | 예 | ImgHost 사이트 주소 |
 | `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--file <path>` | 예 | 로컬 파일 경로 |
 | `--channel <key>` | 예 | 업로드 채널 |

@@ -2,26 +2,26 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-Delete/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Delete/1.0 Node';
 
 const STRICTNESS_VALUES = new Set(['strict', 'soft']);
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token delete tool
+  process.stdout.write(`ImgHost API Token delete tool
 
 Usage:
   node imgbed-token-delete.mjs --base-url <url> --token <token> --file-id <id> [--file-id <id> ...]
 
 Required:
-  --base-url <url>          ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>          ImgHost site URL, for example https://image.ai6.me
   --token <token>           API Token with delete permission. You can also set IMGBED_API_TOKEN.
   --file-id <id>            File ID to delete. Repeat this option to delete multiple files.
 
 Delete options:
   --strictness <strict|soft>
                             Delete strictness. Default: strict
-                            strict: stop cleaning ImgBed records if remote storage deletion fails.
-                            soft: continue cleaning ImgBed records when remote storage deletion fails.
+                            strict: stop cleaning ImgHost records if remote storage deletion fails.
+                            soft: continue cleaning ImgHost records when remote storage deletion fails.
   --batch-size <n>          Files per request. Default: 15, maximum: 15.
 
 Tool options:

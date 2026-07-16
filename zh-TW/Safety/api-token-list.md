@@ -1,6 +1,6 @@
 # API Token 列出與篩選
 
-API Token 列出腳本適合讓自動化腳本、排程任務或第三方程式讀取 ImgBed 資料。它只使用 `list` 權限，不會上傳檔案、刪除檔案、修改設定，也不會封鎖或放行某個 IP。
+API Token 列出腳本適合讓自動化腳本、排程任務或第三方程式讀取 ImgHost 資料。它只使用 `list` 權限，不會上傳檔案、刪除檔案、修改設定，也不會封鎖或放行某個 IP。
 
 ![編輯 API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 參數 | 必填 | 說明 |
 | --- | --- | --- |
-| `--base-url <url>` | 是 | ImgBed 站點網址，例如 `https://image.ai6.me`。 |
+| `--base-url <url>` | 是 | ImgHost 站點網址，例如 `https://image.ai6.me`。 |
 | `--token <token>` | 是 | API Token；也可以使用 `IMGBED_API_TOKEN` 環境變數。 |
 | `--retries <n>` | 否 | 暫時性失敗的重試次數，預設 `3`。 |
 | `--timeout-ms <n>` | 否 | 單次請求逾時時間，預設 `180000`。 |

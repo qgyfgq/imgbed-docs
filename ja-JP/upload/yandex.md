@@ -6,7 +6,7 @@
 | --- | --- |
 | Yandex アカウント | サインインし、Yandex Disk を認可するために使用します。 |
 | Yandex OAuth アプリ | `Client ID` と `Client Secret` を生成するために使用します。 |
-| ImgBed ドメイン | OAuth redirect URI に使用します。 |
+| ImgHost ドメイン | OAuth redirect URI に使用します。 |
 | 利用可能な Yandex Disk ストレージ | 実際のファイル保存先として使用します。 |
 
 ## 設定手順
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### 手順 2: 権限を確認する
 
-現在の ImgBed Yandex 連携では、`Yandex.Disk REST API` の下で次の 4 つの権限を保持します。
+現在の ImgHost Yandex 連携では、`Yandex.Disk REST API` の下で次の 4 つの権限を保持します。
 
 | 権限 | 目的 |
 | --- | --- |
-| `cloud_api:disk.app_folder` | ImgBed が app folder にファイルを保存できるようにします。 |
+| `cloud_api:disk.app_folder` | ImgHost が app folder にファイルを保存できるようにします。 |
 | `cloud_api:disk.read` | ファイルとダウンロードリンクを読み取ります。 |
 | `cloud_api:disk.write` | ファイルのアップロード、フォルダーの作成、ファイルの削除を行います。 |
 | `Access to information about Yandex.Disk` | ディスククォータと使用済み容量を読み取ります。 |
@@ -55,7 +55,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 アプリが作成されたら、次をコピーします。
 
-| Yandex 項目 | ImgBed 項目 |
+| Yandex 項目 | ImgHost 項目 |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 アップロード設定で `Yandex` を選択し、次を入力します。
 
-| ImgBed 項目 | 入力内容 |
+| ImgHost 項目 | 入力内容 |
 | --- | --- |
 | チャネル名 | 識別しやすい名前。例: `Main Yandex` |
 | Client ID | Yandex app の `Client ID` |
@@ -78,12 +78,12 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### 手順 5: Refresh Token を取得する
 
-1. ImgBed で `Get Token` をクリックします。
+1. ImgHost で `Get Token` をクリックします。
 2. 接続する Yandex アカウントでサインインします。
 3. 認可プロンプトを承認します。
 4. callback ページに `Refresh Token` が表示されます。
 5. コピーします。
-6. ImgBed に戻り、`Refresh Token` 項目に貼り付けます。
+6. ImgHost に戻り、`Refresh Token` 項目に貼り付けます。
 
 ![認可後に refresh token をコピーする](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## 参考

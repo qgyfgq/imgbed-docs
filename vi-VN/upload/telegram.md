@@ -38,7 +38,7 @@
 5. Làm theo prompt để nhập bot username. Username thường cần kết thúc bằng `bot`.
 6. Sau khi bot được tạo, `@BotFather` sẽ trả về bot token.
 
-Token này chính là `Bot Token` cần nhập trong ImgBed.
+Token này chính là `Bot Token` cần nhập trong ImgHost.
 
 ![Save the bot token](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Có thể dùng cả public channel và private channel.
 4. Trong message picker, chọn target channel rồi gửi tới `@userinfobot`.
 5. Khi `@userinfobot` trả kết quả, sao chép số hiển thị dạng `Id: -100...`.
 
-Số bắt đầu bằng `-100` là `Session ID (Chat ID)` mà ImgBed cần.
+Số bắt đầu bằng `-100` là `Session ID (Chat ID)` mà ImgHost cần.
 
 ![Lấy channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. Điền Telegram Channel trong ImgBed
+### 5. Điền Telegram Channel trong ImgHost
 
 Quay lại channel configuration dialog và điền như sau:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

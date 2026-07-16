@@ -2,7 +2,7 @@
 
 Přenos magnet odkazů stáhne soubory z magnet odkazu a automaticky je nahraje do zvoleného cloudového úložného kanálu.
 
-Hodí se pro přenos anime epizod, videí, archivů a podobných souborů. Vložte magnet odkaz a ImgBed vytvoří úlohu stahování na pozadí. Po dokončení stahování se soubor nahraje do ImgBed a výsledný odkaz se zobrazí v seznamu nahrání.
+Hodí se pro přenos anime epizod, videí, archivů a podobných souborů. Vložte magnet odkaz a ImgHost vytvoří úlohu stahování na pozadí. Po dokončení stahování se soubor nahraje do ImgHost a výsledný odkaz se zobrazí v seznamu nahrání.
 
 ![Přenos magnet odkazů](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Jakmile jsou nastavení připravená, vraťte se na domovskou stránku a vložte
 1. Vložte magnet odkaz do pole nahrávání na domovské stránce.
 2. Ujistěte se, že je režim nastavený na `Transfer`.
 3. Klikněte na nahrání.
-4. Počkejte, než ImgBed vytvoří magnet úlohu.
+4. Počkejte, než ImgHost vytvoří magnet úlohu.
 5. Po spuštění úlohy sledujte průběh v plovoucím panelu `Magnet Tasks` vpravo dole.
 
 Stahování a nahrávání mohou trvat. Rychlost závisí na magnet zdroji, běhovém prostředí GitHub a vybraném cloudovém úložném kanálu.
@@ -72,7 +72,7 @@ Běžné stavy:
 
 ## Tipy
 
-- Pokud magnet odkaz obsahuje více souborů, ImgBed pro zobrazení upřednostní hlavní dokončený soubor.
+- Pokud magnet odkaz obsahuje více souborů, ImgHost pro zobrazení upřednostní hlavní dokončený soubor.
 - Velké soubory trvají déle. Před obnovením stránky počkejte na dokončení úlohy.
 - Pokud magnet zdroj nemá dostupné peery, může být velmi pomalý nebo selhat.
 - Pokud cloudový účet vyčerpal kvótu, vypršelo oprávnění nebo je adresář nahrání nesprávný, úloha může selhat.

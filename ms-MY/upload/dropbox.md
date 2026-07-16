@@ -6,7 +6,7 @@
 | --- | --- |
 | Akaun Dropbox | Digunakan untuk log masuk dan mengizinkan app |
 | App Dropbox | Digunakan untuk menjana `App Key` dan `App Secret` |
-| Domain ImgBed anda | Digunakan untuk URI redirect OAuth |
+| Domain ImgHost anda | Digunakan untuk URI redirect OAuth |
 | Storan Dropbox tersedia | Digunakan sebagai lokasi storan fail sebenar |
 
 ## Langkah Persediaan
@@ -33,8 +33,8 @@ Jenis akses yang disyorkan:
 
 | Jenis Akses | Saranan |
 | --- | --- |
-| `App folder` | Disyorkan. Ia sepadan dengan cara ImgBed menyimpan fail. |
-| `Full Dropbox` | Tidak disyorkan. ImgBed tidak memerlukan akses penuh kepada akaun. |
+| `App folder` | Disyorkan. Ia sepadan dengan cara ImgHost menyimpan fail. |
+| `Full Dropbox` | Tidak disyorkan. ImgHost tidak memerlukan akses penuh kepada akaun. |
 
 ![Buat app Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Penting:
 
 Simpan dua nilai ini daripada halaman app Dropbox:
 
-| Medan Dropbox | Medan ImgBed |
+| Medan Dropbox | Medan ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Simpan dua nilai ini daripada halaman app Dropbox:
 
 Dalam Tetapan Muat Naik, pilih `Dropbox` dan isi:
 
-| Medan ImgBed | Perkara Yang Perlu Dimasukkan |
+| Medan ImgHost | Perkara Yang Perlu Dimasukkan |
 | --- | --- |
 | Nama saluran | Nama yang mudah dikenal pasti, seperti `Main Dropbox` |
 | App Key | `App key` Dropbox |
@@ -99,12 +99,12 @@ Dalam Tetapan Muat Naik, pilih `Dropbox` dan isi:
 
 ### Langkah 6: Dapatkan Refresh Token
 
-1. Dalam ImgBed, klik `Get Token`.
+1. Dalam ImgHost, klik `Get Token`.
 2. Log masuk ke akaun Dropbox yang mahu disambungkan.
 3. Luluskan permintaan kebenaran.
 4. Halaman callback akan menunjukkan `Refresh Token`.
 5. Salin token tersebut.
-6. Kembali ke ImgBed dan tampalkannya dalam medan `Refresh Token`.
+6. Kembali ke ImgHost dan tampalkannya dalam medan `Refresh Token`.
 
 ![Salin token](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Jika had kuota didayakan, klik pertanyaan kuota. Selepas pertanyaan berjaya, kad
 
 | Masalah | Penyelesaian |
 | --- | --- |
-| ImgBed menyatakan konfigurasi tidak lengkap | Semak bahawa `App Key`, `App Secret` dan `Refresh Token` semuanya diisi. |
+| ImgHost menyatakan konfigurasi tidak lengkap | Semak bahawa `App Key`, `App Secret` dan `Refresh Token` semuanya diisi. |
 | Kebenaran berjaya tetapi tiada `Refresh Token` muncul | Klik `Get Token` sekali lagi dan pastikan aliran kebenaran offline digunakan. |
 | Muat naik gagal dengan `required scope 'files.content.write'` | Dayakan `files.content.write`, klik `Submit`, kemudian dapatkan `Refresh Token` baharu. |
 | Callback gagal | Sahkan bahawa redirect URI ialah `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Rujukan

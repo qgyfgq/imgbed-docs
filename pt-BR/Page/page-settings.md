@@ -8,8 +8,8 @@ As configurações da página controlam a exibição do site, os valores padrão
 | --- | --- |
 | Título do site | Título exibido na aba do navegador. |
 | Ícone do site | Ícone pequeno exibido na aba do navegador. |
-| Nome do ImgBed | Nome exibido nas páginas da interface pública. |
-| Logotipo do ImgBed | Imagem do logotipo exibida nas páginas da interface pública. |
+| Nome do ImgHost | Nome exibido nas páginas da interface pública. |
+| Logotipo do ImgHost | Imagem do logotipo exibida nas páginas da interface pública. |
 | Link do logotipo | URL aberto ao clicar no logotipo ou no avatar. |
 | Intervalo de troca do fundo | Intervalo de rotação para vários fundos, em milissegundos. `60000` significa 60 segundos. |
 | Opacidade do fundo | Opacidade da imagem de fundo de `0` a `1`. Valores menores deixam a imagem mais clara. |
@@ -63,5 +63,5 @@ O fundo administrativo aceita URLs de imagens. Várias URLs podem ser separadas 
 | --- | --- |
 | Padrão | Prefixo aleatório baseado em tempo + nome original do arquivo, como `1760000000000_cat.png`. |
 | Apenas prefixo | Apenas prefixo aleatório baseado em tempo e extensão, como `1760000000000.png`. |
-| Apenas nome original | Mantém o nome original do arquivo, como `cat.png`. Em caso de duplicidade, o ImgBed adiciona `(1)`, `(2)` e assim por diante. |
+| Apenas nome original | Mantém o nome original do arquivo, como `cat.png`. Em caso de duplicidade, o ImgHost adiciona `(1)`, `(2)` e assim por diante. |
 | Link curto | Usa um ID curto de 8 caracteres com a extensão, como `a1b2c3d4.png`. |

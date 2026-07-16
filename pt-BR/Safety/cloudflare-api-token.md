@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-As credenciais da API da Cloudflare permitem que o ImgBed limpe o armazenamento temporário da CDN da Cloudflare depois que arquivos mudam.
+As credenciais da API da Cloudflare permitem que o ImgHost limpe o armazenamento temporário da CDN da Cloudflare depois que arquivos mudam.
 
 ![Configurações do Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ A Cloudflare pode armazenar temporariamente URLs públicas de imagens.
 
 O armazenamento temporário acelera a entrega das imagens, mas também pode deixar conteúdo antigo visível por algum tempo depois que você exclui, bloqueia, substitui ou move um arquivo.
 
-Depois que as credenciais da API da Cloudflare são configuradas, o ImgBed tenta limpar o armazenamento temporário relacionado da Cloudflare quando essas operações terminam.
+Depois que as credenciais da API da Cloudflare são configuradas, o ImgHost tenta limpar o armazenamento temporário relacionado da Cloudflare quando essas operações terminam.
 
 Isso é útil quando:
 
@@ -36,18 +36,18 @@ Isso é útil quando:
 
 ## O que acontece se deixar em branco
 
-O ImgBed continua funcionando normalmente sem esta configuração.
+O ImgHost continua funcionando normalmente sem esta configuração.
 
-A única diferença é que o ImgBed não limpará ativamente o armazenamento temporário da CDN da Cloudflare. Visitantes podem continuar vendo conteúdo antigo até que o armazenamento temporário da Cloudflare expire naturalmente.
+A única diferença é que o ImgHost não limpará ativamente o armazenamento temporário da CDN da Cloudflare. Visitantes podem continuar vendo conteúdo antigo até que o armazenamento temporário da Cloudflare expire naturalmente.
 
 ## Como encontrar o Zone ID
 
-O Zone ID é o Cloudflare Zone ID do site usado pelo domínio do seu ImgBed.
+O Zone ID é o Cloudflare Zone ID do site usado pelo domínio do seu ImgHost.
 
 1. Entre no painel da Cloudflare.
-2. Abra o site que contém o domínio do seu ImgBed.
+2. Abra o site que contém o domínio do seu ImgHost.
 3. Encontre `Zone ID` na página de visão geral do site.
-4. Copie-o para o campo `Zone ID` no ImgBed.
+4. Copie-o para o campo `Zone ID` no ImgHost.
 
 Esse é o Zone ID do site, não o ID da conta.
 
@@ -66,7 +66,7 @@ Informe sua Cloudflare Global API Key.
 3. Vá para a página API Tokens.
 4. Encontre `Global API Key`.
 5. Visualize e copie a chave.
-6. Cole-a no campo `API Key` do ImgBed.
+6. Cole-a no campo `API Key` do ImgHost.
 
 ![Ver Global API Key](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ Se seu domínio não usa Cloudflare, ou se o atraso do armazenamento temporário
 
 Normalmente, não.
 
-Credenciais erradas apenas impedem o ImgBed de limpar o armazenamento temporário da Cloudflare. Upload e acesso normal aos arquivos devem continuar funcionando.
+Credenciais erradas apenas impedem o ImgHost de limpar o armazenamento temporário da Cloudflare. Upload e acesso normal aos arquivos devem continuar funcionando.
 
 ### Por que uma imagem excluída ainda pode ser aberta?
 
 O motivo mais comum é que a Cloudflare ainda mantém o arquivo antigo armazenado temporariamente.
 
-Com credenciais corretas da API da Cloudflare, o ImgBed limpa o armazenamento temporário da URL relacionada quando um arquivo é excluído.
+Com credenciais corretas da API da Cloudflare, o ImgHost limpa o armazenamento temporário da URL relacionada quando um arquivo é excluído.
 
 ### Por que ainda vejo a imagem antiga depois de substituir um arquivo?
 
 Isso também costuma ser causado pelo armazenamento temporário da CDN.
 
-Depois que esta configuração é feita, o ImgBed tenta limpar o armazenamento temporário da URL antiga quando um arquivo com o mesmo nome é sobrescrito.
+Depois que esta configuração é feita, o ImgHost tenta limpar o armazenamento temporário da URL antiga quando um arquivo com o mesmo nome é sobrescrito.

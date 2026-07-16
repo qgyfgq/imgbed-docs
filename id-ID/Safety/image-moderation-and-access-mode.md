@@ -37,7 +37,7 @@ Untuk situs pribadi atau situs dengan konten dewasa, mode dewasa mungkin sesuai.
 
 ## Apa yang Terjadi Saat Moderasi Diaktifkan
 
-Saat moderasi aktif, ImgBed memanggil penyedia moderasi yang dipilih ketika unggahan berlangsung, lalu menyimpan peringkat usia yang terdeteksi.
+Saat moderasi aktif, ImgHost memanggil penyedia moderasi yang dipilih ketika unggahan berlangsung, lalu menyimpan peringkat usia yang terdeteksi.
 
 Peringkat utama:
 
@@ -66,7 +66,7 @@ Setiap penyedia memiliki kebutuhan yang berbeda:
 - nsfwjs biasanya memerlukan URL titik akhir API.
 - Sightengine memerlukan API user dan API secret.
 
-Pilih berdasarkan akun, ketersediaan, dan kualitas deteksi. Selama moderasi diaktifkan dan dikonfigurasi dengan benar, ImgBed akan mencoba menulis peringkat gambar saat unggahan berlangsung.
+Pilih berdasarkan akun, ketersediaan, dan kualitas deteksi. Selama moderasi diaktifkan dan dikonfigurasi dengan benar, ImgHost akan mencoba menulis peringkat gambar saat unggahan berlangsung.
 
 ## Dampak pada Galeri Publik
 
@@ -85,16 +85,16 @@ Ini hanya memengaruhi akses publik normal. Panel admin tetap menampilkan semua b
 
 URL berkas publik adalah tautan gambar langsung yang dibuka pengunjung.
 
-Jika peringkat berkas diizinkan oleh mode akses saat ini, ImgBed mengembalikan gambar asli.
+Jika peringkat berkas diizinkan oleh mode akses saat ini, ImgHost mengembalikan gambar asli.
 
-Jika peringkat lebih tinggi dari tingkat yang diizinkan, akses publik normal tidak mengembalikan gambar asli. Sebagai gantinya, ImgBed mengembalikan hasil pemblokiran yang dikonfigurasi atau gambar fallback pemblokiran.
+Jika peringkat lebih tinggi dari tingkat yang diizinkan, akses publik normal tidak mengembalikan gambar asli. Sebagai gantinya, ImgHost mengembalikan hasil pemblokiran yang dikonfigurasi atau gambar fallback pemblokiran.
 
 Contoh:
 
 - Mode saat ini adalah mode anak.
 - Sebuah gambar memiliki peringkat R18.
 - Pengunjung membuka URL publik secara langsung.
-- ImgBed tidak mengembalikan gambar asli R18 kepada pengunjung tersebut.
+- ImgHost tidak mengembalikan gambar asli R18 kepada pengunjung tersebut.
 
 ![Gambar berkas yang dibatasi](../../image/Safety/文件受限图.png)
 

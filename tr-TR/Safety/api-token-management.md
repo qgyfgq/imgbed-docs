@@ -40,7 +40,7 @@ Node.js 18 veya üzeri gerekir.
 
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site URL'si, örneğin `https://image.ai6.me`. |
+| `--base-url <url>` | Evet | ImgHost site URL'si, örneğin `https://image.ai6.me`. |
 | `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--retries <n>` | Hayır | Geçici hata yeniden deneme sayısı. Varsayılan `3`. |
 | `--timeout-ms <n>` | Hayır | İstek zaman aşımı. Varsayılan `180000`. |

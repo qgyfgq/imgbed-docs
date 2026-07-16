@@ -8,8 +8,8 @@ Pengaturan halaman mengatur tampilan situs, nilai bawaan halaman unggah, gambar 
 | --- | --- |
 | Judul situs | Judul yang ditampilkan di tab browser. |
 | Ikon situs | Ikon kecil yang ditampilkan di tab browser. |
-| Nama ImgBed | Nama yang ditampilkan di halaman antarmuka publik. |
-| Logo ImgBed | Gambar logo yang ditampilkan di halaman antarmuka publik. |
+| Nama ImgHost | Nama yang ditampilkan di halaman antarmuka publik. |
+| Logo ImgHost | Gambar logo yang ditampilkan di halaman antarmuka publik. |
 | Tautan logo | URL yang dibuka saat logo atau avatar diklik. |
 | Interval pergantian latar belakang | Interval rotasi untuk beberapa latar belakang, dalam milidetik. `60000` berarti 60 detik. |
 | Opasitas latar belakang | Opasitas gambar latar belakang dari `0` hingga `1`. Nilai yang lebih rendah tampak lebih terang. |
@@ -63,5 +63,5 @@ Latar belakang administrasi mendukung URL gambar. Beberapa URL dapat dipisahkan 
 | --- | --- |
 | Bawaan | Prefiks acak berbasis waktu + nama file asli, misalnya `1760000000000_cat.png`. |
 | Hanya prefiks | Hanya prefiks acak berbasis waktu dan ekstensi, misalnya `1760000000000.png`. |
-| Hanya nama asli | Mempertahankan nama file asli, misalnya `cat.png`. Jika ada duplikat, ImgBed menambahkan `(1)`, `(2)`, dan seterusnya. |
+| Hanya nama asli | Mempertahankan nama file asli, misalnya `cat.png`. Jika ada duplikat, ImgHost menambahkan `(1)`, `(2)`, dan seterusnya. |
 | Tautan pendek | Menggunakan ID pendek 8 karakter dengan ekstensi, misalnya `a1b2c3d4.png`. |

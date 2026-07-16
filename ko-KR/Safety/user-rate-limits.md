@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## 속도 제한 활성화
 
-`속도 제한 활성화`를 켜면 ImgBed는 업로더 IP 주소를 기준으로 최근 업로드를 추적합니다.
+`속도 제한 활성화`를 켜면 ImgHost는 업로더 IP 주소를 기준으로 최근 업로드를 추적합니다.
 
 기본값:
 

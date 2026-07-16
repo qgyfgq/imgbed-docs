@@ -7,7 +7,7 @@
 | اړتیا | موخه |
 | --- | --- |
 | Hugging Face حساب | د لاسرسی ټوکن جوړولو او ریپازېټري مالکیت لپاره. |
-| Hugging Face User لاسرسی ټوکن | د ImgBed لپاره Hugging Face API لاسرسی، repositories جوړول او فایلونه اپلوډ کول. |
+| Hugging Face User لاسرسی ټوکن | د ImgHost لپاره Hugging Face API لاسرسی، repositories جوړول او فایلونه اپلوډ کول. |
 | د ریپازېټري نوم | یوازې ریپازېټري name لیکلی شئ، لکه `image`. |
 
 ## د تنظیم ګامونه
@@ -24,7 +24,7 @@
 
 ![Create a ټوکن](../../image/upload/huggingface/创建令牌.png)
 
-## ګام 2: په ImgBed کې Hugging Face چینل ډک کړئ
+## ګام 2: په ImgHost کې Hugging Face چینل ډک کړئ
 
 په د اپلوډ تنظیمات کې د `Hugging Face` له ټاکلو وروسته:
 
@@ -46,9 +46,9 @@ system دا کارونه خپله ترسره کوي:
 
 | د سیستم چلند | توضیح |
 | --- | --- |
-| لنډ ریپازېټري نوم | ImgBed اوسنی Hugging Face حساب پېژني او ارزښت بشپړ ریپازېټري لارې ته غځوي. |
-| Full ریپازېټري path | ImgBed د `username/repository` path هماغسې کاروي لکه داخل شوی. |
-| د ریپازېټري کتنه | که د اوسني شخصي حساب لاره وکاروئ، ImgBed هڅه کوي ریپازېټري جوړه کړي که موجوده نه وي. که بشپړه لاره په لاسي ډول ورکړئ، ImgBed هماغه لاره کاروي. |
+| لنډ ریپازېټري نوم | ImgHost اوسنی Hugging Face حساب پېژني او ارزښت بشپړ ریپازېټري لارې ته غځوي. |
+| Full ریپازېټري path | ImgHost د `username/repository` path هماغسې کاروي لکه داخل شوی. |
+| د ریپازېټري کتنه | که د اوسني شخصي حساب لاره وکاروئ، ImgHost هڅه کوي ریپازېټري جوړه کړي که موجوده نه وي. که بشپړه لاره په لاسي ډول ورکړئ، ImgHost هماغه لاره کاروي. |
 | ریپازېټري type | دا چینل د `dataset` ریپازېټري کاروي. |
 | عام/شخصي حالت | د ریپازېټري لید د اوسني switch له مخې همغږي کېږي. |
 
@@ -58,10 +58,10 @@ system دا کارونه خپله ترسره کوي:
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

@@ -8,8 +8,8 @@ Page settings control site display, upload page defaults, background images, and
 | --- | --- |
 | Site title | Title shown in the browser tab. |
 | Site icon | Small icon shown in the browser tab. |
-| ImgBed name | Name shown on the frontend pages. |
-| ImgBed logo | Logo image shown on the frontend pages. |
+| ImgHost name | Name shown on the frontend pages. |
+| ImgHost logo | Logo image shown on the frontend pages. |
 | Logo link | URL opened when clicking the logo or avatar. |
 | Background switch interval | Rotation interval for multiple backgrounds, in milliseconds. `60000` means 60 seconds. |
 | Background opacity | Background image opacity from `0` to `1`. Lower values are lighter. |
@@ -63,5 +63,5 @@ The admin background supports image URLs. Multiple URLs can be separated by Engl
 | --- | --- |
 | Default | Time-random prefix + original filename, such as `1760000000000_cat.png`. |
 | Prefix only | Time-random prefix and extension only, such as `1760000000000.png`. |
-| Original name only | Keeps the original filename, such as `cat.png`. If duplicated, ImgBed adds `(1)`, `(2)`, and so on. |
+| Original name only | Keeps the original filename, such as `cat.png`. If duplicated, ImgHost adds `(1)`, `(2)`, and so on. |
 | Short link | Uses an 8-character short ID and extension, such as `a1b2c3d4.png`. |

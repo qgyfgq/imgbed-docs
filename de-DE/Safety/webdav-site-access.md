@@ -1,9 +1,9 @@
 # WebDAV-Zugriff auf die Website
-Die WebDAV-Einstellung in den Sicherheitseinstellungen stellt Ihre ImgBed-Website als WebDAV-Endpunkt bereit.
+Die WebDAV-Einstellung in den Sicherheitseinstellungen stellt Ihre ImgHost-Website als WebDAV-Endpunkt bereit.
 
-Nach dem Aktivieren können Sie Windows, macOS, mobile Dateimanager oder jeden WebDAV-kompatiblen Client verwenden, um ImgBed-Dateien wie einen entfernten Ordner zu durchsuchen, hochzuladen, zu löschen und zu verwalten.
+Nach dem Aktivieren können Sie Windows, macOS, mobile Dateimanager oder jeden WebDAV-kompatiblen Client verwenden, um ImgHost-Dateien wie einen entfernten Ordner zu durchsuchen, hochzuladen, zu löschen und zu verwalten.
 
-Dies ist der WebDAV-Zugriff der Website. Er unterscheidet sich vom WebDAV-Speicherkanal in den Upload-Einstellungen. Der Upload-Kanal speichert Dateien in einem externen WebDAV-Dienst. Diese Einstellung ermöglicht es Ihrer ImgBed-Website, Clients WebDAV-Zugriff bereitzustellen.
+Dies ist der WebDAV-Zugriff der Website. Er unterscheidet sich vom WebDAV-Speicherkanal in den Upload-Einstellungen. Der Upload-Kanal speichert Dateien in einem externen WebDAV-Dienst. Diese Einstellung ermöglicht es Ihrer ImgHost-Website, Clients WebDAV-Zugriff bereitzustellen.
 
 ## Wo Sie es konfigurieren
 
@@ -23,21 +23,21 @@ Verfügbare Einstellungen:
 
 ## Was diese Funktion macht
 
-Nachdem WebDAV aktiviert wurde, stellt ImgBed eine feste Zugriffs-URL bereit:
+Nachdem WebDAV aktiviert wurde, stellt ImgHost eine feste Zugriffs-URL bereit:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Verwenden Sie diese URL, um sich mit Ihrem ImgBed-Dateiverzeichnis zu verbinden.
+Verwenden Sie diese URL, um sich mit Ihrem ImgHost-Dateiverzeichnis zu verbinden.
 
 Geeignete Anwendungsfälle:
 
-- ImgBed-Dateien direkt über den Dateimanager Ihres Computers durchsuchen.
+- ImgHost-Dateien direkt über den Dateimanager Ihres Computers durchsuchen.
 - Bilder in den WebDAV-Ordner ziehen, um sie hochzuladen.
-- ImgBed-Ordner im lokalen Dateimanager organisieren.
+- ImgHost-Ordner im lokalen Dateimanager organisieren.
 - WebDAV-kompatible Software zum Synchronisieren oder Verwalten von Bildern verwenden.
-- Auf ImgBed-Inhalte zugreifen, ohne den Administrationsbereich zu öffnen.
+- Auf ImgHost-Inhalte zugreifen, ohne den Administrationsbereich zu öffnen.
 
 ## Einstellungen
 
@@ -63,7 +63,7 @@ Häufige Optionen:
 
 | Modus | Beschreibung |
 | --- | --- |
-| Intelligentes Laden | ImgBed wählt anhand des Kontexts. Empfohlen für normale Nutzung. |
+| Intelligentes Laden | ImgHost wählt anhand des Kontexts. Empfohlen für normale Nutzung. |
 | Quelle | Bevorzugt Quellbilder. |
 | Vorschaubild | Bevorzugt Vorschaubilder. Nützlich für schnelle Vorschau. |
 
@@ -73,7 +73,7 @@ Wenn Sie unsicher sind, behalten Sie "Intelligentes Laden" bei.
 
 Der Standardkanal wird für WebDAV-Uploads verwendet.
 
-Wenn Sie Dateien aus Windows oder einem anderen Client in das WebDAV-Verzeichnis kopieren, lädt ImgBed sie über den ausgewählten Standard-Upload-Kanal hoch.
+Wenn Sie Dateien aus Windows oder einem anderen Client in das WebDAV-Verzeichnis kopieren, lädt ImgHost sie über den ausgewählten Standard-Upload-Kanal hoch.
 
 Wenn kein Standardkanal ausgewählt ist, kann das Durchsuchen funktionieren, Uploads können jedoch fehlschlagen.
 

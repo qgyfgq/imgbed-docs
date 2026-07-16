@@ -1,6 +1,6 @@
 # Federated Distributed Index
 
-The federated distributed index lets multiple ImgBed sites share file lists with each other.
+The federated distributed index lets multiple ImgHost sites share file lists with each other.
 
 In simple terms:
 
@@ -23,7 +23,7 @@ The page has three tabs:
 | Tab | Purpose |
 | --- | --- |
 | Local Node | Enable your node, confirm public domain, select shared folders, and update outbound index |
-| Nodes I Joined | Manage other ImgBed nodes you have joined |
+| Nodes I Joined | Manage other ImgHost nodes you have joined |
 | Nodes Joining Me | Manage requests from others who want to join your node |
 
 ## First-Time Setup
@@ -32,7 +32,7 @@ The page has three tabs:
 2. Turn on `Enable`.
 3. Select folders to share under `Sync folders`.
 4. Click `Update Outbound Index`.
-5. If ImgBed detects a domain change, confirm that the current domain is correct before continuing.
+5. If ImgHost detects a domain change, confirm that the current domain is correct before continuing.
 
 You can select multiple sync folders.
 
@@ -44,7 +44,7 @@ If the sync folder list is empty, all folders are shared.
 
 The public domain is the site URL other nodes use to access your node.
 
-ImgBed detects this automatically. You do not need to type it manually. The first time you update the index, ImgBed asks you to confirm whether the current access URL is the production domain.
+ImgHost detects this automatically. You do not need to type it manually. The first time you update the index, ImgHost asks you to confirm whether the current access URL is the production domain.
 
 If you change domains later, updating the index will ask for confirmation again.
 
@@ -116,7 +116,7 @@ After unsubscribing, that node's federated index is removed from your local site
 ### Generate an Invitation Link
 
 1. Make sure the local node is enabled.
-2. Click `Update Outbound Index` at least once so ImgBed confirms the public domain.
+2. Click `Update Outbound Index` at least once so ImgHost confirms the public domain.
 3. Open `Nodes Joining Me`.
 4. Click `Reset Invitation Link`.
 5. Copy the invitation link and send it to the other owner.

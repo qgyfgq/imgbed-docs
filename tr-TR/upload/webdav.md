@@ -48,9 +48,9 @@ Oluşturulduktan sonra yeni app password değerini kopyalayıp kaydedin. Genelli
 
 ![Yeni app password değerini kaydetme](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ImgBed'de WebDAV Yapılandırmasını Doldurun
+### 2. ImgHost'de WebDAV Yapılandırmasını Doldurun
 
-ImgBed'e dönün ve bir WebDAV kanalı ekleyin:
+ImgHost'e dönün ve bir WebDAV kanalı ekleyin:
 
 | Arayüz Alanı | Değer |
 | --- | --- |
@@ -68,7 +68,7 @@ WebDAV kanalı gerçek, oturum tabanlı parçalı yükleme kullanır.
 
 Küçük dosyalar tek parça dosya olarak yüklenir. 64 MiB'den büyük dosyalar otomatik olarak yaklaşık 10 MiB'lik parçalara bölünür ve uzaktaki parça dizinine yüklenir.
 
-WebDAV hizmetinin `partial update` veya offset tabanlı yazmayı desteklemesi gerekmez. ImgBed parçaları uzak sunucuda tek büyük dosyada birleştirmez. Bunun yerine parça manifest'ini saklar ve dosya istendiğinde parçaları sırayla okur.
+WebDAV hizmetinin `partial update` veya offset tabanlı yazmayı desteklemesi gerekmez. ImgHost parçaları uzak sunucuda tek büyük dosyada birleştirmez. Bunun yerine parça manifest'ini saklar ve dosya istendiğinde parçaları sırayla okur.
 
 Pratikte:
 
@@ -77,7 +77,7 @@ Pratikte:
 | 64 MiB veya daha küçük | Normal yükleme | Tek tam dosya |
 | 64 MiB'den büyük | Gerçek session chunked upload | Birden çok parça dosyası içeren parça dizini |
 
-Parça dizini yalnızca uzak depolama düzenini etkiler. ImgBed'deki dosya URL'sini değiştirmez. Kullanıcılar dosyaya yine özgün `/file/...` bağlantısı üzerinden erişir.
+Parça dizini yalnızca uzak depolama düzenini etkiler. ImgHost'deki dosya URL'sini değiştirmez. Kullanıcılar dosyaya yine özgün `/file/...` bağlantısı üzerinden erişir.
 
 ## Kurulum Adımları
 
@@ -111,7 +111,7 @@ Parça dizini yalnızca uzak depolama düzenini etkiler. ImgBed'deki dosya URL's
 
 Büyük dosyalar için geçerli depolama yöntemi budur.
 
-64 MiB'den büyük dosyalar tek büyük uzak dosyada birleştirilmez. Parça dizini olarak saklanır. ImgBed parça manifest'ini kaydeder ve tam içeriği parçaları sırayla okuyarak döndürür.
+64 MiB'den büyük dosyalar tek büyük uzak dosyada birleştirilmez. Parça dizini olarak saklanır. ImgHost parça manifest'ini kaydeder ve tam içeriği parçaları sırayla okuyarak döndürür.
 
 ### Büyük dosya yüklemesi başarısız olursa önce neyi kontrol etmeliyim?
 

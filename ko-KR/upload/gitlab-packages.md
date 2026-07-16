@@ -7,7 +7,7 @@
 | 요구 사항 | 목적 |
 | --- | --- |
 | GitLab 계정 | 액세스 토큰을 생성하고 프로젝트를 소유하는 데 사용합니다. |
-| GitLab Personal Access Token | ImgBed가 GitLab API에 접근하고, 프로젝트를 만들고, Generic Packages에 파일을 업로드하는 데 사용합니다. |
+| GitLab Personal Access Token | ImgHost가 GitLab API에 접근하고, 프로젝트를 만들고, Generic Packages에 파일을 업로드하는 데 사용합니다. |
 | Project name | 프로젝트 이름만 입력할 수 있습니다. 예: `imgbed`. |
 
 ## 설정 단계
@@ -26,7 +26,7 @@
 
 ![token 권한 선택](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## 단계 2: ImgBed에 GitLab Packages 채널 입력
+## 단계 2: ImgHost에 GitLab Packages 채널 입력
 
 업로드 설정에서 `GitLab Packages`를 선택한 뒤 다음과 같이 입력합니다.
 
@@ -48,9 +48,9 @@
 
 | 시스템 동작 | 설명 |
 | --- | --- |
-| 짧은 project name | ImgBed는 현재 GitLab 계정을 식별하고 값을 전체 프로젝트 경로로 확장합니다. |
-| 전체 project path | ImgBed는 `username/project` path를 입력한 그대로 사용합니다. |
-| project 확인 | 현재 개인 계정 경로를 사용하는 경우 프로젝트가 없으면 ImgBed가 자동으로 생성합니다. 전체 경로를 수동으로 입력한 경우 ImgBed는 해당 경로를 직접 사용합니다. |
+| 짧은 project name | ImgHost는 현재 GitLab 계정을 식별하고 값을 전체 프로젝트 경로로 확장합니다. |
+| 전체 project path | ImgHost는 `username/project` path를 입력한 그대로 사용합니다. |
+| project 확인 | 현재 개인 계정 경로를 사용하는 경우 프로젝트가 없으면 ImgHost가 자동으로 생성합니다. 전체 경로를 수동으로 입력한 경우 ImgHost는 해당 경로를 직접 사용합니다. |
 | 공개/비공개 상태 | 프로젝트 공개 상태는 현재 스위치에 따라 동기화됩니다. |
 
 ## 빠른 체크리스트
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

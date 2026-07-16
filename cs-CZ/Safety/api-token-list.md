@@ -1,6 +1,6 @@
 # Výpis a filtrování pomocí API Token
 
-Skript pro výpis pomocí API Token se hodí pro skripty, automatizaci a externí programy, které potřebují číst data z ImgBed. Používá pouze oprávnění `list`. Nenahrává soubory, nemaže soubory, nemění konfiguraci a nezakazuje ani nepovoluje nahrávání z žádné IP adresy.
+Skript pro výpis pomocí API Token se hodí pro skripty, automatizaci a externí programy, které potřebují číst data z ImgHost. Používá pouze oprávnění `list`. Nenahrává soubory, nemaže soubory, nemění konfiguraci a nezakazuje ani nepovoluje nahrávání z žádné IP adresy.
 
 ![Upravit API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed, například `https://image.ai6.me` |
+| `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit jednoho požadavku; výchozí hodnota `180000` |

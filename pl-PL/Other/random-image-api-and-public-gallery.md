@@ -64,7 +64,7 @@ Jeśli po filtrowaniu nie ma pasującego pliku, API nie zwraca wyniku.
 
 API losowych obrazów przechowuje pule kandydatów katalogów w pamięci podręcznej, aby działać szybciej.
 
-Po zmianach plików ImgBed aktualizuje wersję pamięci podręcznej katalogu, a kolejne żądania odbudowują pulę kandydatów. Puste katalogi są krótko przechowywane w pamięci podręcznej, aby uniknąć powtarzanych zapytań.
+Po zmianach plików ImgHost aktualizuje wersję pamięci podręcznej katalogu, a kolejne żądania odbudowują pulę kandydatów. Puste katalogi są krótko przechowywane w pamięci podręcznej, aby uniknąć powtarzanych zapytań.
 
 ## Publiczna galeria
 

@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Enabling Rate Limits
 
-After `Enable Rate Limits` is turned on, ImgBed tracks recent uploads by uploader IP address.
+After `Enable Rate Limits` is turned on, ImgHost tracks recent uploads by uploader IP address.
 
 Default values:
 

@@ -37,7 +37,7 @@ Para sites privados ou sites com conteúdo adulto, o modo adulto pode ser adequa
 
 ## O que habilitar a moderação faz
 
-Quando a moderação está habilitada, o ImgBed chama o provedor de moderação selecionado durante o upload e salva a classificação etária detectada.
+Quando a moderação está habilitada, o ImgHost chama o provedor de moderação selecionado durante o upload e salva a classificação etária detectada.
 
 Classificações principais:
 
@@ -66,7 +66,7 @@ Cada provedor tem requisitos diferentes:
 - nsfwjs normalmente exige uma URL de ponto de extremidade da API.
 - Sightengine exige API user e API secret.
 
-Escolha com base na sua conta, disponibilidade e qualidade de detecção. Desde que a moderação esteja habilitada e configurada corretamente, o ImgBed tenta gravar uma classificação de imagem durante o upload.
+Escolha com base na sua conta, disponibilidade e qualidade de detecção. Desde que a moderação esteja habilitada e configurada corretamente, o ImgHost tenta gravar uma classificação de imagem durante o upload.
 
 ## Efeito na galeria pública
 
@@ -85,16 +85,16 @@ Isso afeta apenas o acesso público normal. O painel administrativo ainda mostra
 
 URLs públicas de arquivos são links diretos de imagens abertos por visitantes.
 
-Se a classificação do arquivo for permitida pelo modo de acesso atual, o ImgBed retorna a imagem de origem.
+Se a classificação do arquivo for permitida pelo modo de acesso atual, o ImgHost retorna a imagem de origem.
 
-Se a classificação estiver acima do nível permitido, o acesso público normal não retorna a imagem de origem. Em vez disso, o ImgBed retorna o resultado bloqueado configurado ou a imagem substituta.
+Se a classificação estiver acima do nível permitido, o acesso público normal não retorna a imagem de origem. Em vez disso, o ImgHost retorna o resultado bloqueado configurado ou a imagem substituta.
 
 Exemplo:
 
 - O modo atual é o modo infantil.
 - Uma imagem tem classificação R18.
 - Um visitante abre a URL pública diretamente.
-- O ImgBed não retorna a imagem de origem R18 para esse visitante.
+- O ImgHost não retorna a imagem de origem R18 para esse visitante.
 
 ![Imagem de arquivo restrito](../../image/Safety/文件受限图.png)
 

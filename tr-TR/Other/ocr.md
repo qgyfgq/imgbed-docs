@@ -56,7 +56,7 @@ Google kurulumu iki bölümden oluşur:
 4. `Credentials` bölümüne dönün.
 5. Bir `API Key` oluşturun.
 6. API Key'i açıp kopyalayın.
-7. ImgBed'de `Google Vision API Key` alanına yapıştırın.
+7. ImgHost'de `Google Vision API Key` alanına yapıştırın.
 8. Kaydedin.
 
 Ardından OCR iletişim kutusunda Google Vision'ı seçebilirsiniz.
@@ -74,10 +74,10 @@ Yalnızca son 30 günde yaklaşık kaç Google Vision çağrısı kullanıldığ
 5. Hizmet hesabı ayrıntılarını açın ve bir anahtar oluşturun.
 6. `JSON` seçin.
 7. Oluşturulan JSON dosyasını indirin.
-8. ImgBed'e dönüp hizmet hesabı `JSON` altında içe aktarın (isteğe bağlı).
+8. ImgHost'e dönüp hizmet hesabı `JSON` altında içe aktarın (isteğe bağlı).
 9. İçe aktarma başarılı olduktan sonra kota sorgusuna tıklayın.
 
-İçe aktarmadan sonra ImgBed, hizmet hesabının ait olduğu proje adını gösterir. Kullanım sorgulanırken ImgBed Google izleme verilerini okur ve bu ayın çağrı sayısını gösterir.
+İçe aktarmadan sonra ImgHost, hizmet hesabının ait olduğu proje adını gösterir. Kullanım sorgulanırken ImgHost Google izleme verilerini okur ve bu ayın çağrı sayısını gösterir.
 
 Kısaca:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR bir erişim token'ı gerektirir.
 
 Baidu PaddleOCR sayfasında `API` çağrı penceresini açın, token almak için tıklayın ve kopyalayın.
 
-ImgBed'e dönün, `PaddleOCR Token` alanına yapıştırın ve kaydedin.
+ImgHost'e dönün, `PaddleOCR Token` alanına yapıştırın ve kaydedin.
 
 ## Tanımayı Başlatma
 

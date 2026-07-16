@@ -48,9 +48,9 @@ Depois de criada, copie e salve a nova app password. Ela geralmente é exibida a
 
 ![Salvar a nova senha de app](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Preencha a configuração WebDAV no ImgBed
+### 2. Preencha a configuração WebDAV no ImgHost
 
-Volte ao ImgBed e adicione um canal WebDAV:
+Volte ao ImgHost e adicione um canal WebDAV:
 
 | Campo da UI | Valor |
 | --- | --- |
@@ -68,7 +68,7 @@ O canal WebDAV agora usa upload em chunks real baseado em sessão.
 
 Arquivos pequenos são enviados como um único arquivo completo. Arquivos maiores que 64 MiB são divididos automaticamente em chunks de cerca de 10 MiB e enviados para um diretório remoto de chunks.
 
-O serviço WebDAV não precisa oferecer suporte a `partial update` nem a gravações baseadas em offset. O ImgBed não mescla chunks em um único arquivo grande no servidor remoto. Em vez disso, ele armazena um manifesto de chunks e lê os chunks em ordem quando o arquivo é solicitado.
+O serviço WebDAV não precisa oferecer suporte a `partial update` nem a gravações baseadas em offset. O ImgHost não mescla chunks em um único arquivo grande no servidor remoto. Em vez disso, ele armazena um manifesto de chunks e lê os chunks em ordem quando o arquivo é solicitado.
 
 Na prática:
 
@@ -77,7 +77,7 @@ Na prática:
 | 64 MiB ou menor | Upload normal | Um arquivo completo |
 | Maior que 64 MiB | Upload em chunks real baseado em sessão | Um diretório de chunks contendo vários arquivos de chunk |
 
-O diretório de chunks afeta apenas o layout do armazenamento remoto. Ele não altera a URL do arquivo no ImgBed. Os usuários continuam acessando o arquivo pelo link original `/file/...`.
+O diretório de chunks afeta apenas o layout do armazenamento remoto. Ele não altera a URL do arquivo no ImgHost. Os usuários continuam acessando o arquivo pelo link original `/file/...`.
 
 ## Etapas de configuração
 
@@ -111,7 +111,7 @@ O diretório de chunks afeta apenas o layout do armazenamento remoto. Ele não a
 
 Esse é o método de armazenamento atual para arquivos grandes.
 
-Arquivos maiores que 64 MiB não são mesclados em um único arquivo remoto grande. Eles são armazenados como um diretório de chunks. O ImgBed registra o manifesto de chunks e retorna o conteúdo completo lendo os chunks em ordem.
+Arquivos maiores que 64 MiB não são mesclados em um único arquivo remoto grande. Eles são armazenados como um diretório de chunks. O ImgHost registra o manifesto de chunks e retorna o conteúdo completo lendo os chunks em ordem.
 
 ### O que devo verificar primeiro se o upload de arquivo grande falhar?
 

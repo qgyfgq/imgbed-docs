@@ -1,6 +1,6 @@
 # Xóa tệp bằng API Token
 
-Xóa tệp bằng API Token dành cho tập lệnh, tác vụ tự động và chương trình của bên thứ ba. Bạn không cần mở trang quản trị. Chỉ cần cung cấp URL trang, token và các file ID rõ ràng, bạn có thể xóa một hoặc nhiều tệp khỏi ImgBed.
+Xóa tệp bằng API Token dành cho tập lệnh, tác vụ tự động và chương trình của bên thứ ba. Bạn không cần mở trang quản trị. Chỉ cần cung cấp URL trang, token và các file ID rõ ràng, bạn có thể xóa một hoặc nhiều tệp khỏi ImgHost.
 
 Xóa là thao tác ghi và sẽ thực sự xóa dữ liệu sau khi lệnh chạy. Trước tiên hãy dùng `imgbed-token-list.mjs` để xác nhận các giá trị `fileId` bạn muốn xóa, rồi truyền các ID đó cho tập lệnh xóa.
 
@@ -63,7 +63,7 @@ Sau khi xóa thành công, phần phụ trợ tự động xử lý chỉ mục 
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
-| `--base-url <url>` | Có | URL trang ImgBed, ví dụ `https://image.ai6.me`. |
+| `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
 | `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
 | `--file-id <id>` | Có | File ID cần xóa. Bạn có thể truyền nhiều lần. |
 | `--strictness <strict\|soft>` | Không | Mức nghiêm ngặt khi xóa. Mặc định là `strict`. |
@@ -80,10 +80,10 @@ Tập lệnh này chỉ xóa các giá trị `--file-id` rõ ràng mà bạn tru
 
 | Chế độ | Mô tả |
 | --- | --- |
-| `strict` | Chế độ mặc định. Nếu xóa trên bộ lưu trữ từ xa thất bại, bản ghi ImgBed được giữ lại để bạn có thể thử lại hoặc điều tra. |
-| `soft` | Nếu xóa trên bộ lưu trữ từ xa thất bại, bản ghi ImgBed vẫn được dọn dẹp và kết quả trả về cảnh báo. |
+| `strict` | Chế độ mặc định. Nếu xóa trên bộ lưu trữ từ xa thất bại, bản ghi ImgHost được giữ lại để bạn có thể thử lại hoặc điều tra. |
+| `soft` | Nếu xóa trên bộ lưu trữ từ xa thất bại, bản ghi ImgHost vẫn được dọn dẹp và kết quả trả về cảnh báo. |
 
-Nếu tệp từ xa phải được xóa thì lệnh mới được xem là thành công, hãy dùng chế độ `strict` mặc định. Nếu nền tảng từ xa không còn xóa được object và bạn chỉ muốn dọn dẹp bản ghi ImgBed, hãy dùng `soft`.
+Nếu tệp từ xa phải được xóa thì lệnh mới được xem là thành công, hãy dùng chế độ `strict` mặc định. Nếu nền tảng từ xa không còn xóa được object và bạn chỉ muốn dọn dẹp bản ghi ImgHost, hãy dùng `soft`.
 
 ## Ví dụ
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Dọn dẹp bản ghi ImgBed ngay cả khi xóa từ xa thất bại:
+Dọn dẹp bản ghi ImgHost ngay cả khi xóa từ xa thất bại:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Kiểm tra `fileId` trước khi xóa
 
-Tập lệnh xóa cần file ID của ImgBed. Trước tiên bạn có thể dùng tập lệnh liệt kê để xem tệp trong một thư mục:
+Tập lệnh xóa cần file ID của ImgHost. Trước tiên bạn có thể dùng tập lệnh liệt kê để xem tệp trong một thư mục:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Trường `name` trong kết quả trả về thường là `fileId` mà bạn c
 
 ### Vì sao xóa thất bại nhưng tệp vẫn nằm trong danh sách?
 
-Khi dùng chế độ `strict` mặc định, bản ghi ImgBed được giữ lại nếu xóa trên bộ lưu trữ từ xa thất bại. Điều này tránh việc chỉ xóa chỉ mục cục bộ trong khi tệp từ xa vẫn tồn tại. Sau khi xác nhận rằng bạn chỉ muốn dọn dẹp bản ghi ImgBed, hãy thử lại cùng `fileId` với `soft`.
+Khi dùng chế độ `strict` mặc định, bản ghi ImgHost được giữ lại nếu xóa trên bộ lưu trữ từ xa thất bại. Điều này tránh việc chỉ xóa chỉ mục cục bộ trong khi tệp từ xa vẫn tồn tại. Sau khi xác nhận rằng bạn chỉ muốn dọn dẹp bản ghi ImgHost, hãy thử lại cùng `fileId` với `soft`.
 
 ### Vì sao có cảnh báo trong kết quả?
 

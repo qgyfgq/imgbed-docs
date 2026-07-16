@@ -1,6 +1,6 @@
 # Indeks Terdistribusi Federatif
 
-Indeks terdistribusi federatif memungkinkan beberapa situs ImgBed saling berbagi daftar file.
+Indeks terdistribusi federatif memungkinkan beberapa situs ImgHost saling berbagi daftar file.
 
 Secara sederhana:
 
@@ -23,7 +23,7 @@ Halaman ini memiliki tiga tab:
 | Tab | Tujuan |
 | --- | --- |
 | Node Lokal | Mengaktifkan node Anda, mengonfirmasi domain publik, memilih folder yang dibagikan, dan memperbarui indeks keluar |
-| Node yang Saya Ikuti | Mengelola node ImgBed lain yang sudah Anda ikuti |
+| Node yang Saya Ikuti | Mengelola node ImgHost lain yang sudah Anda ikuti |
 | Node yang Bergabung ke Saya | Mengelola permintaan dari pihak lain yang ingin bergabung ke node Anda |
 
 ## Penyiapan Pertama Kali
@@ -32,7 +32,7 @@ Halaman ini memiliki tiga tab:
 2. Aktifkan `Enable`.
 3. Pilih folder yang akan dibagikan di `Sync folders`.
 4. Klik `Update Outbound Index`.
-5. Jika ImgBed mendeteksi perubahan domain, konfirmasikan bahwa domain saat ini sudah benar sebelum melanjutkan.
+5. Jika ImgHost mendeteksi perubahan domain, konfirmasikan bahwa domain saat ini sudah benar sebelum melanjutkan.
 
 Anda dapat memilih beberapa folder sinkronisasi.
 
@@ -44,7 +44,7 @@ Jika daftar folder sinkronisasi kosong, semua folder akan dibagikan.
 
 Domain publik adalah URL situs yang digunakan node lain untuk mengakses node Anda.
 
-ImgBed mendeteksinya secara otomatis. Anda tidak perlu mengetiknya secara manual. Saat pertama kali memperbarui indeks, ImgBed meminta Anda mengonfirmasi apakah URL akses saat ini merupakan domain produksi.
+ImgHost mendeteksinya secara otomatis. Anda tidak perlu mengetiknya secara manual. Saat pertama kali memperbarui indeks, ImgHost meminta Anda mengonfirmasi apakah URL akses saat ini merupakan domain produksi.
 
 Jika Anda mengganti domain di kemudian hari, pembaruan indeks akan meminta konfirmasi lagi.
 
@@ -116,7 +116,7 @@ Setelah berhenti berlangganan, indeks federatif node tersebut dihapus dari situs
 ### Membuat Tautan Undangan
 
 1. Pastikan node lokal sudah diaktifkan.
-2. Klik `Update Outbound Index` setidaknya sekali agar ImgBed mengonfirmasi domain publik.
+2. Klik `Update Outbound Index` setidaknya sekali agar ImgHost mengonfirmasi domain publik.
 3. Buka `Nodes Joining Me`.
 4. Klik `Reset Invitation Link`.
 5. Salin tautan undangan dan kirimkan kepada pemilik lain.

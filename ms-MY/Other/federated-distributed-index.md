@@ -1,6 +1,6 @@
 # Indeks Teragih Bersekutu
 
-Indeks teragih bersekutu membolehkan beberapa laman ImgBed berkongsi senarai fail antara satu sama lain.
+Indeks teragih bersekutu membolehkan beberapa laman ImgHost berkongsi senarai fail antara satu sama lain.
 
 Secara ringkas:
 
@@ -23,7 +23,7 @@ Halaman ini mempunyai tiga tab:
 | Tab | Tujuan |
 | --- | --- |
 | Nod Setempat | Mengaktifkan nod anda, mengesahkan domain awam, memilih folder kongsi dan mengemas kini indeks keluar |
-| Nod Yang Saya Sertai | Mengurus nod ImgBed lain yang telah anda sertai |
+| Nod Yang Saya Sertai | Mengurus nod ImgHost lain yang telah anda sertai |
 | Nod Yang Menyertai Saya | Mengurus permintaan daripada orang lain yang mahu menyertai nod anda |
 
 ## Persediaan Kali Pertama
@@ -32,7 +32,7 @@ Halaman ini mempunyai tiga tab:
 2. Hidupkan `Enable`.
 3. Pilih folder untuk dikongsi di bawah `Sync folders`.
 4. Klik `Update Outbound Index`.
-5. Jika ImgBed mengesan perubahan domain, sahkan bahawa domain semasa betul sebelum meneruskan.
+5. Jika ImgHost mengesan perubahan domain, sahkan bahawa domain semasa betul sebelum meneruskan.
 
 Anda boleh memilih berbilang folder segerak.
 
@@ -44,7 +44,7 @@ Jika senarai folder segerak kosong, semua folder akan dikongsi.
 
 Domain awam ialah URL laman yang digunakan oleh nod lain untuk mengakses nod anda.
 
-ImgBed mengesannya secara automatik. Anda tidak perlu menaipnya secara manual. Kali pertama anda mengemas kini indeks, ImgBed meminta anda mengesahkan sama ada URL akses semasa ialah domain produksi.
+ImgHost mengesannya secara automatik. Anda tidak perlu menaipnya secara manual. Kali pertama anda mengemas kini indeks, ImgHost meminta anda mengesahkan sama ada URL akses semasa ialah domain produksi.
 
 Jika anda menukar domain kemudian, kemas kini indeks akan meminta pengesahan sekali lagi.
 
@@ -116,7 +116,7 @@ Selepas berhenti melanggan, indeks bersekutu nod tersebut dikeluarkan daripada l
 ### Menjana Pautan Jemputan
 
 1. Pastikan nod setempat telah diaktifkan.
-2. Klik `Update Outbound Index` sekurang-kurangnya sekali supaya ImgBed mengesahkan domain awam.
+2. Klik `Update Outbound Index` sekurang-kurangnya sekali supaya ImgHost mengesahkan domain awam.
 3. Buka `Nodes Joining Me`.
 4. Klik `Reset Invitation Link`.
 5. Salin pautan jemputan dan hantar kepada pemilik nod tersebut.

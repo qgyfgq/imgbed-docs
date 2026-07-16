@@ -38,7 +38,7 @@
 5. Yönergeleri izleyerek bot kullanıcı adını girin. Kullanıcı adının genellikle `bot` ile bitmesi gerekir.
 6. Bot oluşturulduktan sonra `@BotFather` bir bot token döndürür.
 
-ImgBed'deki `Bot Token` alanına girmeniz gereken değer budur.
+ImgHost'deki `Bot Token` alanına girmeniz gereken değer budur.
 
 ![Bot token değerini kaydedin](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Yüklemelerin daha sorunsuz çalışması için bota yönetici yetkisi vermeniz 
 4. Mesaj seçicide hedef kanalı seçip `@userinfobot` hesabına gönderin.
 5. `@userinfobot` sonucu döndürdüğünde `Id: -100...` olarak gösterilen sayıyı kopyalayın.
 
-`-100` ile başlayan sayı, ImgBed'in istediği `Session ID (Chat ID)` değeridir.
+`-100` ile başlayan sayı, ImgHost'in istediği `Session ID (Chat ID)` değeridir.
 
 ![Kanal ID'sini alma](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed'de Telegram Kanalını Doldurun
+### 5. ImgHost'de Telegram Kanalını Doldurun
 
 Kanal yapılandırma penceresine geri dönün ve alanları şöyle doldurun:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -1,6 +1,6 @@
 # API Token فائل اپ لوڈز
 
-API Token اپ لوڈز اسکرپٹس، خودکار کاموں، اور فریق ثالث پروگراموں کے لیے ہیں۔ آپ کو web UI کھولنے کی ضرورت نہیں۔ جب تک آپ سائٹ URL، token، مقامی فائل path، اور حقیقی اپ لوڈ چینل فراہم کرتے ہیں، فائل ImgBed پر اپ لوڈ کی جا سکتی ہے اور response میں فائل URL شامل ہوگا۔
+API Token اپ لوڈز اسکرپٹس، خودکار کاموں، اور فریق ثالث پروگراموں کے لیے ہیں۔ آپ کو web UI کھولنے کی ضرورت نہیں۔ جب تک آپ سائٹ URL، token، مقامی فائل path، اور حقیقی اپ لوڈ چینل فراہم کرتے ہیں، فائل ImgHost پر اپ لوڈ کی جا سکتی ہے اور response میں فائل URL شامل ہوگا۔
 
 ![API Token میں ترمیم](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
-| `--base-url <url>` | ہاں | ImgBed سائٹ URL، مثلاً `https://image.ai6.me`۔ |
+| `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
 | `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file <path>` | ہاں | مقامی فائل path۔ |
 | `--channel <key>` | ہاں | اپ لوڈ چینل۔ |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
-| `--base-url <url>` | ہاں | ImgBed سائٹ URL۔ |
+| `--base-url <url>` | ہاں | ImgHost سائٹ URL۔ |
 | `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file <path>` | ہاں | مقامی فائل path۔ |
 | `--channel <key>` | ہاں | اپ لوڈ چینل۔ |

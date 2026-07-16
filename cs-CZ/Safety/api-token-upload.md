@@ -1,6 +1,6 @@
 # Nahrávání souborů pomocí API Token
 
-Nahrávání přes API Token je určené pro skripty, automatizaci a externí programy. Není nutné otevírat ImgBed v prohlížeči; stačí zadat adresu webu, API Token, cestu k místnímu souboru a skutečný nahrávací kanál. Po úspěšném nahrání skript vrátí odkaz na soubor.
+Nahrávání přes API Token je určené pro skripty, automatizaci a externí programy. Není nutné otevírat ImgHost v prohlížeči; stačí zadat adresu webu, API Token, cestu k místnímu souboru a skutečný nahrávací kanál. Po úspěšném nahrání skript vrátí odkaz na soubor.
 
 ![Upravit API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -16,7 +16,7 @@ Při vytvoření nebo úpravě API Token zapněte oprávnění k nahrávání a 
 
 ## Stažení nahrávacích skriptů
 
-Dokumentace ImgBed obsahuje dva skripty pro Node.js:
+Dokumentace ImgHost obsahuje dva skripty pro Node.js:
 
 | Skript | Účel |
 | --- | --- |
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed, například `https://image.ai6.me` |
+| `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--file <path>` | Ano | Cesta k místnímu souboru |
 | `--channel <key>` | Ano | Skutečný nahrávací kanál |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed |
+| `--base-url <url>` | Ano | Adresa webu ImgHost |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--file <path>` | Ano | Cesta k místnímu souboru |
 | `--channel <key>` | Ano | Skutečný nahrávací kanál |

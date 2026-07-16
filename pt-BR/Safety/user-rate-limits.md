@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Habilitar limites de taxa
 
-Depois que `Habilitar limites de taxa` é ativado, o ImgBed rastreia uploads recentes pelo endereço IP de quem enviou.
+Depois que `Habilitar limites de taxa` é ativado, o ImgHost rastreia uploads recentes pelo endereço IP de quem enviou.
 
 Valores padrão:
 

@@ -6,7 +6,7 @@
 | --- | --- |
 | Обліковий запис Dropbox | Для входу й авторизації app |
 | Dropbox app | Для отримання `App Key` і `App Secret` |
-| Ваш домен ImgBed | Для OAuth redirect URI |
+| Ваш домен ImgHost | Для OAuth redirect URI |
 | Доступне сховище Dropbox | Фактичне місце зберігання файлів |
 
 ## Налаштування
@@ -33,8 +33,8 @@ App folder
 
 | Access Type | Рекомендація |
 | --- | --- |
-| `App folder` | Рекомендовано. Це відповідає тому, як ImgBed зберігає файли. |
-| `Full Dropbox` | Не рекомендовано. ImgBed не потребує доступу до всього акаунта. |
+| `App folder` | Рекомендовано. Це відповідає тому, як ImgHost зберігає файли. |
+| `Full Dropbox` | Не рекомендовано. ImgHost не потребує доступу до всього акаунта. |
 
 ![Створення Dropbox app](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 Збережіть ці два значення зі сторінки Dropbox app:
 
-| Поле Dropbox | Поле ImgBed |
+| Поле Dropbox | Поле ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 У налаштуваннях завантаження виберіть `Dropbox` і заповніть:
 
-| Поле ImgBed | Що ввести |
+| Поле ImgHost | Що ввести |
 | --- | --- |
 | Channel name | Зрозуміла назва, наприклад `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ### Крок 6. Отримайте Refresh Token
 
-1. В ImgBed натисніть `Get Token`.
+1. В ImgHost натисніть `Get Token`.
 2. Увійдіть у Dropbox-акаунт, який хочете підключити.
 3. Підтвердьте запит авторизації.
 4. На callback-сторінці з'явиться `Refresh Token`.
 5. Скопіюйте його.
-6. Поверніться до ImgBed і вставте його в поле `Refresh Token`.
+6. Поверніться до ImgHost і вставте його в поле `Refresh Token`.
 
 ![Копіювання token](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 | Проблема | Як виправити |
 | --- | --- |
-| ImgBed повідомляє, що конфігурація неповна | Перевірте, що `App Key`, `App Secret` і `Refresh Token` усі заповнені. |
+| ImgHost повідомляє, що конфігурація неповна | Перевірте, що `App Key`, `App Secret` і `Refresh Token` усі заповнені. |
 | Авторизація успішна, але `Refresh Token` не з'являється | Натисніть `Get Token` ще раз і переконайтеся, що використовується offline authorization flow. |
 | Завантаження падає з `required scope 'files.content.write'` | Увімкніть `files.content.write`, натисніть `Submit`, потім отримайте новий `Refresh Token`. |
 | Callback не проходить | Переконайтеся, що redirect URI має вигляд `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Посилання

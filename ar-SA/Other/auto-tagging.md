@@ -41,7 +41,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 3. انقر قائمة النقاط الثلاث في الزاوية العلوية اليمنى.
 4. اختر `Duplicate this Space`.
 5. أبقِ اسم Space الافتراضي أو اختر اسمًا خاصًا بك، مثل `wd-tagger`.
-6. اضبط الظهور على `Public`. تكون Spaces العامة أسهل على ImgBed عند الاستدعاء.
+6. اضبط الظهور على `Public`. تكون Spaces العامة أسهل على ImgHost عند الاستدعاء.
 7. ابدأ بالعتاد المجاني الافتراضي. لا تقم بالترقية إلا إذا أصبح الانتظار في قائمة الانتظار واضحًا.
 8. أنشئ Space وانتظر حتى يكتمل البناء.
 
@@ -51,7 +51,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-انسخ عنوان URL من المتصفح والصقه في `Space URLs` داخل ImgBed.
+انسخ عنوان URL من المتصفح والصقه في `Space URLs` داخل ImgHost.
 
 ## إدخال عدة عناوين Space URLs
 
@@ -65,7 +65,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | عنوان URL لصفحة Space منسوخة. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | عنوان URL لصفحة Space التي نسختها إلى حسابك. |
 
-يمكنك إدخال عدة عناوين URL. يستخدم ImgBed عدة Spaces معًا، ما قد يحسن السرعة.
+يمكنك إدخال عدة عناوين URL. يستخدم ImgHost عدة Spaces معًا، ما قد يحسن السرعة.
 
 إذا كان أحد Spaces غير متاح مؤقتًا، يمكن لبقية Spaces متابعة المعالجة.
 
@@ -103,7 +103,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 3. انقر بدء الوسم.
 4. انتظر حتى يكتمل التقدم.
 
-إذا كان المجلد الهدف فارغًا، يعالج ImgBed جميع المجلدات.
+إذا كان المجلد الهدف فارغًا، يعالج ImgHost جميع المجلدات.
 
 يناسب الوسم الدفعي الصور القديمة. أما الصور الجديدة، ففعّل الوسم التلقائي عند الرفع حتى لا تحتاج إلى تشغيله يدويًا في كل مرة.
 
@@ -121,19 +121,19 @@ https://huggingface.co/spaces/your-name/wd-tagger
 
 يتم تخطي الصور التي تحتوي بالفعل على وسوم كاملة واتجاه وتصنيف وعرض وارتفاع، وذلك لتجنب استدعاءات Space غير الضرورية.
 
-يملأ ImgBed المعلومات الناقصة فقط كلما أمكن. على سبيل المثال، إذا كان الاتجاه وحده مفقودًا، يحاول إضافة الاتجاه من دون استدعاء مسار وسوم المحتوى الكامل.
+يملأ ImgHost المعلومات الناقصة فقط كلما أمكن. على سبيل المثال، إذا كان الاتجاه وحده مفقودًا، يحاول إضافة الاتجاه من دون استدعاء مسار وسوم المحتوى الكامل.
 
 ## الأسئلة الشائعة
 
 ### لماذا أنسخ Space خاصًا بي؟
 
-Spaces العامة مشتركة بين عدد كبير من المستخدمين. أما Space المنسوخ الخاص بك، فيستخدمه موقع ImgBed لديك أساسًا، ولذلك يكون عادة أسرع وأكثر موثوقية.
+Spaces العامة مشتركة بين عدد كبير من المستخدمين. أما Space المنسوخ الخاص بك، فيستخدمه موقع ImgHost لديك أساسًا، ولذلك يكون عادة أسرع وأكثر موثوقية.
 
 ### يستمر Space في بدء التشغيل
 
 بعد إنشائه لأول مرة، أو بعد فترة خمول طويلة، قد يحتاج Space إلى بعض الوقت حتى يبدأ.
 
-افتح صفحة Space أولًا. وبعد أن يصبح قادرًا على التعرف على صورة بشكل طبيعي، ارجع إلى ImgBed وابدأ الوسم.
+افتح صفحة Space أولًا. وبعد أن يصبح قادرًا على التعرف على صورة بشكل طبيعي، ارجع إلى ImgHost وابدأ الوسم.
 
 ### كيف أنسخ عنوان URL الخاص بـ Space؟
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

@@ -48,9 +48,9 @@ WebDAV channel اس وقت استعمال کریں جب:
 
 ![Save the new app password](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ImgBed میں WebDAV configuration بھریں
+### 2. ImgHost میں WebDAV configuration بھریں
 
-ImgBed پر واپس آئیں اور WebDAV channel شامل کریں:
+ImgHost پر واپس آئیں اور WebDAV channel شامل کریں:
 
 | UI فیلڈ | قدر |
 | --- | --- |
@@ -68,7 +68,7 @@ WebDAV channel اب real session-based chunked upload استعمال کرتا ہ
 
 چھوٹی files ایک مکمل file کے طور پر upload ہوتی ہیں۔ 64 MiB سے بڑی files تقریباً 10 MiB کے chunks میں خودکار طور پر تقسیم ہو کر remote chunk directory میں upload ہوتی ہیں۔
 
-WebDAV service کو `partial update` یا offset-based writes support کرنے کی ضرورت نہیں۔ ImgBed remote server پر chunks کو ایک بڑی file میں merge نہیں کرتا۔ اس کے بجائے chunk manifest محفوظ کرتا ہے اور file request ہونے پر chunks کو ترتیب سے پڑھتا ہے۔
+WebDAV service کو `partial update` یا offset-based writes support کرنے کی ضرورت نہیں۔ ImgHost remote server پر chunks کو ایک بڑی file میں merge نہیں کرتا۔ اس کے بجائے chunk manifest محفوظ کرتا ہے اور file request ہونے پر chunks کو ترتیب سے پڑھتا ہے۔
 
 عملی طور پر:
 
@@ -77,7 +77,7 @@ WebDAV service کو `partial update` یا offset-based writes support کرنے �
 | 64 MiB یا کم | نہیںrmal upload | ایک مکمل file |
 | 64 MiB سے زیادہ | Real session chunked upload | chunk directory جس میں متعدد chunk files ہوں |
 
-chunk directory صرف remote storage layout پر اثر ڈالتی ہے۔ ImgBed میں file URL نہیں بدلتا۔ users پھر بھی اصل `/file/...` link سے file access کرتے ہیں۔
+chunk directory صرف remote storage layout پر اثر ڈالتی ہے۔ ImgHost میں file URL نہیں بدلتا۔ users پھر بھی اصل `/file/...` link سے file access کرتے ہیں۔
 
 ## سیٹ اپ کے مراحل
 
@@ -111,7 +111,7 @@ chunk directory صرف remote storage layout پر اثر ڈالتی ہے۔ ImgBe
 
 یہ بڑی files کے لیے موجودہ storage method ہے۔
 
-64 MiB سے بڑی فائلیں ریموٹ طرف ایک بڑی فائل میں ضم نہیں ہوتیں۔ وہ chunk directory کے طور پر محفوظ ہوتی ہیں۔ ImgBed chunk manifest محفوظ کرتا ہے اور مکمل مواد کو chunks سے ترتیب وار پڑھ کر واپس کرتا ہے۔
+64 MiB سے بڑی فائلیں ریموٹ طرف ایک بڑی فائل میں ضم نہیں ہوتیں۔ وہ chunk directory کے طور پر محفوظ ہوتی ہیں۔ ImgHost chunk manifest محفوظ کرتا ہے اور مکمل مواد کو chunks سے ترتیب وار پڑھ کر واپس کرتا ہے۔
 
 ### بڑی file upload ناکام ہو تو پہلے کیا چیک کریں؟
 

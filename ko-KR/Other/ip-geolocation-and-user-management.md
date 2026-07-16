@@ -28,7 +28,7 @@ System Settings -> Other Settings -> IP Geolocation
 
 필요한 서비스만 입력하세요. 모든 필드를 설정할 필요는 없습니다.
 
-키를 제공하지 않아도 ImgBed는 내장 무료 정보원을 시도하지만, 안정성, 언어 지원, 정확도는 직접 설정한 서비스보다 낮을 수 있습니다.
+키를 제공하지 않아도 ImgHost는 내장 무료 정보원을 시도하지만, 안정성, 언어 지원, 정확도는 직접 설정한 서비스보다 낮을 수 있습니다.
 
 ## 권장 선택
 
@@ -57,9 +57,9 @@ MaxMind 대시보드에서 계정 ID를 찾고 License Keys 페이지에서 Lice
 
 ![MaxMind 키 설정](../../image/other/ip定位/maxmind的key配置.png)
 
-생성 후 Account ID와 License Key를 ImgBed에 붙여 넣고 저장합니다.
+생성 후 Account ID와 License Key를 ImgHost에 붙여 넣고 저장합니다.
 
-MaxMind의 무료 플랜은 일상적인 사용에 적합하지만 요청 제한이 있습니다. 할당량을 초과하면 ImgBed는 사용 가능한 다른 정보원을 계속 시도합니다.
+MaxMind의 무료 플랜은 일상적인 사용에 적합하지만 요청 제한이 있습니다. 할당량을 초과하면 ImgHost는 사용 가능한 다른 정보원을 계속 시도합니다.
 
 ## ipapi 설정
 
@@ -69,9 +69,9 @@ ipapi 콘솔을 열고 표시된 API Key를 복사합니다.
 
 ![ipapi 설정](../../image/other/ip定位/ipapi配置.png)
 
-ImgBed의 `ipapi Key` 필드에 붙여 넣고 저장합니다.
+ImgHost의 `ipapi Key` 필드에 붙여 넣고 저장합니다.
 
-ipapi는 다국어 IP 위치 조회를 지원하며 선택한 언어로 주소를 표시하고 싶을 때 유용합니다. 무료 플랜에도 요청 제한이 있습니다. 할당량이 소진되면 ImgBed는 사용 가능한 다른 정보원을 계속 시도합니다.
+ipapi는 다국어 IP 위치 조회를 지원하며 선택한 언어로 주소를 표시하고 싶을 때 유용합니다. 무료 플랜에도 요청 제한이 있습니다. 할당량이 소진되면 ImgHost는 사용 가능한 다른 정보원을 계속 시도합니다.
 
 ## Tencent Map Key 설정
 

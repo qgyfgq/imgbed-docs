@@ -4,19 +4,19 @@
 
 Cloudflare R2 použijte, když:
 
-- vaše stránka ImgBed už běží na Cloudflare a chcete soubory ukládat do R2 bucketu ve stejném účtu Cloudflare.
+- vaše stránka ImgHost už běží na Cloudflare a chcete soubory ukládat do R2 bucketu ve stejném účtu Cloudflare.
 - nechcete nastavovat samostatný S3 endpoint, access key a secret key.
 - chcete, aby čtení a zápis probíhaly přes R2 binding ve Workeru nebo Pages s minimální konfigurací.
 
 Stručně:
 
-Kanál R2 se nevytváří ručně v administraci ImgBed. Nejprve je potřeba připojit R2 bucket k projektu Cloudflare a název proměnné bindingu musí být přesně `img_r2`.
+Kanál R2 se nevytváří ručně v administraci ImgHost. Nejprve je potřeba připojit R2 bucket k projektu Cloudflare a název proměnné bindingu musí být přesně `img_r2`.
 
 ## Co potřebujete před začátkem
 
 - Účet Cloudflare.
 - Existující R2 bucket.
-- Oprávnění spravovat projekt Cloudflare, na kterém je ImgBed nasazený.
+- Oprávnění spravovat projekt Cloudflare, na kterém je ImgHost nasazený.
 
 ## Nastavení v Cloudflare
 
@@ -31,7 +31,7 @@ Do tohoto bucketu se budou ukládat nahrané soubory.
 
 ![Vytvoření R2 bucketu](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Připojte bucket k projektu ImgBed
+### 2. Připojte bucket k projektu ImgHost
 
 Místo bindingu vyberte podle typu nasazení:
 
@@ -51,9 +51,9 @@ Název proměnné musí být přesně `img_r2`. Nahrávání, čtení i mazání
 
 ### 3. Projekt znovu nasaďte
 
-Po uložení bindingu znovu nasaďte ImgBed, aby runtime Workeru nebo Pages získal přístup k `img_r2`.
+Po uložení bindingu znovu nasaďte ImgHost, aby runtime Workeru nebo Pages získal přístup k `img_r2`.
 
-## Co uvidíte v ImgBed
+## Co uvidíte v ImgHost
 
 Jakmile je binding R2 dostupný, otevřete:
 
@@ -82,19 +82,19 @@ Jde o pevný kanál bindingu. Nemusíte ho vytvářet přes Přidat kanál a nel
 | Limit kapacity | Určuje, zda se tento R2 kanál vybírá podle dostupné kapacity. | Ne |
 | Prahová hodnota | Zastaví zápis do kanálu po dosažení zadaného procenta využití. | Povinné při limitech |
 
-Account ID najdete v informačním panelu účtu v Cloudflare Dashboard. Vyplňte ho jen tehdy, pokud má ImgBed dotazovat a vynucovat využití kvóty R2.
+Account ID najdete v informačním panelu účtu v Cloudflare Dashboard. Vyplňte ho jen tehdy, pokud má ImgHost dotazovat a vynucovat využití kvóty R2.
 
 ![Získání Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Postup nastavení
 
 1. Vytvořte R2 bucket v Cloudflare.
-2. Otevřete nastavení Cloudflare pro projekt ImgBed.
+2. Otevřete nastavení Cloudflare pro projekt ImgHost.
 3. Přidejte R2 bucket binding.
 4. Nastavte `Variable name` na `img_r2`.
 5. Vyberte vytvořený R2 bucket.
-6. Uložte binding a znovu nasaďte ImgBed.
-7. Vraťte se do ImgBed -> Nastavení systému -> Nastavení nahrávání.
+6. Uložte binding a znovu nasaďte ImgHost.
+7. Vraťte se do ImgHost -> Nastavení systému -> Nastavení nahrávání.
 8. Ověřte, že se kanál `Cloudflare R2` zobrazuje a je povolený.
 
 Pokud chcete, aby se R2 vybíral podle kapacity, zapněte limit kapacity a před uložením vyplňte Account ID, název bucketu, limit a prahovou hodnotu.

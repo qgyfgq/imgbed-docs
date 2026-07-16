@@ -41,7 +41,7 @@ You can temporarily use the public Space, but public Spaces are shared by many u
 3. Click the three-dot menu in the upper-right corner.
 4. Choose `Duplicate this Space`.
 5. Keep the default Space name or choose your own name, such as `wd-tagger`.
-6. Set visibility to `Public`. Public Spaces are easier for ImgBed to call.
+6. Set visibility to `Public`. Public Spaces are easier for ImgHost to call.
 7. Keep the default free hardware at first. Upgrade later only if queueing becomes obvious.
 8. Create the Space and wait for the build to finish.
 
@@ -51,7 +51,7 @@ After the build finishes, open your Space page. The URL usually looks like:
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Copy the browser URL and paste it into ImgBed's `Space URLs`.
+Copy the browser URL and paste it into ImgHost's `Space URLs`.
 
 ## Filling Multiple Space URLs
 
@@ -65,7 +65,7 @@ Examples:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | A copied Space page URL. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Your own duplicated Space page URL. |
 
-You can enter multiple URLs. ImgBed uses multiple Spaces together, which can improve speed.
+You can enter multiple URLs. ImgHost uses multiple Spaces together, which can improve speed.
 
 If one Space is temporarily unavailable, the others can continue processing.
 
@@ -103,7 +103,7 @@ If there are too few tags, lower the general threshold slightly.
 3. Click start tagging.
 4. Wait for progress to finish.
 
-If the target folder is empty, ImgBed processes all folders.
+If the target folder is empty, ImgHost processes all folders.
 
 Batch tagging is best for old images. For new images, enable auto-tag on upload so you do not need to run it manually each time.
 
@@ -121,19 +121,19 @@ Auto tagging mainly processes image files.
 
 Images that already have complete tags, orientation, rating, width, and height are skipped to avoid unnecessary Space calls.
 
-ImgBed fills only missing information when possible. For example, if only orientation is missing, it tries to add orientation without calling the full content tag flow.
+ImgHost fills only missing information when possible. For example, if only orientation is missing, it tries to add orientation without calling the full content tag flow.
 
 ## FAQ
 
 ### Why Duplicate My Own Space?
 
-Public Spaces are shared by many users. Your own duplicated Space is mainly used by your ImgBed site, so it is usually faster and more reliable.
+Public Spaces are shared by many users. Your own duplicated Space is mainly used by your ImgHost site, so it is usually faster and more reliable.
 
 ### The Space Keeps Starting Up
 
 After first creation, or after a long idle period, a Space may need time to start.
 
-Open your Space page first. After it can recognize an image normally, return to ImgBed and start tagging.
+Open your Space page first. After it can recognize an image normally, return to ImgHost and start tagging.
 
 ### How Do I Copy the Space URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

@@ -28,7 +28,7 @@ Alur geolokasi IP yang lebih baru mendukung beberapa sumber, bukan hanya bergant
 
 Isi hanya layanan yang Anda perlukan. Anda tidak harus mengonfigurasi semua kolom.
 
-Jika tidak ada kunci yang diberikan, ImgBed tetap mencoba sumber gratis bawaan, tetapi stabilitas, dukungan bahasa, dan presisinya mungkin lebih rendah daripada layanan yang Anda konfigurasi sendiri.
+Jika tidak ada kunci yang diberikan, ImgHost tetap mencoba sumber gratis bawaan, tetapi stabilitas, dukungan bahasa, dan presisinya mungkin lebih rendah daripada layanan yang Anda konfigurasi sendiri.
 
 ## Pilihan yang Disarankan
 
@@ -57,9 +57,9 @@ Temukan ID akun di dasbor MaxMind dan buat License Key dari halaman License Keys
 
 ![Konfigurasi kunci MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Setelah dibuat, tempelkan Account ID dan License Key ke ImgBed, lalu simpan.
+Setelah dibuat, tempelkan Account ID dan License Key ke ImgHost, lalu simpan.
 
-Paket gratis MaxMind cocok untuk penggunaan sehari-hari, tetapi memiliki batas permintaan. Jika kuota terlampaui, ImgBed akan terus mencoba sumber lain yang tersedia.
+Paket gratis MaxMind cocok untuk penggunaan sehari-hari, tetapi memiliki batas permintaan. Jika kuota terlampaui, ImgHost akan terus mencoba sumber lain yang tersedia.
 
 ## Penyiapan ipapi
 
@@ -69,9 +69,9 @@ Buka konsol ipapi dan salin API Key yang ditampilkan di sana.
 
 ![Konfigurasi ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Tempelkan ke kolom `ipapi Key` di ImgBed, lalu simpan.
+Tempelkan ke kolom `ipapi Key` di ImgHost, lalu simpan.
 
-ipapi mendukung geolokasi IP multibahasa dan berguna saat Anda ingin alamat ditampilkan dalam bahasa yang dipilih. Paket gratisnya juga memiliki batas permintaan. Jika kuota habis, ImgBed akan terus mencoba sumber lain yang tersedia.
+ipapi mendukung geolokasi IP multibahasa dan berguna saat Anda ingin alamat ditampilkan dalam bahasa yang dipilih. Paket gratisnya juga memiliki batas permintaan. Jika kuota habis, ImgHost akan terus mencoba sumber lain yang tersedia.
 
 ## Penyiapan Tencent Map Key
 

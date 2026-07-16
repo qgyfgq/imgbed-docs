@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## အကြိမ်နှုန်း ကန့်သတ်ချက်များ ဖွင့်ခြင်း
 
-`အကြိမ်နှုန်း ကန့်သတ်ချက်များ ဖွင့်ရန်` ကို ဖွင့်ပြီးနောက် ImgBed သည် uploader IP address အပေါ် မူတည်၍ လတ်တလော uploads များကို စောင့်ကြည့်သည်။
+`အကြိမ်နှုန်း ကန့်သတ်ချက်များ ဖွင့်ရန်` ကို ဖွင့်ပြီးနောက် ImgHost သည် uploader IP address အပေါ် မူတည်၍ လတ်တလော uploads များကို စောင့်ကြည့်သည်။
 
 မူလတန်ဖိုးများ:
 

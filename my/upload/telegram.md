@@ -38,7 +38,7 @@
 5. Bot အသုံးပြုသူအမည် ထည့်ရန် prompt များကိုလိုက်နာပါ။ အသုံးပြုသူအမည် သည် ပုံမှန်အားဖြင့် `bot` ဖြင့်ဆုံးရမည်။
 6. Bot ဖန်တီးပြီးနောက် `@BotFather` သည် bot token ကိုပြန်ပေးမည်။
 
-ဤ token သည် ImgBed ထဲတွင် ထည့်ရမည့် `Bot Token` ဖြစ်သည်။
+ဤ token သည် ImgHost ထဲတွင် ထည့်ရမည့် `Bot Token` ဖြစ်သည်။
 
 ![Bot token သိမ်းခြင်း](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Public channel နှင့် private channel နှစ်မျိုးလု
 4. Message picker တွင် ပစ်မှတ် channel ကိုရွေးပြီး `@userinfobot` သို့ ပို့ပါ။
 5. `@userinfobot` က result ပြန်ပေးသည့်အခါ `Id: -100...` အဖြစ်ပြထားသော နံပါတ်ကိုကူးယူပါ။
 
-`-100` ဖြင့်စတင်သော နံပါတ်သည် ImgBed လိုအပ်သည့် `Session ID (Chat ID)` ဖြစ်သည်။
+`-100` ဖြင့်စတင်သော နံပါတ်သည် ImgHost လိုအပ်သည့် `Session ID (Chat ID)` ဖြစ်သည်။
 
 ![Channel ID ရယူခြင်း](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed တွင် Telegram Channel ကိုဖြည့်ပါ
+### 5. ImgHost တွင် Telegram Channel ကိုဖြည့်ပါ
 
 Channel configuration dialog သို့ ပြန်သွားပြီး အကွက်များကို အောက်ပါအတိုင်း ဖြည့်ပါ။
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

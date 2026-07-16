@@ -1,9 +1,9 @@
 # WebDAV Site Access
-Security Settings ထဲရှိ WebDAV setting သည် သင့် ImgBed site ကို WebDAV အဆုံးမှတ် အဖြစ် ထုတ်ပြသည်။
+Security Settings ထဲရှိ WebDAV setting သည် သင့် ImgHost site ကို WebDAV အဆုံးမှတ် အဖြစ် ထုတ်ပြသည်။
 
-ဖွင့်ပြီးနောက် Windows, macOS, mobile file managers သို့မဟုတ် WebDAV-compatible client မည်သည့်တစ်ခုကိုမဆို အသုံးပြု၍ ImgBed files များကို remote folder ကဲ့သို့ browse, upload, delete နှင့် manage လုပ်နိုင်သည်။
+ဖွင့်ပြီးနောက် Windows, macOS, mobile file managers သို့မဟုတ် WebDAV-compatible client မည်သည့်တစ်ခုကိုမဆို အသုံးပြု၍ ImgHost files များကို remote folder ကဲ့သို့ browse, upload, delete နှင့် manage လုပ်နိုင်သည်။
 
-ဤအရာသည် site ၏ WebDAV access entry ဖြစ်သည်။ Upload Settings ထဲရှိ WebDAV storage channel နှင့် မတူပါ။ Upload channel သည် files များကို third-party WebDAV service ထဲတွင် သိမ်းဆည်းသည်။ ဤ setting သည် သင့် ImgBed site က clients များအတွက် WebDAV access ပေးနိုင်စေသည်။
+ဤအရာသည် site ၏ WebDAV access entry ဖြစ်သည်။ Upload Settings ထဲရှိ WebDAV storage channel နှင့် မတူပါ။ Upload channel သည် files များကို third-party WebDAV service ထဲတွင် သိမ်းဆည်းသည်။ ဤ setting သည် သင့် ImgHost site က clients များအတွက် WebDAV access ပေးနိုင်စေသည်။
 
 ## သတ်မှတ်ရာနေရာ
 
@@ -23,21 +23,21 @@ System Settings -> Security Settings -> WebDAV
 
 ## ဤ Feature ၏ လုပ်ဆောင်ချက်
 
-WebDAV ဖွင့်ပြီးနောက် ImgBed သည် fixed access URL တစ်ခု ပေးသည်။
+WebDAV ဖွင့်ပြီးနောက် ImgHost သည် fixed access URL တစ်ခု ပေးသည်။
 
 ```text
 https://your-domain.com/dav
 ```
 
-ဤ URL ကို အသုံးပြု၍ သင့် ImgBed file directory သို့ ချိတ်ဆက်ပါ။
+ဤ URL ကို အသုံးပြု၍ သင့် ImgHost file directory သို့ ချိတ်ဆက်ပါ။
 
 သင့်တော်သော အသုံးပြုမှုများ:
 
-- ကွန်ပျူတာ file manager မှ ImgBed files များကို တိုက်ရိုက် browse လုပ်ခြင်း။
+- ကွန်ပျူတာ file manager မှ ImgHost files များကို တိုက်ရိုက် browse လုပ်ခြင်း။
 - ပုံများကို WebDAV folder ထဲသို့ ဆွဲထည့်၍ upload လုပ်ခြင်း။
-- Local file manager မှ ImgBed folders များကို စီစဉ်ခြင်း။
+- Local file manager မှ ImgHost folders များကို စီစဉ်ခြင်း။
 - WebDAV-compatible software ဖြင့် ပုံများကို sync သို့မဟုတ် manage လုပ်ခြင်း။
-- စီမံခန့်ခွဲမှု ပန်နယ် မဖွင့်ဘဲ ImgBed content ကို ဝင်ရောက်ခြင်း။
+- စီမံခန့်ခွဲမှု ပန်နယ် မဖွင့်ဘဲ ImgHost content ကို ဝင်ရောက်ခြင်း။
 
 ## သတ်မှတ်ချက်များ
 
@@ -63,7 +63,7 @@ WebDAV အတွက် သီးသန့် အသုံးပြုသူအ�
 
 | မုဒ် | ဖော်ပြချက် |
 | --- | --- |
-| စမတ်ဖတ်ယူမှု | ImgBed သည် context အပေါ် မူတည်၍ ရွေးသည်။ ပုံမှန်အသုံးပြုမှုအတွက် အကြံပြုသည်။ |
+| စမတ်ဖတ်ယူမှု | ImgHost သည် context အပေါ် မူတည်၍ ရွေးသည်။ ပုံမှန်အသုံးပြုမှုအတွက် အကြံပြုသည်။ |
 | မူရင်း | မူရင်းပုံများကို ဦးစားပေးသည်။ |
 | ပုံသေး | ပုံသေးများ များကို ဦးစားပေးသည်။ မြန်ဆန်သော preview အတွက် အသုံးဝင်သည်။ |
 
@@ -73,7 +73,7 @@ WebDAV အတွက် သီးသန့် အသုံးပြုသူအ�
 
 မူလ channel ကို WebDAV uploads အတွက် အသုံးပြုသည်။
 
-Windows သို့မဟုတ် အခြား client မှ WebDAV directory ထဲသို့ files များ copy လုပ်သောအခါ ImgBed သည် ရွေးထားသော default upload channel မှတစ်ဆင့် ၎င်းတို့ကို upload လုပ်သည်။
+Windows သို့မဟုတ် အခြား client မှ WebDAV directory ထဲသို့ files များ copy လုပ်သောအခါ ImgHost သည် ရွေးထားသော default upload channel မှတစ်ဆင့် ၎င်းတို့ကို upload လုပ်သည်။
 
 မူလ channel မရွေးထားပါက browsing လုပ်နိုင်သော်လည်း uploads မအောင်မြင်နိုင်ပါ။
 

@@ -1,9 +1,9 @@
 # Accès WebDAV au Site
-Le paramètre WebDAV dans les paramètres de sécurité expose votre site ImgBed comme point de terminaison WebDAV.
+Le paramètre WebDAV dans les paramètres de sécurité expose votre site ImgHost comme point de terminaison WebDAV.
 
-Une fois activé, vous pouvez utiliser Windows, macOS, des gestionnaires de fichiers mobiles ou tout client compatible WebDAV pour parcourir, téléverser, supprimer et gérer les fichiers ImgBed comme un dossier distant.
+Une fois activé, vous pouvez utiliser Windows, macOS, des gestionnaires de fichiers mobiles ou tout client compatible WebDAV pour parcourir, téléverser, supprimer et gérer les fichiers ImgHost comme un dossier distant.
 
-Il s’agit de l’entrée d’accès WebDAV du site. Elle est différente du canal de stockage WebDAV dans les paramètres de téléversement. Le canal de téléversement stocke les fichiers dans un service WebDAV tiers. Ce paramètre permet à votre site ImgBed de fournir un accès WebDAV aux clients.
+Il s’agit de l’entrée d’accès WebDAV du site. Elle est différente du canal de stockage WebDAV dans les paramètres de téléversement. Le canal de téléversement stocke les fichiers dans un service WebDAV tiers. Ce paramètre permet à votre site ImgHost de fournir un accès WebDAV aux clients.
 
 ## Où Configurer
 
@@ -23,21 +23,21 @@ Paramètres disponibles :
 
 ## Rôle de cette Fonction
 
-Une fois WebDAV activé, ImgBed fournit une URL d’accès fixe :
+Une fois WebDAV activé, ImgHost fournit une URL d’accès fixe :
 
 ```text
 https://your-domain.com/dav
 ```
 
-Utilisez cette URL pour vous connecter au répertoire de fichiers ImgBed.
+Utilisez cette URL pour vous connecter au répertoire de fichiers ImgHost.
 
 Cas d’utilisation adaptés :
 
-- Parcourir les fichiers ImgBed directement depuis le gestionnaire de fichiers de votre ordinateur.
+- Parcourir les fichiers ImgHost directement depuis le gestionnaire de fichiers de votre ordinateur.
 - Glisser des images dans le dossier WebDAV pour les téléverser.
-- Organiser les dossiers ImgBed depuis votre gestionnaire de fichiers local.
+- Organiser les dossiers ImgHost depuis votre gestionnaire de fichiers local.
 - Utiliser un logiciel compatible WebDAV pour synchroniser ou gérer des images.
-- Accéder au contenu ImgBed sans ouvrir le panneau d’administration.
+- Accéder au contenu ImgHost sans ouvrir le panneau d’administration.
 
 ## Paramètres
 
@@ -63,7 +63,7 @@ Choix courants :
 
 | Mode | Description |
 | --- | --- |
-| Chargement intelligent | ImgBed choisit selon le contexte. Recommandé pour un usage normal. |
+| Chargement intelligent | ImgHost choisit selon le contexte. Recommandé pour un usage normal. |
 | Source | Préfère les images sources. |
 | Miniature | Préfère les miniatures. Utile pour un aperçu rapide. |
 
@@ -73,7 +73,7 @@ Si vous hésitez, conservez « Chargement intelligent ».
 
 Le canal par défaut est utilisé pour les téléversements WebDAV.
 
-Lorsque vous copiez des fichiers dans le répertoire WebDAV depuis Windows ou un autre client, ImgBed les téléverse via le canal de téléversement par défaut sélectionné.
+Lorsque vous copiez des fichiers dans le répertoire WebDAV depuis Windows ou un autre client, ImgHost les téléverse via le canal de téléversement par défaut sélectionné.
 
 Si aucun canal par défaut n’est sélectionné, la navigation peut fonctionner, mais les téléversements peuvent échouer.
 

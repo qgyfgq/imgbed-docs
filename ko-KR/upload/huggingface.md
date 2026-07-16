@@ -7,7 +7,7 @@
 | 요구 사항 | 목적 |
 | --- | --- |
 | Hugging Face 계정 | 액세스 토큰을 생성하고 리포지토리를 소유하는 데 사용합니다. |
-| Hugging Face User Access Token | ImgBed가 Hugging Face API에 접근하고, 리포지토리를 만들고, 파일을 업로드하는 데 사용합니다. |
+| Hugging Face User Access Token | ImgHost가 Hugging Face API에 접근하고, 리포지토리를 만들고, 파일을 업로드하는 데 사용합니다. |
 | Repository name | 리포지토리 이름만 입력할 수 있습니다. 예: `image`. |
 
 ## 설정 단계
@@ -24,7 +24,7 @@
 
 ![token 만들기](../../image/upload/huggingface/创建令牌.png)
 
-## 단계 2: ImgBed에 Hugging Face 채널 입력
+## 단계 2: ImgHost에 Hugging Face 채널 입력
 
 업로드 설정에서 `Hugging Face`를 선택한 뒤 다음과 같이 입력합니다.
 
@@ -46,9 +46,9 @@
 
 | 시스템 동작 | 설명 |
 | --- | --- |
-| 짧은 repository name | ImgBed는 현재 Hugging Face 계정을 식별하고 값을 전체 리포지토리 경로로 확장합니다. |
-| 전체 repository path | ImgBed는 `username/repository` path를 입력한 그대로 사용합니다. |
-| repository 확인 | 현재 개인 계정 경로를 사용하는 경우 리포지토리가 없으면 ImgBed가 생성을 시도합니다. 전체 경로를 수동으로 입력한 경우 ImgBed는 해당 경로를 직접 사용합니다. |
+| 짧은 repository name | ImgHost는 현재 Hugging Face 계정을 식별하고 값을 전체 리포지토리 경로로 확장합니다. |
+| 전체 repository path | ImgHost는 `username/repository` path를 입력한 그대로 사용합니다. |
+| repository 확인 | 현재 개인 계정 경로를 사용하는 경우 리포지토리가 없으면 ImgHost가 생성을 시도합니다. 전체 경로를 수동으로 입력한 경우 ImgHost는 해당 경로를 직접 사용합니다. |
 | Repository type | 이 채널은 `dataset` repository를 사용합니다. |
 | 공개/비공개 상태 | 리포지토리 공개 상태는 현재 스위치에 따라 동기화됩니다. |
 
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

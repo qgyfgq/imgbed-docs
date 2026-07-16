@@ -1,6 +1,6 @@
 # Przesyłanie plików za pomocą API Token
 
-Przesyłanie za pomocą API Token jest przeznaczone dla skryptów, zadań automatyzacji i programów zewnętrznych. Nie trzeba otwierać interfejsu WWW. Jeśli podasz adres URL witryny, token, lokalną ścieżkę pliku oraz rzeczywisty kanał przesyłania, plik zostanie przesłany do ImgBed, a odpowiedź będzie zawierać jego adres URL.
+Przesyłanie za pomocą API Token jest przeznaczone dla skryptów, zadań automatyzacji i programów zewnętrznych. Nie trzeba otwierać interfejsu WWW. Jeśli podasz adres URL witryny, token, lokalną ścieżkę pliku oraz rzeczywisty kanał przesyłania, plik zostanie przesłany do ImgHost, a odpowiedź będzie zawierać jego adres URL.
 
 ![Edycja API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
-| `--base-url <url>` | Tak | Adres URL witryny ImgBed, na przykład `https://image.ai6.me`. |
+| `--base-url <url>` | Tak | Adres URL witryny ImgHost, na przykład `https://image.ai6.me`. |
 | `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGBED_API_TOKEN`. |
 | `--file <path>` | Tak | Lokalna ścieżka pliku. |
 | `--channel <key>` | Tak | Kanał przesyłania. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
-| `--base-url <url>` | Tak | Adres URL witryny ImgBed. |
+| `--base-url <url>` | Tak | Adres URL witryny ImgHost. |
 | `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGBED_API_TOKEN`. |
 | `--file <path>` | Tak | Lokalna ścieżka pliku. |
 | `--channel <key>` | Tak | Kanał przesyłania. |

@@ -46,7 +46,7 @@ Untuk menjalankan skrip, komputer setempat perlu memasang Node.js 18 atau versi 
 
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | URL tapak ImgBed, contohnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
 | `--retries <n>` | Tidak | Bilangan cubaan semula untuk kegagalan sementara. Lalai `3` |
 | `--timeout-ms <n>` | Tidak | Had masa untuk satu permintaan. Lalai `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Mencipta Folder
 
-Direktori ImgBed berasal daripada laluan fail, jadi tiada direktori kosong sebenar. Apabila skrip mencipta folder, ia akan mencipta fail pemegang tempat `0.md` dalam direktori sasaran supaya direktori itu boleh dipaparkan dalam pengurusan fail dan statistik direktori.
+Direktori ImgHost berasal daripada laluan fail, jadi tiada direktori kosong sebenar. Apabila skrip mencipta folder, ia akan mencipta fail pemegang tempat `0.md` dalam direktori sasaran supaya direktori itu boleh dipaparkan dalam pengurusan fail dan statistik direktori.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend memproses maksimum `15` fail dalam satu permintaan. Lalai skrip ialah `-
 
 ### Bolehkah mencipta folder kosong sebenar
 
-Direktori ImgBed diterbitkan daripada laluan fail, jadi tiada direktori kosong sebenar. `--create-folder` akan mencipta fail pemegang tempat direktori `0.md` supaya direktori itu boleh dipaparkan dalam pengurusan fail dan statistik direktori.
+Direktori ImgHost diterbitkan daripada laluan fail, jadi tiada direktori kosong sebenar. `--create-folder` akan mencipta fail pemegang tempat direktori `0.md` supaya direktori itu boleh dipaparkan dalam pengurusan fail dan statistik direktori.
 
 ### Berapa lama maksimum Token muat naik jangka pendek
 

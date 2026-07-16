@@ -1,6 +1,6 @@
 # Quản lý xác thực và thiết bị đăng nhập
 
-`Quản lý xác thực` và `Quản lý thiết bị đăng nhập` bảo vệ bảng quản trị ImgBed, lối vào tải lên công khai và quyền truy cập WebDAV.
+`Quản lý xác thực` và `Quản lý thiết bị đăng nhập` bảo vệ bảng quản trị ImgHost, lối vào tải lên công khai và quyền truy cập WebDAV.
 
 Dùng trang này để đặt thông tin đăng nhập, xem các thiết bị đã đăng nhập và thu hồi các phiên cũ khi cần.
 
@@ -42,7 +42,7 @@ Khi mật khẩu tải lên được cấu hình:
 
 - Khách truy cập phải nhập mật khẩu trước khi dùng trang tải lên.
 - Chỉ có thể tải lên sau khi mật khẩu được chấp nhận.
-- Nếu phiên thiết bị phía người dùng được bật, ImgBed ghi lại thiết bị phía người dùng đó.
+- Nếu phiên thiết bị phía người dùng được bật, ImgHost ghi lại thiết bị phía người dùng đó.
 
 Thay đổi mật khẩu tải lên sẽ làm mất hiệu lực các phiên phía người dùng cũ. Khách truy cập cần nhập lại mật khẩu mới.
 

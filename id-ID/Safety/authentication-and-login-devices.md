@@ -1,6 +1,6 @@
 # Manajemen Autentikasi dan Perangkat Login
 
-`Manajemen Autentikasi` dan `Manajemen Perangkat Login` melindungi panel admin ImgBed, pintu unggah publik, dan akses WebDAV.
+`Manajemen Autentikasi` dan `Manajemen Perangkat Login` melindungi panel admin ImgHost, pintu unggah publik, dan akses WebDAV.
 
 Gunakan halaman ini untuk mengatur kredensial akses, meninjau perangkat yang sudah login, dan mencabut sesi lama saat diperlukan.
 
@@ -42,7 +42,7 @@ Saat kata sandi unggah dikonfigurasi:
 
 - Pengunjung harus memasukkan kata sandi sebelum menggunakan halaman unggah.
 - Unggahan hanya tersedia setelah kata sandi diterima.
-- Jika sesi perangkat sisi pengguna diaktifkan, ImgBed mencatat perangkat sisi pengguna tersebut.
+- Jika sesi perangkat sisi pengguna diaktifkan, ImgHost mencatat perangkat sisi pengguna tersebut.
 
 Mengubah kata sandi unggah akan membuat sesi sisi pengguna lama tidak berlaku. Pengunjung perlu memasukkan kata sandi baru lagi.
 

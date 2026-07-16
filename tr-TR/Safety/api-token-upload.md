@@ -1,6 +1,6 @@
 # API Token ile Dosya Yükleme
 
-API Token ile yükleme; betikler, otomasyon işleri ve üçüncü taraf programlar için tasarlanmıştır. Web UI'yi açmanız gerekmez. Site URL'sini, token değerini, yerel dosya yolunu ve gerçek bir yükleme kanalını sağladığınız sürece dosya ImgBed'e yüklenebilir ve yanıt dosya URL'sini içerir.
+API Token ile yükleme; betikler, otomasyon işleri ve üçüncü taraf programlar için tasarlanmıştır. Web UI'yi açmanız gerekmez. Site URL'sini, token değerini, yerel dosya yolunu ve gerçek bir yükleme kanalını sağladığınız sürece dosya ImgHost'e yüklenebilir ve yanıt dosya URL'sini içerir.
 
 ![API Token düzenleme](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site URL'si, örneğin `https://image.ai6.me`. |
+| `--base-url <url>` | Evet | ImgHost site URL'si, örneğin `https://image.ai6.me`. |
 | `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--file <path>` | Evet | Yerel dosya yolu. |
 | `--channel <key>` | Evet | Yükleme kanalı. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site URL'si. |
+| `--base-url <url>` | Evet | ImgHost site URL'si. |
 | `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--file <path>` | Evet | Yerel dosya yolu. |
 | `--channel <key>` | Evet | Yükleme kanalı. |

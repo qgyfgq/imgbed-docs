@@ -1,6 +1,6 @@
 # API Token Listing And Filtering
 
-API Token listing scripts are useful when scripts, automation jobs, or third-party programs need to read ImgBed data. They only use the `list` permission. They do not upload files, delete files, change configuration, or block or allow any IP address.
+API Token listing scripts are useful when scripts, automation jobs, or third-party programs need to read ImgHost data. They only use the `list` permission. They do not upload files, delete files, change configuration, or block or allow any IP address.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Node.js 18 or later is required.
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL, for example `https://image.ai6.me`. |
+| `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
 | `--retries <n>` | No | Temporary failure retry count. Defaults to `3`. |
 | `--timeout-ms <n>` | No | Request timeout for each request. Defaults to `180000`. |

@@ -2,7 +2,7 @@
 
 ## Cocok Untuk
 
-- Anda memiliki akun pCloud dan ingin ImgBed menyimpan gambar di pCloud.
+- Anda memiliki akun pCloud dan ingin ImgHost menyimpan gambar di pCloud.
 - Anda tidak keberatan menggunakan email dan kata sandi akun pCloud sebagai kredensial kanal.
 
 ## Yang Diperlukan Sebelum Memulai
@@ -70,7 +70,7 @@ Pilih host API berdasarkan wilayah akun Anda:
 
 OAuth2 pCloud tidak tersedia sebagai layanan mandiri secara default. Anda perlu mengirim email ke pCloud dan meminta mereka mengaktifkannya.
 
-Alur OAuth2 pCloud saat ini juga tidak mendukung alur kerja tautan unggah berumur pendek yang dibutuhkan ImgBed. Karena itu, kanal ini menggunakan email dan kata sandi akun untuk masuk.
+Alur OAuth2 pCloud saat ini juga tidak mendukung alur kerja tautan unggah berumur pendek yang dibutuhkan ImgHost. Karena itu, kanal ini menggunakan email dan kata sandi akun untuk masuk.
 
 ### Host API Mana yang Harus Digunakan?
 

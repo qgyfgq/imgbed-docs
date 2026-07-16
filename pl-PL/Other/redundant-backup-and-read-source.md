@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 To wejście najlepiej sprawdza się do dodawania kopii zapasowych dla katalogu lub dla wszystkich plików zbiorczo.
 
-Kanał kopii zapasowej można wybrać ręcznie. Możesz też wybrać automatyczne przełączanie i pozwolić ImgBed znaleźć odpowiedni kanał zapasowy.
+Kanał kopii zapasowej można wybrać ręcznie. Możesz też wybrać automatyczne przełączanie i pozwolić ImgHost znaleźć odpowiedni kanał zapasowy.
 
 ## Kopia zapasowa ze szczegółów pliku
 
@@ -90,4 +90,4 @@ Dopóki plik zapasowy jest dostępny, obrazy, wideo i linki pobierania działaj�
 
 ## Co się dzieje po usunięciu pliku
 
-Po usunięciu pliku ImgBed usuwa zarówno plik podstawowy, jak i plik zapasowy.
+Po usunięciu pliku ImgHost usuwa zarówno plik podstawowy, jak i plik zapasowy.

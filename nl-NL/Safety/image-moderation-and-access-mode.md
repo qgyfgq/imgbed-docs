@@ -37,7 +37,7 @@ Voor privésites of sites met volwassen inhoud kan de volwassenenmodus passend z
 
 ## Wat moderatie inschakelen doet
 
-Wanneer moderatie is ingeschakeld, roept ImgBed tijdens upload de gekozen provider aan en slaat de gevonden leeftijdsclassificatie op.
+Wanneer moderatie is ingeschakeld, roept ImgHost tijdens upload de gekozen provider aan en slaat de gevonden leeftijdsclassificatie op.
 
 Belangrijkste classificaties:
 
@@ -66,7 +66,7 @@ Elke provider heeft eigen vereisten:
 - nsfwjs vraagt meestal om een URL van een API-eindpunt.
 - Sightengine vereist een API user en API secret.
 
-Kies op basis van je account, beschikbaarheid en detectiekwaliteit. Zolang moderatie ingeschakeld en correct ingesteld is, probeert ImgBed tijdens upload een classificatie op te slaan.
+Kies op basis van je account, beschikbaarheid en detectiekwaliteit. Zolang moderatie ingeschakeld en correct ingesteld is, probeert ImgHost tijdens upload een classificatie op te slaan.
 
 ## Effect op de openbare galerij
 
@@ -85,16 +85,16 @@ Dit geldt alleen voor normale openbare toegang. Het beheerpaneel toont nog steed
 
 Openbare bestands-URL's zijn directe afbeeldingslinks die bezoekers openen.
 
-Als de classificatie van het bestand is toegestaan door de huidige toegangsmodus, geeft ImgBed de oorspronkelijke afbeelding terug.
+Als de classificatie van het bestand is toegestaan door de huidige toegangsmodus, geeft ImgHost de oorspronkelijke afbeelding terug.
 
-Is de classificatie hoger dan toegestaan, dan geeft normale openbare toegang niet de oorspronkelijke afbeelding terug. ImgBed geeft dan de ingestelde geblokkeerde uitvoer of vervangende afbeelding terug.
+Is de classificatie hoger dan toegestaan, dan geeft normale openbare toegang niet de oorspronkelijke afbeelding terug. ImgHost geeft dan de ingestelde geblokkeerde uitvoer of vervangende afbeelding terug.
 
 Voorbeeld:
 
 - De huidige modus is kindmodus.
 - Een afbeelding heeft classificatie R18.
 - Een bezoeker opent de openbare URL direct.
-- ImgBed geeft de oorspronkelijke R18-afbeelding niet terug aan die bezoeker.
+- ImgHost geeft de oorspronkelijke R18-afbeelding niet terug aan die bezoeker.
 
 ![Beperkte bestandsafbeelding](../../image/Safety/文件受限图.png)
 

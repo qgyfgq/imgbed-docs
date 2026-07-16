@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Bu giriş, bir klasöre veya tüm dosyalara toplu olarak yedek eklemek için en uygundur.
 
-Yedek kanal elle seçilebilir veya otomatik değiştirmeyi seçip ImgBed'in uygun bir yedek kanal bulmasına izin verebilirsiniz.
+Yedek kanal elle seçilebilir veya otomatik değiştirmeyi seçip ImgHost'in uygun bir yedek kanal bulmasına izin verebilirsiniz.
 
 ## Dosya Ayrıntılarından Yedekleme
 
@@ -90,4 +90,4 @@ Yedek dosya kullanılabilir olduğu sürece, yedek okuma kaynağına geçildikte
 
 ## Bir Dosya Silindiğinde Ne Olur?
 
-Bir dosya silindiğinde ImgBed hem birincil dosyayı hem de yedek dosyayı siler.
+Bir dosya silindiğinde ImgHost hem birincil dosyayı hem de yedek dosyayı siler.

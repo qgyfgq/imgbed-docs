@@ -7,7 +7,7 @@ Vous n’avez besoin que de trois éléments :
 | Élément | Rôle |
 | --- | --- |
 | Compte Hugging Face | Utilisé pour générer un jeton d’accès et posséder le dépôt. |
-| Jeton d’accès utilisateur Hugging Face | ImgBed l’utilise pour accéder à l’API Hugging Face, créer des dépôts et téléverser des fichiers. |
+| Jeton d’accès utilisateur Hugging Face | ImgHost l’utilise pour accéder à l’API Hugging Face, créer des dépôts et téléverser des fichiers. |
 | Nom du dépôt | Vous pouvez saisir uniquement le nom du dépôt, par exemple `image`. |
 
 ## Étapes de configuration
@@ -24,7 +24,7 @@ Vous n’avez besoin que de trois éléments :
 
 ![Créer un token](../../image/upload/huggingface/创建令牌.png)
 
-## Étape 2 : compléter le canal Hugging Face dans ImgBed
+## Étape 2 : compléter le canal Hugging Face dans ImgHost
 
 Après avoir sélectionné `Hugging Face` dans les paramètres de téléversement, remplissez les champs ainsi :
 
@@ -46,9 +46,9 @@ Le système gère ces détails :
 
 | Comportement du système | Description |
 | --- | --- |
-| Nom court du dépôt | ImgBed identifie le compte Hugging Face actuel et étend la valeur vers un chemin complet de dépôt. |
-| Chemin complet du dépôt | ImgBed utilise le chemin `username/repository` exactement tel qu’il a été saisi. |
-| Vérification du dépôt | Si vous utilisez le chemin du compte personnel actuel, ImgBed tente de créer le dépôt lorsqu’il n’existe pas. Si vous saisissez manuellement un chemin complet, ImgBed utilise directement ce chemin. |
+| Nom court du dépôt | ImgHost identifie le compte Hugging Face actuel et étend la valeur vers un chemin complet de dépôt. |
+| Chemin complet du dépôt | ImgHost utilise le chemin `username/repository` exactement tel qu’il a été saisi. |
+| Vérification du dépôt | Si vous utilisez le chemin du compte personnel actuel, ImgHost tente de créer le dépôt lorsqu’il n’existe pas. Si vous saisissez manuellement un chemin complet, ImgHost utilise directement ce chemin. |
 | Type de dépôt | Ce canal utilise un dépôt `dataset`. |
 | État public/privé | La visibilité du dépôt est synchronisée selon l’interrupteur actuel. |
 
@@ -58,10 +58,10 @@ Le système gère ces détails :
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

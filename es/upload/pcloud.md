@@ -2,7 +2,7 @@
 
 ## Cuándo conviene
 
-- Tiene una cuenta de pCloud y quiere que ImgBed almacene imágenes en pCloud.
+- Tiene una cuenta de pCloud y quiere que ImgHost almacene imágenes en pCloud.
 - No le importa usar el correo y la contraseña de su cuenta de pCloud como credenciales del canal.
 
 ## Qué necesita primero
@@ -70,7 +70,7 @@ Elija el host de API según la región de su cuenta:
 
 pCloud OAuth2 no es autoservicio de forma predeterminada. Debe escribir a pCloud y pedir que lo activen.
 
-El flujo OAuth2 actual de pCloud tampoco admite el flujo de enlaces de carga de corta duración que ImgBed necesita, por lo que este canal usa inicio de sesión con correo y contraseña.
+El flujo OAuth2 actual de pCloud tampoco admite el flujo de enlaces de carga de corta duración que ImgHost necesita, por lo que este canal usa inicio de sesión con correo y contraseña.
 
 ### ¿Qué host de API debo usar?
 

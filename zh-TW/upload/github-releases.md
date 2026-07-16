@@ -64,9 +64,9 @@ GitHub Releases 這條線可以直接理解成：
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

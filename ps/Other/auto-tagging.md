@@ -41,7 +41,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 3. په ښي پورتني کونج کې د درې ټکو مېنو کلیک کړئ.
 4. `Duplicate this Space` وټاکئ.
 5. د Space اصلي نوم وساتئ یا خپل نوم وټاکئ، لکه `wd-tagger`.
-6. ښکاره والی پر `Public` وټاکئ. عامه Spaces د ImgBed له خوا د غږولو لپاره اسانه وي.
+6. ښکاره والی پر `Public` وټاکئ. عامه Spaces د ImgHost له خوا د غږولو لپاره اسانه وي.
 7. په پیل کې وړیا اصلي هارډویر وساتئ. یوازې هغه وخت یې لوړ کړئ چې قطار څرګند ستونزه شي.
 8. Space جوړ کړئ او د جوړېدو د بشپړېدو انتظار وکړئ.
 
@@ -51,7 +51,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-د براوزر URL کاپي کړئ او د ImgBed په `Space URLs` کې یې ولګوئ.
+د براوزر URL کاپي کړئ او د ImgHost په `Space URLs` کې یې ولګوئ.
 
 ## څو Space URLs ډکول
 
@@ -65,7 +65,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | د کاپي شوې Space پاڼې URL. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | ستاسو خپله نقل شوې Space پاڼه. |
 
-تاسو کولای شئ څو URLونه دننه کړئ. ImgBed څو Spaces یو ځای کاروي، چې سرعت ښه کولای شي.
+تاسو کولای شئ څو URLونه دننه کړئ. ImgHost څو Spaces یو ځای کاروي، چې سرعت ښه کولای شي.
 
 که یو Space موقتا موجود نه وي، نور Spaces پروسس ته دوام ورکولای شي.
 
@@ -103,7 +103,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 3. د ټګ کولو د پیل تڼۍ کلیک کړئ.
 4. د پرمختګ د بشپړېدو انتظار وکړئ.
 
-که هدف فولډر تش وي، ImgBed ټول فولډرونه پروسس کوي.
+که هدف فولډر تش وي، ImgHost ټول فولډرونه پروسس کوي.
 
 ډله ییز ټګ کول د زړو انځورونو لپاره تر ټولو مناسب دي. د نویو انځورونو لپاره د اپلوډ پر مهال اتومات ټګ کول فعال کړئ، څو هر ځل یې په لاس ونه چلوئ.
 
@@ -121,19 +121,19 @@ https://huggingface.co/spaces/your-name/wd-tagger
 
 هغه انځورونه چې بشپړ ټګونه، جهت، درجه، پلنوالی او لوړوالی لا لري، پرېښودل کېږي څو بې اړتیا Space غوښتنې ونه شي.
 
-ImgBed د امکان تر حده یوازې ورک معلومات ډکوي. د بېلګې په توګه، که یوازې جهت ورک وي، هڅه کوي جهت زیات کړي پرته له دې چې د منځپانګې د بشپړ ټګ کولو بهیر وغږوي.
+ImgHost د امکان تر حده یوازې ورک معلومات ډکوي. د بېلګې په توګه، که یوازې جهت ورک وي، هڅه کوي جهت زیات کړي پرته له دې چې د منځپانګې د بشپړ ټګ کولو بهیر وغږوي.
 
 ## عامې پوښتنې
 
 ### ولې خپل Space نقل کړم؟
 
-عامه Spaces د ډېرو کاروونکو له خوا شریک کارول کېږي. ستاسو خپله نقل شوې Space تر ډېره ستاسو د ImgBed سایټ له خوا کارېږي، نو عموما چټکه او باوري وي.
+عامه Spaces د ډېرو کاروونکو له خوا شریک کارول کېږي. ستاسو خپله نقل شوې Space تر ډېره ستاسو د ImgHost سایټ له خوا کارېږي، نو عموما چټکه او باوري وي.
 
 ### Space تل د پیل په حال کې ښکاري
 
 له لومړي جوړېدو وروسته، یا له اوږدې بې کارۍ وروسته، Space ښايي د پیل لپاره وخت وغواړي.
 
-لومړی خپل Space پاڼه پرانیزئ. کله چې عادي ډول یو انځور وپېژني، ImgBed ته بېرته لاړ شئ او ټګ کول پیل کړئ.
+لومړی خپل Space پاڼه پرانیزئ. کله چې عادي ډول یو انځور وپېژني، ImgHost ته بېرته لاړ شئ او ټګ کول پیل کړئ.
 
 ### Space URL څنګه کاپي کړم؟
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

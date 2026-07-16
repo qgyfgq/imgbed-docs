@@ -1,4 +1,4 @@
-﻿# Add a WebDAV Channel
+# Add a WebDAV Channel
 
 ## Best Fit
 
@@ -48,9 +48,9 @@ After it is created, copy and save the new app password. It is usually shown onl
 
 ![Save the new app password](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Fill in the WebDAV Configuration in ImgBed
+### 2. Fill in the WebDAV Configuration in ImgHost
 
-Return to ImgBed and add a WebDAV channel:
+Return to ImgHost and add a WebDAV channel:
 
 | UI Field | Value |
 | --- | --- |
@@ -68,7 +68,7 @@ The WebDAV channel now uses real session-based chunked upload.
 
 Small files are uploaded as a single complete file. Files larger than 64 MiB are automatically split into chunks of around 10 MiB and uploaded into a remote chunk directory.
 
-The WebDAV service does not need to support `partial update` or offset-based writes. ImgBed does not merge chunks into a single large file on the remote server. Instead, it stores a chunk manifest and reads the chunks in order when the file is requested.
+The WebDAV service does not need to support `partial update` or offset-based writes. ImgHost does not merge chunks into a single large file on the remote server. Instead, it stores a chunk manifest and reads the chunks in order when the file is requested.
 
 In practice:
 
@@ -77,7 +77,7 @@ In practice:
 | 64 MiB or smaller | Normal upload | One complete file |
 | Larger than 64 MiB | Real session chunked upload | A chunk directory containing multiple chunk files |
 
-The chunk directory only affects the remote storage layout. It does not change the file URL in ImgBed. Users still access the file through the original `/file/...` link.
+The chunk directory only affects the remote storage layout. It does not change the file URL in ImgHost. Users still access the file through the original `/file/...` link.
 
 ## Setup Steps
 
@@ -111,7 +111,7 @@ The chunk directory only affects the remote storage layout. It does not change t
 
 This is the current storage method for large files.
 
-Files larger than 64 MiB are not merged into one large remote file. They are stored as a chunk directory. ImgBed records the chunk manifest and returns the complete content by reading the chunks in order.
+Files larger than 64 MiB are not merged into one large remote file. They are stored as a chunk directory. ImgHost records the chunk manifest and returns the complete content by reading the chunks in order.
 
 ### What should I check first if large file upload fails?
 

@@ -48,9 +48,9 @@ WebDAV চ্যানেল ব্যবহার করুন যখন:
 
 ![নতুন অ্যাপ পাসওয়ার্ড সংরক্ষণ করা](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ImgBed-এ WebDAV কনফিগারেশন পূরণ করুন
+### 2. ImgHost-এ WebDAV কনফিগারেশন পূরণ করুন
 
-ImgBed-এ ফিরে WebDAV চ্যানেল যোগ করুন:
+ImgHost-এ ফিরে WebDAV চ্যানেল যোগ করুন:
 
 | UI ক্ষেত্র | মান |
 | --- | --- |
@@ -68,7 +68,7 @@ WebDAV চ্যানেল এখন বাস্তব session-based chunked 
 
 ছোট ফাইল একটি সম্পূর্ণ ফাইল হিসেবে আপলোড হয়। 64 MiB-এর বড় ফাইল স্বয়ংক্রিয়ভাবে প্রায় 10 MiB আকারের chunk-এ ভাগ হয়ে remote chunk ডিরেক্টরিতে আপলোড হয়।
 
-WebDAV পরিষেবার `partial update` অথবা offset-based writes সমর্থনের দরকার নেই। ImgBed remote server-এ chunk মিলিয়ে একটি বড় ফাইল বানায় না। তার বদলে chunk manifest সংরক্ষণ করে এবং ফাইল চাইলে chunk-গুলো ক্রমানুসারে পড়ে।
+WebDAV পরিষেবার `partial update` অথবা offset-based writes সমর্থনের দরকার নেই। ImgHost remote server-এ chunk মিলিয়ে একটি বড় ফাইল বানায় না। তার বদলে chunk manifest সংরক্ষণ করে এবং ফাইল চাইলে chunk-গুলো ক্রমানুসারে পড়ে।
 
 বাস্তবে:
 
@@ -77,7 +77,7 @@ WebDAV পরিষেবার `partial update` অথবা offset-based write
 | 64 MiB বা কম | সাধারণ আপলোড | একটি সম্পূর্ণ ফাইল |
 | 64 MiB-এর বেশি | বাস্তব session chunked upload | একাধিক chunk ফাইল থাকা chunk ডিরেক্টরি |
 
-chunk ডিরেক্টরি শুধু remote storage layout-কে প্রভাবিত করে। ImgBed-এর ফাইল URL বদলায় না। ব্যবহারকারীরা আগের মতো original `/file/...` লিংক দিয়েই ফাইলে প্রবেশ করে।
+chunk ডিরেক্টরি শুধু remote storage layout-কে প্রভাবিত করে। ImgHost-এর ফাইল URL বদলায় না। ব্যবহারকারীরা আগের মতো original `/file/...` লিংক দিয়েই ফাইলে প্রবেশ করে।
 
 ## সেটআপ ধাপ
 
@@ -111,7 +111,7 @@ chunk ডিরেক্টরি শুধু remote storage layout-কে প�
 
 বড় ফাইলের জন্য এটিই বর্তমান storage method।
 
-64 MiB-এর বড় ফাইল একটি বড় remote file-এ merge হয় না। এগুলো chunk ডিরেক্টরি হিসেবে সংরক্ষিত হয়। ImgBed chunk manifest record করে এবং সম্পূর্ণ content ফেরত দেওয়ার সময় chunk-গুলো ক্রমানুসারে পড়ে।
+64 MiB-এর বড় ফাইল একটি বড় remote file-এ merge হয় না। এগুলো chunk ডিরেক্টরি হিসেবে সংরক্ষিত হয়। ImgHost chunk manifest record করে এবং সম্পূর্ণ content ফেরত দেওয়ার সময় chunk-গুলো ক্রমানুসারে পড়ে।
 
 ### বড় ফাইল আপলোড ব্যর্থ হলে আগে কী দেখব?
 

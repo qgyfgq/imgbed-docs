@@ -48,9 +48,9 @@ WebDAV چینل هغه وخت وکاروئ چې:
 
 ![خوندي the new اپ password](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. په ImgBed کې WebDAV تنظیمات ډک کړئ
+### 2. په ImgHost کې WebDAV تنظیمات ډک کړئ
 
-ImgBed ته بېرته ولاړ شئ او WebDAV چینل اضافه کړئ:
+ImgHost ته بېرته ولاړ شئ او WebDAV چینل اضافه کړئ:
 
 | د UI فیلډ | ارزښت |
 | --- | --- |
@@ -68,14 +68,14 @@ WebDAV چینل اوس real session-based chunked اپلوډ کاروي.
 
 کوچني فایلونه د یو complete فایل په توګه اپلوډ کېږي. له 64 MiB څخه لوی فایلونه په اتومات ډول د شاوخوا 10 MiB chunks ته وېشل کېږي او remote chunk directory ته اپلوډ کېږي.
 
-WebDAV خدمت ته اړتیا نشته چې `partial update` یا offset-based writes support کړي. ImgBed chunks په remote سرور کې یو لوی فایل ته merge نه کوي. پر ځای یې chunk manifest ساتي او د فایل request پر وخت chunks په ترتیب لولي.
+WebDAV خدمت ته اړتیا نشته چې `partial update` یا offset-based writes support کړي. ImgHost chunks په remote سرور کې یو لوی فایل ته merge نه کوي. پر ځای یې chunk manifest ساتي او د فایل request پر وخت chunks په ترتیب لولي.
 
 | فایل Size | اپلوډ Method | Remote زېرمه Layout |
 | --- | --- | --- |
 | 64 MiB یا کم | Normal اپلوډ | یو complete فایل |
 | له 64 MiB څخه لوی | Real session chunked اپلوډ | chunk directory چې څو chunk فایلونه لري |
 
-chunk directory یوازې remote زېرمه layout اغېزمنوي. په ImgBed کې فایل URL نه بدلېږي. users لا هم د اصلي `/file/...` link له لارې فایل لاسرسی کوي.
+chunk directory یوازې remote زېرمه layout اغېزمنوي. په ImgHost کې فایل URL نه بدلېږي. users لا هم د اصلي `/file/...` link له لارې فایل لاسرسی کوي.
 
 ## د تنظیم ګامونه
 
@@ -109,7 +109,7 @@ chunk directory یوازې remote زېرمه layout اغېزمنوي. په ImgBe
 
 دا د لویو فایلونه لپاره اوسنی زېرمه method دی.
 
-له 64 MiB څخه لوی فایلونه په remote side کې یو لوی فایل ته merge نه کېږي. د chunk directory په بڼه ساتل کېږي. ImgBed chunk manifest record کوي او complete content د chunks په ترتیب لوستلو سره برابروي.
+له 64 MiB څخه لوی فایلونه په remote side کې یو لوی فایل ته merge نه کېږي. د chunk directory په بڼه ساتل کېږي. ImgHost chunk manifest record کوي او complete content د chunks په ترتیب لوستلو سره برابروي.
 
 ### که large فایل اپلوډ fail شي، لومړی څه وګورم؟
 

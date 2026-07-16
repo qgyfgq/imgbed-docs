@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox 계정 | 로그인하고 앱을 승인하는 데 사용합니다. |
 | Dropbox 앱 | `App Key`와 `App Secret`을 생성하는 데 사용합니다. |
-| ImgBed 도메인 | OAuth redirect URI에 사용합니다. |
+| ImgHost 도메인 | OAuth redirect URI에 사용합니다. |
 | 사용 가능한 Dropbox 저장 공간 | 실제 파일 저장 위치로 사용합니다. |
 
 ## 설정 단계
@@ -33,8 +33,8 @@ App folder
 
 | Access Type | 권장 사항 |
 | --- | --- |
-| `App folder` | 권장. ImgBed가 파일을 저장하는 방식과 일치합니다. |
-| `Full Dropbox` | 권장하지 않음. ImgBed에는 전체 계정 접근 권한이 필요하지 않습니다. |
+| `App folder` | 권장. ImgHost가 파일을 저장하는 방식과 일치합니다. |
+| `Full Dropbox` | 권장하지 않음. ImgHost에는 전체 계정 접근 권한이 필요하지 않습니다. |
 
 ![Dropbox 앱 만들기](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 Dropbox 앱 페이지에서 다음 두 값을 저장합니다.
 
-| Dropbox 필드 | ImgBed 필드 |
+| Dropbox 필드 | ImgHost 필드 |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Dropbox 앱 페이지에서 다음 두 값을 저장합니다.
 
 업로드 설정에서 `Dropbox`를 선택하고 다음을 입력합니다.
 
-| ImgBed 필드 | 입력할 내용 |
+| ImgHost 필드 | 입력할 내용 |
 | --- | --- |
 | 채널 이름 | 알아보기 쉬운 이름. 예: `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ Dropbox 앱 페이지에서 다음 두 값을 저장합니다.
 
 ### 단계 6: Refresh Token 받기
 
-1. ImgBed에서 `Get Token`을 클릭합니다.
+1. ImgHost에서 `Get Token`을 클릭합니다.
 2. 연결할 Dropbox 계정으로 로그인합니다.
 3. 승인 요청을 허용합니다.
 4. callback 페이지에 `Refresh Token`이 표시됩니다.
 5. 복사합니다.
-6. ImgBed로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
+6. ImgHost로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
 
 ![token 복사](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Dropbox 앱 페이지에서 다음 두 값을 저장합니다.
 
 | 문제 | 해결 방법 |
 | --- | --- |
-| ImgBed가 설정이 불완전하다고 표시함 | `App Key`, `App Secret`, `Refresh Token`이 모두 입력되어 있는지 확인합니다. |
+| ImgHost가 설정이 불완전하다고 표시함 | `App Key`, `App Secret`, `Refresh Token`이 모두 입력되어 있는지 확인합니다. |
 | 승인은 성공했지만 `Refresh Token`이 표시되지 않음 | `Get Token`을 다시 클릭하고 offline authorization flow가 사용되는지 확인합니다. |
 | `required scope 'files.content.write'`로 업로드 실패 | `files.content.write`를 활성화하고 `Submit`을 클릭한 뒤 새 `Refresh Token`을 받습니다. |
 | Callback 실패 | redirect URI가 `https://your-domain.com/api/oauth/dropbox/callback`. 확인합니다. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## 참고

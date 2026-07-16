@@ -1,6 +1,6 @@
 # Ověřování a správa přihlášených zařízení
 
-Správa ověřování a správa přihlášených zařízení chrání administraci ImgBed, veřejný vstup pro nahrávání a přístup WebDAV.
+Správa ověřování a správa přihlášených zařízení chrání administraci ImgHost, veřejný vstup pro nahrávání a přístup WebDAV.
 
 Na této stránce nastavíte přístupové údaje, zkontrolujete přihlášená zařízení a podle potřeby zneplatníte staré relace.
 
@@ -42,7 +42,7 @@ Když je heslo pro nahrávání nastavené:
 
 - návštěvníci ho musí zadat před použitím upload stránky.
 - nahrávání je dostupné až po přijetí hesla.
-- pokud jsou zapnuté relace zařízení na straně uživatele, ImgBed toto zařízení zaznamená.
+- pokud jsou zapnuté relace zařízení na straně uživatele, ImgHost toto zařízení zaznamená.
 
 Změna hesla pro nahrávání zneplatní staré uživatelské relace. Návštěvníci musí zadat nové heslo znovu.
 

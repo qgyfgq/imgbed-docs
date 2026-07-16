@@ -7,7 +7,7 @@ Anda hanya memerlukan tiga hal:
 | Kebutuhan | Tujuan |
 | --- | --- |
 | Akun GitLab | Digunakan untuk membuat token akses dan memiliki proyek. |
-| GitLab Personal Access Token | Digunakan oleh ImgBed untuk mengakses GitLab API, membuat proyek, dan mengunggah berkas ke Generic Packages. |
+| GitLab Personal Access Token | Digunakan oleh ImgHost untuk mengakses GitLab API, membuat proyek, dan mengunggah berkas ke Generic Packages. |
 | Nama proyek | Anda dapat memasukkan nama proyek saja, misalnya `imgbed`. |
 
 ## Langkah Konfigurasi
@@ -26,7 +26,7 @@ Anda hanya memerlukan tiga hal:
 
 ![Memilih izin token](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## Langkah 2: Isi Kanal GitLab Packages di ImgBed
+## Langkah 2: Isi Kanal GitLab Packages di ImgHost
 
 Setelah memilih `GitLab Packages` di Pengaturan Unggah, isi kolom sebagai berikut:
 
@@ -48,9 +48,9 @@ Sistem akan menangani detail berikut:
 
 | Perilaku Sistem | Deskripsi |
 | --- | --- |
-| Nama proyek pendek | ImgBed mengidentifikasi akun GitLab saat ini dan memperluas nilainya menjadi jalur proyek lengkap. |
-| Jalur proyek lengkap | ImgBed menggunakan jalur `username/project` persis seperti yang dimasukkan. |
-| Pemeriksaan proyek | Jika Anda menggunakan jalur akun pribadi saat ini, ImgBed otomatis membuat proyek saat belum ada. Jika Anda memasukkan jalur lengkap secara manual, ImgBed langsung menggunakan jalur tersebut. |
+| Nama proyek pendek | ImgHost mengidentifikasi akun GitLab saat ini dan memperluas nilainya menjadi jalur proyek lengkap. |
+| Jalur proyek lengkap | ImgHost menggunakan jalur `username/project` persis seperti yang dimasukkan. |
+| Pemeriksaan proyek | Jika Anda menggunakan jalur akun pribadi saat ini, ImgHost otomatis membuat proyek saat belum ada. Jika Anda memasukkan jalur lengkap secara manual, ImgHost langsung menggunakan jalur tersebut. |
 | Status publik/privat | Visibilitas proyek disinkronkan sesuai sakelar saat ini. |
 
 ## Daftar Periksa Cepat
@@ -59,9 +59,9 @@ Sistem akan menangani detail berikut:
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

@@ -1,6 +1,6 @@
 # Tải tệp lên bằng API Token
 
-Tải lên bằng API Token dành cho tập lệnh, tác vụ tự động và chương trình của bên thứ ba. Bạn không cần mở giao diện web. Chỉ cần cung cấp URL trang, token, đường dẫn tệp cục bộ và một kênh tải lên thật, tệp có thể được tải lên ImgBed và phản hồi sẽ bao gồm URL của tệp.
+Tải lên bằng API Token dành cho tập lệnh, tác vụ tự động và chương trình của bên thứ ba. Bạn không cần mở giao diện web. Chỉ cần cung cấp URL trang, token, đường dẫn tệp cục bộ và một kênh tải lên thật, tệp có thể được tải lên ImgHost và phản hồi sẽ bao gồm URL của tệp.
 
 ![Chỉnh sửa API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
-| `--base-url <url>` | Có | URL trang ImgBed, ví dụ `https://image.ai6.me`. |
+| `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
 | `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
 | `--file <path>` | Có | Đường dẫn tệp cục bộ. |
 | `--channel <key>` | Có | Kênh tải lên. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
-| `--base-url <url>` | Có | URL trang ImgBed. |
+| `--base-url <url>` | Có | URL trang ImgHost. |
 | `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
 | `--file <path>` | Có | Đường dẫn tệp cục bộ. |
 | `--channel <key>` | Có | Kênh tải lên. |

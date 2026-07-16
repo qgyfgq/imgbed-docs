@@ -64,7 +64,7 @@ Se dopo il filtro non resta alcun file corrispondente, l'API non restituisce ris
 
 L'API per immagini casuali memorizza in cache i pool di candidati delle directory per migliorare la velocità.
 
-Dopo modifiche ai file, ImgBed aggiorna la versione della cache della directory e le richieste successive ricostruiscono il pool di candidati. Le directory vuote vengono mantenute in cache per poco tempo, così da evitare query ripetute.
+Dopo modifiche ai file, ImgHost aggiorna la versione della cache della directory e le richieste successive ricostruiscono il pool di candidati. Le directory vuote vengono mantenute in cache per poco tempo, così da evitare query ripetute.
 
 ## Galleria pubblica
 

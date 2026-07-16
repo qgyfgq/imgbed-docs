@@ -7,7 +7,7 @@
 | ข้อกำหนด | วัตถุประสงค์ |
 | --- | --- |
 | GitHub account | ใช้สร้าง access token และเป็น owner ของ repository |
-| GitHub Access Token | ImgBed ใช้เข้าถึง GitHub API, สร้าง releases และอัปโหลดไฟล์ |
+| GitHub Access Token | ImgHost ใช้เข้าถึง GitHub API, สร้าง releases และอัปโหลดไฟล์ |
 | Repository name | ใส่เฉพาะ repository name ก็ได้ เช่น `image` |
 
 ## ขั้นตอนตั้งค่า
@@ -27,7 +27,7 @@
 
 ![เพิ่ม GitHub permissions](../../image/upload/github-releases/添加github权限.png)
 
-## ขั้นตอนที่ 2: ใส่ช่องทาง GitHub Releases ใน ImgBed
+## ขั้นตอนที่ 2: ใส่ช่องทาง GitHub Releases ใน ImgHost
 
 หลังเลือก `GitHub Releases` ใน Upload Settings ให้กรอกฟิลด์ดังนี้:
 
@@ -49,9 +49,9 @@
 
 | พฤติกรรมของระบบ | คำอธิบาย |
 | --- | --- |
-| Short repository name | ImgBed ระบุ GitHub account ปัจจุบัน แล้วขยายค่าเป็นพาธ repository แบบเต็ม |
-| Full repository path | ImgBed ใช้ path `username/repository` ตามที่ใส่มาแบบตรงตัว |
-| การตรวจสอบ repository | ถ้าใช้พาธของ personal account ปัจจุบัน ImgBed จะสร้าง repository อัตโนมัติเมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgBed จะใช้พาธนั้นโดยตรง |
+| Short repository name | ImgHost ระบุ GitHub account ปัจจุบัน แล้วขยายค่าเป็นพาธ repository แบบเต็ม |
+| Full repository path | ImgHost ใช้ path `username/repository` ตามที่ใส่มาแบบตรงตัว |
+| การตรวจสอบ repository | ถ้าใช้พาธของ personal account ปัจจุบัน ImgHost จะสร้าง repository อัตโนมัติเมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgHost จะใช้พาธนั้นโดยตรง |
 | Public/private state | Repository visibility จะ sync ตาม switch ปัจจุบัน |
 
 ## รายการตรวจสอบด่วน
@@ -61,9 +61,9 @@ GitHub Releases ทำงานตาม flow นี้:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

@@ -38,7 +38,7 @@
 5. নির্দেশনা অনুযায়ী bot username দিন। username সাধারণত `bot` দিয়ে শেষ হতে হয়।
 6. bot তৈরি হলে `@BotFather` একটি bot টোকেন দেবে।
 
-এই টোকেন-ই ImgBed-এ `Bot Token` হিসেবে দিতে হবে।
+এই টোকেন-ই ImgHost-এ `Bot Token` হিসেবে দিতে হবে।
 
 ![bot টোকেন সংরক্ষণ করা](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. message picker-এ লক্ষ্য চ্যানেল নির্বাচন করে `@userinfobot`-এ পাঠান।
 5. `@userinfobot` result দিলে `Id: -100...` হিসেবে যে number দেখায় সেটি কপি করুন।
 
-`-100` দিয়ে শুরু হওয়া number-ই ImgBed-এর জন্য প্রয়োজনীয় `Session ID (Chat ID)`।
+`-100` দিয়ে শুরু হওয়া number-ই ImgHost-এর জন্য প্রয়োজনীয় `Session ID (Chat ID)`।
 
 ![Channel ID নেওয়া](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed-এ Telegram চ্যানেল পূরণ করুন
+### 5. ImgHost-এ Telegram চ্যানেল পূরণ করুন
 
 চ্যানেল কনফিগারেশন ডায়ালগ-এ ফিরে ক্ষেত্রগুলো এভাবে পূরণ করুন:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

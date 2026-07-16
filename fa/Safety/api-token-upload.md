@@ -1,6 +1,6 @@
 # آپلود فایل با API Token
 
-آپلود فایل با API Token برای اسکریپت‌ها، کارهای خودکار و برنامه‌های بیرونی مناسب است. نیازی نیست صفحه ImgBed را در مرورگر باز کنید؛ کافی است نشانی سایت، API Token، مسیر فایل محلی و یک کانال واقعی آپلود را بدهید. پس از موفقیت، اسکریپت لینک فایل را برمی‌گرداند.
+آپلود فایل با API Token برای اسکریپت‌ها، کارهای خودکار و برنامه‌های بیرونی مناسب است. نیازی نیست صفحه ImgHost را در مرورگر باز کنید؛ کافی است نشانی سایت، API Token، مسیر فایل محلی و یک کانال واقعی آپلود را بدهید. پس از موفقیت، اسکریپت لینک فایل را برمی‌گرداند.
 
 ![ویرایش API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -16,7 +16,7 @@ System Settings -> Security Settings -> API Token
 
 ## دانلود اسکریپت‌های آپلود
 
-مستندات ImgBed دو اسکریپت Node.js دارد:
+مستندات ImgHost دو اسکریپت Node.js دارد:
 
 | اسکریپت | کاربرد |
 | --- | --- |
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
-| `--base-url <url>` | بله | نشانی سایت ImgBed، مانند `https://image.ai6.me` |
+| `--base-url <url>` | بله | نشانی سایت ImgHost، مانند `https://image.ai6.me` |
 | `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
 | `--file <path>` | بله | مسیر فایل محلی |
 | `--channel <key>` | بله | کانال واقعی آپلود |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
-| `--base-url <url>` | بله | نشانی سایت ImgBed |
+| `--base-url <url>` | بله | نشانی سایت ImgHost |
 | `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
 | `--file <path>` | بله | مسیر فایل محلی |
 | `--channel <key>` | بله | کانال واقعی آپلود |

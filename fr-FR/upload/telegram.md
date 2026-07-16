@@ -38,7 +38,7 @@
 5. Suivez les instructions pour saisir le nom d’utilisateur du bot. Il doit généralement se terminer par `bot`.
 6. Une fois le bot créé, `@BotFather` renvoie un jeton de bot.
 
-Ce jeton est le `Bot Token` à saisir dans ImgBed.
+Ce jeton est le `Bot Token` à saisir dans ImgHost.
 
 ![Enregistrer le token du bot](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Pour des téléversements plus fiables, accordez au bot des permissions d’admi
 4. Dans le sélecteur de messages, choisissez le canal cible et envoyez-le à `@userinfobot`.
 5. Lorsque `@userinfobot` renvoie le résultat, copiez le nombre affiché sous la forme `Id: -100...`.
 
-Le nombre qui commence par `-100` est le `Session ID (Chat ID)` dont ImgBed a besoin.
+Le nombre qui commence par `-100` est le `Session ID (Chat ID)` dont ImgHost a besoin.
 
 ![Obtenir le Channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. Compléter le canal Telegram dans ImgBed
+### 5. Compléter le canal Telegram dans ImgHost
 
 Revenez à la boîte de dialogue de configuration du canal et remplissez les champs ainsi :
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -8,8 +8,8 @@ Bereid deze zaken voor:
 | --- | --- |
 | Google-account | Voor toegang tot Google Cloud en autorisatie van Google Drive |
 | Google Cloud-project | Voor het inschakelen van de Drive API en het maken van OAuth-gegevens |
-| OAuth 2.0-client | Hiermee kan ImgBed `Client ID`, `Client Secret` en `Refresh Token` ophalen |
-| Je ImgBed-domein | Voor de OAuth-redirect-URI. Dit moet overeenkomen met het domein dat je echt gebruikt. |
+| OAuth 2.0-client | Hiermee kan ImgHost `Client ID`, `Client Secret` en `Refresh Token` ophalen |
+| Je ImgHost-domein | Voor de OAuth-redirect-URI. Dit moet overeenkomen met het domein dat je echt gebruikt. |
 
 ## Instellen
 
@@ -38,7 +38,7 @@ Bereid deze zaken voor:
 2. Maak een nieuwe client.
 3. Zet het toepassingstype op `Web application`.
 4. Geef de client een herkenbare naam.
-5. Vul bij authorized JavaScript origins je ImgBed-URL in, bijvoorbeeld:
+5. Vul bij authorized JavaScript origins je ImgHost-URL in, bijvoorbeeld:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Kopieer na het aanmaken deze waarden:
 
-| Gegenereerde waarde | ImgBed-veld |
+| Gegenereerde waarde | ImgHost-veld |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ Kopieer na het aanmaken deze waarden:
 
 Kies in Uploadinstellingen `Google Drive` en vul in:
 
-| ImgBed-veld | Wat je invult |
+| ImgHost-veld | Wat je invult |
 | --- | --- |
 | Kanaalnaam | Een herkenbare naam, bijvoorbeeld `Main Google Drive` |
 | Client ID | De Client ID uit Google Cloud |
@@ -73,7 +73,7 @@ Kies in Uploadinstellingen `Google Drive` en vul in:
 | Refresh Token | Laat voorlopig leeg. Dit haal je in de volgende stap op. |
 | Hoofdmap | Optioneel. Standaard `imgbed`. |
 
-![Clientgegevens in ImgBed invullen](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Clientgegevens in ImgHost invullen](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Stap 5: Haal het Refresh Token op
 
@@ -82,7 +82,7 @@ Kies in Uploadinstellingen `Google Drive` en vul in:
 3. Rond de autorisatiestappen af.
 4. De callbackpagina toont een `Refresh Token`.
 5. Kopieer het.
-6. Ga terug naar ImgBed en plak het in `Refresh Token`.
+6. Ga terug naar ImgHost en plak het in `Refresh Token`.
 
 ![Refresh Token na autorisatie kopiëren](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

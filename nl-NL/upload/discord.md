@@ -44,7 +44,7 @@
 5. Genereer of reset het token op de `Bot`-pagina.
 6. Bewaar het token.
 
-Dit token vul je in ImgBed in als `Bot Token`.
+Dit token vul je in ImgHost in als `Bot Token`.
 
 ![Bot token bekijken](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ Dit token vul je in ImgBed in als `Bot Token`.
 5. Klik met de rechtermuisknop op de kanaalnaam.
 6. Klik op Copy Channel ID.
 
-Het gekopieerde nummer is de `Channel ID` die ImgBed nodig heeft.
+Het gekopieerde nummer is de `Channel ID` die ImgHost nodig heeft.
 
 ![Ontwikkelaarsmodus inschakelen](../../image/upload/discord/开启开发者权限.png)
 
 ![Channel ID kopiëren](../../image/upload/discord/复制群频道id.png)
 
-### 5. Vul het Discord-kanaal in ImgBed in
+### 5. Vul het Discord-kanaal in ImgHost in
 
 Ga terug naar het configuratievenster en vul in:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -1,6 +1,6 @@
 # Federacyjny indeks rozproszony
 
-Federacyjny indeks rozproszony pozwala wielu stronom ImgBed udostępniać sobie listy plików.
+Federacyjny indeks rozproszony pozwala wielu stronom ImgHost udostępniać sobie listy plików.
 
 W prostych słowach:
 
@@ -23,7 +23,7 @@ Strona ma trzy karty:
 | Karta | Cel |
 | --- | --- |
 | Local Node | Włącz własny węzeł, potwierdź publiczną domenę, wybierz katalogi współdzielone i zaktualizuj indeks wychodzący |
-| Nodes I Joined | Zarządzaj innymi węzłami ImgBed, do których dołączyłeś |
+| Nodes I Joined | Zarządzaj innymi węzłami ImgHost, do których dołączyłeś |
 | Nodes Joining Me | Zarządzaj prośbami innych osób o dołączenie do Twojego węzła |
 
 ## Pierwsza konfiguracja
@@ -32,7 +32,7 @@ Strona ma trzy karty:
 2. Włącz `Enable`.
 3. Wybierz katalogi do udostępnienia w `Sync folders`.
 4. Kliknij `Update Outbound Index`.
-5. Jeśli ImgBed wykryje zmianę domeny, potwierdź, że bieżąca domena jest poprawna przed kontynuacją.
+5. Jeśli ImgHost wykryje zmianę domeny, potwierdź, że bieżąca domena jest poprawna przed kontynuacją.
 
 Możesz wybrać wiele katalogów synchronizacji.
 
@@ -44,7 +44,7 @@ Jeśli lista katalogów synchronizacji jest pusta, udostępniane są wszystkie k
 
 Publiczna domena to adres URL strony, którego inne węzły używają, aby uzyskać dostęp do Twojego węzła.
 
-ImgBed wykrywa ją automatycznie. Nie trzeba wpisywać ręcznie. Przy pierwszej aktualizacji indeksu ImgBed zapyta, czy bieżący URL dostępu jest domeną produkcyjną.
+ImgHost wykrywa ją automatycznie. Nie trzeba wpisywać ręcznie. Przy pierwszej aktualizacji indeksu ImgHost zapyta, czy bieżący URL dostępu jest domeną produkcyjną.
 
 Jeśli później zmienisz domenę, aktualizacja indeksu ponownie poprosi o potwierdzenie.
 
@@ -116,7 +116,7 @@ Po rezygnacji indeks federacyjny tego węzła zostanie usunięty z Twojej lokaln
 ### Generowanie linku zaproszenia
 
 1. Upewnij się, że lokalny węzeł jest włączony.
-2. Kliknij `Update Outbound Index` co najmniej raz, aby ImgBed potwierdził publiczną domenę.
+2. Kliknij `Update Outbound Index` co najmniej raz, aby ImgHost potwierdził publiczną domenę.
 3. Otwórz `Nodes Joining Me`.
 4. Kliknij `Reset Invitation Link`.
 5. Skopiuj link zaproszenia i wyślij go drugiemu właścicielowi.

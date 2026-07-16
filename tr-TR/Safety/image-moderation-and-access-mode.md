@@ -37,7 +37,7 @@ Varsayılan değer yetişkin modudur.
 
 ## Moderasyonu Etkinleştirmek Ne Yapar?
 
-Moderasyon etkin olduğunda ImgBed yükleme sırasında seçili moderasyon sağlayıcısını çağırır ve algılanan yaş derecelendirmesini kaydeder.
+Moderasyon etkin olduğunda ImgHost yükleme sırasında seçili moderasyon sağlayıcısını çağırır ve algılanan yaş derecelendirmesini kaydeder.
 
 Ana derecelendirmeler:
 
@@ -66,7 +66,7 @@ Her sağlayıcının gereksinimleri farklıdır:
 - nsfwjs genellikle API uç noktası URL'si ister.
 - Sightengine API user ve API secret ister.
 
-Hesabınıza, erişilebilirliğe ve algılama kalitesine göre seçim yapın. Moderasyon etkinleştirilmiş ve doğru yapılandırılmışsa ImgBed yükleme sırasında görsel derecelendirmesini yazmayı dener.
+Hesabınıza, erişilebilirliğe ve algılama kalitesine göre seçim yapın. Moderasyon etkinleştirilmiş ve doğru yapılandırılmışsa ImgHost yükleme sırasında görsel derecelendirmesini yazmayı dener.
 
 ## Herkese Açık Galeri Üzerindeki Etkisi
 
@@ -85,16 +85,16 @@ Bu yalnızca normal herkese açık erişimi etkiler. Yönetim paneli tüm dosyal
 
 Herkese açık dosya URL'leri, ziyaretçilerin açtığı doğrudan görsel bağlantılarıdır.
 
-Dosyanın derecelendirmesi geçerli erişim modu tarafından izin verilen düzeydeyse ImgBed özgün görseli döndürür.
+Dosyanın derecelendirmesi geçerli erişim modu tarafından izin verilen düzeydeyse ImgHost özgün görseli döndürür.
 
-Derecelendirme izin verilen düzeyin üzerindeyse normal herkese açık erişim özgün görseli döndürmez. Bunun yerine ImgBed yapılandırılmış engelleme sonucunu veya yer tutucu görseli döndürür.
+Derecelendirme izin verilen düzeyin üzerindeyse normal herkese açık erişim özgün görseli döndürmez. Bunun yerine ImgHost yapılandırılmış engelleme sonucunu veya yer tutucu görseli döndürür.
 
 Örnek:
 
 - Geçerli mod çocuk modudur.
 - Görsel R18 olarak derecelendirilmiştir.
 - Bir ziyaretçi herkese açık URL'yi doğrudan açar.
-- ImgBed bu ziyaretçiye özgün R18 görselini döndürmez.
+- ImgHost bu ziyaretçiye özgün R18 görselini döndürmez.
 
 ![Kısıtlı dosya görseli](../../image/Safety/文件受限图.png)
 

@@ -1,6 +1,6 @@
 # Lijsten en filteren met API Token
 
-Het lijstscript voor API Token is bedoeld voor scripts, automatisering en programma's van derden die ImgBed-gegevens moeten lezen. Het gebruikt alleen de machtiging `list`; het uploadt geen bestanden, verwijdert geen bestanden, wijzigt geen configuratie en blokkeert of staat uploads vanaf een bepaald IP-adres niet toe.
+Het lijstscript voor API Token is bedoeld voor scripts, automatisering en programma's van derden die ImgHost-gegevens moeten lezen. Het gebruikt alleen de machtiging `list`; het uploadt geen bestanden, verwijdert geen bestanden, wijzigt geen configuratie en blokkeert of staat uploads vanaf een bepaald IP-adres niet toe.
 
 ![API Token bewerken](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site, bijvoorbeeld `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out van één verzoek; standaard `180000` |

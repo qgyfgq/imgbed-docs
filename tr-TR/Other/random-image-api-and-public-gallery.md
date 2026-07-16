@@ -64,7 +64,7 @@ Filtrelemeden sonra eşleşen dosya yoksa API eşleşen sonuç döndürmez.
 
 Rastgele Görsel API'si hızı artırmak için dizin aday havuzlarını önbelleğe alır.
 
-Dosyalar değiştikten sonra ImgBed dizin önbelleği sürümünü günceller ve sonraki istekler aday havuzunu yeniden oluşturur. Boş dizinler, tekrarlanan sorguları önlemek için kısa süreliğine önbelleğe alınır.
+Dosyalar değiştikten sonra ImgHost dizin önbelleği sürümünü günceller ve sonraki istekler aday havuzunu yeniden oluşturur. Boş dizinler, tekrarlanan sorguları önlemek için kısa süreliğine önbelleğe alınır.
 
 ## Herkese Açık Galeri
 

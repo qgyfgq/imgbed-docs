@@ -40,7 +40,7 @@ Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
-| `--base-url <url>` | هو | د ImgBed سایټ URL، لکه `https://image.ai6.me`. |
+| `--base-url <url>` | هو | د ImgHost سایټ URL، لکه `https://image.ai6.me`. |
 | `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--retries <n>` | نه | د لنډمهاله ناکامۍ د بیا هڅو شمېر. اصلي ارزښت `3` دی. |
 | `--timeout-ms <n>` | نه | د غوښتنې د وخت حد. اصلي ارزښت `180000` دی. |

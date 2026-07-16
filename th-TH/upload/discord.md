@@ -44,7 +44,7 @@
 5. สร้างหรือ reset token ในหน้า `Bot`
 6. บันทึก token ไว้
 
-Token นี้คือ `Bot Token` ที่ต้องใส่ใน ImgBed
+Token นี้คือ `Bot Token` ที่ต้องใส่ใน ImgHost
 
 ![ดู bot token](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ Token นี้คือ `Bot Token` ที่ต้องใส่ใน ImgBed
 5. คลิกขวาที่ชื่อ channel
 6. คลิกคัดลอก Channel ID
 
-เลขที่คัดลอกได้คือ `Channel ID` ที่ ImgBed ต้องใช้
+เลขที่คัดลอกได้คือ `Channel ID` ที่ ImgHost ต้องใช้
 
 ![เปิด developer mode](../../image/upload/discord/开启开发者权限.png)
 
 ![คัดลอก channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. ใส่ช่องทาง Discord ใน ImgBed
+### 5. ใส่ช่องทาง Discord ใน ImgHost
 
 กลับไปที่กล่องกำหนดค่า channel แล้วกรอกดังนี้:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

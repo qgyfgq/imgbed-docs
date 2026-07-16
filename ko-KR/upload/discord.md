@@ -44,7 +44,7 @@
 5. `Bot` 페이지에서 토큰을 생성하거나 재설정합니다.
 6. 토큰을 저장합니다.
 
-이 token이 ImgBed에 입력해야 하는 `Bot Token`입니다.
+이 token이 ImgHost에 입력해야 하는 `Bot Token`입니다.
 
 ![bot token 보기](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. 채널 이름을 마우스 오른쪽 버튼으로 클릭합니다.
 6. Copy Channel ID를 클릭합니다.
 
-복사한 숫자가 ImgBed에 필요한 `Channel ID`입니다.
+복사한 숫자가 ImgHost에 필요한 `Channel ID`입니다.
 
 ![developer mode 활성화](../../image/upload/discord/开启开发者权限.png)
 
 ![channel ID 복사](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed에 Discord 채널 입력하기
+### 5. ImgHost에 Discord 채널 입력하기
 
 채널 설정 대화상자로 돌아가 다음과 같이 입력합니다.
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -48,9 +48,9 @@ Après sa création, copiez et enregistrez le nouveau mot de passe d’applicati
 
 ![Enregistrer le nouveau mot de passe d’application](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Remplir la configuration WebDAV dans ImgBed
+### 2. Remplir la configuration WebDAV dans ImgHost
 
-Revenez à ImgBed et ajoutez un canal WebDAV :
+Revenez à ImgHost et ajoutez un canal WebDAV :
 
 | Champ d’interface | Valeur |
 | --- | --- |
@@ -68,7 +68,7 @@ Le canal WebDAV utilise désormais un vrai téléversement fragmenté basé sur 
 
 Les petits fichiers sont téléversés comme un fichier complet unique. Les fichiers supérieurs à 64 MiB sont automatiquement divisés en fragments d’environ 10 MiB et téléversés dans un répertoire distant de fragments.
 
-Le service WebDAV n’a pas besoin de prendre en charge `partial update` ni les écritures basées sur un offset. ImgBed ne fusionne pas les fragments en un seul gros fichier sur le serveur distant. À la place, il enregistre un manifeste de fragments et lit les fragments dans l’ordre lorsque le fichier est demandé.
+Le service WebDAV n’a pas besoin de prendre en charge `partial update` ni les écritures basées sur un offset. ImgHost ne fusionne pas les fragments en un seul gros fichier sur le serveur distant. À la place, il enregistre un manifeste de fragments et lit les fragments dans l’ordre lorsque le fichier est demandé.
 
 En pratique :
 
@@ -77,7 +77,7 @@ En pratique :
 | 64 MiB ou moins | Téléversement normal | Un fichier complet |
 | Plus de 64 MiB | Téléversement fragmenté réel basé sur une session | Un répertoire de fragments avec plusieurs fichiers de fragment |
 
-Le répertoire de fragments n’affecte que l’organisation dans le stockage distant. Il ne change pas l’URL du fichier dans ImgBed. Les utilisateurs continuent d’accéder au fichier via le lien original `/file/...`.
+Le répertoire de fragments n’affecte que l’organisation dans le stockage distant. Il ne change pas l’URL du fichier dans ImgHost. Les utilisateurs continuent d’accéder au fichier via le lien original `/file/...`.
 
 ## Étapes de configuration
 
@@ -111,7 +111,7 @@ Le répertoire de fragments n’affecte que l’organisation dans le stockage di
 
 C’est la méthode de stockage actuelle pour les gros fichiers.
 
-Les fichiers supérieurs à 64 MiB ne sont pas fusionnés en un seul gros fichier distant. Ils sont stockés sous forme de répertoire de fragments. ImgBed enregistre le manifeste de fragments et retourne le contenu complet en lisant les fragments dans l’ordre.
+Les fichiers supérieurs à 64 MiB ne sont pas fusionnés en un seul gros fichier distant. Ils sont stockés sous forme de répertoire de fragments. ImgHost enregistre le manifeste de fragments et retourne le contenu complet en lisant les fragments dans l’ordre.
 
 ### Que vérifier d’abord si le téléversement de gros fichiers échoue ?
 

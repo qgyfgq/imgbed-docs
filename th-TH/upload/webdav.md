@@ -48,9 +48,9 @@
 
 ![บันทึก app password ใหม่](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ใส่การกำหนดค่า WebDAV ใน ImgBed
+### 2. ใส่การกำหนดค่า WebDAV ใน ImgHost
 
-กลับไปที่ ImgBed แล้วเพิ่มช่องทาง WebDAV:
+กลับไปที่ ImgHost แล้วเพิ่มช่องทาง WebDAV:
 
 | ฟิลด์ UI | ค่า |
 | --- | --- |
@@ -68,7 +68,7 @@
 
 ไฟล์ขนาดเล็กจะถูกอัปโหลดเป็น complete file ไฟล์เดียว ไฟล์ที่ใหญ่กว่า 64 MiB จะถูกแบ่งเป็น chunks ประมาณ 10 MiB อัตโนมัติ แล้วอัปโหลดไปยัง remote chunk directory
 
-WebDAV service ไม่จำเป็นต้องรองรับ `partial update` หรือ offset-based writes ImgBed จะไม่ merge chunks เป็นไฟล์ขนาดใหญ่ไฟล์เดียวบน remote server แต่จะเก็บ chunk manifest และอ่าน chunks ตามลำดับเมื่อมี request file
+WebDAV service ไม่จำเป็นต้องรองรับ `partial update` หรือ offset-based writes ImgHost จะไม่ merge chunks เป็นไฟล์ขนาดใหญ่ไฟล์เดียวบน remote server แต่จะเก็บ chunk manifest และอ่าน chunks ตามลำดับเมื่อมี request file
 
 ในทางปฏิบัติ:
 
@@ -77,7 +77,7 @@ WebDAV service ไม่จำเป็นต้องรองรับ `partia
 | 64 MiB หรือน้อยกว่า | Normal upload | Complete file ไฟล์เดียว |
 | มากกว่า 64 MiB | Real session chunked upload | Chunk directory ที่มีหลาย chunk files |
 
-Chunk directory มีผลเฉพาะ remote storage layout ไม่เปลี่ยน file URL ใน ImgBed ผู้ใช้ยังเข้าถึงไฟล์ผ่านลิงก์ `/file/...` เดิมได้เหมือนเดิม
+Chunk directory มีผลเฉพาะ remote storage layout ไม่เปลี่ยน file URL ใน ImgHost ผู้ใช้ยังเข้าถึงไฟล์ผ่านลิงก์ `/file/...` เดิมได้เหมือนเดิม
 
 ## ขั้นตอนตั้งค่า
 
@@ -111,7 +111,7 @@ Chunk directory มีผลเฉพาะ remote storage layout ไม่เ�
 
 นี่คือ storage method ปัจจุบันสำหรับไฟล์ขนาดใหญ่
 
-ไฟล์ที่ใหญ่กว่า 64 MiB จะไม่ถูก merge เป็น remote file ขนาดใหญ่ไฟล์เดียว แต่จะเก็บเป็น chunk directory ImgBed บันทึก chunk manifest และคืน content ที่สมบูรณ์โดยอ่าน chunks ตามลำดับ
+ไฟล์ที่ใหญ่กว่า 64 MiB จะไม่ถูก merge เป็น remote file ขนาดใหญ่ไฟล์เดียว แต่จะเก็บเป็น chunk directory ImgHost บันทึก chunk manifest และคืน content ที่สมบูรณ์โดยอ่าน chunks ตามลำดับ
 
 ### อัปโหลดไฟล์ขนาดใหญ่ล้มเหลว ควรตรวจอะไรก่อน?
 

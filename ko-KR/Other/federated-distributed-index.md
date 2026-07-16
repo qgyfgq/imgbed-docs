@@ -1,6 +1,6 @@
 # 연합 분산 인덱스
 
-연합 분산 인덱스는 여러 ImgBed 사이트가 서로 파일 목록을 공유할 수 있게 합니다.
+연합 분산 인덱스는 여러 ImgHost 사이트가 서로 파일 목록을 공유할 수 있게 합니다.
 
 간단히 말하면:
 
@@ -23,7 +23,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 | 탭 | 목적 |
 | --- | --- |
 | 로컬 노드 | 내 노드를 활성화하고, 공개 도메인을 확인하고, 공유 폴더를 선택하며, 송신 인덱스를 업데이트합니다 |
-| 내가 참여한 노드 | 내가 참여한 다른 ImgBed 노드를 관리합니다 |
+| 내가 참여한 노드 | 내가 참여한 다른 ImgHost 노드를 관리합니다 |
 | 내 노드에 참여하려는 노드 | 내 노드에 참여하려는 다른 사람의 요청을 관리합니다 |
 
 ## 처음 설정하기
@@ -32,7 +32,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 2. `Enable`을 켭니다.
 3. `Sync folders`에서 공유할 폴더를 선택합니다.
 4. `Update Outbound Index`를 클릭합니다.
-5. ImgBed가 도메인 변경을 감지하면 계속하기 전에 현재 도메인이 올바른지 확인합니다.
+5. ImgHost가 도메인 변경을 감지하면 계속하기 전에 현재 도메인이 올바른지 확인합니다.
 
 동기화 폴더는 여러 개 선택할 수 있습니다.
 
@@ -44,7 +44,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 
 공개 도메인은 다른 노드가 내 노드에 접근할 때 사용하는 사이트 URL입니다.
 
-ImgBed가 이를 자동으로 감지하므로 직접 입력할 필요가 없습니다. 처음 인덱스를 업데이트할 때 ImgBed는 현재 접근 URL이 운영 도메인인지 확인합니다.
+ImgHost가 이를 자동으로 감지하므로 직접 입력할 필요가 없습니다. 처음 인덱스를 업데이트할 때 ImgHost는 현재 접근 URL이 운영 도메인인지 확인합니다.
 
 나중에 도메인을 변경하면 인덱스를 업데이트할 때 다시 확인을 요청합니다.
 
@@ -116,7 +116,7 @@ ImgBed가 이를 자동으로 감지하므로 직접 입력할 필요가 없습�
 ### 초대 링크 생성하기
 
 1. 로컬 노드가 활성화되어 있는지 확인합니다.
-2. ImgBed가 공개 도메인을 확인할 수 있도록 `Update Outbound Index`를 최소 한 번 클릭합니다.
+2. ImgHost가 공개 도메인을 확인할 수 있도록 `Update Outbound Index`를 최소 한 번 클릭합니다.
 3. `Nodes Joining Me`를 엽니다.
 4. `Reset Invitation Link`를 클릭합니다.
 5. 초대 링크를 복사해 상대 소유자에게 보냅니다.

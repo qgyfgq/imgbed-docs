@@ -1,6 +1,6 @@
 # Blog
 
-The blog feature adds a standalone blog page to your ImgBed site.
+The blog feature adds a standalone blog page to your ImgHost site.
 
 After it is enabled, visitors can open:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Blog homepage](../../image/other/博客/博客首页.png)
 
-The blog is adapted from the open-source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) project. ImgBed rewrites and integrates it with Vue so it can run as part of the image hosting site.
+The blog is adapted from the open-source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) project. ImgHost rewrites and integrates it with Vue so it can run as part of the image hosting site.
 
 ## Where To Configure It
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Wait for the success message.
 5. Open `https://your-domain.com/blog/` to view the blog.
 
-On first use, ImgBed prepares a private GitHub repository under the selected account:
+On first use, ImgHost prepares a private GitHub repository under the selected account:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Typical workflow:
 2. Enter the private `imgbed-blog-config` repository.
 3. Edit or add post files.
 4. Commit the changes.
-5. Return to the ImgBed admin panel and click `Update Blog`, or click the logo in the upper-left corner of the blog homepage three times to trigger a blog update.
+5. Return to the ImgHost admin panel and click `Update Blog`, or click the logo in the upper-left corner of the blog homepage three times to trigger a blog update.
 
 `Update Blog` does not overwrite content you have written. It initializes the repository when needed and refreshes blog cache.
 
@@ -72,7 +72,7 @@ Visit statistics show post views and site visits, helping you understand blog tr
 
 The blog is always served under `/blog/`.
 
-For example, if your ImgBed domain is:
+For example, if your ImgHost domain is:
 
 ```text
 https://image.example.com

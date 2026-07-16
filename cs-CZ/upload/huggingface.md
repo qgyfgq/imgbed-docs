@@ -7,7 +7,7 @@ Potřebujete jen tři věci:
 | Požadavek | Účel |
 | --- | --- |
 | Účet Hugging Face | Pro vytvoření přístupového tokenu a vlastnictví repozitáře. |
-| Hugging Face User Access Token | Umožní ImgBed používat Hugging Face API, vytvářet repozitáře a nahrávat soubory. |
+| Hugging Face User Access Token | Umožní ImgHost používat Hugging Face API, vytvářet repozitáře a nahrávat soubory. |
 | Název repozitáře | Můžete zadat jen název repozitáře, například `image`. |
 
 ## Nastavení
@@ -24,7 +24,7 @@ Potřebujete jen tři věci:
 
 ![Vytvoření tokenu](../../image/upload/huggingface/创建令牌.png)
 
-## Krok 2: Vyplňte kanál Hugging Face v ImgBed
+## Krok 2: Vyplňte kanál Hugging Face v ImgHost
 
 Po výběru `Hugging Face` v Nastavení nahrávání vyplňte:
 
@@ -46,9 +46,9 @@ Systém zařídí tyto detaily:
 
 | Chování systému | Popis |
 | --- | --- |
-| Krátký název repozitáře | ImgBed rozpozná aktuální účet Hugging Face a rozšíří hodnotu na plnou cestu repozitáře. |
-| Plná cesta repozitáře | ImgBed použije `username/repository` přesně tak, jak bylo zadáno. |
-| Kontrola repozitáře | Pokud použijete cestu aktuálního osobního účtu, ImgBed se pokusí repozitář vytvořit, pokud neexistuje. Pokud zadáte plnou cestu ručně, použije ji přímo. |
+| Krátký název repozitáře | ImgHost rozpozná aktuální účet Hugging Face a rozšíří hodnotu na plnou cestu repozitáře. |
+| Plná cesta repozitáře | ImgHost použije `username/repository` přesně tak, jak bylo zadáno. |
+| Kontrola repozitáře | Pokud použijete cestu aktuálního osobního účtu, ImgHost se pokusí repozitář vytvořit, pokud neexistuje. Pokud zadáte plnou cestu ručně, použije ji přímo. |
 | Typ repozitáře | Tento kanál používá repozitář `dataset`. |
 | Veřejný/soukromý stav | Viditelnost repozitáře se synchronizuje podle aktuálního přepínače. |
 
@@ -58,10 +58,10 @@ Systém zařídí tyto detaily:
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

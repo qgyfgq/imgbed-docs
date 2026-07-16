@@ -7,7 +7,7 @@
 | اړتیا | موخه |
 | --- | --- |
 | GitHub حساب | د لاسرسی ټوکن جوړولو او ریپازېټري مالکیت لپاره. |
-| GitHub لاسرسی ټوکن | د ImgBed لپاره GitHub API لاسرسی، releases جوړول او فایلونه اپلوډ کول. |
+| GitHub لاسرسی ټوکن | د ImgHost لپاره GitHub API لاسرسی، releases جوړول او فایلونه اپلوډ کول. |
 | د ریپازېټري نوم | یوازې ریپازېټري name لیکلی شئ، لکه `image`. |
 
 ## د تنظیم ګامونه
@@ -27,7 +27,7 @@
 
 ![Add GitHub permissions](../../image/upload/github-releases/添加github权限.png)
 
-## ګام 2: په ImgBed کې GitHub Releases چینل ډک کړئ
+## ګام 2: په ImgHost کې GitHub Releases چینل ډک کړئ
 
 په د اپلوډ تنظیمات کې د `GitHub Releases` له ټاکلو وروسته:
 
@@ -49,9 +49,9 @@ system دا کارونه خپله ترسره کوي:
 
 | د سیستم چلند | توضیح |
 | --- | --- |
-| لنډ ریپازېټري نوم | ImgBed اوسنی GitHub حساب پېژني او ارزښت بشپړ ریپازېټري لارې ته غځوي. |
-| Full ریپازېټري path | ImgBed د `username/repository` path هماغسې کاروي لکه داخل شوی. |
-| د ریپازېټري کتنه | که د اوسني شخصي حساب لاره وکاروئ، ImgBed ریپازېټري اتومات جوړوي که موجوده نه وي. که بشپړه لاره په لاسي ډول ورکړئ، ImgBed هماغه لاره کاروي. |
+| لنډ ریپازېټري نوم | ImgHost اوسنی GitHub حساب پېژني او ارزښت بشپړ ریپازېټري لارې ته غځوي. |
+| Full ریپازېټري path | ImgHost د `username/repository` path هماغسې کاروي لکه داخل شوی. |
+| د ریپازېټري کتنه | که د اوسني شخصي حساب لاره وکاروئ، ImgHost ریپازېټري اتومات جوړوي که موجوده نه وي. که بشپړه لاره په لاسي ډول ورکړئ، ImgHost هماغه لاره کاروي. |
 | عام/شخصي حالت | د ریپازېټري لید د اوسني switch له مخې همغږي کېږي. |
 
 ## چټک چک‌لېست
@@ -61,9 +61,9 @@ GitHub Releases داسې کار کوي:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

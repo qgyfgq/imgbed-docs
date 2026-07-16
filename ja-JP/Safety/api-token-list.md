@@ -1,6 +1,6 @@
 # API Token で一覧取得と絞り込みを行う
 
-API Token 一覧取得スクリプトは、スクリプト、自動化タスク、外部プログラムから ImgBed のデータを読み取るためのものです。使用する権限は `list` だけです。ファイルのアップロード、削除、設定変更、特定 IP のアップロード禁止や許可は行いません。
+API Token 一覧取得スクリプトは、スクリプト、自動化タスク、外部プログラムから ImgHost のデータを読み取るためのものです。使用する権限は `list` だけです。ファイルのアップロード、削除、設定変更、特定 IP のアップロード禁止や許可は行いません。
 
 ![API Token の編集](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
-| `--base-url <url>` | はい | ImgBed サイトの URL。例: `https://image.ai6.me` |
+| `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
 | `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
 | `--retries <n>` | いいえ | 一時的な失敗時の再試行回数。既定は `3`。 |
 | `--timeout-ms <n>` | いいえ | 1 回のリクエストのタイムアウト。既定は `180000`。 |

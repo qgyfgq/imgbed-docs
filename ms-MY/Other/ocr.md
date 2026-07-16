@@ -56,7 +56,7 @@ Persediaan Google mempunyai dua bahagian:
 4. Kembali ke `Credentials`.
 5. Cipta `API Key`.
 6. Buka API Key dan salin.
-7. Tampal ke `Google Vision API Key` dalam ImgBed.
+7. Tampal ke `Google Vision API Key` dalam ImgHost.
 8. Simpan.
 
 Selepas itu, anda boleh memilih Google Vision dalam dialog OCR.
@@ -74,10 +74,10 @@ Ia hanya menunjukkan anggaran bilangan panggilan Google Vision yang digunakan da
 5. Buka butiran akaun perkhidmatan dan cipta kunci.
 6. Pilih `JSON`.
 7. Muat turun fail JSON yang dijana.
-8. Kembali ke ImgBed dan import di bawah akaun perkhidmatan `JSON` (pilihan).
+8. Kembali ke ImgHost dan import di bawah akaun perkhidmatan `JSON` (pilihan).
 9. Selepas import berjaya, klik pertanyaan kuota.
 
-Selepas import, ImgBed menunjukkan nama projek yang memiliki akaun perkhidmatan tersebut. Semasa menyemak penggunaan, ImgBed membaca data pemantauan Google dan menunjukkan bilangan panggilan bulan ini.
+Selepas import, ImgHost menunjukkan nama projek yang memiliki akaun perkhidmatan tersebut. Semasa menyemak penggunaan, ImgHost membaca data pemantauan Google dan menunjukkan bilangan panggilan bulan ini.
 
 Ringkasnya:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR memerlukan token akses.
 
 Buka tetingkap panggilan `API` pada halaman Baidu PaddleOCR, klik untuk mendapatkan token, kemudian salin.
 
-Kembali ke ImgBed, tampal ke `PaddleOCR Token` dan simpan.
+Kembali ke ImgHost, tampal ke `PaddleOCR Token` dan simpan.
 
 ## Memulakan Pengecaman
 

@@ -1,6 +1,6 @@
 # Téléversement de fichiers avec API Token
 
-Le téléversement avec API Token est destiné aux scripts, tâches automatisées et programmes tiers. Vous n’avez pas besoin d’ouvrir l’interface web : indiquez l’URL du site, le token, le chemin du fichier local et un vrai canal de téléversement, puis ImgBed renverra l’URL du fichier après l’envoi.
+Le téléversement avec API Token est destiné aux scripts, tâches automatisées et programmes tiers. Vous n’avez pas besoin d’ouvrir l’interface web : indiquez l’URL du site, le token, le chemin du fichier local et un vrai canal de téléversement, puis ImgHost renverra l’URL du fichier après l’envoi.
 
 ![Modifier l’API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Oui | URL du site ImgBed, par exemple `https://image.ai6.me`. |
+| `--base-url <url>` | Oui | URL du site ImgHost, par exemple `https://image.ai6.me`. |
 | `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable `IMGBED_API_TOKEN`. |
 | `--file <path>` | Oui | Chemin du fichier local. |
 | `--channel <key>` | Oui | Canal de téléversement. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Oui | URL du site ImgBed. |
+| `--base-url <url>` | Oui | URL du site ImgHost. |
 | `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser `IMGBED_API_TOKEN`. |
 | `--file <path>` | Oui | Chemin du fichier local. |
 | `--channel <key>` | Oui | Canal de téléversement. |

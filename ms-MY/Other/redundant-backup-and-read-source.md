@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Entri ini paling sesuai untuk menambah sandaran pada folder atau semua fail secara kelompok.
 
-Saluran sandaran boleh dipilih secara manual, atau anda boleh memilih penukaran automatik dan membiarkan ImgBed mencari saluran sandaran yang sesuai.
+Saluran sandaran boleh dipilih secara manual, atau anda boleh memilih penukaran automatik dan membiarkan ImgHost mencari saluran sandaran yang sesuai.
 
 ## Sandaran Daripada Butiran Fail
 
@@ -90,4 +90,4 @@ Selagi fail sandaran tersedia, imej, video dan pautan muat turun terus berfungsi
 
 ## Perkara Yang Berlaku Apabila Fail Dipadam
 
-Apabila fail dipadam, ImgBed memadam kedua-dua fail utama dan fail sandaran.
+Apabila fail dipadam, ImgHost memadam kedua-dua fail utama dan fail sandaran.

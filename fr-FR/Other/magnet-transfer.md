@@ -2,7 +2,7 @@
 
 Le transfert par lien magnet télécharge les fichiers depuis un lien magnet, puis les téléverse automatiquement vers le canal de stockage cloud que vous avez choisi.
 
-Cette fonction est utile pour transférer des épisodes d’anime, des vidéos, des fichiers compressés et des fichiers similaires. Collez un lien magnet, et ImgBed crée une tâche de téléchargement en arrière-plan. Une fois le téléchargement terminé, le fichier est téléversé vers ImgBed et le lien final apparaît dans la liste des téléversements.
+Cette fonction est utile pour transférer des épisodes d’anime, des vidéos, des fichiers compressés et des fichiers similaires. Collez un lien magnet, et ImgHost crée une tâche de téléchargement en arrière-plan. Une fois le téléchargement terminé, le fichier est téléversé vers ImgHost et le lien final apparaît dans la liste des téléversements.
 
 ![Transfert par lien magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Une fois les paramètres prêts, revenez à la page d’accueil et collez un lie
 1. Collez le lien magnet dans la zone de téléversement de la page d’accueil.
 2. Vérifiez que le mode est défini sur `Transfer`.
 3. Cliquez sur téléverser.
-4. Attendez qu’ImgBed crée la tâche magnet.
+4. Attendez qu’ImgHost crée la tâche magnet.
 5. Après le démarrage de la tâche, utilisez le panneau flottant `Magnet Tasks` dans le coin inférieur droit pour vérifier la progression.
 
 Le téléchargement et le téléversement peuvent prendre du temps. La vitesse dépend de la ressource magnet, de l’environnement d’exécution GitHub et du canal de stockage cloud sélectionné.
@@ -72,7 +72,7 @@ Le panneau des tâches magnet situé en bas à droite affiche le nombre de tâch
 
 ## Conseils
 
-- Si un lien magnet contient plusieurs fichiers, ImgBed affiche en priorité le fichier principal terminé.
+- Si un lien magnet contient plusieurs fichiers, ImgHost affiche en priorité le fichier principal terminé.
 - Les fichiers volumineux prennent plus de temps. Attendez la fin de la tâche avant de rafraîchir la page.
 - Si la ressource magnet n’a aucun pair disponible, elle peut être très lente ou échouer.
 - Si le compte cloud n’a plus de quota, si l’autorisation a expiré ou si le répertoire de téléversement est incorrect, la tâche peut échouer.

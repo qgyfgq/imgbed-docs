@@ -64,7 +64,7 @@ If no file matches after filtering, the API returns no matching result.
 
 The Random Image API caches directory candidate pools to improve speed.
 
-After files change, ImgBed updates the directory cache version, and later requests rebuild the candidate pool. Empty directories are cached briefly to avoid repeated queries.
+After files change, ImgHost updates the directory cache version, and later requests rebuild the candidate pool. Empty directories are cached briefly to avoid repeated queries.
 
 ## Public Gallery
 

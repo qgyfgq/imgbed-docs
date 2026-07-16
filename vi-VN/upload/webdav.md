@@ -48,9 +48,9 @@ Sau khi tạo, sao chép và lưu app password mới. Thường password này ch
 
 ![Save the new app password](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Điền WebDAV Configuration trong ImgBed
+### 2. Điền WebDAV Configuration trong ImgHost
 
-Quay lại ImgBed và thêm WebDAV channel:
+Quay lại ImgHost và thêm WebDAV channel:
 
 | Trường UI | Giá trị |
 | --- | --- |
@@ -68,7 +68,7 @@ WebDAV channel hiện dùng real session-based chunked upload.
 
 Files nhỏ được upload dưới dạng một complete file. Files lớn hơn 64 MiB sẽ tự động được chia thành chunks khoảng 10 MiB và upload vào remote chunk directory.
 
-WebDAV service không cần hỗ trợ `partial update` hoặc offset-based writes. ImgBed không hợp nhất chunks thành một file lớn trên remote server. Thay vào đó, ImgBed lưu chunk manifest và đọc chunks theo thứ tự khi file được request.
+WebDAV service không cần hỗ trợ `partial update` hoặc offset-based writes. ImgHost không hợp nhất chunks thành một file lớn trên remote server. Thay vào đó, ImgHost lưu chunk manifest và đọc chunks theo thứ tự khi file được request.
 
 Thực tế:
 
@@ -77,7 +77,7 @@ Thực tế:
 | 64 MiB hoặc nhỏ hơn | Khôngrmal upload | Một complete file |
 | Lớn hơn 64 MiB | Real session chunked upload | Một chunk directory chứa nhiều chunk files |
 
-Chunk directory chỉ ảnh hưởng đến remote storage layout. File URL trong ImgBed không đổi. Users vẫn access file bằng link `/file/...` ban đầu.
+Chunk directory chỉ ảnh hưởng đến remote storage layout. File URL trong ImgHost không đổi. Users vẫn access file bằng link `/file/...` ban đầu.
 
 ## Các bước thiết lập
 
@@ -111,7 +111,7 @@ Chunk directory chỉ ảnh hưởng đến remote storage layout. File URL tron
 
 Đây là storage method hiện tại cho file lớn.
 
-Files lớn hơn 64 MiB không được hợp nhất thành một remote file lớn. Chúng được lưu dưới dạng chunk directory. ImgBed ghi chunk manifest và trả về nội dung hoàn chỉnh bằng cách đọc chunks theo thứ tự.
+Files lớn hơn 64 MiB không được hợp nhất thành một remote file lớn. Chúng được lưu dưới dạng chunk directory. ImgHost ghi chunk manifest và trả về nội dung hoàn chỉnh bằng cách đọc chunks theo thứ tự.
 
 ### File lớn upload lỗi thì nên kiểm tra gì trước?
 

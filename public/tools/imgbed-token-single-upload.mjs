@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const MIB = 1024 * 1024;
-const USER_AGENT = 'ImgBed-Token-Single-Upload/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Single-Upload/1.0 Node';
 
 const CHANNELS = Object.freeze({
   telegram: { aliases: ['tg', 'telegram'], limitBytes: 20 * MIB, limitCode: 'TELEGRAM_SINGLE_UPLOAD_LIMIT_EXCEEDED' },
@@ -22,14 +22,14 @@ const CHANNELS = Object.freeze({
 });
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token single-request upload tool
+  process.stdout.write(`ImgHost API Token single-request upload tool
 
 Usage:
   node imgbed-token-single-upload.mjs --base-url <url> --token <token> --file <path> --channel <key>
   node imgbed-token-single-upload.mjs --base-url <url> --token <token> --list-channels
 
 Required:
-  --base-url <url>       ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>       ImgHost site URL, for example https://image.ai6.me
   --token <token>        API Token. You can also set IMGBED_API_TOKEN.
   --file <path>          Local file path.
   --channel <key>        Upload channel:

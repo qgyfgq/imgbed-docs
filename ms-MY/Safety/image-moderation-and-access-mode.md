@@ -37,7 +37,7 @@ Untuk tapak peribadi atau tapak dengan kandungan matang, mod dewasa mungkin sesu
 
 ## Apa yang Berlaku Apabila Moderasi Diaktifkan
 
-Apabila moderasi aktif, ImgBed memanggil penyedia moderasi yang dipilih semasa muat naik dan menyimpan penarafan umur yang dikesan.
+Apabila moderasi aktif, ImgHost memanggil penyedia moderasi yang dipilih semasa muat naik dan menyimpan penarafan umur yang dikesan.
 
 Penarafan utama:
 
@@ -66,7 +66,7 @@ Setiap penyedia mempunyai keperluan berbeza:
 - nsfwjs biasanya memerlukan URL titik akhir API.
 - Sightengine memerlukan API user dan API secret.
 
-Pilih berdasarkan akaun, ketersediaan dan kualiti pengesanan. Selagi moderasi diaktifkan dan dikonfigurasi dengan betul, ImgBed cuba menulis penarafan imej semasa muat naik.
+Pilih berdasarkan akaun, ketersediaan dan kualiti pengesanan. Selagi moderasi diaktifkan dan dikonfigurasi dengan betul, ImgHost cuba menulis penarafan imej semasa muat naik.
 
 ## Kesan pada Galeri Awam
 
@@ -85,16 +85,16 @@ Ini hanya mempengaruhi akses awam biasa. Panel pentadbir tetap memaparkan semua 
 
 URL fail awam ialah pautan imej terus yang dibuka oleh pelawat.
 
-Jika penarafan fail dibenarkan oleh mod akses semasa, ImgBed mengembalikan imej asal.
+Jika penarafan fail dibenarkan oleh mod akses semasa, ImgHost mengembalikan imej asal.
 
-Jika penarafan lebih tinggi daripada tahap yang dibenarkan, akses awam biasa tidak mengembalikan imej asal. Sebaliknya, ImgBed mengembalikan hasil sekatan yang dikonfigurasi atau imej sandaran sekatan.
+Jika penarafan lebih tinggi daripada tahap yang dibenarkan, akses awam biasa tidak mengembalikan imej asal. Sebaliknya, ImgHost mengembalikan hasil sekatan yang dikonfigurasi atau imej sandaran sekatan.
 
 Contoh:
 
 - Mod semasa ialah mod kanak-kanak.
 - Satu imej mempunyai penarafan R18.
 - Pelawat membuka URL awam secara terus.
-- ImgBed tidak mengembalikan imej asal R18 kepada pelawat tersebut.
+- ImgHost tidak mengembalikan imej asal R18 kepada pelawat tersebut.
 
 ![Imej fail yang disekat](../../image/Safety/文件受限图.png)
 

@@ -56,7 +56,7 @@ Nastavení Google má dvě části:
 4. Vraťte se do `Credentials`.
 5. Vytvořte `API Key`.
 6. Otevřete API Key a zkopírujte ho.
-7. Vložte ho do `Google Vision API Key` v ImgBed.
+7. Vložte ho do `Google Vision API Key` v ImgHost.
 8. Uložte.
 
 Potom můžete v dialogu OCR zvolit Google Vision.
@@ -74,10 +74,10 @@ Pouze přibližně ukáže, kolik volání Google Vision bylo použito za posled
 5. Otevřete detail servisního účtu a vytvořte klíč.
 6. Vyberte `JSON`.
 7. Stáhněte vygenerovaný soubor JSON.
-8. Vraťte se do ImgBed a importujte ho jako servisní účet `JSON` (volitelné).
+8. Vraťte se do ImgHost a importujte ho jako servisní účet `JSON` (volitelné).
 9. Po úspěšném importu klikněte na dotaz na kvótu.
 
-Po importu ImgBed zobrazí název projektu, ke kterému servisní účet patří. Při dotazu na využití čte ImgBed data sledování Google a zobrazí počet volání za tento měsíc.
+Po importu ImgHost zobrazí název projektu, ke kterému servisní účet patří. Při dotazu na využití čte ImgHost data sledování Google a zobrazí počet volání za tento měsíc.
 
 Stručně:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR vyžaduje přístupový token.
 
 Na stránce Baidu PaddleOCR otevřete okno volání `API`, klikněte na získání tokenu a zkopírujte ho.
 
-Vraťte se do ImgBed, vložte ho do `PaddleOCR Token` a uložte.
+Vraťte se do ImgHost, vložte ho do `PaddleOCR Token` a uložte.
 
 ## Spuštění rozpoznávání
 

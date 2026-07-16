@@ -56,7 +56,7 @@ Google 設定分成兩部分：
 4. 回到 `Credentials`。
 5. 建立 `API Key`。
 6. 開啟 API 金鑰並複製。
-7. 將它貼到 ImgBed 的 `Google Vision API Key`。
+7. 將它貼到 ImgHost 的 `Google Vision API Key`。
 8. 儲存。
 
 之後即可在 OCR 對話框中選擇 Google Vision。
@@ -74,10 +74,10 @@ Google 設定分成兩部分：
 5. 開啟服務帳號詳細資料並建立金鑰。
 6. 選擇 `JSON`。
 7. 下載產生的 JSON 檔案。
-8. 回到 ImgBed，在服務帳號 `JSON` 下匯入（選填）。
+8. 回到 ImgHost，在服務帳號 `JSON` 下匯入（選填）。
 9. 匯入成功後，點選額度查詢。
 
-匯入後，ImgBed 會顯示該服務帳號所屬的專案名稱。查詢使用量時，ImgBed 會讀取 Google 監控資料並顯示本月呼叫次數。
+匯入後，ImgHost 會顯示該服務帳號所屬的專案名稱。查詢使用量時，ImgHost 會讀取 Google 監控資料並顯示本月呼叫次數。
 
 簡單來說：
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR 需要存取權杖。
 
 在 Baidu PaddleOCR 頁面開啟 `API` 呼叫視窗，點選取得權杖，然後複製。
 
-回到 ImgBed，將它貼到 `PaddleOCR Token` 並儲存。
+回到 ImgHost，將它貼到 `PaddleOCR Token` 並儲存。
 
 ## 開始辨識
 

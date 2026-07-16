@@ -28,7 +28,7 @@ Aliran geolokasi IP yang lebih baharu menyokong beberapa sumber dan tidak lagi b
 
 Isi hanya perkhidmatan yang anda perlukan. Anda tidak perlu mengkonfigurasikan semua medan.
 
-Jika tiada kunci diberikan, ImgBed masih cuba menggunakan sumber percuma terbina dalam, tetapi kestabilan, sokongan bahasa dan ketepatannya mungkin lebih rendah berbanding perkhidmatan yang anda konfigurasikan sendiri.
+Jika tiada kunci diberikan, ImgHost masih cuba menggunakan sumber percuma terbina dalam, tetapi kestabilan, sokongan bahasa dan ketepatannya mungkin lebih rendah berbanding perkhidmatan yang anda konfigurasikan sendiri.
 
 ## Pilihan Yang Disyorkan
 
@@ -57,9 +57,9 @@ Dapatkan ID akaun dalam papan pemuka MaxMind dan jana License Key daripada halam
 
 ![Konfigurasi kunci MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Selepas dijana, tampal Account ID dan License Key ke ImgBed dan simpan.
+Selepas dijana, tampal Account ID dan License Key ke ImgHost dan simpan.
 
-Pelan percuma MaxMind sesuai untuk penggunaan harian, tetapi mempunyai had permintaan. Jika kuota terlampau, ImgBed akan terus mencuba sumber lain yang tersedia.
+Pelan percuma MaxMind sesuai untuk penggunaan harian, tetapi mempunyai had permintaan. Jika kuota terlampau, ImgHost akan terus mencuba sumber lain yang tersedia.
 
 ## Persediaan ipapi
 
@@ -69,9 +69,9 @@ Buka konsol ipapi dan salin API Key yang dipaparkan di sana.
 
 ![Konfigurasi ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Tampalkannya ke medan `ipapi Key` dalam ImgBed dan simpan.
+Tampalkannya ke medan `ipapi Key` dalam ImgHost dan simpan.
 
-ipapi menyokong geolokasi IP berbilang bahasa dan berguna apabila anda mahu alamat dipaparkan dalam bahasa yang dipilih. Pelan percumanya juga mempunyai had permintaan. Jika kuota habis, ImgBed akan terus mencuba sumber lain yang tersedia.
+ipapi menyokong geolokasi IP berbilang bahasa dan berguna apabila anda mahu alamat dipaparkan dalam bahasa yang dipilih. Pelan percumanya juga mempunyai had permintaan. Jika kuota habis, ImgHost akan terus mencuba sumber lain yang tersedia.
 
 ## Persediaan Tencent Map Key
 

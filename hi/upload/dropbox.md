@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox खाता | साइन इन करने और ऐप्लिकेशन को अधिकृत करने के लिए |
 | Dropbox ऐप्लिकेशन | `App Key` और `App Secret` बनाने के लिए |
-| आपका ImgBed डोमेन | OAuth redirect URI के रूप में उपयोग करने के लिए |
+| आपका ImgHost डोमेन | OAuth redirect URI के रूप में उपयोग करने के लिए |
 | Dropbox में उपलब्ध स्टोरेज | फ़ाइलों के वास्तविक स्टोरेज स्थान के रूप में |
 
 ## कॉन्फ़िगरेशन चरण
@@ -33,8 +33,8 @@ App folder
 
 | एक्सेस प्रकार | सुझाव |
 | --- | --- |
-| `App folder` | सुझाया गया। यह ImgBed के फ़ाइल स्टोरेज तरीके से मेल खाता है। |
-| `Full Dropbox` | सुझाया नहीं गया। ImgBed को पूरे खाते की पूर्ण पहुँच की आवश्यकता नहीं है। |
+| `App folder` | सुझाया गया। यह ImgHost के फ़ाइल स्टोरेज तरीके से मेल खाता है। |
+| `Full Dropbox` | सुझाया नहीं गया। ImgHost को पूरे खाते की पूर्ण पहुँच की आवश्यकता नहीं है। |
 
 ![Dropbox ऐप्लिकेशन बनाएँ](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 Dropbox ऐप्लिकेशन पेज से ये दो मान सहेजें:
 
-| Dropbox फ़ील्ड | ImgBed फ़ील्ड |
+| Dropbox फ़ील्ड | ImgHost फ़ील्ड |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Dropbox ऐप्लिकेशन पेज से ये दो मान स
 
 अपलोड सेटिंग्स में `Dropbox` चुनें और भरें:
 
-| ImgBed फ़ील्ड | क्या दर्ज करें |
+| ImgHost फ़ील्ड | क्या दर्ज करें |
 | --- | --- |
 | चैनल नाम | पहचानने योग्य नाम, जैसे `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ Dropbox ऐप्लिकेशन पेज से ये दो मान स
 
 ### चरण 6: Refresh Token प्राप्त करें
 
-1. ImgBed में `Get Token` पर क्लिक करें।
+1. ImgHost में `Get Token` पर क्लिक करें।
 2. जिस Dropbox खाते को जोड़ना है उससे साइन इन करें।
 3. अधिकरण अनुरोध स्वीकार करें।
 4. कॉलबैक पेज `Refresh Token` दिखाएगा।
 5. इसे कॉपी करें।
-6. ImgBed में लौटकर `Refresh Token` फ़ील्ड में पेस्ट करें।
+6. ImgHost में लौटकर `Refresh Token` फ़ील्ड में पेस्ट करें।
 
 ![टोकन कॉपी करें](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Dropbox ऐप्लिकेशन पेज से ये दो मान स
 
 | समस्या | समाधान |
 | --- | --- |
-| ImgBed बताता है कि कॉन्फ़िगरेशन अधूरा है | जाँचें कि `App Key`, `App Secret` और `Refresh Token` सभी भरे हुए हैं। |
+| ImgHost बताता है कि कॉन्फ़िगरेशन अधूरा है | जाँचें कि `App Key`, `App Secret` और `Refresh Token` सभी भरे हुए हैं। |
 | अधिकरण पूरा होता है लेकिन `Refresh Token` नहीं दिखता | `Get Token` फिर क्लिक करें और सुनिश्चित करें कि ऑफ़लाइन अधिकरण प्रवाह उपयोग हो रहा है। |
 | अपलोड `required scope 'files.content.write'` के साथ विफल होता है | `files.content.write` सक्षम करें, `Submit` पर क्लिक करें, फिर नया `Refresh Token` लें। |
 | कॉलबैक विफल होता है | पुष्टि करें कि रीडायरेक्ट URI `https://your-domain.com/api/oauth/dropbox/callback` है। |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## संदर्भ

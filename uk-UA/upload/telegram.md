@@ -38,7 +38,7 @@
 5. За підказками введіть username бота. Зазвичай він має закінчуватися на `bot`.
 6. Після створення бота `@BotFather` поверне токен.
 
-Саме цей токен потрібно ввести в ImgBed у полі `Bot Token`.
+Саме цей токен потрібно ввести в ImgHost у полі `Bot Token`.
 
 ![Збережіть токен бота](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. У вікні вибору повідомлення виберіть потрібний канал і надішліть його до `@userinfobot`.
 5. Коли `@userinfobot` поверне результат, скопіюйте число в полі `Id: -100...`.
 
-Число, що починається з `-100`, і є значенням `Session ID (Chat ID)`, яке потрібне ImgBed.
+Число, що починається з `-100`, і є значенням `Session ID (Chat ID)`, яке потрібне ImgHost.
 
 ![Отримання ID каналу](../../image/upload/telegram/获取频道id.png)
 
-### 5. Заповніть канал Telegram в ImgBed
+### 5. Заповніть канал Telegram в ImgHost
 
 Поверніться до діалогу налаштування каналу й заповніть поля так:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

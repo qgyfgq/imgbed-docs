@@ -7,7 +7,7 @@
 | தேவை | பயன்பாடு |
 | --- | --- |
 | GitHub கணக்கு | அணுகல் டோக்கன் உருவாக்கவும் repository own செய்யவும் |
-| GitHub அணுகல் டோக்கன் | ImgBed GitHub API அணுக, releases உருவாக்க, கோப்புகள் பதிவேற்றம் செய்ய |
+| GitHub அணுகல் டோக்கன் | ImgHost GitHub API அணுக, releases உருவாக்க, கோப்புகள் பதிவேற்றம் செய்ய |
 | repository பெயர் | repository name மட்டும் கொடுக்கலாம், உதா. `image` |
 
 ## அமைப்பு படிகள்
@@ -27,7 +27,7 @@
 
 ![GitHub permissions-ஐ சேர்க்கவும்](../../image/upload/github-releases/添加github权限.png)
 
-## படி 2: ImgBed-ல் GitHub Releases சேனல் நிரப்பவும்
+## படி 2: ImgHost-ல் GitHub Releases சேனல் நிரப்பவும்
 
 பதிவேற்ற அமைப்புகள்-ல் `GitHub Releases` தேர்வு செய்த பிறகு:
 
@@ -49,9 +49,9 @@
 
 | அமைப்பு நடத்தை | விளக்கம் |
 | --- | --- |
-| குறுகிய repository பெயர் | ImgBed தற்போதைய GitHub கணக்கை கண்டறிந்து, அதை முழு repository பாதையாக விரிவாக்கும். |
+| குறுகிய repository பெயர் | ImgHost தற்போதைய GitHub கணக்கை கண்டறிந்து, அதை முழு repository பாதையாக விரிவாக்கும். |
 | முழு repository பாதை | `username/repository` பாதை உள்ளிட்டபடியே பயன்படுத்தப்படும். |
-| Repository சரிபார்ப்பு | தற்போதைய தனிப்பட்ட கணக்கு பாதையாக இருந்தால், repository இல்லாதபோது ImgBed அதை தானாக உருவாக்கும். முழு பாதை கைமுறையாக கொடுக்கப்பட்டிருந்தால், அதையே பயன்படுத்தும். |
+| Repository சரிபார்ப்பு | தற்போதைய தனிப்பட்ட கணக்கு பாதையாக இருந்தால், repository இல்லாதபோது ImgHost அதை தானாக உருவாக்கும். முழு பாதை கைமுறையாக கொடுக்கப்பட்டிருந்தால், அதையே பயன்படுத்தும். |
 | Public/private நிலை | repository visibility தற்போதைய switch படி ஒத்திசைக்கப்படும். |
 
 ## விரைவு சரிபார்ப்பு பட்டியல்
@@ -61,9 +61,9 @@ GitHub Releases flow:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

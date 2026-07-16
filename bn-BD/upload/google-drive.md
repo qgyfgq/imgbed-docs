@@ -8,8 +8,8 @@
 | --- | --- |
 | Google অ্যাকাউন্ট | Google Cloud-এ প্রবেশ এবং Google Drive অনুমোদনের জন্য। |
 | Google Cloud প্রকল্প | Drive API চালু করা এবং OAuth পরিচয়পত্র তৈরি করতে। |
-| OAuth 2.0 client | ImgBed `Client ID`, `Client Secret` এবং `Refresh Token` পেতে এটি ব্যবহার করে। |
-| আপনার ImgBed ডোমেইন | OAuth redirect URI হিসেবে ব্যবহার করতে। আপনি যে ডোমেইন ব্যবহার করেন, সেটির সঙ্গে মিলতে হবে। |
+| OAuth 2.0 client | ImgHost `Client ID`, `Client Secret` এবং `Refresh Token` পেতে এটি ব্যবহার করে। |
+| আপনার ImgHost ডোমেইন | OAuth redirect URI হিসেবে ব্যবহার করতে। আপনি যে ডোমেইন ব্যবহার করেন, সেটির সঙ্গে মিলতে হবে। |
 
 ## সেটআপ ধাপ
 
@@ -38,7 +38,7 @@
 2. নতুন client তৈরি করুন।
 3. অ্যাপ্লিকেশন ধরন `Web application` সেট করুন।
 4. client-এর সহজে চেনা যায় এমন নাম দিন।
-5. authorized JavaScript origins-এ আপনার ImgBed URL দিন, যেমন:
+5. authorized JavaScript origins-এ আপনার ImgHost URL দিন, যেমন:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 client তৈরি হলে নিচের মানগুলো কপি করুন:
 
-| তৈরি হওয়া মান | ImgBed ক্ষেত্র |
+| তৈরি হওয়া মান | ImgHost ক্ষেত্র |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ client তৈরি হলে নিচের মানগুলো কপি �
 
 আপলোড সেটিংস-এ `Google Drive` নির্বাচন করে পূরণ করুন:
 
-| ImgBed ক্ষেত্র | কী দেবেন |
+| ImgHost ক্ষেত্র | কী দেবেন |
 | --- | --- |
 | চ্যানেল নাম | সহজে চেনা যায় এমন নাম, যেমন `Main Google Drive`। |
 | Client ID | Google Cloud থেকে পাওয়া Client ID। |
@@ -73,7 +73,7 @@ client তৈরি হলে নিচের মানগুলো কপি �
 | Refresh Token | আপাতত খালি রাখুন। পরের ধাপে নেবেন। |
 | Root directory | ঐচ্ছিক। ডিফল্ট `imgbed`। |
 
-![ImgBed-এ client details পূরণ করা](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![ImgHost-এ client details পূরণ করা](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## ধাপ 5: Refresh Token নিন
 
@@ -82,7 +82,7 @@ client তৈরি হলে নিচের মানগুলো কপি �
 3. অনুমোদন বার্তা সম্পন্ন করুন।
 4. কলব্যাক পৃষ্ঠা একটি `Refresh Token` দেখাবে।
 5. সেটি কপি করুন।
-6. ImgBed-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
+6. ImgHost-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
 
 ![অনুমোদনের পর Refresh Token কপি করা](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

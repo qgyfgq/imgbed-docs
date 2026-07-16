@@ -48,9 +48,9 @@ Po utworzeniu od razu skopiuj i zapisz nowe hasło aplikacji. Zwykle jest pokazy
 
 ![Zapisz nowe hasło aplikacji](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Wypełnij konfigurację WebDAV w ImgBed
+### 2. Wypełnij konfigurację WebDAV w ImgHost
 
-Wróć do ImgBed i dodaj kanał WebDAV:
+Wróć do ImgHost i dodaj kanał WebDAV:
 
 | Pole UI | Wartość |
 | --- | --- |
@@ -68,7 +68,7 @@ Kanał WebDAV używa teraz prawdziwego przesyłania częściowego opartego na se
 
 Małe pliki są przesyłane jako jeden pełny plik. Pliki większe niż 64 MiB są automatycznie dzielone na części po około 10 MiB i przesyłane do zdalnego katalogu chunków.
 
-Usługa WebDAV nie musi obsługiwać `partial update` ani zapisu opartego na offsetach. ImgBed nie scala chunków na zdalnym serwerze w jeden duży plik. Zamiast tego zapisuje manifest chunków i podczas odczytu pliku czyta je po kolei.
+Usługa WebDAV nie musi obsługiwać `partial update` ani zapisu opartego na offsetach. ImgHost nie scala chunków na zdalnym serwerze w jeden duży plik. Zamiast tego zapisuje manifest chunków i podczas odczytu pliku czyta je po kolei.
 
 W praktyce:
 
@@ -77,7 +77,7 @@ W praktyce:
 | 64 MiB lub mniej | Normalny upload | Jeden pełny plik |
 | Więcej niż 64 MiB | Sesyjny upload częściowy | Katalog chunków z wieloma częściami |
 
-Katalog chunków wpływa tylko na układ w zdalnej pamięci. URL pliku w ImgBed się nie zmienia. Użytkownicy nadal otwierają plik przez oryginalny link `/file/...`.
+Katalog chunków wpływa tylko na układ w zdalnej pamięci. URL pliku w ImgHost się nie zmienia. Użytkownicy nadal otwierają plik przez oryginalny link `/file/...`.
 
 ## Kroki konfiguracji
 
@@ -111,7 +111,7 @@ Katalog chunków wpływa tylko na układ w zdalnej pamięci. URL pliku w ImgBed 
 
 To obecna metoda przechowywania dużych plików.
 
-Pliki większe niż 64 MiB nie są scalane w jeden duży plik zdalny. Są zapisywane jako katalog chunków. ImgBed zapisuje manifest i zwraca pełną zawartość, czytając części po kolei.
+Pliki większe niż 64 MiB nie są scalane w jeden duży plik zdalny. Są zapisywane jako katalog chunków. ImgHost zapisuje manifest i zwraca pełną zawartość, czytając części po kolei.
 
 ### Co najpierw sprawdzić, jeśli upload dużych plików się nie udaje?
 

@@ -5,7 +5,7 @@
 | Vereiste | Waarom je dit nodig hebt |
 | --- | --- |
 | Microsoft-account | Voor toegang tot Microsoft-beheerpagina's en autorisatie van OneDrive |
-| Je ImgBed-domein | Voor de OAuth-callback-URL |
+| Je ImgHost-domein | Voor de OAuth-callback-URL |
 | Appregistratie | Voor het genereren van `Client ID` en `Client Secret` |
 | OneDrive-account | De daadwerkelijke opslaglocatie voor bestanden |
 
@@ -52,7 +52,7 @@ Klik na het invullen op registreren.
 
 Kopieer na het aanmaken deze waarden van de overzichtspagina:
 
-| Microsoft-veld | ImgBed-veld |
+| Microsoft-veld | ImgHost-veld |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` voor organisatieaccounts |
@@ -80,14 +80,14 @@ Kopieer na het aanmaken deze waarden van de overzichtspagina:
 | Recht | Doel |
 | --- | --- |
 | `Files.ReadWrite.All` | Bestanden uploaden, mappen maken en bestanden verwijderen |
-| `offline_access` | Laat ImgBed een `Refresh Token` ophalen |
+| `offline_access` | Laat ImgHost een `Refresh Token` ophalen |
 | `User.Read` | Leest account- en quotainformatie |
 
 ### Stap 6: Vul het OneDrive-kanaal in
 
 Kies in Uploadinstellingen `OneDrive` en vul in:
 
-| ImgBed-veld | Wat je invult |
+| ImgHost-veld | Wat je invult |
 | --- | --- |
 | Kanaalnaam | Een herkenbare naam, bijvoorbeeld `Main OneDrive` |
 | Client ID | De Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Kies in Uploadinstellingen `OneDrive` en vul in:
 
 Zo vul je `Tenant ID` in:
 
-| Gekozen accounttype | ImgBed `Tenant ID` |
+| Gekozen accounttype | ImgHost `Tenant ID` |
 | --- | --- |
 | Persoonlijke accounts | `consumers` |
 | Persoonlijke en organisatieaccounts | `common` |
@@ -109,12 +109,12 @@ Zo vul je `Tenant ID` in:
 
 ### Stap 7: Haal het Refresh Token op
 
-1. Klik in ImgBed op `Get Token`.
+1. Klik in ImgHost op `Get Token`.
 2. Meld je aan met het Microsoft-account dat je wilt koppelen.
 3. Keur de autorisatie goed.
 4. De callbackpagina toont een `Refresh Token`.
 5. Kopieer het.
-6. Ga terug naar ImgBed en plak het in het veld `Refresh Token`.
+6. Ga terug naar ImgHost en plak het in het veld `Refresh Token`.
 
 ![Refresh Token kopiëren](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Referenties

@@ -28,7 +28,7 @@ Le nouveau fonctionnement de la géolocalisation IP prend en charge plusieurs so
 
 Renseignez uniquement les services dont vous avez besoin. Il n’est pas nécessaire de configurer tous les champs.
 
-Si aucune clé n’est fournie, ImgBed essaie tout de même des sources gratuites intégrées, mais leur stabilité, leur prise en charge linguistique et leur précision peuvent être inférieures à celles d’un service que vous configurez vous-même.
+Si aucune clé n’est fournie, ImgHost essaie tout de même des sources gratuites intégrées, mais leur stabilité, leur prise en charge linguistique et leur précision peuvent être inférieures à celles d’un service que vous configurez vous-même.
 
 ## Choix recommandés
 
@@ -57,9 +57,9 @@ Vous trouverez l’ID de compte dans le tableau de bord MaxMind, puis vous pourr
 
 ![Configuration de la clé MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Après génération, collez l’Account ID et la License Key dans ImgBed, puis enregistrez.
+Après génération, collez l’Account ID et la License Key dans ImgHost, puis enregistrez.
 
-Le forfait gratuit de MaxMind convient à un usage quotidien, mais il impose des limites de requêtes. Si le quota est dépassé, ImgBed continue d’essayer les autres sources disponibles.
+Le forfait gratuit de MaxMind convient à un usage quotidien, mais il impose des limites de requêtes. Si le quota est dépassé, ImgHost continue d’essayer les autres sources disponibles.
 
 ## Configuration d’ipapi
 
@@ -69,9 +69,9 @@ Ouvrez la console ipapi et copiez l’API Key qui y est affichée.
 
 ![Configuration d’ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Collez-la dans le champ `ipapi Key` d’ImgBed, puis enregistrez.
+Collez-la dans le champ `ipapi Key` d’ImgHost, puis enregistrez.
 
-ipapi prend en charge la géolocalisation IP multilingue. Il est utile lorsque vous souhaitez afficher les adresses dans une langue sélectionnée. Son forfait gratuit impose également des limites de requêtes. Si le quota est épuisé, ImgBed continue d’essayer les autres sources disponibles.
+ipapi prend en charge la géolocalisation IP multilingue. Il est utile lorsque vous souhaitez afficher les adresses dans une langue sélectionnée. Son forfait gratuit impose également des limites de requêtes. Si le quota est épuisé, ImgHost continue d’essayer les autres sources disponibles.
 
 ## Configuration de Tencent Map Key
 

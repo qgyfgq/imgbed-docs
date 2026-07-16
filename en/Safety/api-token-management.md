@@ -40,7 +40,7 @@ Node.js 18 or later is required.
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL, for example `https://image.ai6.me`. |
+| `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
 | `--retries <n>` | No | Temporary failure retry count. Defaults to `3`. |
 | `--timeout-ms <n>` | No | Request timeout. Defaults to `180000`. |

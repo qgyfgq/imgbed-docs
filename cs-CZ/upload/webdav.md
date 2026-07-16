@@ -48,9 +48,9 @@ Po vytvoření nové heslo hned zkopírujte a uložte. Obvykle se zobrazí jen j
 
 ![Uložení nového hesla aplikace](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Vyplňte konfiguraci WebDAV v ImgBed
+### 2. Vyplňte konfiguraci WebDAV v ImgHost
 
-Vraťte se do ImgBed a přidejte kanál WebDAV:
+Vraťte se do ImgHost a přidejte kanál WebDAV:
 
 | Pole UI | Hodnota |
 | --- | --- |
@@ -68,7 +68,7 @@ Kanál WebDAV nyní používá skutečné nahrávání po částech řízené re
 
 Malé soubory se nahrávají jako jeden celý soubor. Soubory větší než 64 MiB se automaticky rozdělí na části kolem 10 MiB a nahrají do vzdáleného adresáře s částmi.
 
-Služba WebDAV nemusí podporovat `partial update` ani offsetové zápisy. ImgBed části na vzdáleném serveru neslučuje do jednoho velkého souboru. Místo toho uloží manifest částí a při požadavku čte části postupně.
+Služba WebDAV nemusí podporovat `partial update` ani offsetové zápisy. ImgHost části na vzdáleném serveru neslučuje do jednoho velkého souboru. Místo toho uloží manifest částí a při požadavku čte části postupně.
 
 Prakticky:
 
@@ -77,7 +77,7 @@ Prakticky:
 | 64 MiB nebo méně | Běžné nahrání | Jeden celý soubor |
 | Více než 64 MiB | Nahrávání po částech řízené relací | Adresář s více částmi |
 
-Adresář s částmi ovlivňuje jen rozložení ve vzdáleném úložišti. URL souboru v ImgBed se nemění. Uživatelé k souboru stále přistupují přes původní odkaz `/file/...`.
+Adresář s částmi ovlivňuje jen rozložení ve vzdáleném úložišti. URL souboru v ImgHost se nemění. Uživatelé k souboru stále přistupují přes původní odkaz `/file/...`.
 
 ## Postup nastavení
 
@@ -111,7 +111,7 @@ Adresář s částmi ovlivňuje jen rozložení ve vzdáleném úložišti. URL 
 
 Je to aktuální způsob ukládání velkých souborů.
 
-Soubory větší než 64 MiB se neslučují do jednoho velkého vzdáleného souboru. Ukládají se jako adresář s částmi. ImgBed zaznamená manifest a vrací celý obsah čtením částí ve správném pořadí.
+Soubory větší než 64 MiB se neslučují do jednoho velkého vzdáleného souboru. Ukládají se jako adresář s částmi. ImgHost zaznamená manifest a vrací celý obsah čtením částí ve správném pořadí.
 
 ### Co zkontrolovat jako první, když selže nahrávání velkých souborů?
 

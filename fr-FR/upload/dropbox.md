@@ -6,7 +6,7 @@
 | --- | --- |
 | Compte Dropbox | Utilisé pour se connecter et autoriser l’application |
 | Application Dropbox | Utilisée pour générer `App Key` et `App Secret` |
-| Domaine ImgBed | Utilisé comme URI de redirection OAuth |
+| Domaine ImgHost | Utilisé comme URI de redirection OAuth |
 | Espace disponible dans Dropbox | Utilisé comme emplacement réel de stockage des fichiers |
 
 ## Étapes de configuration
@@ -33,8 +33,8 @@ Type d’accès recommandé :
 
 | Type d’accès | Recommandation |
 | --- | --- |
-| `App folder` | Recommandé. Correspond à la manière dont ImgBed stocke les fichiers. |
-| `Full Dropbox` | Non recommandé. ImgBed n’a pas besoin d’un accès complet à tout le compte. |
+| `App folder` | Recommandé. Correspond à la manière dont ImgHost stocke les fichiers. |
+| `Full Dropbox` | Non recommandé. ImgHost n’a pas besoin d’un accès complet à tout le compte. |
 
 ![Créer une application Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Important :
 
 Enregistrez ces deux valeurs depuis la page de l’application Dropbox :
 
-| Champ Dropbox | Champ ImgBed |
+| Champ Dropbox | Champ ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Enregistrez ces deux valeurs depuis la page de l’application Dropbox :
 
 Dans les paramètres de téléversement, choisissez `Dropbox` et remplissez :
 
-| Champ ImgBed | Valeur à saisir |
+| Champ ImgHost | Valeur à saisir |
 | --- | --- |
 | Nom du canal | Nom reconnaissable, par exemple `Main Dropbox` |
 | App Key | `App key` Dropbox |
@@ -99,12 +99,12 @@ Dans les paramètres de téléversement, choisissez `Dropbox` et remplissez :
 
 ### Étape 6 : obtenir le Refresh Token
 
-1. Dans ImgBed, cliquez sur `Get Token`.
+1. Dans ImgHost, cliquez sur `Get Token`.
 2. Connectez-vous au compte Dropbox à associer.
 3. Approuvez la demande d’autorisation.
 4. La page de retour affiche un `Refresh Token`.
 5. Copiez-le.
-6. Revenez à ImgBed et collez-le dans le champ `Refresh Token`.
+6. Revenez à ImgHost et collez-le dans le champ `Refresh Token`.
 
 ![Copier le jeton](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Si les limites de quota sont activées, cliquez sur la requête de quota. Après
 
 | Problème | Solution |
 | --- | --- |
-| ImgBed indique que la configuration est incomplète | Vérifiez que `App Key`, `App Secret` et `Refresh Token` sont tous renseignés. |
+| ImgHost indique que la configuration est incomplète | Vérifiez que `App Key`, `App Secret` et `Refresh Token` sont tous renseignés. |
 | L’autorisation se termine mais aucun `Refresh Token` n’apparaît | Cliquez de nouveau sur `Get Token` et assurez-vous que le flux d’autorisation hors ligne est utilisé. |
 | Le téléversement échoue avec `required scope 'files.content.write'` | Activez `files.content.write`, cliquez sur `Submit`, puis obtenez un nouveau `Refresh Token`. |
 | Le retour échoue | Confirmez que l’URI de redirection est `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Références

@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Lối vào này phù hợp nhất để thêm bản sao lưu cho một thư mục hoặc cho tất cả tệp theo lô.
 
-Kênh sao lưu có thể được chọn thủ công, hoặc bạn có thể chọn chuyển tự động và để ImgBed tìm kênh sao lưu phù hợp.
+Kênh sao lưu có thể được chọn thủ công, hoặc bạn có thể chọn chuyển tự động và để ImgHost tìm kênh sao lưu phù hợp.
 
 ## Sao Lưu Từ Chi Tiết Tệp
 
@@ -90,4 +90,4 @@ Miễn là tệp sao lưu khả dụng, hình ảnh, video và liên kết tải
 
 ## Điều Gì Xảy Ra Khi Xóa Tệp
 
-Khi một tệp bị xóa, ImgBed xóa cả tệp chính và tệp sao lưu.
+Khi một tệp bị xóa, ImgHost xóa cả tệp chính và tệp sao lưu.

@@ -38,7 +38,7 @@
 5. 안내에 따라 bot username을 입력합니다. username은 일반적으로 `bot`으로 끝나야 합니다.
 6. bot이 생성되면 `@BotFather`가 bot 토큰을 반환합니다.
 
-이 token이 ImgBed에 입력해야 하는 `Bot Token`입니다.
+이 token이 ImgHost에 입력해야 하는 `Bot Token`입니다.
 
 ![bot token 저장](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. 메시지 선택기에서 대상 채널을 선택하고 `@userinfobot`으로 보냅니다.
 5. `@userinfobot`이 결과를 반환하면 `Id: -100...`으로 표시된 숫자를 복사합니다.
 
-`-100`으로 시작하는 숫자가 ImgBed에 필요한 `Session ID (Chat ID)`입니다.
+`-100`으로 시작하는 숫자가 ImgHost에 필요한 `Session ID (Chat ID)`입니다.
 
 ![channel ID 가져오기](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed에 Telegram 채널 입력하기
+### 5. ImgHost에 Telegram 채널 입력하기
 
 채널 설정 대화상자로 돌아가 다음과 같이 입력합니다.
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

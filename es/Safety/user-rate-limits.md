@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Activar límites de frecuencia
 
-Después de activar "Activar límites de frecuencia", ImgBed rastrea las subidas recientes por dirección IP del usuario que sube.
+Después de activar "Activar límites de frecuencia", ImgHost rastrea las subidas recientes por dirección IP del usuario que sube.
 
 Valores predeterminados:
 

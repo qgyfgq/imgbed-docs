@@ -46,7 +46,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed, například `https://image.ai6.me` |
+| `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit jednoho požadavku; výchozí hodnota `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Vytváření složek
 
-Složky v ImgBed vycházejí z cest souborů, takže skutečné prázdné složky neexistují. Když skript vytvoří složku, vytvoří v cílové složce zástupný soubor `0.md`, aby se složka zobrazila ve správě souborů a ve statistikách složek.
+Složky v ImgHost vycházejí z cest souborů, takže skutečné prázdné složky neexistují. Když skript vytvoří složku, vytvoří v cílové složce zástupný soubor `0.md`, aby se složka zobrazila ve správě souborů a ve statistikách složek.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend zpracuje nejvýše `15` souborů v jednom požadavku. Skript má výchoz
 
 ### Lze vytvořit skutečně prázdnou složku
 
-Složky ImgBed jsou odvozené z cest souborů, takže skutečné prázdné složky neexistují. `--create-folder` vytvoří zástupný soubor složky `0.md`, aby se složka zobrazila ve správě souborů a ve statistikách složek.
+Složky ImgHost jsou odvozené z cest souborů, takže skutečné prázdné složky neexistují. `--create-folder` vytvoří zástupný soubor složky `0.md`, aby se složka zobrazila ve správě souborů a ve statistikách složek.
 
 ### Jak dlouho může platit krátkodobý nahrávací Token
 

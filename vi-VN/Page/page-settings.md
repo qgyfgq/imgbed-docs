@@ -8,8 +8,8 @@ Cài đặt trang kiểm soát cách hiển thị trang web, các giá trị m�
 | --- | --- |
 | Tiêu đề trang web | Tiêu đề hiển thị trên thẻ trình duyệt. |
 | Biểu tượng trang web | Biểu tượng nhỏ hiển thị trên thẻ trình duyệt. |
-| Tên ImgBed | Tên hiển thị trên các trang giao diện công khai. |
-| Logo ImgBed | Hình logo hiển thị trên các trang giao diện công khai. |
+| Tên ImgHost | Tên hiển thị trên các trang giao diện công khai. |
+| Logo ImgHost | Hình logo hiển thị trên các trang giao diện công khai. |
 | Liên kết logo | URL được mở khi nhấp vào logo hoặc ảnh đại diện. |
 | Khoảng thời gian đổi nền | Khoảng thời gian xoay vòng nhiều ảnh nền, tính bằng mili giây. `60000` nghĩa là 60 giây. |
 | Độ mờ của nền | Độ mờ của ảnh nền từ `0` đến `1`. Giá trị thấp hơn làm ảnh nhạt hơn. |
@@ -63,5 +63,5 @@ Nền quản trị hỗ trợ URL ảnh. Có thể tách nhiều URL bằng dấ
 | --- | --- |
 | Mặc định | Tiền tố ngẫu nhiên theo thời gian + tên tệp gốc, ví dụ `1760000000000_cat.png`. |
 | Chỉ tiền tố | Chỉ dùng tiền tố ngẫu nhiên theo thời gian và phần mở rộng, ví dụ `1760000000000.png`. |
-| Chỉ tên gốc | Giữ tên tệp gốc, ví dụ `cat.png`. Nếu trùng, ImgBed thêm `(1)`, `(2)` và tiếp tục như vậy. |
+| Chỉ tên gốc | Giữ tên tệp gốc, ví dụ `cat.png`. Nếu trùng, ImgHost thêm `(1)`, `(2)` và tiếp tục như vậy. |
 | Liên kết ngắn | Dùng ID ngắn 8 ký tự kèm phần mở rộng, ví dụ `a1b2c3d4.png`. |

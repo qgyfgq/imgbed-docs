@@ -46,7 +46,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
-| `--base-url <url>` | 예 | ImgBed 사이트 URL. 예: `https://image.ai6.me` |
+| `--base-url <url>` | 예 | ImgHost 사이트 URL. 예: `https://image.ai6.me` |
 | `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다 |
 | `--retries <n>` | 아니요 | 일시적 실패 시 재시도 횟수. 기본값은 `3` |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## 폴더 생성
 
-ImgBed의 디렉터리는 파일 경로에서 만들어지며 실제 빈 디렉터리는 없습니다. 스크립트가 폴더를 만들 때 대상 디렉터리 아래에 자리표시자 파일 `0.md`를 생성합니다. 이렇게 하면 관리자 파일 관리와 디렉터리 통계에서 해당 디렉터리가 표시됩니다.
+ImgHost의 디렉터리는 파일 경로에서 만들어지며 실제 빈 디렉터리는 없습니다. 스크립트가 폴더를 만들 때 대상 디렉터리 아래에 자리표시자 파일 `0.md`를 생성합니다. 이렇게 하면 관리자 파일 관리와 디렉터리 통계에서 해당 디렉터리가 표시됩니다.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ node imgbed-token-manage.mjs `
 
 ### 실제 빈 폴더를 만들 수 있나요
 
-ImgBed 디렉터리는 파일 경로에서 파생되므로 실제 빈 디렉터리는 없습니다. `--create-folder`는 디렉터리 자리표시자 파일 `0.md`를 만들어 해당 디렉터리가 파일 관리와 디렉터리 통계에 표시되도록 합니다.
+ImgHost 디렉터리는 파일 경로에서 파생되므로 실제 빈 디렉터리는 없습니다. `--create-folder`는 디렉터리 자리표시자 파일 `0.md`를 만들어 해당 디렉터리가 파일 관리와 디렉터리 통계에 표시되도록 합니다.
 
 ### 단기 업로드 Token은 최대 얼마나 오래 유지되나요
 

@@ -40,7 +40,7 @@ O repositório da documentação fornece três scripts Node.js:
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed, por exemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
 | `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
 | `--retries <n>` | Não | Número de tentativas para falhas temporárias; padrão `3` |
 | `--timeout-ms <n>` | Não | Timeout de cada requisição; padrão `180000` |

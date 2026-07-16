@@ -41,7 +41,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 3. 右上の三点メニューをクリックします。
 4. `Duplicate this Space` を選択します。
 5. Space 名は既定のままにするか、`wd-tagger` など任意の名前を指定します。
-6. 公開範囲は `Public` に設定します。Public Space の方が ImgBed から呼び出しやすくなります。
+6. 公開範囲は `Public` に設定します。Public Space の方が ImgHost から呼び出しやすくなります。
 7. 最初は既定の無料ハードウェアを使用します。キューが明らかに目立つ場合だけ、後からアップグレードします。
 8. Space を作成し、ビルドが完了するまで待ちます。
 
@@ -51,7 +51,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-ブラウザの URL をコピーし、ImgBed の `Space URLs` に貼り付けます。
+ブラウザの URL をコピーし、ImgHost の `Space URLs` に貼り付けます。
 
 ## 複数の Space URL を入力する
 
@@ -65,7 +65,7 @@ Space URL は 1 行に 1 つずつ入力します。
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | コピーした Space ページの URL。 |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | 自分で複製した Space ページの URL。 |
 
-複数の URL を入力できます。ImgBed は複数の Space を併用するため、処理速度の向上が期待できます。
+複数の URL を入力できます。ImgHost は複数の Space を併用するため、処理速度の向上が期待できます。
 
 いずれかの Space が一時的に利用できない場合でも、他の Space で処理を継続できます。
 
@@ -103,13 +103,13 @@ Space URL は 1 行に 1 つずつ入力します。
 3. タグ付け開始をクリックします。
 4. 処理が完了するまで待ちます。
 
-対象フォルダが空の場合、ImgBed はすべてのフォルダを処理します。
+対象フォルダが空の場合、ImgHost はすべてのフォルダを処理します。
 
 一括タグ付けは既存画像に適しています。新しい画像にはアップロード時の自動タグ付けを有効にしておくと、毎回手動で実行する必要がありません。
 
 ## アップロード時の自動タグ付け
 
-アップロード時の自動タグ付けを有効にすると、新しくアップロードされた画像に対して、ImgBed が設定済みの `Space URLs` を自動的に呼び出します。
+アップロード時の自動タグ付けを有効にすると、新しくアップロードされた画像に対して、ImgHost が設定済みの `Space URLs` を自動的に呼び出します。
 
 長期運用に適しています。
 
@@ -121,19 +121,19 @@ Space がキュー待ちの場合でも、アップロード自体は先に完�
 
 タグ、向き、レーティング、幅、高さがすでに揃っている画像は、不要な Space 呼び出しを避けるためスキップされます。
 
-可能な場合、ImgBed は不足している情報だけを補完します。たとえば向きだけが不足している場合、コンテンツタグ付け全体のフローを呼び出さずに向きの追加を試みます。
+可能な場合、ImgHost は不足している情報だけを補完します。たとえば向きだけが不足している場合、コンテンツタグ付け全体のフローを呼び出さずに向きの追加を試みます。
 
 ## よくある質問
 
 ### なぜ自分の Space を複製するのですか？
 
-公開 Space は多くのユーザーで共有されます。自分で複製した Space は主に自分の ImgBed サイトで使用するため、通常はより高速で安定します。
+公開 Space は多くのユーザーで共有されます。自分で複製した Space は主に自分の ImgHost サイトで使用するため、通常はより高速で安定します。
 
 ### Space が起動中のままです
 
 初回作成後、または長時間アイドル状態だった後は、Space の起動に時間がかかることがあります。
 
-先に自分の Space ページを開きます。画像を正常に認識できるようになってから ImgBed に戻り、タグ付けを開始してください。
+先に自分の Space ページを開きます。画像を正常に認識できるようになってから ImgHost に戻り、タグ付けを開始してください。
 
 ### Space URL はどうコピーしますか？
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

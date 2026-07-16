@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Deze ingang is vooral handig om back-ups toe te voegen aan een map of aan alle bestanden in één keer.
 
-Het back-upkanaal kan handmatig worden gekozen, of je kiest automatische selectie en laat ImgBed een geschikt back-upkanaal zoeken.
+Het back-upkanaal kan handmatig worden gekozen, of je kiest automatische selectie en laat ImgHost een geschikt back-upkanaal zoeken.
 
 ## Back-up vanuit bestandsdetails
 
@@ -90,4 +90,4 @@ Zolang het back-upbestand beschikbaar is, blijven afbeeldingen, video's en downl
 
 ## Wat gebeurt er wanneer een bestand wordt verwijderd
 
-Wanneer een bestand wordt verwijderd, verwijdert ImgBed zowel het primaire bestand als het back-upbestand.
+Wanneer een bestand wordt verwijderd, verwijdert ImgHost zowel het primaire bestand als het back-upbestand.

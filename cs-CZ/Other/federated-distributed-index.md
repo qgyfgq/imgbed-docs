@@ -1,6 +1,6 @@
 # Federovaný distribuovaný index
 
-Federovaný distribuovaný index umožňuje více webům ImgBed vzájemně sdílet seznamy souborů.
+Federovaný distribuovaný index umožňuje více webům ImgHost vzájemně sdílet seznamy souborů.
 
 Jednoduše řečeno:
 
@@ -23,7 +23,7 @@ Stránka má tři karty:
 | Karta | Účel |
 | --- | --- |
 | Místní uzel | Zapnout vlastní uzel, potvrdit veřejnou doménu, vybrat sdílené složky a aktualizovat odchozí index |
-| Uzly, ke kterým jsem se připojil | Spravovat další uzly ImgBed, ke kterým jste se připojili |
+| Uzly, ke kterým jsem se připojil | Spravovat další uzly ImgHost, ke kterým jste se připojili |
 | Uzly, které se připojují ke mně | Spravovat žádosti ostatních, kteří se chtějí připojit k vašemu uzlu |
 
 ## První nastavení
@@ -32,7 +32,7 @@ Stránka má tři karty:
 2. Zapněte `Enable`.
 3. V části `Sync folders` vyberte složky ke sdílení.
 4. Klikněte na `Update Outbound Index`.
-5. Pokud ImgBed zjistí změnu domény, před pokračováním potvrďte, že aktuální doména je správná.
+5. Pokud ImgHost zjistí změnu domény, před pokračováním potvrďte, že aktuální doména je správná.
 
 Můžete vybrat více synchronizovaných složek.
 
@@ -44,7 +44,7 @@ Pokud je seznam synchronizovaných složek prázdný, sdílejí se všechny slo�
 
 Veřejná doména je URL webu, kterou ostatní uzly používají pro přístup k vašemu uzlu.
 
-ImgBed ji zjistí automaticky. Nemusíte ji zadávat ručně. Při první aktualizaci indexu se ImgBed zeptá, zda je aktuální přístupová URL produkční doménou.
+ImgHost ji zjistí automaticky. Nemusíte ji zadávat ručně. Při první aktualizaci indexu se ImgHost zeptá, zda je aktuální přístupová URL produkční doménou.
 
 Pokud později doménu změníte, aktualizace indexu se znovu zeptá na potvrzení.
 
@@ -116,7 +116,7 @@ Po odhlášení se federovaný index tohoto uzlu odstraní z vašeho místního 
 ### Vygenerování pozvánkového odkazu
 
 1. Ujistěte se, že je místní uzel zapnutý.
-2. Klikněte alespoň jednou na `Update Outbound Index`, aby ImgBed potvrdil veřejnou doménu.
+2. Klikněte alespoň jednou na `Update Outbound Index`, aby ImgHost potvrdil veřejnou doménu.
 3. Otevřete `Nodes Joining Me`.
 4. Klikněte na `Reset Invitation Link`.
 5. Zkopírujte pozvánkový odkaz a pošlete ho druhému vlastníkovi.

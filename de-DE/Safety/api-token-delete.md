@@ -1,6 +1,6 @@
 # Dateien mit API Token löschen
 
-Das Löschen per API Token ist für Skripte, Automatisierungen und externe Programme gedacht. Der Administrationsbereich muss nicht geöffnet werden: Website-Adresse, API Token und konkrete Datei-IDs reichen aus, um eine oder mehrere Dateien aus ImgBed zu löschen.
+Das Löschen per API Token ist für Skripte, Automatisierungen und externe Programme gedacht. Der Administrationsbereich muss nicht geöffnet werden: Website-Adresse, API Token und konkrete Datei-IDs reichen aus, um eine oder mehrere Dateien aus ImgHost zu löschen.
 
 Löschen ist eine schreibende Operation. Nach Ausführung des Befehls werden die Daten tatsächlich entfernt. Prüfe am besten zuerst mit `imgbed-token-list.mjs`, welche `fileId`-Werte gelöscht werden sollen, und übergib diese IDs danach an das Löschskript.
 
@@ -63,7 +63,7 @@ Nach erfolgreichem Löschen verarbeitet die Serverseite automatisch Dateiindizes
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adresse der ImgBed-Website, zum Beispiel `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
 | `--file-id <id>` | Ja | Datei-ID, die gelöscht werden soll; kann mehrfach angegeben werden |
 | `--strictness <strict\|soft>` | Nein | Löschstrenge; Standardwert `strict` |
@@ -80,10 +80,10 @@ Dieses Skript löscht nur die ausdrücklich übergebenen `--file-id`-Werte. Es f
 
 | Modus | Beschreibung |
 | --- | --- |
-| `strict` | Standardmodus. Wenn das Löschen im entfernten Speicher fehlschlägt, bleibt der ImgBed-Eintrag erhalten, damit später erneut versucht oder geprüft werden kann |
-| `soft` | Wenn das Löschen im entfernten Speicher fehlschlägt, wird der ImgBed-Eintrag trotzdem bereinigt und das Ergebnis enthält eine Warnung |
+| `strict` | Standardmodus. Wenn das Löschen im entfernten Speicher fehlschlägt, bleibt der ImgHost-Eintrag erhalten, damit später erneut versucht oder geprüft werden kann |
+| `soft` | Wenn das Löschen im entfernten Speicher fehlschlägt, wird der ImgHost-Eintrag trotzdem bereinigt und das Ergebnis enthält eine Warnung |
 
-Wenn der entfernte Dateiinhalt zwingend gelöscht werden muss, damit die Aktion als erfolgreich gilt, verwende den Standardmodus `strict`. Wenn eine entfernte Plattform die Datei nicht mehr löschen kann und nur der ImgBed-Eintrag bereinigt werden soll, verwende `soft`.
+Wenn der entfernte Dateiinhalt zwingend gelöscht werden muss, damit die Aktion als erfolgreich gilt, verwende den Standardmodus `strict`. Wenn eine entfernte Plattform die Datei nicht mehr löschen kann und nur der ImgHost-Eintrag bereinigt werden soll, verwende `soft`.
 
 ## Beispiele
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-ImgBed-Eintrag auch bei fehlgeschlagenem Löschen im entfernten Speicher bereinigen:
+ImgHost-Eintrag auch bei fehlgeschlagenem Löschen im entfernten Speicher bereinigen:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Vor dem Löschen `fileId` prüfen
 
-Das Löschskript benötigt die ImgBed-Datei-ID. Mit dem Listenskript kannst du zuerst die Dateien in einem Ordner ansehen:
+Das Löschskript benötigt die ImgHost-Datei-ID. Mit dem Listenskript kannst du zuerst die Dateien in einem Ordner ansehen:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Das Feld `name` im Ergebnis ist normalerweise die `fileId`, die an das Löschskr
 
 ### Warum ist das Löschen fehlgeschlagen, aber die Datei steht noch in der Liste?
 
-Im Standardmodus `strict` bleibt der ImgBed-Eintrag erhalten, wenn das Löschen im entfernten Speicher fehlschlägt. So wird vermieden, dass nur der lokale Index gelöscht wird, während die entfernte Datei weiter existiert. Wenn sicher ist, dass nur der ImgBed-Eintrag bereinigt werden soll, wiederhole denselben `fileId` mit `soft`.
+Im Standardmodus `strict` bleibt der ImgHost-Eintrag erhalten, wenn das Löschen im entfernten Speicher fehlschlägt. So wird vermieden, dass nur der lokale Index gelöscht wird, während die entfernte Datei weiter existiert. Wenn sicher ist, dass nur der ImgHost-Eintrag bereinigt werden soll, wiederhole denselben `fileId` mit `soft`.
 
 ### Warum enthält das Ergebnis Warnungen?
 

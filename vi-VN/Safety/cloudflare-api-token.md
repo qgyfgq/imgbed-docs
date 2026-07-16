@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Thông tin xác thực Cloudflare API cho phép ImgBed xóa bộ nhớ đệm Cloudflare CDN sau khi tệp thay đổi.
+Thông tin xác thực Cloudflare API cho phép ImgHost xóa bộ nhớ đệm Cloudflare CDN sau khi tệp thay đổi.
 
 ![Cài đặt Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare có thể lưu bộ nhớ đệm các URL hình ảnh công khai.
 
 Việc lưu bộ nhớ đệm giúp phân phối hình ảnh nhanh hơn, nhưng cũng có thể khiến nội dung cũ vẫn hiển thị một thời gian sau khi bạn xóa, chặn, thay thế hoặc di chuyển tệp.
 
-Sau khi cấu hình thông tin xác thực Cloudflare API, ImgBed sẽ cố gắng xóa bộ nhớ đệm Cloudflare liên quan khi các thao tác đó hoàn tất.
+Sau khi cấu hình thông tin xác thực Cloudflare API, ImgHost sẽ cố gắng xóa bộ nhớ đệm Cloudflare liên quan khi các thao tác đó hoàn tất.
 
 Điều này hữu ích khi:
 
@@ -36,18 +36,18 @@ Sau khi cấu hình thông tin xác thực Cloudflare API, ImgBed sẽ cố gắ
 
 ## Điều gì xảy ra nếu để trống
 
-ImgBed vẫn hoạt động bình thường nếu không có cài đặt này.
+ImgHost vẫn hoạt động bình thường nếu không có cài đặt này.
 
-Khác biệt duy nhất là ImgBed sẽ không chủ động xóa bộ nhớ đệm Cloudflare CDN. Khách truy cập có thể tiếp tục thấy nội dung cũ cho đến khi bộ nhớ đệm Cloudflare tự hết hạn.
+Khác biệt duy nhất là ImgHost sẽ không chủ động xóa bộ nhớ đệm Cloudflare CDN. Khách truy cập có thể tiếp tục thấy nội dung cũ cho đến khi bộ nhớ đệm Cloudflare tự hết hạn.
 
 ## Cách tìm Zone ID
 
-Zone ID là Cloudflare Zone ID của trang web dùng cho miền ImgBed của bạn.
+Zone ID là Cloudflare Zone ID của trang web dùng cho miền ImgHost của bạn.
 
 1. Đăng nhập vào bảng điều khiển Cloudflare.
-2. Mở trang web chứa miền ImgBed của bạn.
+2. Mở trang web chứa miền ImgHost của bạn.
 3. Tìm `Zone ID` trên trang tổng quan của trang web.
-4. Sao chép giá trị đó vào trường `Zone ID` trong ImgBed.
+4. Sao chép giá trị đó vào trường `Zone ID` trong ImgHost.
 
 Đây là Zone ID của trang web, không phải account ID.
 
@@ -66,7 +66,7 @@ Nhập Cloudflare Global API Key của bạn.
 3. Đi tới trang API Tokens.
 4. Tìm `Global API Key`.
 5. Xem và sao chép giá trị đó.
-6. Dán vào trường `API Key` trong ImgBed.
+6. Dán vào trường `API Key` trong ImgHost.
 
 ![Xem khóa API toàn cục](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ Nếu miền của bạn không dùng Cloudflare, hoặc bạn không ngại đ�
 
 Thông thường là không.
 
-Thông tin xác thực sai chỉ khiến ImgBed không xóa được bộ nhớ đệm Cloudflare. Tải lên và truy cập tệp thông thường vẫn nên hoạt động.
+Thông tin xác thực sai chỉ khiến ImgHost không xóa được bộ nhớ đệm Cloudflare. Tải lên và truy cập tệp thông thường vẫn nên hoạt động.
 
 ### Vì sao hình ảnh đã xóa vẫn mở được?
 
 Lý do thường gặp nhất là Cloudflare vẫn đang lưu tệp cũ trong bộ nhớ đệm.
 
-Với thông tin xác thực Cloudflare API đúng, ImgBed xóa bộ nhớ đệm URL liên quan khi tệp bị xóa.
+Với thông tin xác thực Cloudflare API đúng, ImgHost xóa bộ nhớ đệm URL liên quan khi tệp bị xóa.
 
 ### Vì sao tôi vẫn thấy hình ảnh cũ sau khi thay thế tệp?
 
 Điều này cũng thường do bộ nhớ đệm CDN gây ra.
 
-Sau khi cài đặt này được cấu hình, ImgBed cố gắng xóa bộ nhớ đệm URL cũ khi một tệp có cùng tên bị ghi đè.
+Sau khi cài đặt này được cấu hình, ImgHost cố gắng xóa bộ nhớ đệm URL cũ khi một tệp có cùng tên bị ghi đè.

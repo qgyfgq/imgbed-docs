@@ -1,6 +1,6 @@
 # Liệt kê và lọc bằng API Token
 
-Các tập lệnh liệt kê bằng API Token hữu ích khi tập lệnh, tác vụ tự động hoặc chương trình của bên thứ ba cần đọc dữ liệu ImgBed. Chúng chỉ dùng quyền `list`. Chúng không tải tệp lên, không xóa tệp, không thay đổi cấu hình và không chặn hoặc cho phép bất kỳ địa chỉ IP nào.
+Các tập lệnh liệt kê bằng API Token hữu ích khi tập lệnh, tác vụ tự động hoặc chương trình của bên thứ ba cần đọc dữ liệu ImgHost. Chúng chỉ dùng quyền `list`. Chúng không tải tệp lên, không xóa tệp, không thay đổi cấu hình và không chặn hoặc cho phép bất kỳ địa chỉ IP nào.
 
 ![Chỉnh sửa API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Yêu cầu Node.js 18 trở lên.
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
-| `--base-url <url>` | Có | URL trang ImgBed, ví dụ `https://image.ai6.me`. |
+| `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
 | `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
 | `--retries <n>` | Không | Số lần thử lại khi lỗi tạm thời. Mặc định là `3`. |
 | `--timeout-ms <n>` | Không | Thời gian chờ cho mỗi yêu cầu. Mặc định là `180000`. |

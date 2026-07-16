@@ -4,19 +4,19 @@
 
 Gunakan Cloudflare R2 jika:
 
-- situs ImgBed Anda sudah dideploy di Cloudflare dan Anda ingin menyimpan berkas di bucket R2 pada akun Cloudflare yang sama;
+- situs ImgHost Anda sudah dideploy di Cloudflare dan Anda ingin menyimpan berkas di bucket R2 pada akun Cloudflare yang sama;
 - Anda tidak ingin mengatur endpoint S3, kunci akses, dan kunci rahasia secara terpisah;
 - Anda ingin proses baca dan tulis berjalan melalui binding R2 Worker atau Pages dengan konfigurasi minimal.
 
 Singkatnya:
 
-Kanal R2 tidak dibuat secara manual di panel admin ImgBed. Anda harus lebih dulu mengikat bucket R2 ke proyek Cloudflare, dan nama variabel binding harus persis `img_r2`.
+Kanal R2 tidak dibuat secara manual di panel admin ImgHost. Anda harus lebih dulu mengikat bucket R2 ke proyek Cloudflare, dan nama variabel binding harus persis `img_r2`.
 
 ## Yang Diperlukan Sebelum Memulai
 
 - Akun Cloudflare.
 - Bucket R2 yang sudah ada.
-- Izin untuk mengelola proyek Cloudflare tempat ImgBed dideploy.
+- Izin untuk mengelola proyek Cloudflare tempat ImgHost dideploy.
 
 ## Mengonfigurasi di Cloudflare
 
@@ -31,7 +31,7 @@ Berkas yang diunggah akan disimpan di bucket ini.
 
 ![Membuat bucket R2](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Mengikat Bucket ke Proyek ImgBed
+### 2. Mengikat Bucket ke Proyek ImgHost
 
 Pilih lokasi binding sesuai jenis deployment:
 
@@ -51,9 +51,9 @@ Nama variabel harus persis `img_r2`. Proses unggah, baca, dan hapus berkas R2 se
 
 ### 3. Redeploy Proyek
 
-Setelah menyimpan binding, redeploy ImgBed agar runtime Worker atau Pages dapat mengakses `img_r2`.
+Setelah menyimpan binding, redeploy ImgHost agar runtime Worker atau Pages dapat mengakses `img_r2`.
 
-## Yang Akan Terlihat di ImgBed
+## Yang Akan Terlihat di ImgHost
 
 Setelah binding R2 tersedia, buka:
 
@@ -82,19 +82,19 @@ Ini adalah kanal tetap berbasis binding. Anda tidak perlu mengeklik Tambah kanal
 | Batas kuota | Mengontrol apakah kanal R2 ini ikut dalam pemilihan unggahan berdasarkan kapasitas. | Tidak |
 | Ambang batas | Menghentikan penulisan ke kanal ini setelah penggunaan mencapai persentase yang ditentukan. | Wajib saat batas kuota aktif |
 
-Account ID dapat disalin dari panel informasi akun di Cloudflare Dashboard. Isi hanya jika Anda ingin ImgBed menanyakan dan menerapkan penggunaan kuota R2.
+Account ID dapat disalin dari panel informasi akun di Cloudflare Dashboard. Isi hanya jika Anda ingin ImgHost menanyakan dan menerapkan penggunaan kuota R2.
 
 ![Mendapatkan Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Langkah Konfigurasi
 
 1. Buat bucket R2 di Cloudflare.
-2. Buka pengaturan Cloudflare untuk proyek ImgBed.
+2. Buka pengaturan Cloudflare untuk proyek ImgHost.
 3. Tambahkan binding bucket R2.
 4. Atur nama variabel menjadi `img_r2`.
 5. Pilih bucket R2 yang sudah dibuat.
-6. Simpan binding dan redeploy ImgBed.
-7. Kembali ke ImgBed -> Pengaturan sistem -> Pengaturan unggah.
+6. Simpan binding dan redeploy ImgHost.
+7. Kembali ke ImgHost -> Pengaturan sistem -> Pengaturan unggah.
 8. Pastikan kanal `Cloudflare R2` muncul dan aktif.
 
 Jika Anda ingin R2 ikut dalam pemilihan unggahan berdasarkan kapasitas, aktifkan batas kuota, lalu masukkan Account ID, nama bucket, batas kuota, dan ambang batas sebelum menyimpan.

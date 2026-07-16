@@ -48,9 +48,9 @@ Después de crearla, copie y guarde la nueva contraseña de aplicación. Normalm
 
 ![Guardar la nueva contraseña de aplicación](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Completar la configuración WebDAV en ImgBed
+### 2. Completar la configuración WebDAV en ImgHost
 
-Vuelva a ImgBed y añada un canal WebDAV:
+Vuelva a ImgHost y añada un canal WebDAV:
 
 | Campo de la interfaz | Valor |
 | --- | --- |
@@ -68,7 +68,7 @@ El canal WebDAV ahora usa carga real por fragmentos basada en sesión.
 
 Los archivos pequeños se cargan como un único archivo completo. Los archivos mayores que 64 MiB se dividen automáticamente en fragmentos de unos 10 MiB y se cargan en un directorio remoto de fragmentos.
 
-El servicio WebDAV no necesita admitir `partial update` ni escrituras basadas en offset. ImgBed no fusiona los fragmentos en un único archivo grande en el servidor remoto. En su lugar, guarda un manifiesto de fragmentos y lee los fragmentos en orden cuando se solicita el archivo.
+El servicio WebDAV no necesita admitir `partial update` ni escrituras basadas en offset. ImgHost no fusiona los fragmentos en un único archivo grande en el servidor remoto. En su lugar, guarda un manifiesto de fragmentos y lee los fragmentos en orden cuando se solicita el archivo.
 
 En la práctica:
 
@@ -77,7 +77,7 @@ En la práctica:
 | 64 MiB o menos | Carga normal | Un archivo completo |
 | Más de 64 MiB | Carga real por fragmentos basada en sesión | Un directorio de fragmentos con varios archivos de fragmento |
 
-El directorio de fragmentos solo afecta a la distribución en el almacenamiento remoto. No cambia la URL del archivo en ImgBed. Los usuarios siguen accediendo al archivo mediante el enlace original `/file/...`.
+El directorio de fragmentos solo afecta a la distribución en el almacenamiento remoto. No cambia la URL del archivo en ImgHost. Los usuarios siguen accediendo al archivo mediante el enlace original `/file/...`.
 
 ## Pasos de configuración
 
@@ -111,7 +111,7 @@ El directorio de fragmentos solo afecta a la distribución en el almacenamiento 
 
 Este es el método de almacenamiento actual para archivos grandes.
 
-Los archivos mayores que 64 MiB no se fusionan en un único archivo remoto grande. Se almacenan como un directorio de fragmentos. ImgBed registra el manifiesto de fragmentos y devuelve el contenido completo leyendo los fragmentos en orden.
+Los archivos mayores que 64 MiB no se fusionan en un único archivo remoto grande. Se almacenan como un directorio de fragmentos. ImgHost registra el manifiesto de fragmentos y devuelve el contenido completo leyendo los fragmentos en orden.
 
 ### ¿Qué debo revisar primero si falla la carga de archivos grandes?
 

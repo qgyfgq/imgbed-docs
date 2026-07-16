@@ -1,6 +1,6 @@
 # Blog
 
-Fungsi blog menambah halaman blog tersendiri pada laman ImgBed anda.
+Fungsi blog menambah halaman blog tersendiri pada laman ImgHost anda.
 
 Selepas diaktifkan, pelawat boleh membuka:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Halaman utama blog](../../image/other/博客/博客首页.png)
 
-Blog ini diadaptasi daripada projek sumber terbuka [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed menulis semula dan mengintegrasikannya dengan Vue supaya ia boleh berjalan sebagai sebahagian daripada laman pengehosan imej.
+Blog ini diadaptasi daripada projek sumber terbuka [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost menulis semula dan mengintegrasikannya dengan Vue supaya ia boleh berjalan sebagai sebahagian daripada laman pengehosan imej.
 
 ## Tempat Mengkonfigurasikannya
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Tunggu mesej kejayaan.
 5. Buka `https://your-domain.com/blog/` untuk melihat blog.
 
-Pada penggunaan pertama, ImgBed menyediakan repositori GitHub peribadi di bawah akaun yang dipilih:
+Pada penggunaan pertama, ImgHost menyediakan repositori GitHub peribadi di bawah akaun yang dipilih:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Aliran kerja biasa:
 2. Masuk ke repositori peribadi `imgbed-blog-config`.
 3. Edit atau tambah fail siaran.
 4. Komit perubahan.
-5. Kembali ke panel pentadbir ImgBed dan klik `Update Blog`, atau klik logo di penjuru kiri atas halaman utama blog sebanyak tiga kali untuk mencetuskan kemas kini blog.
+5. Kembali ke panel pentadbir ImgHost dan klik `Update Blog`, atau klik logo di penjuru kiri atas halaman utama blog sebanyak tiga kali untuk mencetuskan kemas kini blog.
 
 `Update Blog` tidak menimpa kandungan yang telah anda tulis. Ia menyediakan repositori apabila diperlukan dan menyegarkan cache blog.
 
@@ -72,7 +72,7 @@ Statistik lawatan menunjukkan paparan siaran dan lawatan laman, yang membantu an
 
 Blog sentiasa disediakan di bawah `/blog/`.
 
-Contohnya, jika domain ImgBed anda ialah:
+Contohnya, jika domain ImgHost anda ialah:
 
 ```text
 https://image.example.com

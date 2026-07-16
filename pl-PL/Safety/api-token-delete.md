@@ -1,6 +1,6 @@
 # Usuwanie plików przez API Token
 
-Usuwanie przez API Token jest przeznaczone dla skryptów, automatyzacji i programów zewnętrznych. Nie trzeba otwierać panelu administracyjnego: wystarczy adres strony, Token i jednoznaczny ID pliku, aby usunąć jeden albo kilka plików z ImgBed.
+Usuwanie przez API Token jest przeznaczone dla skryptów, automatyzacji i programów zewnętrznych. Nie trzeba otwierać panelu administracyjnego: wystarczy adres strony, Token i jednoznaczny ID pliku, aby usunąć jeden albo kilka plików z ImgHost.
 
 Usuwanie jest operacją zapisu. Po wykonaniu polecenia pliki zostaną naprawdę usunięte. Najpierw sprawdź w `imgbed-token-list.mjs`, które `fileId` mają zostać usunięte, a dopiero potem przekaż te ID do skryptu usuwania.
 
@@ -63,7 +63,7 @@ Po udanym usunięciu serwer automatycznie aktualizuje indeks plików, statystyki
 
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
-| `--base-url <url>` | Tak | Adres ImgBed, np. `https://image.ai6.me` |
+| `--base-url <url>` | Tak | Adres ImgHost, np. `https://image.ai6.me` |
 | `--token <token>` | Tak | API Token; można użyć `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Tak | ID pliku do usunięcia; można podać wiele razy |
 | `--strictness <strict\|soft>` | Nie | Rygor usuwania; domyślnie `strict` |
@@ -80,10 +80,10 @@ Ten skrypt usuwa tylko pliki przekazane jawnie przez `--file-id`. Nie wykonuje w
 
 | Tryb | Opis |
 | --- | --- |
-| `strict` | Tryb domyślny. Jeżeli usunięcie w zdalnym magazynie się nie powiedzie, rekord ImgBed zostaje zachowany, aby można było ponowić próbę albo sprawdzić przyczynę. |
-| `soft` | Jeżeli usunięcie w zdalnym magazynie się nie powiedzie, rekord ImgBed i tak zostanie wyczyszczony, a wynik zwróci ostrzeżenie. |
+| `strict` | Tryb domyślny. Jeżeli usunięcie w zdalnym magazynie się nie powiedzie, rekord ImgHost zostaje zachowany, aby można było ponowić próbę albo sprawdzić przyczynę. |
+| `soft` | Jeżeli usunięcie w zdalnym magazynie się nie powiedzie, rekord ImgHost i tak zostanie wyczyszczony, a wynik zwróci ostrzeżenie. |
 
-Jeśli zdalny plik musi zostać usunięty, aby operacja była uznana za udaną, użyj domyślnego `strict`. Jeśli zdalna platforma nie pozwala już usunąć pliku, ale chcesz tylko posprzątać rekord ImgBed, użyj `soft`.
+Jeśli zdalny plik musi zostać usunięty, aby operacja była uznana za udaną, użyj domyślnego `strict`. Jeśli zdalna platforma nie pozwala już usunąć pliku, ale chcesz tylko posprzątać rekord ImgHost, użyj `soft`.
 
 ## Przykłady użycia
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Wyczyść rekord ImgBed mimo błędu usuwania zdalnego:
+Wyczyść rekord ImgHost mimo błędu usuwania zdalnego:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Sprawdź fileId przed usunięciem
 
-Skrypt usuwania potrzebuje ID pliku z ImgBed. Możesz najpierw użyć skryptu listy, aby zobaczyć pliki w katalogu:
+Skrypt usuwania potrzebuje ID pliku z ImgHost. Możesz najpierw użyć skryptu listy, aby zobaczyć pliki w katalogu:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Wartość `name` w wyniku zwykle jest `fileId`, które można przekazać do skry
 
 ### Dlaczego usuwanie się nie powiodło, ale plik nadal jest na liście?
 
-Przy domyślnym `strict` rekord ImgBed zostaje zachowany, jeżeli usunięcie w zdalnym magazynie się nie powiedzie. Zapobiega to sytuacji, w której znika tylko lokalny indeks, a zdalny plik nadal istnieje. Gdy masz pewność, że można wyczyścić sam rekord ImgBed, ponów próbę dla tego samego `fileId` z `soft`.
+Przy domyślnym `strict` rekord ImgHost zostaje zachowany, jeżeli usunięcie w zdalnym magazynie się nie powiedzie. Zapobiega to sytuacji, w której znika tylko lokalny indeks, a zdalny plik nadal istnieje. Gdy masz pewność, że można wyczyścić sam rekord ImgHost, ponów próbę dla tego samego `fileId` z `soft`.
 
 ### Dlaczego w wyniku jest ostrzeżenie?
 

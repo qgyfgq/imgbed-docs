@@ -4,19 +4,19 @@
 
 ใช้ Cloudflare R2 เมื่อ:
 
-- ImgBed site ของคุณ deploy อยู่บน Cloudflare อยู่แล้ว และต้องการเก็บไฟล์ใน R2 bucket ภายใต้ Cloudflare account เดียวกัน
+- ImgHost site ของคุณ deploy อยู่บน Cloudflare อยู่แล้ว และต้องการเก็บไฟล์ใน R2 bucket ภายใต้ Cloudflare account เดียวกัน
 - ไม่ต้องการตั้งค่า S3 endpoint, access key และ secret key แยกต่างหาก
 - ต้องการให้การอ่านและเขียนผ่าน Worker หรือ Pages R2 binding โดยตั้งค่าน้อยที่สุด
 
 สรุปสั้น ๆ:
 
-ช่องทาง R2 ไม่ได้สร้างด้วยตัวเองในแผงผู้ดูแลของ ImgBed ก่อนอื่นต้อง bind R2 bucket เข้ากับ Cloudflare project และ binding variable name ต้องเป็น `img_r2`
+ช่องทาง R2 ไม่ได้สร้างด้วยตัวเองในแผงผู้ดูแลของ ImgHost ก่อนอื่นต้อง bind R2 bucket เข้ากับ Cloudflare project และ binding variable name ต้องเป็น `img_r2`
 
 ## สิ่งที่ต้องเตรียมก่อนเริ่ม
 
 - บัญชี Cloudflare
 - R2 bucket ที่มีอยู่แล้ว
-- สิทธิ์จัดการ Cloudflare project ที่ deploy ImgBed อยู่
+- สิทธิ์จัดการ Cloudflare project ที่ deploy ImgHost อยู่
 
 ## กำหนดค่าใน Cloudflare
 
@@ -31,7 +31,7 @@ Bucket นี้คือที่เก็บไฟล์ที่อัปโ�
 
 ![สร้าง R2 bucket](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bind Bucket เข้ากับ ImgBed Project
+### 2. Bind Bucket เข้ากับ ImgHost Project
 
 เลือกตำแหน่ง binding ตามประเภท deployment:
 
@@ -51,9 +51,9 @@ Variable name ต้องเป็น `img_r2` แบบตรงตัว ก�
 
 ### 3. Deploy Project ใหม่
 
-หลังบันทึก binding แล้ว ให้ deploy ImgBed ใหม่ เพื่อให้ Worker หรือ Pages runtime เข้าถึง `img_r2` ได้
+หลังบันทึก binding แล้ว ให้ deploy ImgHost ใหม่ เพื่อให้ Worker หรือ Pages runtime เข้าถึง `img_r2` ได้
 
-## สิ่งที่จะเห็นใน ImgBed
+## สิ่งที่จะเห็นใน ImgHost
 
 เมื่อ R2 binding พร้อมใช้งานแล้ว ให้เปิด:
 
@@ -82,19 +82,19 @@ Variable name ต้องเป็น `img_r2` แบบตรงตัว ก�
 | Quota limit | ควบคุมว่าช่องทาง R2 นี้จะเข้าร่วมการเลือกช่องทางอัปโหลดตาม capacity หรือไม่ | ไม่ |
 | Threshold | หยุดเขียนเข้าช่องทางนี้เมื่อ usage ถึง percentage ที่กำหนด | จำเป็นเมื่อเปิด quota limits |
 
-คุณคัดลอก Account ID ได้จากแผงข้อมูลบัญชีใน Cloudflare dashboard กรอกเฉพาะเมื่ออยากให้ ImgBed query และ enforce R2 quota usage
+คุณคัดลอก Account ID ได้จากแผงข้อมูลบัญชีใน Cloudflare dashboard กรอกเฉพาะเมื่ออยากให้ ImgHost query และ enforce R2 quota usage
 
 ![รับ Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## ขั้นตอนตั้งค่า
 
 1. สร้าง R2 bucket ใน Cloudflare
-2. เปิด Cloudflare settings ของ ImgBed project
+2. เปิด Cloudflare settings ของ ImgHost project
 3. เพิ่ม R2 bucket binding
 4. ตั้ง `Variable name` เป็น `img_r2`
 5. เลือก R2 bucket ที่สร้างไว้
-6. บันทึก binding แล้ว deploy ImgBed ใหม่
-7. กลับไปที่ `ImgBed -> System Settings -> Upload Settings`
+6. บันทึก binding แล้ว deploy ImgHost ใหม่
+7. กลับไปที่ `ImgHost -> System Settings -> Upload Settings`
 8. ตรวจสอบว่าช่องทาง `Cloudflare R2` แสดงขึ้นและเปิดใช้งานอยู่
 
 ถ้าต้องการให้ R2 เข้าร่วมการเลือกช่องทางอัปโหลดตาม capacity ให้เปิด quota limit แล้วใส่ Account ID, bucket name, quota limit และ threshold ก่อนบันทึก

@@ -46,7 +46,7 @@ Per eseguire lo script serve Node.js 18 o una versione successiva installata in 
 
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `--base-url <url>` | Sì | URL del sito ImgBed, per esempio `https://image.ai6.me` |
+| `--base-url <url>` | Sì | URL del sito ImgHost, per esempio `https://image.ai6.me` |
 | `--token <token>` | Sì | API Token. Puoi usare anche la variabile d’ambiente `IMGBED_API_TOKEN` |
 | `--retries <n>` | No | Numero di tentativi in caso di errore temporaneo. Valore predefinito `3` |
 | `--timeout-ms <n>` | No | Timeout di una singola richiesta. Valore predefinito `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Creare cartelle
 
-Le directory di ImgBed derivano dai percorsi dei file, quindi non esistono vere directory vuote. Quando lo script crea una cartella, crea un file segnaposto `0.md` nella directory di destinazione, così la directory può comparire nella gestione dei file e nelle statistiche delle directory.
+Le directory di ImgHost derivano dai percorsi dei file, quindi non esistono vere directory vuote. Quando lo script crea una cartella, crea un file segnaposto `0.md` nella directory di destinazione, così la directory può comparire nella gestione dei file e nelle statistiche delle directory.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Il backend elabora al massimo `15` file per richiesta. Lo script usa `--batch-si
 
 ### È possibile creare una vera cartella vuota
 
-Le directory ImgBed sono ricavate dai percorsi dei file, quindi non esistono vere directory vuote. `--create-folder` crea il file segnaposto `0.md`, così la directory può comparire nella gestione dei file e nelle statistiche delle directory.
+Le directory ImgHost sono ricavate dai percorsi dei file, quindi non esistono vere directory vuote. `--create-folder` crea il file segnaposto `0.md`, così la directory può comparire nella gestione dei file e nelle statistiche delle directory.
 
 ### Quanto può durare al massimo un Token di caricamento a breve durata
 

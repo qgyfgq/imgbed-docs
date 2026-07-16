@@ -6,7 +6,7 @@
 | --- | --- |
 | Účet Dropbox | Pro přihlášení a autorizaci aplikace |
 | Aplikace Dropbox | Pro vygenerování `App Key` a `App Secret` |
-| Vaše doména ImgBed | Pro OAuth redirect URI |
+| Vaše doména ImgHost | Pro OAuth redirect URI |
 | Dostupné místo v Dropboxu | Skutečné úložiště pro soubory |
 
 ## Nastavení
@@ -33,8 +33,8 @@ Doporučený typ přístupu:
 
 | Typ přístupu | Doporučení |
 | --- | --- |
-| `App folder` | Doporučeno. Odpovídá tomu, jak ImgBed ukládá soubory. |
-| `Full Dropbox` | Nedoporučeno. ImgBed nepotřebuje plný přístup k celému účtu. |
+| `App folder` | Doporučeno. Odpovídá tomu, jak ImgHost ukládá soubory. |
+| `Full Dropbox` | Nedoporučeno. ImgHost nepotřebuje plný přístup k celému účtu. |
 
 ![Vytvoření aplikace Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Důležité:
 
 Uložte tyto dvě hodnoty ze stránky aplikace Dropbox:
 
-| Pole Dropbox | Pole ImgBed |
+| Pole Dropbox | Pole ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Uložte tyto dvě hodnoty ze stránky aplikace Dropbox:
 
 V Nastavení nahrávání zvolte `Dropbox` a vyplňte:
 
-| Pole ImgBed | Co zadat |
+| Pole ImgHost | Co zadat |
 | --- | --- |
 | Název kanálu | Srozumitelný název, například `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ V Nastavení nahrávání zvolte `Dropbox` a vyplňte:
 
 ### Krok 6: Získejte Refresh Token
 
-1. V ImgBed klikněte na `Get Token`.
+1. V ImgHost klikněte na `Get Token`.
 2. Přihlaste se k účtu Dropbox, který chcete připojit.
 3. Potvrďte autorizaci.
 4. Stránka callbacku zobrazí `Refresh Token`.
 5. Zkopírujte ho.
-6. Vraťte se do ImgBed a vložte ho do pole `Refresh Token`.
+6. Vraťte se do ImgHost a vložte ho do pole `Refresh Token`.
 
 ![Kopírování tokenu](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Pokud jsou zapnuté limity kapacity, spusťte dotaz na kvótu. Po úspěšném d
 
 | Problém | Řešení |
 | --- | --- |
-| ImgBed hlásí neúplnou konfiguraci | Zkontrolujte, že jsou vyplněné `App Key`, `App Secret` i `Refresh Token`. |
+| ImgHost hlásí neúplnou konfiguraci | Zkontrolujte, že jsou vyplněné `App Key`, `App Secret` i `Refresh Token`. |
 | Autorizace proběhne, ale nezobrazí se `Refresh Token` | Klikněte znovu na `Get Token` a ujistěte se, že se používá offline autorizační tok. |
 | Nahrání selže s `required scope 'files.content.write'` | Zapněte `files.content.write`, klikněte na `Submit` a získejte nový `Refresh Token`. |
 | Callback selže | Ověřte, že redirect URI je `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Odkazy

@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Cloudflare API 자격 증명을 설정하면 파일이 변경된 후 ImgBed가 Cloudflare CDN 캐시를 제거할 수 있습니다.
+Cloudflare API 자격 증명을 설정하면 파일이 변경된 후 ImgHost가 Cloudflare CDN 캐시를 제거할 수 있습니다.
 
 ![Cloudflare API Token 설정](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare는 공개 이미지 URL을 캐시할 수 있습니다.
 
 캐시는 이미지 전달을 더 빠르게 하지만, 파일을 삭제, 차단, 교체 또는 이동한 뒤에도 오래된 콘텐츠가 잠시 보일 수 있습니다.
 
-Cloudflare API 자격 증명이 설정되면 ImgBed는 해당 작업이 완료될 때 관련 Cloudflare 캐시 제거를 시도합니다.
+Cloudflare API 자격 증명이 설정되면 ImgHost는 해당 작업이 완료될 때 관련 Cloudflare 캐시 제거를 시도합니다.
 
 다음과 같은 경우에 유용합니다.
 
@@ -36,18 +36,18 @@ Cloudflare API 자격 증명이 설정되면 ImgBed는 해당 작업이 완료�
 
 ## 비워 두는 경우
 
-이 설정이 없어도 ImgBed는 정상적으로 작동합니다.
+이 설정이 없어도 ImgHost는 정상적으로 작동합니다.
 
-차이는 ImgBed가 Cloudflare CDN 캐시를 능동적으로 제거하지 않는다는 점입니다. 방문자는 Cloudflare 캐시가 자연스럽게 만료될 때까지 오래된 콘텐츠를 볼 수 있습니다.
+차이는 ImgHost가 Cloudflare CDN 캐시를 능동적으로 제거하지 않는다는 점입니다. 방문자는 Cloudflare 캐시가 자연스럽게 만료될 때까지 오래된 콘텐츠를 볼 수 있습니다.
 
 ## Zone ID 찾는 방법
 
-Zone ID는 ImgBed 도메인이 사용하는 사이트의 Cloudflare Zone ID입니다.
+Zone ID는 ImgHost 도메인이 사용하는 사이트의 Cloudflare Zone ID입니다.
 
 1. Cloudflare 대시보드에 로그인합니다.
-2. ImgBed 도메인이 포함된 사이트를 엽니다.
+2. ImgHost 도메인이 포함된 사이트를 엽니다.
 3. 사이트 개요 페이지에서 `Zone ID`를 찾습니다.
-4. ImgBed의 `Zone ID` 필드에 복사합니다.
+4. ImgHost의 `Zone ID` 필드에 복사합니다.
 
 이는 사이트 Zone ID이며 account ID가 아닙니다.
 
@@ -66,7 +66,7 @@ Cloudflare Global API Key를 입력합니다.
 3. API Tokens 페이지로 이동합니다.
 4. `Global API Key`를 찾습니다.
 5. 표시한 뒤 복사합니다.
-6. ImgBed의 `API Key` 필드에 붙여 넣습니다.
+6. ImgHost의 `API Key` 필드에 붙여 넣습니다.
 
 ![Global API Key 보기](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ Cloudflare Global API Key를 입력합니다.
 
 일반적으로 그렇지 않습니다.
 
-잘못된 자격 증명은 ImgBed가 Cloudflare 캐시 제거에 실패하게 할 뿐입니다. 업로드와 일반 파일 액세스는 계속 작동해야 합니다.
+잘못된 자격 증명은 ImgHost가 Cloudflare 캐시 제거에 실패하게 할 뿐입니다. 업로드와 일반 파일 액세스는 계속 작동해야 합니다.
 
 ### 삭제한 이미지가 아직 열리는 이유는 무엇인가요?
 
 가장 흔한 원인은 Cloudflare가 오래된 파일을 아직 캐시하고 있기 때문입니다.
 
-올바른 Cloudflare API 자격 증명이 있으면 ImgBed는 파일 삭제 시 관련 URL 캐시를 제거합니다.
+올바른 Cloudflare API 자격 증명이 있으면 ImgHost는 파일 삭제 시 관련 URL 캐시를 제거합니다.
 
 ### 파일을 교체한 뒤에도 오래된 이미지가 보이는 이유는 무엇인가요?
 
 이 역시 일반적으로 CDN 캐시 때문입니다.
 
-이 설정이 구성되면 ImgBed는 같은 이름의 파일이 덮어써질 때 이전 URL 캐시 제거를 시도합니다.
+이 설정이 구성되면 ImgHost는 같은 이름의 파일이 덮어써질 때 이전 URL 캐시 제거를 시도합니다.

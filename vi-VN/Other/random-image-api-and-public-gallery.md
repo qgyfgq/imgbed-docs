@@ -64,7 +64,7 @@ Nếu không có tệp nào khớp sau khi lọc, API sẽ không trả về k�
 
 API ảnh ngẫu nhiên lưu bộ nhớ đệm cho các nhóm ứng viên theo thư mục để cải thiện tốc độ.
 
-Sau khi tệp thay đổi, ImgBed cập nhật phiên bản bộ nhớ đệm của thư mục, và các yêu cầu sau đó sẽ tạo lại nhóm ứng viên. Thư mục trống được lưu bộ nhớ đệm trong thời gian ngắn để tránh truy vấn lặp lại.
+Sau khi tệp thay đổi, ImgHost cập nhật phiên bản bộ nhớ đệm của thư mục, và các yêu cầu sau đó sẽ tạo lại nhóm ứng viên. Thư mục trống được lưu bộ nhớ đệm trong thời gian ngắn để tránh truy vấn lặp lại.
 
 ## Thư Viện Công Khai
 

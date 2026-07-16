@@ -1,6 +1,6 @@
 # Mazání souborů pomocí API Token
 
-Mazání souborů přes API Token je určené pro skripty, automatizaci a externí programy. Není nutné otevírat administraci; stačí zadat adresu webu, API Token a konkrétní ID souborů. Tak lze z ImgBed smazat jeden nebo více souborů.
+Mazání souborů přes API Token je určené pro skripty, automatizaci a externí programy. Není nutné otevírat administraci; stačí zadat adresu webu, API Token a konkrétní ID souborů. Tak lze z ImgHost smazat jeden nebo více souborů.
 
 Mazání je zápisová operace a po spuštění příkazu se data skutečně odstraní. Doporučuje se nejdříve pomocí `imgbed-token-list.mjs` ověřit, které hodnoty `fileId` chcete smazat, a teprve potom je předat mazacímu skriptu.
 
@@ -63,7 +63,7 @@ Po úspěšném smazání server automaticky zpracuje indexy souborů, statistik
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed, například `https://image.ai6.me` |
+| `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Ano | ID souboru ke smazání; lze zadat opakovaně |
 | `--strictness <strict\|soft>` | Ne | Přísnost mazání; výchozí hodnota je `strict` |
@@ -80,10 +80,10 @@ Tento skript maže pouze hodnoty `--file-id`, které výslovně zadáte. Neprov�
 
 | Režim | Popis |
 | --- | --- |
-| `strict` | Výchozí režim. Když se nepodaří smazat soubor ve vzdáleném úložišti, záznam v ImgBed zůstane zachovaný pro pozdější opakování nebo kontrolu |
-| `soft` | Když se nepodaří smazat soubor ve vzdáleném úložišti, záznam v ImgBed se přesto vyčistí a výsledek vrátí varování |
+| `strict` | Výchozí režim. Když se nepodaří smazat soubor ve vzdáleném úložišti, záznam v ImgHost zůstane zachovaný pro pozdější opakování nebo kontrolu |
+| `soft` | Když se nepodaří smazat soubor ve vzdáleném úložišti, záznam v ImgHost se přesto vyčistí a výsledek vrátí varování |
 
-Pokud má být operace úspěšná pouze tehdy, když se smaže i vzdálený soubor, použijte výchozí režim `strict`. Pokud už vzdálená platforma daný soubor smazat neumí a chcete jen vyčistit záznam v ImgBed, použijte `soft`.
+Pokud má být operace úspěšná pouze tehdy, když se smaže i vzdálený soubor, použijte výchozí režim `strict`. Pokud už vzdálená platforma daný soubor smazat neumí a chcete jen vyčistit záznam v ImgHost, použijte `soft`.
 
 ## Příklady použití
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Vyčištění záznamu v ImgBed i při selhání mazání ve vzdáleném úložišti:
+Vyčištění záznamu v ImgHost i při selhání mazání ve vzdáleném úložišti:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Před mazáním ověřte `fileId`
 
-Mazací skript potřebuje ID souboru v ImgBed. Nejprve můžete pomocí vypisovacího skriptu zobrazit soubory ve složce:
+Mazací skript potřebuje ID souboru v ImgHost. Nejprve můžete pomocí vypisovacího skriptu zobrazit soubory ve složce:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Pole `name` ve vráceném výsledku je obvykle hodnota `fileId`, kterou lze pře
 
 ### Proč mazání selhalo, ale soubor je pořád v seznamu?
 
-Při použití výchozího režimu `strict` záznam v ImgBed zůstane zachovaný, pokud se nepodaří smazat soubor ve vzdáleném úložišti. Tím se zabrání situaci, kdy se smaže jen místní index, ale vzdálený soubor dál existuje. Až si ověříte, že chcete vyčistit pouze záznam v ImgBed, zopakujte akci pro stejné `fileId` s režimem `soft`.
+Při použití výchozího režimu `strict` záznam v ImgHost zůstane zachovaný, pokud se nepodaří smazat soubor ve vzdáleném úložišti. Tím se zabrání situaci, kdy se smaže jen místní index, ale vzdálený soubor dál existuje. Až si ověříte, že chcete vyčistit pouze záznam v ImgHost, zopakujte akci pro stejné `fileId` s režimem `soft`.
 
 ### Proč jsou ve výsledku varování?
 

@@ -5,7 +5,7 @@
 | اړتیا | ولې ورته اړتیا ده |
 | --- | --- |
 | Microsoft حساب | د Microsoft د اداري پاڼو د خلاصولو او OneDrive د authorize کولو لپاره |
-| ستاسو ImgBed ډومېن | د OAuth کالبک URL لپاره کارېږي |
+| ستاسو ImgHost ډومېن | د OAuth کالبک URL لپاره کارېږي |
 | اپ registration | د `Client ID` او `Client Secret` جوړولو لپاره |
 | OneDrive حساب | د فایلونو اصلي زېرمه ځای دی |
 
@@ -52,7 +52,7 @@ Continue searching in Microsoft Entra ID
 
 کله چې اپ جوړ شو، له overview پاڼې څخه دا ارزښتونه کاپي کړئ:
 
-| د Microsoft فیلډ | د ImgBed فیلډ |
+| د Microsoft فیلډ | د ImgHost فیلډ |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` د organizational حسابs لپاره |
@@ -80,14 +80,14 @@ Continue searching in Microsoft Entra ID
 | اجازه | موخه |
 | --- | --- |
 | `Files.ReadWrite.All` | فایلونه اپلوډ کوي، folders جوړوي او فایلونه ړنګوي |
-| `offline_access` | ImgBed ته اجازه ورکوي چې `Refresh Token` واخلي |
+| `offline_access` | ImgHost ته اجازه ورکوي چې `Refresh Token` واخلي |
 | `User.Read` | د حساب او کوټه معلومات لولي |
 
 ### 6 ګام: د OneDrive چینل ډک کړئ
 
 په د اپلوډ تنظیمات کې `OneDrive` وټاکئ او دا fields ډک کړئ:
 
-| د ImgBed فیلډ | څه ولیکئ |
+| د ImgHost فیلډ | څه ولیکئ |
 | --- | --- |
 | د چینل نوم | داسې نوم چې وپېژندل شي، لکه `Main OneDrive` |
 | Client ID | د Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Continue searching in Microsoft Entra ID
 
 د `Tenant ID` ډکولو طریقه:
 
-| ټاکل شوی حساب Type | د ImgBed `Tenant ID` |
+| ټاکل شوی حساب Type | د ImgHost `Tenant ID` |
 | --- | --- |
 | Personal حسابs | `consumers` |
 | Personal + organizational حسابs | `common` |
@@ -109,12 +109,12 @@ Continue searching in Microsoft Entra ID
 
 ### 7 ګام: Refresh ټوکن واخلئ
 
-1. په ImgBed کې `Get Token` کلیک کړئ.
+1. په ImgHost کې `Get Token` کلیک کړئ.
 2. هغه Microsoft حساب ته ننوځئ وکړئ چې نښلول یې غواړئ.
 3. د authorization غوښتنه اپrove کړئ.
 4. کالبک page به `Refresh Token` ښکاره کړي.
 5. هغه کاپي کړئ.
-6. بېرته ImgBed ته راشئ او د `Refresh Token` فیلډ کې یې پیسټ کړئ.
+6. بېرته ImgHost ته راشئ او د `Refresh Token` فیلډ کې یې پیسټ کړئ.
 
 ![کاپي refresh ټوکن](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## ماخذونه

@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
-| `--base-url <url>` | 예 | ImgBed 사이트 주소. 예: `https://image.ai6.me` |
+| `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
 | `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--retries <n>` | 아니요 | 일시적 실패 재시도 횟수. 기본값은 `3`입니다. |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000`입니다. |

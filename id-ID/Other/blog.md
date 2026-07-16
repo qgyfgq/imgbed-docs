@@ -1,6 +1,6 @@
 # Blog
 
-Fitur blog menambahkan halaman blog mandiri ke situs ImgBed Anda.
+Fitur blog menambahkan halaman blog mandiri ke situs ImgHost Anda.
 
 Setelah diaktifkan, pengunjung dapat membuka:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Beranda blog](../../image/other/博客/博客首页.png)
 
-Blog ini diadaptasi dari proyek sumber terbuka [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed menulis ulang dan mengintegrasikannya dengan Vue agar dapat berjalan sebagai bagian dari situs hosting gambar.
+Blog ini diadaptasi dari proyek sumber terbuka [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost menulis ulang dan mengintegrasikannya dengan Vue agar dapat berjalan sebagai bagian dari situs hosting gambar.
 
 ## Tempat Mengonfigurasinya
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Tunggu pesan berhasil.
 5. Buka `https://your-domain.com/blog/` untuk melihat blog.
 
-Pada penggunaan pertama, ImgBed menyiapkan repositori GitHub privat di bawah akun yang dipilih:
+Pada penggunaan pertama, ImgHost menyiapkan repositori GitHub privat di bawah akun yang dipilih:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Alur kerja umum:
 2. Masuk ke repositori privat `imgbed-blog-config`.
 3. Edit atau tambahkan file artikel.
 4. Commit perubahan.
-5. Kembali ke panel admin ImgBed dan klik `Update Blog`, atau klik logo di sudut kiri atas beranda blog tiga kali untuk memicu pembaruan blog.
+5. Kembali ke panel admin ImgHost dan klik `Update Blog`, atau klik logo di sudut kiri atas beranda blog tiga kali untuk memicu pembaruan blog.
 
 `Update Blog` tidak menimpa konten yang sudah Anda tulis. Tombol ini menginisialisasi repositori bila diperlukan dan menyegarkan cache blog.
 
@@ -72,7 +72,7 @@ Statistik kunjungan menampilkan jumlah tampilan artikel dan kunjungan situs, seh
 
 Blog selalu disajikan di bawah `/blog/`.
 
-Misalnya, jika domain ImgBed Anda adalah:
+Misalnya, jika domain ImgHost Anda adalah:
 
 ```text
 https://image.example.com

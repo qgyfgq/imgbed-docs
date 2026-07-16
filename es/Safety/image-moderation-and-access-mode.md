@@ -37,7 +37,7 @@ Para sitios privados o sitios con contenido para adultos, el modo adulto puede s
 
 ## Qué hace activar la moderación
 
-Cuando la moderación está activada, ImgBed llama al proveedor de moderación seleccionado durante la subida y guarda la clasificación por edad detectada.
+Cuando la moderación está activada, ImgHost llama al proveedor de moderación seleccionado durante la subida y guarda la clasificación por edad detectada.
 
 Clasificaciones principales:
 
@@ -66,7 +66,7 @@ Cada proveedor tiene requisitos distintos:
 - nsfwjs normalmente requiere una URL de punto de conexión de API.
 - Sightengine requiere un API user y un API secret.
 
-Elija según su cuenta, disponibilidad y calidad de detección. Mientras la moderación esté activada y configurada correctamente, ImgBed intentará escribir una clasificación de imagen durante la subida.
+Elija según su cuenta, disponibilidad y calidad de detección. Mientras la moderación esté activada y configurada correctamente, ImgHost intentará escribir una clasificación de imagen durante la subida.
 
 ## Efecto en la galería pública
 
@@ -85,16 +85,16 @@ Esto solo afecta al acceso público normal. El panel de administración sigue mo
 
 Las URL públicas de archivos son enlaces directos de imágenes abiertos por visitantes.
 
-Si la clasificación del archivo está permitida por el modo de acceso actual, ImgBed devuelve la imagen de origen.
+Si la clasificación del archivo está permitida por el modo de acceso actual, ImgHost devuelve la imagen de origen.
 
-Si la clasificación está por encima del nivel permitido, el acceso público normal no devuelve la imagen de origen. En su lugar, ImgBed devuelve el resultado bloqueado configurado o una imagen de marcador.
+Si la clasificación está por encima del nivel permitido, el acceso público normal no devuelve la imagen de origen. En su lugar, ImgHost devuelve el resultado bloqueado configurado o una imagen de marcador.
 
 Ejemplo:
 
 - El modo actual es el modo infantil.
 - Una imagen está clasificada como R18.
 - Un visitante abre directamente la URL pública.
-- ImgBed no devuelve la imagen de origen R18 a ese visitante.
+- ImgHost no devuelve la imagen de origen R18 a ese visitante.
 
 ![Imagen de archivo restringida](../../image/Safety/文件受限图.png)
 

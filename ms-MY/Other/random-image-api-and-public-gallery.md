@@ -64,7 +64,7 @@ Jika tiada fail yang sepadan selepas penapisan, API mengembalikan tiada hasil ya
 
 API Imej Rawak menyimpan cache kumpulan calon direktori untuk meningkatkan kelajuan.
 
-Selepas fail berubah, ImgBed mengemas kini versi cache direktori, dan permintaan seterusnya membina semula kumpulan calon. Direktori kosong dicache seketika untuk mengelakkan pertanyaan berulang.
+Selepas fail berubah, ImgHost mengemas kini versi cache direktori, dan permintaan seterusnya membina semula kumpulan calon. Direktori kosong dicache seketika untuk mengelakkan pertanyaan berulang.
 
 ## Galeri Awam
 

@@ -7,7 +7,7 @@
 | தேவை | பயன்பாடு |
 | --- | --- |
 | Hugging Face கணக்கு | அணுகல் டோக்கன் உருவாக்கவும் repository own செய்யவும் |
-| Hugging Face User அணுகல் டோக்கன் | ImgBed Hugging Face API அணுக, repositories உருவாக்க, கோப்புகள் பதிவேற்றம் செய்ய |
+| Hugging Face User அணுகல் டோக்கன் | ImgHost Hugging Face API அணுக, repositories உருவாக்க, கோப்புகள் பதிவேற்றம் செய்ய |
 | repository பெயர் | repository name மட்டும் கொடுக்கலாம், உதா. `image` |
 
 ## அமைப்பு படிகள்
@@ -24,7 +24,7 @@
 
 ![டோக்கன் உருவாக்கவும்](../../image/upload/huggingface/创建令牌.png)
 
-## படி 2: ImgBed-ல் Hugging Face சேனல் நிரப்பவும்
+## படி 2: ImgHost-ல் Hugging Face சேனல் நிரப்பவும்
 
 பதிவேற்ற அமைப்புகள்-ல் `Hugging Face` தேர்வு செய்த பிறகு:
 
@@ -46,7 +46,7 @@
 
 | அமைப்பு நடத்தை | விளக்கம் |
 | --- | --- |
-| குறுகிய repository பெயர் | ImgBed தற்போதைய Hugging Face கணக்கை கண்டறிந்து, அதை முழு repository பாதையாக விரிவாக்கும். |
+| குறுகிய repository பெயர் | ImgHost தற்போதைய Hugging Face கணக்கை கண்டறிந்து, அதை முழு repository பாதையாக விரிவாக்கும். |
 | முழு repository பாதை | `username/repository` பாதை நீங்கள் உள்ளிட்டபடியே பயன்படுத்தப்படும். |
 | Repository சரிபார்ப்பு | தற்போதைய தனிப்பட்ட கணக்கு பாதையாக இருந்தால், repository இல்லாதபோது அதை உருவாக்க முயலும். முழு பாதை கைமுறையாக கொடுக்கப்பட்டிருந்தால், அதையே பயன்படுத்தும். |
 | Repository வகை | இந்த சேனல் `dataset` repository-ஐ பயன்படுத்தும். |
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

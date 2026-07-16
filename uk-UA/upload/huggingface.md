@@ -7,7 +7,7 @@
 | Потрібно | Навіщо це потрібно |
 | --- | --- |
 | Обліковий запис Hugging Face | Для створення access token і володіння репозиторієм. |
-| Hugging Face User Access Token | ImgBed використовує його для доступу до Hugging Face API, створення репозиторіїв і завантаження файлів. |
+| Hugging Face User Access Token | ImgHost використовує його для доступу до Hugging Face API, створення репозиторіїв і завантаження файлів. |
 | Назва репозиторію | Можна ввести тільки назву репозиторію, наприклад `image`. |
 
 ## Налаштування
@@ -24,7 +24,7 @@
 
 ![Створення token](../../image/upload/huggingface/创建令牌.png)
 
-## Крок 2. Заповніть канал Hugging Face в ImgBed
+## Крок 2. Заповніть канал Hugging Face в ImgHost
 
 Після вибору `Hugging Face` у налаштуваннях завантаження заповніть поля так:
 
@@ -46,9 +46,9 @@
 
 | Поведінка системи | Опис |
 | --- | --- |
-| Коротка назва репозиторію | ImgBed визначає поточний обліковий запис Hugging Face і розгортає значення до повного шляху репозиторію. |
-| Повний шлях репозиторію | ImgBed використовує шлях `username/repository` саме в тому вигляді, у якому його введено. |
-| Перевірка репозиторію | Якщо використовується шлях поточного особистого акаунта, ImgBed спробує створити репозиторій, якщо його ще немає. Якщо повний шлях введено вручну, ImgBed використовує його напряму. |
+| Коротка назва репозиторію | ImgHost визначає поточний обліковий запис Hugging Face і розгортає значення до повного шляху репозиторію. |
+| Повний шлях репозиторію | ImgHost використовує шлях `username/repository` саме в тому вигляді, у якому його введено. |
+| Перевірка репозиторію | Якщо використовується шлях поточного особистого акаунта, ImgHost спробує створити репозиторій, якщо його ще немає. Якщо повний шлях введено вручну, ImgHost використовує його напряму. |
 | Тип репозиторію | Цей канал використовує репозиторій типу `dataset`. |
 | Публічний або приватний стан | Видимість репозиторію синхронізується відповідно до поточного перемикача. |
 
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

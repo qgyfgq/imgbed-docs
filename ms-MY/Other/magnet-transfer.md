@@ -2,7 +2,7 @@
 
 Pemindahan magnet memuat turun fail daripada pautan magnet dan memuat naiknya secara automatik ke saluran storan awan yang anda pilih.
 
-Fungsi ini berguna untuk memindahkan episod anime, video, arkib dan fail yang seumpamanya. Tampalkan pautan magnet, dan ImgBed akan mencipta tugasan muat turun di latar belakang. Selepas muat turun selesai, fail dimuat naik ke ImgBed dan pautan akhir muncul dalam senarai muat naik.
+Fungsi ini berguna untuk memindahkan episod anime, video, arkib dan fail yang seumpamanya. Tampalkan pautan magnet, dan ImgHost akan mencipta tugasan muat turun di latar belakang. Selepas muat turun selesai, fail dimuat naik ke ImgHost dan pautan akhir muncul dalam senarai muat naik.
 
 ![Pemindahan magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Selepas tetapan sedia, kembali ke halaman utama dan tampalkan pautan magnet untu
 1. Tampalkan pautan magnet ke dalam kotak muat naik halaman utama.
 2. Pastikan mod ditetapkan kepada `Transfer`.
 3. Klik muat naik.
-4. Tunggu ImgBed mencipta tugasan magnet.
+4. Tunggu ImgHost mencipta tugasan magnet.
 5. Selepas tugasan bermula, gunakan panel terapung `Magnet Tasks` di penjuru kanan bawah untuk menyemak kemajuan.
 
 Muat turun dan muat naik boleh mengambil masa. Kelajuan bergantung pada sumber magnet, persekitaran masa jalan GitHub dan saluran storan awan yang dipilih.
@@ -72,7 +72,7 @@ Status biasa:
 
 ## Petua
 
-- Jika pautan magnet mengandungi berbilang fail, ImgBed mengutamakan fail utama yang telah selesai untuk dipaparkan.
+- Jika pautan magnet mengandungi berbilang fail, ImgHost mengutamakan fail utama yang telah selesai untuk dipaparkan.
 - Fail besar mengambil masa lebih lama. Tunggu tugasan selesai sebelum menyegarkan halaman.
 - Jika sumber magnet tiada peer yang tersedia, proses mungkin sangat perlahan atau gagal.
 - Jika akaun awan kehabisan kuota, kebenaran tamat tempoh atau direktori muat naik salah, tugasan mungkin gagal.

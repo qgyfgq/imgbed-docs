@@ -1,6 +1,6 @@
 # Excluir arquivos com API Token
 
-O script de exclusão com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros. Você não precisa abrir o painel administrativo: basta informar o endereço do site, o Token e IDs de arquivo claros para excluir um ou vários arquivos do ImgBed.
+O script de exclusão com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros. Você não precisa abrir o painel administrativo: basta informar o endereço do site, o Token e IDs de arquivo claros para excluir um ou vários arquivos do ImgHost.
 
 Excluir é uma operação de gravação. Depois que o comando é executado, os arquivos são realmente removidos. Por isso, confira primeiro os `fileId` que deseja excluir com `imgbed-token-list.mjs` e só depois passe esses IDs para o script de exclusão.
 
@@ -63,7 +63,7 @@ Depois de uma exclusão bem-sucedida, o servidor também atualiza automaticament
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed, por exemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
 | `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Sim | ID do arquivo a excluir; pode ser informado várias vezes |
 | `--strictness <strict\|soft>` | Não | Rigor da exclusão; padrão `strict` |
@@ -80,10 +80,10 @@ Este script exclui apenas os arquivos informados explicitamente com `--file-id`.
 
 | Modo | Descrição |
 | --- | --- |
-| `strict` | Modo padrão. Se a exclusão no armazenamento remoto falhar, o registro do ImgBed é mantido para facilitar uma nova tentativa ou investigação. |
-| `soft` | Se a exclusão no armazenamento remoto falhar, o registro do ImgBed ainda assim é limpo, e o resultado retorna um aviso. |
+| `strict` | Modo padrão. Se a exclusão no armazenamento remoto falhar, o registro do ImgHost é mantido para facilitar uma nova tentativa ou investigação. |
+| `soft` | Se a exclusão no armazenamento remoto falhar, o registro do ImgHost ainda assim é limpo, e o resultado retorna um aviso. |
 
-Se você quer considerar a operação bem-sucedida somente quando o arquivo remoto também for removido, use o padrão `strict`. Se uma plataforma remota já não consegue excluir o arquivo, mas você quer apenas limpar o registro do ImgBed, use `soft`.
+Se você quer considerar a operação bem-sucedida somente quando o arquivo remoto também for removido, use o padrão `strict`. Se uma plataforma remota já não consegue excluir o arquivo, mas você quer apenas limpar o registro do ImgHost, use `soft`.
 
 ## Exemplos de uso
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Limpar o registro do ImgBed mesmo se a exclusão remota falhar:
+Limpar o registro do ImgHost mesmo se a exclusão remota falhar:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Confira o fileId antes de excluir
 
-O script de exclusão precisa do ID do arquivo no ImgBed. Você pode usar primeiro o script de listagem para ver os arquivos em um diretório:
+O script de exclusão precisa do ID do arquivo no ImgHost. Você pode usar primeiro o script de listagem para ver os arquivos em um diretório:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ O valor `name` no resultado geralmente é o `fileId` que pode ser passado para o
 
 ### Por que a exclusão falhou, mas o arquivo ainda aparece na lista?
 
-Com o padrão `strict`, quando a exclusão no armazenamento remoto falha, o registro do ImgBed é mantido. Isso evita remover apenas o índice local enquanto o arquivo remoto continua existindo. Quando tiver certeza de que pode limpar só o registro do ImgBed, tente novamente o mesmo `fileId` com `soft`.
+Com o padrão `strict`, quando a exclusão no armazenamento remoto falha, o registro do ImgHost é mantido. Isso evita remover apenas o índice local enquanto o arquivo remoto continua existindo. Quando tiver certeza de que pode limpar só o registro do ImgHost, tente novamente o mesmo `fileId` com `soft`.
 
 ### Por que o resultado contém um aviso?
 

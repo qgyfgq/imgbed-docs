@@ -1,9 +1,9 @@
 # Akses Tapak WebDAV
-Tetapan WebDAV dalam Tetapan Keselamatan mendedahkan tapak ImgBed anda sebagai titik akhir WebDAV.
+Tetapan WebDAV dalam Tetapan Keselamatan mendedahkan tapak ImgHost anda sebagai titik akhir WebDAV.
 
-Selepas diaktifkan, anda boleh menggunakan Windows, macOS, pengurus fail mudah alih atau mana-mana klien yang serasi dengan WebDAV untuk menyemak imbas, memuat naik, memadam dan mengurus fail ImgBed seperti folder jauh.
+Selepas diaktifkan, anda boleh menggunakan Windows, macOS, pengurus fail mudah alih atau mana-mana klien yang serasi dengan WebDAV untuk menyemak imbas, memuat naik, memadam dan mengurus fail ImgHost seperti folder jauh.
 
-Ini ialah pintu masuk akses WebDAV untuk tapak. Ia berbeza daripada saluran storan WebDAV dalam Tetapan Muat Naik. Saluran muat naik menyimpan fail dalam perkhidmatan WebDAV pihak ketiga. Tetapan ini membolehkan tapak ImgBed anda menyediakan akses WebDAV kepada klien.
+Ini ialah pintu masuk akses WebDAV untuk tapak. Ia berbeza daripada saluran storan WebDAV dalam Tetapan Muat Naik. Saluran muat naik menyimpan fail dalam perkhidmatan WebDAV pihak ketiga. Tetapan ini membolehkan tapak ImgHost anda menyediakan akses WebDAV kepada klien.
 
 ## Tempat Mengkonfigurasi
 
@@ -23,21 +23,21 @@ Tetapan yang tersedia:
 
 ## Fungsi Ciri Ini
 
-Selepas WebDAV diaktifkan, ImgBed menyediakan URL akses tetap:
+Selepas WebDAV diaktifkan, ImgHost menyediakan URL akses tetap:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Gunakan URL ini untuk bersambung ke direktori fail ImgBed anda.
+Gunakan URL ini untuk bersambung ke direktori fail ImgHost anda.
 
 Kegunaan yang sesuai:
 
-- Menyemak imbas fail ImgBed terus daripada pengurus fail komputer.
+- Menyemak imbas fail ImgHost terus daripada pengurus fail komputer.
 - Menyeret imej ke folder WebDAV untuk memuat naiknya.
-- Menyusun folder ImgBed daripada pengurus fail tempatan.
+- Menyusun folder ImgHost daripada pengurus fail tempatan.
 - Menggunakan perisian yang serasi dengan WebDAV untuk menyegerak atau mengurus imej.
-- Mengakses kandungan ImgBed tanpa membuka panel pentadbir.
+- Mengakses kandungan ImgHost tanpa membuka panel pentadbir.
 
 ## Tetapan
 
@@ -63,7 +63,7 @@ Pilihan biasa:
 
 | Mod | Penerangan |
 | --- | --- |
-| Pemuatan pintar | ImgBed memilih berdasarkan konteks. Disyorkan untuk penggunaan biasa. |
+| Pemuatan pintar | ImgHost memilih berdasarkan konteks. Disyorkan untuk penggunaan biasa. |
 | Asal | Mengutamakan imej asal. |
 | Imej kecil | Mengutamakan imej kecil. Berguna untuk pratonton pantas. |
 
@@ -73,7 +73,7 @@ Jika tidak pasti, kekalkan `Pemuatan pintar`.
 
 Saluran lalai digunakan untuk muat naik WebDAV.
 
-Apabila anda menyalin fail ke direktori WebDAV daripada Windows atau klien lain, ImgBed memuat naik fail tersebut melalui saluran muat naik lalai yang dipilih.
+Apabila anda menyalin fail ke direktori WebDAV daripada Windows atau klien lain, ImgHost memuat naik fail tersebut melalui saluran muat naik lalai yang dipilih.
 
 Jika tiada saluran lalai dipilih, penyemakan imbas mungkin berfungsi, tetapi muat naik boleh gagal.
 

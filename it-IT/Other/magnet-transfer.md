@@ -2,7 +2,7 @@
 
 Il trasferimento tramite magnet link scarica i file da un magnet link e li carica automaticamente nel canale di archiviazione cloud che scegli.
 
-È utile per trasferire episodi anime, video, archivi e file simili. Incolla un magnet link: ImgBed crea un'attività di download in background. Al termine del download, il file viene caricato in ImgBed e il link finale compare nell'elenco dei caricamenti.
+È utile per trasferire episodi anime, video, archivi e file simili. Incolla un magnet link: ImgHost crea un'attività di download in background. Al termine del download, il file viene caricato in ImgHost e il link finale compare nell'elenco dei caricamenti.
 
 ![Trasferimento tramite magnet link](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Quando le impostazioni sono pronte, torna alla homepage e incolla un magnet link
 1. Incolla il magnet link nella casella di caricamento della homepage.
 2. Assicurati che la modalità sia `Transfer`.
 3. Fai clic su Carica.
-4. Attendi che ImgBed crei l'attività magnet.
+4. Attendi che ImgHost crei l'attività magnet.
 5. Dopo l'avvio, usa il pannello flottante `Magnet Tasks` in basso a destra per seguire l'avanzamento.
 
 Il download e il caricamento possono richiedere tempo. La velocità dipende dalla risorsa magnet, dall'ambiente di esecuzione GitHub e dal canale di archiviazione cloud selezionato.
@@ -72,7 +72,7 @@ Stati comuni:
 
 ## Consigli
 
-- Se un magnet link contiene più file, ImgBed dà priorità al file principale completato per la visualizzazione.
+- Se un magnet link contiene più file, ImgHost dà priorità al file principale completato per la visualizzazione.
 - I file grandi richiedono più tempo. Attendi la fine dell'attività prima di aggiornare la pagina.
 - Se la risorsa magnet non ha peer disponibili, può essere molto lenta o fallire.
 - Se l'account cloud ha la quota esaurita, l'autorizzazione scaduta o una directory errata, l'attività può fallire.

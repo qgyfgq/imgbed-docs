@@ -1,6 +1,6 @@
 # API Token فائل حذف کاری
 
-API Token فائل حذف کاری اسکرپٹس، خودکار کاموں، اور فریق ثالث پروگراموں کے لیے ہے۔ آپ کو ایڈمن صفحہ کھولنے کی ضرورت نہیں۔ جب تک آپ سائٹ URL، token، اور واضح file IDs فراہم کرتے ہیں، آپ ImgBed سے ایک یا زیادہ فائلیں حذف کر سکتے ہیں۔
+API Token فائل حذف کاری اسکرپٹس، خودکار کاموں، اور فریق ثالث پروگراموں کے لیے ہے۔ آپ کو ایڈمن صفحہ کھولنے کی ضرورت نہیں۔ جب تک آپ سائٹ URL، token، اور واضح file IDs فراہم کرتے ہیں، آپ ImgHost سے ایک یا زیادہ فائلیں حذف کر سکتے ہیں۔
 
 حذف کاری ایک write operation ہے اور کمانڈ چلنے کے بعد واقعی ڈیٹا حذف کرتی ہے۔ پہلے `imgbed-token-list.mjs` استعمال کر کے ان `fileId` قدروں کی تصدیق کریں جنہیں آپ حذف کرنا چاہتے ہیں، پھر وہ IDs حذف کاری اسکرپٹ کو دیں۔
 
@@ -63,7 +63,7 @@ API ایک NDJSON progress stream واپس کرتا ہے۔ عام events میں 
 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
-| `--base-url <url>` | ہاں | ImgBed سائٹ URL، مثلاً `https://image.ai6.me`۔ |
+| `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
 | `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file-id <id>` | ہاں | حذف کرنے کے لیے file ID۔ آپ اسے کئی بار دے سکتے ہیں۔ |
 | `--strictness <strict\|soft>` | نہیں | حذف کاری کی سختی۔ طے شدہ قدر `strict` ہے۔ |
@@ -80,10 +80,10 @@ API ایک NDJSON progress stream واپس کرتا ہے۔ عام events میں 
 
 | موڈ | وضاحت |
 | --- | --- |
-| `strict` | طے شدہ موڈ۔ اگر remote storage حذف کاری ناکام ہو تو ImgBed ریکارڈ برقرار رہتا ہے تاکہ آپ دوبارہ کوشش یا تحقیق کر سکیں۔ |
-| `soft` | اگر remote storage حذف کاری ناکام ہو، تب بھی ImgBed ریکارڈ صاف کر دیا جاتا ہے، اور نتیجہ ایک تنبیہ واپس کرتا ہے۔ |
+| `strict` | طے شدہ موڈ۔ اگر remote storage حذف کاری ناکام ہو تو ImgHost ریکارڈ برقرار رہتا ہے تاکہ آپ دوبارہ کوشش یا تحقیق کر سکیں۔ |
+| `soft` | اگر remote storage حذف کاری ناکام ہو، تب بھی ImgHost ریکارڈ صاف کر دیا جاتا ہے، اور نتیجہ ایک تنبیہ واپس کرتا ہے۔ |
 
-اگر command کو کامیاب شمار کرنے کے لیے remote file کا حذف ہونا لازمی ہے تو طے شدہ `strict` موڈ استعمال کریں۔ اگر remote platform اب object حذف نہیں کر سکتا اور آپ صرف ImgBed record صاف کرنا چاہتے ہیں تو `soft` استعمال کریں۔
+اگر command کو کامیاب شمار کرنے کے لیے remote file کا حذف ہونا لازمی ہے تو طے شدہ `strict` موڈ استعمال کریں۔ اگر remote platform اب object حذف نہیں کر سکتا اور آپ صرف ImgHost record صاف کرنا چاہتے ہیں تو `soft` استعمال کریں۔
 
 ## مثالیں
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-remote deletion ناکام ہونے پر بھی ImgBed record صاف کریں:
+remote deletion ناکام ہونے پر بھی ImgHost record صاف کریں:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## حذف کرنے سے پہلے `fileId` چیک کریں
 
-حذف کاری اسکرپٹ کو ImgBed file IDs درکار ہوتی ہیں۔ آپ پہلے listing script سے کسی directory میں فائلیں دیکھ سکتے ہیں:
+حذف کاری اسکرپٹ کو ImgHost file IDs درکار ہوتی ہیں۔ آپ پہلے listing script سے کسی directory میں فائلیں دیکھ سکتے ہیں:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ node imgbed-token-list.mjs `
 
 ### حذف کاری ناکام کیوں ہوئی لیکن فائل اب بھی فہرست میں ہے؟
 
-طے شدہ `strict` موڈ استعمال کرتے وقت، اگر remote storage حذف کاری ناکام ہو تو ImgBed record برقرار رہتا ہے۔ اس سے صرف local index حذف ہونے جبکہ remote file موجود رہنے کی صورت سے بچا جاتا ہے۔ یہ تصدیق کرنے کے بعد کہ آپ صرف ImgBed record صاف کرنا چاہتے ہیں، اسی `fileId` کو `soft` کے ساتھ دوبارہ چلائیں۔
+طے شدہ `strict` موڈ استعمال کرتے وقت، اگر remote storage حذف کاری ناکام ہو تو ImgHost record برقرار رہتا ہے۔ اس سے صرف local index حذف ہونے جبکہ remote file موجود رہنے کی صورت سے بچا جاتا ہے۔ یہ تصدیق کرنے کے بعد کہ آپ صرف ImgHost record صاف کرنا چاہتے ہیں، اسی `fileId` کو `soft` کے ساتھ دوبارہ چلائیں۔
 
 ### نتیجے میں تنبیہیں کیوں ہیں؟
 

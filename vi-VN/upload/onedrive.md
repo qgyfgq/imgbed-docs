@@ -5,7 +5,7 @@
 | Yêu cầu | Vì sao cần |
 | --- | --- |
 | Microsoft account | Dùng để access Microsoft admin pages và authorize OneDrive |
-| ImgBed domain của bạn | Dùng cho OAuth callback URL |
+| ImgHost domain của bạn | Dùng cho OAuth callback URL |
 | App registration | Dùng để generate `Client ID` và `Client Secret` |
 | OneDrive account | Dùng làm nơi lưu file thực tế |
 
@@ -52,7 +52,7 @@ Gợi ý chọn account type:
 
 Sau khi app được tạo, sao chép các giá trị này từ overview page:
 
-| Trường Microsoft | Trường ImgBed |
+| Trường Microsoft | Trường ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` cho organizational accounts |
@@ -80,14 +80,14 @@ Sau khi app được tạo, sao chép các giá trị này từ overview page:
 | Quyền | Mục đích |
 | --- | --- |
 | `Files.ReadWrite.All` | Upload files, tạo folders và xóa files |
-| `offline_access` | Cho phép ImgBed lấy `Refresh Token` |
+| `offline_access` | Cho phép ImgHost lấy `Refresh Token` |
 | `User.Read` | Đọc account và quota information |
 
 ### Bước 6: Điền OneDrive Channel
 
 Trong Cài đặt tải lên, chọn `OneDrive` và điền:
 
-| Trường ImgBed | Nhập gì |
+| Trường ImgHost | Nhập gì |
 | --- | --- |
 | Channel name | Tên dễ nhận biết, ví dụ `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Trong Cài đặt tải lên, chọn `OneDrive` và điền:
 
 Cách điền `Tenant ID`:
 
-| Account Type You Chose | ImgBed `Tenant ID` |
+| Account Type You Chose | ImgHost `Tenant ID` |
 | --- | --- |
 | Personal accounts | `consumers` |
 | Personal + organizational accounts | `common` |
@@ -109,12 +109,12 @@ Cách điền `Tenant ID`:
 
 ### Bước 7: Lấy Refresh Token
 
-1. Trong ImgBed, nhấn `Get Token`.
+1. Trong ImgHost, nhấn `Get Token`.
 2. Sign in vào Microsoft account bạn muốn kết nối.
 3. Phê duyệt authorization prompt.
 4. Callback page sẽ hiển thị `Refresh Token`.
 5. Sao chép token đó.
-6. Quay lại ImgBed và dán vào trường `Refresh Token`.
+6. Quay lại ImgHost và dán vào trường `Refresh Token`.
 
 ![Sao chép refresh token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Tài liệu tham khảo

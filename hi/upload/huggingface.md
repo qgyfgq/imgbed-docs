@@ -7,7 +7,7 @@
 | आवश्यकता | उद्देश्य |
 | --- | --- |
 | Hugging Face खाता | एक्सेस टोकन बनाने और रिपॉज़िटरी का मालिक होने के लिए। |
-| Hugging Face उपयोगकर्ता एक्सेस टोकन | ImgBed को Hugging Face API तक पहुँचने, रिपॉज़िटरी बनाने और फ़ाइलें अपलोड करने के लिए। |
+| Hugging Face उपयोगकर्ता एक्सेस टोकन | ImgHost को Hugging Face API तक पहुँचने, रिपॉज़िटरी बनाने और फ़ाइलें अपलोड करने के लिए। |
 | रिपॉज़िटरी नाम | आप केवल रिपॉज़िटरी नाम दर्ज कर सकते हैं, जैसे `image`। |
 
 ## कॉन्फ़िगरेशन चरण
@@ -24,7 +24,7 @@
 
 ![टोकन बनाएँ](../../image/upload/huggingface/创建令牌.png)
 
-## चरण 2: ImgBed में Hugging Face चैनल भरें
+## चरण 2: ImgHost में Hugging Face चैनल भरें
 
 अपलोड सेटिंग्स में `Hugging Face` चुनने के बाद फ़ील्ड इस तरह भरें:
 
@@ -46,9 +46,9 @@
 
 | सिस्टम व्यवहार | विवरण |
 | --- | --- |
-| छोटा रिपॉज़िटरी नाम | ImgBed वर्तमान Hugging Face खाते को पहचानता है और मान को पूरे रिपॉज़िटरी पथ में बदलता है। |
-| पूरा रिपॉज़िटरी पथ | ImgBed `username/repository` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
-| रिपॉज़िटरी जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो रिपॉज़िटरी न होने पर ImgBed उसे बनाने की कोशिश करता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgBed उसी पथ का सीधे उपयोग करता है। |
+| छोटा रिपॉज़िटरी नाम | ImgHost वर्तमान Hugging Face खाते को पहचानता है और मान को पूरे रिपॉज़िटरी पथ में बदलता है। |
+| पूरा रिपॉज़िटरी पथ | ImgHost `username/repository` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
+| रिपॉज़िटरी जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो रिपॉज़िटरी न होने पर ImgHost उसे बनाने की कोशिश करता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgHost उसी पथ का सीधे उपयोग करता है। |
 | रिपॉज़िटरी प्रकार | यह चैनल `dataset` रिपॉज़िटरी उपयोग करता है। |
 | सार्वजनिक/निजी स्थिति | रिपॉज़िटरी दृश्यता वर्तमान स्विच के अनुसार सिंक्रनाइज़ होती है। |
 
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

@@ -2,7 +2,7 @@
 
 ## کب مناسب ہے
 
-- آپ کے پاس pCloud account ہے اور آپ چاہتے ہیں کہ ImgBed images کو pCloud میں store کرے۔
+- آپ کے پاس pCloud account ہے اور آپ چاہتے ہیں کہ ImgHost images کو pCloud میں store کرے۔
 - آپ pCloud account email اور password کو channel credentials کے طور پر استعمال کرنے میں comfortable ہیں۔
 
 ## پہلے کیا چاہیے
@@ -70,7 +70,7 @@ account region کے مطابق API host منتخب کریں:
 
 pCloud OAuth2 ڈیفالٹ طور پر self-service نہیں ہے۔ اسے فعال کروانے کے لیے pCloud کو email کرنا پڑتا ہے۔
 
-موجودہ pCloud OAuth2 flow ImgBed کو درکار short-lived upload link workflow بھی support نہیں کرتا، اس لیے یہ channel account email اور password login استعمال کرتا ہے۔
+موجودہ pCloud OAuth2 flow ImgHost کو درکار short-lived upload link workflow بھی support نہیں کرتا، اس لیے یہ channel account email اور password login استعمال کرتا ہے۔
 
 ### کون سا API Host استعمال کروں؟
 

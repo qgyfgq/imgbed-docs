@@ -1,6 +1,6 @@
 # Blog
 
-La función de blog añade una página de blog independiente a su sitio ImgBed.
+La función de blog añade una página de blog independiente a su sitio ImgHost.
 
 Después de activarla, los visitantes pueden abrir:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Página principal del blog](../../image/other/博客/博客首页.png)
 
-El blog está adaptado a partir del proyecto de código abierto [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed lo reescribe e integra con Vue para que pueda ejecutarse como parte del sitio de alojamiento de imágenes.
+El blog está adaptado a partir del proyecto de código abierto [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost lo reescribe e integra con Vue para que pueda ejecutarse como parte del sitio de alojamiento de imágenes.
 
 ## Dónde configurarlo
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Espere el mensaje de éxito.
 5. Abra `https://your-domain.com/blog/` para ver el blog.
 
-En el primer uso, ImgBed prepara un repositorio privado de GitHub en la cuenta seleccionada:
+En el primer uso, ImgHost prepara un repositorio privado de GitHub en la cuenta seleccionada:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Flujo habitual:
 2. Entre en el repositorio privado `imgbed-blog-config`.
 3. Edite o añada archivos de entradas.
 4. Confirme los cambios.
-5. Vuelva al panel de administración de ImgBed y haga clic en `Update Blog`, o haga clic tres veces en el logotipo de la esquina superior izquierda de la página principal del blog para activar una actualización del blog.
+5. Vuelva al panel de administración de ImgHost y haga clic en `Update Blog`, o haga clic tres veces en el logotipo de la esquina superior izquierda de la página principal del blog para activar una actualización del blog.
 
 `Update Blog` no sobrescribe el contenido que haya escrito. Inicializa el repositorio cuando es necesario y actualiza la caché del blog.
 
@@ -72,7 +72,7 @@ Las estadísticas de visitas muestran vistas de las entradas y visitas del sitio
 
 El blog siempre está disponible en `/blog/`.
 
-Por ejemplo, si su dominio de ImgBed es:
+Por ejemplo, si su dominio de ImgHost es:
 
 ```text
 https://image.example.com

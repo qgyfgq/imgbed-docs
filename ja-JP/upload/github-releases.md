@@ -7,7 +7,7 @@
 | 必要なもの | 目的 |
 | --- | --- |
 | GitHub アカウント | アクセストークンを生成し、リポジトリを所有するために使用します。 |
-| GitHub Access Token | ImgBed が GitHub API にアクセスし、release を作成し、ファイルをアップロードするために使用します。 |
+| GitHub Access Token | ImgHost が GitHub API にアクセスし、release を作成し、ファイルをアップロードするために使用します。 |
 | Repository name | リポジトリ名だけを入力できます。例: `image`。 |
 
 ## 設定手順
@@ -27,7 +27,7 @@
 
 ![GitHub 権限を追加する](../../image/upload/github-releases/添加github权限.png)
 
-## 手順 2: ImgBed に GitHub Releases チャネルを入力する
+## 手順 2: ImgHost に GitHub Releases チャネルを入力する
 
 アップロード設定で `GitHub Releases` を選択したら、次のように入力します。
 
@@ -49,9 +49,9 @@
 
 | システム動作 | 説明 |
 | --- | --- |
-| 短い repository name | ImgBed は現在の GitHub アカウントを識別し、値を完全なリポジトリパスに展開します。 |
-| 完全な repository path | ImgBed は `username/repository` path を入力どおりに使用します。 |
-| repository 確認 | 現在の個人アカウントパスを使用する場合、存在しなければ ImgBed がリポジトリを自動作成します。完全なパスを手動入力した場合、ImgBed はそのパスを直接使用します。 |
+| 短い repository name | ImgHost は現在の GitHub アカウントを識別し、値を完全なリポジトリパスに展開します。 |
+| 完全な repository path | ImgHost は `username/repository` path を入力どおりに使用します。 |
+| repository 確認 | 現在の個人アカウントパスを使用する場合、存在しなければ ImgHost がリポジトリを自動作成します。完全なパスを手動入力した場合、ImgHost はそのパスを直接使用します。 |
 | 公開/非公開状態 | リポジトリの可視性は現在のスイッチに従って同期されます。 |
 
 ## クイックチェックリスト
@@ -61,9 +61,9 @@ GitHub Releases は次のように動作します。
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

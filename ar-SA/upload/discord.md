@@ -44,7 +44,7 @@
 5. أنشئ الرمز أو أعد ضبطه من صفحة `Bot`.
 6. احفظ الرمز.
 
-هذا الرمز هو قيمة `Bot Token` التي تحتاج إلى إدخالها في ImgBed.
+هذا الرمز هو قيمة `Bot Token` التي تحتاج إلى إدخالها في ImgHost.
 
 ![عرض رمز البوت](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. اضغط بزر الفأرة الأيمن على اسم القناة.
 6. اختر نسخ Channel ID.
 
-الرقم المنسوخ هو قيمة `Channel ID` المطلوبة في ImgBed.
+الرقم المنسوخ هو قيمة `Channel ID` المطلوبة في ImgHost.
 
 ![تفعيل وضع المطوّر](../../image/upload/discord/开启开发者权限.png)
 
 ![نسخ Channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. املأ قناة Discord في ImgBed
+### 5. املأ قناة Discord في ImgHost
 
 ارجع إلى نافذة إعداد القناة واملأ الحقول كما يلي:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -8,8 +8,8 @@ Sayfa ayarları; site görünümünü, yükleme sayfası varsayılanlarını, ar
 | --- | --- |
 | Site başlığı | Tarayıcı sekmesinde gösterilen başlık. |
 | Site simgesi | Tarayıcı sekmesinde gösterilen küçük simge. |
-| ImgBed adı | Genel arayüz sayfalarında gösterilen ad. |
-| ImgBed logosu | Genel arayüz sayfalarında gösterilen logo görseli. |
+| ImgHost adı | Genel arayüz sayfalarında gösterilen ad. |
+| ImgHost logosu | Genel arayüz sayfalarında gösterilen logo görseli. |
 | Logo bağlantısı | Logo veya avatar tıklandığında açılan URL. |
 | Arka plan değiştirme aralığı | Birden fazla arka planın dönüş aralığı, milisaniye cinsinden. `60000`, 60 saniye demektir. |
 | Arka plan opaklığı | Arka plan görselinin `0` ile `1` arasındaki opaklığı. Daha düşük değerler görseli daha açık gösterir. |
@@ -63,5 +63,5 @@ Yönetim arka planı görsel URL'lerini destekler. Birden fazla URL, sayfadaki i
 | --- | --- |
 | Varsayılan | Zamana dayalı rastgele önek + özgün dosya adı, örneğin `1760000000000_cat.png`. |
 | Yalnızca önek | Yalnızca zamana dayalı rastgele önek ve uzantı, örneğin `1760000000000.png`. |
-| Yalnızca özgün ad | Özgün dosya adını korur, örneğin `cat.png`. Aynı ad varsa ImgBed `(1)`, `(2)` ve devamını ekler. |
+| Yalnızca özgün ad | Özgün dosya adını korur, örneğin `cat.png`. Aynı ad varsa ImgHost `(1)`, `(2)` ve devamını ekler. |
 | Kısa bağlantı | Uzantıyla birlikte 8 karakterlik kısa ID kullanır, örneğin `a1b2c3d4.png`. |

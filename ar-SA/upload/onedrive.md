@@ -5,7 +5,7 @@
 | المتطلب | لماذا تحتاجه |
 | --- | --- |
 | حساب Microsoft | للوصول إلى صفحات إدارة Microsoft وتفويض OneDrive |
-| نطاق ImgBed الخاص بك | لاستخدامه في عنوان رد اتصال OAuth |
+| نطاق ImgHost الخاص بك | لاستخدامه في عنوان رد اتصال OAuth |
 | تسجيل تطبيق | لإنشاء `Client ID` و `Client Secret` |
 | حساب OneDrive | موقع التخزين الفعلي للملفات |
 
@@ -52,7 +52,7 @@ Continue searching in Microsoft Entra ID
 
 بعد إنشاء التطبيق انسخ هذه القيم من صفحة النظرة العامة:
 
-| حقل Microsoft | حقل ImgBed |
+| حقل Microsoft | حقل ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` للحسابات التنظيمية |
@@ -80,14 +80,14 @@ Continue searching in Microsoft Entra ID
 | الإذن | الغرض |
 | --- | --- |
 | `Files.ReadWrite.All` | رفع الملفات وإنشاء المجلدات وحذف الملفات |
-| `offline_access` | يسمح لـ ImgBed بالحصول على `Refresh Token` |
+| `offline_access` | يسمح لـ ImgHost بالحصول على `Refresh Token` |
 | `User.Read` | قراءة معلومات الحساب والحصة |
 
 ### الخطوة 6: املأ قناة OneDrive
 
 في إعدادات الرفع اختر `OneDrive` واملأ:
 
-| حقل ImgBed | ما الذي تدخله |
+| حقل ImgHost | ما الذي تدخله |
 | --- | --- |
 | اسم القناة | اسم واضح، مثل `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Continue searching in Microsoft Entra ID
 
 طريقة ملء `Tenant ID`:
 
-| نوع الحساب الذي اخترته | ImgBed `Tenant ID` |
+| نوع الحساب الذي اخترته | ImgHost `Tenant ID` |
 | --- | --- |
 | الحسابات الشخصية | `consumers` |
 | الحسابات الشخصية والتنظيمية | `common` |
@@ -109,12 +109,12 @@ Continue searching in Microsoft Entra ID
 
 ### الخطوة 7: احصل على Refresh Token
 
-1. في ImgBed اضغط الحصول على الرمز.
+1. في ImgHost اضغط الحصول على الرمز.
 2. سجّل الدخول بحساب Microsoft الذي تريد ربطه.
 3. وافق على طلب التفويض.
 4. ستعرض صفحة رد الاتصال قيمة `Refresh Token`.
 5. انسخها.
-6. ارجع إلى ImgBed والصقها في حقل `Refresh Token`.
+6. ارجع إلى ImgHost والصقها في حقل `Refresh Token`.
 
 ![نسخ Refresh Token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## مراجع

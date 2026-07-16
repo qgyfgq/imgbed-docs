@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Zapnutí limitů
 
-Po zapnutí volby "Zapnout limity" ImgBed sleduje nedávná nahrávání podle IP adresy nahrávajícího.
+Po zapnutí volby "Zapnout limity" ImgHost sleduje nedávná nahrávání podle IP adresy nahrávajícího.
 
 Výchozí hodnoty:
 

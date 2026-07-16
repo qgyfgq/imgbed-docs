@@ -2,7 +2,7 @@
 
 Chuyển bằng liên kết magnet tải tệp từ một liên kết magnet và tự động tải tệp đó lên kênh lưu trữ đám mây bạn chọn.
 
-Tính năng này hữu ích để chuyển tập phim anime, video, tệp nén và các tệp tương tự. Dán một liên kết magnet, ImgBed sẽ tạo tác vụ tải xuống chạy nền. Sau khi tải xuống xong, tệp được tải lên ImgBed và liên kết cuối cùng xuất hiện trong danh sách tải lên.
+Tính năng này hữu ích để chuyển tập phim anime, video, tệp nén và các tệp tương tự. Dán một liên kết magnet, ImgHost sẽ tạo tác vụ tải xuống chạy nền. Sau khi tải xuống xong, tệp được tải lên ImgHost và liên kết cuối cùng xuất hiện trong danh sách tải lên.
 
 ![Chuyển bằng liên kết magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Sau khi cài đặt sẵn sàng, quay lại trang chủ và dán liên kết mag
 1. Dán liên kết magnet vào ô tải lên trên trang chủ.
 2. Đảm bảo chế độ được đặt là `Transfer`.
 3. Nhấp tải lên.
-4. Chờ ImgBed tạo tác vụ magnet.
+4. Chờ ImgHost tạo tác vụ magnet.
 5. Sau khi tác vụ bắt đầu, dùng bảng nổi `Magnet Tasks` ở góc dưới bên phải để xem tiến trình.
 
 Tải xuống và tải lên có thể mất thời gian. Tốc độ phụ thuộc vào tài nguyên magnet, môi trường chạy GitHub và kênh lưu trữ đám mây đã chọn.
@@ -72,7 +72,7 @@ Trạng thái thường gặp:
 
 ## Mẹo
 
-- Nếu một liên kết magnet chứa nhiều tệp, ImgBed ưu tiên hiển thị tệp chính đã hoàn tất.
+- Nếu một liên kết magnet chứa nhiều tệp, ImgHost ưu tiên hiển thị tệp chính đã hoàn tất.
 - Tệp lớn mất nhiều thời gian hơn. Chờ tác vụ hoàn tất trước khi làm mới trang.
 - Nếu tài nguyên magnet không có máy ngang hàng khả dụng, tác vụ có thể rất chậm hoặc thất bại.
 - Nếu tài khoản đám mây hết hạn mức, ủy quyền hết hạn hoặc thư mục tải lên sai, tác vụ có thể thất bại.

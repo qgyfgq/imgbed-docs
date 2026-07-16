@@ -2,7 +2,7 @@
 
 ## Kdy se hodí
 
-- Máte účet pCloud a chcete ukládat obrázky ImgBed do pCloud.
+- Máte účet pCloud a chcete ukládat obrázky ImgHost do pCloud.
 - Nevadí vám použít e-mail a heslo účtu pCloud jako přihlašovací údaje kanálu.
 
 ## Co potřebujete před začátkem
@@ -70,7 +70,7 @@ API host vyberte podle regionu účtu:
 
 pCloud OAuth2 není ve výchozím stavu samoobslužně dostupné. Je potřeba napsat pCloudu a požádat o zapnutí.
 
-Aktuální tok pCloud OAuth2 navíc nepodporuje krátkodobý odkaz pro nahrávání, který ImgBed potřebuje. Proto tento kanál používá přihlášení e-mailem a heslem.
+Aktuální tok pCloud OAuth2 navíc nepodporuje krátkodobý odkaz pro nahrávání, který ImgHost potřebuje. Proto tento kanál používá přihlášení e-mailem a heslem.
 
 ### Jaký API host použít?
 

@@ -6,7 +6,7 @@
 | --- | --- |
 | Una cuenta de Yandex | Se usa para iniciar sesión y autorizar Yandex Disk |
 | Una aplicación OAuth de Yandex | Se usa para generar `Client ID` y `Client Secret` |
-| Su dominio de ImgBed | Se usa como URI de redirección OAuth |
+| Su dominio de ImgHost | Se usa como URI de redirección OAuth |
 | Almacenamiento disponible en Yandex Disk | Se usa como ubicación real de almacenamiento de archivos |
 
 ## Pasos de configuración
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### Paso 2: Confirmar permisos
 
-Para la integración actual de Yandex en ImgBed, mantenga estos cuatro permisos en `Yandex.Disk REST API`:
+Para la integración actual de Yandex en ImgHost, mantenga estos cuatro permisos en `Yandex.Disk REST API`:
 
 | Permiso | Propósito |
 | --- | --- |
-| `cloud_api:disk.app_folder` | Permite que ImgBed almacene archivos en la carpeta de la aplicación |
+| `cloud_api:disk.app_folder` | Permite que ImgHost almacene archivos en la carpeta de la aplicación |
 | `cloud_api:disk.read` | Lee archivos y enlaces de descarga |
 | `cloud_api:disk.write` | Carga archivos, crea carpetas y elimina archivos |
 | `Access to information about Yandex.Disk` | Lee la cuota del disco y el espacio usado |
@@ -55,7 +55,7 @@ Las funciones principales de carga, descarga, eliminación y cuota dependen sobr
 
 Después de crear la aplicación, copie:
 
-| Campo de Yandex | Campo de ImgBed |
+| Campo de Yandex | Campo de ImgHost |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ Después de crear la aplicación, copie:
 
 En Ajustes de carga, elija `Yandex` y complete:
 
-| Campo de ImgBed | Qué introducir |
+| Campo de ImgHost | Qué introducir |
 | --- | --- |
 | Nombre del canal | Un nombre reconocible, como `Yandex principal` |
 | Client ID | El `Client ID` de la aplicación Yandex |
@@ -78,12 +78,12 @@ En Ajustes de carga, elija `Yandex` y complete:
 
 ### Paso 5: Obtener el Refresh Token
 
-1. En ImgBed, haga clic en `Get Token`.
+1. En ImgHost, haga clic en `Get Token`.
 2. Inicie sesión en la cuenta de Yandex que quiera conectar.
 3. Apruebe la solicitud de autorización.
 4. La página de callback mostrará un `Refresh Token`.
 5. Cópielo.
-6. Vuelva a ImgBed y péguelo en el campo `Refresh Token`.
+6. Vuelva a ImgHost y péguelo en el campo `Refresh Token`.
 
 ![Copiar refresh token después de la autorización](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Referencias

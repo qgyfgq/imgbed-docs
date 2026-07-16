@@ -28,7 +28,7 @@ O fluxo mais novo de geolocalização por IP aceita várias fontes, em vez de de
 
 Preencha apenas os serviços de que você precisa. Não é necessário configurar todos os campos.
 
-Se nenhuma chave for fornecida, o ImgBed ainda tentará usar fontes gratuitas integradas, mas estabilidade, suporte a idiomas e precisão podem ser menores do que em um serviço configurado por você.
+Se nenhuma chave for fornecida, o ImgHost ainda tentará usar fontes gratuitas integradas, mas estabilidade, suporte a idiomas e precisão podem ser menores do que em um serviço configurado por você.
 
 ## Escolhas recomendadas
 
@@ -57,9 +57,9 @@ Encontre o ID da conta no painel da MaxMind e gere uma License Key na página Li
 
 ![Configuração de chave MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Depois de gerar, cole o Account ID e a License Key no ImgBed e salve.
+Depois de gerar, cole o Account ID e a License Key no ImgHost e salve.
 
-O plano gratuito da MaxMind é adequado para uso diário, mas tem limites de requisições. Se a cota for excedida, o ImgBed continuará tentando outras fontes disponíveis.
+O plano gratuito da MaxMind é adequado para uso diário, mas tem limites de requisições. Se a cota for excedida, o ImgHost continuará tentando outras fontes disponíveis.
 
 ## Configuração do ipapi
 
@@ -69,9 +69,9 @@ Abra o console do ipapi e copie a API Key exibida nele.
 
 ![Configuração do ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Cole-a no campo `ipapi Key` no ImgBed e salve.
+Cole-a no campo `ipapi Key` no ImgHost e salve.
 
-O ipapi oferece suporte a geolocalização por IP multilíngue e é útil quando você quer mostrar endereços em um idioma selecionado. O plano gratuito também tem limites de requisições. Se a cota acabar, o ImgBed continuará tentando outras fontes disponíveis.
+O ipapi oferece suporte a geolocalização por IP multilíngue e é útil quando você quer mostrar endereços em um idioma selecionado. O plano gratuito também tem limites de requisições. Se a cota acabar, o ImgHost continuará tentando outras fontes disponíveis.
 
 ## Configuração do Tencent Map Key
 

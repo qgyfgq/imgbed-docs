@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Mengaktifkan Had Kekerapan
 
-Selepas `Aktifkan Had Kekerapan` dihidupkan, ImgBed menjejaki muat naik terkini berdasarkan alamat IP pemuat naik.
+Selepas `Aktifkan Had Kekerapan` dihidupkan, ImgHost menjejaki muat naik terkini berdasarkan alamat IP pemuat naik.
 
 Nilai lalai:
 

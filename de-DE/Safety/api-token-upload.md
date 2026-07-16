@@ -16,7 +16,7 @@ Beim Erstellen oder Bearbeiten des API Token muss die Berechtigung zum Hochladen
 
 ## Hochlade-Skripte herunterladen
 
-Die ImgBed-Dokumentation enthält zwei Node.js-Skripte:
+Die ImgHost-Dokumentation enthält zwei Node.js-Skripte:
 
 | Skript | Zweck |
 | --- | --- |
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adresse der ImgBed-Website, zum Beispiel `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
 | `--file <path>` | Ja | Lokaler Dateipfad |
 | `--channel <key>` | Ja | Echter Hochladekanal |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adresse der ImgBed-Website |
+| `--base-url <url>` | Ja | Adresse der ImgHost-Website |
 | `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
 | `--file <path>` | Ja | Lokaler Dateipfad |
 | `--channel <key>` | Ja | Echter Hochladekanal |

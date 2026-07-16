@@ -1,9 +1,9 @@
 # WebDAV Site Access
-The WebDAV setting in Security Settings exposes your ImgBed site as a WebDAV endpoint.
+The WebDAV setting in Security Settings exposes your ImgHost site as a WebDAV endpoint.
 
-After it is enabled, you can use Windows, macOS, mobile file managers, or any WebDAV-compatible client to browse, upload, delete, and manage ImgBed files like a remote folder.
+After it is enabled, you can use Windows, macOS, mobile file managers, or any WebDAV-compatible client to browse, upload, delete, and manage ImgHost files like a remote folder.
 
-This is the site's WebDAV access entry. It is different from the WebDAV storage channel in Upload Settings. The upload channel stores files in a third-party WebDAV service. This setting lets your ImgBed site provide WebDAV access to clients.
+This is the site's WebDAV access entry. It is different from the WebDAV storage channel in Upload Settings. The upload channel stores files in a third-party WebDAV service. This setting lets your ImgHost site provide WebDAV access to clients.
 
 ## Where To Configure It
 
@@ -23,21 +23,21 @@ Available settings:
 
 ## What This Feature Does
 
-After WebDAV is enabled, ImgBed provides a fixed access URL:
+After WebDAV is enabled, ImgHost provides a fixed access URL:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Use this URL to connect to your ImgBed file directory.
+Use this URL to connect to your ImgHost file directory.
 
 Good use cases:
 
-- Browse ImgBed files directly from your computer file manager.
+- Browse ImgHost files directly from your computer file manager.
 - Drag images into the WebDAV folder to upload them.
-- Organize ImgBed folders from your local file manager.
+- Organize ImgHost folders from your local file manager.
 - Use WebDAV-compatible software to sync or manage images.
-- Access ImgBed content without opening the admin panel.
+- Access ImgHost content without opening the admin panel.
 
 ## Settings
 
@@ -63,7 +63,7 @@ Common choices:
 
 | Mode | Description |
 | --- | --- |
-| Smart loading | ImgBed chooses based on context. Recommended for normal use. |
+| Smart loading | ImgHost chooses based on context. Recommended for normal use. |
 | Original | Prefer original images. |
 | Thumbnail | Prefer thumbnails. Useful for fast preview. |
 
@@ -73,7 +73,7 @@ If you are unsure, keep `Smart loading`.
 
 The default channel is used for WebDAV uploads.
 
-When you copy files into the WebDAV directory from Windows or another client, ImgBed uploads them through the selected default upload channel.
+When you copy files into the WebDAV directory from Windows or another client, ImgHost uploads them through the selected default upload channel.
 
 If no default channel is selected, browsing may work, but uploads may fail.
 

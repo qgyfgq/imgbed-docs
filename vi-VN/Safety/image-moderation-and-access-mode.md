@@ -37,7 +37,7 @@ Với trang riêng tư hoặc trang có nội dung trưởng thành, Chế độ
 
 ## Tác dụng của việc bật kiểm duyệt
 
-Khi bật kiểm duyệt, ImgBed gọi nhà cung cấp kiểm duyệt đã chọn trong quá trình tải lên và lưu xếp hạng độ tuổi phát hiện được.
+Khi bật kiểm duyệt, ImgHost gọi nhà cung cấp kiểm duyệt đã chọn trong quá trình tải lên và lưu xếp hạng độ tuổi phát hiện được.
 
 Các xếp hạng chính:
 
@@ -66,7 +66,7 @@ Mỗi nhà cung cấp có yêu cầu khác nhau:
 - nsfwjs thường yêu cầu URL điểm cuối API.
 - Sightengine yêu cầu API user và API secret.
 
-Hãy chọn theo tài khoản, mức độ khả dụng và chất lượng phát hiện của bạn. Miễn là kiểm duyệt được bật và cấu hình đúng, ImgBed sẽ cố gắng ghi xếp hạng hình ảnh trong quá trình tải lên.
+Hãy chọn theo tài khoản, mức độ khả dụng và chất lượng phát hiện của bạn. Miễn là kiểm duyệt được bật và cấu hình đúng, ImgHost sẽ cố gắng ghi xếp hạng hình ảnh trong quá trình tải lên.
 
 ## Ảnh hưởng đến thư viện công khai
 
@@ -85,16 +85,16 @@ Ví dụ:
 
 URL tệp công khai là các liên kết hình ảnh trực tiếp do khách truy cập mở.
 
-Nếu xếp hạng của tệp được chế độ truy cập hiện tại cho phép, ImgBed trả về hình ảnh gốc.
+Nếu xếp hạng của tệp được chế độ truy cập hiện tại cho phép, ImgHost trả về hình ảnh gốc.
 
-Nếu xếp hạng cao hơn mức cho phép, truy cập công khai thông thường sẽ không trả về hình ảnh gốc. Thay vào đó, ImgBed trả về kết quả bị chặn đã cấu hình hoặc hình ảnh thay thế.
+Nếu xếp hạng cao hơn mức cho phép, truy cập công khai thông thường sẽ không trả về hình ảnh gốc. Thay vào đó, ImgHost trả về kết quả bị chặn đã cấu hình hoặc hình ảnh thay thế.
 
 Ví dụ:
 
 - Chế độ hiện tại là Chế độ trẻ em.
 - Một hình ảnh được xếp hạng R18.
 - Một khách truy cập mở trực tiếp URL công khai.
-- ImgBed không trả về hình ảnh gốc R18 cho khách truy cập đó.
+- ImgHost không trả về hình ảnh gốc R18 cho khách truy cập đó.
 
 ![Hình ảnh tệp bị hạn chế](../../image/Safety/文件受限图.png)
 

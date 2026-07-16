@@ -1,6 +1,6 @@
 # Föderierter verteilter Index
 
-Der föderierte verteilte Index ermöglicht es mehreren ImgBed-Seiten, Dateilisten miteinander zu teilen.
+Der föderierte verteilte Index ermöglicht es mehreren ImgHost-Seiten, Dateilisten miteinander zu teilen.
 
 Einfach gesagt:
 
@@ -23,7 +23,7 @@ Die Seite hat drei Registerkarten:
 | Registerkarte | Zweck |
 | --- | --- |
 | Lokaler Knoten | Eigenen Knoten aktivieren, öffentliche Domain bestätigen, freigegebene Ordner auswählen und ausgehenden Index aktualisieren |
-| Beigetretene Knoten | Andere ImgBed-Knoten verwalten, denen Sie beigetreten sind |
+| Beigetretene Knoten | Andere ImgHost-Knoten verwalten, denen Sie beigetreten sind |
 | Knoten, die mir beitreten | Anfragen von anderen verwalten, die Ihrem Knoten beitreten möchten |
 
 ## Ersteinrichtung
@@ -32,7 +32,7 @@ Die Seite hat drei Registerkarten:
 2. Aktivieren Sie `Enable`.
 3. Wählen Sie unter `Sync folders` die Ordner aus, die Sie freigeben möchten.
 4. Klicken Sie auf `Update Outbound Index`.
-5. Wenn ImgBed eine Domainänderung erkennt, bestätigen Sie vor dem Fortfahren, dass die aktuelle Domain korrekt ist.
+5. Wenn ImgHost eine Domainänderung erkennt, bestätigen Sie vor dem Fortfahren, dass die aktuelle Domain korrekt ist.
 
 Sie können mehrere Synchronisierungsordner auswählen.
 
@@ -44,7 +44,7 @@ Wenn die Liste der Synchronisierungsordner leer ist, werden alle Ordner freigege
 
 Die öffentliche Domain ist die Website-URL, über die andere Knoten auf Ihren Knoten zugreifen.
 
-ImgBed erkennt diese automatisch. Sie müssen sie nicht manuell eingeben. Beim ersten Aktualisieren des Index fragt ImgBed, ob die aktuelle Zugriffs-URL die Produktionsdomain ist.
+ImgHost erkennt diese automatisch. Sie müssen sie nicht manuell eingeben. Beim ersten Aktualisieren des Index fragt ImgHost, ob die aktuelle Zugriffs-URL die Produktionsdomain ist.
 
 Wenn Sie die Domain später ändern, fragt die Indexaktualisierung erneut nach einer Bestätigung.
 
@@ -116,7 +116,7 @@ Nach dem Beenden des Abonnements wird der föderierte Index dieses Knotens von I
 ### Einladungslink erzeugen
 
 1. Stellen Sie sicher, dass der lokale Knoten aktiviert ist.
-2. Klicken Sie mindestens einmal auf `Update Outbound Index`, damit ImgBed die öffentliche Domain bestätigt.
+2. Klicken Sie mindestens einmal auf `Update Outbound Index`, damit ImgHost die öffentliche Domain bestätigt.
 3. Öffnen Sie `Nodes Joining Me`.
 4. Klicken Sie auf `Reset Invitation Link`.
 5. Kopieren Sie den Einladungslink und senden Sie ihn an den anderen Eigentümer.

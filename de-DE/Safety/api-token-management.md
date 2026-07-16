@@ -26,7 +26,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 ## Verwaltungsskripte herunterladen
 
-Die ImgBed-Dokumentation enthält drei Node.js-Skripte:
+Die ImgHost-Dokumentation enthält drei Node.js-Skripte:
 
 | Skript | Zweck |
 | --- | --- |
@@ -40,7 +40,7 @@ Erforderlich ist Node.js 18 oder neuer.
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adresse der ImgBed-Website, zum Beispiel `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
 | `--retries <n>` | Nein | Wiederholungen bei vorübergehenden Fehlern; Standardwert `3` |
 | `--timeout-ms <n>` | Nein | Zeitlimit jeder Anfrage in Millisekunden; Standardwert `180000` |

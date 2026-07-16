@@ -37,7 +37,7 @@ Pour les sites privés ou contenant du contenu mature, le mode adulte peut conve
 
 ## Rôle de l’Activation de la Modération
 
-Lorsque la modération est activée, ImgBed appelle le fournisseur de modération sélectionné pendant le téléversement et enregistre la classification d’âge détectée.
+Lorsque la modération est activée, ImgHost appelle le fournisseur de modération sélectionné pendant le téléversement et enregistre la classification d’âge détectée.
 
 Classifications principales :
 
@@ -66,7 +66,7 @@ Chaque fournisseur a des exigences différentes :
 - nsfwjs nécessite généralement une URL de point de terminaison API.
 - Sightengine nécessite un API user et un API secret.
 
-Choisissez selon votre compte, la disponibilité et la qualité de détection. Tant que la modération est activée et correctement configurée, ImgBed tente d’écrire une classification d’image pendant le téléversement.
+Choisissez selon votre compte, la disponibilité et la qualité de détection. Tant que la modération est activée et correctement configurée, ImgHost tente d’écrire une classification d’image pendant le téléversement.
 
 ## Effet sur la Galerie Publique
 
@@ -85,16 +85,16 @@ Cela affecte uniquement l’accès public normal. Le panneau d’administration 
 
 Les URL publiques de fichiers sont les liens directs d’images ouverts par les visiteurs.
 
-Si la classification du fichier est autorisée par le mode d’accès actuel, ImgBed renvoie l’image source.
+Si la classification du fichier est autorisée par le mode d’accès actuel, ImgHost renvoie l’image source.
 
-Si la classification dépasse le niveau autorisé, l’accès public normal ne renvoie pas l’image source. ImgBed renvoie à la place le résultat bloqué configuré ou une image de remplacement.
+Si la classification dépasse le niveau autorisé, l’accès public normal ne renvoie pas l’image source. ImgHost renvoie à la place le résultat bloqué configuré ou une image de remplacement.
 
 Exemple :
 
 - Le mode actuel est le mode enfant.
 - Une image est classée R18.
 - Un visiteur ouvre directement l’URL publique.
-- ImgBed ne renvoie pas l’image source R18 à ce visiteur.
+- ImgHost ne renvoie pas l’image source R18 à ce visiteur.
 
 ![Image de fichier restreinte](../../image/Safety/文件受限图.png)
 

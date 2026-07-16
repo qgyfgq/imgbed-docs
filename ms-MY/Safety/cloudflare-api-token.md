@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Bukti kelayakan Cloudflare API membolehkan ImgBed membersihkan storan sementara CDN Cloudflare selepas fail berubah.
+Bukti kelayakan Cloudflare API membolehkan ImgHost membersihkan storan sementara CDN Cloudflare selepas fail berubah.
 
 ![Tetapan Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare boleh menyimpan URL imej awam dalam storan sementara.
 
 Storan sementara menjadikan penghantaran imej lebih pantas, tetapi juga boleh menyebabkan kandungan lama masih kelihatan seketika selepas anda memadam, menyekat, mengganti atau memindahkan fail.
 
-Selepas bukti kelayakan Cloudflare API dikonfigurasi, ImgBed akan cuba membersihkan storan sementara Cloudflare yang berkaitan apabila operasi tersebut selesai.
+Selepas bukti kelayakan Cloudflare API dikonfigurasi, ImgHost akan cuba membersihkan storan sementara Cloudflare yang berkaitan apabila operasi tersebut selesai.
 
 Ini berguna apabila:
 
@@ -36,18 +36,18 @@ Ini berguna apabila:
 
 ## Jika Dibiarkan Kosong
 
-ImgBed tetap berjalan seperti biasa tanpa tetapan ini.
+ImgHost tetap berjalan seperti biasa tanpa tetapan ini.
 
-Perbezaannya, ImgBed tidak akan membersihkan storan sementara CDN Cloudflare secara aktif. Pelawat mungkin masih melihat kandungan lama sehingga storan sementara Cloudflare tamat secara semula jadi.
+Perbezaannya, ImgHost tidak akan membersihkan storan sementara CDN Cloudflare secara aktif. Pelawat mungkin masih melihat kandungan lama sehingga storan sementara Cloudflare tamat secara semula jadi.
 
 ## Cara Mencari Zone ID
 
-Zone ID ialah Cloudflare Zone ID bagi tapak yang digunakan oleh domain ImgBed anda.
+Zone ID ialah Cloudflare Zone ID bagi tapak yang digunakan oleh domain ImgHost anda.
 
 1. Log masuk ke papan pemuka Cloudflare.
-2. Buka tapak yang mengandungi domain ImgBed anda.
+2. Buka tapak yang mengandungi domain ImgHost anda.
 3. Cari `Zone ID` pada halaman ringkasan tapak.
-4. Salin ke medan `Zone ID` dalam ImgBed.
+4. Salin ke medan `Zone ID` dalam ImgHost.
 
 Ini ialah Zone ID tapak, bukan account ID.
 
@@ -66,7 +66,7 @@ Masukkan Cloudflare Global API Key.
 3. Pergi ke halaman API Tokens.
 4. Cari `Global API Key`.
 5. Paparkan dan salin.
-6. Tampal ke medan `API Key` dalam ImgBed.
+6. Tampal ke medan `API Key` dalam ImgHost.
 
 ![Lihat Global API Key](../../image/Safety/查看全局令牌.png)
 
@@ -88,17 +88,17 @@ Jika domain anda tidak menggunakan Cloudflare, atau anda tidak kisah tentang kel
 
 Biasanya tidak.
 
-Bukti kelayakan yang salah hanya menyebabkan ImgBed gagal membersihkan storan sementara Cloudflare. Muat naik dan akses fail biasa sepatutnya terus berfungsi.
+Bukti kelayakan yang salah hanya menyebabkan ImgHost gagal membersihkan storan sementara Cloudflare. Muat naik dan akses fail biasa sepatutnya terus berfungsi.
 
 ### Mengapa Imej yang Dipadam Masih Boleh Dibuka?
 
 Punca paling biasa ialah Cloudflare masih menyimpan fail lama dalam storan sementara.
 
-Dengan bukti kelayakan Cloudflare API yang betul, ImgBed membersihkan storan sementara URL berkaitan apabila fail dipadam.
+Dengan bukti kelayakan Cloudflare API yang betul, ImgHost membersihkan storan sementara URL berkaitan apabila fail dipadam.
 
 ### Mengapa Saya Masih Melihat Imej Lama Selepas Mengganti Fail?
 
 Ini juga biasanya disebabkan oleh storan sementara CDN.
 
-Selepas tetapan ini dikonfigurasi, ImgBed cuba membersihkan storan sementara URL lama apabila fail dengan nama yang sama ditulis ganti.
+Selepas tetapan ini dikonfigurasi, ImgHost cuba membersihkan storan sementara URL lama apabila fail dengan nama yang sama ditulis ganti.
 

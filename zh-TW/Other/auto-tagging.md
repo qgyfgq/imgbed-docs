@@ -41,7 +41,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 3. 點選右上角的三點選單。
 4. 選擇 `Duplicate this Space`。
 5. Space 名稱可保留預設值，也可改成你自己的名稱，例如 `wd-tagger`。
-6. 將可見性設定為 `Public`。公開 Space 較方便 ImgBed 呼叫。
+6. 將可見性設定為 `Public`。公開 Space 較方便 ImgHost 呼叫。
 7. 一開始保留預設免費硬體即可，只有在排隊情況明顯時再考慮升級。
 8. 建立 Space，並等待建置完成。
 
@@ -51,7 +51,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-複製瀏覽器中的 URL，貼到 ImgBed 的 `Space URLs`。
+複製瀏覽器中的 URL，貼到 ImgHost 的 `Space URLs`。
 
 ## 填寫多個 Space URLs
 
@@ -65,7 +65,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | 已複製 Space 的頁面 URL。 |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | 你自己複製後的 Space 頁面 URL。 |
 
-可以填入多個 URL。ImgBed 會一起使用多個 Space，速度可能會更快。
+可以填入多個 URL。ImgHost 會一起使用多個 Space，速度可能會更快。
 
 如果其中一個 Space 暫時不可用，其他 Space 仍可繼續處理。
 
@@ -103,7 +103,7 @@ https://huggingface.co/spaces/your-name/wd-tagger
 3. 點選開始打標籤。
 4. 等待進度完成。
 
-若目標資料夾為空，ImgBed 會處理全部資料夾。
+若目標資料夾為空，ImgHost 會處理全部資料夾。
 
 批次打標適合處理舊圖片。新圖片建議開啟上傳時自動打標，之後就不需要每次手動執行。
 
@@ -121,19 +121,19 @@ https://huggingface.co/spaces/your-name/wd-tagger
 
 已經有完整標籤、方向、分級、寬度和高度資訊的圖片會被略過，避免不必要的 Space 呼叫。
 
-ImgBed 會盡量只補缺少的資訊。例如只有方向缺失時，系統會嘗試補上方向，而不呼叫完整的內容標籤流程。
+ImgHost 會盡量只補缺少的資訊。例如只有方向缺失時，系統會嘗試補上方向，而不呼叫完整的內容標籤流程。
 
 ## 常見問題
 
 ### 為什麼要複製自己的 Space？
 
-公開 Space 由許多使用者共用。你自己複製的 Space 主要由你的 ImgBed 網站使用，所以通常更快、更可靠。
+公開 Space 由許多使用者共用。你自己複製的 Space 主要由你的 ImgHost 網站使用，所以通常更快、更可靠。
 
 ### Space 一直在啟動
 
 首次建立後，或長時間閒置後，Space 可能需要一些時間啟動。
 
-先開啟你的 Space 頁面。確認它能正常辨識圖片後，再回到 ImgBed 開始打標。
+先開啟你的 Space 頁面。確認它能正常辨識圖片後，再回到 ImgHost 開始打標。
 
 ### 如何複製 Space URL？
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

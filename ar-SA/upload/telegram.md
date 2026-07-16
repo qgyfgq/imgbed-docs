@@ -38,7 +38,7 @@
 5. اتبع التعليمات لإدخال اسم مستخدم البوت. غالبًا يجب أن ينتهي الاسم بـ `bot`.
 6. بعد إنشاء البوت سيعيد `@BotFather` رمز البوت.
 
-هذا الرمز هو قيمة `Bot Token` التي تحتاج إلى إدخالها في ImgBed.
+هذا الرمز هو قيمة `Bot Token` التي تحتاج إلى إدخالها في ImgHost.
 
 ![حفظ رمز البوت](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. من منتقي الرسائل اختر القناة المطلوبة وأرسلها إلى `@userinfobot`.
 5. عندما يعرض `@userinfobot` النتيجة، انسخ الرقم الظاهر بصيغة `Id: -100...`.
 
-الرقم الذي يبدأ بـ `-100` هو قيمة `Session ID (Chat ID)` المطلوبة في ImgBed.
+الرقم الذي يبدأ بـ `-100` هو قيمة `Session ID (Chat ID)` المطلوبة في ImgHost.
 
 ![الحصول على معرف القناة](../../image/upload/telegram/获取频道id.png)
 
-### 5. املأ قناة Telegram في ImgBed
+### 5. املأ قناة Telegram في ImgHost
 
 ارجع إلى نافذة إعداد القناة واملأ الحقول كما يلي:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -1,18 +1,18 @@
-# ImgBed Documentation
+# ImgHost Documentation
 
-Documentation for ImgBed, an open-source self-hosted image and file hosting project built around the Cloudflare ecosystem.
+Documentation for ImgHost, an open-source self-hosted image and file hosting project built around the Cloudflare ecosystem.
 
-ImgBed is designed for people who want to run their own lightweight image/file hosting service, manage files from a web dashboard, and connect the deployment to different storage backends instead of relying on a hosted SaaS platform.
+ImgHost is designed for people who want to run their own lightweight image/file hosting service, manage files from a web dashboard, and connect the deployment to different storage backends instead of relying on a hosted SaaS platform.
 
 ## Links
 
 - Documentation: <https://md.ccwu.cc/>
 - Deployment page: <https://glow.ccwu.cc/reg/IMG-FREELY>
-- Documentation repository: <https://github.com/axibayuit-a11y/imgbed-docs>
+- Documentation repository: <https://github.com/axibayuit-a11y/imghost-docs>
 
 The deployment page is an optional helper for the Cloudflare setup flow. The project can also be studied and deployed manually from the documentation.
 
-## What ImgBed Provides
+## What ImgHost Provides
 
 - Image and file upload
 - Web-based file management

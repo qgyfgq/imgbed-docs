@@ -1,6 +1,6 @@
 # Gefedereerde gedistribueerde index
 
-De gefedereerde gedistribueerde index laat meerdere ImgBed-sites bestandslijsten met elkaar delen.
+De gefedereerde gedistribueerde index laat meerdere ImgHost-sites bestandslijsten met elkaar delen.
 
 Kort gezegd:
 
@@ -23,7 +23,7 @@ De pagina heeft drie tabbladen:
 | Tabblad | Doel |
 | --- | --- |
 | Local Node | Je knooppunt inschakelen, publiek domein bevestigen, gedeelde mappen kiezen en uitgaande index bijwerken |
-| Nodes I Joined | Andere ImgBed-knooppunten beheren waaraan je deelneemt |
+| Nodes I Joined | Andere ImgHost-knooppunten beheren waaraan je deelneemt |
 | Nodes Joining Me | Verzoeken beheren van anderen die aan jouw knooppunt willen deelnemen |
 
 ## Eerste installatie
@@ -32,7 +32,7 @@ De pagina heeft drie tabbladen:
 2. Schakel `Enable` in.
 3. Selecteer mappen om te delen onder `Sync folders`.
 4. Klik op `Update Outbound Index`.
-5. Als ImgBed een domeinwijziging detecteert, bevestig dan dat het huidige domein klopt voordat je doorgaat.
+5. Als ImgHost een domeinwijziging detecteert, bevestig dan dat het huidige domein klopt voordat je doorgaat.
 
 Je kunt meerdere synchronisatiemappen selecteren.
 
@@ -44,7 +44,7 @@ Als de lijst met synchronisatiemappen leeg is, worden alle mappen gedeeld.
 
 Het publieke domein is de site-URL die andere knooppunten gebruiken om jouw knooppunt te bereiken.
 
-ImgBed detecteert dit automatisch. Je hoeft het niet handmatig in te voeren. De eerste keer dat je de index bijwerkt, vraagt ImgBed of de huidige toegangs-URL het productiedomein is.
+ImgHost detecteert dit automatisch. Je hoeft het niet handmatig in te voeren. De eerste keer dat je de index bijwerkt, vraagt ImgHost of de huidige toegangs-URL het productiedomein is.
 
 Als je later van domein verandert, vraagt een indexupdate opnieuw om bevestiging.
 
@@ -116,7 +116,7 @@ Na afmelden wordt de federatieve index van dat knooppunt van je lokale site verw
 ### Een uitnodigingslink maken
 
 1. Controleer dat het lokale knooppunt is ingeschakeld.
-2. Klik minstens één keer op `Update Outbound Index`, zodat ImgBed het publieke domein bevestigt.
+2. Klik minstens één keer op `Update Outbound Index`, zodat ImgHost het publieke domein bevestigt.
 3. Open `Nodes Joining Me`.
 4. Klik op `Reset Invitation Link`.
 5. Kopieer de uitnodigingslink en stuur deze naar de andere eigenaar.

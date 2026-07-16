@@ -7,7 +7,7 @@ Bạn chỉ cần ba thứ:
 | Yêu cầu | Mục đích |
 | --- | --- |
 | GitLab account | Dùng để generate access token và sở hữu project. |
-| GitLab Personal Access Token | ImgBed dùng để access GitLab API, tạo projects và upload files vào Generic Packages. |
+| GitLab Personal Access Token | ImgHost dùng để access GitLab API, tạo projects và upload files vào Generic Packages. |
 | Project name | Có thể chỉ nhập project name, ví dụ `imgbed`. |
 
 ## Các bước thiết lập
@@ -26,7 +26,7 @@ Bạn chỉ cần ba thứ:
 
 ![Select token permissions](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## Bước 2: Điền GitLab Packages Channel trong ImgBed
+## Bước 2: Điền GitLab Packages Channel trong ImgHost
 
 Sau khi chọn `GitLab Packages` trong Cài đặt tải lên, điền các trường như sau:
 
@@ -48,9 +48,9 @@ Hệ thống sẽ xử lý các chi tiết sau:
 
 | Hành vi hệ thống | Mô tả |
 | --- | --- |
-| Tên project ngắn | ImgBed xác định GitLab account hiện tại và mở rộng giá trị thành đường dẫn project đầy đủ. |
-| Full project path | ImgBed dùng path `username/project` đúng như bạn nhập. |
-| Kiểm tra project | Nếu dùng đường dẫn personal account hiện tại, ImgBed tự tạo project khi chưa tồn tại. Nếu nhập đường dẫn đầy đủ thủ công, ImgBed dùng path đó trực tiếp. |
+| Tên project ngắn | ImgHost xác định GitLab account hiện tại và mở rộng giá trị thành đường dẫn project đầy đủ. |
+| Full project path | ImgHost dùng path `username/project` đúng như bạn nhập. |
+| Kiểm tra project | Nếu dùng đường dẫn personal account hiện tại, ImgHost tự tạo project khi chưa tồn tại. Nếu nhập đường dẫn đầy đủ thủ công, ImgHost dùng path đó trực tiếp. |
 | Public/private state | Project visibility được sync theo switch hiện tại. |
 
 ## Danh sách kiểm tra nhanh
@@ -59,9 +59,9 @@ Hệ thống sẽ xử lý các chi tiết sau:
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

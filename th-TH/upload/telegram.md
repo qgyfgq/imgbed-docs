@@ -38,7 +38,7 @@
 5. ทำตาม prompt เพื่อใส่ bot username โดยปกติ username ต้องลงท้ายด้วย `bot`
 6. เมื่อสร้าง bot แล้ว `@BotFather` จะส่ง bot token กลับมา
 
-Token นี้คือค่า `Bot Token` ที่ต้องใส่ใน ImgBed
+Token นี้คือค่า `Bot Token` ที่ต้องใส่ใน ImgHost
 
 ![บันทึก bot token](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Token นี้คือค่า `Bot Token` ที่ต้องใส่ใ�
 4. ใน message picker ให้เลือก target channel แล้วส่งไปที่ `@userinfobot`
 5. เมื่อ `@userinfobot` ส่งผลลัพธ์กลับมา ให้คัดลอกเลขที่แสดงเป็น `Id: -100...`
 
-เลขที่ขึ้นต้นด้วย `-100` คือ `Session ID (Chat ID)` ที่ ImgBed ต้องใช้
+เลขที่ขึ้นต้นด้วย `-100` คือ `Session ID (Chat ID)` ที่ ImgHost ต้องใช้
 
 ![รับ channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. ใส่ช่องทาง Telegram ใน ImgBed
+### 5. ใส่ช่องทาง Telegram ใน ImgHost
 
 กลับไปที่กล่องกำหนดค่า channel แล้วกรอกดังนี้:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

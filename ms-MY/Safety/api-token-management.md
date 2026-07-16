@@ -26,7 +26,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 ## Muat Turun Skrip Pengurusan
 
-Dokumentasi ImgBed menyediakan tiga skrip Node.js:
+Dokumentasi ImgHost menyediakan tiga skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
@@ -40,7 +40,7 @@ Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | URL tapak ImgBed, contohnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
 | `--retries <n>` | Tidak | Bilangan cubaan semula untuk kegagalan sementara; lalai `3` |
 | `--timeout-ms <n>` | Tidak | Had masa setiap permintaan dalam milisaat; lalai `180000` |

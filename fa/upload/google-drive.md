@@ -8,8 +8,8 @@
 | --- | --- |
 | حساب Google | برای دسترسی به Google Cloud و مجوزدهی Google Drive استفاده می‌شود |
 | پروژه Google Cloud | برای فعال کردن Drive API و ساخت اعتبارنامه‌های OAuth استفاده می‌شود |
-| کلاینت OAuth 2.0 | ImgBed از آن برای دریافت `Client ID`، `Client Secret` و `Refresh Token` استفاده می‌کند |
-| دامنه ImgBed شما | به‌عنوان URI بازگشت OAuth استفاده می‌شود. باید با دامنه‌ای که واقعاً استفاده می‌کنید مطابقت داشته باشد. |
+| کلاینت OAuth 2.0 | ImgHost از آن برای دریافت `Client ID`، `Client Secret` و `Refresh Token` استفاده می‌کند |
+| دامنه ImgHost شما | به‌عنوان URI بازگشت OAuth استفاده می‌شود. باید با دامنه‌ای که واقعاً استفاده می‌کنید مطابقت داشته باشد. |
 
 ## مراحل پیکربندی
 
@@ -38,7 +38,7 @@
 2. یک کلاینت جدید بسازید.
 3. نوع برنامه را `Web application` قرار دهید.
 4. برای کلاینت نامی قابل تشخیص وارد کنید.
-5. در بخش مبدأهای JavaScript مجاز، URL مربوط به ImgBed را وارد کنید، برای مثال:
+5. در بخش مبدأهای JavaScript مجاز، URL مربوط به ImgHost را وارد کنید، برای مثال:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 پس از ساخت کلاینت، این مقدارها را کپی کنید:
 
-| مقدار تولیدشده | فیلد ImgBed |
+| مقدار تولیدشده | فیلد ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ https://img.example.com/api/oauth/google/callback
 
 در تنظیمات بارگذاری، `Google Drive` را انتخاب کنید و این فیلدها را تکمیل کنید:
 
-| فیلد ImgBed | مقدار لازم |
+| فیلد ImgHost | مقدار لازم |
 | --- | --- |
 | نام کانال | نامی قابل تشخیص، مانند `Main Google Drive` |
 | Client ID | `Client ID` از Google Cloud |
@@ -73,7 +73,7 @@ https://img.example.com/api/oauth/google/callback
 | Refresh Token | فعلاً خالی بگذارید. در مرحله بعد آن را دریافت می‌کنید. |
 | دایرکتوری ریشه | اختیاری. مقدار پیش‌فرض `imgbed` است. |
 
-![تکمیل اطلاعات کلاینت در ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![تکمیل اطلاعات کلاینت در ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## مرحله 5: دریافت Refresh Token
 
@@ -82,7 +82,7 @@ https://img.example.com/api/oauth/google/callback
 3. درخواست‌های مجوزدهی را کامل کنید.
 4. صفحه بازگشت یک `Refresh Token` نمایش می‌دهد.
 5. آن را کپی کنید.
-6. به ImgBed برگردید و آن را در فیلد `Refresh Token` قرار دهید.
+6. به ImgHost برگردید و آن را در فیلد `Refresh Token` قرار دهید.
 
 ![کپی کردن Refresh Token پس از مجوزدهی](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

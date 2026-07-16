@@ -1,9 +1,9 @@
 # WebDAV-toegang tot de site
-De WebDAV-instelling onder Beveiliging stelt je ImgBed-site beschikbaar als WebDAV-eindpunt.
+De WebDAV-instelling onder Beveiliging stelt je ImgHost-site beschikbaar als WebDAV-eindpunt.
 
-Na inschakelen kun je Windows, macOS, mobiele bestandsbeheerders of elke WebDAV-compatibele client gebruiken om ImgBed-bestanden te bekijken, uploaden, verwijderen en beheren alsof het een externe map is.
+Na inschakelen kun je Windows, macOS, mobiele bestandsbeheerders of elke WebDAV-compatibele client gebruiken om ImgHost-bestanden te bekijken, uploaden, verwijderen en beheren alsof het een externe map is.
 
-Dit is de WebDAV-toegang van de site zelf. Het is iets anders dan het WebDAV-opslagkanaal in Uploadinstellingen. Het uploadkanaal slaat bestanden op in een WebDAV-dienst van derden. Deze instelling laat je ImgBed-site WebDAV-toegang aanbieden aan clients.
+Dit is de WebDAV-toegang van de site zelf. Het is iets anders dan het WebDAV-opslagkanaal in Uploadinstellingen. Het uploadkanaal slaat bestanden op in een WebDAV-dienst van derden. Deze instelling laat je ImgHost-site WebDAV-toegang aanbieden aan clients.
 
 ## Waar je dit configureert
 
@@ -23,21 +23,21 @@ Beschikbare instellingen:
 
 ## Wat deze functie doet
 
-Na inschakelen biedt ImgBed een vaste toegangs-URL:
+Na inschakelen biedt ImgHost een vaste toegangs-URL:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Gebruik deze URL om verbinding te maken met je ImgBed-bestandsmap.
+Gebruik deze URL om verbinding te maken met je ImgHost-bestandsmap.
 
 Goede gebruikssituaties:
 
-- ImgBed-bestanden direct vanuit de bestandsbeheerder van je computer bekijken.
+- ImgHost-bestanden direct vanuit de bestandsbeheerder van je computer bekijken.
 - Afbeeldingen naar de WebDAV-map slepen om ze te uploaden.
-- ImgBed-mappen ordenen vanuit je lokale bestandsbeheerder.
+- ImgHost-mappen ordenen vanuit je lokale bestandsbeheerder.
 - WebDAV-compatibele software gebruiken om afbeeldingen te synchroniseren of beheren.
-- ImgBed-inhoud openen zonder het beheerpaneel te gebruiken.
+- ImgHost-inhoud openen zonder het beheerpaneel te gebruiken.
 
 ## Instellingen
 
@@ -63,7 +63,7 @@ Veelgebruikte keuzes:
 
 | Modus | Beschrijving |
 | --- | --- |
-| Slim laden | ImgBed kiest op basis van context. Aanbevolen voor normaal gebruik. |
+| Slim laden | ImgHost kiest op basis van context. Aanbevolen voor normaal gebruik. |
 | Origineel | Geeft voorkeur aan originele afbeeldingen. |
 | Miniatuur | Geeft voorkeur aan miniaturen. Handig voor snelle voorvertoning. |
 
@@ -73,7 +73,7 @@ Weet je het niet zeker, laat dan `Slim laden` staan.
 
 Het standaardkanaal wordt gebruikt voor WebDAV-uploads.
 
-Wanneer je vanuit Windows of een andere client bestanden naar de WebDAV-map kopieert, uploadt ImgBed ze via het geselecteerde standaard uploadkanaal.
+Wanneer je vanuit Windows of een andere client bestanden naar de WebDAV-map kopieert, uploadt ImgHost ze via het geselecteerde standaard uploadkanaal.
 
 Als er geen standaardkanaal is gekozen, kan bladeren werken, maar uploaden mislukken.
 

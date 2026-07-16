@@ -48,9 +48,9 @@ Selepas dibuat, salin dan simpan kata laluan app baharu dengan segera. Biasanya 
 
 ![Simpan kata laluan app baharu](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Isi Konfigurasi WebDAV Dalam ImgBed
+### 2. Isi Konfigurasi WebDAV Dalam ImgHost
 
-Kembali ke ImgBed dan tambah saluran WebDAV:
+Kembali ke ImgHost dan tambah saluran WebDAV:
 
 | Medan UI | Nilai |
 | --- | --- |
@@ -68,7 +68,7 @@ Saluran WebDAV kini menggunakan muat naik berketul berasaskan sesi yang sebenar.
 
 Fail kecil dimuat naik sebagai satu fail lengkap. Fail yang lebih besar daripada 64 MiB akan dipecahkan secara automatik kepada ketul sekitar 10 MiB dan dimuat naik ke direktori ketul jauh.
 
-Perkhidmatan WebDAV tidak perlu menyokong `partial update` atau penulisan berasaskan offset. ImgBed tidak menggabungkan ketul menjadi satu fail besar pada pelayan jauh. Sebaliknya, ImgBed menyimpan manifest ketul dan membaca ketul mengikut urutan apabila fail diminta.
+Perkhidmatan WebDAV tidak perlu menyokong `partial update` atau penulisan berasaskan offset. ImgHost tidak menggabungkan ketul menjadi satu fail besar pada pelayan jauh. Sebaliknya, ImgHost menyimpan manifest ketul dan membaca ketul mengikut urutan apabila fail diminta.
 
 Dalam amalan:
 
@@ -77,7 +77,7 @@ Dalam amalan:
 | 64 MiB atau lebih kecil | Muat naik biasa | Satu fail lengkap |
 | Lebih besar daripada 64 MiB | Muat naik berketul berasaskan sesi sebenar | Direktori ketul yang mengandungi berbilang fail ketul |
 
-Direktori ketul hanya mempengaruhi susun atur storan jauh. Ia tidak mengubah URL fail dalam ImgBed. Pengguna masih mengakses fail melalui pautan asal `/file/...`.
+Direktori ketul hanya mempengaruhi susun atur storan jauh. Ia tidak mengubah URL fail dalam ImgHost. Pengguna masih mengakses fail melalui pautan asal `/file/...`.
 
 ## Langkah Persediaan
 
@@ -111,7 +111,7 @@ Direktori ketul hanya mempengaruhi susun atur storan jauh. Ia tidak mengubah URL
 
 Ini ialah kaedah storan semasa untuk fail besar.
 
-Fail yang lebih besar daripada 64 MiB tidak digabungkan menjadi satu fail jauh yang besar. Fail tersebut disimpan sebagai direktori ketul. ImgBed merekodkan manifest ketul dan mengembalikan kandungan lengkap dengan membaca ketul mengikut urutan.
+Fail yang lebih besar daripada 64 MiB tidak digabungkan menjadi satu fail jauh yang besar. Fail tersebut disimpan sebagai direktori ketul. ImgHost merekodkan manifest ketul dan mengembalikan kandungan lengkap dengan membaca ketul mengikut urutan.
 
 ### Apakah yang perlu disemak dahulu jika muat naik fail besar gagal?
 

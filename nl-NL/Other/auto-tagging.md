@@ -41,7 +41,7 @@ Je kunt de openbare Space tijdelijk gebruiken, maar openbare Spaces worden door 
 3. Klik rechtsboven op het menu met drie puntjes.
 4. Kies `Duplicate this Space`.
 5. Laat de standaardnaam van de Space staan of kies een eigen naam, zoals `wd-tagger`.
-6. Zet de zichtbaarheid op `Public`. Openbare Spaces zijn eenvoudiger door ImgBed aan te roepen.
+6. Zet de zichtbaarheid op `Public`. Openbare Spaces zijn eenvoudiger door ImgHost aan te roepen.
 7. Gebruik in eerste instantie de gratis standaardhardware. Upgrade pas later als wachtrijen duidelijk merkbaar worden.
 8. Maak de Space aan en wacht tot de build is voltooid.
 
@@ -51,7 +51,7 @@ Open na de build je Space-pagina. De URL ziet er meestal zo uit:
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Kopieer de URL uit de browser en plak deze in ImgBed bij `Space URLs`.
+Kopieer de URL uit de browser en plak deze in ImgHost bij `Space URLs`.
 
 ## Meerdere Space-URL's invullen
 
@@ -65,7 +65,7 @@ Voorbeelden:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL van een gekopieerde Space-pagina. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Je eigen gedupliceerde Space-pagina. |
 
-Je kunt meerdere URL's invoeren. ImgBed gebruikt meerdere Spaces tegelijk, wat de snelheid kan verbeteren.
+Je kunt meerdere URL's invoeren. ImgHost gebruikt meerdere Spaces tegelijk, wat de snelheid kan verbeteren.
 
 Als één Space tijdelijk niet beschikbaar is, kunnen de andere Spaces blijven verwerken.
 
@@ -103,7 +103,7 @@ Als er te weinig tags zijn, verlaag dan de algemene drempel iets.
 3. Klik op tagging starten.
 4. Wacht tot de voortgang is voltooid.
 
-Als de doelmap leeg is, verwerkt ImgBed alle mappen.
+Als de doelmap leeg is, verwerkt ImgHost alle mappen.
 
 Batchtagging is vooral geschikt voor oude afbeeldingen. Schakel voor nieuwe afbeeldingen automatisch taggen bij upload in, zodat je dit niet telkens handmatig hoeft te starten.
 
@@ -121,19 +121,19 @@ Automatisch taggen verwerkt vooral afbeeldingsbestanden.
 
 Afbeeldingen die al volledige tags, oriëntatie, rating, breedte en hoogte hebben, worden overgeslagen om onnodige Space-aanroepen te voorkomen.
 
-Waar mogelijk vult ImgBed alleen ontbrekende informatie aan. Als bijvoorbeeld alleen de oriëntatie ontbreekt, probeert ImgBed die toe te voegen zonder de volledige stroom voor inhoudstags aan te roepen.
+Waar mogelijk vult ImgHost alleen ontbrekende informatie aan. Als bijvoorbeeld alleen de oriëntatie ontbreekt, probeert ImgHost die toe te voegen zonder de volledige stroom voor inhoudstags aan te roepen.
 
 ## Veelgestelde vragen
 
 ### Waarom mijn eigen Space dupliceren?
 
-Openbare Spaces worden door veel gebruikers gedeeld. Je eigen gedupliceerde Space wordt vooral door jouw ImgBed-site gebruikt en is daardoor meestal sneller en betrouwbaarder.
+Openbare Spaces worden door veel gebruikers gedeeld. Je eigen gedupliceerde Space wordt vooral door jouw ImgHost-site gebruikt en is daardoor meestal sneller en betrouwbaarder.
 
 ### De Space blijft opstarten
 
 Na de eerste aanmaak of na een lange periode zonder gebruik kan een Space tijd nodig hebben om te starten.
 
-Open eerst je Space-pagina. Zodra deze normaal een afbeelding kan herkennen, ga je terug naar ImgBed en start je het taggen.
+Open eerst je Space-pagina. Zodra deze normaal een afbeelding kan herkennen, ga je terug naar ImgHost en start je het taggen.
 
 ### Hoe kopieer ik de Space-URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

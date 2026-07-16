@@ -2,7 +2,7 @@
 
 ## Geeignet für
 
-- Sie haben ein pCloud-Konto und möchten ImgBed-Bilder dort speichern.
+- Sie haben ein pCloud-Konto und möchten ImgHost-Bilder dort speichern.
 - Es ist für sich in Ordnung, E-Mail-Adresse und Passwort Ihres pCloud-Kontos als Kanalzugangsdaten zu verwenden.
 
 ## Was Sie vorher benötigen
@@ -70,7 +70,7 @@ Wählen Sie den API-Host passend zur Kontoregion:
 
 pCloud OAuth2 ist standardmäßig nicht zur Selbstbedienung freigeschaltet. Sie müssen pCloud per E-Mail bitten, es für sich zu aktivieren.
 
-Der aktuelle pCloud-OAuth2-Ablauf unterstützt außerdem nicht den kurzlebigen Upload-Link-Ablauf, den ImgBed braucht. Deshalb nutzen dieser Kanal stattdessen Anmeldung per Konto-E-Mail und Passwort.
+Der aktuelle pCloud-OAuth2-Ablauf unterstützt außerdem nicht den kurzlebigen Upload-Link-Ablauf, den ImgHost braucht. Deshalb nutzen dieser Kanal stattdessen Anmeldung per Konto-E-Mail und Passwort.
 
 ### Welchen API-Host soll ich verwenden?
 

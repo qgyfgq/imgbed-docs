@@ -1,6 +1,6 @@
 # Melihat Daftar dan Memfilter dengan API Token
 
-Skrip daftar dengan API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga yang perlu membaca data ImgBed. Skrip ini hanya memakai izin `list`. Skrip tidak mengunggah berkas, tidak menghapus berkas, tidak mengubah konfigurasi, dan tidak memblokir atau mengizinkan unggahan dari IP mana pun.
+Skrip daftar dengan API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga yang perlu membaca data ImgHost. Skrip ini hanya memakai izin `list`. Skrip tidak mengunggah berkas, tidak menghapus berkas, tidak mengubah konfigurasi, dan tidak memblokir atau mengizinkan unggahan dari IP mana pun.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat situs ImgBed, misalnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
 | `--retries <n>` | Tidak | Jumlah percobaan ulang saat gagal sementara; bawaan `3` |
 | `--timeout-ms <n>` | Tidak | Batas waktu satu permintaan; bawaan `180000` |

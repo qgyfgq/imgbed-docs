@@ -6,7 +6,7 @@
 | --- | --- |
 | Uma conta Dropbox | Usada para entrar e autorizar o app |
 | Um app Dropbox | Usado para gerar `App Key` e `App Secret` |
-| Seu domínio ImgBed | Usado para o URI de redirecionamento OAuth |
+| Seu domínio ImgHost | Usado para o URI de redirecionamento OAuth |
 | Armazenamento Dropbox disponível | Usado como o local real de armazenamento dos arquivos |
 
 ## Etapas de configuração
@@ -33,8 +33,8 @@ Tipo de acesso recomendado:
 
 | Tipo de acesso | Recomendação |
 | --- | --- |
-| `App folder` | Recomendado. Ele corresponde à forma como o ImgBed armazena arquivos. |
-| `Full Dropbox` | Não recomendado. O ImgBed não precisa de acesso total à conta. |
+| `App folder` | Recomendado. Ele corresponde à forma como o ImgHost armazena arquivos. |
+| `Full Dropbox` | Não recomendado. O ImgHost não precisa de acesso total à conta. |
 
 ![Criar app Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Importante:
 
 Salve estes dois valores da página do app Dropbox:
 
-| Campo do Dropbox | Campo do ImgBed |
+| Campo do Dropbox | Campo do ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Salve estes dois valores da página do app Dropbox:
 
 Em Configurações de upload, escolha `Dropbox` e preencha:
 
-| Campo do ImgBed | O que inserir |
+| Campo do ImgHost | O que inserir |
 | --- | --- |
 | Nome do canal | Um nome que você reconheça, como `Main Dropbox` |
 | App Key | O `App key` do Dropbox |
@@ -99,12 +99,12 @@ Em Configurações de upload, escolha `Dropbox` e preencha:
 
 ### Etapa 6: Obtenha o Refresh Token
 
-1. No ImgBed, clique em `Get Token`.
+1. No ImgHost, clique em `Get Token`.
 2. Entre na conta Dropbox que você quer conectar.
 3. Aprove a solicitação de autorização.
 4. A página de callback mostrará um `Refresh Token`.
 5. Copie-o.
-6. Volte ao ImgBed e cole-o no campo `Refresh Token`.
+6. Volte ao ImgHost e cole-o no campo `Refresh Token`.
 
 ![Copiar token](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Se limites de cota estiverem habilitados, clique na consulta de cota. Depois de 
 
 | Problema | Correção |
 | --- | --- |
-| O ImgBed informa que a configuração está incompleta | Verifique se `App Key`, `App Secret` e `Refresh Token` estão todos preenchidos. |
+| O ImgHost informa que a configuração está incompleta | Verifique se `App Key`, `App Secret` e `Refresh Token` estão todos preenchidos. |
 | A autorização funciona, mas nenhum `Refresh Token` aparece | Clique em `Get Token` novamente e confirme que o fluxo de autorização offline está sendo usado. |
 | Upload falha com `required scope 'files.content.write'` | Habilite `files.content.write`, clique em `Submit` e obtenha um novo `Refresh Token`. |
 | Callback falha | Confirme se o redirect URI é `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Referências

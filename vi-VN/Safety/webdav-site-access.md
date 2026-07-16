@@ -1,9 +1,9 @@
 # Truy cập trang qua WebDAV
-Cài đặt WebDAV trong Security Settings hiển thị trang ImgBed của bạn như một điểm cuối WebDAV.
+Cài đặt WebDAV trong Security Settings hiển thị trang ImgHost của bạn như một điểm cuối WebDAV.
 
-Sau khi bật, bạn có thể dùng Windows, macOS, trình quản lý tệp trên thiết bị di động hoặc bất kỳ máy khách tương thích WebDAV nào để duyệt, tải lên, xóa và quản lý tệp ImgBed như một thư mục từ xa.
+Sau khi bật, bạn có thể dùng Windows, macOS, trình quản lý tệp trên thiết bị di động hoặc bất kỳ máy khách tương thích WebDAV nào để duyệt, tải lên, xóa và quản lý tệp ImgHost như một thư mục từ xa.
 
-Đây là lối vào truy cập WebDAV của trang. Nó khác với kênh lưu trữ WebDAV trong Upload Settings. Kênh tải lên lưu tệp vào một dịch vụ WebDAV của bên thứ ba. Cài đặt này cho phép trang ImgBed của bạn cung cấp quyền truy cập WebDAV cho máy khách.
+Đây là lối vào truy cập WebDAV của trang. Nó khác với kênh lưu trữ WebDAV trong Upload Settings. Kênh tải lên lưu tệp vào một dịch vụ WebDAV của bên thứ ba. Cài đặt này cho phép trang ImgHost của bạn cung cấp quyền truy cập WebDAV cho máy khách.
 
 ## Nơi cấu hình
 
@@ -23,21 +23,21 @@ Các cài đặt có sẵn:
 
 ## Tính năng này làm gì
 
-Sau khi bật WebDAV, ImgBed cung cấp một URL truy cập cố định:
+Sau khi bật WebDAV, ImgHost cung cấp một URL truy cập cố định:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Dùng URL này để kết nối tới thư mục tệp ImgBed của bạn.
+Dùng URL này để kết nối tới thư mục tệp ImgHost của bạn.
 
 Trường hợp sử dụng phù hợp:
 
-- Duyệt tệp ImgBed trực tiếp từ trình quản lý tệp trên máy tính.
+- Duyệt tệp ImgHost trực tiếp từ trình quản lý tệp trên máy tính.
 - Kéo hình ảnh vào thư mục WebDAV để tải lên.
-- Sắp xếp thư mục ImgBed từ trình quản lý tệp cục bộ.
+- Sắp xếp thư mục ImgHost từ trình quản lý tệp cục bộ.
 - Dùng phần mềm tương thích WebDAV để đồng bộ hoặc quản lý hình ảnh.
-- Truy cập nội dung ImgBed mà không mở bảng quản trị.
+- Truy cập nội dung ImgHost mà không mở bảng quản trị.
 
 ## Cài đặt
 
@@ -63,7 +63,7 @@ Các lựa chọn thường gặp:
 
 | Chế độ | Mô tả |
 | --- | --- |
-| Tải thông minh | ImgBed chọn theo ngữ cảnh. Khuyến nghị cho sử dụng thông thường. |
+| Tải thông minh | ImgHost chọn theo ngữ cảnh. Khuyến nghị cho sử dụng thông thường. |
 | Gốc | Ưu tiên hình ảnh gốc. |
 | Hình thu nhỏ | Ưu tiên hình thu nhỏ. Hữu ích cho xem trước nhanh. |
 
@@ -73,7 +73,7 @@ Nếu không chắc, hãy giữ `Tải thông minh`.
 
 Kênh mặc định được dùng cho lượt tải lên qua WebDAV.
 
-Khi bạn sao chép tệp vào thư mục WebDAV từ Windows hoặc máy khách khác, ImgBed tải chúng lên qua kênh tải lên mặc định đã chọn.
+Khi bạn sao chép tệp vào thư mục WebDAV từ Windows hoặc máy khách khác, ImgHost tải chúng lên qua kênh tải lên mặc định đã chọn.
 
 Nếu chưa chọn kênh mặc định, việc duyệt có thể hoạt động, nhưng tải lên có thể thất bại.
 

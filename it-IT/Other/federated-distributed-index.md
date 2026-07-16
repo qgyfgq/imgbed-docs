@@ -1,6 +1,6 @@
 # Indice distribuito federato
 
-L'indice distribuito federato permette a più siti ImgBed di condividere tra loro elenchi di file.
+L'indice distribuito federato permette a più siti ImgHost di condividere tra loro elenchi di file.
 
 In parole semplici:
 
@@ -23,7 +23,7 @@ La pagina ha tre schede:
 | Scheda | Scopo |
 | --- | --- |
 | Local Node | Abilita il tuo nodo, conferma il dominio pubblico, seleziona le cartelle condivise e aggiorna l'indice in uscita |
-| Nodes I Joined | Gestisce altri nodi ImgBed a cui ti sei unito |
+| Nodes I Joined | Gestisce altri nodi ImgHost a cui ti sei unito |
 | Nodes Joining Me | Gestisce richieste di altri che vogliono unirsi al tuo nodo |
 
 ## Prima configurazione
@@ -32,7 +32,7 @@ La pagina ha tre schede:
 2. Attiva `Enable`.
 3. Seleziona le cartelle da condividere in `Sync folders`.
 4. Clicca `Update Outbound Index`.
-5. Se ImgBed rileva una modifica del dominio, conferma che il dominio corrente sia corretto prima di continuare.
+5. Se ImgHost rileva una modifica del dominio, conferma che il dominio corrente sia corretto prima di continuare.
 
 Puoi selezionare più cartelle di sincronizzazione.
 
@@ -44,7 +44,7 @@ Se l'elenco delle cartelle di sincronizzazione è vuoto, vengono condivise tutte
 
 Il dominio pubblico è l'URL del sito che gli altri nodi usano per accedere al tuo nodo.
 
-ImgBed lo rileva automaticamente. Non serve inserirlo a mano. La prima volta che aggiorni l'indice, ImgBed chiede conferma che l'URL corrente sia il dominio di produzione.
+ImgHost lo rileva automaticamente. Non serve inserirlo a mano. La prima volta che aggiorni l'indice, ImgHost chiede conferma che l'URL corrente sia il dominio di produzione.
 
 Se cambi dominio in seguito, l'aggiornamento dell'indice chiederà di nuovo conferma.
 
@@ -116,7 +116,7 @@ Dopo l'annullamento, l'indice federato di quel nodo viene rimosso dal tuo sito l
 ### Generare un link di invito
 
 1. Assicurati che il nodo locale sia abilitato.
-2. Clicca almeno una volta `Update Outbound Index`, in modo che ImgBed confermi il dominio pubblico.
+2. Clicca almeno una volta `Update Outbound Index`, in modo che ImgHost confermi il dominio pubblico.
 3. Apri `Nodes Joining Me`.
 4. Clicca `Reset Invitation Link`.
 5. Copia il link di invito e invialo all'altro proprietario.

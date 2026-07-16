@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox hesabı | Giriş yapmak ve app yetkilendirmek için |
 | Dropbox app | `App Key` ve `App Secret` oluşturmak için |
-| ImgBed alan adınız | OAuth redirect URI için |
+| ImgHost alan adınız | OAuth redirect URI için |
 | Kullanılabilir Dropbox depolama alanı | Dosyaların gerçekten saklanacağı yer |
 
 ## Kurulum Adımları
@@ -33,8 +33,8 @@ App folder
 
 | Access Type | Öneri |
 | --- | --- |
-| `App folder` | Önerilir. ImgBed'in dosya saklama biçimine uygundur. |
-| `Full Dropbox` | Önerilmez. ImgBed'in tüm hesaba erişmesine gerek yoktur. |
+| `App folder` | Önerilir. ImgHost'in dosya saklama biçimine uygundur. |
+| `Full Dropbox` | Önerilmez. ImgHost'in tüm hesaba erişmesine gerek yoktur. |
 
 ![Dropbox app oluşturma](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Scopes seçildikten sonra sayfanın altındaki `Submit` düğmesine tıklayın.
 
 Dropbox app sayfasından şu iki değeri kaydedin:
 
-| Dropbox Alanı | ImgBed Alanı |
+| Dropbox Alanı | ImgHost Alanı |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Dropbox app sayfasından şu iki değeri kaydedin:
 
 Yükleme Ayarları'nda `Dropbox` seçin ve şunları doldurun:
 
-| ImgBed Alanı | Ne girilir |
+| ImgHost Alanı | Ne girilir |
 | --- | --- |
 | Channel name | Tanınabilir bir ad, örneğin `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ Yükleme Ayarları'nda `Dropbox` seçin ve şunları doldurun:
 
 ### 6. Refresh Token Alın
 
-1. ImgBed'de `Get Token` düğmesine tıklayın.
+1. ImgHost'de `Get Token` düğmesine tıklayın.
 2. Bağlamak istediğiniz Dropbox hesabıyla giriş yapın.
 3. Yetkilendirme istemini onaylayın.
 4. Callback sayfası bir `Refresh Token` gösterir.
 5. Bunu kopyalayın.
-6. ImgBed'e dönüp `Refresh Token` alanına yapıştırın.
+6. ImgHost'e dönüp `Refresh Token` alanına yapıştırın.
 
 ![Token kopyalama](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Quota limits etkinse kota sorgusuna tıklayın. Başarılı sorgudan sonra kanal
 
 | Sorun | Çözüm |
 | --- | --- |
-| ImgBed yapılandırmanın eksik olduğunu söylüyor | `App Key`, `App Secret` ve `Refresh Token` alanlarının dolu olduğunu kontrol edin. |
+| ImgHost yapılandırmanın eksik olduğunu söylüyor | `App Key`, `App Secret` ve `Refresh Token` alanlarının dolu olduğunu kontrol edin. |
 | Yetkilendirme başarılı ama `Refresh Token` görünmüyor | `Get Token` düğmesine tekrar tıklayın ve offline authorization flow kullanıldığından emin olun. |
 | Yükleme `required scope 'files.content.write'` hatasıyla başarısız oluyor | `files.content.write` etkinleştirin, `Submit` tıklayın ve yeni `Refresh Token` alın. |
 | Callback başarısız oluyor | Redirect URI değerinin `https://your-domain.com/api/oauth/dropbox/callback` olduğunu doğrulayın. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Kaynaklar

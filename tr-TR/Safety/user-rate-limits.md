@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Sıklık Sınırlarını Etkinleştirme
 
-`Sıklık Sınırlarını Etkinleştir` açıldıktan sonra ImgBed son yüklemeleri yükleyenin IP adresine göre izler.
+`Sıklık Sınırlarını Etkinleştir` açıldıktan sonra ImgHost son yüklemeleri yükleyenin IP adresine göre izler.
 
 Varsayılan değerler:
 

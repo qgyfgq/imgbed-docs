@@ -41,7 +41,7 @@ Herkese açık Space'i geçici test için kullanabilirsiniz. Ancak herkese açı
 3. Sağ üst köşedeki üç nokta menüsüne tıklayın.
 4. `Duplicate this Space` seçeneğini seçin.
 5. Varsayılan Space adını koruyun veya `wd-tagger` gibi kendi adınızı seçin.
-6. Görünürlüğü `Public` olarak ayarlayın. Herkese açık Space'ler, ImgBed tarafından daha kolay çağrılır.
+6. Görünürlüğü `Public` olarak ayarlayın. Herkese açık Space'ler, ImgHost tarafından daha kolay çağrılır.
 7. Başta varsayılan ücretsiz donanımı kullanın. Yalnızca kuyruk belirgin hale gelirse daha sonra yükseltin.
 8. Space'i oluşturun ve derlemenin bitmesini bekleyin.
 
@@ -51,7 +51,7 @@ Derleme bittikten sonra kendi Space sayfanızı açın. URL genellikle şöyle g
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Tarayıcı URL'sini kopyalayın ve ImgBed'deki `Space URLs` alanına yapıştırın.
+Tarayıcı URL'sini kopyalayın ve ImgHost'deki `Space URLs` alanına yapıştırın.
 
 ## Birden Fazla Space URL'si Girme
 
@@ -65,7 +65,7 @@ Her satıra bir Space URL'si girin.
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | Kopyalanmış Space sayfasının URL'si. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Kendi çoğaltılmış Space sayfanızın URL'si. |
 
-Birden fazla URL girebilirsiniz. ImgBed birden fazla Space'i birlikte kullanır; bu hızın artmasına yardımcı olabilir.
+Birden fazla URL girebilirsiniz. ImgHost birden fazla Space'i birlikte kullanır; bu hızın artmasına yardımcı olabilir.
 
 Bir Space geçici olarak kullanılamıyorsa, diğerleri işlemeye devam edebilir.
 
@@ -103,7 +103,7 @@ Etiketler çok azsa genel etiket eşiğini biraz düşürün.
 3. Etiketlemeyi başlat düğmesine tıklayın.
 4. İlerlemenin bitmesini bekleyin.
 
-Hedef klasör boşsa ImgBed tüm klasörleri işler.
+Hedef klasör boşsa ImgHost tüm klasörleri işler.
 
 Toplu etiketleme eski görseller için en uygunudur. Yeni görseller için yükleme sırasında otomatik etiketlemeyi etkinleştirin; böylece her seferinde elle çalıştırmanız gerekmez.
 
@@ -121,19 +121,19 @@ Otomatik etiketleme ağırlıklı olarak görsel dosyalarını işler.
 
 Tam etiket, yön, derecelendirme, genişlik ve yükseklik bilgisine zaten sahip görseller, gereksiz Space çağrılarını önlemek için atlanır.
 
-ImgBed mümkün olduğunda yalnızca eksik bilgileri doldurur. Örneğin yalnızca yön eksikse, tam içerik etiketleme akışını çağırmadan yön eklemeye çalışır.
+ImgHost mümkün olduğunda yalnızca eksik bilgileri doldurur. Örneğin yalnızca yön eksikse, tam içerik etiketleme akışını çağırmadan yön eklemeye çalışır.
 
 ## Sık Sorulan Sorular
 
 ### Neden Kendi Space'imi Çoğaltmalıyım?
 
-Herkese açık Space'ler birçok kullanıcı tarafından paylaşılır. Kendi çoğaltılmış Space'iniz çoğunlukla yalnızca ImgBed siteniz tarafından kullanılır; bu nedenle genellikle daha hızlı ve daha güvenilirdir.
+Herkese açık Space'ler birçok kullanıcı tarafından paylaşılır. Kendi çoğaltılmış Space'iniz çoğunlukla yalnızca ImgHost siteniz tarafından kullanılır; bu nedenle genellikle daha hızlı ve daha güvenilirdir.
 
 ### Space Sürekli Başlatılıyor
 
 İlk oluşturma sonrasında veya uzun süre boşta kaldıktan sonra Space'in başlaması zaman alabilir.
 
-Önce Space sayfanızı açın. Bir görseli normal şekilde tanıyabildiğinde ImgBed'e dönüp etiketlemeyi başlatın.
+Önce Space sayfanızı açın. Bir görseli normal şekilde tanıyabildiğinde ImgHost'e dönüp etiketlemeyi başlatın.
 
 ### Space URL'sini Nasıl Kopyalarım?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

@@ -28,7 +28,7 @@ Der neuere Ablauf für IP-Geolokalisierung unterstützt mehrere Quellen, statt s
 
 Füllen Sie nur die Dienste aus, die Sie benötigen. Sie müssen nicht jedes Feld konfigurieren.
 
-Wenn kein Schlüssel angegeben ist, versucht ImgBed weiterhin, integrierte kostenlose Quellen zu verwenden. Stabilität, Sprachunterstützung und Genauigkeit können jedoch geringer sein als bei einem Dienst, den Sie selbst konfigurieren.
+Wenn kein Schlüssel angegeben ist, versucht ImgHost weiterhin, integrierte kostenlose Quellen zu verwenden. Stabilität, Sprachunterstützung und Genauigkeit können jedoch geringer sein als bei einem Dienst, den Sie selbst konfigurieren.
 
 ## Empfohlene Optionen
 
@@ -57,9 +57,9 @@ Suchen Sie die Account ID im MaxMind-Dashboard und erzeugen Sie auf der Seite Li
 
 ![MaxMind-Schlüssel konfigurieren](../../image/other/ip定位/maxmind的key配置.png)
 
-Fügen Sie nach dem Erzeugen Account ID und License Key in ImgBed ein und speichern Sie.
+Fügen Sie nach dem Erzeugen Account ID und License Key in ImgHost ein und speichern Sie.
 
-Der kostenlose MaxMind-Plan eignet sich für den Alltag, hat aber Anfragelimits. Wenn das Kontingent überschritten wird, versucht ImgBed weiterhin andere verfügbare Quellen.
+Der kostenlose MaxMind-Plan eignet sich für den Alltag, hat aber Anfragelimits. Wenn das Kontingent überschritten wird, versucht ImgHost weiterhin andere verfügbare Quellen.
 
 ## ipapi einrichten
 
@@ -69,9 +69,9 @@ ipapi verwendet einen APILayer API Key.
 
 ![ipapi konfigurieren](../../image/other/ip定位/ipapi配置.png)
 
-Fügen Sie ihn in ImgBed in das Feld `ipapi Key` ein und speichern Sie.
+Fügen Sie ihn in ImgHost in das Feld `ipapi Key` ein und speichern Sie.
 
-ipapi unterstützt mehrsprachige IP-Geolokalisierung und ist nützlich, wenn Adressen in einer ausgewählten Sprache angezeigt werden sollen. Auch der kostenlose Plan hat Anfragelimits. Wenn das Kontingent aufgebraucht ist, versucht ImgBed weiterhin andere verfügbare Quellen.
+ipapi unterstützt mehrsprachige IP-Geolokalisierung und ist nützlich, wenn Adressen in einer ausgewählten Sprache angezeigt werden sollen. Auch der kostenlose Plan hat Anfragelimits. Wenn das Kontingent aufgebraucht ist, versucht ImgHost weiterhin andere verfügbare Quellen.
 
 ## Tencent Map Key einrichten
 

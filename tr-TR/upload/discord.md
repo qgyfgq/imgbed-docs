@@ -44,7 +44,7 @@
 5. `Bot` sayfasında token oluşturun veya sıfırlayın.
 6. Token değerini kaydedin.
 
-ImgBed'deki `Bot Token` alanına girmeniz gereken değer budur.
+ImgHost'deki `Bot Token` alanına girmeniz gereken değer budur.
 
 ![Bot token görüntüleme](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ ImgBed'deki `Bot Token` alanına girmeniz gereken değer budur.
 5. Kanal adına sağ tıklayın.
 6. Kanal ID'sini Kopyala seçeneğine tıklayın.
 
-Kopyalanan sayı, ImgBed'in istediği `Channel ID` değeridir.
+Kopyalanan sayı, ImgHost'in istediği `Channel ID` değeridir.
 
 ![Developer mode etkinleştirme](../../image/upload/discord/开启开发者权限.png)
 
 ![Channel ID kopyalama](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed'de Discord Kanalını Doldurun
+### 5. ImgHost'de Discord Kanalını Doldurun
 
 Kanal yapılandırma penceresine geri dönün ve alanları şöyle doldurun:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

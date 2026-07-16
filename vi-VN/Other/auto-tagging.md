@@ -41,7 +41,7 @@ Bạn có thể tạm dùng Space công khai để kiểm thử, nhưng các Spa
 3. Nhấp vào menu ba chấm ở góc trên bên phải.
 4. Chọn `Duplicate this Space`.
 5. Giữ tên Space mặc định hoặc chọn tên riêng, chẳng hạn `wd-tagger`.
-6. Đặt quyền hiển thị là `Public`. Các Space công khai dễ được ImgBed gọi hơn.
+6. Đặt quyền hiển thị là `Public`. Các Space công khai dễ được ImgHost gọi hơn.
 7. Ban đầu giữ phần cứng miễn phí mặc định. Chỉ nâng cấp sau nếu tình trạng xếp hàng trở nên rõ ràng.
 8. Tạo Space và chờ quá trình xây dựng hoàn tất.
 
@@ -51,7 +51,7 @@ Sau khi quá trình xây dựng hoàn tất, mở trang Space của bạn. URL t
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Sao chép URL trên trình duyệt và dán vào `Space URLs` trong ImgBed.
+Sao chép URL trên trình duyệt và dán vào `Space URLs` trong ImgHost.
 
 ## Điền Nhiều Space URLs
 
@@ -65,7 +65,7 @@ Ví dụ:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL trang Space đã sao chép. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Trang Space do bạn tự nhân bản. |
 
-Bạn có thể nhập nhiều URL. ImgBed sử dụng nhiều Space cùng lúc, nhờ đó có thể cải thiện tốc độ.
+Bạn có thể nhập nhiều URL. ImgHost sử dụng nhiều Space cùng lúc, nhờ đó có thể cải thiện tốc độ.
 
 Nếu một Space tạm thời không khả dụng, các Space khác vẫn có thể tiếp tục xử lý.
 
@@ -103,7 +103,7 @@ Nếu có quá ít thẻ, hãy giảm nhẹ ngưỡng thẻ chung.
 3. Nhấp bắt đầu gắn thẻ.
 4. Chờ tiến trình hoàn tất.
 
-Nếu thư mục đích trống, ImgBed xử lý tất cả thư mục.
+Nếu thư mục đích trống, ImgHost xử lý tất cả thư mục.
 
 Gắn thẻ hàng loạt phù hợp nhất cho ảnh cũ. Với ảnh mới, hãy bật tự gắn thẻ khi tải lên để không cần chạy thủ công mỗi lần.
 
@@ -121,19 +121,19 @@ Gắn thẻ tự động chủ yếu xử lý tệp hình ảnh.
 
 Ảnh đã có đủ thẻ, hướng, phân loại, chiều rộng và chiều cao sẽ bị bỏ qua để tránh gọi Space không cần thiết.
 
-ImgBed chỉ điền thông tin còn thiếu khi có thể. Ví dụ, nếu chỉ thiếu hướng ảnh, hệ thống cố gắng thêm hướng mà không gọi toàn bộ luồng gắn thẻ nội dung.
+ImgHost chỉ điền thông tin còn thiếu khi có thể. Ví dụ, nếu chỉ thiếu hướng ảnh, hệ thống cố gắng thêm hướng mà không gọi toàn bộ luồng gắn thẻ nội dung.
 
 ## Câu Hỏi Thường Gặp
 
 ### Vì Sao Nên Nhân Bản Space Riêng?
 
-Các Space công khai được nhiều người dùng chung. Space do bạn tự nhân bản chủ yếu được trang ImgBed của bạn dùng, nên thường nhanh hơn và đáng tin cậy hơn.
+Các Space công khai được nhiều người dùng chung. Space do bạn tự nhân bản chủ yếu được trang ImgHost của bạn dùng, nên thường nhanh hơn và đáng tin cậy hơn.
 
 ### Space Liên Tục Khởi Động
 
 Sau lần tạo đầu tiên hoặc sau thời gian dài không hoạt động, Space có thể cần thời gian để khởi động.
 
-Trước tiên hãy mở trang Space của bạn. Khi nó có thể nhận diện ảnh bình thường, hãy quay lại ImgBed và bắt đầu gắn thẻ.
+Trước tiên hãy mở trang Space của bạn. Khi nó có thể nhận diện ảnh bình thường, hãy quay lại ImgHost và bắt đầu gắn thẻ.
 
 ### Sao Chép Space URL Như Thế Nào?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

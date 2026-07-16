@@ -1,6 +1,6 @@
 # Token API Cloudflare
 
-Dane API Cloudflare pozwalają ImgBed czyścić pamięć podręczną CDN Cloudflare po zmianach plików.
+Dane API Cloudflare pozwalają ImgHost czyścić pamięć podręczną CDN Cloudflare po zmianach plików.
 
 ![Ustawienia tokenu API Cloudflare](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare może przechowywać publiczne adresy URL obrazów w pamięci podręcz
 
 Pamięć podręczna przyspiesza dostarczanie obrazów, ale może też sprawić, że stara treść będzie widoczna przez jakiś czas po usunięciu, zablokowaniu, zastąpieniu lub przeniesieniu pliku.
 
-Po skonfigurowaniu danych API Cloudflare ImgBed próbuje wyczyścić powiązaną pamięć podręczną Cloudflare po zakończeniu takich operacji.
+Po skonfigurowaniu danych API ImgHost próbuje wyczyścić powiązaną pamięć podręczną Cloudflare po zakończeniu takich operacji.
 
 Jest to przydatne, gdy:
 
@@ -36,18 +36,18 @@ Jest to przydatne, gdy:
 
 ## Co jeśli zostawisz puste
 
-ImgBed działa normalnie bez tego ustawienia.
+ImgHost działa normalnie bez tego ustawienia.
 
-Jedyna różnica polega na tym, że ImgBed nie będzie aktywnie czyścił pamięci podręcznej CDN Cloudflare. Odwiedzający mogą widzieć starą zawartość do momentu naturalnego wygaśnięcia pamięci podręcznej Cloudflare.
+Jedyna różnica polega na tym, że ImgHost nie będzie aktywnie czyścił pamięci podręcznej CDN Cloudflare. Odwiedzający mogą widzieć starą zawartość do momentu naturalnego wygaśnięcia pamięci podręcznej Cloudflare.
 
 ## Jak znaleźć Zone ID
 
-Zone ID to Cloudflare Zone ID strony używanej przez domenę ImgBed.
+Zone ID to Cloudflare Zone ID strony używanej przez domenę ImgHost.
 
 1. Zaloguj się do Cloudflare Dashboard.
-2. Otwórz stronę, która zawiera domenę ImgBed.
+2. Otwórz stronę, która zawiera domenę ImgHost.
 3. Znajdź `Zone ID` na stronie przeglądu.
-4. Skopiuj je do pola `Zone ID` w ImgBed.
+4. Skopiuj je do pola `Zone ID` w ImgHost.
 
 To Zone ID strony, nie Account ID.
 
@@ -66,7 +66,7 @@ Wpisz Cloudflare Global API Key.
 3. Przejdź do strony API Tokens.
 4. Znajdź `Global API Key`.
 5. Wyświetl i skopiuj.
-6. Wklej do pola `API Key` w ImgBed.
+6. Wklej do pola `API Key` w ImgHost.
 
 ![Wyświetl globalny API key](../../image/Safety/查看全局令牌.png)
 
@@ -94,10 +94,10 @@ Błędne dane uniemożliwią tylko czyszczenie pamięci podręcznej Cloudflare. 
 
 Najczęstsza przyczyna to stary plik nadal obecny w pamięci podręcznej Cloudflare.
 
-Przy poprawnych danych API Cloudflare ImgBed czyści pamięć podręczną powiązanego adresu URL po usunięciu pliku.
+Przy poprawnych danych API ImgHost czyści pamięć podręczną powiązanego adresu URL po usunięciu pliku.
 
 ### Dlaczego po zastąpieniu pliku nadal widzę stary obraz?
 
 To również zwykle wynika z pamięci podręcznej CDN.
 
-Po skonfigurowaniu tego ustawienia ImgBed próbuje wyczyścić pamięć podręczną starego adresu URL, gdy plik o tej samej nazwie zostanie nadpisany.
+Po skonfigurowaniu tego ustawienia ImgHost próbuje wyczyścić pamięć podręczną starego adresu URL, gdy plik o tej samej nazwie zostanie nadpisany.

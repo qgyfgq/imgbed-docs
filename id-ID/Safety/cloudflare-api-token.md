@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Kredensial Cloudflare API memungkinkan ImgBed membersihkan tembolok CDN Cloudflare setelah berkas berubah.
+Kredensial Cloudflare API memungkinkan ImgHost membersihkan tembolok CDN Cloudflare setelah berkas berubah.
 
 ![Pengaturan Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare dapat menyimpan URL gambar publik di tembolok.
 
 Tembolok membuat pengiriman gambar lebih cepat, tetapi juga dapat membuat konten lama tetap terlihat beberapa saat setelah Anda menghapus, memblokir, mengganti, atau memindahkan berkas.
 
-Setelah kredensial Cloudflare API dikonfigurasi, ImgBed akan mencoba membersihkan tembolok Cloudflare terkait saat operasi tersebut selesai.
+Setelah kredensial Cloudflare API dikonfigurasi, ImgHost akan mencoba membersihkan tembolok Cloudflare terkait saat operasi tersebut selesai.
 
 Ini berguna saat:
 
@@ -36,18 +36,18 @@ Ini berguna saat:
 
 ## Jika Dibiarkan Kosong
 
-ImgBed tetap berjalan normal tanpa pengaturan ini.
+ImgHost tetap berjalan normal tanpa pengaturan ini.
 
-Perbedaannya, ImgBed tidak akan secara aktif membersihkan tembolok CDN Cloudflare. Pengunjung mungkin tetap melihat konten lama sampai tembolok Cloudflare kedaluwarsa secara alami.
+Perbedaannya, ImgHost tidak akan secara aktif membersihkan tembolok CDN Cloudflare. Pengunjung mungkin tetap melihat konten lama sampai tembolok Cloudflare kedaluwarsa secara alami.
 
 ## Cara Menemukan Zone ID
 
-Zone ID adalah Cloudflare Zone ID untuk situs yang dipakai oleh domain ImgBed Anda.
+Zone ID adalah Cloudflare Zone ID untuk situs yang dipakai oleh domain ImgHost Anda.
 
 1. Login ke dashboard Cloudflare.
-2. Buka situs yang berisi domain ImgBed Anda.
+2. Buka situs yang berisi domain ImgHost Anda.
 3. Cari `Zone ID` di halaman ringkasan situs.
-4. Salin ke kolom `Zone ID` di ImgBed.
+4. Salin ke kolom `Zone ID` di ImgHost.
 
 Ini adalah Zone ID situs, bukan account ID.
 
@@ -66,7 +66,7 @@ Masukkan Cloudflare Global API Key.
 3. Masuk ke halaman API Tokens.
 4. Cari `Global API Key`.
 5. Lihat dan salin.
-6. Tempel ke kolom `API Key` di ImgBed.
+6. Tempel ke kolom `API Key` di ImgHost.
 
 ![Lihat global API key](../../image/Safety/查看全局令牌.png)
 
@@ -88,17 +88,17 @@ Jika domain Anda tidak memakai Cloudflare, atau Anda tidak keberatan dengan jeda
 
 Biasanya tidak.
 
-Kredensial yang salah hanya membuat ImgBed gagal membersihkan tembolok Cloudflare. Unggahan dan akses berkas normal seharusnya tetap berjalan.
+Kredensial yang salah hanya membuat ImgHost gagal membersihkan tembolok Cloudflare. Unggahan dan akses berkas normal seharusnya tetap berjalan.
 
 ### Mengapa Gambar yang Dihapus Masih Bisa Dibuka?
 
 Penyebab paling umum adalah Cloudflare masih menyimpan berkas lama di tembolok.
 
-Dengan kredensial Cloudflare API yang benar, ImgBed membersihkan tembolok URL terkait saat berkas dihapus.
+Dengan kredensial Cloudflare API yang benar, ImgHost membersihkan tembolok URL terkait saat berkas dihapus.
 
 ### Mengapa Setelah Mengganti Berkas Saya Masih Melihat Gambar Lama?
 
 Ini juga biasanya disebabkan oleh tembolok CDN.
 
-Setelah pengaturan ini dikonfigurasi, ImgBed mencoba membersihkan tembolok URL lama saat berkas dengan nama yang sama ditimpa.
+Setelah pengaturan ini dikonfigurasi, ImgHost mencoba membersihkan tembolok URL lama saat berkas dengan nama yang sama ditimpa.
 

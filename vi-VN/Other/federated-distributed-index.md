@@ -1,6 +1,6 @@
 # Chỉ Mục Phân Tán Liên Minh
 
-Chỉ mục phân tán liên minh cho phép nhiều trang ImgBed chia sẻ danh sách tệp với nhau.
+Chỉ mục phân tán liên minh cho phép nhiều trang ImgHost chia sẻ danh sách tệp với nhau.
 
 Hiểu đơn giản:
 
@@ -23,7 +23,7 @@ Trang có ba thẻ:
 | Thẻ | Mục đích |
 | --- | --- |
 | Nút cục bộ | Bật nút của bạn, xác nhận tên miền công khai, chọn thư mục chia sẻ và cập nhật chỉ mục ra |
-| Nút tôi đã tham gia | Quản lý các nút ImgBed khác mà bạn đã tham gia |
+| Nút tôi đã tham gia | Quản lý các nút ImgHost khác mà bạn đã tham gia |
 | Nút tham gia tôi | Quản lý yêu cầu từ những người muốn tham gia nút của bạn |
 
 ## Thiết Lập Lần Đầu
@@ -32,7 +32,7 @@ Trang có ba thẻ:
 2. Bật `Enable`.
 3. Chọn thư mục cần chia sẻ trong `Sync folders`.
 4. Nhấp `Update Outbound Index`.
-5. Nếu ImgBed phát hiện thay đổi tên miền, hãy xác nhận tên miền hiện tại là đúng trước khi tiếp tục.
+5. Nếu ImgHost phát hiện thay đổi tên miền, hãy xác nhận tên miền hiện tại là đúng trước khi tiếp tục.
 
 Bạn có thể chọn nhiều thư mục đồng bộ.
 
@@ -44,7 +44,7 @@ Nếu danh sách thư mục đồng bộ trống, tất cả thư mục sẽ đ�
 
 Tên miền công khai là URL trang mà các nút khác dùng để truy cập nút của bạn.
 
-ImgBed tự động phát hiện giá trị này. Bạn không cần nhập thủ công. Lần đầu cập nhật chỉ mục, ImgBed sẽ yêu cầu xác nhận URL truy cập hiện tại có phải tên miền chính thức hay không.
+ImgHost tự động phát hiện giá trị này. Bạn không cần nhập thủ công. Lần đầu cập nhật chỉ mục, ImgHost sẽ yêu cầu xác nhận URL truy cập hiện tại có phải tên miền chính thức hay không.
 
 Nếu sau này bạn đổi tên miền, thao tác cập nhật chỉ mục sẽ yêu cầu xác nhận lại.
 
@@ -116,7 +116,7 @@ Sau khi hủy tham gia, chỉ mục liên minh của nút đó sẽ bị xóa kh
 ### Tạo Liên Kết Mời
 
 1. Đảm bảo nút cục bộ đã bật.
-2. Nhấp `Update Outbound Index` ít nhất một lần để ImgBed xác nhận tên miền công khai.
+2. Nhấp `Update Outbound Index` ít nhất một lần để ImgHost xác nhận tên miền công khai.
 3. Mở `Nodes Joining Me`.
 4. Nhấp `Reset Invitation Link`.
 5. Sao chép liên kết mời và gửi cho chủ sở hữu bên kia.

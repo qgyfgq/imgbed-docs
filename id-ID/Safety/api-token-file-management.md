@@ -46,7 +46,7 @@ Untuk menjalankan skrip, Node.js 18 atau versi yang lebih baru harus terpasang d
 
 | Parameter | Wajib | Deskripsi |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | URL situs ImgBed, misalnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | URL situs ImgHost, misalnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token. Anda juga dapat menggunakan variabel lingkungan `IMGBED_API_TOKEN` |
 | `--retries <n>` | Tidak | Jumlah percobaan ulang untuk kegagalan sementara. Default `3` |
 | `--timeout-ms <n>` | Tidak | Batas waktu untuk satu permintaan. Default `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Membuat Folder
 
-Direktori ImgBed berasal dari path file, sehingga tidak ada direktori kosong yang benar-benar berdiri sendiri. Saat skrip membuat folder, skrip akan membuat file placeholder `0.md` di direktori tujuan agar direktori tersebut muncul di pengelolaan file dan statistik direktori.
+Direktori ImgHost berasal dari path file, sehingga tidak ada direktori kosong yang benar-benar berdiri sendiri. Saat skrip membuat folder, skrip akan membuat file placeholder `0.md` di direktori tujuan agar direktori tersebut muncul di pengelolaan file dan statistik direktori.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend memproses maksimal `15` file dalam satu permintaan. Default skrip adalah
 
 ### Apakah bisa membuat folder kosong yang benar-benar kosong
 
-Direktori ImgBed diturunkan dari path file, sehingga tidak ada direktori kosong yang benar-benar berdiri sendiri. `--create-folder` akan membuat file placeholder direktori `0.md` agar direktori itu dapat tampil di pengelolaan file dan statistik direktori.
+Direktori ImgHost diturunkan dari path file, sehingga tidak ada direktori kosong yang benar-benar berdiri sendiri. `--create-folder` akan membuat file placeholder direktori `0.md` agar direktori itu dapat tampil di pengelolaan file dan statistik direktori.
 
 ### Berapa lama maksimal Token unggahan jangka pendek
 

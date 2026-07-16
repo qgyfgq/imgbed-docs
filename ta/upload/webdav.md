@@ -48,9 +48,9 @@ WebDAV சேனல் பயன்படுத்தலாம், நீங்�
 
 ![புதிய செயலி கடவுச்சொல்லை சேமிக்கவும்](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ImgBed-ல் WebDAV கட்டமைப்பு நிரப்பவும்
+### 2. ImgHost-ல் WebDAV கட்டமைப்பு நிரப்பவும்
 
-ImgBed-க்கு திரும்பி WebDAV சேனல் சேர்க்கவும்:
+ImgHost-க்கு திரும்பி WebDAV சேனல் சேர்க்கவும்:
 
 | UI புலம் | மதிப்பு |
 | --- | --- |
@@ -68,14 +68,14 @@ WebDAV சேனல் இப்போது real session-based chunked பத�
 
 சிறிய கோப்புகள் ஒரே complete கோப்பு ஆக பதிவேற்றம் ஆகும். 64 MiB-ஐ விட பெரிய கோப்புகள் தானாக சுமார் 10 MiB chunks ஆகப் பிரிந்து remote chunk directory-ல் பதிவேற்றம் ஆகும்.
 
-WebDAV சேவை `partial update` அல்லது offset-based writes support செய்ய வேண்டியதில்லை. ImgBed remote சேவையகம்-ல் chunks-ஐ ஒரு பெரிய கோப்பு ஆக merge செய்யாது. அதற்கு பதில் chunk manifest சேமித்து, கோப்பு request வரும் போது chunks-ஐ வரிசையாக படிக்கும்.
+WebDAV சேவை `partial update` அல்லது offset-based writes support செய்ய வேண்டியதில்லை. ImgHost remote சேவையகம்-ல் chunks-ஐ ஒரு பெரிய கோப்பு ஆக merge செய்யாது. அதற்கு பதில் chunk manifest சேமித்து, கோப்பு request வரும் போது chunks-ஐ வரிசையாக படிக்கும்.
 
 | கோப்பு Size | பதிவேற்றம் Method | Remote சேமிப்பு Layout |
 | --- | --- | --- |
 | 64 MiB அல்லது குறைவு | Normal பதிவேற்றம் | ஒரு complete கோப்பு |
 | 64 MiB-ஐ விட பெரியது | Real session chunked பதிவேற்றம் | பல chunk கோப்புகள் உள்ள chunk directory |
 
-chunk directory remote சேமிப்பு layout-ஐ மட்டும் பாதிக்கும். ImgBed கோப்பு URL மாறாது. users original `/file/...` link மூலமே கோப்பு அணுகல் செய்வார்கள்.
+chunk directory remote சேமிப்பு layout-ஐ மட்டும் பாதிக்கும். ImgHost கோப்பு URL மாறாது. users original `/file/...` link மூலமே கோப்பு அணுகல் செய்வார்கள்.
 
 ## அமைப்பு படிகள்
 
@@ -109,7 +109,7 @@ chunk directory remote சேமிப்பு layout-ஐ மட்டும்
 
 இது பெரிய கோப்புகளுக்கான தற்போதைய சேமிப்பு முறை.
 
-64 MiB-ஐ விட பெரிய கோப்புகள் தொலைபுறத்தில் ஒரு பெரிய கோப்பாக இணைக்கப்படாது. அவை chunk directory ஆக சேமிக்கப்படும். ImgBed chunk manifest-ஐ பதிவு செய்து, முழு உள்ளடக்கத்தை chunks-ஐ வரிசையாக படித்து வழங்கும்.
+64 MiB-ஐ விட பெரிய கோப்புகள் தொலைபுறத்தில் ஒரு பெரிய கோப்பாக இணைக்கப்படாது. அவை chunk directory ஆக சேமிக்கப்படும். ImgHost chunk manifest-ஐ பதிவு செய்து, முழு உள்ளடக்கத்தை chunks-ஐ வரிசையாக படித்து வழங்கும்.
 
 ### பெரிய கோப்பு பதிவேற்றம் தோல்வியடைந்தால் முதலில் என்ன பார்க்க வேண்டும்?
 

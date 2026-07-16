@@ -1,6 +1,6 @@
 # Eliminar archivos con API Token
 
-La eliminación con API Token está pensada para scripts, tareas automatizadas y programas de terceros. No hace falta abrir el panel de administración: con la URL del sitio, el Token y los ID de archivo exactos, puedes eliminar uno o varios archivos de ImgBed.
+La eliminación con API Token está pensada para scripts, tareas automatizadas y programas de terceros. No hace falta abrir el panel de administración: con la URL del sitio, el Token y los ID de archivo exactos, puedes eliminar uno o varios archivos de ImgHost.
 
 Eliminar es una operación de escritura y borra datos reales cuando se ejecuta el comando. Se recomienda usar primero `imgbed-token-list.mjs` para confirmar los valores de `fileId` que quieres borrar, y después pasarlos al script de eliminación.
 
@@ -63,7 +63,7 @@ Después de una eliminación correcta, el servidor actualiza automáticamente lo
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed, por ejemplo `https://image.ai6.me`. |
+| `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me`. |
 | `--token <token>` | Sí | API Token. También puedes usar la variable de entorno `IMGBED_API_TOKEN`. |
 | `--file-id <id>` | Sí | ID del archivo que quieres eliminar. Puedes pasarlo varias veces. |
 | `--strictness <strict\|soft>` | No | Nivel de rigor de eliminación. Por defecto es `strict`. |
@@ -80,10 +80,10 @@ Este script solo elimina los valores pasados explícitamente con `--file-id`. No
 
 | Modo | Descripción |
 | --- | --- |
-| `strict` | Modo predeterminado. Si falla la eliminación en el almacenamiento remoto, el registro de ImgBed se conserva para que puedas reintentarlo o investigarlo. |
-| `soft` | Si falla la eliminación en el almacenamiento remoto, el registro de ImgBed se limpia igualmente y el resultado devuelve una advertencia. |
+| `strict` | Modo predeterminado. Si falla la eliminación en el almacenamiento remoto, el registro de ImgHost se conserva para que puedas reintentarlo o investigarlo. |
+| `soft` | Si falla la eliminación en el almacenamiento remoto, el registro de ImgHost se limpia igualmente y el resultado devuelve una advertencia. |
 
-Si necesitas que el archivo remoto se elimine para considerar correcta la operación, usa el modo predeterminado `strict`. Si una plataforma remota ya no puede borrar el objeto y solo quieres limpiar el registro de ImgBed, usa `soft`.
+Si necesitas que el archivo remoto se elimine para considerar correcta la operación, usa el modo predeterminado `strict`. Si una plataforma remota ya no puede borrar el objeto y solo quieres limpiar el registro de ImgHost, usa `soft`.
 
 ## Ejemplos
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Limpiar el registro de ImgBed aunque falle la eliminación remota:
+Limpiar el registro de ImgHost aunque falle la eliminación remota:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Comprobar el `fileId` antes de eliminar
 
-El script de eliminación necesita ID de archivo de ImgBed. Puedes usar primero el script de listado para revisar los archivos de un directorio:
+El script de eliminación necesita ID de archivo de ImgHost. Puedes usar primero el script de listado para revisar los archivos de un directorio:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ El campo `name` de la respuesta suele ser el `fileId` que puedes pasar al script
 
 ### ¿Por qué falló la eliminación pero el archivo sigue en la lista?
 
-Con el modo predeterminado `strict`, el registro de ImgBed se conserva si falla la eliminación en el almacenamiento remoto. Esto evita borrar solo el índice local mientras el archivo remoto sigue existiendo. Cuando confirmes que solo quieres limpiar el registro de ImgBed, vuelve a intentarlo con el mismo `fileId` y el modo `soft`.
+Con el modo predeterminado `strict`, el registro de ImgHost se conserva si falla la eliminación en el almacenamiento remoto. Esto evita borrar solo el índice local mientras el archivo remoto sigue existiendo. Cuando confirmes que solo quieres limpiar el registro de ImgHost, vuelve a intentarlo con el mismo `fileId` y el modo `soft`.
 
 ### ¿Por qué hay advertencias en el resultado?
 

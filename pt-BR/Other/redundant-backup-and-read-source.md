@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Esta entrada é mais adequada para adicionar backups a uma pasta ou a todos os arquivos em lote.
 
-O canal de backup pode ser selecionado manualmente, ou você pode escolher alternância automática e deixar o ImgBed encontrar um canal de backup adequado.
+O canal de backup pode ser selecionado manualmente, ou você pode escolher alternância automática e deixar o ImgHost encontrar um canal de backup adequado.
 
 ## Backup pelos detalhes do arquivo
 
@@ -90,4 +90,4 @@ Desde que o arquivo de backup esteja disponível, imagens, vídeos e links de do
 
 ## O que acontece quando um arquivo é excluído
 
-Quando um arquivo é excluído, o ImgBed exclui tanto o arquivo principal quanto o arquivo de backup.
+Quando um arquivo é excluído, o ImgHost exclui tanto o arquivo principal quanto o arquivo de backup.

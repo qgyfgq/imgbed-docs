@@ -4,19 +4,19 @@
 
 Cloudflare R2 è una buona scelta se:
 
-- ImgBed è già distribuito su Cloudflare e vuoi salvare i file in un bucket R2 dello stesso account.
+- ImgHost è già distribuito su Cloudflare e vuoi salvare i file in un bucket R2 dello stesso account.
 - Non vuoi configurare un endpoint S3 separato con access key e secret key.
 - Preferisci che lettura e scrittura passino dal binding R2 di Worker o Pages con una configurazione minima.
 
 In breve:
 
-Il canale R2 non si crea manualmente nel pannello di amministrazione di ImgBed. Prima devi collegare un bucket R2 al progetto Cloudflare, usando esattamente `img_r2` come nome della variabile di binding.
+Il canale R2 non si crea manualmente nel pannello di amministrazione di ImgHost. Prima devi collegare un bucket R2 al progetto Cloudflare, usando esattamente `img_r2` come nome della variabile di binding.
 
 ## Prima di iniziare
 
 - Un account Cloudflare.
 - Un bucket R2 già creato.
-- Permessi per gestire il progetto Cloudflare su cui è distribuito ImgBed.
+- Permessi per gestire il progetto Cloudflare su cui è distribuito ImgHost.
 
 ## Configurazione in Cloudflare
 
@@ -31,7 +31,7 @@ Questo bucket conterrà i file caricati.
 
 ![Crea un bucket R2](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Collega il bucket al progetto ImgBed
+### 2. Collega il bucket al progetto ImgHost
 
 Scegli il punto di binding in base al tipo di distribuzione:
 
@@ -51,9 +51,9 @@ Il nome della variabile deve essere esattamente `img_r2`. Caricamento, lettura e
 
 ### 3. Ridistribuisci il progetto
 
-Dopo aver salvato il binding, ridistribuisci ImgBed. In questo modo il runtime di Worker o Pages potrà accedere a `img_r2`.
+Dopo aver salvato il binding, ridistribuisci ImgHost. In questo modo il runtime di Worker o Pages potrà accedere a `img_r2`.
 
-## Cosa vedrai in ImgBed
+## Cosa vedrai in ImgHost
 
 Quando il binding R2 è disponibile, apri:
 
@@ -82,19 +82,19 @@ Il sistema crea automaticamente un canale fisso:
 | Limite quota | Decide se questo canale R2 viene scelto in base alla capacità disponibile. | No |
 | Soglia | Blocca nuove scritture quando l'uso raggiunge la percentuale indicata. | Obbligatorio con limiti di quota |
 
-Puoi copiare l'Account ID dal pannello informazioni account della dashboard Cloudflare. Inseriscilo solo se vuoi che ImgBed controlli e applichi la quota R2.
+Puoi copiare l'Account ID dal pannello informazioni account della dashboard Cloudflare. Inseriscilo solo se vuoi che ImgHost controlli e applichi la quota R2.
 
 ![Recupera Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Passaggi rapidi
 
 1. Crea un bucket R2 in Cloudflare.
-2. Apri le impostazioni Cloudflare del progetto ImgBed.
+2. Apri le impostazioni Cloudflare del progetto ImgHost.
 3. Aggiungi un binding per bucket R2.
 4. Imposta il nome variabile su `img_r2`.
 5. Seleziona il bucket R2 creato.
-6. Salva il binding e ridistribuisci ImgBed.
-7. Torna in ImgBed -> Impostazioni di sistema -> Impostazioni di caricamento.
+6. Salva il binding e ridistribuisci ImgHost.
+7. Torna in ImgHost -> Impostazioni di sistema -> Impostazioni di caricamento.
 8. Controlla che il canale `Cloudflare R2` sia presente e attivo.
 
 Se vuoi usare R2 anche nella selezione basata sulla capacità, abilita il limite quota e compila Account ID, nome bucket, limite e soglia prima di salvare.

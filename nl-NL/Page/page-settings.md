@@ -8,8 +8,8 @@ Pagina-instellingen regelen de weergave van de site, standaardwaarden van de upl
 | --- | --- |
 | Sitetitel | Titel die in het browsertabblad wordt getoond. |
 | Site-icoon | Klein icoon in het browsertabblad. |
-| ImgBed-naam | Naam die op de pagina's van de publieke interface wordt getoond. |
-| ImgBed-logo | Logo-afbeelding die op de pagina's van de publieke interface wordt getoond. |
+| ImgHost-naam | Naam die op de pagina's van de publieke interface wordt getoond. |
+| ImgHost-logo | Logo-afbeelding die op de pagina's van de publieke interface wordt getoond. |
 | Logolink | URL die opent wanneer je op logo of avatar klikt. |
 | Wisselinterval achtergrond | Rotatie-interval voor meerdere achtergronden, in milliseconden. `60000` betekent 60 seconden. |
 | Achtergronddekking | Dekking van de achtergrondafbeelding van `0` tot `1`. Lagere waarden zijn lichter. |
@@ -63,5 +63,5 @@ De beheerachtergrond ondersteunt afbeeldings-URL's. Meerdere URL's kunnen met En
 | --- | --- |
 | Standaard | Tijdgebonden willekeurig voorvoegsel + oorspronkelijke bestandsnaam, bijvoorbeeld `1760000000000_cat.png`. |
 | Alleen voorvoegsel | Tijdgebonden willekeurig voorvoegsel en extensie, bijvoorbeeld `1760000000000.png`. |
-| Alleen oorspronkelijke naam | Houdt de oorspronkelijke bestandsnaam, bijvoorbeeld `cat.png`. Bij duplicaten voegt ImgBed `(1)`, `(2)` enzovoort toe. |
+| Alleen oorspronkelijke naam | Houdt de oorspronkelijke bestandsnaam, bijvoorbeeld `cat.png`. Bij duplicaten voegt ImgHost `(1)`, `(2)` enzovoort toe. |
 | Korte link | Gebruikt een korte ID van 8 tekens en extensie, bijvoorbeeld `a1b2c3d4.png`. |

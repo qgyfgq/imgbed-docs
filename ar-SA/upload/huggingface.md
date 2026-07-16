@@ -7,7 +7,7 @@
 | المتطلب | الغرض |
 | --- | --- |
 | حساب Hugging Face | لإنشاء رمز وصول وامتلاك المستودع. |
-| Hugging Face User Access Token | يستخدمه ImgBed للوصول إلى Hugging Face API وإنشاء المستودعات ورفع الملفات. |
+| Hugging Face User Access Token | يستخدمه ImgHost للوصول إلى Hugging Face API وإنشاء المستودعات ورفع الملفات. |
 | اسم المستودع | يمكن إدخال اسم المستودع فقط، مثل `image`. |
 
 ## خطوات الإعداد
@@ -24,7 +24,7 @@
 
 ![إنشاء token](../../image/upload/huggingface/创建令牌.png)
 
-## الخطوة 2: املأ قناة Hugging Face في ImgBed
+## الخطوة 2: املأ قناة Hugging Face في ImgHost
 
 بعد اختيار `Hugging Face` في إعدادات الرفع، املأ الحقول كما يلي:
 
@@ -46,9 +46,9 @@
 
 | سلوك النظام | الوصف |
 | --- | --- |
-| اسم مستودع قصير | يحدد ImgBed حساب Hugging Face الحالي ويوسّع القيمة إلى مسار مستودع كامل. |
-| مسار مستودع كامل | يستخدم ImgBed مسار `username/repository` كما أُدخل. |
-| فحص المستودع | إذا استخدمت مسار الحساب الشخصي الحالي، يحاول ImgBed إنشاء المستودع إن لم يكن موجودًا. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
+| اسم مستودع قصير | يحدد ImgHost حساب Hugging Face الحالي ويوسّع القيمة إلى مسار مستودع كامل. |
+| مسار مستودع كامل | يستخدم ImgHost مسار `username/repository` كما أُدخل. |
+| فحص المستودع | إذا استخدمت مسار الحساب الشخصي الحالي، يحاول ImgHost إنشاء المستودع إن لم يكن موجودًا. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
 | نوع المستودع | تستخدم هذه القناة مستودعًا من نوع `dataset`. |
 | حالة العام/الخاص | تتم مزامنة ظهور المستودع حسب المفتاح الحالي. |
 
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

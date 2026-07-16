@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Limits aktivieren
 
-Nachdem "Limits aktivieren" eingeschaltet wurde, verfolgt ImgBed aktuelle Uploads anhand der IP-Adresse des Uploaders.
+Nachdem "Limits aktivieren" eingeschaltet wurde, verfolgt ImgHost aktuelle Uploads anhand der IP-Adresse des Uploaders.
 
 Standardwerte:
 

@@ -8,8 +8,8 @@ Sebelum bermula, sediakan perkara berikut:
 | --- | --- |
 | Akaun Google | Digunakan untuk mengakses Google Cloud dan mengizinkan Google Drive |
 | Projek Google Cloud | Digunakan untuk mendayakan Drive API dan membuat kelayakan OAuth |
-| Client OAuth 2.0 | Digunakan oleh ImgBed untuk mendapatkan `Client ID`, `Client Secret` dan `Refresh Token` |
-| Domain ImgBed anda | Digunakan untuk URI redirect OAuth. Ia mesti sepadan dengan domain sebenar yang anda gunakan. |
+| Client OAuth 2.0 | Digunakan oleh ImgHost untuk mendapatkan `Client ID`, `Client Secret` dan `Refresh Token` |
+| Domain ImgHost anda | Digunakan untuk URI redirect OAuth. Ia mesti sepadan dengan domain sebenar yang anda gunakan. |
 
 ## Langkah Persediaan
 
@@ -38,7 +38,7 @@ Sebelum bermula, sediakan perkara berikut:
 2. Buat client baharu.
 3. Tetapkan jenis aplikasi kepada `Web application`.
 4. Berikan nama yang mudah dikenal pasti kepada client.
-5. Untuk authorized JavaScript origins, masukkan URL ImgBed anda, contohnya:
+5. Untuk authorized JavaScript origins, masukkan URL ImgHost anda, contohnya:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Selepas client dibuat, salin nilai berikut:
 
-| Nilai Dijana | Medan ImgBed |
+| Nilai Dijana | Medan ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ Selepas client dibuat, salin nilai berikut:
 
 Dalam Tetapan Muat Naik, pilih `Google Drive` dan isi:
 
-| Medan ImgBed | Perkara Yang Perlu Dimasukkan |
+| Medan ImgHost | Perkara Yang Perlu Dimasukkan |
 | --- | --- |
 | Nama saluran | Nama yang mudah dikenal pasti, seperti `Main Google Drive` |
 | Client ID | Client ID daripada Google Cloud |
@@ -73,7 +73,7 @@ Dalam Tetapan Muat Naik, pilih `Google Drive` dan isi:
 | Refresh Token | Biarkan kosong buat masa ini. Dapatkannya dalam langkah seterusnya. |
 | Direktori akar | Pilihan. Lalai ialah `imgbed`. |
 
-![Isi butiran client dalam ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Isi butiran client dalam ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Langkah 5: Dapatkan Refresh Token
 
@@ -82,7 +82,7 @@ Dalam Tetapan Muat Naik, pilih `Google Drive` dan isi:
 3. Lengkapkan permintaan kebenaran.
 4. Halaman callback akan menunjukkan `Refresh Token`.
 5. Salin token tersebut.
-6. Kembali ke ImgBed dan tampalkannya dalam medan `Refresh Token`.
+6. Kembali ke ImgHost dan tampalkannya dalam medan `Refresh Token`.
 
 ![Salin Refresh Token selepas kebenaran](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

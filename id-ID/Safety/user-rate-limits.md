@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Mengaktifkan Pembatasan Frekuensi
 
-Setelah `Aktifkan Pembatasan Frekuensi` dinyalakan, ImgBed melacak unggahan terbaru berdasarkan alamat IP pengunggah.
+Setelah `Aktifkan Pembatasan Frekuensi` dinyalakan, ImgHost melacak unggahan terbaru berdasarkan alamat IP pengunggah.
 
 Nilai bawaan:
 

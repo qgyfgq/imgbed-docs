@@ -1,6 +1,6 @@
 # Blog
 
-Funkcja bloga dodaje do strony ImgBed osobną stronę bloga.
+Funkcja bloga dodaje do strony ImgHost osobną stronę bloga.
 
 Po włączeniu odwiedzający mogą otworzyć:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Strona główna bloga](../../image/other/博客/博客首页.png)
 
-Blog został zaadaptowany z projektu open source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed przepisał go i zintegrował z Vue, aby mógł działać jako część witryny hostingu obrazów.
+Blog został zaadaptowany z projektu open source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost przepisał go i zintegrował z Vue, aby mógł działać jako część witryny hostingu obrazów.
 
 ## Gdzie skonfigurować
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Poczekaj na komunikat o powodzeniu.
 5. Otwórz `https://your-domain.com/blog/`, aby zobaczyć blog.
 
-Przy pierwszym użyciu ImgBed przygotowuje prywatne repozytorium GitHub na wybranym koncie:
+Przy pierwszym użyciu ImgHost przygotowuje prywatne repozytorium GitHub na wybranym koncie:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Typowy przepływ pracy:
 2. Wejdź do prywatnego repozytorium `imgbed-blog-config`.
 3. Edytuj lub dodaj pliki wpisów.
 4. Zatwierdź zmiany.
-5. Wróć do panelu administracyjnego ImgBed i kliknij `Update Blog`, albo kliknij logo w lewym górnym rogu strony głównej bloga trzy razy, aby uruchomić aktualizację.
+5. Wróć do panelu administracyjnego ImgHost i kliknij `Update Blog`, albo kliknij logo w lewym górnym rogu strony głównej bloga trzy razy, aby uruchomić aktualizację.
 
 `Update Blog` nie nadpisuje treści, które napisałeś. Ta akcja służy głównie do inicjalizacji repozytorium i odświeżenia pamięci podręcznej bloga.
 
@@ -72,7 +72,7 @@ Statystyki pokazują wyświetlenia wpisów i odwiedziny strony, co pomaga zrozum
 
 Blog zawsze działa pod `/blog/`.
 
-Jeśli domena ImgBed wygląda tak:
+Jeśli domena ImgHost wygląda tak:
 
 ```text
 https://image.example.com

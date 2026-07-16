@@ -1,22 +1,22 @@
-﻿# Add a Cloudflare R2 Channel
+# Add a Cloudflare R2 Channel
 
 ## Best Fit
 
 Use Cloudflare R2 when:
 
-- Your ImgBed site is already deployed on Cloudflare and you want to store files in an R2 bucket under the same Cloudflare account.
+- Your ImgHost site is already deployed on Cloudflare and you want to store files in an R2 bucket under the same Cloudflare account.
 - You do not want to configure a separate S3 endpoint, access key, and secret key.
 - You want reads and writes to go through the Worker or Pages R2 binding with minimal setup.
 
 In short:
 
-The R2 channel is not created manually inside the ImgBed admin panel. You first bind an R2 bucket to the Cloudflare project, and the binding variable name must be `img_r2`.
+The R2 channel is not created manually inside the ImgHost admin panel. You first bind an R2 bucket to the Cloudflare project, and the binding variable name must be `img_r2`.
 
 ## What You Need Before You Start
 
 - A Cloudflare account.
 - An existing R2 bucket.
-- Permission to manage the Cloudflare project where ImgBed is deployed.
+- Permission to manage the Cloudflare project where ImgHost is deployed.
 
 ## Configure It in Cloudflare
 
@@ -31,7 +31,7 @@ This bucket is where uploaded files will be stored.
 
 ![Create an R2 bucket](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bind the Bucket to the ImgBed Project
+### 2. Bind the Bucket to the ImgHost Project
 
 Choose the binding location based on your deployment type:
 
@@ -51,9 +51,9 @@ The variable name must be exactly `img_r2`. Uploading, reading, and deleting R2 
 
 ### 3. Redeploy the Project
 
-After saving the binding, redeploy ImgBed so the Worker or Pages runtime can access `img_r2`.
+After saving the binding, redeploy ImgHost so the Worker or Pages runtime can access `img_r2`.
 
-## What You Will See in ImgBed
+## What You Will See in ImgHost
 
 After the R2 binding is available, open:
 
@@ -82,19 +82,19 @@ This is a fixed binding channel. You do not need to click Add Channel to create 
 | Quota limit | Controls whether this R2 channel participates in upload selection based on capacity. | No |
 | Threshold | Stops writing to this channel after usage reaches the specified percentage. | Required when quota limits are enabled |
 
-You can copy the Account ID from the account information panel in the Cloudflare dashboard. Fill it in only if you want ImgBed to query and enforce R2 quota usage.
+You can copy the Account ID from the account information panel in the Cloudflare dashboard. Fill it in only if you want ImgHost to query and enforce R2 quota usage.
 
 ![Get the Account ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Setup Steps
 
 1. Create an R2 bucket in Cloudflare.
-2. Open the Cloudflare settings for the ImgBed project.
+2. Open the Cloudflare settings for the ImgHost project.
 3. Add an R2 bucket binding.
 4. Set `Variable name` to `img_r2`.
 5. Select the R2 bucket you created.
-6. Save the binding and redeploy ImgBed.
-7. Return to ImgBed -> System Settings -> Upload Settings.
+6. Save the binding and redeploy ImgHost.
+7. Return to ImgHost -> System Settings -> Upload Settings.
 8. Confirm that the `Cloudflare R2` channel appears and is enabled.
 
 If you want R2 to participate in upload selection based on capacity, enable the quota limit, then enter the Account ID, bucket name, quota limit, and threshold before saving.

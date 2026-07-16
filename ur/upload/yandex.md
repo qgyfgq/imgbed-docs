@@ -6,7 +6,7 @@
 | --- | --- |
 | Yandex account | sign in اور Yandex Disk authorize کرنے کے لیے |
 | Yandex OAuth app | `Client ID` اور `Client Secret` generate کرنے کے لیے |
-| آپ کا ImgBed domain | OAuth redirect URI کے لیے |
+| آپ کا ImgHost domain | OAuth redirect URI کے لیے |
 | دستیاب Yandex Disk storage | اصل file storage location کے طور پر |
 
 ## سیٹ اپ کے مراحل
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### مرحلہ 2: اجازتوں کی تصدیق کریں
 
-موجودہ ImgBed Yandex integration کے لیے `Yandex.Disk REST API` کے تحت یہ چار permissions رکھیں:
+موجودہ ImgHost Yandex integration کے لیے `Yandex.Disk REST API` کے تحت یہ چار permissions رکھیں:
 
 | اجازت | مقصد |
 | --- | --- |
-| `cloud_api:disk.app_folder` | ImgBed کو app folder میں files store کرنے دیتا ہے |
+| `cloud_api:disk.app_folder` | ImgHost کو app folder میں files store کرنے دیتا ہے |
 | `cloud_api:disk.read` | files اور download links پڑھتا ہے |
 | `cloud_api:disk.write` | files upload کرتا ہے، folders بناتا ہے، اور files delete کرتا ہے |
 | `Access to information about Yandex.Disk` | disk quota اور used space پڑھتا ہے |
@@ -55,18 +55,18 @@ Core upload، download، deletion، اور quota features کا انحصار او
 
 app بننے کے بعد کاپی کریں:
 
-| Yandex فیلڈ | ImgBed فیلڈ |
+| Yandex فیلڈ | ImgHost فیلڈ |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
 
 ![Client ID اور Secret محفوظ کریں](../../image/upload/yandex/记录客户端id和secret.png)
 
-### مرحلہ 4: ImgBed میں Yandex Channel بھریں
+### مرحلہ 4: ImgHost میں Yandex Channel بھریں
 
 اپ لوڈ سیٹنگز میں `Yandex` منتخب کریں اور یہ فیلڈز بھریں:
 
-| ImgBed فیلڈ | کیا درج کریں |
+| ImgHost فیلڈ | کیا درج کریں |
 | --- | --- |
 | Channel name | قابل شناخت نام، مثلاً `Main Yandex` |
 | Client ID | Yandex app کا `Client ID` |
@@ -78,12 +78,12 @@ app بننے کے بعد کاپی کریں:
 
 ### مرحلہ 5: Refresh Token حاصل کریں
 
-1. ImgBed میں `Get Token` پر کلک کریں۔
+1. ImgHost میں `Get Token` پر کلک کریں۔
 2. جس Yandex account کو منسلک کرنا ہے اس میں سائن ان کریں۔
 3. authorization prompt منظور کریں۔
 4. callback صفحہ ایک `Refresh Token` دکھائے گا۔
 5. اسے کاپی کریں۔
-6. ImgBed پر واپس آ کر `Refresh Token` فیلڈ میں چسپاں کریں۔
+6. ImgHost پر واپس آ کر `Refresh Token` فیلڈ میں چسپاں کریں۔
 
 ![authorization کے بعد refresh token کاپی کریں](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## حوالہ جات

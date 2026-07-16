@@ -64,7 +64,7 @@ Pokud po filtrování neodpovídá žádný soubor, API nevrátí žádný odpov
 
 API náhodných obrázků ukládá kandidátní množiny adresářů do mezipaměti, aby zlepšilo rychlost.
 
-Po změně souborů ImgBed aktualizuje verzi mezipaměti adresáře a další požadavky kandidátní množinu znovu sestaví. Prázdné adresáře se ukládají do mezipaměti krátce, aby se zamezilo opakovaným dotazům.
+Po změně souborů ImgHost aktualizuje verzi mezipaměti adresáře a další požadavky kandidátní množinu znovu sestaví. Prázdné adresáře se ukládají do mezipaměti krátce, aby se zamezilo opakovaným dotazům.
 
 ## Veřejná galerie
 

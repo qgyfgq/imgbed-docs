@@ -44,7 +44,7 @@
 5. Erzeuge oder setzen Sie das Token auf der `Bot`-Seite zurück.
 6. Speichern Sie das Token.
 
-Dieses Token tragen Sie in ImgBed als `Bot Token` ein.
+Dieses Token tragen Sie in ImgHost als `Bot Token` ein.
 
 ![Bot-Token ansehen](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ Dieses Token tragen Sie in ImgBed als `Bot Token` ein.
 5. Klicken Sie mit der rechten Maustaste auf den Kanalnamen.
 6. Klicken Sie auf Copy Channel ID.
 
-Die kopierte Zahl ist die `Channel ID`, die ImgBed braucht.
+Die kopierte Zahl ist die `Channel ID`, die ImgHost braucht.
 
 ![Entwicklermodus aktivieren](../../image/upload/discord/开启开发者权限.png)
 
 ![Channel ID kopieren](../../image/upload/discord/复制群频道id.png)
 
-### 5. Discord-Kanal in ImgBed ausfüllen
+### 5. Discord-Kanal in ImgHost ausfüllen
 
 Kehren Sie zum Konfigurationsdialog zurück und füllen Sie die Felder aus:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

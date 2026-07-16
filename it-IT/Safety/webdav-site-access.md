@@ -1,9 +1,9 @@
 # Accesso WebDAV al sito
-L'impostazione WebDAV in Sicurezza espone il tuo sito ImgBed come punto di accesso WebDAV.
+L'impostazione WebDAV in Sicurezza espone il tuo sito ImgHost come punto di accesso WebDAV.
 
-Dopo l'abilitazione, puoi usare Windows, macOS, gestori di file per dispositivi mobili o qualunque client compatibile con WebDAV per sfogliare, caricare, eliminare e gestire file ImgBed come una cartella remota.
+Dopo l'abilitazione, puoi usare Windows, macOS, gestori di file per dispositivi mobili o qualunque client compatibile con WebDAV per sfogliare, caricare, eliminare e gestire file ImgHost come una cartella remota.
 
-Questo è l'accesso WebDAV del sito. È diverso dal canale di archiviazione WebDAV in Impostazioni di caricamento: il canale di caricamento salva file su un servizio WebDAV di terze parti, mentre questa impostazione consente al tuo sito ImgBed di offrire accesso WebDAV ai client.
+Questo è l'accesso WebDAV del sito. È diverso dal canale di archiviazione WebDAV in Impostazioni di caricamento: il canale di caricamento salva file su un servizio WebDAV di terze parti, mentre questa impostazione consente al tuo sito ImgHost di offrire accesso WebDAV ai client.
 
 ## Dove configurare
 
@@ -23,21 +23,21 @@ Impostazioni disponibili:
 
 ## A cosa serve
 
-Dopo aver abilitato WebDAV, ImgBed espone un URL fisso:
+Dopo aver abilitato WebDAV, ImgHost espone un URL fisso:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Usa questo URL per connetterti alla directory dei file ImgBed.
+Usa questo URL per connetterti alla directory dei file ImgHost.
 
 Casi d'uso tipici:
 
-- sfogliare file ImgBed direttamente dal file manager del computer.
+- sfogliare file ImgHost direttamente dal file manager del computer.
 - trascinare immagini nella cartella WebDAV per caricarle.
-- organizzare cartelle ImgBed dal file manager locale.
+- organizzare cartelle ImgHost dal file manager locale.
 - usare software compatibile WebDAV per sincronizzare o gestire immagini.
-- accedere ai contenuti ImgBed senza aprire il pannello admin.
+- accedere ai contenuti ImgHost senza aprire il pannello admin.
 
 ## Impostazioni
 
@@ -63,7 +63,7 @@ Scelte comuni:
 
 | Modalità | Descrizione |
 | --- | --- |
-| Caricamento intelligente | ImgBed sceglie in base al contesto. Consigliato per l'uso normale. |
+| Caricamento intelligente | ImgHost sceglie in base al contesto. Consigliato per l'uso normale. |
 | Sorgente | Preferisce le immagini di origine. |
 | Miniatura | Preferisce le miniature. Utile per anteprime rapide. |
 
@@ -73,7 +73,7 @@ Se non sei sicuro, lascia `Caricamento intelligente`.
 
 Il canale predefinito viene usato per i caricamenti WebDAV.
 
-Quando copi file nella directory WebDAV da Windows o da un altro client, ImgBed li carica tramite il canale di caricamento predefinito selezionato.
+Quando copi file nella directory WebDAV da Windows o da un altro client, ImgHost li carica tramite il canale di caricamento predefinito selezionato.
 
 Se non è selezionato un canale predefinito, la navigazione può funzionare, ma i caricamenti possono fallire.
 

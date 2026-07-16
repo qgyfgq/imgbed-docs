@@ -1,6 +1,6 @@
 # API Token 목록 조회와 필터링
 
-API Token 목록 조회 스크립트는 스크립트, 자동화 작업, 외부 프로그램에서 ImgBed 데이터를 읽을 때 사용합니다. 이 스크립트는 `list` 권한만 사용합니다. 파일 업로드, 파일 삭제, 설정 변경, 특정 IP의 업로드 금지나 허용은 하지 않습니다.
+API Token 목록 조회 스크립트는 스크립트, 자동화 작업, 외부 프로그램에서 ImgHost 데이터를 읽을 때 사용합니다. 이 스크립트는 `list` 권한만 사용합니다. 파일 업로드, 파일 삭제, 설정 변경, 특정 IP의 업로드 금지나 허용은 하지 않습니다.
 
 ![API Token 편집](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
-| `--base-url <url>` | 예 | ImgBed 사이트 주소. 예: `https://image.ai6.me` |
+| `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
 | `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--retries <n>` | 아니요 | 일시적 실패 재시도 횟수. 기본값은 `3`입니다. |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000`입니다. |

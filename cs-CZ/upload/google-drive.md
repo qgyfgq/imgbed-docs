@@ -8,8 +8,8 @@ Připravte si:
 | --- | --- |
 | Účet Google | Pro přístup do Google Cloud a autorizaci Google Drive |
 | Projekt Google Cloud | Pro zapnutí Drive API a vytvoření OAuth údajů |
-| OAuth 2.0 klient | Umožní ImgBed získat `Client ID`, `Client Secret` a `Refresh Token` |
-| Vaše doména ImgBed | Pro OAuth redirect URI. Musí odpovídat doméně, kterou skutečně používáte. |
+| OAuth 2.0 klient | Umožní ImgHost získat `Client ID`, `Client Secret` a `Refresh Token` |
+| Vaše doména ImgHost | Pro OAuth redirect URI. Musí odpovídat doméně, kterou skutečně používáte. |
 
 ## Nastavení
 
@@ -38,7 +38,7 @@ Připravte si:
 2. Vytvořte nového klienta.
 3. Typ aplikace nastavte na `Web application`.
 4. Dejte klientovi srozumitelný název.
-5. Do authorized JavaScript origins zadejte URL ImgBed, například:
+5. Do authorized JavaScript origins zadejte URL ImgHost, například:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Po vytvoření zkopírujte:
 
-| Vygenerovaná hodnota | Pole ImgBed |
+| Vygenerovaná hodnota | Pole ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ Po vytvoření zkopírujte:
 
 V Nastavení nahrávání zvolte `Google Drive` a vyplňte:
 
-| Pole ImgBed | Co zadat |
+| Pole ImgHost | Co zadat |
 | --- | --- |
 | Název kanálu | Srozumitelný název, například `Main Google Drive` |
 | Client ID | Client ID z Google Cloud |
@@ -73,7 +73,7 @@ V Nastavení nahrávání zvolte `Google Drive` a vyplňte:
 | Refresh Token | Zatím nechte prázdné. Získáte ho v dalším kroku. |
 | Kořenový adresář | Volitelné. Výchozí je `imgbed`. |
 
-![Vyplnění údajů klienta v ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Vyplnění údajů klienta v ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Krok 5: Získejte Refresh Token
 
@@ -82,7 +82,7 @@ V Nastavení nahrávání zvolte `Google Drive` a vyplňte:
 3. Dokončete autorizační kroky.
 4. Stránka callbacku zobrazí `Refresh Token`.
 5. Zkopírujte ho.
-6. Vraťte se do ImgBed a vložte ho do `Refresh Token`.
+6. Vraťte se do ImgHost a vložte ho do `Refresh Token`.
 
 ![Kopírování Refresh Token po autorizaci](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

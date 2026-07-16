@@ -1,6 +1,6 @@
 # Muat Naik Fail dengan API Token
 
-Muat naik melalui API Token sesuai untuk skrip, tugas automasi dan aplikasi pihak ketiga. Anda tidak perlu membuka antara muka web ImgBed. Selagi anda memberikan alamat tapak, API Token, laluan fail tempatan dan saluran muat naik sebenar, skrip akan mengembalikan pautan fail selepas muat naik berjaya.
+Muat naik melalui API Token sesuai untuk skrip, tugas automasi dan aplikasi pihak ketiga. Anda tidak perlu membuka antara muka web ImgHost. Selagi anda memberikan alamat tapak, API Token, laluan fail tempatan dan saluran muat naik sebenar, skrip akan mengembalikan pautan fail selepas muat naik berjaya.
 
 ![Sunting API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -16,7 +16,7 @@ Semasa mencipta atau mengedit API Token, pastikan kebenaran muat naik diaktifkan
 
 ## Muat Turun Skrip Muat Naik
 
-Dokumentasi ImgBed menyediakan dua skrip Node.js:
+Dokumentasi ImgHost menyediakan dua skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | URL tapak ImgBed, contohnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
 | `--file <path>` | Ya | Laluan fail tempatan |
 | `--channel <key>` | Ya | Saluran muat naik sebenar |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat tapak ImgBed |
+| `--base-url <url>` | Ya | Alamat tapak ImgHost |
 | `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
 | `--file <path>` | Ya | Laluan fail tempatan |
 | `--channel <key>` | Ya | Saluran muat naik sebenar |

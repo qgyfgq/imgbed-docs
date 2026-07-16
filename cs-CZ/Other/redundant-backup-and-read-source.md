@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Tento vstup je nejvhodnější pro hromadné přidání záloh ke složce nebo ke všem souborům.
 
-Záložní kanál můžete vybrat ručně, nebo zvolit automatické přepínání a nechat ImgBed najít vhodný záložní kanál.
+Záložní kanál můžete vybrat ručně, nebo zvolit automatické přepínání a nechat ImgHost najít vhodný záložní kanál.
 
 ## Záloha z detailu souboru
 
@@ -90,4 +90,4 @@ Dokud je záložní soubor dostupný, obrázky, videa a odkazy ke stažení fung
 
 ## Co se stane při smazání souboru
 
-Když se soubor smaže, ImgBed smaže primární soubor i záložní soubor.
+Když se soubor smaže, ImgHost smaže primární soubor i záložní soubor.

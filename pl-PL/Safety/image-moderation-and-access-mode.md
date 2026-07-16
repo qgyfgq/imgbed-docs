@@ -37,7 +37,7 @@ Dla stron prywatnych lub z treściami dla dorosłych tryb dla dorosłych może b
 
 ## Co daje włączenie moderacji
 
-Po włączeniu moderacji ImgBed wywołuje wybranego dostawcę podczas przesyłania i zapisuje wykrytą klasyfikację wiekową.
+Po włączeniu moderacji ImgHost wywołuje wybranego dostawcę podczas przesyłania i zapisuje wykrytą klasyfikację wiekową.
 
 Główne klasyfikacje:
 
@@ -66,7 +66,7 @@ Każdy dostawca ma inne wymagania:
 - nsfwjs zwykle wymaga adresu URL punktu końcowego API.
 - Sightengine wymaga użytkownika API i sekretu API.
 
-Wybierz według konta, dostępności i jakości wykrywania. Jeśli moderacja jest włączona i poprawnie skonfigurowana, ImgBed próbuje zapisać klasyfikację obrazu podczas przesyłania.
+Wybierz według konta, dostępności i jakości wykrywania. Jeśli moderacja jest włączona i poprawnie skonfigurowana, ImgHost próbuje zapisać klasyfikację obrazu podczas przesyłania.
 
 ## Wpływ na publiczną galerię
 
@@ -85,16 +85,16 @@ Dotyczy to tylko zwykłego publicznego dostępu. Panel administracyjny nadal pok
 
 Publiczne URL-e plików to bezpośrednie linki obrazów otwierane przez odwiedzających.
 
-Jeśli klasyfikacja pliku jest dozwolona w bieżącym trybie, ImgBed zwraca oryginalny obraz.
+Jeśli klasyfikacja pliku jest dozwolona w bieżącym trybie, ImgHost zwraca oryginalny obraz.
 
-Jeśli klasyfikacja przekracza dozwolony poziom, zwykły publiczny dostęp nie zwraca oryginalnego obrazu. ImgBed zwraca skonfigurowany wynik blokady albo obraz zastępczy.
+Jeśli klasyfikacja przekracza dozwolony poziom, zwykły publiczny dostęp nie zwraca oryginalnego obrazu. ImgHost zwraca skonfigurowany wynik blokady albo obraz zastępczy.
 
 Przykład:
 
 - Bieżący tryb to tryb dziecięcy.
 - Obraz ma klasyfikację R18.
 - Odwiedzający otwiera publiczny URL bezpośrednio.
-- ImgBed nie zwraca temu odwiedzającemu oryginalnego obrazu R18.
+- ImgHost nie zwraca temu odwiedzającemu oryginalnego obrazu R18.
 
 ![Obraz pliku z ograniczeniem](../../image/Safety/文件受限图.png)
 

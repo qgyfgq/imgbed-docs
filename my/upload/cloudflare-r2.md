@@ -4,19 +4,19 @@
 
 Cloudflare R2 ကို အောက်ပါအခြေအနေများတွင် အသုံးပြုပါ။
 
-- သင်၏ ImgBed site ကို Cloudflare ပေါ်တွင် deploy လုပ်ထားပြီး၊ တူညီသော Cloudflare အကောင့်အောက်ရှိ R2 bucket တွင် ဖိုင်များကို သိမ်းလိုပါက။
+- သင်၏ ImgHost site ကို Cloudflare ပေါ်တွင် deploy လုပ်ထားပြီး၊ တူညီသော Cloudflare အကောင့်အောက်ရှိ R2 bucket တွင် ဖိုင်များကို သိမ်းလိုပါက။
 - သီးခြား S3 endpoint၊ access key နှင့် secret key ကို ပြင်ဆင်မထားလိုပါက။
 - ဖတ်ခြင်းနှင့် ရေးခြင်းများကို Worker သို့မဟုတ် Pages R2 binding မှတစ်ဆင့် အနည်းဆုံးပြင်ဆင်မှုဖြင့် ဆောင်ရွက်လိုပါက။
 
 အတိုချုပ်ပြောရလျှင်-
 
-R2 ချန်နယ်ကို ImgBed admin panel အတွင်းတွင် ကိုယ်တိုင်မဖန်တီးရပါ။ Cloudflare project တွင် R2 bucket ကို ဦးစွာ bind လုပ်ရပြီး binding variable name သည် `img_r2` ဖြစ်ရမည်။
+R2 ချန်နယ်ကို ImgHost admin panel အတွင်းတွင် ကိုယ်တိုင်မဖန်တီးရပါ။ Cloudflare project တွင် R2 bucket ကို ဦးစွာ bind လုပ်ရပြီး binding variable name သည် `img_r2` ဖြစ်ရမည်။
 
 ## မစတင်မီ လိုအပ်သည့်အရာများ
 
 - Cloudflare အကောင့်တစ်ခု။
 - ရှိပြီးသား R2 bucket တစ်ခု။
-- ImgBed deploy လုပ်ထားသော Cloudflare project ကို စီမံခန့်ခွဲနိုင်သည့် permission။
+- ImgHost deploy လုပ်ထားသော Cloudflare project ကို စီမံခန့်ခွဲနိုင်သည့် permission။
 
 ## Cloudflare တွင် ပြင်ဆင်ခြင်း
 
@@ -31,7 +31,7 @@ R2 ချန်နယ်ကို ImgBed admin panel အတွင်းတွင
 
 ![R2 bucket ဖန်တီးခြင်း](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bucket ကို ImgBed Project နှင့် Bind လုပ်ပါ
+### 2. Bucket ကို ImgHost Project နှင့် Bind လုပ်ပါ
 
 သင်၏ deployment အမျိုးအစားအပေါ်မူတည်၍ binding နေရာကို ရွေးပါ။
 
@@ -51,9 +51,9 @@ Variable name သည် အတိအကျ `img_r2` ဖြစ်ရမည်။ 
 
 ### 3. Project ကို ထပ်မံ Deploy လုပ်ပါ
 
-Binding ကို သိမ်းပြီးနောက် Worker သို့မဟုတ် Pages runtime က `img_r2` ကို ဝင်ရောက်အသုံးပြုနိုင်စေရန် ImgBed ကို ထပ်မံ deploy လုပ်ပါ။
+Binding ကို သိမ်းပြီးနောက် Worker သို့မဟုတ် Pages runtime က `img_r2` ကို ဝင်ရောက်အသုံးပြုနိုင်စေရန် ImgHost ကို ထပ်မံ deploy လုပ်ပါ။
 
-## ImgBed တွင် တွေ့ရမည့်အရာများ
+## ImgHost တွင် တွေ့ရမည့်အရာများ
 
 R2 binding အသုံးပြုနိုင်ပြီးနောက် အောက်ပါတို့ကို ဖွင့်ပါ။
 
@@ -82,19 +82,19 @@ R2 binding အသုံးပြုနိုင်ပြီးနောက် �
 | Quota limit | ဤ R2 ချန်နယ်သည် capacity အပေါ်မူတည်သော အပ်လုဒ်ရွေးချယ်မှုတွင် ပါဝင်မပါဝင်ကို ထိန်းချုပ်သည်။ | မဟုတ်ပါ |
 | Threshold | အသုံးပြုမှုသည် သတ်မှတ်ထားသော ရာခိုင်နှုန်းသို့ ရောက်ပြီးနောက် ဤချန်နယ်သို့ ရေးခြင်းကို ရပ်တန့်စေသည်။ | quota limit ဖွင့်ထားပါက လိုအပ်သည် |
 
-Account ID ကို Cloudflare dashboard ရှိ အကောင့်အချက်အလက် panel မှ ကူးယူနိုင်သည်။ ImgBed က R2 quota usage ကို query လုပ်ပြီး enforce လုပ်စေလိုသည့်အခါသာ ထည့်ပါ။
+Account ID ကို Cloudflare dashboard ရှိ အကောင့်အချက်အလက် panel မှ ကူးယူနိုင်သည်။ ImgHost က R2 quota usage ကို query လုပ်ပြီး enforce လုပ်စေလိုသည့်အခါသာ ထည့်ပါ။
 
 ![Account ID ရယူခြင်း](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## ပြင်ဆင်မှု အဆင့်များ
 
 1. Cloudflare တွင် R2 bucket တစ်ခု ဖန်တီးပါ။
-2. ImgBed project အတွက် Cloudflare settings ကိုဖွင့်ပါ။
+2. ImgHost project အတွက် Cloudflare settings ကိုဖွင့်ပါ။
 3. R2 bucket binding တစ်ခု ထည့်ပါ။
 4. `Variable name` ကို `img_r2` ဟု သတ်မှတ်ပါ။
 5. သင်ဖန်တီးထားသော R2 bucket ကိုရွေးပါ။
-6. Binding ကိုသိမ်းပြီး ImgBed ကို ထပ်မံ deploy လုပ်ပါ။
-7. ImgBed -> စနစ် ဆက်တင်များ -> အပ်လုဒ် ဆက်တင်များ သို့ ပြန်သွားပါ။
+6. Binding ကိုသိမ်းပြီး ImgHost ကို ထပ်မံ deploy လုပ်ပါ။
+7. ImgHost -> စနစ် ဆက်တင်များ -> အပ်လုဒ် ဆက်တင်များ သို့ ပြန်သွားပါ။
 8. `Cloudflare R2` ချန်နယ် ပေါ်လာပြီး enable ဖြစ်ကြောင်း အတည်ပြုပါ။
 
 R2 ကို capacity အပေါ်မူတည်သော အပ်လုဒ်ရွေးချယ်မှုတွင် ပါဝင်စေလိုပါက quota limit ကိုဖွင့်ပြီး၊ မသိမ်းမီ Account ID၊ bucket name၊ quota limit နှင့် threshold ကို ထည့်ပါ။

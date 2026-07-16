@@ -46,7 +46,7 @@ Necesitas Node.js 18 o superior en el equipo local.
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed, por ejemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me` |
 | `--token <token>` | Sí | API Token. También puedes usar la variable de entorno `IMGBED_API_TOKEN` |
 | `--retries <n>` | No | Reintentos ante fallos temporales. Por defecto `3` |
 | `--timeout-ms <n>` | No | Tiempo de espera por petición. Por defecto `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Crear carpetas
 
-Los directorios de ImgBed se derivan de las rutas de archivo; no existen directorios vacíos reales. Cuando el script crea una carpeta, crea un archivo marcador `0.md` en el directorio de destino para que el gestor de archivos y las estadísticas de directorios puedan mostrarlo.
+Los directorios de ImgHost se derivan de las rutas de archivo; no existen directorios vacíos reales. Cuando el script crea una carpeta, crea un archivo marcador `0.md` en el directorio de destino para que el gestor de archivos y las estadísticas de directorios puedan mostrarlo.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ El backend procesa como máximo `15` archivos por petición. El script usa `--ba
 
 ### Se puede crear una carpeta realmente vacía
 
-Los directorios de ImgBed se derivan de rutas de archivo; no existen directorios vacíos reales. `--create-folder` crea un archivo marcador `0.md` para que el directorio aparezca en el gestor de archivos y en las estadísticas de directorios.
+Los directorios de ImgHost se derivan de rutas de archivo; no existen directorios vacíos reales. `--create-folder` crea un archivo marcador `0.md` para que el directorio aparezca en el gestor de archivos y en las estadísticas de directorios.
 
 ### Cuánto puede durar como máximo un Token de subida de corta duración
 

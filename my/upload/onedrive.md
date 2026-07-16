@@ -5,7 +5,7 @@
 | လိုအပ်ချက် | လိုအပ်ရသည့်အကြောင်းရင်း |
 | --- | --- |
 | Microsoft အကောင့်တစ်ခု | Microsoft admin page များကို access လုပ်ရန်နှင့် OneDrive ကို authorize လုပ်ရန် အသုံးပြုသည် |
-| သင်၏ ImgBed ဒိုမိန်း | OAuth callback URL အတွက် အသုံးပြုသည် |
+| သင်၏ ImgHost ဒိုမိန်း | OAuth callback URL အတွက် အသုံးပြုသည် |
 | App registration တစ်ခု | `Client ID` နှင့် `Client Secret` ထုတ်လုပ်ရန် အသုံးပြုသည် |
 | OneDrive အကောင့်တစ်ခု | လက်တွေ့ဖိုင်သိုလှောင်ရာနေရာအဖြစ် အသုံးပြုသည် |
 
@@ -52,7 +52,7 @@ Form ဖြည့်ပြီးနောက် register ကိုနှိပ�
 
 App ဖန်တီးပြီးနောက် overview page မှ အောက်ပါတန်ဖိုးများကို ကူးယူပါ။
 
-| Microsoft အကွက် | ImgBed အကွက် |
+| Microsoft အကွက် | ImgHost အကွက် |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | Organizational account များအတွက် `Tenant ID` |
@@ -80,14 +80,14 @@ App ဖန်တီးပြီးနောက် overview page မှ အော
 | Permission | ရည်ရွယ်ချက် |
 | --- | --- |
 | `Files.ReadWrite.All` | ဖိုင်များကို အပ်လုဒ်လုပ်ခြင်း၊ folder များဖန်တီးခြင်းနှင့် ဖိုင်များဖျက်ခြင်း |
-| `offline_access` | ImgBed ကို `Refresh Token` ရယူခွင့်ပြုသည် |
+| `offline_access` | ImgHost ကို `Refresh Token` ရယူခွင့်ပြုသည် |
 | `User.Read` | Account နှင့် quota information ကိုဖတ်သည် |
 
 ### အဆင့် 6: OneDrive Channel ကိုဖြည့်ပါ
 
 အပ်လုဒ် ဆက်တင်များ တွင် `OneDrive` ကိုရွေးပြီး အောက်ပါအတိုင်း ဖြည့်ပါ။
 
-| ImgBed အကွက် | ထည့်ရန်အရာ |
+| ImgHost အကွက် | ထည့်ရန်အရာ |
 | --- | --- |
 | ချန်နယ်အမည် | မှတ်မိလွယ်သောအမည်၊ ဥပမာ `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ App ဖန်တီးပြီးနောက် overview page မှ အော
 
 `Tenant ID` ဖြည့်နည်း-
 
-| သင်ရွေးထားသော Account Type | ImgBed `Tenant ID` |
+| သင်ရွေးထားသော Account Type | ImgHost `Tenant ID` |
 | --- | --- |
 | Personal accounts | `consumers` |
 | Personal + organizational accounts | `common` |
@@ -109,12 +109,12 @@ App ဖန်တီးပြီးနောက် overview page မှ အော
 
 ### အဆင့် 7: Refresh Token ရယူပါ
 
-1. ImgBed တွင် `Get Token` ကိုနှိပ်ပါ။
+1. ImgHost တွင် `Get Token` ကိုနှိပ်ပါ။
 2. ချိတ်ဆက်လိုသော Microsoft အကောင့်သို့ sign in ဝင်ပါ။
 3. Authorization prompt ကို approve လုပ်ပါ။
 4. Callback စာမျက်နှာတွင် `Refresh Token` ကိုပြမည်။
 5. ၎င်းကိုကူးယူပါ။
-6. ImgBed သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
+6. ImgHost သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
 
 ![Refresh token ကူးယူခြင်း](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## ကိုးကားချက်များ

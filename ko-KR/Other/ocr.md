@@ -56,7 +56,7 @@ Google 설정은 두 부분으로 나뉩니다.
 4. `Credentials`로 돌아갑니다.
 5. `API Key`를 만듭니다.
 6. API Key를 열어 복사합니다.
-7. ImgBed의 `Google Vision API Key`에 붙여 넣습니다.
+7. ImgHost의 `Google Vision API Key`에 붙여 넣습니다.
 8. 저장합니다.
 
 그런 다음 OCR 대화 상자에서 Google Vision을 선택할 수 있습니다.
@@ -74,10 +74,10 @@ Google 설정은 두 부분으로 나뉩니다.
 5. 서비스 계정 세부 정보로 들어가 키를 만듭니다.
 6. `JSON`을 선택합니다.
 7. 생성된 JSON 파일을 다운로드합니다.
-8. ImgBed로 돌아가 서비스 계정 `JSON`으로 가져옵니다(선택 사항).
+8. ImgHost로 돌아가 서비스 계정 `JSON`으로 가져옵니다(선택 사항).
 9. 가져오기에 성공하면 할당량 조회를 클릭합니다.
 
-가져온 뒤 ImgBed는 서비스 계정이 속한 프로젝트 이름을 표시합니다. 사용량을 조회할 때 ImgBed는 Google 모니터링 데이터를 읽고 이번 달 호출 수를 표시합니다.
+가져온 뒤 ImgHost는 서비스 계정이 속한 프로젝트 이름을 표시합니다. 사용량을 조회할 때 ImgHost는 Google 모니터링 데이터를 읽고 이번 달 호출 수를 표시합니다.
 
 요약:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR에는 액세스 토큰이 필요합니다.
 
 Baidu PaddleOCR 페이지에서 `API` 호출 창을 열고 토큰 받기를 클릭한 뒤 복사합니다.
 
-ImgBed로 돌아와 `PaddleOCR Token`에 붙여 넣고 저장합니다.
+ImgHost로 돌아와 `PaddleOCR Token`에 붙여 넣고 저장합니다.
 
 ## 인식 시작하기
 

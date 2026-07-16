@@ -36,7 +36,7 @@ Cloudflare 會快取公開圖片。
 
 ## 不設定會怎樣
 
-不設定也可以正常使用 ImgBed。
+不設定也可以正常使用 ImgHost。
 
 只是系統不會主動清 Cloudflare CDN 快取，外部使用者可能在快取自然過期前繼續看到舊內容。
 
@@ -47,7 +47,7 @@ Zone ID 是 Cloudflare 裡目前站點的 Zone ID。
 取得方式：
 
 1. 登入 Cloudflare Dashboard。
-2. 進入 ImgBed 網域所在的站點。
+2. 進入 ImgHost 網域所在的站點。
 3. 在站點 Overview 頁找到 Zone ID。
 4. 複製後填入 `Zone ID`。
 

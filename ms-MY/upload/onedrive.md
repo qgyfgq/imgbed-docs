@@ -5,7 +5,7 @@
 | Keperluan | Sebab Diperlukan |
 | --- | --- |
 | Akaun Microsoft | Digunakan untuk mengakses halaman pentadbir Microsoft dan mengizinkan OneDrive |
-| Domain ImgBed anda | Digunakan untuk URL callback OAuth |
+| Domain ImgHost anda | Digunakan untuk URL callback OAuth |
 | Pendaftaran app | Digunakan untuk menjana `Client ID` dan `Client Secret` |
 | Akaun OneDrive | Digunakan sebagai lokasi storan fail sebenar |
 
@@ -52,7 +52,7 @@ Klik `Register` selepas mengisi borang.
 
 Selepas app dibuat, salin nilai berikut daripada halaman gambaran keseluruhan:
 
-| Medan Microsoft | Medan ImgBed |
+| Medan Microsoft | Medan ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` untuk akaun organisasi |
@@ -80,14 +80,14 @@ Selepas app dibuat, salin nilai berikut daripada halaman gambaran keseluruhan:
 | Kebenaran | Tujuan |
 | --- | --- |
 | `Files.ReadWrite.All` | Memuat naik fail, membuat folder dan memadam fail |
-| `offline_access` | Membolehkan ImgBed mendapatkan `Refresh Token` |
+| `offline_access` | Membolehkan ImgHost mendapatkan `Refresh Token` |
 | `User.Read` | Membaca maklumat akaun dan kuota |
 
 ### Langkah 6: Isi Saluran OneDrive
 
 Dalam Tetapan Muat Naik, pilih `OneDrive` dan isi:
 
-| Medan ImgBed | Perkara Yang Perlu Dimasukkan |
+| Medan ImgHost | Perkara Yang Perlu Dimasukkan |
 | --- | --- |
 | Nama saluran | Nama yang mudah dikenal pasti, seperti `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Dalam Tetapan Muat Naik, pilih `OneDrive` dan isi:
 
 Cara mengisi `Tenant ID`:
 
-| Jenis Akaun Yang Dipilih | `Tenant ID` ImgBed |
+| Jenis Akaun Yang Dipilih | `Tenant ID` ImgHost |
 | --- | --- |
 | Akaun peribadi | `consumers` |
 | Akaun peribadi + organisasi | `common` |
@@ -109,12 +109,12 @@ Cara mengisi `Tenant ID`:
 
 ### Langkah 7: Dapatkan Refresh Token
 
-1. Dalam ImgBed, klik `Get Token`.
+1. Dalam ImgHost, klik `Get Token`.
 2. Log masuk ke akaun Microsoft yang mahu disambungkan.
 3. Luluskan permintaan kebenaran.
 4. Halaman callback akan menunjukkan `Refresh Token`.
 5. Salin token tersebut.
-6. Kembali ke ImgBed dan tampalkannya dalam medan `Refresh Token`.
+6. Kembali ke ImgHost dan tampalkannya dalam medan `Refresh Token`.
 
 ![Salin refresh token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Rujukan

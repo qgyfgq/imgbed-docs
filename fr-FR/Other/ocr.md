@@ -56,7 +56,7 @@ La configuration Google comporte deux parties :
 4. Revenez à `Credentials`.
 5. Créez une `API Key`.
 6. Ouvrez l’API Key et copiez-la.
-7. Collez-la dans `Google Vision API Key` dans ImgBed.
+7. Collez-la dans `Google Vision API Key` dans ImgHost.
 8. Enregistrez.
 
 Vous pouvez ensuite choisir Google Vision dans la boîte de dialogue OCR.
@@ -74,10 +74,10 @@ Elle indique seulement, de manière approximative, combien d’appels Google Vis
 5. Ouvrez les détails du compte de service et créez une clé.
 6. Choisissez `JSON`.
 7. Téléchargez le fichier JSON généré.
-8. Revenez dans ImgBed et importez-le dans le champ `JSON` du compte de service (facultatif).
+8. Revenez dans ImgHost et importez-le dans le champ `JSON` du compte de service (facultatif).
 9. Une fois l’import réussi, cliquez sur la consultation du quota.
 
-Après l’import, ImgBed affiche le nom du projet auquel appartient le compte de service. Lors de la consultation de l’utilisation, ImgBed lit les données de monitoring Google et affiche le nombre d’appels du mois en cours.
+Après l’import, ImgHost affiche le nom du projet auquel appartient le compte de service. Lors de la consultation de l’utilisation, ImgHost lit les données de monitoring Google et affiche le nombre d’appels du mois en cours.
 
 En résumé :
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR nécessite un token d’accès.
 
 Ouvrez la fenêtre d’appel `API` sur la page Baidu PaddleOCR, cliquez pour obtenir un token, puis copiez-le.
 
-Revenez dans ImgBed, collez-le dans `PaddleOCR Token`, puis enregistrez.
+Revenez dans ImgHost, collez-le dans `PaddleOCR Token`, puis enregistrez.
 
 ## Lancer la reconnaissance
 

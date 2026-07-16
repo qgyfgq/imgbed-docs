@@ -1,4 +1,4 @@
-﻿# Add a Discord Channel
+# Add a Discord Channel
 
 ## What You Need Before You Start
 
@@ -44,7 +44,7 @@
 5. Generate or reset the token on the `Bot` page.
 6. Save the token.
 
-This token is the `Bot Token` you need to enter in ImgBed.
+This token is the `Bot Token` you need to enter in ImgHost.
 
 ![View the bot token](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ This token is the `Bot Token` you need to enter in ImgBed.
 5. Right-click the channel name.
 6. Click Copy Channel ID.
 
-The copied number is the `Channel ID` required by ImgBed.
+The copied number is the `Channel ID` required by ImgHost.
 
 ![Enable developer mode](../../image/upload/discord/开启开发者权限.png)
 
 ![Copy the channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. Fill in the Discord Channel in ImgBed
+### 5. Fill in the Discord Channel in ImgHost
 
 Return to the channel configuration dialog and fill in the fields as follows:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

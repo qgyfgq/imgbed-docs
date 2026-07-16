@@ -48,9 +48,9 @@ Setelah dibuat, salin dan simpan kata sandi aplikasi baru. Biasanya hanya ditamp
 
 ![Menyimpan kata sandi aplikasi baru](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Mengisi Konfigurasi WebDAV di ImgBed
+### 2. Mengisi Konfigurasi WebDAV di ImgHost
 
-Kembali ke ImgBed dan tambahkan kanal WebDAV:
+Kembali ke ImgHost dan tambahkan kanal WebDAV:
 
 | Kolom UI | Nilai |
 | --- | --- |
@@ -68,7 +68,7 @@ Kanal WebDAV sekarang memakai unggahan terpecah berbasis sesi yang sebenarnya.
 
 Berkas kecil diunggah sebagai satu berkas utuh. Berkas yang lebih besar dari 64 MiB otomatis dipecah menjadi bagian sekitar 10 MiB dan diunggah ke direktori bagian jarak jauh.
 
-Layanan WebDAV tidak perlu mendukung `partial update` atau penulisan berbasis offset. ImgBed tidak menggabungkan bagian-bagian itu menjadi satu berkas besar di server jarak jauh. Sebagai gantinya, ImgBed menyimpan manifes bagian dan membaca bagian-bagian secara berurutan saat berkas diminta.
+Layanan WebDAV tidak perlu mendukung `partial update` atau penulisan berbasis offset. ImgHost tidak menggabungkan bagian-bagian itu menjadi satu berkas besar di server jarak jauh. Sebagai gantinya, ImgHost menyimpan manifes bagian dan membaca bagian-bagian secara berurutan saat berkas diminta.
 
 Dalam praktiknya:
 
@@ -77,7 +77,7 @@ Dalam praktiknya:
 | 64 MiB atau kurang | Unggahan normal | Satu berkas utuh |
 | Lebih dari 64 MiB | Unggahan terpecah berbasis sesi yang sebenarnya | Direktori bagian berisi beberapa berkas bagian |
 
-Direktori bagian hanya memengaruhi tata letak penyimpanan jarak jauh. URL berkas di ImgBed tidak berubah. Pengguna tetap mengakses berkas melalui tautan asli `/file/...`.
+Direktori bagian hanya memengaruhi tata letak penyimpanan jarak jauh. URL berkas di ImgHost tidak berubah. Pengguna tetap mengakses berkas melalui tautan asli `/file/...`.
 
 ## Langkah Konfigurasi
 
@@ -111,7 +111,7 @@ Direktori bagian hanya memengaruhi tata letak penyimpanan jarak jauh. URL berkas
 
 Ini adalah metode penyimpanan saat ini untuk berkas besar.
 
-Berkas yang lebih besar dari 64 MiB tidak digabung menjadi satu berkas besar jarak jauh. Berkas disimpan sebagai direktori bagian. ImgBed mencatat manifes bagian dan mengembalikan konten lengkap dengan membaca bagian-bagian secara berurutan.
+Berkas yang lebih besar dari 64 MiB tidak digabung menjadi satu berkas besar jarak jauh. Berkas disimpan sebagai direktori bagian. ImgHost mencatat manifes bagian dan mengembalikan konten lengkap dengan membaca bagian-bagian secara berurutan.
 
 ### Jika unggahan berkas besar gagal, apa yang perlu diperiksa dulu?
 

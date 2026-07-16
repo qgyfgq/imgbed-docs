@@ -1,9 +1,9 @@
 # Dostęp WebDAV do strony
-Ustawienie WebDAV w Ustawieniach bezpieczeństwa udostępnia Twoją stronę ImgBed jako punkt końcowy WebDAV.
+Ustawienie WebDAV w Ustawieniach bezpieczeństwa udostępnia Twoją stronę ImgHost jako punkt końcowy WebDAV.
 
-Po włączeniu możesz używać Windows, macOS, mobilnych menedżerów plików lub dowolnego klienta zgodnego z WebDAV do przeglądania, przesyłania, usuwania i zarządzania plikami ImgBed jak zdalnym katalogiem.
+Po włączeniu możesz używać Windows, macOS, mobilnych menedżerów plików lub dowolnego klienta zgodnego z WebDAV do przeglądania, przesyłania, usuwania i zarządzania plikami ImgHost jak zdalnym katalogiem.
 
-To wejście WebDAV strony. Różni się od kanału przechowywania WebDAV w Ustawieniach przesyłania. Kanał przesyłania zapisuje pliki w zewnętrznej usłudze WebDAV. To ustawienie sprawia, że Twoja strona ImgBed sama udostępnia dostęp WebDAV klientom.
+To wejście WebDAV strony. Różni się od kanału przechowywania WebDAV w Ustawieniach przesyłania. Kanał przesyłania zapisuje pliki w zewnętrznej usłudze WebDAV. To ustawienie sprawia, że Twoja strona ImgHost sama udostępnia dostęp WebDAV klientom.
 
 ## Gdzie skonfigurować
 
@@ -23,21 +23,21 @@ Dostępne ustawienia:
 
 ## Co robi ta funkcja
 
-Po włączeniu WebDAV ImgBed udostępnia stały URL dostępu:
+Po włączeniu WebDAV ImgHost udostępnia stały URL dostępu:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Użyj tego URL-a, aby połączyć się z katalogiem plików ImgBed.
+Użyj tego URL-a, aby połączyć się z katalogiem plików ImgHost.
 
 Dobre zastosowania:
 
-- przeglądanie plików ImgBed bezpośrednio z menedżera plików komputera.
+- przeglądanie plików ImgHost bezpośrednio z menedżera plików komputera.
 - przeciąganie obrazów do katalogu WebDAV, aby je przesłać.
-- organizowanie katalogów ImgBed z lokalnego menedżera plików.
+- organizowanie katalogów ImgHost z lokalnego menedżera plików.
 - użycie oprogramowania zgodnego z WebDAV do synchronizacji lub zarządzania obrazami.
-- dostęp do treści ImgBed bez otwierania panelu administracyjnego.
+- dostęp do treści ImgHost bez otwierania panelu administracyjnego.
 
 ## Ustawienia
 
@@ -63,7 +63,7 @@ Typowe opcje:
 
 | Tryb | Opis |
 | --- | --- |
-| Inteligentne ładowanie | ImgBed wybiera według kontekstu. Zalecane do normalnego użycia. |
+| Inteligentne ładowanie | ImgHost wybiera według kontekstu. Zalecane do normalnego użycia. |
 | Oryginał | Preferuje oryginalne obrazy. |
 | Miniatura | Preferuje miniatury. Przydatne do szybkiego podglądu. |
 
@@ -73,7 +73,7 @@ Jeśli nie masz pewności, zostaw `Inteligentne ładowanie`.
 
 Domyślny kanał jest używany do przesyłania WebDAV.
 
-Gdy kopiujesz pliki do katalogu WebDAV z Windows lub innego klienta, ImgBed przesyła je przez wybrany domyślny kanał przesyłania.
+Gdy kopiujesz pliki do katalogu WebDAV z Windows lub innego klienta, ImgHost przesyła je przez wybrany domyślny kanał przesyłania.
 
 Jeśli domyślny kanał nie jest wybrany, przeglądanie może działać, ale przesyłanie może się nie udać.
 

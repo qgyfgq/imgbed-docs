@@ -7,7 +7,7 @@ Je hebt maar drie dingen nodig:
 | Vereiste | Doel |
 | --- | --- |
 | Hugging Face-account | Voor het maken van een access token en als eigenaar van de repository. |
-| Hugging Face User Access Token | Hiermee kan ImgBed de Hugging Face API gebruiken, repositories maken en bestanden uploaden. |
+| Hugging Face User Access Token | Hiermee kan ImgHost de Hugging Face API gebruiken, repositories maken en bestanden uploaden. |
 | Repositorynaam | Je kunt alleen de repositorynaam invullen, bijvoorbeeld `image`. |
 
 ## Instellen
@@ -24,7 +24,7 @@ Je hebt maar drie dingen nodig:
 
 ![Token maken](../../image/upload/huggingface/创建令牌.png)
 
-## Stap 2: Vul het Hugging Face-kanaal in ImgBed in
+## Stap 2: Vul het Hugging Face-kanaal in ImgHost in
 
 Nadat je in Uploadinstellingen `Hugging Face` hebt gekozen, vul je in:
 
@@ -46,9 +46,9 @@ Het systeem handelt deze details af:
 
 | Systeemgedrag | Beschrijving |
 | --- | --- |
-| Korte repositorynaam | ImgBed herkent het huidige Hugging Face-account en vult dit aan tot een volledig repositorypad. |
-| Volledig repositorypad | ImgBed gebruikt `username/repository` exact zoals ingevoerd. |
-| Repositorycontrole | Gebruik je het pad van je huidige persoonlijke account, dan probeert ImgBed de repository aan te maken als die niet bestaat. Vul je handmatig een volledig pad in, dan gebruikt ImgBed dat pad direct. |
+| Korte repositorynaam | ImgHost herkent het huidige Hugging Face-account en vult dit aan tot een volledig repositorypad. |
+| Volledig repositorypad | ImgHost gebruikt `username/repository` exact zoals ingevoerd. |
+| Repositorycontrole | Gebruik je het pad van je huidige persoonlijke account, dan probeert ImgHost de repository aan te maken als die niet bestaat. Vul je handmatig een volledig pad in, dan gebruikt ImgHost dat pad direct. |
 | Repositorytype | Dit kanaal gebruikt een `dataset`-repository. |
 | Openbaar/privé | De zichtbaarheid van de repository wordt gesynchroniseerd met de huidige schakelaar. |
 
@@ -58,10 +58,10 @@ Het systeem handelt deze details af:
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

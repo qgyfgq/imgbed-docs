@@ -7,7 +7,7 @@
 | ข้อกำหนด | วัตถุประสงค์ |
 | --- | --- |
 | GitLab account | ใช้สร้าง access token และเป็น owner ของ project |
-| GitLab Personal Access Token | ImgBed ใช้เข้าถึง GitLab API, สร้าง projects และอัปโหลดไฟล์ไปยัง Generic Packages |
+| GitLab Personal Access Token | ImgHost ใช้เข้าถึง GitLab API, สร้าง projects และอัปโหลดไฟล์ไปยัง Generic Packages |
 | Project name | ใส่เฉพาะ project name ก็ได้ เช่น `imgbed` |
 
 ## ขั้นตอนตั้งค่า
@@ -26,7 +26,7 @@
 
 ![เลือก token permissions](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## ขั้นตอนที่ 2: ใส่ช่องทาง GitLab Packages ใน ImgBed
+## ขั้นตอนที่ 2: ใส่ช่องทาง GitLab Packages ใน ImgHost
 
 หลังเลือก `GitLab Packages` ใน Upload Settings ให้กรอกฟิลด์ดังนี้:
 
@@ -48,9 +48,9 @@
 
 | พฤติกรรมของระบบ | คำอธิบาย |
 | --- | --- |
-| Short project name | ImgBed ระบุ GitLab account ปัจจุบัน แล้วขยายค่าเป็นพาธ project แบบเต็ม |
-| Full project path | ImgBed ใช้ path `username/project` ตามที่ใส่มาแบบตรงตัว |
-| การตรวจสอบ project | ถ้าใช้พาธของ personal account ปัจจุบัน ImgBed จะสร้าง project อัตโนมัติเมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgBed จะใช้พาธนั้นโดยตรง |
+| Short project name | ImgHost ระบุ GitLab account ปัจจุบัน แล้วขยายค่าเป็นพาธ project แบบเต็ม |
+| Full project path | ImgHost ใช้ path `username/project` ตามที่ใส่มาแบบตรงตัว |
+| การตรวจสอบ project | ถ้าใช้พาธของ personal account ปัจจุบัน ImgHost จะสร้าง project อัตโนมัติเมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgHost จะใช้พาธนั้นโดยตรง |
 | Public/private state | Project visibility จะ sync ตาม switch ปัจจุบัน |
 
 ## รายการตรวจสอบด่วน
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

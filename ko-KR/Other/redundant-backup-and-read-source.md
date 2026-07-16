@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 이 진입점은 폴더나 전체 파일에 일괄로 백업을 추가하는 데 가장 적합합니다.
 
-백업 채널은 수동으로 선택할 수 있으며, 자동 전환을 선택해 ImgBed가 적합한 백업 채널을 찾도록 할 수도 있습니다.
+백업 채널은 수동으로 선택할 수 있으며, 자동 전환을 선택해 ImgHost가 적합한 백업 채널을 찾도록 할 수도 있습니다.
 
 ## 파일 상세에서 백업하기
 
@@ -90,4 +90,4 @@ System Settings -> Other Settings -> Redundant Backup
 
 ## 파일이 삭제될 때 일어나는 일
 
-파일을 삭제하면 ImgBed는 주 파일과 백업 파일을 모두 삭제합니다.
+파일을 삭제하면 ImgHost는 주 파일과 백업 파일을 모두 삭제합니다.

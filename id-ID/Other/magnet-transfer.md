@@ -2,7 +2,7 @@
 
 Transfer magnet mengunduh file dari tautan magnet, lalu menguploadnya secara otomatis ke kanal penyimpanan cloud yang Anda pilih.
 
-Fitur ini berguna untuk memindahkan episode anime, video, arsip, dan file sejenis. Tempelkan tautan magnet, lalu ImgBed membuat tugas unduhan di latar belakang. Setelah unduhan selesai, file diupload ke ImgBed dan tautan akhir muncul di daftar upload.
+Fitur ini berguna untuk memindahkan episode anime, video, arsip, dan file sejenis. Tempelkan tautan magnet, lalu ImgHost membuat tugas unduhan di latar belakang. Setelah unduhan selesai, file diupload ke ImgHost dan tautan akhir muncul di daftar upload.
 
 ![Transfer magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Setelah pengaturan siap, kembali ke halaman beranda dan tempelkan tautan magnet 
 1. Tempelkan tautan magnet ke kotak upload halaman beranda.
 2. Pastikan mode diatur ke `Transfer`.
 3. Klik upload.
-4. Tunggu ImgBed membuat tugas magnet.
+4. Tunggu ImgHost membuat tugas magnet.
 5. Setelah tugas dimulai, gunakan panel mengambang `Magnet Tasks` di sudut kanan bawah untuk memeriksa progres.
 
 Unduhan dan upload dapat memakan waktu. Kecepatan bergantung pada sumber magnet, lingkungan runtime GitHub, dan kanal penyimpanan cloud yang dipilih.
@@ -72,7 +72,7 @@ Status umum:
 
 ## Tips
 
-- Jika satu tautan magnet berisi beberapa file, ImgBed memprioritaskan file utama yang sudah selesai untuk ditampilkan.
+- Jika satu tautan magnet berisi beberapa file, ImgHost memprioritaskan file utama yang sudah selesai untuk ditampilkan.
 - File besar membutuhkan waktu lebih lama. Tunggu tugas selesai sebelum menyegarkan halaman.
 - Jika sumber magnet tidak memiliki peer yang tersedia, proses dapat sangat lambat atau gagal.
 - Jika kuota akun cloud habis, otorisasi kedaluwarsa, atau direktori upload salah, tugas dapat gagal.

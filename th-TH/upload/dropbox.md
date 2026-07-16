@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox account | ใช้เข้าสู่ระบบและ authorize app |
 | Dropbox app | ใช้สร้าง `App Key` และ `App Secret` |
-| ImgBed domain ของคุณ | ใช้เป็น OAuth redirect URI |
+| ImgHost domain ของคุณ | ใช้เป็น OAuth redirect URI |
 | พื้นที่ Dropbox ที่พร้อมใช้งาน | ใช้เป็นพื้นที่เก็บไฟล์จริง |
 
 ## ขั้นตอนตั้งค่า
@@ -33,8 +33,8 @@ App folder
 
 | ประเภทการเข้าถึง | คำแนะนำ |
 | --- | --- |
-| `App folder` | แนะนำ เพราะตรงกับวิธีที่ ImgBed จัดเก็บไฟล์ |
-| `Full Dropbox` | ไม่แนะนำ เพราะ ImgBed ไม่จำเป็นต้องเข้าถึงทั้ง account |
+| `App folder` | แนะนำ เพราะตรงกับวิธีที่ ImgHost จัดเก็บไฟล์ |
+| `Full Dropbox` | ไม่แนะนำ เพราะ ImgHost ไม่จำเป็นต้องเข้าถึงทั้ง account |
 
 ![สร้าง Dropbox app](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 บันทึกค่าสองตัวนี้จากหน้า Dropbox app:
 
-| ฟิลด์ Dropbox | ฟิลด์ ImgBed |
+| ฟิลด์ Dropbox | ฟิลด์ ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ใน Upload Settings เลือก `Dropbox` แล้วกรอก:
 
-| ฟิลด์ ImgBed | ใส่อะไร |
+| ฟิลด์ ImgHost | ใส่อะไร |
 | --- | --- |
 | Channel name | ชื่อที่จำง่าย เช่น `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ### ขั้นตอนที่ 6: รับ Refresh Token
 
-1. ใน ImgBed คลิก `Get Token`
+1. ใน ImgHost คลิก `Get Token`
 2. เข้าสู่ระบบ Dropbox account ที่ต้องการเชื่อมต่อ
 3. อนุมัติ authorization prompt
 4. หน้า callback จะแสดง `Refresh Token`
 5. คัดลอก token นั้น
-6. กลับไปที่ ImgBed แล้ววางในฟิลด์ `Refresh Token`
+6. กลับไปที่ ImgHost แล้ววางในฟิลด์ `Refresh Token`
 
 ![คัดลอก token](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 | ปัญหา | วิธีแก้ไข |
 | --- | --- |
-| ImgBed แจ้งว่าการกำหนดค่ายังไม่ครบ | ตรวจว่า `App Key`, `App Secret` และ `Refresh Token` ถูกกรอกครบ |
+| ImgHost แจ้งว่าการกำหนดค่ายังไม่ครบ | ตรวจว่า `App Key`, `App Secret` และ `Refresh Token` ถูกกรอกครบ |
 | Authorization สำเร็จแต่ไม่มี `Refresh Token` | คลิก `Get Token` อีกครั้งและตรวจว่าใช้ offline authorization flow |
 | อัปโหลดล้มเหลวด้วย `required scope 'files.content.write'` | Enable `files.content.write`, คลิก `Submit`, แล้วรับ `Refresh Token` ใหม่ |
 | Callback ล้มเหลว | ยืนยันว่า redirect URI เป็น `https://your-domain.com/api/oauth/dropbox/callback` |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## เอกสารอ้างอิง

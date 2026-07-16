@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox கணக்கு | உள்நுழைய செய்து செயலி authorize செய்ய |
 | Dropbox செயலி | `App Key` மற்றும் `App Secret` உருவாக்க |
-| உங்கள் ImgBed டொமைன் | OAuth redirect URI-க்கு |
+| உங்கள் ImgHost டொமைன் | OAuth redirect URI-க்கு |
 | கிடைக்கும் Dropbox சேமிப்பு | உண்மையான கோப்பு சேமிப்பு location ஆக |
 
 ## அமைப்பு படிகள்
@@ -33,8 +33,8 @@ App folder
 
 | அணுகல் வகை | பரிந்துரை |
 | --- | --- |
-| `App folder` | பரிந்துரைக்கப்படுகிறது. ImgBed கோப்புகள் சேமிக்கும் முறைக்கு பொருந்தும். |
-| `Full Dropbox` | பரிந்துரை இல்லை. ImgBed-க்கு முழு கணக்கு அணுகல் தேவையில்லை. |
+| `App folder` | பரிந்துரைக்கப்படுகிறது. ImgHost கோப்புகள் சேமிக்கும் முறைக்கு பொருந்தும். |
+| `Full Dropbox` | பரிந்துரை இல்லை. ImgHost-க்கு முழு கணக்கு அணுகல் தேவையில்லை. |
 
 ![Dropbox செயலி உருவாக்கவும்](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,16 +77,16 @@ scopes தேர்வு செய்த பிறகு page கீழே `Sub
 
 Dropbox செயலி page-ல் இருந்து:
 
-| Dropbox புலம் | ImgBed புலம் |
+| Dropbox புலம் | ImgHost புலம் |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
 
-### படி 5: ImgBed-ல் Dropbox சேனல் நிரப்பவும்
+### படி 5: ImgHost-ல் Dropbox சேனல் நிரப்பவும்
 
 பதிவேற்ற அமைப்புகள்-ல் `Dropbox` தேர்வு செய்து:
 
-| ImgBed புலம் | எதை உள்ளிட வேண்டும் |
+| ImgHost புலம் | எதை உள்ளிட வேண்டும் |
 | --- | --- |
 | சேனல் பெயர் | அறியக்கூடிய பெயர், உதா. `Main Dropbox` |
 | செயலி Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ Dropbox செயலி page-ல் இருந்து:
 
 ### படி 6: Refresh டோக்கன் பெறவும்
 
-1. ImgBed-ல் `Get Token` கிளிக் செய்யவும்.
+1. ImgHost-ல் `Get Token` கிளிக் செய்யவும்.
 2. இணைக்க வேண்டிய Dropbox கணக்கில் உள்நுழையவும்.
 3. authorization prompt-ஐ அனுமதிக்கவும்.
 4. callback page `Refresh Token` காட்டும்.
 5. அதை நகலெடுக்கவும்.
-6. ImgBed-க்கு திரும்பி, அதை `Refresh Token` புலத்தில் ஒட்டவும்.
+6. ImgHost-க்கு திரும்பி, அதை `Refresh Token` புலத்தில் ஒட்டவும்.
 
 ![நகலெடு டோக்கன்](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ quota limits இயக்கப்பட்டிருந்தால் quota 
 
 | சிக்கல் | தீர்வு |
 | --- | --- |
-| ImgBed கட்டமைப்பு முழுமையில்லை என கூறும் | `App Key`, `App Secret`, `Refresh Token` அனைத்தும் நிரப்பப்பட்டுள்ளதா பார்க்கவும். |
+| ImgHost கட்டமைப்பு முழுமையில்லை என கூறும் | `App Key`, `App Secret`, `Refresh Token` அனைத்தும் நிரப்பப்பட்டுள்ளதா பார்க்கவும். |
 | Authorization வெற்றி, ஆனால் `Refresh Token` இல்லை | `Get Token` மீண்டும் கிளிக் செய்து offline authorization flow பயன்படுத்தப்படுகிறதா பார்க்கவும். |
 | `required scope 'files.content.write'` பிழை | `files.content.write` enable செய்து `Submit` கிளிக் செய்து புதிய `Refresh Token` பெறவும். |
 | Callback தோல்வி | redirect URI `https://your-domain.com/api/oauth/dropbox/callback` என உறுதிப்படுத்தவும். |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## மேற்கோள்கள்

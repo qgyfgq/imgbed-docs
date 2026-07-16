@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Cloudflare-API-Zugangsdaten ermöglichen ImgBed, den Cloudflare-CDN-Zwischenspeicher nach Dateiänderungen zu leeren.
+Cloudflare-API-Zugangsdaten ermöglichen ImgHost, den Cloudflare-CDN-Zwischenspeicher nach Dateiänderungen zu leeren.
 
 ![Cloudflare API Token-Einstellungen](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare kann öffentliche Bild-URLs zwischenspeichern.
 
 Caching macht die Bildauslieferung schneller, kann aber auch dazu führen, dass veraltete Inhalte eine Zeit lang sichtbar bleiben, nachdem Sie eine Datei gelöscht, blockiert, ersetzt oder verschoben haben.
 
-Nachdem Cloudflare-API-Zugangsdaten konfiguriert wurden, versucht ImgBed, den zugehörigen Cloudflare-Zwischenspeicher zu leeren, wenn diese Vorgänge abgeschlossen sind.
+Nachdem Cloudflare-API-Zugangsdaten konfiguriert wurden, versucht ImgHost, den zugehörigen Cloudflare-Zwischenspeicher zu leeren, wenn diese Vorgänge abgeschlossen sind.
 
 Das ist nützlich, wenn:
 
@@ -36,18 +36,18 @@ Das ist nützlich, wenn:
 
 ## Was passiert, wenn Sie es leer lassen
 
-ImgBed funktioniert auch ohne diese Einstellung normal.
+ImgHost funktioniert auch ohne diese Einstellung normal.
 
-Der einzige Unterschied ist, dass ImgBed den Cloudflare-CDN-Zwischenspeicher nicht aktiv leert. Besucher können alte Inhalte weiter sehen, bis der Cloudflare-Zwischenspeicher natürlich abläuft.
+Der einzige Unterschied ist, dass ImgHost den Cloudflare-CDN-Zwischenspeicher nicht aktiv leert. Besucher können alte Inhalte weiter sehen, bis der Cloudflare-Zwischenspeicher natürlich abläuft.
 
 ## So finden Sie die Zone ID
 
-Die Zone ID ist die Cloudflare-Zone-ID der Website, die von Ihrer ImgBed-Domain verwendet wird.
+Die Zone ID ist die Cloudflare-Zone-ID der Website, die von Ihrer ImgHost-Domain verwendet wird.
 
 1. Melden Sie sich im Cloudflare-Dashboard an.
-2. Öffnen Sie die Website, die Ihre ImgBed-Domain enthält.
+2. Öffnen Sie die Website, die Ihre ImgHost-Domain enthält.
 3. Suchen Sie `Zone ID` auf der Übersichtsseite der Website.
-4. Kopieren Sie sie in das Feld `Zone ID` in ImgBed.
+4. Kopieren Sie sie in das Feld `Zone ID` in ImgHost.
 
 Dies ist die Zone ID der Website, nicht die Konto-ID.
 
@@ -66,7 +66,7 @@ Geben Sie Ihren Cloudflare Global API Key ein.
 3. Wechseln Sie zur Seite API Tokens.
 4. Suchen Sie `Global API Key`.
 5. Zeigen Sie ihn an und kopieren Sie ihn.
-6. Fügen Sie ihn in ImgBed in das Feld `API Key` ein.
+6. Fügen Sie ihn in ImgHost in das Feld `API Key` ein.
 
 ![Global API Key anzeigen](../../image/Safety/查看全局令牌.png)
 
@@ -88,17 +88,17 @@ Wenn Ihre Domain Cloudflare nicht verwendet oder Sie Verzögerungen durch den CD
 
 Normalerweise nicht.
 
-Falsche Zugangsdaten verhindern nur, dass ImgBed den Cloudflare-Zwischenspeicher leert. Uploads und normaler Dateizugriff sollten weiter funktionieren.
+Falsche Zugangsdaten verhindern nur, dass ImgHost den Cloudflare-Zwischenspeicher leert. Uploads und normaler Dateizugriff sollten weiter funktionieren.
 
 ### Warum kann ein gelöschtes Bild noch geöffnet werden?
 
 Der häufigste Grund ist, dass Cloudflare die alte Datei noch im Zwischenspeicher hat.
 
-Mit korrekten Cloudflare-API-Zugangsdaten leert ImgBed beim Löschen einer Datei den Zwischenspeicher der zugehörigen URL.
+Mit korrekten Cloudflare-API-Zugangsdaten leert ImgHost beim Löschen einer Datei den Zwischenspeicher der zugehörigen URL.
 
 ### Warum sehe ich nach dem Ersetzen einer Datei noch das alte Bild?
 
 Auch das wird in der Regel durch den CDN-Zwischenspeicher verursacht.
 
-Nachdem diese Einstellung konfiguriert wurde, versucht ImgBed beim Überschreiben einer Datei mit demselben Namen, den Zwischenspeicher der alten URL zu leeren.
+Nachdem diese Einstellung konfiguriert wurde, versucht ImgHost beim Überschreiben einer Datei mit demselben Namen, den Zwischenspeicher der alten URL zu leeren.
 

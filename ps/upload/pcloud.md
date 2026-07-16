@@ -2,7 +2,7 @@
 
 ## د چا لپاره ښه دی
 
-- pCloud حساب لرئ او غواړئ ImgBed انځورونه په pCloud کې وساتي.
+- pCloud حساب لرئ او غواړئ ImgHost انځورونه په pCloud کې وساتي.
 - د چینل اعتبارلیکونه په توګه د pCloud حساب email او password کارول درته منل شوي دي.
 
 ## مخکې څه ته اړتیا لرئ
@@ -70,7 +70,7 @@
 
 pCloud OAuth2 عموما په اصلي ډول self-خدمت نه دی. باید pCloud ته email وکړئ او ترې وغواړئ چې دا درته enable کړي.
 
-د pCloud اوسنی OAuth2 flow هم هغه short-lived اپلوډ link workflow نه ملاتړوي چې ImgBed ورته اړتیا لري، نو دا چینل د حساب email او password login کاروي.
+د pCloud اوسنی OAuth2 flow هم هغه short-lived اپلوډ link workflow نه ملاتړوي چې ImgHost ورته اړتیا لري، نو دا چینل د حساب email او password login کاروي.
 
 ### کوم API Host وکاروم؟
 

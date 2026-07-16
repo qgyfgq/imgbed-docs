@@ -7,7 +7,7 @@
 | مورد | کاربرد |
 | --- | --- |
 | حساب GitHub | برای ساخت توکن دسترسی و مالکیت مخزن استفاده می‌شود. |
-| توکن دسترسی GitHub | ImgBed از آن برای دسترسی به API مربوط به GitHub، ساخت انتشارها و بارگذاری فایل‌ها استفاده می‌کند. |
+| توکن دسترسی GitHub | ImgHost از آن برای دسترسی به API مربوط به GitHub، ساخت انتشارها و بارگذاری فایل‌ها استفاده می‌کند. |
 | نام مخزن | می‌توانید فقط نام مخزن را وارد کنید، برای مثال `image`. |
 
 ## مراحل پیکربندی
@@ -27,7 +27,7 @@
 
 ![افزودن مجوزهای GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## مرحله 2: تکمیل کانال GitHub Releases در ImgBed
+## مرحله 2: تکمیل کانال GitHub Releases در ImgHost
 
 پس از انتخاب `GitHub Releases` در تنظیمات بارگذاری، فیلدها را این‌گونه تکمیل کنید:
 
@@ -49,9 +49,9 @@
 
 | رفتار سیستم | توضیح |
 | --- | --- |
-| نام کوتاه مخزن | ImgBed حساب فعلی GitHub را تشخیص می‌دهد و مقدار را به مسیر کامل مخزن گسترش می‌دهد. |
-| مسیر کامل مخزن | ImgBed مسیر `username/repository` را دقیقاً همان‌طور که وارد شده استفاده می‌کند. |
-| بررسی مخزن | اگر از مسیر حساب شخصی فعلی استفاده کنید، ImgBed در صورت نبودن مخزن، آن را خودکار می‌سازد. اگر مسیر کامل را دستی وارد کنید، ImgBed همان مسیر را مستقیم استفاده می‌کند. |
+| نام کوتاه مخزن | ImgHost حساب فعلی GitHub را تشخیص می‌دهد و مقدار را به مسیر کامل مخزن گسترش می‌دهد. |
+| مسیر کامل مخزن | ImgHost مسیر `username/repository` را دقیقاً همان‌طور که وارد شده استفاده می‌کند. |
+| بررسی مخزن | اگر از مسیر حساب شخصی فعلی استفاده کنید، ImgHost در صورت نبودن مخزن، آن را خودکار می‌سازد. اگر مسیر کامل را دستی وارد کنید، ImgHost همان مسیر را مستقیم استفاده می‌کند. |
 | وضعیت عمومی/خصوصی | نمایانی مخزن بر اساس کلید فعلی همگام می‌شود. |
 
 ## فهرست سریع
@@ -61,9 +61,9 @@ GitHub Releases این‌گونه کار می‌کند:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

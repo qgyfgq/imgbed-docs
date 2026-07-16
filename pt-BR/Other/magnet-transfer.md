@@ -2,7 +2,7 @@
 
 A transferência por magnet baixa arquivos a partir de um link magnet e os envia automaticamente para o canal de armazenamento em nuvem que você escolher.
 
-Ela é útil para transferir episódios de anime, vídeos, arquivos compactados e itens semelhantes. Cole um link magnet, e o ImgBed cria uma tarefa de download em segundo plano. Quando o download termina, o arquivo é enviado para o ImgBed e o link final aparece na lista de uploads.
+Ela é útil para transferir episódios de anime, vídeos, arquivos compactados e itens semelhantes. Cole um link magnet, e o ImgHost cria uma tarefa de download em segundo plano. Quando o download termina, o arquivo é enviado para o ImgHost e o link final aparece na lista de uploads.
 
 ![Transferência por magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Quando as configurações estiverem prontas, volte para a página inicial e cole
 1. Cole o link magnet na caixa de upload da página inicial.
 2. Verifique se o modo está definido como `Transfer`.
 3. Clique para fazer upload.
-4. Aguarde o ImgBed criar a tarefa magnet.
+4. Aguarde o ImgHost criar a tarefa magnet.
 5. Depois que a tarefa iniciar, use o painel flutuante `Magnet Tasks` no canto inferior direito para acompanhar o progresso.
 
 O download e o upload podem levar tempo. A velocidade depende do recurso magnet, do ambiente de execução do GitHub e do canal de armazenamento em nuvem selecionado.
@@ -72,7 +72,7 @@ Estados comuns:
 
 ## Dicas
 
-- Se um link magnet contiver vários arquivos, o ImgBed prioriza o arquivo principal concluído para exibição.
+- Se um link magnet contiver vários arquivos, o ImgHost prioriza o arquivo principal concluído para exibição.
 - Arquivos grandes levam mais tempo. Aguarde a tarefa terminar antes de atualizar a página.
 - Se o recurso magnet não tiver pares disponíveis, ele pode ser muito lento ou falhar.
 - Se a conta em nuvem estiver sem cota, a autorização tiver expirado ou o diretório de upload estiver incorreto, a tarefa pode falhar.

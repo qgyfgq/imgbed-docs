@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 This entry is best for adding backups to a folder or to all files in bulk.
 
-The backup channel can be selected manually, or you can choose automatic switching and let ImgBed find a suitable backup channel.
+The backup channel can be selected manually, or you can choose automatic switching and let ImgHost find a suitable backup channel.
 
 ## Backup From File Details
 
@@ -90,4 +90,4 @@ As long as the backup file is available, images, videos, and download links cont
 
 ## What Happens When a File Is Deleted
 
-When a file is deleted, ImgBed deletes both the primary file and the backup file.
+When a file is deleted, ImgHost deletes both the primary file and the backup file.

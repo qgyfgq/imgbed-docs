@@ -41,7 +41,7 @@ Anda boleh menggunakan Space awam buat sementara waktu, tetapi Space awam dikong
 3. Klik menu tiga titik di penjuru kanan atas.
 4. Pilih `Duplicate this Space`.
 5. Kekalkan nama Space lalai atau pilih nama sendiri, seperti `wd-tagger`.
-6. Tetapkan keterlihatan kepada `Public`. Public Space lebih mudah dipanggil oleh ImgBed.
+6. Tetapkan keterlihatan kepada `Public`. Public Space lebih mudah dipanggil oleh ImgHost.
 7. Mulakan dengan perkakasan percuma lalai dahulu. Naik taraf kemudian hanya jika baris giliran menjadi jelas.
 8. Cipta Space dan tunggu binaan selesai.
 
@@ -51,7 +51,7 @@ Selepas binaan selesai, buka halaman Space anda. URL biasanya kelihatan seperti:
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Salin URL pelayar dan tampalkannya ke `Space URLs` dalam ImgBed.
+Salin URL pelayar dan tampalkannya ke `Space URLs` dalam ImgHost.
 
 ## Mengisi Berbilang Space URL
 
@@ -65,7 +65,7 @@ Contoh:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL halaman Space yang disalin. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | URL halaman Space yang anda duplikasi sendiri. |
 
-Anda boleh memasukkan berbilang URL. ImgBed menggunakan beberapa Space bersama-sama, yang boleh meningkatkan kelajuan.
+Anda boleh memasukkan berbilang URL. ImgHost menggunakan beberapa Space bersama-sama, yang boleh meningkatkan kelajuan.
 
 Jika satu Space tidak tersedia buat sementara waktu, Space lain masih boleh meneruskan pemprosesan.
 
@@ -103,13 +103,13 @@ Jika tag terlalu sedikit, turunkan sedikit ambang umum.
 3. Klik mulakan penandaan.
 4. Tunggu sehingga kemajuan selesai.
 
-Jika folder sasaran kosong, ImgBed memproses semua folder.
+Jika folder sasaran kosong, ImgHost memproses semua folder.
 
 Penandaan kelompok paling sesuai untuk imej lama. Untuk imej baharu, aktifkan penandaan automatik semasa muat naik supaya anda tidak perlu menjalankannya secara manual setiap kali.
 
 ## Penandaan Automatik Semasa Muat Naik
 
-Selepas penandaan automatik semasa muat naik diaktifkan, ImgBed akan memanggil `Space URLs` yang dikonfigurasikan secara automatik untuk imej yang baru dimuat naik.
+Selepas penandaan automatik semasa muat naik diaktifkan, ImgHost akan memanggil `Space URLs` yang dikonfigurasikan secara automatik untuk imej yang baru dimuat naik.
 
 Ini sesuai untuk penggunaan jangka panjang.
 
@@ -121,19 +121,19 @@ Penandaan automatik terutamanya memproses fail imej.
 
 Imej yang sudah mempunyai tag, orientasi, penarafan, lebar dan tinggi yang lengkap akan dilangkau untuk mengelakkan panggilan Space yang tidak perlu.
 
-Jika boleh, ImgBed hanya mengisi maklumat yang hilang. Contohnya, jika hanya orientasi yang hilang, ia cuba menambah orientasi tanpa memanggil keseluruhan aliran tag kandungan.
+Jika boleh, ImgHost hanya mengisi maklumat yang hilang. Contohnya, jika hanya orientasi yang hilang, ia cuba menambah orientasi tanpa memanggil keseluruhan aliran tag kandungan.
 
 ## Soalan Lazim
 
 ### Mengapa Perlu Menduplikasi Space Sendiri?
 
-Space awam dikongsi oleh ramai pengguna. Space yang anda duplikasi sendiri digunakan terutamanya oleh laman ImgBed anda, jadi biasanya lebih pantas dan lebih boleh dipercayai.
+Space awam dikongsi oleh ramai pengguna. Space yang anda duplikasi sendiri digunakan terutamanya oleh laman ImgHost anda, jadi biasanya lebih pantas dan lebih boleh dipercayai.
 
 ### Space Terus Dimulakan
 
 Selepas penciptaan pertama, atau selepas tempoh melahu yang panjang, Space mungkin memerlukan masa untuk bermula.
 
-Buka halaman Space anda dahulu. Selepas ia boleh mengecam imej secara normal, kembali ke ImgBed dan mulakan penandaan.
+Buka halaman Space anda dahulu. Selepas ia boleh mengecam imej secara normal, kembali ke ImgHost dan mulakan penandaan.
 
 ### Bagaimana Saya Menyalin Space URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

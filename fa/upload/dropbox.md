@@ -6,7 +6,7 @@
 | --- | --- |
 | حساب Dropbox | برای ورود و مجوزدهی به برنامه استفاده می‌شود |
 | برنامه Dropbox | برای تولید `App Key` و `App Secret` استفاده می‌شود |
-| دامنه ImgBed شما | به‌عنوان URI بازگشت OAuth استفاده می‌شود |
+| دامنه ImgHost شما | به‌عنوان URI بازگشت OAuth استفاده می‌شود |
 | فضای ذخیره‌سازی در دسترس در Dropbox | محل واقعی ذخیره فایل‌ها خواهد بود |
 
 ## مراحل پیکربندی
@@ -33,8 +33,8 @@ App folder
 
 | نوع دسترسی | پیشنهاد |
 | --- | --- |
-| `App folder` | پیشنهادی. با روش ذخیره فایل‌ها در ImgBed هماهنگ است. |
-| `Full Dropbox` | توصیه نمی‌شود. ImgBed به دسترسی کامل به کل حساب نیاز ندارد. |
+| `App folder` | پیشنهادی. با روش ذخیره فایل‌ها در ImgHost هماهنگ است. |
+| `Full Dropbox` | توصیه نمی‌شود. ImgHost به دسترسی کامل به کل حساب نیاز ندارد. |
 
 ![ساخت برنامه Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 این دو مقدار را از صفحه برنامه Dropbox ذخیره کنید:
 
-| فیلد Dropbox | فیلد ImgBed |
+| فیلد Dropbox | فیلد ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 در تنظیمات بارگذاری، `Dropbox` را انتخاب کنید و این فیلدها را تکمیل کنید:
 
-| فیلد ImgBed | مقدار لازم |
+| فیلد ImgHost | مقدار لازم |
 | --- | --- |
 | نام کانال | نامی قابل تشخیص، مانند `Main Dropbox` |
 | App Key | مقدار `App key` در Dropbox |
@@ -99,12 +99,12 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ### مرحله 6: دریافت Refresh Token
 
-1. در ImgBed روی `Get Token` کلیک کنید.
+1. در ImgHost روی `Get Token` کلیک کنید.
 2. وارد حساب Dropbox موردنظر برای اتصال شوید.
 3. درخواست مجوزدهی را تأیید کنید.
 4. صفحه بازگشت یک `Refresh Token` نمایش می‌دهد.
 5. آن را کپی کنید.
-6. به ImgBed برگردید و آن را در فیلد `Refresh Token` قرار دهید.
+6. به ImgHost برگردید و آن را در فیلد `Refresh Token` قرار دهید.
 
 ![کپی کردن توکن](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 | مشکل | راه‌حل |
 | --- | --- |
-| ImgBed اعلام می‌کند پیکربندی ناقص است | بررسی کنید `App Key`، `App Secret` و `Refresh Token` همگی تکمیل شده باشند. |
+| ImgHost اعلام می‌کند پیکربندی ناقص است | بررسی کنید `App Key`، `App Secret` و `Refresh Token` همگی تکمیل شده باشند. |
 | مجوزدهی کامل می‌شود اما `Refresh Token` نمایش داده نمی‌شود | دوباره روی `Get Token` کلیک کنید و مطمئن شوید جریان مجوزدهی آفلاین استفاده می‌شود. |
 | بارگذاری با خطای `required scope 'files.content.write'` شکست می‌خورد | `files.content.write` را فعال کنید، روی `Submit` کلیک کنید و سپس یک `Refresh Token` جدید بگیرید. |
 | بازگشت شکست می‌خورد | مطمئن شوید URI بازگشت برابر `https://your-domain.com/api/oauth/dropbox/callback` است. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## منابع

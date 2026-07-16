@@ -1,6 +1,6 @@
 # Blog
 
-De blogfunctie voegt een zelfstandige blogpagina toe aan je ImgBed-site.
+De blogfunctie voegt een zelfstandige blogpagina toe aan je ImgHost-site.
 
 Na inschakelen kunnen bezoekers openen:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Startpagina van de blog](../../image/other/博客/博客首页.png)
 
-De blog is aangepast op basis van het opensourceproject [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed heeft de blog herschreven en met Vue geïntegreerd, zodat hij als onderdeel van de afbeeldingshostingsite kan draaien.
+De blog is aangepast op basis van het opensourceproject [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost heeft de blog herschreven en met Vue geïntegreerd, zodat hij als onderdeel van de afbeeldingshostingsite kan draaien.
 
 ## Waar je dit configureert
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Wacht op de succesmelding.
 5. Open `https://your-domain.com/blog/` om de blog te bekijken.
 
-Bij het eerste gebruik maakt ImgBed een privé-GitHub-repository aan onder het gekozen account:
+Bij het eerste gebruik maakt ImgHost een privé-GitHub-repository aan onder het gekozen account:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Typische werkwijze:
 2. Ga naar de privérepository `imgbed-blog-config`.
 3. Bewerk of voeg berichtbestanden toe.
 4. Commit de wijzigingen.
-5. Ga terug naar het ImgBed-beheer en klik op `Update Blog`, of klik drie keer op het logo linksboven op de startpagina van de blog om een update te starten.
+5. Ga terug naar het ImgHost-beheer en klik op `Update Blog`, of klik drie keer op het logo linksboven op de startpagina van de blog om een update te starten.
 
 `Update Blog` overschrijft geen inhoud die je hebt geschreven. De actie is vooral bedoeld om de repository te initialiseren en de blogcache te verversen.
 
@@ -72,7 +72,7 @@ Bezoekstatistieken tonen artikelweergaven en sitebezoeken, zodat je blogverkeer 
 
 De blog staat altijd onder `/blog/`.
 
-Als je ImgBed-domein bijvoorbeeld is:
+Als je ImgHost-domein bijvoorbeeld is:
 
 ```text
 https://image.example.com

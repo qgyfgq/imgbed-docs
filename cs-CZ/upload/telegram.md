@@ -38,7 +38,7 @@
 5. Potom zadejte uživatelské jméno bota. Obvykle musí končit na `bot`.
 6. Po vytvoření `@BotFather` vrátí token bota.
 
-Tento token zadáte v ImgBed jako `Bot Token`.
+Tento token zadáte v ImgHost jako `Bot Token`.
 
 ![Uložení tokenu bota](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Pro nejspolehlivější nahrávání dejte botovi oprávnění správce.
 4. Ve výběru zprávy zvolte cílový kanál a pošlete ho na `@userinfobot`.
 5. Až `@userinfobot` vrátí výsledek, zkopírujte číslo u `Id: -100...`.
 
-Číslo začínající `-100` je `Session ID (Chat ID)`, které ImgBed potřebuje.
+Číslo začínající `-100` je `Session ID (Chat ID)`, které ImgHost potřebuje.
 
 ![Získání Channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. Vyplňte Telegram kanál v ImgBed
+### 5. Vyplňte Telegram kanál v ImgHost
 
 Vraťte se do konfiguračního dialogu a vyplňte:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

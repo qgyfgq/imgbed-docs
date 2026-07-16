@@ -1,6 +1,6 @@
 # Mengunggah Berkas dengan API Token
 
-Unggahan melalui API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga. Anda tidak perlu membuka antarmuka web ImgBed; cukup berikan alamat situs, API Token, jalur berkas lokal, dan kanal unggahan yang nyata. Setelah unggahan berhasil, skrip akan mengembalikan tautan berkas.
+Unggahan melalui API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga. Anda tidak perlu membuka antarmuka web ImgHost; cukup berikan alamat situs, API Token, jalur berkas lokal, dan kanal unggahan yang nyata. Setelah unggahan berhasil, skrip akan mengembalikan tautan berkas.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -16,7 +16,7 @@ Saat membuat atau mengedit API Token, pastikan izin unggah aktif dan kanal ungga
 
 ## Mengunduh Skrip Unggahan
 
-Dokumentasi ImgBed menyediakan dua skrip Node.js:
+Dokumentasi ImgHost menyediakan dua skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat situs ImgBed, misalnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
 | `--file <path>` | Ya | Jalur berkas lokal |
 | `--channel <key>` | Ya | Kanal unggahan nyata |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat situs ImgBed |
+| `--base-url <url>` | Ya | Alamat situs ImgHost |
 | `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
 | `--file <path>` | Ya | Jalur berkas lokal |
 | `--channel <key>` | Ya | Kanal unggahan nyata |

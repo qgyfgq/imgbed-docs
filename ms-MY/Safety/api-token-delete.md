@@ -1,6 +1,6 @@
 # Padam fail dengan API Token
 
-Skrip padam melalui API Token sesuai untuk skrip, automasi dan aplikasi pihak ketiga. Anda tidak perlu membuka panel pentadbir; cukup berikan alamat laman, Token dan ID fail yang jelas untuk memadam satu atau beberapa fail dalam ImgBed.
+Skrip padam melalui API Token sesuai untuk skrip, automasi dan aplikasi pihak ketiga. Anda tidak perlu membuka panel pentadbir; cukup berikan alamat laman, Token dan ID fail yang jelas untuk memadam satu atau beberapa fail dalam ImgHost.
 
 Pemadaman ialah operasi tulis. Selepas arahan dijalankan, fail benar-benar akan dipadam. Sebaiknya semak dahulu `fileId` yang hendak dipadam dengan `imgbed-token-list.mjs`, kemudian serahkan ID tersebut kepada skrip padam.
 
@@ -63,7 +63,7 @@ Selepas pemadaman berjaya, pelayan turut mengurus indeks fail, statistik direkto
 
 | Parameter | Wajib | Maksud |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat laman ImgBed, contohnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | Alamat laman ImgHost, contohnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token; boleh diganti dengan `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Ya | ID fail yang hendak dipadam; boleh dihantar berulang kali |
 | `--strictness <strict\|soft>` | Tidak | Tahap ketegasan pemadaman; lalai `strict` |
@@ -80,10 +80,10 @@ Skrip ini hanya memadam fail yang dihantar secara jelas melalui `--file-id`. Ia 
 
 | Mod | Maksud |
 | --- | --- |
-| `strict` | Mod lalai. Jika pemadaman pada storan jauh gagal, rekod ImgBed akan dikekalkan supaya mudah dicuba semula atau disiasat. |
-| `soft` | Jika pemadaman pada storan jauh gagal, rekod ImgBed tetap dibersihkan dan keputusan akan memulangkan amaran. |
+| `strict` | Mod lalai. Jika pemadaman pada storan jauh gagal, rekod ImgHost akan dikekalkan supaya mudah dicuba semula atau disiasat. |
+| `soft` | Jika pemadaman pada storan jauh gagal, rekod ImgHost tetap dibersihkan dan keputusan akan memulangkan amaran. |
 
-Jika anda mahu pemadaman hanya dianggap berjaya apabila fail jauh turut dipadam, gunakan `strict` yang menjadi lalai. Jika platform jauh tertentu tidak lagi boleh memadam fail, tetapi anda hanya mahu membersihkan rekod ImgBed, gunakan `soft`.
+Jika anda mahu pemadaman hanya dianggap berjaya apabila fail jauh turut dipadam, gunakan `strict` yang menjadi lalai. Jika platform jauh tertentu tidak lagi boleh memadam fail, tetapi anda hanya mahu membersihkan rekod ImgHost, gunakan `soft`.
 
 ## Contoh penggunaan
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Bersihkan rekod ImgBed walaupun pemadaman jauh gagal:
+Bersihkan rekod ImgHost walaupun pemadaman jauh gagal:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Semak fileId sebelum memadam
 
-Skrip padam memerlukan ID fail ImgBed. Anda boleh menggunakan skrip senarai untuk melihat fail dalam direktori terlebih dahulu:
+Skrip padam memerlukan ID fail ImgHost. Anda boleh menggunakan skrip senarai untuk melihat fail dalam direktori terlebih dahulu:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Nilai `name` dalam keputusan biasanya ialah `fileId` yang boleh diserahkan kepad
 
 ### Mengapa pemadaman gagal tetapi fail masih ada dalam senarai?
 
-Jika menggunakan `strict` yang menjadi lalai, rekod ImgBed akan dikekalkan apabila pemadaman storan jauh gagal. Ini mengelakkan keadaan indeks tempatan sudah dipadam tetapi fail jauh masih wujud. Selepas pasti hanya rekod ImgBed perlu dibersihkan, cuba semula `fileId` yang sama dengan `soft`.
+Jika menggunakan `strict` yang menjadi lalai, rekod ImgHost akan dikekalkan apabila pemadaman storan jauh gagal. Ini mengelakkan keadaan indeks tempatan sudah dipadam tetapi fail jauh masih wujud. Selepas pasti hanya rekod ImgHost perlu dibersihkan, cuba semula `fileId` yang sama dengan `soft`.
 
 ### Mengapa Keputusan Mengandungi Amaran?
 

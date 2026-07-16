@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox حساب | ننوځئ او اپ authorize کولو لپاره |
 | Dropbox اپ | د `App Key` او `App Secret` جوړولو لپاره |
-| ستاسو ImgBed ډومېن | د OAuth ریډایرکټ URI لپاره |
+| ستاسو ImgHost ډومېن | د OAuth ریډایرکټ URI لپاره |
 | کافي Dropbox زېرمه | د فایلونو اصلي زېرمه ځای |
 
 ## د تنظیم پړاوونه
@@ -33,8 +33,8 @@ App folder
 
 | لاسرسی Type | سپارښتنه |
 | --- | --- |
-| `App folder` | سپارښتنه کېږي. دا د ImgBed د فایل ساتلو له طریقې سره ښه برابر دی. |
-| `Full Dropbox` | نه سپارښتل کېږي. ImgBed د ټول حساب لاسرسی ته اړتیا نه لري. |
+| `App folder` | سپارښتنه کېږي. دا د ImgHost د فایل ساتلو له طریقې سره ښه برابر دی. |
+| `Full Dropbox` | نه سپارښتل کېږي. ImgHost د ټول حساب لاسرسی ته اړتیا نه لري. |
 
 ![Create Dropbox اپ](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 له Dropbox اپ page څخه دا دوه ارزښتونه وساتئ:
 
-| د Dropbox فیلډ | د ImgBed فیلډ |
+| د Dropbox فیلډ | د ImgHost فیلډ |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 په د اپلوډ تنظیمات کې `Dropbox` وټاکئ او دا fields ډک کړئ:
 
-| د ImgBed فیلډ | څه ولیکئ |
+| د ImgHost فیلډ | څه ولیکئ |
 | --- | --- |
 | د چینل نوم | داسې نوم چې وپېژندل شي، لکه `Main Dropbox` |
 | اپ Key | د Dropbox `App key` |
@@ -99,12 +99,12 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ### 6 ګام: Refresh ټوکن واخلئ
 
-1. په ImgBed کې `Get Token` کلیک کړئ.
+1. په ImgHost کې `Get Token` کلیک کړئ.
 2. هغه Dropbox حساب ته ننوځئ وکړئ چې نښلول یې غواړئ.
 3. د authorization غوښتنه اپrove کړئ.
 4. کالبک page به `Refresh Token` ښکاره کړي.
 5. هغه کاپي کړئ.
-6. بېرته ImgBed ته راشئ او د `Refresh Token` فیلډ کې یې پیسټ کړئ.
+6. بېرته ImgHost ته راشئ او د `Refresh Token` فیلډ کې یې پیسټ کړئ.
 
 ![کاپي ټوکن](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 | ستونزه | حل |
 | --- | --- |
-| ImgBed وايي تنظیمات نیمګړی دی | وګورئ چې `App Key`، `App Secret` او `Refresh Token` ټول ډک دي. |
+| ImgHost وايي تنظیمات نیمګړی دی | وګورئ چې `App Key`، `App Secret` او `Refresh Token` ټول ډک دي. |
 | Authorization بریالی کېږي خو `Refresh Token` نه ښکاري | `Get Token` بیا کلیک کړئ او ډاډه شئ چې offline authorization flow کارېږي. |
 | اپلوډ د `required scope 'files.content.write'` سره ناکامېږي | `files.content.write` فعال کړئ، `Submit` کلیک کړئ، بیا نوی `Refresh Token` واخلئ. |
 | Callback ناکامېږي | ډاډ ترلاسه کړئ چې ریډایرکټ URI دا دی: `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## ماخذونه

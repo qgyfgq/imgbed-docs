@@ -28,7 +28,7 @@ El flujo más reciente de geolocalización IP admite varias fuentes en lugar de 
 
 Rellene solo los servicios que necesite. No tiene que configurar todos los campos.
 
-Si no se proporciona ninguna clave, ImgBed seguirá intentando usar fuentes gratuitas integradas, pero la estabilidad, la compatibilidad lingüística y la precisión pueden ser menores que las de un servicio configurado por usted.
+Si no se proporciona ninguna clave, ImgHost seguirá intentando usar fuentes gratuitas integradas, pero la estabilidad, la compatibilidad lingüística y la precisión pueden ser menores que las de un servicio configurado por usted.
 
 ## Opciones recomendadas
 
@@ -57,9 +57,9 @@ Busque el Account ID en el panel de MaxMind y genere una License Key desde la p�
 
 ![Configuración de clave MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Después de generar la License Key, pegue el Account ID y la License Key en ImgBed y guarde.
+Después de generar la License Key, pegue el Account ID y la License Key en ImgHost y guarde.
 
-El plan gratuito de MaxMind es adecuado para uso diario, pero tiene límites de solicitudes. Si se supera la cuota, ImgBed seguirá probando otras fuentes disponibles.
+El plan gratuito de MaxMind es adecuado para uso diario, pero tiene límites de solicitudes. Si se supera la cuota, ImgHost seguirá probando otras fuentes disponibles.
 
 ## Configurar ipapi
 
@@ -69,9 +69,9 @@ Abra la consola de ipapi y copie la API Key que se muestra allí.
 
 ![Configuración de ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Péguela en el campo `ipapi Key` de ImgBed y guarde.
+Péguela en el campo `ipapi Key` de ImgHost y guarde.
 
-ipapi admite geolocalización IP multilingüe y es útil cuando desea mostrar direcciones en un idioma seleccionado. Su plan gratuito también tiene límites de solicitudes. Si se agota la cuota, ImgBed seguirá probando otras fuentes disponibles.
+ipapi admite geolocalización IP multilingüe y es útil cuando desea mostrar direcciones en un idioma seleccionado. Su plan gratuito también tiene límites de solicitudes. Si se agota la cuota, ImgHost seguirá probando otras fuentes disponibles.
 
 ## Configurar Tencent Map Key
 

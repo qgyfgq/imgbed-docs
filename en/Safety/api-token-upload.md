@@ -1,6 +1,6 @@
 # API Token File Uploads
 
-API Token uploads are intended for scripts, automation jobs, and third-party programs. You do not need to open the web UI. As long as you provide the site URL, token, local file path, and a real upload channel, the file can be uploaded to ImgBed and the response will include the file URL.
+API Token uploads are intended for scripts, automation jobs, and third-party programs. You do not need to open the web UI. As long as you provide the site URL, token, local file path, and a real upload channel, the file can be uploaded to ImgHost and the response will include the file URL.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL, for example `https://image.ai6.me`. |
+| `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
 | `--file <path>` | Yes | Local file path. |
 | `--channel <key>` | Yes | Upload channel. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL. |
+| `--base-url <url>` | Yes | ImgHost site URL. |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
 | `--file <path>` | Yes | Local file path. |
 | `--channel <key>` | Yes | Upload channel. |

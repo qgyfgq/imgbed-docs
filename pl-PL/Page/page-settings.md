@@ -8,8 +8,8 @@ Ustawienia strony kontrolują wygląd witryny, domyślne ustawienia strony przes
 | --- | --- |
 | Tytuł strony | Tytuł widoczny na karcie przeglądarki. |
 | Ikona strony | Mała ikona widoczna na karcie przeglądarki. |
-| Nazwa ImgBed | Nazwa widoczna na stronach interfejsu publicznego. |
-| Logo ImgBed | Obraz logo widoczny na stronach interfejsu publicznego. |
+| Nazwa ImgHost | Nazwa widoczna na stronach interfejsu publicznego. |
+| Logo ImgHost | Obraz logo widoczny na stronach interfejsu publicznego. |
 | Link logo | URL otwierany po kliknięciu logo lub avatara. |
 | Interwał zmiany tła | Czas rotacji wielu teł w milisekundach. `60000` oznacza 60 sekund. |
 | Przezroczystość tła | Przezroczystość obrazu tła od `0` do `1`. Niższe wartości są jaśniejsze. |
@@ -63,5 +63,5 @@ Tło administratora obsługuje URL-e obrazów. Wiele URL-i można oddzielić ang
 | --- | --- |
 | Domyślnie | Prefiks losowy oparty na czasie + oryginalna nazwa pliku, np. `1760000000000_cat.png`. |
 | Tylko prefiks | Prefiks losowy oparty na czasie i rozszerzenie, np. `1760000000000.png`. |
-| Tylko oryginalna nazwa | Zachowuje oryginalną nazwę pliku, np. `cat.png`. Przy duplikatach ImgBed dodaje `(1)`, `(2)` itd. |
+| Tylko oryginalna nazwa | Zachowuje oryginalną nazwę pliku, np. `cat.png`. Przy duplikatach ImgHost dodaje `(1)`, `(2)` itd. |
 | Krótki link | Używa 8-znakowego krótkiego ID i rozszerzenia, np. `a1b2c3d4.png`. |

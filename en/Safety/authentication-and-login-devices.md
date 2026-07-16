@@ -1,6 +1,6 @@
 # Authentication and Login Device Management
 
-`Authentication Management` and `Login Device Management` protect your ImgBed admin panel, public upload entry, and WebDAV access.
+`Authentication Management` and `Login Device Management` protect your ImgHost admin panel, public upload entry, and WebDAV access.
 
 Use this page to set access credentials, review signed-in devices, and revoke old sessions when needed.
 
@@ -42,7 +42,7 @@ When an upload password is configured:
 
 - Visitors must enter the password before using the upload page.
 - Uploading is available only after the password is accepted.
-- If user-side device sessions are enabled, ImgBed records that user-side device.
+- If user-side device sessions are enabled, ImgHost records that user-side device.
 
 Changing the upload password invalidates old user-side sessions. Visitors need to enter the new password again.
 

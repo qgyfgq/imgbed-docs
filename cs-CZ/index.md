@@ -1,20 +1,20 @@
 ---
-description: "Česká dokumentace ImgBed pro hostování obrázků a souborů na Cloudflare, nastavení kanálů pro nahrávání, tokeny API, veřejnou galerii, API náhodných obrázků, zálohy, OCR a blog."
+description: "Česká dokumentace ImgHost pro hostování obrázků a souborů na Cloudflare, nastavení kanálů pro nahrávání, tokeny API, veřejnou galerii, API náhodných obrázků, zálohy, OCR a blog."
 ---
 
-# ImgBed
+# ImgHost
 
 Univerzální nástroj pro osobní hosting obsahu postavený na ekosystému Cloudflare.
 
-ImgBed začal u nahrávání obrázků a správy odkazů. Dnes z něj vyrostlo kompletní řešení pro osobní hosting obsahu. Můžete ho použít k tomu, abyste:
+ImgHost začal u nahrávání obrázků a správy odkazů. Dnes z něj vyrostlo kompletní řešení pro osobní hosting obsahu. Můžete ho použít k tomu, abyste:
 
 - Nahrávali soubory do libovolného preferovaného úložného kanálu
 - Veřejně sdíleli obrázky a soubory v jakémkoli formátu
 - Během minuty rychle spustili osobní blog
 - Jedním kliknutím ukládali soubory z magnet odkazů
-- Připojili se k federaci uzlů ImgBed a sdíleli otevřené indexy souborů
+- Připojili se k federaci uzlů ImgHost a sdíleli otevřené indexy souborů
 
-Naším původním záměrem je, aby každý mohl mít vlastní web pro hostování obrázků a sdílení souborů. Nezáleží na tom, z jaké země pocházíte ani jakým jazykem mluvíte. Ať už si chcete jen ukládat obrázky, třídit alba, sdílet soubory s přáteli, nebo vybudovat stabilní prostor pro blog, vlastní tvorbu či veřejné zdroje, ImgBed se snaží co nejvíce snížit vstupní bariéru a udělat celý proces svobodnější, srozumitelnější a snazší na začátek.
+Naším původním záměrem je, aby každý mohl mít vlastní web pro hostování obrázků a sdílení souborů. Nezáleží na tom, z jaké země pocházíte ani jakým jazykem mluvíte. Ať už si chcete jen ukládat obrázky, třídit alba, sdílet soubory s přáteli, nebo vybudovat stabilní prostor pro blog, vlastní tvorbu či veřejné zdroje, ImgHost se snaží co nejvíce snížit vstupní bariéru a udělat celý proces svobodnější, srozumitelnější a snazší na začátek.
 
 ## Silné funkce připravené k použití
 
@@ -23,11 +23,11 @@ Naším původním záměrem je, aby každý mohl mít vlastní web pro hostová
 - 🧩 Plně modulární návrh: každou funkci zapnete jen tehdy, když ji potřebujete, bez plýtvání prostředky
 - 🔐 Podporuje API Token, režimy přístupu a pravidla seznamů pro přesnou správu oprávnění k obsahu
 
-Projekt se stále zlepšuje. Naše možnosti jsou omezené, ale uděláme maximum pro to, aby každá funkce byla jasná, stabilní a příjemná k použití. Pokud vám ImgBed pomůže snadněji získat vlastní hosting obrázků, blog nebo prostor pro sdílení souborů, budeme velmi rádi.
+Projekt se stále zlepšuje. Naše možnosti jsou omezené, ale uděláme maximum pro to, aby každá funkce byla jasná, stabilní a příjemná k použití. Pokud vám ImgHost pomůže snadněji získat vlastní hosting obrázků, blog nebo prostor pro sdílení souborů, budeme velmi rádi.
 
 ## Začněte používat
 
-Nasaďte ImgBed přes <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Nasadit ImgBed"><img src="../image/部署按钮.png" alt="Nasadit ImgBed"></a> a rychle získejte vlastní službu pro hostování obrázků a souborů.
+Nasaďte ImgHost přes <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Nasadit ImgHost"><img src="../image/部署按钮.png" alt="Nasadit ImgHost"></a> a rychle získejte vlastní službu pro hostování obrázků a souborů.
 
 ## Poděkování open source
 
@@ -48,5 +48,5 @@ Tento projekt vznikl dalším vývojem open-source projektů [CloudFlare-ImgBed]
 
 Pokud při používání tohoto projektu narazíte na problém, ozvěte se prostřednictvím jeho GitHub Issues nebo kontaktů uvedených níže. Nekontaktujte prosím původní autory ani správce výše uvedených open-source projektů, abyste je zbytečně nezatěžovali; tyto problémy řeší správci tohoto projektu.
 
-- 🐛 Chyby nebo návrhy funkcí: pošlete do [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
+- 🐛 Chyby nebo návrhy funkcí: pošlete do [GitHub Issues](https://github.com/axibayuit-a11y/imghost-docs/issues)
 - 📧 Jiný kontakt: axibayuit@gmail.com

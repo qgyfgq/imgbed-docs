@@ -7,7 +7,7 @@ Sie benötigen nur drei Dinge:
 | Voraussetzung | Zweck |
 | --- | --- |
 | GitLab-Konto | Zum Erstellen eines Access Tokens und als Besitzer des Projekts. |
-| GitLab Personal Access Token | Damit ImgBed auf die GitLab API zugreifen, Projekte erstellen und Dateien in Generic Packages hochladen kann. |
+| GitLab Personal Access Token | Damit ImgHost auf die GitLab API zugreifen, Projekte erstellen und Dateien in Generic Packages hochladen kann. |
 | Projektname | Sie können nur den Projektnamen eintragen, z. B. `imgbed`. |
 
 ## Einrichtung
@@ -26,7 +26,7 @@ Sie benötigen nur drei Dinge:
 
 ![Token-Berechtigungen auswählen](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## Schritt 2: GitLab-Packages-Kanal in ImgBed ausfüllen
+## Schritt 2: GitLab-Packages-Kanal in ImgHost ausfüllen
 
 Nachdem Sie in den Upload-Einstellungen `GitLab Packages` gewählt haben, füllen Sie diese Felder aus:
 
@@ -48,9 +48,9 @@ Das System übernimmt dann diese Details:
 
 | Systemverhalten | Beschreibung |
 | --- | --- |
-| Kurzer Projektname | ImgBed erkennt das aktuelle GitLab-Konto und erweitert den Wert zu einem vollständigen Projektpfad. |
-| Vollständiger Projektpfad | ImgBed verwendet `username/project` genau so, wie Sie es eingetragen haben. |
-| Projektprüfung | Wenn Sie den Pfad Ihres aktuellen persönlichen Kontos nutzen, erstellt ImgBed das Projekt automatisch, falls es noch nicht existiert. Wenn Sie manuell einen vollständigen Pfad einträgst, wird dieser direkt verwendet. |
+| Kurzer Projektname | ImgHost erkennt das aktuelle GitLab-Konto und erweitert den Wert zu einem vollständigen Projektpfad. |
+| Vollständiger Projektpfad | ImgHost verwendet `username/project` genau so, wie Sie es eingetragen haben. |
+| Projektprüfung | Wenn Sie den Pfad Ihres aktuellen persönlichen Kontos nutzen, erstellt ImgHost das Projekt automatisch, falls es noch nicht existiert. Wenn Sie manuell einen vollständigen Pfad einträgst, wird dieser direkt verwendet. |
 | Öffentlich/privat | Die Projektsichtbarkeit wird entsprechend dem aktuellen Schalter synchronisiert. |
 
 ## Kurzcheck
@@ -59,9 +59,9 @@ Das System übernimmt dann diese Details:
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

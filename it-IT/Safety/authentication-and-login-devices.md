@@ -1,6 +1,6 @@
 # Autenticazione e gestione dei dispositivi di accesso
 
-`Gestione autenticazione` e `Gestione dispositivi di accesso` proteggono il pannello di amministrazione di ImgBed, l'area pubblica di caricamento e l'accesso WebDAV.
+`Gestione autenticazione` e `Gestione dispositivi di accesso` proteggono il pannello di amministrazione di ImgHost, l'area pubblica di caricamento e l'accesso WebDAV.
 
 Usa questa pagina per impostare le credenziali, controllare i dispositivi con sessione attiva e revocare vecchie sessioni quando serve.
 
@@ -42,7 +42,7 @@ Quando la parola d\'ordine di caricamento è configurata:
 
 - I visitatori devono inserirla prima di usare la pagina di caricamento.
 - Il caricamento è disponibile solo dopo parola d\'ordine accettata.
-- Se le sessioni dispositivo lato utente sono abilitate, ImgBed registra quel dispositivo.
+- Se le sessioni dispositivo lato utente sono abilitate, ImgHost registra quel dispositivo.
 
 Se cambi la parola d\'ordine di caricamento, le vecchie sessioni lato utente vengono invalidate. I visitatori dovranno inserire la nuova parola d\'ordine.
 

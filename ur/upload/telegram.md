@@ -38,7 +38,7 @@
 5. prompts کے مطابق bot username درج کریں۔ username عموماً `bot` پر ختم ہونا چاہیے۔
 6. bot بننے کے بعد `@BotFather` ایک bot token واپس دے گا۔
 
-یہی token ImgBed میں `Bot Token` کے طور پر درج کرنا ہے۔
+یہی token ImgHost میں `Bot Token` کے طور پر درج کرنا ہے۔
 
 ![Save the bot token](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Public اور private دونوں channels استعمال کیے جا سکتے ہ
 4. message picker میں target channel منتخب کریں اور اسے `@userinfobot` کو بھیجیں۔
 5. جب `@userinfobot` نتیجہ دے، تو `Id: -100...` کے طور پر دکھایا گیا number کاپی کریں۔
 
-`-100` سے شروع ہونے والا number وہی `Session ID (Chat ID)` ہے جو ImgBed کو چاہیے۔
+`-100` سے شروع ہونے والا number وہی `Session ID (Chat ID)` ہے جو ImgHost کو چاہیے۔
 
 ![channel ID حاصل کریں](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed میں Telegram Channel بھریں
+### 5. ImgHost میں Telegram Channel بھریں
 
 channel configuration dialog پر واپس جائیں اور فیلڈز یوں بھریں:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

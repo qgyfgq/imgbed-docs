@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
-| `--base-url <url>` | ใช่ | URL ของไซต์ ImgBed เช่น `https://image.ai6.me` |
+| `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost เช่น `https://image.ai6.me` |
 | `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
 | `--retries <n>` | ไม่ | จำนวนครั้งที่ลองใหม่เมื่อเกิดความล้มเหลวชั่วคราว ค่าเริ่มต้นคือ `3` |
 | `--timeout-ms <n>` | ไม่ | เวลาหมดอายุคำขอ ค่าเริ่มต้นคือ `180000` |

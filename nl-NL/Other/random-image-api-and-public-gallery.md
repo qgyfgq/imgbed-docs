@@ -64,7 +64,7 @@ Als na filtering geen bestand overblijft, geeft de API geen passend resultaat te
 
 De API voor willekeurige afbeeldingen slaat kandidaatpools per map in de cache op om sneller te werken.
 
-Wanneer bestanden veranderen, werkt ImgBed de cacheversie van de map bij. Latere verzoeken bouwen de kandidaatpool opnieuw op. Lege mappen worden kort in de cache bewaard om herhaalde aanvragen te voorkomen.
+Wanneer bestanden veranderen, werkt ImgHost de cacheversie van de map bij. Latere verzoeken bouwen de kandidaatpool opnieuw op. Lege mappen worden kort in de cache bewaard om herhaalde aanvragen te voorkomen.
 
 ## Openbare galerie
 

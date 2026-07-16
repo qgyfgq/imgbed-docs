@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Cloudflare API 認証情報を設定すると、ファイル変更後に ImgBed が Cloudflare CDN キャッシュを削除できます。
+Cloudflare API 認証情報を設定すると、ファイル変更後に ImgHost が Cloudflare CDN キャッシュを削除できます。
 
 ![Cloudflare API Token の設定](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare は公開画像 URL をキャッシュすることがあります。
 
 キャッシュにより画像配信は速くなりますが、ファイルを削除、ブロック、置換、移動した後もしばらく古い内容が見える場合があります。
 
-Cloudflare API 認証情報を設定すると、これらの操作が完了したときに ImgBed は関連する Cloudflare キャッシュの削除を試みます。
+Cloudflare API 認証情報を設定すると、これらの操作が完了したときに ImgHost は関連する Cloudflare キャッシュの削除を試みます。
 
 これは次のような場合に役立ちます。
 
@@ -36,18 +36,18 @@ Cloudflare API 認証情報を設定すると、これらの操作が完了し�
 
 ## 空のままにした場合
 
-この設定がなくても ImgBed は通常どおり動作します。
+この設定がなくても ImgHost は通常どおり動作します。
 
-違いは、ImgBed が Cloudflare CDN キャッシュを能動的に削除しないことです。訪問者には、Cloudflare キャッシュが自然に期限切れになるまで古い内容が見える場合があります。
+違いは、ImgHost が Cloudflare CDN キャッシュを能動的に削除しないことです。訪問者には、Cloudflare キャッシュが自然に期限切れになるまで古い内容が見える場合があります。
 
 ## Zone ID の確認方法
 
-Zone ID は、ImgBed ドメインで使用しているサイトの Cloudflare Zone ID です。
+Zone ID は、ImgHost ドメインで使用しているサイトの Cloudflare Zone ID です。
 
 1. Cloudflare ダッシュボードにログインします。
-2. ImgBed ドメインを含むサイトを開きます。
+2. ImgHost ドメインを含むサイトを開きます。
 3. サイト概要ページで `Zone ID` を探します。
-4. ImgBed の `Zone ID` フィールドへコピーします。
+4. ImgHost の `Zone ID` フィールドへコピーします。
 
 これはサイトの Zone ID であり、account ID ではありません。
 
@@ -66,7 +66,7 @@ Cloudflare Global API Key を入力します。
 3. API Tokens ページへ移動します。
 4. `Global API Key` を探します。
 5. 表示してコピーします。
-6. ImgBed の `API Key` フィールドへ貼り付けます。
+6. ImgHost の `API Key` フィールドへ貼り付けます。
 
 ![Global API Key を表示](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ Cloudflare Global API Key を入力します。
 
 通常は影響しません。
 
-認証情報が間違っている場合、ImgBed は Cloudflare キャッシュの削除に失敗するだけです。アップロードや通常のファイルアクセスは引き続き動作するはずです。
+認証情報が間違っている場合、ImgHost は Cloudflare キャッシュの削除に失敗するだけです。アップロードや通常のファイルアクセスは引き続き動作するはずです。
 
 ### 削除した画像をまだ開けるのはなぜですか？
 
 最も一般的な原因は、Cloudflare が古いファイルをまだキャッシュしていることです。
 
-正しい Cloudflare API 認証情報が設定されていれば、ImgBed はファイル削除時に関連 URL のキャッシュを削除します。
+正しい Cloudflare API 認証情報が設定されていれば、ImgHost はファイル削除時に関連 URL のキャッシュを削除します。
 
 ### ファイルを置換した後も古い画像が見えるのはなぜですか？
 
 これも通常は CDN キャッシュが原因です。
 
-この設定を行うと、同じ名前のファイルが上書きされたときに、ImgBed は古い URL キャッシュの削除を試みます。
+この設定を行うと、同じ名前のファイルが上書きされたときに、ImgHost は古い URL キャッシュの削除を試みます。

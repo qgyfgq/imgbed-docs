@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox অ্যাকাউন্ট | সাইন ইন এবং অ্যাপ অনুমোদনের জন্য। |
 | Dropbox অ্যাপ | `App Key` এবং `App Secret` তৈরি করতে। |
-| আপনার ImgBed ডোমেইন | OAuth redirect URI হিসেবে ব্যবহার করতে। |
+| আপনার ImgHost ডোমেইন | OAuth redirect URI হিসেবে ব্যবহার করতে। |
 | উপলব্ধ Dropbox সংরক্ষণ | প্রকৃত ফাইল সংরক্ষণস্থল হিসেবে ব্যবহার হবে। |
 
 ## সেটআপ ধাপ
@@ -33,8 +33,8 @@ App folder
 
 | Access ধরন | সুপারিশ |
 | --- | --- |
-| `App folder` | প্রস্তাবিত। ImgBed যেভাবে ফাইল সংরক্ষণ করে, তার সঙ্গে মেলে। |
-| `Full Dropbox` | প্রস্তাবিত নয়। ImgBed-এর পুরো অ্যাকাউন্টে access দরকার নেই। |
+| `App folder` | প্রস্তাবিত। ImgHost যেভাবে ফাইল সংরক্ষণ করে, তার সঙ্গে মেলে। |
+| `Full Dropbox` | প্রস্তাবিত নয়। ImgHost-এর পুরো অ্যাকাউন্টে access দরকার নেই। |
 
 ![Dropbox অ্যাপ তৈরি করা](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ scopes নির্বাচন করার পর পৃষ্ঠা-এর �
 
 Dropbox অ্যাপ পৃষ্ঠা থেকে এই দুটি মান সংরক্ষণ করুন:
 
-| Dropbox ক্ষেত্র | ImgBed ক্ষেত্র |
+| Dropbox ক্ষেত্র | ImgHost ক্ষেত্র |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Dropbox অ্যাপ পৃষ্ঠা থেকে এই দুটি ম�
 
 আপলোড সেটিংস-এ `Dropbox` নির্বাচন করে পূরণ করুন:
 
-| ImgBed ক্ষেত্র | কী দেবেন |
+| ImgHost ক্ষেত্র | কী দেবেন |
 | --- | --- |
 | চ্যানেল নাম | সহজে চেনা যায় এমন নাম, যেমন `Main Dropbox`। |
 | App Key | Dropbox `App key`। |
@@ -99,12 +99,12 @@ Dropbox অ্যাপ পৃষ্ঠা থেকে এই দুটি ম�
 
 ### ধাপ 6: Refresh Token নিন
 
-1. ImgBed-এ `Get Token` ক্লিক করুন।
+1. ImgHost-এ `Get Token` ক্লিক করুন।
 2. যে Dropbox অ্যাকাউন্ট যুক্ত করতে চান সেটিতে সাইন ইন করুন।
 3. অনুমোদন বার্তা অনুমোদন করুন।
 4. কলব্যাক পৃষ্ঠা একটি `Refresh Token` দেখাবে।
 5. সেটি কপি করুন।
-6. ImgBed-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
+6. ImgHost-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
 
 ![টোকেন কপি করা](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Quota limit চালু থাকলে quota query ক্লিক করু�
 
 | সমস্যা | সমাধান |
 | --- | --- |
-| ImgBed কনফিগারেশন incomplete বলছে | `App Key`, `App Secret` এবং `Refresh Token` সব পূরণ করা আছে কি না পরীক্ষা করুন। |
+| ImgHost কনফিগারেশন incomplete বলছে | `App Key`, `App Secret` এবং `Refresh Token` সব পূরণ করা আছে কি না পরীক্ষা করুন। |
 | অনুমোদন সফল কিন্তু `Refresh Token` দেখা যাচ্ছে না | আবার `Get Token` ক্লিক করুন এবং offline অনুমোদন প্রবাহ ব্যবহৃত হচ্ছে কি না নিশ্চিত করুন। |
 | upload `required scope 'files.content.write'` দিয়ে ব্যর্থ হচ্ছে | `files.content.write` চালু করুন, `Submit` ক্লিক করুন, তারপর নতুন `Refresh Token` নিন। |
 | কলব্যাক ব্যর্থ | Redirect URI `https://your-domain.com/api/oauth/dropbox/callback` কি না নিশ্চিত করুন। |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## তথ্যসূত্র

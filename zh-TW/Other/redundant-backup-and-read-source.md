@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 此入口最適合為某個資料夾或所有檔案批次新增備份。
 
-備份管道可以手動選擇，也可以選擇自動切換，讓 ImgBed 尋找合適的備份管道。
+備份管道可以手動選擇，也可以選擇自動切換，讓 ImgHost 尋找合適的備份管道。
 
 ## 從檔案詳情備份
 
@@ -90,4 +90,4 @@ System Settings -> Other Settings -> Redundant Backup
 
 ## 刪除檔案時會發生什麼
 
-刪除檔案時，ImgBed 會同時刪除主檔案和備份檔案。
+刪除檔案時，ImgHost 會同時刪除主檔案和備份檔案。

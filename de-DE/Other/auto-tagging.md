@@ -41,7 +41,7 @@ Sie können vorübergehend den öffentlichen Space verwenden, aber öffentliche 
 3. Klicken Sie oben rechts auf das Drei-Punkte-Menü.
 4. Wählen Sie `Duplicate this Space`.
 5. Behalten Sie den Standardnamen des Space bei oder wählen Sie einen eigenen Namen, zum Beispiel `wd-tagger`.
-6. Setzen Sie die Sichtbarkeit auf `Public`. Öffentliche Spaces lassen sich für ImgBed leichter aufrufen.
+6. Setzen Sie die Sichtbarkeit auf `Public`. Öffentliche Spaces lassen sich für ImgHost leichter aufrufen.
 7. Behalten Sie zunächst die kostenlose Standard-Hardware bei. Führen Sie ein Upgrade erst durch, wenn Warteschlangen deutlich erkennbar werden.
 8. Erstellen Sie den Space und warten Sie, bis der Build abgeschlossen ist.
 
@@ -51,7 +51,7 @@ Nach Abschluss des Builds öffnen Sie die Seite Ihres Space. Die URL sieht norma
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Kopieren Sie die Browser-URL und fügen Sie sie in ImgBed unter `Space URLs` ein.
+Kopieren Sie die Browser-URL und fügen Sie sie in ImgHost unter `Space URLs` ein.
 
 ## Mehrere Space URLs eintragen
 
@@ -65,7 +65,7 @@ Beispiele:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL einer kopierten Space-Seite. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Ihre eigene duplizierte Space-Seite. |
 
-Sie können mehrere URLs eintragen. ImgBed nutzt mehrere Spaces gemeinsam, was die Geschwindigkeit verbessern kann.
+Sie können mehrere URLs eintragen. ImgHost nutzt mehrere Spaces gemeinsam, was die Geschwindigkeit verbessern kann.
 
 Wenn ein Space vorübergehend nicht verfügbar ist, können die anderen mit der Verarbeitung fortfahren.
 
@@ -103,7 +103,7 @@ Wenn es zu wenige Tags gibt, senken Sie den allgemeinen Schwellenwert leicht.
 3. Klicken Sie auf Tagging starten.
 4. Warten Sie, bis der Fortschritt abgeschlossen ist.
 
-Wenn der Zielordner leer ist, verarbeitet ImgBed alle Ordner.
+Wenn der Zielordner leer ist, verarbeitet ImgHost alle Ordner.
 
 Stapel-Tagging eignet sich besonders für alte Bilder. Für neue Bilder aktivieren Sie automatisches Tagging beim Hochladen, damit Sie es nicht jedes Mal manuell ausführen müssen.
 
@@ -121,19 +121,19 @@ Automatisches Tagging verarbeitet hauptsächlich Bilddateien.
 
 Bilder, die bereits vollständige Tags, Ausrichtung, Bewertung, Breite und Höhe haben, werden übersprungen, um unnötige Space-Aufrufe zu vermeiden.
 
-ImgBed ergänzt nach Möglichkeit nur fehlende Informationen. Wenn beispielsweise nur die Ausrichtung fehlt, versucht es, diese zu ergänzen, ohne den vollständigen Inhalts-Tagging-Ablauf aufzurufen.
+ImgHost ergänzt nach Möglichkeit nur fehlende Informationen. Wenn beispielsweise nur die Ausrichtung fehlt, versucht es, diese zu ergänzen, ohne den vollständigen Inhalts-Tagging-Ablauf aufzurufen.
 
 ## FAQ
 
 ### Warum sollte ich meinen eigenen Space duplizieren?
 
-Öffentliche Spaces werden von vielen Nutzern geteilt. Ihr eigener duplizierter Space wird hauptsächlich von Ihrer ImgBed-Seite verwendet und ist daher normalerweise schneller und zuverlässiger.
+Öffentliche Spaces werden von vielen Nutzern geteilt. Ihr eigener duplizierter Space wird hauptsächlich von Ihrer ImgHost-Seite verwendet und ist daher normalerweise schneller und zuverlässiger.
 
 ### Der Space startet immer wieder
 
 Nach der ersten Erstellung oder nach einer langen Leerlaufzeit kann ein Space etwas Zeit zum Starten benötigen.
 
-Öffnen Sie zuerst die Seite Ihres Space. Sobald er ein Bild normal erkennen kann, kehren Sie zu ImgBed zurück und starten Sie das Tagging.
+Öffnen Sie zuerst die Seite Ihres Space. Sobald er ein Bild normal erkennen kann, kehren Sie zu ImgHost zurück und starten Sie das Tagging.
 
 ### Wie kopiere ich die Space-URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

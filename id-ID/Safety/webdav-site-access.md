@@ -1,9 +1,9 @@
 # Akses Situs WebDAV
-Pengaturan WebDAV di Pengaturan Keamanan membuat situs ImgBed Anda tersedia sebagai titik akhir WebDAV.
+Pengaturan WebDAV di Pengaturan Keamanan membuat situs ImgHost Anda tersedia sebagai titik akhir WebDAV.
 
-Setelah diaktifkan, Anda dapat memakai Windows, macOS, pengelola berkas seluler, atau klien apa pun yang kompatibel dengan WebDAV untuk menelusuri, mengunggah, menghapus, dan mengelola berkas ImgBed seperti folder jarak jauh.
+Setelah diaktifkan, Anda dapat memakai Windows, macOS, pengelola berkas seluler, atau klien apa pun yang kompatibel dengan WebDAV untuk menelusuri, mengunggah, menghapus, dan mengelola berkas ImgHost seperti folder jarak jauh.
 
-Ini adalah entri akses WebDAV untuk situs. Ini berbeda dari kanal penyimpanan WebDAV di Pengaturan Unggahan. Kanal unggahan menyimpan berkas di layanan WebDAV pihak ketiga. Pengaturan ini memungkinkan situs ImgBed Anda menyediakan akses WebDAV untuk klien.
+Ini adalah entri akses WebDAV untuk situs. Ini berbeda dari kanal penyimpanan WebDAV di Pengaturan Unggahan. Kanal unggahan menyimpan berkas di layanan WebDAV pihak ketiga. Pengaturan ini memungkinkan situs ImgHost Anda menyediakan akses WebDAV untuk klien.
 
 ## Di Mana Mengonfigurasinya
 
@@ -23,21 +23,21 @@ Pengaturan yang tersedia:
 
 ## Fungsi Fitur Ini
 
-Setelah WebDAV diaktifkan, ImgBed menyediakan URL akses tetap:
+Setelah WebDAV diaktifkan, ImgHost menyediakan URL akses tetap:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Gunakan URL ini untuk terhubung ke direktori berkas ImgBed Anda.
+Gunakan URL ini untuk terhubung ke direktori berkas ImgHost Anda.
 
 Contoh penggunaan yang sesuai:
 
-- Menelusuri berkas ImgBed langsung dari pengelola berkas komputer.
+- Menelusuri berkas ImgHost langsung dari pengelola berkas komputer.
 - Menyeret gambar ke folder WebDAV untuk mengunggahnya.
-- Mengatur folder ImgBed dari pengelola berkas lokal.
+- Mengatur folder ImgHost dari pengelola berkas lokal.
 - Memakai perangkat lunak yang kompatibel dengan WebDAV untuk menyinkronkan atau mengelola gambar.
-- Mengakses konten ImgBed tanpa membuka panel admin.
+- Mengakses konten ImgHost tanpa membuka panel admin.
 
 ## Pengaturan
 
@@ -63,7 +63,7 @@ Pilihan umum:
 
 | Mode | Keterangan |
 | --- | --- |
-| Pemuatan cerdas | ImgBed memilih berdasarkan konteks. Disarankan untuk penggunaan normal. |
+| Pemuatan cerdas | ImgHost memilih berdasarkan konteks. Disarankan untuk penggunaan normal. |
 | Asli | Memprioritaskan gambar asli. |
 | Gambar mini | Memprioritaskan gambar mini. Berguna untuk pratinjau cepat. |
 
@@ -73,7 +73,7 @@ Jika ragu, pertahankan `Pemuatan cerdas`.
 
 Kanal bawaan digunakan untuk unggahan WebDAV.
 
-Saat Anda menyalin berkas ke direktori WebDAV dari Windows atau klien lain, ImgBed mengunggahnya melalui kanal unggahan bawaan yang dipilih.
+Saat Anda menyalin berkas ke direktori WebDAV dari Windows atau klien lain, ImgHost mengunggahnya melalui kanal unggahan bawaan yang dipilih.
 
 Jika tidak ada kanal bawaan yang dipilih, penelusuran mungkin berjalan, tetapi unggahan dapat gagal.
 

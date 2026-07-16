@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Cette entrée est la plus adaptée pour ajouter des sauvegardes à un dossier ou à tous les fichiers en lot.
 
-Le canal de sauvegarde peut être sélectionné manuellement. Vous pouvez aussi choisir la bascule automatique et laisser ImgBed trouver un canal de sauvegarde approprié.
+Le canal de sauvegarde peut être sélectionné manuellement. Vous pouvez aussi choisir la bascule automatique et laisser ImgHost trouver un canal de sauvegarde approprié.
 
 ## Sauvegarde depuis les détails du fichier
 
@@ -90,4 +90,4 @@ Tant que le fichier de sauvegarde est disponible, les images, vidéos et liens d
 
 ## Ce qui se passe lorsqu’un fichier est supprimé
 
-Lorsqu’un fichier est supprimé, ImgBed supprime à la fois le fichier principal et le fichier de sauvegarde.
+Lorsqu’un fichier est supprimé, ImgHost supprime à la fois le fichier principal et le fichier de sauvegarde.

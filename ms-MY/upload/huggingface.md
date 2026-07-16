@@ -7,7 +7,7 @@ Anda hanya memerlukan tiga perkara:
 | Keperluan | Tujuan |
 | --- | --- |
 | Akaun Hugging Face | Digunakan untuk menjana access token dan memiliki repositori. |
-| Hugging Face User Access Token | Digunakan oleh ImgBed untuk mengakses Hugging Face API, membuat repositori dan memuat naik fail. |
+| Hugging Face User Access Token | Digunakan oleh ImgHost untuk mengakses Hugging Face API, membuat repositori dan memuat naik fail. |
 | Nama repositori | Anda boleh memasukkan nama repositori sahaja, contohnya `image`. |
 
 ## Langkah Persediaan
@@ -24,7 +24,7 @@ Anda hanya memerlukan tiga perkara:
 
 ![Buat token](../../image/upload/huggingface/创建令牌.png)
 
-## Langkah 2: Isi Saluran Hugging Face Dalam ImgBed
+## Langkah 2: Isi Saluran Hugging Face Dalam ImgHost
 
 Selepas memilih `Hugging Face` dalam Tetapan Muat Naik, isi medan seperti berikut:
 
@@ -46,9 +46,9 @@ Sistem kemudian akan mengendalikan butiran berikut:
 
 | Kelakuan Sistem | Penerangan |
 | --- | --- |
-| Nama repositori pendek | ImgBed mengenal pasti akaun Hugging Face semasa dan mengembangkan nilai kepada laluan repositori penuh. |
-| Laluan repositori penuh | ImgBed menggunakan laluan `username/repository` tepat seperti yang dimasukkan. |
-| Semakan repositori | Jika anda menggunakan laluan akaun peribadi semasa, ImgBed cuba membuat repositori apabila ia tidak wujud. Jika anda memasukkan laluan penuh secara manual, ImgBed menggunakan laluan itu secara langsung. |
+| Nama repositori pendek | ImgHost mengenal pasti akaun Hugging Face semasa dan mengembangkan nilai kepada laluan repositori penuh. |
+| Laluan repositori penuh | ImgHost menggunakan laluan `username/repository` tepat seperti yang dimasukkan. |
+| Semakan repositori | Jika anda menggunakan laluan akaun peribadi semasa, ImgHost cuba membuat repositori apabila ia tidak wujud. Jika anda memasukkan laluan penuh secara manual, ImgHost menggunakan laluan itu secara langsung. |
 | Jenis repositori | Saluran ini menggunakan repositori `dataset`. |
 | Keadaan awam/peribadi | Keterlihatan repositori diselaraskan mengikut suis semasa. |
 
@@ -58,10 +58,10 @@ Sistem kemudian akan mengendalikan butiran berikut:
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

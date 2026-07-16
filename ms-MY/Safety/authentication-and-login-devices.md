@@ -1,6 +1,6 @@
 # Pengesahan dan Pengurusan Peranti Log Masuk
 
-`Pengurusan Pengesahan` dan `Pengurusan Peranti Log Masuk` melindungi panel pentadbir ImgBed, pintu masuk muat naik awam dan akses WebDAV.
+`Pengurusan Pengesahan` dan `Pengurusan Peranti Log Masuk` melindungi panel pentadbir ImgHost, pintu masuk muat naik awam dan akses WebDAV.
 
 Gunakan halaman ini untuk menetapkan bukti kelayakan akses, menyemak peranti yang telah log masuk dan membatalkan sesi lama apabila perlu.
 
@@ -42,7 +42,7 @@ Apabila kata laluan muat naik dikonfigurasi:
 
 - Pelawat mesti memasukkan kata laluan sebelum menggunakan halaman muat naik.
 - Muat naik hanya tersedia selepas kata laluan diterima.
-- Jika sesi peranti sisi pengguna diaktifkan, ImgBed merekodkan peranti sisi pengguna tersebut.
+- Jika sesi peranti sisi pengguna diaktifkan, ImgHost merekodkan peranti sisi pengguna tersebut.
 
 Menukar kata laluan muat naik akan menjadikan sesi sisi pengguna lama tidak sah. Pelawat perlu memasukkan kata laluan baharu sekali lagi.
 

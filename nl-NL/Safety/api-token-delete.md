@@ -1,6 +1,6 @@
 # Bestanden verwijderen met API Token
 
-Verwijderen met een API Token is bedoeld voor scripts, automatisering en programma's van derden. Je hoeft het beheerpaneel niet te openen: met het siteadres, het Token en duidelijke bestands-ID's kun je één of meerdere bestanden uit ImgBed verwijderen.
+Verwijderen met een API Token is bedoeld voor scripts, automatisering en programma's van derden. Je hoeft het beheerpaneel niet te openen: met het siteadres, het Token en duidelijke bestands-ID's kun je één of meerdere bestanden uit ImgHost verwijderen.
 
 Verwijderen is een schrijfactie. Nadat de opdracht is uitgevoerd, worden de bestanden echt verwijderd. Controleer daarom eerst met `imgbed-token-list.mjs` welke `fileId` je wilt verwijderen en geef die ID's daarna door aan het verwijderingsscript.
 
@@ -63,7 +63,7 @@ Na een geslaagde verwijdering werkt de server automatisch de bestandsindex, maps
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site, bijvoorbeeld `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Ja | Bestands-ID dat je wilt verwijderen; kan meerdere keren worden opgegeven |
 | `--strictness <strict\|soft>` | Nee | Striktheid van de verwijdering; standaard `strict` |
@@ -80,10 +80,10 @@ Dit script verwijdert alleen bestanden die expliciet via `--file-id` zijn opgege
 
 | Modus | Beschrijving |
 | --- | --- |
-| `strict` | Standaardmodus. Als verwijderen op de externe opslag mislukt, blijft de ImgBed-record bestaan, zodat je later opnieuw kunt proberen of onderzoek kunt doen. |
-| `soft` | Als verwijderen op de externe opslag mislukt, wordt de ImgBed-record toch opgeschoond en komt er een waarschuwing in het resultaat. |
+| `strict` | Standaardmodus. Als verwijderen op de externe opslag mislukt, blijft de ImgHost-record bestaan, zodat je later opnieuw kunt proberen of onderzoek kunt doen. |
+| `soft` | Als verwijderen op de externe opslag mislukt, wordt de ImgHost-record toch opgeschoond en komt er een waarschuwing in het resultaat. |
 
-Wil je dat de actie alleen slaagt wanneer het externe bestand ook echt is verwijderd, gebruik dan de standaardmodus `strict`. Als een extern platform niet meer kan verwijderen maar je alleen de ImgBed-record wilt opschonen, kun je `soft` gebruiken.
+Wil je dat de actie alleen slaagt wanneer het externe bestand ook echt is verwijderd, gebruik dan de standaardmodus `strict`. Als een extern platform niet meer kan verwijderen maar je alleen de ImgHost-record wilt opschonen, kun je `soft` gebruiken.
 
 ## Voorbeelden
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-ImgBed-record opschonen ook als externe verwijdering mislukt:
+ImgHost-record opschonen ook als externe verwijdering mislukt:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Controleer fileId voor het verwijderen
 
-Het verwijderingsscript heeft de ImgBed-bestands-ID nodig. Je kunt eerst met het lijstscript de bestanden in een map bekijken:
+Het verwijderingsscript heeft de ImgHost-bestands-ID nodig. Je kunt eerst met het lijstscript de bestanden in een map bekijken:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ De waarde `name` in het resultaat is meestal de `fileId` die je aan het verwijde
 
 ### Waarom is verwijderen mislukt, maar staat het bestand nog in de lijst?
 
-Bij de standaardmodus `strict` blijft de ImgBed-record bestaan wanneer verwijderen op de externe opslag mislukt. Zo voorkom je dat alleen de lokale index verdwijnt terwijl het externe bestand blijft bestaan. Als je zeker weet dat alleen de ImgBed-record mag worden opgeschoond, probeer dezelfde `fileId` dan opnieuw met `soft`.
+Bij de standaardmodus `strict` blijft de ImgHost-record bestaan wanneer verwijderen op de externe opslag mislukt. Zo voorkom je dat alleen de lokale index verdwijnt terwijl het externe bestand blijft bestaan. Als je zeker weet dat alleen de ImgHost-record mag worden opgeschoond, probeer dezelfde `fileId` dan opnieuw met `soft`.
 
 ### Waarom bevat het resultaat een waarschuwing?
 

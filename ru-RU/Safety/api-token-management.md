@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | Параметр | Обязателен | Описание |
 | --- | --- | --- |
-| `--base-url <url>` | Да | URL сайта ImgBed, например `https://image.ai6.me`. |
+| `--base-url <url>` | Да | URL сайта ImgHost, например `https://image.ai6.me`. |
 | `--token <token>` | Да | API Token. Также можно использовать переменную окружения `IMGBED_API_TOKEN`. |
 | `--retries <n>` | Нет | Число повторов при временных ошибках. По умолчанию `3`. |
 | `--timeout-ms <n>` | Нет | Тайм-аут запроса. По умолчанию `180000`. |

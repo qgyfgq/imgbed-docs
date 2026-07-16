@@ -1,6 +1,6 @@
 # Kimlik Doğrulama ve Giriş Cihazı Yönetimi
 
-`Kimlik Doğrulama Yönetimi` ve `Giriş Cihazı Yönetimi`, ImgBed yönetim panelinizi, herkese açık yükleme girişini ve WebDAV erişimini korur.
+`Kimlik Doğrulama Yönetimi` ve `Giriş Cihazı Yönetimi`, ImgHost yönetim panelinizi, herkese açık yükleme girişini ve WebDAV erişimini korur.
 
 Bu sayfayı erişim kimlik bilgilerini ayarlamak, oturum açmış cihazları incelemek ve gerektiğinde eski oturumları iptal etmek için kullanın.
 
@@ -42,7 +42,7 @@ Yükleme parolası yapılandırıldığında:
 
 - Ziyaretçiler yükleme sayfasını kullanmadan önce parolayı girmelidir.
 - Yükleme yalnızca parola kabul edildikten sonra kullanılabilir.
-- Kullanıcı tarafı cihaz oturumları etkinse ImgBed bu kullanıcı tarafı cihazı kaydeder.
+- Kullanıcı tarafı cihaz oturumları etkinse ImgHost bu kullanıcı tarafı cihazı kaydeder.
 
 Yükleme parolasını değiştirmek eski kullanıcı tarafı oturumlarını geçersiz kılar. Ziyaretçilerin yeni parolayı tekrar girmesi gerekir.
 

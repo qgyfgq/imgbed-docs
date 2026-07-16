@@ -56,7 +56,7 @@ Thiết lập Google có hai phần:
 4. Quay lại `Credentials`.
 5. Tạo `API Key`.
 6. Mở khóa API và sao chép.
-7. Dán vào `Google Vision API Key` trong ImgBed.
+7. Dán vào `Google Vision API Key` trong ImgHost.
 8. Lưu.
 
 Sau đó bạn có thể chọn Google Vision trong hộp thoại OCR.
@@ -74,10 +74,10 @@ Nó chỉ hiển thị xấp xỉ số lần gọi Google Vision đã dùng tron
 5. Mở chi tiết tài khoản dịch vụ và tạo khóa.
 6. Chọn `JSON`.
 7. Tải tệp JSON đã tạo.
-8. Quay lại ImgBed và nhập tệp đó trong mục `JSON` của tài khoản dịch vụ (tùy chọn).
+8. Quay lại ImgHost và nhập tệp đó trong mục `JSON` của tài khoản dịch vụ (tùy chọn).
 9. Sau khi nhập thành công, nhấp truy vấn hạn mức.
 
-Sau khi nhập, ImgBed hiển thị tên dự án sở hữu tài khoản dịch vụ. Khi truy vấn mức dùng, ImgBed đọc dữ liệu giám sát của Google và hiển thị số lần gọi trong tháng này.
+Sau khi nhập, ImgHost hiển thị tên dự án sở hữu tài khoản dịch vụ. Khi truy vấn mức dùng, ImgHost đọc dữ liệu giám sát của Google và hiển thị số lần gọi trong tháng này.
 
 Tóm tắt:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR cần token truy cập.
 
 Mở cửa sổ gọi `API` trên trang Baidu PaddleOCR, nhấp để lấy token, rồi sao chép.
 
-Quay lại ImgBed, dán vào `PaddleOCR Token` và lưu.
+Quay lại ImgHost, dán vào `PaddleOCR Token` và lưu.
 
 ## Bắt Đầu Nhận Dạng
 

@@ -40,7 +40,7 @@ Serve Node.js 18 o superiore installato in locale.
 
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `--base-url <url>` | Sì | Indirizzo del sito ImgBed, ad esempio `https://image.ai6.me` |
+| `--base-url <url>` | Sì | Indirizzo del sito ImgHost, ad esempio `https://image.ai6.me` |
 | `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
 | `--retries <n>` | No | Tentativi per errori temporanei; predefinito `3` |
 | `--timeout-ms <n>` | No | Tempo limite di ogni richiesta; predefinito `180000` |

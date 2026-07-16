@@ -41,7 +41,7 @@ Vous pouvez utiliser temporairement le Space public, mais les Spaces publics son
 3. Cliquez sur le menu à trois points dans l’angle supérieur droit.
 4. Choisissez `Duplicate this Space`.
 5. Conservez le nom par défaut du Space ou choisissez votre propre nom, par exemple `wd-tagger`.
-6. Définissez la visibilité sur `Public`. Les Spaces publics sont plus faciles à appeler depuis ImgBed.
+6. Définissez la visibilité sur `Public`. Les Spaces publics sont plus faciles à appeler depuis ImgHost.
 7. Conservez d’abord le matériel gratuit par défaut. N’effectuez une mise à niveau que si les files d’attente deviennent manifestes.
 8. Créez le Space et attendez la fin de la compilation.
 
@@ -51,7 +51,7 @@ Une fois la compilation terminée, ouvrez la page de votre Space. L’URL ressem
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Copiez l’URL du navigateur et collez-la dans `Space URLs` dans ImgBed.
+Copiez l’URL du navigateur et collez-la dans `Space URLs` dans ImgHost.
 
 ## Renseigner plusieurs Space URLs
 
@@ -65,7 +65,7 @@ Exemples :
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL copiée depuis une page Space. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Page Space que vous avez dupliquée dans votre propre compte. |
 
-Vous pouvez saisir plusieurs URL. ImgBed utilise plusieurs Spaces ensemble, ce qui peut améliorer la vitesse.
+Vous pouvez saisir plusieurs URL. ImgHost utilise plusieurs Spaces ensemble, ce qui peut améliorer la vitesse.
 
 Si un Space est temporairement indisponible, les autres peuvent continuer le traitement.
 
@@ -103,7 +103,7 @@ S’il y a trop peu d’étiquettes, diminuez légèrement le seuil général.
 3. Cliquez sur lancer l’étiquetage.
 4. Attendez la fin de la progression.
 
-Si le dossier cible est vide, ImgBed traite tous les dossiers.
+Si le dossier cible est vide, ImgHost traite tous les dossiers.
 
 L’étiquetage par lot convient surtout aux anciennes images. Pour les nouvelles images, activez l’étiquetage automatique à l’envoi afin de ne pas devoir le lancer manuellement à chaque fois.
 
@@ -121,19 +121,19 @@ L’étiquetage automatique traite principalement les fichiers image.
 
 Les images qui possèdent déjà des étiquettes complètes, une orientation, une classification, une largeur et une hauteur sont ignorées pour éviter les appels Space inutiles.
 
-ImgBed ne complète que les informations manquantes lorsque c’est possible. Par exemple, si seule l’orientation manque, il essaie de l’ajouter sans appeler tout le flux d’étiquetage de contenu.
+ImgHost ne complète que les informations manquantes lorsque c’est possible. Par exemple, si seule l’orientation manque, il essaie de l’ajouter sans appeler tout le flux d’étiquetage de contenu.
 
 ## Questions fréquentes
 
 ### Pourquoi dupliquer mon propre Space ?
 
-Les Spaces publics sont partagés par de nombreux utilisateurs. Votre propre Space dupliqué est principalement utilisé par votre site ImgBed ; il est donc généralement plus rapide et plus fiable.
+Les Spaces publics sont partagés par de nombreux utilisateurs. Votre propre Space dupliqué est principalement utilisé par votre site ImgHost ; il est donc généralement plus rapide et plus fiable.
 
 ### Le Space continue à démarrer
 
 Après la première création, ou après une longue période d’inactivité, un Space peut avoir besoin de temps pour démarrer.
 
-Ouvrez d’abord la page de votre Space. Une fois qu’il peut reconnaître normalement une image, revenez dans ImgBed et lancez l’étiquetage.
+Ouvrez d’abord la page de votre Space. Une fois qu’il peut reconnaître normalement une image, revenez dans ImgHost et lancez l’étiquetage.
 
 ### Comment copier l’URL du Space ?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

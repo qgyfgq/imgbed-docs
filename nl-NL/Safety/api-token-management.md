@@ -40,7 +40,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site, bijvoorbeeld `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out per verzoek; standaard `180000` |

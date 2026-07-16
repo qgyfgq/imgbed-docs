@@ -44,7 +44,7 @@
 5. در صفحه `Bot` توکن را ایجاد یا بازنشانی کنید.
 6. توکن را ذخیره کنید.
 
-این توکن همان `Bot Token` است که باید در ImgBed وارد کنید.
+این توکن همان `Bot Token` است که باید در ImgHost وارد کنید.
 
 ![مشاهده توکن bot](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. روی نام کانال راست‌کلیک کنید.
 6. روی `Copy Channel ID` کلیک کنید.
 
-عدد کپی‌شده همان `Channel ID` موردنیاز ImgBed است.
+عدد کپی‌شده همان `Channel ID` موردنیاز ImgHost است.
 
 ![فعال کردن Developer Mode](../../image/upload/discord/开启开发者权限.png)
 
 ![کپی کردن Channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. تکمیل کانال Discord در ImgBed
+### 5. تکمیل کانال Discord در ImgHost
 
 به پنجره پیکربندی کانال برگردید و فیلدها را این‌گونه تکمیل کنید:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

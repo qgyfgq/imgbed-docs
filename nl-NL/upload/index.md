@@ -1,23 +1,23 @@
 # Uploadinstellingen
 
-Met uploadinstellingen verbind je ImgBed met je eigen opslagkanalen. Na configuratie worden geüploade afbeeldingen en bestanden opgeslagen in de gekozen dienst. ImgBed beheert daarna toeganglinks, bestandsrecords, previews, openbare galerijfuncties, de willekeurige-afbeelding-API, WebDAV-toegang en bijbehorende workflows.
+Met uploadinstellingen verbind je ImgHost met je eigen opslagkanalen. Na configuratie worden geüploade afbeeldingen en bestanden opgeslagen in de gekozen dienst. ImgHost beheert daarna toeganglinks, bestandsrecords, previews, openbare galerijfuncties, de willekeurige-afbeelding-API, WebDAV-toegang en bijbehorende workflows.
 
 Welk kanaal het beste past, hangt af van je gebruik. Voor een eenvoudige start zijn Telegram, Discord of GitHub Releases geschikt. Als capaciteit, snelheid en stabiliteit op lange termijn belangrijker zijn, kies dan Cloudflare R2, S3, OneDrive, Google Drive, Dropbox, Yandex, pCloud of je eigen WebDAV-service.
 
 ## Voor je begint
 
-> Voordat je ImgBed voor het eerst gebruikt, moet je de initialisatiepagina openen en op "Index opnieuw opbouwen" klikken om de vereiste D1-tabellen aan te vullen en fouten in latere functies te voorkomen.
+> Voordat je ImgHost voor het eerst gebruikt, moet je de initialisatiepagina openen en op "Index opnieuw opbouwen" klikken om de vereiste D1-tabellen aan te vullen en fouten in latere functies te voorkomen.
 >
 > ![Tijdens de initialisatie op Index opnieuw opbouwen klikken](../../image/初始化点击重建索引.png)
 
 ### Optioneel: D1-leesreplicatie inschakelen
 
-Schakel in de D1-database-instellingen van het Cloudflare-dashboard leesreplicatie in om Bestandsbeheer, de openbare galerie en de willekeurige-afbeeldingen-API sneller toegankelijk te maken. ImgBed werkt ook zonder deze optie normaal.
+Schakel in de D1-database-instellingen van het Cloudflare-dashboard leesreplicatie in om Bestandsbeheer, de openbare galerie en de willekeurige-afbeeldingen-API sneller toegankelijk te maken. ImgHost werkt ook zonder deze optie normaal.
 
 ![D1-leesreplicatie inschakelen](../../image/d1读取复制.png)
 
 - Bereid het opslagaccount of de API-gegevens voor die je wilt gebruiken.
-- Controleer of je ImgBed-domein bereikbaar is, omdat OAuth-kanalen callback-URL's nodig hebben.
+- Controleer of je ImgHost-domein bereikbaar is, omdat OAuth-kanalen callback-URL's nodig hebben.
 - Upload na het toevoegen van een kanaal eerst een testafbeelding om te bevestigen dat opslaan en openen werkt.
 
 ## Kanaallijst
@@ -40,4 +40,4 @@ Schakel in de D1-database-instellingen van het Cloudflare-dashboard leesreplicat
 
 - Welke informatie elk uploadkanaal vooraf nodig heeft.
 - Hoe je apps maakt, sleutels kopieert of tokens autoriseert op externe platforms.
-- Hoe je de kanaalconfiguratie invult in ImgBed en controleert of uploaden werkt.
+- Hoe je de kanaalconfiguratie invult in ImgHost en controleert of uploaden werkt.

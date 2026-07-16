@@ -44,7 +44,7 @@
 5. `Bot` စာမျက်နှာတွင် token ကို generate သို့မဟုတ် reset လုပ်ပါ။
 6. Token ကိုသိမ်းထားပါ။
 
-ဤ token သည် ImgBed ထဲတွင် ထည့်ရမည့် `Bot Token` ဖြစ်သည်။
+ဤ token သည် ImgHost ထဲတွင် ထည့်ရမည့် `Bot Token` ဖြစ်သည်။
 
 ![Bot token ကြည့်ရှုခြင်း](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. ချန်နယ်အမည် ကို right-click နှိပ်ပါ။
 6. `Copy Channel ID` ကိုနှိပ်ပါ။
 
-ကူးယူထားသော နံပါတ်သည် ImgBed လိုအပ်သည့် `Channel ID` ဖြစ်သည်။
+ကူးယူထားသော နံပါတ်သည် ImgHost လိုအပ်သည့် `Channel ID` ဖြစ်သည်။
 
 ![Developer mode enable လုပ်ခြင်း](../../image/upload/discord/开启开发者权限.png)
 
 ![Channel ID ကူးယူခြင်း](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed တွင် Discord Channel ကိုဖြည့်ပါ
+### 5. ImgHost တွင် Discord Channel ကိုဖြည့်ပါ
 
 Channel configuration dialog သို့ ပြန်သွားပြီး အကွက်များကို အောက်ပါအတိုင်း ဖြည့်ပါ။
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

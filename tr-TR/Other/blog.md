@@ -1,6 +1,6 @@
 # Blog
 
-Blog özelliği, ImgBed sitenize bağımsız bir blog sayfası ekler.
+Blog özelliği, ImgHost sitenize bağımsız bir blog sayfası ekler.
 
 Etkinleştirildikten sonra ziyaretçiler şu adresi açabilir:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Blog ana sayfası](../../image/other/博客/博客首页.png)
 
-Blog, açık kaynaklı [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) projesinden uyarlanmıştır. ImgBed, bunu Vue ile yeniden yazar ve görsel barındırma sitesinin bir parçası olarak çalışacak şekilde bütünleştirir.
+Blog, açık kaynaklı [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) projesinden uyarlanmıştır. ImgHost, bunu Vue ile yeniden yazar ve görsel barındırma sitesinin bir parçası olarak çalışacak şekilde bütünleştirir.
 
 ## Nereden Yapılandırılır?
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Başarı mesajını bekleyin.
 5. Blogu görüntülemek için `https://your-domain.com/blog/` adresini açın.
 
-İlk kullanımda ImgBed, seçilen hesabın altında özel bir GitHub deposu hazırlar:
+İlk kullanımda ImgHost, seçilen hesabın altında özel bir GitHub deposu hazırlar:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Tipik iş akışı:
 2. Özel `imgbed-blog-config` deposuna girin.
 3. Yazı dosyalarını düzenleyin veya ekleyin.
 4. Değişiklikleri commit edin.
-5. ImgBed yönetim paneline dönüp `Update Blog` öğesine tıklayın veya blog ana sayfasının sol üst köşesindeki logoya üç kez tıklayarak blog güncellemesini tetikleyin.
+5. ImgHost yönetim paneline dönüp `Update Blog` öğesine tıklayın veya blog ana sayfasının sol üst köşesindeki logoya üç kez tıklayarak blog güncellemesini tetikleyin.
 
 `Update Blog`, yazdığınız içeriğin üzerine yazmaz. Gerektiğinde depoyu başlatır ve blog önbelleğini yeniler.
 
@@ -72,7 +72,7 @@ Ziyaret istatistikleri yazı görüntülemelerini ve site ziyaretlerini göstere
 
 Blog her zaman `/blog/` yolu altında sunulur.
 
-Örneğin ImgBed alan adınız:
+Örneğin ImgHost alan adınız:
 
 ```text
 https://image.example.com

@@ -1,6 +1,6 @@
 # Token API Cloudflare
 
-Le credenziali API Cloudflare permettono a ImgBed di svuotare la memoria temporanea CDN di Cloudflare dopo modifiche ai file.
+Le credenziali API Cloudflare permettono a ImgHost di svuotare la memoria temporanea CDN di Cloudflare dopo modifiche ai file.
 
 ![Impostazioni Token API Cloudflare](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare può mettere in memoria temporanea gli URL pubblici delle immagini.
 
 La memoria temporanea rende la distribuzione più veloce, ma può lasciare visibili contenuti vecchi per un po' dopo eliminazione, blocco, sostituzione o spostamento di un file.
 
-Quando le credenziali API Cloudflare sono configurate, ImgBed prova a svuotare la memoria temporanea Cloudflare collegata al termine di queste operazioni.
+Quando le credenziali API Cloudflare sono configurate, ImgHost prova a svuotare la memoria temporanea Cloudflare collegata al termine di queste operazioni.
 
 È utile quando:
 
@@ -36,18 +36,18 @@ Quando le credenziali API Cloudflare sono configurate, ImgBed prova a svuotare l
 
 ## Se lo lasci vuoto
 
-ImgBed funziona normalmente anche senza questa impostazione.
+ImgHost funziona normalmente anche senza questa impostazione.
 
-La differenza è che ImgBed non svuoterà attivamente la memoria temporanea CDN Cloudflare. I visitatori potrebbero vedere il contenuto vecchio finché la memoria temporanea Cloudflare non scade da sola.
+La differenza è che ImgHost non svuoterà attivamente la memoria temporanea CDN Cloudflare. I visitatori potrebbero vedere il contenuto vecchio finché la memoria temporanea Cloudflare non scade da sola.
 
 ## Trovare lo Zone ID
 
-Lo Zone ID è lo Zone ID Cloudflare del sito usato dal tuo dominio ImgBed.
+Lo Zone ID è lo Zone ID Cloudflare del sito usato dal tuo dominio ImgHost.
 
 1. Accedi alla dashboard Cloudflare.
-2. Apri il sito che contiene il dominio ImgBed.
+2. Apri il sito che contiene il dominio ImgHost.
 3. Trova `Zone ID` nella pagina panoramica del sito.
-4. Copialo nel campo `Zone ID` di ImgBed.
+4. Copialo nel campo `Zone ID` di ImgHost.
 
 È lo Zone ID del sito, non l'Account ID.
 
@@ -66,7 +66,7 @@ Inserisci la Cloudflare Global API Key.
 3. Vai alla pagina API Tokens.
 4. Trova `Global API Key`.
 5. Visualizzala e copiala.
-6. Incollala nel campo `API Key` di ImgBed.
+6. Incollala nel campo `API Key` di ImgHost.
 
 ![Visualizza Global API Key](../../image/Safety/查看全局令牌.png)
 
@@ -94,11 +94,11 @@ Credenziali errate impediscono solo lo svuotamento della memoria temporanea Clou
 
 La causa più comune è che Cloudflare ha ancora il vecchio file in memoria temporanea.
 
-Con credenziali API Cloudflare corrette, ImgBed svuota la memoria temporanea dell'URL collegato quando un file viene eliminato.
+Con credenziali API Cloudflare corrette, ImgHost svuota la memoria temporanea dell'URL collegato quando un file viene eliminato.
 
 ### Perché vedo ancora la vecchia immagine dopo una sostituzione?
 
 Anche questo dipende spesso dalla memoria temporanea CDN.
 
-Dopo la configurazione, ImgBed prova a svuotare la memoria temporanea del vecchio URL quando un file con lo stesso nome viene sovrascritto.
+Dopo la configurazione, ImgHost prova a svuotare la memoria temporanea del vecchio URL quando un file con lo stesso nome viene sovrascritto.
 

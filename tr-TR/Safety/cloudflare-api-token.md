@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Cloudflare API kimlik bilgileri, dosyalar değiştikten sonra ImgBed'in Cloudflare CDN önbelleğini temizlemesini sağlar.
+Cloudflare API kimlik bilgileri, dosyalar değiştikten sonra ImgHost'in Cloudflare CDN önbelleğini temizlemesini sağlar.
 
 ![Cloudflare API Token ayarları](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare herkese açık görsel URL'lerini önbelleğe alabilir.
 
 Önbellek görsellerin daha hızlı sunulmasını sağlar; ancak bir dosyayı sildikten, engelledikten, değiştirdikten veya taşıdıktan sonra eski içerik bir süre görünmeye devam edebilir.
 
-Cloudflare API kimlik bilgileri yapılandırıldıktan sonra ImgBed bu işlemler tamamlandığında ilgili Cloudflare önbelleğini temizlemeye çalışır.
+Cloudflare API kimlik bilgileri yapılandırıldıktan sonra ImgHost bu işlemler tamamlandığında ilgili Cloudflare önbelleğini temizlemeye çalışır.
 
 Şu durumlarda kullanışlıdır:
 
@@ -36,18 +36,18 @@ Cloudflare API kimlik bilgileri yapılandırıldıktan sonra ImgBed bu işlemler
 
 ## Boş Bırakırsanız Ne Olur?
 
-ImgBed bu ayar olmadan da normal çalışır.
+ImgHost bu ayar olmadan da normal çalışır.
 
-Tek fark, ImgBed'in Cloudflare CDN önbelleğini aktif olarak temizlememesidir. Ziyaretçiler Cloudflare önbelleği doğal olarak sona erene kadar eski içeriği görmeye devam edebilir.
+Tek fark, ImgHost'in Cloudflare CDN önbelleğini aktif olarak temizlememesidir. Ziyaretçiler Cloudflare önbelleği doğal olarak sona erene kadar eski içeriği görmeye devam edebilir.
 
 ## Zone ID Nasıl Bulunur?
 
-Zone ID, ImgBed alan adınızın kullandığı sitenin Cloudflare Zone ID değeridir.
+Zone ID, ImgHost alan adınızın kullandığı sitenin Cloudflare Zone ID değeridir.
 
 1. Cloudflare dashboard'a giriş yapın.
-2. ImgBed alan adınızı içeren siteyi açın.
+2. ImgHost alan adınızı içeren siteyi açın.
 3. Site overview sayfasında `Zone ID` değerini bulun.
-4. ImgBed'deki `Zone ID` alanına kopyalayın.
+4. ImgHost'deki `Zone ID` alanına kopyalayın.
 
 Bu değer hesap ID'si değil, site Zone ID değeridir.
 
@@ -66,7 +66,7 @@ Cloudflare Global API Key değerini girin.
 3. API Tokens sayfasına gidin.
 4. `Global API Key` değerini bulun.
 5. Görüntüleyip kopyalayın.
-6. ImgBed'deki `API Key` alanına yapıştırın.
+6. ImgHost'deki `API Key` alanına yapıştırın.
 
 ![Global API key görüntüleme](../../image/Safety/查看全局令牌.png)
 
@@ -88,16 +88,16 @@ Alan adınız Cloudflare kullanmıyorsa veya CDN önbellek gecikmesi sizin için
 
 Genellikle hayır.
 
-Yanlış kimlik bilgileri yalnızca ImgBed'in Cloudflare önbelleğini temizlemesini engeller. Yükleme ve normal dosya erişimi çalışmaya devam etmelidir.
+Yanlış kimlik bilgileri yalnızca ImgHost'in Cloudflare önbelleğini temizlemesini engeller. Yükleme ve normal dosya erişimi çalışmaya devam etmelidir.
 
 ### Silinen Görsel Neden Hâlâ Açılıyor?
 
 En yaygın neden Cloudflare'ın eski dosyayı hâlâ önbellekte tutmasıdır.
 
-Doğru Cloudflare API kimlik bilgileriyle ImgBed dosya silindiğinde ilgili URL önbelleğini temizler.
+Doğru Cloudflare API kimlik bilgileriyle ImgHost dosya silindiğinde ilgili URL önbelleğini temizler.
 
 ### Dosyayı Değiştirdikten Sonra Neden Hâlâ Eski Görseli Görüyorum?
 
 Bu da genellikle CDN önbelleğinden kaynaklanır.
 
-Bu ayar yapılandırıldıktan sonra ImgBed aynı ada sahip dosya üzerine yazıldığında eski URL önbelleğini temizlemeye çalışır.
+Bu ayar yapılandırıldıktan sonra ImgHost aynı ada sahip dosya üzerine yazıldığında eski URL önbelleğini temizlemeye çalışır.

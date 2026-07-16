@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Přihlašovací údaje Cloudflare API umožňují ImgBed vyčistit mezipaměť CDN Cloudflare po změnách souborů.
+Přihlašovací údaje Cloudflare API umožňují ImgHost vyčistit mezipaměť CDN Cloudflare po změnách souborů.
 
 ![Nastavení Cloudflare API Tokenu](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare může ukládat do mezipaměti veřejné URL obrázků.
 
 Mezipaměť zrychluje doručování obrázků, ale může také způsobit, že starý obsah bude ještě chvíli viditelný po smazání, zablokování, nahrazení nebo přesunutí souboru.
 
-Po nastavení Cloudflare API údajů se ImgBed po těchto operacích pokusí vyčistit související mezipaměť Cloudflare.
+Po nastavení Cloudflare API údajů se ImgHost po těchto operacích pokusí vyčistit související mezipaměť Cloudflare.
 
 Hodí se to, když:
 
@@ -36,18 +36,18 @@ Hodí se to, když:
 
 ## Co když pole necháte prázdná
 
-ImgBed funguje normálně i bez tohoto nastavení.
+ImgHost funguje normálně i bez tohoto nastavení.
 
-Jediný rozdíl je, že ImgBed nebude aktivně čistit mezipaměť CDN Cloudflare. Návštěvníci mohou vidět starý obsah, dokud mezipaměť Cloudflare přirozeně nevyprší.
+Jediný rozdíl je, že ImgHost nebude aktivně čistit mezipaměť CDN Cloudflare. Návštěvníci mohou vidět starý obsah, dokud mezipaměť Cloudflare přirozeně nevyprší.
 
 ## Jak najít Zone ID
 
-Zone ID je Cloudflare Zone ID webu, který používá vaše doména ImgBed.
+Zone ID je Cloudflare Zone ID webu, který používá vaše doména ImgHost.
 
 1. Přihlaste se do Cloudflare Dashboard.
-2. Otevřete web, který obsahuje vaši doménu ImgBed.
+2. Otevřete web, který obsahuje vaši doménu ImgHost.
 3. Na přehledové stránce webu najděte `Zone ID`.
-4. Zkopírujte ho do pole `Zone ID` v ImgBed.
+4. Zkopírujte ho do pole `Zone ID` v ImgHost.
 
 Jde o Zone ID webu, ne account ID.
 
@@ -66,7 +66,7 @@ Zadejte Cloudflare Global API Key.
 3. Přejděte na stránku API Tokens.
 4. Najděte `Global API Key`.
 5. Zobrazte a zkopírujte ho.
-6. Vložte ho do pole `API Key` v ImgBed.
+6. Vložte ho do pole `API Key` v ImgHost.
 
 ![Zobrazení global API key](../../image/Safety/查看全局令牌.png)
 
@@ -94,13 +94,13 @@ Obvykle ne.
 
 Nejčastější důvod je, že Cloudflare má starý soubor stále v mezipaměť.
 
-Se správnými Cloudflare API údaji ImgBed při smazání souboru vyčistí mezipaměť příslušného URL.
+Se správnými Cloudflare API údaji ImgHost při smazání souboru vyčistí mezipaměť příslušného URL.
 
 ### Proč po nahrazení souboru stále vidím starý obrázek?
 
 I to obvykle způsobuje mezipaměť CDN.
 
-Po nastavení této funkce se ImgBed pokusí vyčistit mezipaměť starého URL při přepsání souboru se stejným názvem.
+Po nastavení této funkce se ImgHost pokusí vyčistit mezipaměť starého URL při přepsání souboru se stejným názvem.
 
 
 

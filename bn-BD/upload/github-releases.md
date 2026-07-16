@@ -7,7 +7,7 @@
 | প্রয়োজনীয় তথ্য | উদ্দেশ্য |
 | --- | --- |
 | GitHub অ্যাকাউন্ট | access token তৈরি করা এবং রিপোজিটরির মালিকানার জন্য। |
-| GitHub Access Token | GitHub API-তে প্রবেশ, releases তৈরি এবং ফাইল আপলোড করতে ImgBed এটি ব্যবহার করে। |
+| GitHub Access Token | GitHub API-তে প্রবেশ, releases তৈরি এবং ফাইল আপলোড করতে ImgHost এটি ব্যবহার করে। |
 | রিপোজিটরি নাম | শুধু রিপোজিটরি নাম দিলেই চলে, যেমন `image`। |
 
 ## সেটআপ ধাপ
@@ -27,7 +27,7 @@
 
 ![GitHub অনুমতি যোগ করা](../../image/upload/github-releases/添加github权限.png)
 
-## ধাপ 2: ImgBed-এ GitHub Releases চ্যানেল পূরণ করুন
+## ধাপ 2: ImgHost-এ GitHub Releases চ্যানেল পূরণ করুন
 
 আপলোড সেটিংস-এ `GitHub Releases` নির্বাচন করার পর ক্ষেত্রগুলো এভাবে পূরণ করুন:
 
@@ -49,9 +49,9 @@
 
 | সিস্টেমের আচরণ | বিবরণ |
 | --- | --- |
-| short repository name | ImgBed বর্তমান GitHub অ্যাকাউন্ট শনাক্ত করে মানটিকে full repository path-এ প্রসারিত করে। |
-| full repository path | ImgBed `username/repository` path ঠিক যেমন দেওয়া হয়েছে তেমনই ব্যবহার করে। |
-| রিপোজিটরি পরীক্ষা | বর্তমান personal account path হলে রিপোজিটরি না থাকলে ImgBed স্বয়ংক্রিয়ভাবে তৈরি করে। full path হাতে দিলে ImgBed সেটিই ব্যবহার করে। |
+| short repository name | ImgHost বর্তমান GitHub অ্যাকাউন্ট শনাক্ত করে মানটিকে full repository path-এ প্রসারিত করে। |
+| full repository path | ImgHost `username/repository` path ঠিক যেমন দেওয়া হয়েছে তেমনই ব্যবহার করে। |
+| রিপোজিটরি পরীক্ষা | বর্তমান personal account path হলে রিপোজিটরি না থাকলে ImgHost স্বয়ংক্রিয়ভাবে তৈরি করে। full path হাতে দিলে ImgHost সেটিই ব্যবহার করে। |
 | public/private state | বর্তমান সুইচ অনুযায়ী রিপোজিটরি দৃশ্যমানতা সিঙ্ক হয়। |
 
 ## দ্রুত তালিকা
@@ -61,9 +61,9 @@ GitHub Releases এভাবে কাজ করে:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

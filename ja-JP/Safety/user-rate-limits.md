@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## レート制限を有効化する
 
-`レート制限を有効化` をオンにすると、ImgBed はアップロード元 IP アドレスに基づいて最近のアップロードを追跡します。
+`レート制限を有効化` をオンにすると、ImgHost はアップロード元 IP アドレスに基づいて最近のアップロードを追跡します。
 
 既定値:
 

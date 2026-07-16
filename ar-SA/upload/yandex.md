@@ -6,7 +6,7 @@
 | --- | --- |
 | حساب Yandex | لتسجيل الدخول وتفويض Yandex Disk |
 | تطبيق Yandex OAuth | لإنشاء `Client ID` و `Client Secret` |
-| نطاق ImgBed الخاص بك | لاستخدامه في عنوان إعادة توجيه OAuth |
+| نطاق ImgHost الخاص بك | لاستخدامه في عنوان إعادة توجيه OAuth |
 | مساحة Yandex Disk متاحة | موقع التخزين الفعلي للملفات |
 
 ## خطوات الإعداد
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### الخطوة 2: تأكد من الصلاحيات
 
-لدمج Yandex الحالي في ImgBed، أبقِ هذه الصلاحيات الأربع ضمن `Yandex.Disk REST API`:
+لدمج Yandex الحالي في ImgHost، أبقِ هذه الصلاحيات الأربع ضمن `Yandex.Disk REST API`:
 
 | الإذن | الغرض |
 | --- | --- |
-| `cloud_api:disk.app_folder` | يسمح لـ ImgBed بحفظ الملفات في مجلد التطبيق |
+| `cloud_api:disk.app_folder` | يسمح لـ ImgHost بحفظ الملفات في مجلد التطبيق |
 | `cloud_api:disk.read` | قراءة الملفات وروابط التنزيل |
 | `cloud_api:disk.write` | رفع الملفات وإنشاء المجلدات وحذف الملفات |
 | `Access to information about Yandex.Disk` | قراءة حصة القرص والمساحة المستخدمة |
@@ -55,7 +55,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 بعد إنشاء التطبيق انسخ:
 
-| حقل Yandex | حقل ImgBed |
+| حقل Yandex | حقل ImgHost |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 في إعدادات الرفع اختر `Yandex` واملأ:
 
-| حقل ImgBed | ما الذي تدخله |
+| حقل ImgHost | ما الذي تدخله |
 | --- | --- |
 | اسم القناة | اسم واضح، مثل `Main Yandex` |
 | Client ID | `Client ID` الخاص بتطبيق Yandex |
@@ -78,12 +78,12 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### الخطوة 5: احصل على Refresh Token
 
-1. في ImgBed اضغط الحصول على الرمز.
+1. في ImgHost اضغط الحصول على الرمز.
 2. سجّل الدخول إلى حساب Yandex الذي تريد ربطه.
 3. وافق على طلب التفويض.
 4. ستعرض صفحة رد الاتصال قيمة `Refresh Token`.
 5. انسخها.
-6. ارجع إلى ImgBed والصقها في حقل `Refresh Token`.
+6. ارجع إلى ImgHost والصقها في حقل `Refresh Token`.
 
 ![نسخ refresh token بعد التفويض](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## مراجع

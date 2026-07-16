@@ -1,6 +1,6 @@
 # ブログ
 
-ブログ機能は、ImgBed サイトに独立したブログページを追加します。
+ブログ機能は、ImgHost サイトに独立したブログページを追加します。
 
 有効にすると、訪問者は次の URL を開けます。
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![ブログのホームページ](../../image/other/博客/博客首页.png)
 
-このブログは、オープンソースの [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) プロジェクトをもとにしています。ImgBed はこれを Vue で書き直して統合し、画像ホスティングサイトの一部として動作できるようにしています。
+このブログは、オープンソースの [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki) プロジェクトをもとにしています。ImgHost はこれを Vue で書き直して統合し、画像ホスティングサイトの一部として動作できるようにしています。
 
 ## 設定場所
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. 成功メッセージが表示されるまで待ちます。
 5. `https://your-domain.com/blog/` を開いてブログを確認します。
 
-初回利用時、ImgBed は選択したアカウントの下にプライベート GitHub リポジトリを用意します。
+初回利用時、ImgHost は選択したアカウントの下にプライベート GitHub リポジトリを用意します。
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ imgbed-blog-config
 2. プライベートの `imgbed-blog-config` リポジトリに入ります。
 3. 記事ファイルを編集または追加します。
 4. 変更をコミットします。
-5. ImgBed の管理パネルに戻って `Update Blog` をクリックします。または、ブログのホームページ左上にあるロゴを 3 回クリックしてブログ更新をトリガーします。
+5. ImgHost の管理パネルに戻って `Update Blog` をクリックします。または、ブログのホームページ左上にあるロゴを 3 回クリックしてブログ更新をトリガーします。
 
 `Update Blog` は、すでに書いたコンテンツを上書きしません。必要に応じてリポジトリを初期化し、ブログキャッシュを更新します。
 
@@ -72,7 +72,7 @@ imgbed-blog-config
 
 ブログは常に `/blog/` 配下で配信されます。
 
-たとえば、ImgBed のドメインが次の場合:
+たとえば、ImgHost のドメインが次の場合:
 
 ```text
 https://image.example.com

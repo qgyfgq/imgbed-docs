@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Questa voce è comoda per aggiungere backup a una cartella o a tutti i file in blocco.
 
-Puoi selezionare manualmente il canale di backup oppure scegliere il cambio automatico e lasciare che ImgBed trovi un canale di backup adatto.
+Puoi selezionare manualmente il canale di backup oppure scegliere il cambio automatico e lasciare che ImgHost trovi un canale di backup adatto.
 
 ## Backup dalla pagina dei dettagli del file
 
@@ -90,4 +90,4 @@ Finché il file di backup è disponibile, immagini, video e link di download con
 
 ## Cosa succede quando un file viene eliminato
 
-Quando elimini un file, ImgBed elimina sia il file principale sia il file di backup.
+Quando elimini un file, ImgHost elimina sia il file principale sia il file di backup.

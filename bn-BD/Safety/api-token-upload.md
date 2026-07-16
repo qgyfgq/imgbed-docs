@@ -1,6 +1,6 @@
 # API Token দিয়ে ফাইল আপলোড
 
-API Token আপলোড স্ক্রিপ্ট, স্বয়ংক্রিয় কাজ এবং তৃতীয় পক্ষের প্রোগ্রামের জন্য তৈরি. ওয়েব UI খুলতে হবে না. সাইটের URL, token, স্থানীয় ফাইলের পথ এবং একটি বাস্তব আপলোড চ্যানেল দিলেই ফাইল ImgBed-এ আপলোড করা যায় এবং প্রতিক্রিয়ায় ফাইলের URL পাওয়া যায়.
+API Token আপলোড স্ক্রিপ্ট, স্বয়ংক্রিয় কাজ এবং তৃতীয় পক্ষের প্রোগ্রামের জন্য তৈরি. ওয়েব UI খুলতে হবে না. সাইটের URL, token, স্থানীয় ফাইলের পথ এবং একটি বাস্তব আপলোড চ্যানেল দিলেই ফাইল ImgHost-এ আপলোড করা যায় এবং প্রতিক্রিয়ায় ফাইলের URL পাওয়া যায়.
 
 ![API Token সম্পাদনা](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
-| `--base-url <url>` | হ্যাঁ | ImgBed সাইটের URL, যেমন `https://image.ai6.me`. |
+| `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL, যেমন `https://image.ai6.me`. |
 | `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--file <path>` | হ্যাঁ | স্থানীয় ফাইলের পথ. |
 | `--channel <key>` | হ্যাঁ | আপলোড চ্যানেল. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
-| `--base-url <url>` | হ্যাঁ | ImgBed সাইটের URL. |
+| `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL. |
 | `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--file <path>` | হ্যাঁ | স্থানীয় ফাইলের পথ. |
 | `--channel <key>` | হ্যাঁ | আপলোড চ্যানেল. |

@@ -1,6 +1,6 @@
 # Authentification et gestion des appareils connectés
 
-La gestion de l’authentification et la gestion des appareils connectés protègent le panneau d’administration ImgBed, l’entrée publique de téléversement et l’accès WebDAV.
+La gestion de l’authentification et la gestion des appareils connectés protègent le panneau d’administration ImgHost, l’entrée publique de téléversement et l’accès WebDAV.
 
 Cette page permet de définir les identifiants d’accès, de consulter les appareils connectés et de révoquer les anciennes sessions si nécessaire.
 
@@ -42,7 +42,7 @@ Lorsqu’un mot de passe de téléversement est configuré :
 
 - Les visiteurs doivent saisir le mot de passe avant d’utiliser la page de téléversement.
 - Le téléversement n’est disponible qu’après acceptation du mot de passe.
-- Si les sessions d’appareils côté utilisateur sont activées, ImgBed enregistre cet appareil côté utilisateur.
+- Si les sessions d’appareils côté utilisateur sont activées, ImgHost enregistre cet appareil côté utilisateur.
 
 Modifier le mot de passe de téléversement invalide les anciennes sessions côté utilisateur. Les visiteurs doivent saisir à nouveau le nouveau mot de passe.
 

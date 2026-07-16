@@ -26,7 +26,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 ## Stažení správcovských skriptů
 
-Dokumentace ImgBed obsahuje tři skripty pro Node.js:
+Dokumentace ImgHost obsahuje tři skripty pro Node.js:
 
 | Skript | Účel |
 | --- | --- |
@@ -40,7 +40,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
-| `--base-url <url>` | Ano | Adresa webu ImgBed, například `https://image.ai6.me` |
+| `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
 | `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit každého požadavku v milisekundách; výchozí hodnota `180000` |

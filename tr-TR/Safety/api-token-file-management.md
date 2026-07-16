@@ -46,7 +46,7 @@ Betiği çalıştırmak için yerel makinede Node.js 18 veya üzeri gerekir.
 
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site adresi, örnek `https://image.ai6.me` |
+| `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
 | `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` ortam değişkeni de kullanılabilir |
 | `--retries <n>` | Hayır | Geçici hatalarda tekrar sayısı; varsayılan `3` |
 | `--timeout-ms <n>` | Hayır | Tek isteğin zaman aşımı; varsayılan `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Klasör oluşturma
 
-ImgBed klasörleri dosya yollarından türetilir; gerçek boş klasör yoktur. Betik klasör oluştururken hedef klasörde `0.md` adlı bir yer tutucu dosya oluşturur. Böylece bu klasör dosya yönetiminde ve klasör istatistiklerinde görünebilir.
+ImgHost klasörleri dosya yollarından türetilir; gerçek boş klasör yoktur. Betik klasör oluştururken hedef klasörde `0.md` adlı bir yer tutucu dosya oluşturur. Böylece bu klasör dosya yönetiminde ve klasör istatistiklerinde görünebilir.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend tek istekte en fazla `15` dosya işler. Betik varsayılan olarak `--batc
 
 ### Gerçekten boş bir klasör oluşturulabilir mi
 
-ImgBed klasörleri dosya yollarından türetilir, bu yüzden gerçek boş klasör yoktur. `--create-folder`, klasörün dosya yönetiminde ve klasör istatistiklerinde görünmesi için `0.md` adlı bir klasör yer tutucu dosyası oluşturur.
+ImgHost klasörleri dosya yollarından türetilir, bu yüzden gerçek boş klasör yoktur. `--create-folder`, klasörün dosya yönetiminde ve klasör istatistiklerinde görünmesi için `0.md` adlı bir klasör yer tutucu dosyası oluşturur.
 
 ### Kısa süreli yükleme Token'ı en fazla ne kadar geçerli olabilir
 

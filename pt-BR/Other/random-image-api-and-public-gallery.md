@@ -64,7 +64,7 @@ Se nenhum arquivo corresponder após a filtragem, a API não retorna resultado c
 
 A API de imagem aleatória armazena em cache os conjuntos de candidatos dos diretórios para melhorar a velocidade.
 
-Depois que os arquivos mudam, o ImgBed atualiza a versão do cache do diretório, e as solicitações posteriores recriam o conjunto de candidatos. Diretórios vazios são armazenados em cache por pouco tempo para evitar consultas repetidas.
+Depois que os arquivos mudam, o ImgHost atualiza a versão do cache do diretório, e as solicitações posteriores recriam o conjunto de candidatos. Diretórios vazios são armazenados em cache por pouco tempo para evitar consultas repetidas.
 
 ## Galeria pública
 

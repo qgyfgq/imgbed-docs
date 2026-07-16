@@ -8,8 +8,8 @@
 | --- | --- |
 | Обліковий запис Google | Для доступу до Google Cloud і авторизації Google Drive |
 | Проєкт Google Cloud | Для ввімкнення Drive API і створення OAuth credentials |
-| OAuth 2.0 client | ImgBed використовує його для отримання `Client ID`, `Client Secret` і `Refresh Token` |
-| Ваш домен ImgBed | Для OAuth redirect URI. Він має збігатися з доменом, який ви реально використовуєте. |
+| OAuth 2.0 client | ImgHost використовує його для отримання `Client ID`, `Client Secret` і `Refresh Token` |
+| Ваш домен ImgHost | Для OAuth redirect URI. Він має збігатися з доменом, який ви реально використовуєте. |
 
 ## Налаштування
 
@@ -38,7 +38,7 @@
 2. Створіть новий client.
 3. Встановіть application type як `Web application`.
 4. Дайте client зрозумілу назву.
-5. Для authorized JavaScript origins введіть URL вашого ImgBed, наприклад:
+5. Для authorized JavaScript origins введіть URL вашого ImgHost, наприклад:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Після створення client скопіюйте ці значення:
 
-| Згенероване значення | Поле ImgBed |
+| Згенероване значення | Поле ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ https://img.example.com/api/oauth/google/callback
 
 У налаштуваннях завантаження виберіть `Google Drive` і заповніть:
 
-| Поле ImgBed | Що ввести |
+| Поле ImgHost | Що ввести |
 | --- | --- |
 | Channel name | Зрозуміла назва, наприклад `Main Google Drive` |
 | Client ID | Client ID з Google Cloud |
@@ -73,7 +73,7 @@ https://img.example.com/api/oauth/google/callback
 | Refresh Token | Поки залиште порожнім. Отримайте його на наступному кроці. |
 | Root directory | Необов'язково. Типово `imgbed`. |
 
-![Вставлення client details в ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Вставлення client details в ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Крок 5. Отримайте Refresh Token
 
@@ -82,7 +82,7 @@ https://img.example.com/api/oauth/google/callback
 3. Пройдіть підказки авторизації.
 4. На callback-сторінці з'явиться `Refresh Token`.
 5. Скопіюйте його.
-6. Поверніться до ImgBed і вставте його в поле `Refresh Token`.
+6. Поверніться до ImgHost і вставте його в поле `Refresh Token`.
 
 ![Копіювання Refresh Token після авторизації](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

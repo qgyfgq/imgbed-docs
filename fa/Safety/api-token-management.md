@@ -26,7 +26,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 ## دانلود اسکریپت‌های مدیریت
 
-مستندات ImgBed سه اسکریپت Node.js دارد:
+مستندات ImgHost سه اسکریپت Node.js دارد:
 
 | اسکریپت | کاربرد |
 | --- | --- |
@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
-| `--base-url <url>` | بله | نشانی سایت ImgBed، مانند `https://image.ai6.me` |
+| `--base-url <url>` | بله | نشانی سایت ImgHost، مانند `https://image.ai6.me` |
 | `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
 | `--retries <n>` | خیر | تعداد تلاش دوباره هنگام خطای موقت؛ پیش‌فرض `3` |
 | `--timeout-ms <n>` | خیر | زمان مجاز هر درخواست بر حسب میلی‌ثانیه؛ پیش‌فرض `180000` |

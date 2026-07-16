@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-List/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-List/1.0 Node';
 
 const ACTION_FLAGS = Object.freeze({
   '--files': 'files',
@@ -93,7 +93,7 @@ const ENUMS = Object.freeze({
 });
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token list tool
+  process.stdout.write(`ImgHost API Token list tool
 
 Usage:
   node imgbed-token-list.mjs --base-url <url> --token <token> --files [filters]
@@ -105,7 +105,7 @@ Usage:
   node imgbed-token-list.mjs --base-url <url> --token <token> --blocked-ips
 
 Required:
-  --base-url <url>             ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>             ImgHost site URL, for example https://image.ai6.me
   --token <token>              API Token with list permission. You can also set IMGBED_API_TOKEN.
 
 Actions:

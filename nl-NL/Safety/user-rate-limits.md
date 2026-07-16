@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Limieten inschakelen
 
-Nadat `Enable Rate Limits` is ingeschakeld, houdt ImgBed recente uploads bij op basis van het IP-adres van de uploader.
+Nadat `Enable Rate Limits` is ingeschakeld, houdt ImgHost recente uploads bij op basis van het IP-adres van de uploader.
 
 Standaardwaarden:
 

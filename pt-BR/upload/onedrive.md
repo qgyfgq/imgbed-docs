@@ -5,7 +5,7 @@
 | Requisito | Por que você precisa disso |
 | --- | --- |
 | Uma conta Microsoft | Usada para acessar páginas administrativas da Microsoft e autorizar OneDrive |
-| Seu domínio ImgBed | Usado para a URL de callback OAuth |
+| Seu domínio ImgHost | Usado para a URL de callback OAuth |
 | Um registro de app | Usado para gerar `Client ID` e `Client Secret` |
 | Uma conta OneDrive | Usada como o local real de armazenamento dos arquivos |
 
@@ -52,7 +52,7 @@ Clique em register depois de preencher o formulário.
 
 Depois que o app for criado, copie estes valores da página de visão geral:
 
-| Campo da Microsoft | Campo do ImgBed |
+| Campo da Microsoft | Campo do ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` para contas organizacionais |
@@ -80,14 +80,14 @@ Depois que o app for criado, copie estes valores da página de visão geral:
 | Permissão | Finalidade |
 | --- | --- |
 | `Files.ReadWrite.All` | Faz upload de arquivos, cria pastas e exclui arquivos |
-| `offline_access` | Permite que o ImgBed obtenha um `Refresh Token` |
+| `offline_access` | Permite que o ImgHost obtenha um `Refresh Token` |
 | `User.Read` | Lê informações da conta e de cota |
 
 ### Etapa 6: Preencha o canal OneDrive
 
 Em Configurações de upload, escolha `OneDrive` e preencha:
 
-| Campo do ImgBed | O que inserir |
+| Campo do ImgHost | O que inserir |
 | --- | --- |
 | Nome do canal | Um nome reconhecível, como `Main OneDrive` |
 | Client ID | O `Application (client) ID` da Microsoft |
@@ -101,7 +101,7 @@ Em Configurações de upload, escolha `OneDrive` e preencha:
 
 Como preencher `Tenant ID`:
 
-| Tipo de conta escolhido | `Tenant ID` do ImgBed |
+| Tipo de conta escolhido | `Tenant ID` do ImgHost |
 | --- | --- |
 | Contas pessoais | `consumers` |
 | Contas pessoais + organizacionais | `common` |
@@ -109,12 +109,12 @@ Como preencher `Tenant ID`:
 
 ### Etapa 7: Obtenha o Refresh Token
 
-1. No ImgBed, clique em `Get Token`.
+1. No ImgHost, clique em `Get Token`.
 2. Entre na conta Microsoft que deseja conectar.
 3. Aprove a solicitação de autorização.
 4. A página de callback mostrará um `Refresh Token`.
 5. Copie-o.
-6. Volte ao ImgBed e cole-o no campo `Refresh Token`.
+6. Volte ao ImgHost e cole-o no campo `Refresh Token`.
 
 ![Copiar refresh token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Referências

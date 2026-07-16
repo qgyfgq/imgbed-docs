@@ -1,23 +1,23 @@
 # Upload-Einstellungen
 
-Die Upload-Einstellungen verbinden ImgBed mit Ihren eigenen Speicherkanälen. Nach der Einrichtung werden hochgeladene Bilder und Dateien im gewählten Dienst gespeichert. ImgBed verwaltet dazu Zugrifflinks, Dateieinträge, Vorschauen, öffentliche Galerien, die Zufallsbild-API, WebDAV-Zugriff und ähnliche Abläufe.
+Die Upload-Einstellungen verbinden ImgHost mit Ihren eigenen Speicherkanälen. Nach der Einrichtung werden hochgeladene Bilder und Dateien im gewählten Dienst gespeichert. ImgHost verwaltet dazu Zugrifflinks, Dateieinträge, Vorschauen, öffentliche Galerien, die Zufallsbild-API, WebDAV-Zugriff und ähnliche Abläufe.
 
 Je nach Nutzung passt ein anderer Kanal besser. Für einen einfachen Einstieg eignen sich Telegram, Discord oder GitHub Releases. Wenn Kapazität, Geschwindigkeit und langfristige Stabilität wichtiger sind, kommen Cloudflare R2, S3, OneDrive, Google Drive, Dropbox, Yandex, pCloud oder ein eigener WebDAV-Dienst infrage.
 
 ## Vor dem Start
 
-> Vor der ersten Nutzung von ImgBed müssen Sie die Initialisierungsseite öffnen und auf "Index neu erstellen" klicken, damit die erforderlichen D1-Tabellen ergänzt werden und spätere Funktionsfehler vermieden werden.
+> Vor der ersten Nutzung von ImgHost müssen Sie die Initialisierungsseite öffnen und auf "Index neu erstellen" klicken, damit die erforderlichen D1-Tabellen ergänzt werden und spätere Funktionsfehler vermieden werden.
 >
 > ![Bei der Initialisierung auf Index neu erstellen klicken](../../image/初始化点击重建索引.png)
 
 ### Optional: D1-Lesereplikation aktivieren
 
-Aktivieren Sie in den D1-Datenbankeinstellungen des Cloudflare-Dashboards die Lesereplikation, um den Zugriff auf Dateiverwaltung, öffentliche Galerie und Zufallsbild-API zu beschleunigen. ImgBed funktioniert auch ohne diese Option normal.
+Aktivieren Sie in den D1-Datenbankeinstellungen des Cloudflare-Dashboards die Lesereplikation, um den Zugriff auf Dateiverwaltung, öffentliche Galerie und Zufallsbild-API zu beschleunigen. ImgHost funktioniert auch ohne diese Option normal.
 
 ![D1-Lesereplikation aktivieren](../../image/d1读取复制.png)
 
 - Bereiten Sie das Speicherkonto oder die API-Zugangsdaten vor.
-- Stellen Sie sicher, dass Ihre ImgBed-Domain erreichbar ist, da OAuth-Kanäle Callback-URLs benötigen.
+- Stellen Sie sicher, dass Ihre ImgHost-Domain erreichbar ist, da OAuth-Kanäle Callback-URLs benötigen.
 - Laden Sie nach dem Hinzufügen eines Kanals zuerst ein Testbild hoch, um Speichern und Öffnen zu prüfen.
 
 ## Kanalliste
@@ -40,4 +40,4 @@ Aktivieren Sie in den D1-Datenbankeinstellungen des Cloudflare-Dashboards die Le
 
 - Welche Informationen jeder Upload-Kanal vor der Einrichtung benötigt.
 - Wie Apps erstellt, Schlüssel kopiert oder Tokens auf externen Plattformen autorisiert werden.
-- Wie die Kanalkonfiguration in ImgBed eingetragen und der Upload geprüft wird.
+- Wie die Kanalkonfiguration in ImgHost eingetragen und der Upload geprüft wird.

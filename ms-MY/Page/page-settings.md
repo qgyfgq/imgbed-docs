@@ -8,8 +8,8 @@ Tetapan halaman mengawal paparan laman, nilai lalai halaman muat naik, imej lata
 | --- | --- |
 | Tajuk laman | Tajuk yang dipaparkan pada tab pelayar. |
 | Ikon laman | Ikon kecil yang dipaparkan pada tab pelayar. |
-| Nama ImgBed | Nama yang dipaparkan pada halaman antara muka awam. |
-| Logo ImgBed | Imej logo yang dipaparkan pada halaman antara muka awam. |
+| Nama ImgHost | Nama yang dipaparkan pada halaman antara muka awam. |
+| Logo ImgHost | Imej logo yang dipaparkan pada halaman antara muka awam. |
 | Pautan logo | URL yang dibuka apabila logo atau avatar diklik. |
 | Selang pertukaran latar belakang | Selang putaran untuk beberapa latar belakang, dalam milisaat. `60000` bermaksud 60 saat. |
 | Kelegapan latar belakang | Kelegapan imej latar belakang daripada `0` hingga `1`. Nilai yang lebih rendah kelihatan lebih cerah. |
@@ -63,5 +63,5 @@ Latar belakang pentadbiran menyokong URL imej. Beberapa URL boleh dipisahkan den
 | --- | --- |
 | Lalai | Awalan rawak berasaskan masa + nama fail asal, contohnya `1760000000000_cat.png`. |
 | Awalan sahaja | Awalan rawak berasaskan masa dan sambungan sahaja, contohnya `1760000000000.png`. |
-| Nama asal sahaja | Mengekalkan nama fail asal, contohnya `cat.png`. Jika terdapat pendua, ImgBed menambah `(1)`, `(2)` dan seterusnya. |
+| Nama asal sahaja | Mengekalkan nama fail asal, contohnya `cat.png`. Jika terdapat pendua, ImgHost menambah `(1)`, `(2)` dan seterusnya. |
 | Pautan pendek | Menggunakan ID pendek 8 aksara dengan sambungan, contohnya `a1b2c3d4.png`. |

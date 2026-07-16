@@ -2,7 +2,7 @@
 
 Die Magnet-Übertragung lädt Dateien aus einem Magnet-Link herunter und lädt sie automatisch in den von Ihnen gewählten Cloud-Speicherkanal hoch.
 
-Sie ist nützlich für die Übertragung von Anime-Folgen, Videos, Archiven und ähnlichen Dateien. Fügen Sie einen Magnet-Link ein, und ImgBed erstellt eine Herunterladeaufgabe im Hintergrund. Nach Abschluss des Herunterladens wird die Datei zu ImgBed hochgeladen und der endgültige Link erscheint in der Liste der hochgeladenen Dateien.
+Sie ist nützlich für die Übertragung von Anime-Folgen, Videos, Archiven und ähnlichen Dateien. Fügen Sie einen Magnet-Link ein, und ImgHost erstellt eine Herunterladeaufgabe im Hintergrund. Nach Abschluss des Herunterladens wird die Datei zu ImgHost hochgeladen und der endgültige Link erscheint in der Liste der hochgeladenen Dateien.
 
 ![Magnet-Übertragung](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Wenn die Einstellungen bereit sind, kehren Sie zur Startseite zurück und fügen
 1. Fügen Sie den Magnet-Link in das Hochladefeld der Startseite ein.
 2. Stellen Sie sicher, dass der Modus auf `Transfer` gesetzt ist.
 3. Klicken Sie auf Hochladen.
-4. Warten Sie, bis ImgBed die Magnet-Aufgabe erstellt.
+4. Warten Sie, bis ImgHost die Magnet-Aufgabe erstellt.
 5. Nach dem Start der Aufgabe können Sie den Fortschritt im schwebenden Panel `Magnet Tasks` unten rechts prüfen.
 
 Herunterladen und Hochladen können Zeit benötigen. Die Geschwindigkeit hängt von der Magnet-Ressource, der GitHub-Laufzeitumgebung und dem ausgewählten Cloud-Speicherkanal ab.
@@ -72,7 +72,7 @@ Häufige Zustände:
 
 ## Hinweise
 
-- Wenn ein Magnet-Link mehrere Dateien enthält, bevorzugt ImgBed für die Anzeige die wichtigste abgeschlossene Datei.
+- Wenn ein Magnet-Link mehrere Dateien enthält, bevorzugt ImgHost für die Anzeige die wichtigste abgeschlossene Datei.
 - Große Dateien benötigen mehr Zeit. Warten Sie, bis die Aufgabe abgeschlossen ist, bevor Sie die Seite aktualisieren.
 - Wenn die Magnet-Ressource keine verfügbaren Peers hat, kann sie sehr langsam sein oder fehlschlagen.
 - Wenn das Cloud-Konto kein Kontingent mehr hat, die Autorisierung abgelaufen ist oder das Hochladeverzeichnis falsch ist, kann die Aufgabe fehlschlagen.

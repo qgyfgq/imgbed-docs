@@ -5,7 +5,7 @@
 | Потрібно | Навіщо це потрібно |
 | --- | --- |
 | Обліковий запис Microsoft | Для доступу до сторінок адміністрування Microsoft і авторизації OneDrive |
-| Ваш домен ImgBed | Для OAuth callback URL |
+| Ваш домен ImgHost | Для OAuth callback URL |
 | App registration | Для отримання `Client ID` і `Client Secret` |
 | Обліковий запис OneDrive | Фактичне місце зберігання файлів |
 
@@ -52,7 +52,7 @@ Continue searching in Microsoft Entra ID
 
 Після створення застосунку скопіюйте ці значення зі сторінки overview:
 
-| Поле Microsoft | Поле ImgBed |
+| Поле Microsoft | Поле ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` для organizational accounts |
@@ -80,14 +80,14 @@ Continue searching in Microsoft Entra ID
 | Permission | Призначення |
 | --- | --- |
 | `Files.ReadWrite.All` | Завантаження файлів, створення папок і видалення файлів |
-| `offline_access` | Дозволяє ImgBed отримати `Refresh Token` |
+| `offline_access` | Дозволяє ImgHost отримати `Refresh Token` |
 | `User.Read` | Читання інформації про акаунт і квоту |
 
 ### Крок 6. Заповніть канал OneDrive
 
 У налаштуваннях завантаження виберіть `OneDrive` і заповніть:
 
-| Поле ImgBed | Що ввести |
+| Поле ImgHost | Що ввести |
 | --- | --- |
 | Channel name | Зрозуміла назва, наприклад `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ Continue searching in Microsoft Entra ID
 
 Як заповнити `Tenant ID`:
 
-| Вибраний тип акаунтів | ImgBed `Tenant ID` |
+| Вибраний тип акаунтів | ImgHost `Tenant ID` |
 | --- | --- |
 | Personal accounts | `consumers` |
 | Personal + organizational accounts | `common` |
@@ -109,12 +109,12 @@ Continue searching in Microsoft Entra ID
 
 ### Крок 7. Отримайте Refresh Token
 
-1. В ImgBed натисніть `Get Token`.
+1. В ImgHost натисніть `Get Token`.
 2. Увійдіть у Microsoft-акаунт, який хочете підключити.
 3. Підтвердьте запит авторизації.
 4. На callback-сторінці з'явиться `Refresh Token`.
 5. Скопіюйте його.
-6. Поверніться до ImgBed і вставте його в поле `Refresh Token`.
+6. Поверніться до ImgHost і вставте його в поле `Refresh Token`.
 
 ![Копіювання refresh token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Посилання

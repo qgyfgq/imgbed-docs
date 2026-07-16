@@ -38,7 +38,7 @@
 5. د prompt له مخې بوټ username ولیکئ. username عموماً باید په `bot` پای ته ورسېږي.
 6. کله چې بوټ جوړ شي، `@BotFather` به بوټ ټوکن درکړي.
 
-دا ټوکن په ImgBed کې د `Bot Token` په فیلډ کې داخلېږي.
+دا ټوکن په ImgHost کې د `Bot Token` په فیلډ کې داخلېږي.
 
 ![خوندي the بوټ ټوکن](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ public او private چینلs دواړه کارول کېدای شي.
 4. په message picker کې target چینل وټاکئ او `@userinfobot` ته یې واستوئ.
 5. کله چې result راشي، هغه number کاپي کړئ چې د `Id: -100...` په ډول ښکاري.
 
-هغه number چې په `-100` پیلېږي، د ImgBed لپاره اړین `Session ID (Chat ID)` دی.
+هغه number چې په `-100` پیلېږي، د ImgHost لپاره اړین `Session ID (Chat ID)` دی.
 
 ![Get the چینل ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. په ImgBed کې Telegram چینل ډک کړئ
+### 5. په ImgHost کې Telegram چینل ډک کړئ
 
 تنظیمات dialog ته بېرته ولاړ شئ او fields داسې ډک کړئ:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

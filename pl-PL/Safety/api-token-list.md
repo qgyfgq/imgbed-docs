@@ -1,6 +1,6 @@
 # Listowanie i filtrowanie przez API Token
 
-Skrypt listowania przez API Token jest przeznaczony dla skryptów, automatyzacji i programów zewnętrznych, które muszą odczytywać dane ImgBed. Używa wyłącznie uprawnienia `list`; nie przesyła plików, nie usuwa plików, nie zmienia konfiguracji ani nie blokuje i nie odblokowuje przesyłania z konkretnego IP.
+Skrypt listowania przez API Token jest przeznaczony dla skryptów, automatyzacji i programów zewnętrznych, które muszą odczytywać dane ImgHost. Używa wyłącznie uprawnienia `list`; nie przesyła plików, nie usuwa plików, nie zmienia konfiguracji ani nie blokuje i nie odblokowuje przesyłania z konkretnego IP.
 
 ![Edycja API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Wymagany jest Node.js 18 lub nowszy.
 
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
-| `--base-url <url>` | Tak | Adres ImgBed, np. `https://image.ai6.me` |
+| `--base-url <url>` | Tak | Adres ImgHost, np. `https://image.ai6.me` |
 | `--token <token>` | Tak | API Token; można użyć `IMGBED_API_TOKEN` |
 | `--retries <n>` | Nie | Próby ponowienia przy błędach tymczasowych; domyślnie `3` |
 | `--timeout-ms <n>` | Nie | Timeout jednego requestu; domyślnie `180000` |

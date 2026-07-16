@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Włączanie limitów
 
-Po włączeniu `Włącz limity częstotliwości` ImgBed śledzi ostatnie przesłania według adresu IP osoby przesyłającej.
+Po włączeniu `Włącz limity częstotliwości` ImgHost śledzi ostatnie przesłania według adresu IP osoby przesyłającej.
 
 Wartości domyślne:
 

@@ -46,7 +46,7 @@ Node.js 18 ou une version ultérieure doit être installé localement pour exéc
 
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Oui | URL du site ImgBed, par exemple `https://image.ai6.me` |
+| `--base-url <url>` | Oui | URL du site ImgHost, par exemple `https://image.ai6.me` |
 | `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGBED_API_TOKEN` |
 | `--retries <n>` | Non | Nombre de nouvelles tentatives en cas d’échec temporaire. Valeur par défaut : `3` |
 | `--timeout-ms <n>` | Non | Délai d’expiration d’une requête. Valeur par défaut : `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Créer un dossier
 
-Les répertoires d’ImgBed proviennent des chemins de fichiers ; il n’existe pas de vrai répertoire vide. Quand le script crée un dossier, il crée un fichier d’espace réservé `0.md` dans le répertoire cible, afin que ce répertoire apparaisse dans la gestion des fichiers et les statistiques de répertoire.
+Les répertoires d’ImgHost proviennent des chemins de fichiers ; il n’existe pas de vrai répertoire vide. Quand le script crée un dossier, il crée un fichier d’espace réservé `0.md` dans le répertoire cible, afin que ce répertoire apparaisse dans la gestion des fichiers et les statistiques de répertoire.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Le backend traite au plus `15` fichiers par requête. Le script utilise `--batch
 
 ### Peut-on créer un vrai dossier vide
 
-Les répertoires ImgBed sont déduits des chemins de fichiers, il n’existe donc pas de vrai dossier vide. `--create-folder` crée un fichier d’espace réservé `0.md` pour que ce répertoire apparaisse dans la gestion des fichiers et les statistiques de répertoire.
+Les répertoires ImgHost sont déduits des chemins de fichiers, il n’existe donc pas de vrai dossier vide. `--create-folder` crée un fichier d’espace réservé `0.md` pour que ce répertoire apparaisse dans la gestion des fichiers et les statistiques de répertoire.
 
 ### Quelle est la durée maximale d’un Token de téléversement à courte durée de vie
 

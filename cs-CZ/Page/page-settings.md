@@ -8,8 +8,8 @@ Nastavení stránky řídí vzhled webu, výchozí nastavení stránky pro nahr�
 | --- | --- |
 | Titulek webu | Titulek zobrazený na kartě prohlížeče. |
 | Ikona webu | Malá ikona zobrazená na kartě prohlížeče. |
-| Název ImgBed | Název zobrazený na frontendových stránkách. |
-| Logo ImgBed | Obrázek loga zobrazený na frontendových stránkách. |
+| Název ImgHost | Název zobrazený na frontendových stránkách. |
+| Logo ImgHost | Obrázek loga zobrazený na frontendových stránkách. |
 | Odkaz loga | URL adresa otevřená po kliknutí na logo nebo profilový obrázek. |
 | Interval střídání pozadí | Interval rotace více pozadí v milisekundách. `60000` znamená 60 sekund. |
 | Průhlednost pozadí | Průhlednost obrázku pozadí od `0` do `1`. Nižší hodnoty jsou světlejší. |
@@ -63,5 +63,5 @@ Pozadí administrace podporuje URL adresy obrázků. Více URL adres lze odděli
 | --- | --- |
 | Výchozí | Časově náhodná předpona + původní název souboru, například `1760000000000_cat.png`. |
 | Pouze předpona | Časově náhodná předpona a přípona, například `1760000000000.png`. |
-| Pouze původní název | Zachová původní název, například `cat.png`. Při duplicitě ImgBed přidá `(1)`, `(2)` a tak dále. |
+| Pouze původní název | Zachová původní název, například `cat.png`. Při duplicitě ImgHost přidá `(1)`, `(2)` a tak dále. |
 | Krátký odkaz | Použije 8znakové krátké ID a příponu, například `a1b2c3d4.png`. |

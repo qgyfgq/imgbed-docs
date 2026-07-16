@@ -2,7 +2,7 @@
 
 ## Şu Durumlar İçin Uygun
 
-- pCloud hesabınız var ve ImgBed'in görselleri pCloud içinde saklamasını istiyorsunuz.
+- pCloud hesabınız var ve ImgHost'in görselleri pCloud içinde saklamasını istiyorsunuz.
 - Kanal kimlik bilgisi olarak pCloud hesap e-postası ve parolasını kullanmanız sizin için uygunsa.
 
 ## Önce Gerekenler
@@ -70,7 +70,7 @@ Hesap bölgenize göre API host seçin:
 
 pCloud OAuth2 varsayılan olarak self-service değildir. Etkinleştirmeleri için pCloud'a e-posta göndermeniz gerekir.
 
-Mevcut pCloud OAuth2 akışı ayrıca ImgBed'in ihtiyaç duyduğu kısa ömürlü upload link workflow'u desteklemez. Bu nedenle kanal hesap e-postası ve parolasıyla giriş kullanır.
+Mevcut pCloud OAuth2 akışı ayrıca ImgHost'in ihtiyaç duyduğu kısa ömürlü upload link workflow'u desteklemez. Bu nedenle kanal hesap e-postası ve parolasıyla giriş kullanır.
 
 ### Hangi API Host kullanılmalı?
 

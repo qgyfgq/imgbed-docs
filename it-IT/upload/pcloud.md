@@ -2,7 +2,7 @@
 
 ## Ideale se
 
-- Hai un account pCloud e vuoi salvare lì le immagini di ImgBed.
+- Hai un account pCloud e vuoi salvare lì le immagini di ImgHost.
 - Ti va bene usare email e password dell'account pCloud come credenziali del canale.
 
 ## Prima di iniziare
@@ -70,7 +70,7 @@ Scegli l'host API in base alla regione dell'account:
 
 OAuth2 di pCloud non è attivabile autonomamente per impostazione predefinita. Devi scrivere a pCloud e chiedere l'abilitazione.
 
-Inoltre l'attuale flusso OAuth2 di pCloud non supporta il flusso di lavoro con collegamenti di caricamento a breve durata richiesto da ImgBed. Per questo il canale usa accesso con email e password.
+Inoltre l'attuale flusso OAuth2 di pCloud non supporta il flusso di lavoro con collegamenti di caricamento a breve durata richiesto da ImgHost. Per questo il canale usa accesso con email e password.
 
 ### Quale host API devo usare?
 

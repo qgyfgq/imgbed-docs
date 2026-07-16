@@ -7,7 +7,7 @@
 | आवश्यकता | उद्देश्य |
 | --- | --- |
 | GitHub खाता | एक्सेस टोकन बनाने और रिपॉज़िटरी का मालिक होने के लिए। |
-| GitHub एक्सेस टोकन | ImgBed को GitHub API तक पहुँचने, रिलीज़ बनाने और फ़ाइलें अपलोड करने के लिए। |
+| GitHub एक्सेस टोकन | ImgHost को GitHub API तक पहुँचने, रिलीज़ बनाने और फ़ाइलें अपलोड करने के लिए। |
 | रिपॉज़िटरी नाम | आप केवल रिपॉज़िटरी नाम दर्ज कर सकते हैं, जैसे `image`। |
 
 ## कॉन्फ़िगरेशन चरण
@@ -27,7 +27,7 @@
 
 ![GitHub अनुमतियाँ जोड़ें](../../image/upload/github-releases/添加github权限.png)
 
-## चरण 2: ImgBed में GitHub Releases चैनल भरें
+## चरण 2: ImgHost में GitHub Releases चैनल भरें
 
 अपलोड सेटिंग्स में `GitHub Releases` चुनने के बाद फ़ील्ड इस तरह भरें:
 
@@ -49,9 +49,9 @@
 
 | सिस्टम व्यवहार | विवरण |
 | --- | --- |
-| छोटा रिपॉज़िटरी नाम | ImgBed वर्तमान GitHub खाते को पहचानता है और मान को पूरे रिपॉज़िटरी पथ में बदलता है। |
-| पूरा रिपॉज़िटरी पथ | ImgBed `username/repository` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
-| रिपॉज़िटरी जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो रिपॉज़िटरी न होने पर ImgBed उसे अपने आप बनाता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgBed उसी पथ का सीधे उपयोग करता है। |
+| छोटा रिपॉज़िटरी नाम | ImgHost वर्तमान GitHub खाते को पहचानता है और मान को पूरे रिपॉज़िटरी पथ में बदलता है। |
+| पूरा रिपॉज़िटरी पथ | ImgHost `username/repository` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
+| रिपॉज़िटरी जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो रिपॉज़िटरी न होने पर ImgHost उसे अपने आप बनाता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgHost उसी पथ का सीधे उपयोग करता है। |
 | सार्वजनिक/निजी स्थिति | रिपॉज़िटरी दृश्यता वर्तमान स्विच के अनुसार सिंक्रनाइज़ होती है। |
 
 ## त्वरित सूची
@@ -61,9 +61,9 @@ GitHub Releases इस तरह काम करता है:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

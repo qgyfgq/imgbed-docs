@@ -41,7 +41,7 @@ Veřejný Space můžete dočasně použít, ale veřejné Spaces sdílí mnoho 
 3. Klikněte v pravém horním rohu na nabídku se třemi tečkami.
 4. Vyberte `Duplicate this Space`.
 5. Ponechte výchozí název Space nebo zvolte vlastní název, například `wd-tagger`.
-6. Viditelnost nastavte na `Public`. Veřejné Spaces se z ImgBed volají snáz.
+6. Viditelnost nastavte na `Public`. Veřejné Spaces se z ImgHost volají snáz.
 7. Zpočátku ponechte výchozí bezplatný hardware. Upgrade zvažte až tehdy, když jsou fronty zjevné.
 8. Vytvořte Space a počkejte, až se dokončí sestavení.
 
@@ -51,7 +51,7 @@ Po dokončení sestavení otevřete stránku svého Space. URL obvykle vypadá t
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Zkopírujte URL z prohlížeče a vložte ji do pole `Space URLs` v ImgBed.
+Zkopírujte URL z prohlížeče a vložte ji do pole `Space URLs` v ImgHost.
 
 ## Vyplnění více Space URL
 
@@ -65,7 +65,7 @@ Příklady:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL stránky zkopírovaného Space. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Stránka Space zduplikovaného do vašeho účtu. |
 
-Můžete zadat více URL. ImgBed používá více Spaces společně, což může zlepšit rychlost.
+Můžete zadat více URL. ImgHost používá více Spaces společně, což může zlepšit rychlost.
 
 Pokud je jeden Space dočasně nedostupný, ostatní mohou ve zpracování pokračovat.
 
@@ -103,7 +103,7 @@ Pokud je štítků příliš málo, obecný práh mírně snižte.
 3. Klikněte na spuštění štítkování.
 4. Počkejte na dokončení průběhu.
 
-Pokud je cílová složka prázdná, ImgBed zpracuje všechny složky.
+Pokud je cílová složka prázdná, ImgHost zpracuje všechny složky.
 
 Hromadné štítkování je nejvhodnější pro starší obrázky. Pro nové obrázky zapněte automatické štítkování při nahrání, abyste ho nemuseli pokaždé spouštět ručně.
 
@@ -121,19 +121,19 @@ Automatické štítkování zpracovává hlavně obrazové soubory.
 
 Obrázky, které už mají kompletní štítky, orientaci, hodnocení, šířku a výšku, se přeskočí, aby se zbytečně nevolal Space.
 
-ImgBed doplňuje jen chybějící informace, kdykoli je to možné. Pokud například chybí pouze orientace, pokusí se ji doplnit bez volání celého procesu štítkování obsahu.
+ImgHost doplňuje jen chybějící informace, kdykoli je to možné. Pokud například chybí pouze orientace, pokusí se ji doplnit bez volání celého procesu štítkování obsahu.
 
 ## FAQ
 
 ### Proč duplikovat vlastní Space?
 
-Veřejné Spaces sdílí mnoho uživatelů. Váš vlastní zduplikovaný Space používá hlavně váš web ImgBed, takže je obvykle rychlejší a spolehlivější.
+Veřejné Spaces sdílí mnoho uživatelů. Váš vlastní zduplikovaný Space používá hlavně váš web ImgHost, takže je obvykle rychlejší a spolehlivější.
 
 ### Space se pořád spouští
 
 Po prvním vytvoření nebo po dlouhé nečinnosti může Space potřebovat čas na spuštění.
 
-Nejprve otevřete stránku svého Space. Jakmile dokáže normálně rozpoznat obrázek, vraťte se do ImgBed a spusťte štítkování.
+Nejprve otevřete stránku svého Space. Jakmile dokáže normálně rozpoznat obrázek, vraťte se do ImgHost a spusťte štítkování.
 
 ### Jak zkopírovat Space URL?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

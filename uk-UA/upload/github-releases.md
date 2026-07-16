@@ -7,7 +7,7 @@
 | Потрібно | Навіщо це потрібно |
 | --- | --- |
 | Обліковий запис GitHub | Для створення access token і володіння репозиторієм. |
-| GitHub Access Token | ImgBed використовує його для доступу до GitHub API, створення releases і завантаження файлів. |
+| GitHub Access Token | ImgHost використовує його для доступу до GitHub API, створення releases і завантаження файлів. |
 | Назва репозиторію | Можна ввести тільки назву репозиторію, наприклад `image`. |
 
 ## Налаштування
@@ -27,7 +27,7 @@
 
 ![Додавання прав GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## Крок 2. Заповніть канал GitHub Releases в ImgBed
+## Крок 2. Заповніть канал GitHub Releases в ImgHost
 
 Після вибору `GitHub Releases` у налаштуваннях завантаження заповніть поля так:
 
@@ -49,9 +49,9 @@
 
 | Поведінка системи | Опис |
 | --- | --- |
-| Коротка назва репозиторію | ImgBed визначає поточний обліковий запис GitHub і розгортає значення до повного шляху репозиторію. |
-| Повний шлях репозиторію | ImgBed використовує шлях `username/repository` саме в тому вигляді, у якому його введено. |
-| Перевірка репозиторію | Якщо використовується шлях поточного особистого акаунта, ImgBed автоматично створює репозиторій, коли його ще немає. Якщо повний шлях введено вручну, ImgBed використовує його напряму. |
+| Коротка назва репозиторію | ImgHost визначає поточний обліковий запис GitHub і розгортає значення до повного шляху репозиторію. |
+| Повний шлях репозиторію | ImgHost використовує шлях `username/repository` саме в тому вигляді, у якому його введено. |
+| Перевірка репозиторію | Якщо використовується шлях поточного особистого акаунта, ImgHost автоматично створює репозиторій, коли його ще немає. Якщо повний шлях введено вручну, ImgHost використовує його напряму. |
 | Публічний або приватний стан | Видимість репозиторію синхронізується відповідно до поточного перемикача. |
 
 ## Короткий чекліст
@@ -61,9 +61,9 @@ GitHub Releases працює так:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

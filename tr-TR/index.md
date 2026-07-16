@@ -1,20 +1,20 @@
 ---
-description: "Türkçe ImgBed belgeleri: Cloudflare üzerinde görsel ve dosya barındırma, yükleme kanalları, API belirteçleri, herkese açık galeri, rastgele görsel API'si, yedekleme, OCR ve blog kurulumu."
+description: "Türkçe ImgHost belgeleri: Cloudflare üzerinde görsel ve dosya barındırma, yükleme kanalları, API belirteçleri, herkese açık galeri, rastgele görsel API'si, yedekleme, OCR ve blog kurulumu."
 ---
 
-# ImgBed
+# ImgHost
 
 Cloudflare ekosistemi üzerine kurulu, her şeyi kapsayan kişisel içerik barındırma aracı.
 
-ImgBed görsel yükleme ve bağlantı yönetimiyle başladı. Bugün kişisel içerik barındırma için eksiksiz bir çözüme dönüştü. ImgBed ile şunları yapabilirsiniz:
+ImgHost görsel yükleme ve bağlantı yönetimiyle başladı. Bugün kişisel içerik barındırma için eksiksiz bir çözüme dönüştü. ImgHost ile şunları yapabilirsiniz:
 
 - Dosyaları tercih ettiğiniz herhangi bir depolama kanalına yüklemek
 - Görselleri ve her formattaki dosyaları herkese açık şekilde paylaşmak
 - Bir dakika içinde hızlıca kişisel blog kurmak
 - Magnet bağlantılarından dosyaları tek tıkla kaydetmek
-- ImgBed düğüm federasyonuna katılıp açık dosya indekslerini paylaşmak
+- ImgHost düğüm federasyonuna katılıp açık dosya indekslerini paylaşmak
 
-Başlangıçtaki amacımız, herkesin kendine ait bir görsel barındırma ve dosya paylaşım sitesine sahip olabilmesi. Hangi ülkeden geldiğiniz ya da hangi dili kullandığınız fark etmez; ister yalnızca görselleri kaydetmek, albümleri düzenlemek ve arkadaşlarınızla dosya paylaşmak isteyin, ister blog, yaratıcı içerik veya herkese açık kaynaklar için kararlı bir barındırma alanı kurmak isteyin, ImgBed bu işe başlama eşiğini olabildiğince düşürmeyi ve süreci daha özgür, daha anlaşılır ve daha kolay hale getirmeyi amaçlar.
+Başlangıçtaki amacımız, herkesin kendine ait bir görsel barındırma ve dosya paylaşım sitesine sahip olabilmesi. Hangi ülkeden geldiğiniz ya da hangi dili kullandığınız fark etmez; ister yalnızca görselleri kaydetmek, albümleri düzenlemek ve arkadaşlarınızla dosya paylaşmak isteyin, ister blog, yaratıcı içerik veya herkese açık kaynaklar için kararlı bir barındırma alanı kurmak isteyin, ImgHost bu işe başlama eşiğini olabildiğince düşürmeyi ve süreci daha özgür, daha anlaşılır ve daha kolay hale getirmeyi amaçlar.
 
 ## Kutudan çıktığı gibi güçlü yetenekler
 
@@ -23,11 +23,11 @@ Başlangıçtaki amacımız, herkesin kendine ait bir görsel barındırma ve do
 - 🧩 Tam modüler tasarım: tüm özellikler ihtiyaca göre açılır, kaynak israfı olmaz
 - 🔐 İçerik izinlerini ayrıntılı yönetmek için API Token, erişim modları ve liste kurallarını destekler
 
-Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelliği açık, kararlı ve kullanımı iyi hale getirmek için elimizden geleni yapacağız. ImgBed kendi görsel barındırma alanınıza, blogunuza veya dosya paylaşım alanınıza daha kolay sahip olmanıza yardımcı olursa çok mutlu oluruz.
+Bu proje gelişmeye devam ediyor. İmkanlarımız sınırlı, ancak her özelliği açık, kararlı ve kullanımı iyi hale getirmek için elimizden geleni yapacağız. ImgHost kendi görsel barındırma alanınıza, blogunuza veya dosya paylaşım alanınıza daha kolay sahip olmanıza yardımcı olursa çok mutlu oluruz.
 
 ## Kullanmaya başlayın
 
-<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgBed’i dağıt"><img src="../image/部署按钮.png" alt="ImgBed’i dağıt"></a> üzerinden ImgBed’i dağıtarak hızla kendi görsel ve dosya barındırma hizmetinize sahip olun.
+<a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="ImgHost’i dağıt"><img src="../image/部署按钮.png" alt="ImgHost’i dağıt"></a> üzerinden ImgHost’i dağıtarak hızla kendi görsel ve dosya barındırma hizmetinize sahip olun.
 
 ## Açık kaynak teşekkürleri
 
@@ -48,5 +48,5 @@ Bu proje, açık kaynaklı [CloudFlare-ImgBed](https://github.com/MarSeventh/Clo
 
 Bu projeyi kullanırken bir sorunla karşılaşırsanız lütfen bu projenin GitHub Issues sayfası veya aşağıdaki iletişim bilgileri üzerinden bildirin. Gereksiz rahatsızlığa yol açmamak için yukarıda belirtilen açık kaynak projelerinin yazarlarıyla veya bakım sorumlularıyla iletişime geçmeyin; bu sorunları çözme sorumluluğu bu projenin bakım ekibine aittir.
 
-- 🐛 Hata veya özellik önerileri: [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues) üzerinden gönderin
+- 🐛 Hata veya özellik önerileri: [GitHub Issues](https://github.com/axibayuit-a11y/imghost-docs/issues) üzerinden gönderin
 - 📧 Diğer iletişim: axibayuit@gmail.com

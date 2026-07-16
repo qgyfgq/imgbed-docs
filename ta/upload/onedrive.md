@@ -5,7 +5,7 @@
 | தேவை | ஏன் தேவை |
 | --- | --- |
 | Microsoft கணக்கு | Microsoft admin pages அணுகவும் OneDrive authorize செய்யவும் |
-| உங்கள் ImgBed டொமைன் | OAuth callback URL-க்கு |
+| உங்கள் ImgHost டொமைன் | OAuth callback URL-க்கு |
 | செயலி registration | `Client ID` மற்றும் `Client Secret` உருவாக்க |
 | OneDrive கணக்கு | உண்மையான கோப்பு சேமிப்பு location ஆக |
 
@@ -52,7 +52,7 @@ form நிரப்பிய பிறகு register என்பதைக் 
 
 செயலி உருவான பிறகு overview page-ல் இருந்து:
 
-| Microsoft புலம் | ImgBed புலம் |
+| Microsoft புலம் | ImgHost புலம் |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | organizational கணக்குகளுக்கான `Tenant ID` |
@@ -80,14 +80,14 @@ form நிரப்பிய பிறகு register என்பதைக் 
 | அனுமதி | நோக்கம் |
 | --- | --- |
 | `Files.ReadWrite.All` | கோப்புகளைப் பதிவேற்ற, folders உருவாக்க, கோப்புகளை நீக்க |
-| `offline_access` | ImgBed `Refresh Token` பெற அனுமதிக்கிறது |
+| `offline_access` | ImgHost `Refresh Token` பெற அனுமதிக்கிறது |
 | `User.Read` | கணக்கு மற்றும் quota தகவலைப் படிக்கிறது |
 
-### படி 6: ImgBed-ல் OneDrive சேனல் நிரப்பவும்
+### படி 6: ImgHost-ல் OneDrive சேனல் நிரப்பவும்
 
 பதிவேற்ற அமைப்புகள்-ல் `OneDrive` தேர்வு செய்து:
 
-| ImgBed புலம் | எதை உள்ளிட வேண்டும் |
+| ImgHost புலம் | எதை உள்ளிட வேண்டும் |
 | --- | --- |
 | சேனல் பெயர் | அறியக்கூடிய பெயர், உதா. `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ form நிரப்பிய பிறகு register என்பதைக் 
 
 `Tenant ID` நிரப்புவது:
 
-| நீங்கள் தேர்வு செய்த கணக்கு வகை | ImgBed `Tenant ID` |
+| நீங்கள் தேர்வு செய்த கணக்கு வகை | ImgHost `Tenant ID` |
 | --- | --- |
 | தனிப்பட்ட கணக்குகள் | `consumers` |
 | தனிப்பட்ட + நிறுவனம் சார்ந்த கணக்குகள் | `common` |
@@ -109,12 +109,12 @@ form நிரப்பிய பிறகு register என்பதைக் 
 
 ### படி 7: Refresh டோக்கன் பெறவும்
 
-1. ImgBed-ல் `Get Token` கிளிக் செய்யவும்.
+1. ImgHost-ல் `Get Token` கிளிக் செய்யவும்.
 2. இணைக்க வேண்டிய Microsoft கணக்கில் உள்நுழையவும்.
 3. authorization prompt-ஐ அனுமதிக்கவும்.
 4. callback page `Refresh Token` காட்டும்.
 5. அதை நகலெடுக்கவும்.
-6. ImgBed-க்கு திரும்பி, அதை `Refresh Token` புலத்தில் ஒட்டவும்.
+6. ImgHost-க்கு திரும்பி, அதை `Refresh Token` புலத்தில் ஒட்டவும்.
 
 ![நகலெடு refresh டோக்கன்](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## மேற்கோள்கள்

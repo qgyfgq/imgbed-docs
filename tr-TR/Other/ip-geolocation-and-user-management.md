@@ -28,7 +28,7 @@ Yeni IP coğrafi konumu akışı, tek bir harita hizmetine dayanmak yerine birde
 
 Yalnızca ihtiyacınız olan hizmetleri doldurun. Her alanı yapılandırmanız gerekmez.
 
-Hiçbir anahtar sağlanmazsa ImgBed yine yerleşik ücretsiz kaynakları denemeye devam eder; ancak kararlılık, dil desteği ve doğruluk kendi yapılandırdığınız bir hizmetten daha düşük olabilir.
+Hiçbir anahtar sağlanmazsa ImgHost yine yerleşik ücretsiz kaynakları denemeye devam eder; ancak kararlılık, dil desteği ve doğruluk kendi yapılandırdığınız bir hizmetten daha düşük olabilir.
 
 ## Önerilen Seçimler
 
@@ -57,9 +57,9 @@ Hesap ID'sini MaxMind panosunda bulun ve License Keys sayfasından bir License K
 
 ![MaxMind anahtar yapılandırması](../../image/other/ip定位/maxmind的key配置.png)
 
-Oluşturduktan sonra Account ID ve License Key değerlerini ImgBed'e yapıştırıp kaydedin.
+Oluşturduktan sonra Account ID ve License Key değerlerini ImgHost'e yapıştırıp kaydedin.
 
-MaxMind'in ücretsiz planı günlük kullanım için uygundur, ancak istek sınırları vardır. Kota aşılırsa ImgBed diğer kullanılabilir kaynakları denemeye devam eder.
+MaxMind'in ücretsiz planı günlük kullanım için uygundur, ancak istek sınırları vardır. Kota aşılırsa ImgHost diğer kullanılabilir kaynakları denemeye devam eder.
 
 ## ipapi Kurulumu
 
@@ -69,9 +69,9 @@ ipapi konsolunu açın ve orada gösterilen API Key değerini kopyalayın.
 
 ![ipapi yapılandırması](../../image/other/ip定位/ipapi配置.png)
 
-ImgBed'deki `ipapi Key` alanına yapıştırın ve kaydedin.
+ImgHost'deki `ipapi Key` alanına yapıştırın ve kaydedin.
 
-ipapi çok dilli IP coğrafi konumunu destekler ve adreslerin seçilen dilde gösterilmesini istediğinizde kullanışlıdır. Ücretsiz planında da istek sınırları vardır. Kota biterse ImgBed diğer kullanılabilir kaynakları denemeye devam eder.
+ipapi çok dilli IP coğrafi konumunu destekler ve adreslerin seçilen dilde gösterilmesini istediğinizde kullanışlıdır. Ücretsiz planında da istek sınırları vardır. Kota biterse ImgHost diğer kullanılabilir kaynakları denemeye devam eder.
 
 ## Tencent Map Key Kurulumu
 

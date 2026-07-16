@@ -7,7 +7,7 @@
 | ข้อกำหนด | วัตถุประสงค์ |
 | --- | --- |
 | Hugging Face account | ใช้สร้าง access token และเป็น owner ของ repository |
-| Hugging Face User Access Token | ImgBed ใช้เข้าถึง Hugging Face API, สร้าง repositories และอัปโหลดไฟล์ |
+| Hugging Face User Access Token | ImgHost ใช้เข้าถึง Hugging Face API, สร้าง repositories และอัปโหลดไฟล์ |
 | Repository name | ใส่เฉพาะ repository name ก็ได้ เช่น `image` |
 
 ## ขั้นตอนตั้งค่า
@@ -24,7 +24,7 @@
 
 ![สร้าง token](../../image/upload/huggingface/创建令牌.png)
 
-## ขั้นตอนที่ 2: ใส่ช่องทาง Hugging Face ใน ImgBed
+## ขั้นตอนที่ 2: ใส่ช่องทาง Hugging Face ใน ImgHost
 
 หลังเลือก `Hugging Face` ใน Upload Settings ให้กรอกฟิลด์ดังนี้:
 
@@ -46,9 +46,9 @@
 
 | พฤติกรรมของระบบ | คำอธิบาย |
 | --- | --- |
-| Short repository name | ImgBed ระบุ Hugging Face account ปัจจุบัน แล้วขยายค่าเป็นพาธ repository แบบเต็ม |
-| Full repository path | ImgBed ใช้ path `username/repository` ตามที่ใส่มาแบบตรงตัว |
-| การตรวจสอบ repository | ถ้าใช้พาธของ personal account ปัจจุบัน ImgBed จะพยายามสร้าง repository เมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgBed จะใช้พาธนั้นโดยตรง |
+| Short repository name | ImgHost ระบุ Hugging Face account ปัจจุบัน แล้วขยายค่าเป็นพาธ repository แบบเต็ม |
+| Full repository path | ImgHost ใช้ path `username/repository` ตามที่ใส่มาแบบตรงตัว |
+| การตรวจสอบ repository | ถ้าใช้พาธของ personal account ปัจจุบัน ImgHost จะพยายามสร้าง repository เมื่อยังไม่มี ถ้าใส่พาธแบบเต็มเอง ImgHost จะใช้พาธนั้นโดยตรง |
 | Repository type | ช่องทางนี้ใช้ `dataset` repository |
 | Public/private state | Repository visibility จะ sync ตาม switch ปัจจุบัน |
 
@@ -58,10 +58,10 @@
 Sign in to Hugging Face
 -> Create an Access Token
 -> Select write permission
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
--> ImgBed checks or creates the dataset repository
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
+-> ImgHost checks or creates the dataset repository
 -> Upload a test image
 ```

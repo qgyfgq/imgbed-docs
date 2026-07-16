@@ -38,7 +38,7 @@
 5. Ikut arahan untuk memasukkan nama pengguna bot. Biasanya nama pengguna perlu berakhir dengan `bot`.
 6. Selepas bot dibuat, `@BotFather` akan mengembalikan bot token.
 
-Token ini ialah `Bot Token` yang perlu anda masukkan dalam ImgBed.
+Token ini ialah `Bot Token` yang perlu anda masukkan dalam ImgHost.
 
 ![Simpan token bot](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@ Untuk muat naik yang paling boleh dipercayai, berikan kebenaran pentadbir kepada
 4. Dalam pemilih mesej, pilih saluran sasaran dan hantar kepada `@userinfobot`.
 5. Apabila `@userinfobot` mengembalikan hasil, salin nombor yang ditunjukkan sebagai `Id: -100...`.
 
-Nombor yang bermula dengan `-100` ialah `Session ID (Chat ID)` yang diperlukan oleh ImgBed.
+Nombor yang bermula dengan `-100` ialah `Session ID (Chat ID)` yang diperlukan oleh ImgHost.
 
 ![Dapatkan channel ID](../../image/upload/telegram/获取频道id.png)
 
-### 5. Isi Saluran Telegram Dalam ImgBed
+### 5. Isi Saluran Telegram Dalam ImgHost
 
 Kembali ke dialog konfigurasi saluran dan isi medan seperti berikut:
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

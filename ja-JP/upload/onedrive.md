@@ -5,7 +5,7 @@
 | 必要なもの | 必要な理由 |
 | --- | --- |
 | Microsoft アカウント | Microsoft の管理ページにアクセスし、OneDrive を認可するために使用します。 |
-| ImgBed ドメイン | OAuth callback URL に使用します。 |
+| ImgHost ドメイン | OAuth callback URL に使用します。 |
 | アプリ登録 | `Client ID` と `Client Secret` を生成するために使用します。 |
 | OneDrive アカウント | 実際のファイル保存先として使用します。 |
 
@@ -52,7 +52,7 @@ Continue searching in Microsoft Entra ID
 
 アプリが作成されたら、概要ページから次の値をコピーします。
 
-| Microsoft 項目 | ImgBed 項目 |
+| Microsoft 項目 | ImgHost 項目 |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | 組織アカウント用の `Tenant ID` |
@@ -80,14 +80,14 @@ Continue searching in Microsoft Entra ID
 | 権限 | 目的 |
 | --- | --- |
 | `Files.ReadWrite.All` | ファイルのアップロード、フォルダーの作成、ファイルの削除 |
-| `offline_access` | ImgBed が `Refresh Token` を取得できるようにします。 |
+| `offline_access` | ImgHost が `Refresh Token` を取得できるようにします。 |
 | `User.Read` | アカウントとクォータ情報を読み取ります。 |
 
 ### 手順 6: OneDrive チャネルを入力する
 
 アップロード設定で `OneDrive` を選択し、次を入力します。
 
-| ImgBed 項目 | 入力内容 |
+| ImgHost 項目 | 入力内容 |
 | --- | --- |
 | チャネル名 | 識別しやすい名前。例: `Main OneDrive` |
 | Client ID | Microsoft の `Application (client) ID` |
@@ -101,7 +101,7 @@ Continue searching in Microsoft Entra ID
 
 `Tenant ID` の入力方法:
 
-| 選択したアカウント種別 | ImgBed の `Tenant ID` |
+| 選択したアカウント種別 | ImgHost の `Tenant ID` |
 | --- | --- |
 | 個人アカウント | `consumers` |
 | 個人 + 組織アカウント | `common` |
@@ -109,12 +109,12 @@ Continue searching in Microsoft Entra ID
 
 ### 手順 7: Refresh Token を取得する
 
-1. ImgBed で `Get Token` をクリックします。
+1. ImgHost で `Get Token` をクリックします。
 2. 接続する Microsoft アカウントでサインインします。
 3. 認可プロンプトを承認します。
 4. callback ページに `Refresh Token` が表示されます。
 5. コピーします。
-6. ImgBed に戻り、`Refresh Token` 項目に貼り付けます。
+6. ImgHost に戻り、`Refresh Token` 項目に貼り付けます。
 
 ![refresh token をコピーする](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## 参考

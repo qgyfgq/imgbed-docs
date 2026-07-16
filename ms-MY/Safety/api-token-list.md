@@ -1,6 +1,6 @@
 # Senarai dan penapisan dengan API Token
 
-Skrip senarai melalui API Token sesuai untuk skrip, automasi dan aplikasi pihak ketiga yang perlu membaca data ImgBed. Skrip ini hanya menggunakan kebenaran `list`; ia tidak memuat naik fail, memadam fail, mengubah konfigurasi, atau menyekat dan membenarkan muat naik daripada IP tertentu.
+Skrip senarai melalui API Token sesuai untuk skrip, automasi dan aplikasi pihak ketiga yang perlu membaca data ImgHost. Skrip ini hanya menggunakan kebenaran `list`; ia tidak memuat naik fail, memadam fail, mengubah konfigurasi, atau menyekat dan membenarkan muat naik daripada IP tertentu.
 
 ![Sunting API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Skrip ini memerlukan Node.js 18 atau lebih baharu.
 
 | Parameter | Wajib | Maksud |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat laman ImgBed, contohnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | Alamat laman ImgHost, contohnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token; boleh diganti dengan `IMGBED_API_TOKEN` |
 | `--retries <n>` | Tidak | Cubaan semula untuk kegagalan sementara; lalai `3` |
 | `--timeout-ms <n>` | Tidak | Had masa satu permintaan; lalai `180000` |

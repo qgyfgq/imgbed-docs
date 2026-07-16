@@ -4,19 +4,19 @@
 
 Cloudflare R2'yi şu durumlarda kullanın:
 
-- ImgBed siteniz zaten Cloudflare üzerinde çalışıyorsa ve dosyaları aynı Cloudflare hesabındaki bir R2 bucket içinde saklamak istiyorsanız.
+- ImgHost siteniz zaten Cloudflare üzerinde çalışıyorsa ve dosyaları aynı Cloudflare hesabındaki bir R2 bucket içinde saklamak istiyorsanız.
 - Ayrı bir S3 endpoint, access key ve secret key yapılandırmak istemiyorsanız.
 - Okuma ve yazma işlemlerinin Worker veya Pages R2 binding üzerinden en az kurulumla çalışmasını istiyorsanız.
 
 Kısaca:
 
-R2 kanalı ImgBed yönetim panelinde elle oluşturulmaz. Önce Cloudflare projesine bir R2 bucket bağlamanız gerekir ve binding değişken adı tam olarak `img_r2` olmalıdır.
+R2 kanalı ImgHost yönetim panelinde elle oluşturulmaz. Önce Cloudflare projesine bir R2 bucket bağlamanız gerekir ve binding değişken adı tam olarak `img_r2` olmalıdır.
 
 ## Başlamadan Önce Gerekenler
 
 - Cloudflare hesabı.
 - Önceden oluşturulmuş bir R2 bucket.
-- ImgBed'in dağıtıldığı Cloudflare projesini yönetme yetkisi.
+- ImgHost'in dağıtıldığı Cloudflare projesini yönetme yetkisi.
 
 ## Cloudflare'da Yapılandırma
 
@@ -31,7 +31,7 @@ Yüklenen dosyalar bu bucket içinde saklanır.
 
 ![R2 bucket oluşturma](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bucket'ı ImgBed Projesine Bağlayın
+### 2. Bucket'ı ImgHost Projesine Bağlayın
 
 Binding konumu dağıtım türüne göre değişir:
 
@@ -51,9 +51,9 @@ Değişken adı tam olarak `img_r2` olmalıdır. R2 dosyalarını yükleme, okum
 
 ### 3. Projeyi Yeniden Dağıtın
 
-Binding'i kaydettikten sonra ImgBed'i yeniden dağıtın. Böylece Worker veya Pages runtime `img_r2` değerine erişebilir.
+Binding'i kaydettikten sonra ImgHost'i yeniden dağıtın. Böylece Worker veya Pages runtime `img_r2` değerine erişebilir.
 
-## ImgBed'de Ne Göreceksiniz?
+## ImgHost'de Ne Göreceksiniz?
 
 R2 binding kullanılabilir hale geldikten sonra şurayı açın:
 
@@ -82,19 +82,19 @@ Bu sabit bir binding kanalıdır. Oluşturmak için Kanal Ekle düğmesine basma
 | Quota limit | Bu R2 kanalının kapasiteye göre yükleme seçiminde dikkate alınıp alınmayacağını belirler. | Hayır |
 | Threshold | Kullanım belirtilen yüzdeye ulaşınca bu kanala yazmayı durdurur. | Kota limitleri açıksa evet |
 
-Account ID değerini Cloudflare dashboard'daki hesap bilgisi panelinden kopyalayabilirsiniz. ImgBed'in R2 kota kullanımını sorgulamasını ve uygulamasını istiyorsanız doldurun.
+Account ID değerini Cloudflare dashboard'daki hesap bilgisi panelinden kopyalayabilirsiniz. ImgHost'in R2 kota kullanımını sorgulamasını ve uygulamasını istiyorsanız doldurun.
 
 ![Account ID alma](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## Kurulum Adımları
 
 1. Cloudflare'da bir R2 bucket oluşturun.
-2. ImgBed projesinin Cloudflare ayarlarını açın.
+2. ImgHost projesinin Cloudflare ayarlarını açın.
 3. R2 bucket binding ekleyin.
 4. `Variable name` alanını `img_r2` olarak ayarlayın.
 5. Oluşturduğunuz R2 bucket'ı seçin.
-6. Binding'i kaydedin ve ImgBed'i yeniden dağıtın.
-7. `ImgBed -> System Settings -> Upload Settings` bölümüne dönün.
+6. Binding'i kaydedin ve ImgHost'i yeniden dağıtın.
+7. `ImgHost -> System Settings -> Upload Settings` bölümüne dönün.
 8. `Cloudflare R2` kanalının göründüğünü ve etkin olduğunu doğrulayın.
 
 R2'nin kapasiteye göre yükleme seçiminde yer almasını istiyorsanız quota limit'i etkinleştirin, ardından kaydetmeden önce Account ID, bucket name, quota limit ve threshold değerlerini girin.

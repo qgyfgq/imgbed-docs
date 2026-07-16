@@ -5,7 +5,7 @@
 | Požadavek | Proč je potřeba |
 | --- | --- |
 | Účet Microsoft | Pro přístup k administračním stránkám Microsoft a autorizaci OneDrive |
-| Vaše doména ImgBed | Pro OAuth callback URL |
+| Vaše doména ImgHost | Pro OAuth callback URL |
 | Registrace aplikace | Pro vytvoření `Client ID` a `Client Secret` |
 | Účet OneDrive | Skutečné úložiště pro soubory |
 
@@ -52,7 +52,7 @@ Po vyplnění formuláře klikněte na registraci.
 
 Po vytvoření aplikace zkopírujte z přehledu tyto hodnoty:
 
-| Pole Microsoft | Pole ImgBed |
+| Pole Microsoft | Pole ImgHost |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | `Tenant ID` pro organizační účty |
@@ -80,14 +80,14 @@ Po vytvoření aplikace zkopírujte z přehledu tyto hodnoty:
 | Oprávnění | Účel |
 | --- | --- |
 | `Files.ReadWrite.All` | Nahrávání souborů, vytváření složek a mazání souborů |
-| `offline_access` | Umožní ImgBed získat `Refresh Token` |
+| `offline_access` | Umožní ImgHost získat `Refresh Token` |
 | `User.Read` | Čte informace o účtu a kapacitě |
 
 ### Krok 6: Vyplňte kanál OneDrive
 
 V Nastavení nahrávání zvolte `OneDrive` a vyplňte:
 
-| Pole ImgBed | Co zadat |
+| Pole ImgHost | Co zadat |
 | --- | --- |
 | Název kanálu | Srozumitelný název, například `Main OneDrive` |
 | Client ID | Microsoft `Application (client) ID` |
@@ -101,7 +101,7 @@ V Nastavení nahrávání zvolte `OneDrive` a vyplňte:
 
 Jak vyplnit `Tenant ID`:
 
-| Zvolený typ účtu | ImgBed `Tenant ID` |
+| Zvolený typ účtu | ImgHost `Tenant ID` |
 | --- | --- |
 | Osobní účty | `consumers` |
 | Osobní a organizační účty | `common` |
@@ -109,12 +109,12 @@ Jak vyplnit `Tenant ID`:
 
 ### Krok 7: Získejte Refresh Token
 
-1. V ImgBed klikněte na `Get Token`.
+1. V ImgHost klikněte na `Get Token`.
 2. Přihlaste se k účtu Microsoft, který chcete připojit.
 3. Potvrďte autorizaci.
 4. Stránka callbacku zobrazí `Refresh Token`.
 5. Zkopírujte ho.
-6. Vraťte se do ImgBed a vložte ho do pole `Refresh Token`.
+6. Vraťte se do ImgHost a vložte ho do pole `Refresh Token`.
 
 ![Kopírování Refresh Token](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Odkazy

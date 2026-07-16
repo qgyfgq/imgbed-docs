@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-Site-Settings/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Site-Settings/1.0 Node';
 
 const SECURITY_SECTIONS = Object.freeze({
   userAuth: ['authCode'],
@@ -128,7 +128,7 @@ const AREA_SECTIONS = Object.freeze({
 const LINK_PROXY_FIELDS = new Set(['externalEnabled', 'randomEnabled', 'federationEnabled']);
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token site settings tool
+  process.stdout.write(`ImgHost API Token site settings tool
 
 Usage:
   node imgbed-token-site-settings.mjs --base-url <url> --token <token> --list-sections
@@ -136,7 +136,7 @@ Usage:
   node imgbed-token-site-settings.mjs --base-url <url> --token <token> --area <security|page|others> --section <name> --set key=value [--apply]
 
 Required:
-  --base-url <url>       ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>       ImgHost site URL, for example https://image.ai6.me
   --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
 
 Actions:

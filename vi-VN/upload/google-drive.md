@@ -8,8 +8,8 @@ Trước khi bắt đầu, chuẩn bị các mục sau:
 | --- | --- |
 | Google account | Dùng để access Google Cloud và authorize Google Drive |
 | Google Cloud project | Dùng để bật Drive API và tạo OAuth credentials |
-| OAuth 2.0 client | ImgBed dùng để lấy `Client ID`, `Client Secret` và `Refresh Token` |
-| ImgBed domain của bạn | Dùng cho OAuth redirect URI. Phải khớp với domain bạn thực sự dùng. |
+| OAuth 2.0 client | ImgHost dùng để lấy `Client ID`, `Client Secret` và `Refresh Token` |
+| ImgHost domain của bạn | Dùng cho OAuth redirect URI. Phải khớp với domain bạn thực sự dùng. |
 
 ## Các bước thiết lập
 
@@ -38,7 +38,7 @@ Trước khi bắt đầu, chuẩn bị các mục sau:
 2. Tạo client mới.
 3. Đặt application type là `Web application`.
 4. Đặt tên client dễ nhận biết.
-5. Với authorized JavaScript origins, nhập ImgBed URL, ví dụ:
+5. Với authorized JavaScript origins, nhập ImgHost URL, ví dụ:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Sau khi client được tạo, sao chép các giá trị này:
 
-| Giá trị đã tạo | Trường ImgBed |
+| Giá trị đã tạo | Trường ImgHost |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ Sau khi client được tạo, sao chép các giá trị này:
 
 Trong Cài đặt tải lên, chọn `Google Drive` và điền:
 
-| Trường ImgBed | Nhập gì |
+| Trường ImgHost | Nhập gì |
 | --- | --- |
 | Channel name | Tên dễ nhận biết, ví dụ `Main Google Drive` |
 | Client ID | Client ID từ Google Cloud |
@@ -73,7 +73,7 @@ Trong Cài đặt tải lên, chọn `Google Drive` và điền:
 | Refresh Token | Tạm thời để trống. Lấy ở bước tiếp theo. |
 | Root directory | Không bắt buộc. Mặc định là `imgbed`. |
 
-![Điền chi tiết client trong ImgBed](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Điền chi tiết client trong ImgHost](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## Bước 5: Lấy Refresh Token
 
@@ -82,7 +82,7 @@ Trong Cài đặt tải lên, chọn `Google Drive` và điền:
 3. Hoàn tất authorization prompts.
 4. Callback page sẽ hiển thị `Refresh Token`.
 5. Sao chép token đó.
-6. Quay lại ImgBed và dán vào trường `Refresh Token`.
+6. Quay lại ImgHost và dán vào trường `Refresh Token`.
 
 ![Sao chép Refresh Token sau authorization](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

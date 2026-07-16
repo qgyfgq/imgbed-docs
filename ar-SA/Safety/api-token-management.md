@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | المعلمة | إلزامية | الوصف |
 | --- | --- | --- |
-| `--base-url <url>` | نعم | عنوان موقع ImgBed، مثل `https://image.ai6.me`. |
+| `--base-url <url>` | نعم | عنوان موقع ImgHost، مثل `https://image.ai6.me`. |
 | `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGBED_API_TOKEN`. |
 | `--retries <n>` | لا | عدد إعادة المحاولة عند الفشل المؤقت. القيمة الافتراضية `3`. |
 | `--timeout-ms <n>` | لا | مهلة الطلب. القيمة الافتراضية `180000`. |

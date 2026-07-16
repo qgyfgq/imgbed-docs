@@ -2,7 +2,7 @@
 
 Magnet aktarımı, bir magnet bağlantısından dosyaları indirir ve seçtiğiniz bulut depolama kanalına otomatik olarak yükler.
 
-Anime bölümlerini, videoları, arşivleri ve benzeri dosyaları aktarmak için kullanışlıdır. Bir magnet bağlantısı yapıştırın; ImgBed arka planda bir indirme görevi oluşturur. İndirme bittikten sonra dosya ImgBed'e yüklenir ve son bağlantı yükleme listesinde görünür.
+Anime bölümlerini, videoları, arşivleri ve benzeri dosyaları aktarmak için kullanışlıdır. Bir magnet bağlantısı yapıştırın; ImgHost arka planda bir indirme görevi oluşturur. İndirme bittikten sonra dosya ImgHost'e yüklenir ve son bağlantı yükleme listesinde görünür.
 
 ![Magnet aktarımı](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Ayarlar hazır olduğunda ana sayfaya dönün ve aktarımı başlatmak için bir
 1. Magnet bağlantısını ana sayfadaki yükleme kutusuna yapıştırın.
 2. Modun `Transfer` olarak ayarlandığından emin olun.
 3. Yükle düğmesine tıklayın.
-4. ImgBed'in magnet görevini oluşturmasını bekleyin.
+4. ImgHost'in magnet görevini oluşturmasını bekleyin.
 5. Görev başladıktan sonra ilerlemeyi kontrol etmek için sağ alt köşedeki `Magnet Tasks` kayan panelini kullanın.
 
 İndirme ve yükleme zaman alabilir. Hız; magnet kaynağına, GitHub çalışma ortamına ve seçilen bulut depolama kanalına bağlıdır.
@@ -72,7 +72,7 @@ Yaygın durumlar:
 
 ## İpuçları
 
-- Bir magnet bağlantısı birden fazla dosya içeriyorsa ImgBed gösterim için ana tamamlanmış dosyaya öncelik verir.
+- Bir magnet bağlantısı birden fazla dosya içeriyorsa ImgHost gösterim için ana tamamlanmış dosyaya öncelik verir.
 - Büyük dosyalar daha uzun sürer. Sayfayı yenilemeden önce görevin bitmesini bekleyin.
 - Magnet kaynağında kullanılabilir eşler yoksa çok yavaş olabilir veya başarısız olabilir.
 - Bulut hesabının kotası dolmuşsa, yetkilendirme süresi bitmişse veya yükleme dizini yanlışsa görev başarısız olabilir.

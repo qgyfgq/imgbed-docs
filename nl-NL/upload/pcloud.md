@@ -2,7 +2,7 @@
 
 ## Geschikt voor
 
-- Je hebt een pCloud-account en wilt ImgBed-afbeeldingen in pCloud opslaan.
+- Je hebt een pCloud-account en wilt ImgHost-afbeeldingen in pCloud opslaan.
 - Je vindt het goed om het e-mailadres en wachtwoord van je pCloud-account als kanaalgegevens te gebruiken.
 
 ## Wat je vooraf nodig hebt
@@ -70,7 +70,7 @@ Kies de API-host op basis van je accountregio:
 
 pCloud OAuth2 is standaard niet self-service. Je moet pCloud mailen en vragen om het in te schakelen.
 
-De huidige pCloud OAuth2-flow ondersteunt bovendien niet de kortlevende uploadlinkflow die ImgBed nodig heeft. Daarom gebruikt dit kanaal login met accountmail en wachtwoord.
+De huidige pCloud OAuth2-flow ondersteunt bovendien niet de kortlevende uploadlinkflow die ImgHost nodig heeft. Daarom gebruikt dit kanaal login met accountmail en wachtwoord.
 
 ### Welke API-host moet ik gebruiken?
 

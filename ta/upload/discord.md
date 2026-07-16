@@ -44,7 +44,7 @@
 5. `Bot` page-ல் டோக்கனை generate அல்லது reset செய்யவும்.
 6. டோக்கன் சேமிக்கவும்.
 
-இந்த டோக்கன் தான் ImgBed-ல் `Bot Token`.
+இந்த டோக்கன் தான் ImgHost-ல் `Bot Token`.
 
 ![View the போட் டோக்கன்](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. சேனல் பெயர் மீது right-click செய்யவும்.
 6. சேனல் ID-ஐ நகலெடுக்கவும் என்பதைக் கிளிக் செய்யவும்.
 
-நகலெடுக்கப்பட்ட எண் தான் ImgBed-க்கு தேவையான `Channel ID`.
+நகலெடுக்கப்பட்ட எண் தான் ImgHost-க்கு தேவையான `Channel ID`.
 
 ![developer mode-ஐ enable செய்யவும்](../../image/upload/discord/开启开发者权限.png)
 
 ![சேனல் ID-ஐ நகலெடுக்கவும்](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed-ல் Discord சேனல் நிரப்பவும்
+### 5. ImgHost-ல் Discord சேனல் நிரப்பவும்
 
 கட்டமைப்பு dialog-க்கு திரும்பி:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

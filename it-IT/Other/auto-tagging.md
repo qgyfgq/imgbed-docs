@@ -41,7 +41,7 @@ Puoi usare temporaneamente lo Space pubblico, ma gli Space pubblici sono condivi
 3. Fai clic sul menu con i tre puntini nell'angolo in alto a destra.
 4. Scegli `Duplicate this Space`.
 5. Mantieni il nome predefinito dello Space oppure scegline uno personalizzato, ad esempio `wd-tagger`.
-6. Imposta la visibilità su `Public`. Gli Space pubblici sono più facili da chiamare da ImgBed.
+6. Imposta la visibilità su `Public`. Gli Space pubblici sono più facili da chiamare da ImgHost.
 7. All'inizio mantieni l'hardware gratuito predefinito. Esegui l'upgrade solo se le code diventano evidenti.
 8. Crea lo Space e attendi il completamento della build.
 
@@ -51,7 +51,7 @@ Al termine della build, apri la pagina del tuo Space. L'URL di solito ha questo 
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-Copia l'URL dal browser e incollalo in `Space URLs` in ImgBed.
+Copia l'URL dal browser e incollalo in `Space URLs` in ImgHost.
 
 ## Inserire più URL di Space
 
@@ -65,7 +65,7 @@ Esempi:
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | URL della pagina di uno Space copiato. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | Pagina del tuo Space duplicato. |
 
-Puoi inserire più URL. ImgBed usa più Space insieme, migliorando potenzialmente la velocità.
+Puoi inserire più URL. ImgHost usa più Space insieme, migliorando potenzialmente la velocità.
 
 Se uno Space è temporaneamente non disponibile, gli altri possono continuare l'elaborazione.
 
@@ -103,7 +103,7 @@ Se i tag sono troppo pochi, abbassa leggermente la soglia generale.
 3. Fai clic su avvia tagging.
 4. Attendi il completamento dell'avanzamento.
 
-Se la cartella di destinazione e vuota, ImgBed elabora tutte le cartelle.
+Se la cartella di destinazione e vuota, ImgHost elabora tutte le cartelle.
 
 Il tagging in batch è indicato per le immagini già presenti. Per le nuove immagini, abilita il tagging automatico al caricamento, così non dovrai avviarlo manualmente ogni volta.
 
@@ -121,19 +121,19 @@ Il tagging automatico elabora principalmente file immagine.
 
 Le immagini che hanno già tag completi, orientamento, classificazione, larghezza e altezza vengono saltate per evitare chiamate inutili allo Space.
 
-Quando possibile, ImgBed compila solo le informazioni mancanti. Per esempio, se manca solo l'orientamento, prova ad aggiungerlo senza chiamare l'intero flusso dei tag di contenuto.
+Quando possibile, ImgHost compila solo le informazioni mancanti. Per esempio, se manca solo l'orientamento, prova ad aggiungerlo senza chiamare l'intero flusso dei tag di contenuto.
 
 ## Domande frequenti
 
 ### Perché duplicare il mio Space?
 
-Gli Space pubblici sono condivisi da molti utenti. Il tuo Space duplicato viene usato principalmente dal tuo sito ImgBed, quindi di solito è più veloce e affidabile.
+Gli Space pubblici sono condivisi da molti utenti. Il tuo Space duplicato viene usato principalmente dal tuo sito ImgHost, quindi di solito è più veloce e affidabile.
 
 ### Lo Space continua ad avviarsi
 
 Dopo la prima creazione o dopo un lungo periodo di inattività, uno Space può richiedere tempo per avviarsi.
 
-Apri prima la pagina del tuo Space. Quando riesce a riconoscere normalmente un'immagine, torna in ImgBed e avvia il tagging.
+Apri prima la pagina del tuo Space. Quando riesce a riconoscere normalmente un'immagine, torna in ImgHost e avvia il tagging.
 
 ### Come copio l'URL dello Space?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

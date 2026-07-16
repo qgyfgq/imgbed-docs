@@ -2,7 +2,7 @@
 
 ## Cas d’utilisation
 
-- Vous disposez d’un compte pCloud et vous voulez qu’ImgBed stocke les images dans pCloud.
+- Vous disposez d’un compte pCloud et vous voulez qu’ImgHost stocke les images dans pCloud.
 - Vous acceptez d’utiliser l’e-mail et le mot de passe de votre compte pCloud comme identifiants du canal.
 
 ## Ce qu’il faut d’abord
@@ -70,7 +70,7 @@ Choisissez l’hôte API selon la région de votre compte :
 
 pCloud OAuth2 n’est pas disponible en libre-service par défaut. Vous devez écrire à pCloud pour demander son activation.
 
-Le flux OAuth2 actuel de pCloud ne prend pas non plus en charge le flux de liens de téléversement de courte durée dont ImgBed a besoin. Ce canal utilise donc une connexion par e-mail et mot de passe.
+Le flux OAuth2 actuel de pCloud ne prend pas non plus en charge le flux de liens de téléversement de courte durée dont ImgHost a besoin. Ce canal utilise donc une connexion par e-mail et mot de passe.
 
 ### Quel hôte API utiliser ?
 

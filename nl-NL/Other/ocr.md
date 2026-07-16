@@ -56,7 +56,7 @@ Google heeft twee onderdelen:
 4. Ga terug naar `Credentials`.
 5. Maak een `API Key`.
 6. Open de API-sleutel en kopieer deze.
-7. Plak deze in `Google Vision API Key` in ImgBed.
+7. Plak deze in `Google Vision API Key` in ImgHost.
 8. Sla op.
 
 Daarna kun je Google Vision kiezen in het OCR-venster.
@@ -74,10 +74,10 @@ Het toont alleen grofweg hoeveel Google Vision-aanroepen in de laatste 30 dagen 
 5. Open de details van het serviceaccount en maak een sleutel.
 6. Kies `JSON`.
 7. Download het gegenereerde JSON-bestand.
-8. Ga terug naar ImgBed en importeer het onder serviceaccount `JSON` (optioneel).
+8. Ga terug naar ImgHost en importeer het onder serviceaccount `JSON` (optioneel).
 9. Klik na succesvolle import op quota opvragen.
 
-Na import toont ImgBed de projectnaam die bij het serviceaccount hoort. Bij het opvragen leest ImgBed Google-monitoringgegevens en toont het aantal aanroepen van deze maand.
+Na import toont ImgHost de projectnaam die bij het serviceaccount hoort. Bij het opvragen leest ImgHost Google-monitoringgegevens en toont het aantal aanroepen van deze maand.
 
 Kort gezegd:
 
@@ -95,7 +95,7 @@ Baidu PaddleOCR vereist een toegangstoken.
 
 Open het `API`-aanroepvenster op de Baidu PaddleOCR-pagina, klik om een token te krijgen en kopieer het.
 
-Ga terug naar ImgBed, plak het in `PaddleOCR Token` en sla op.
+Ga terug naar ImgHost, plak het in `PaddleOCR Token` en sla op.
 
 ## Herkenning starten
 

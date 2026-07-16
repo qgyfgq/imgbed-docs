@@ -4,19 +4,19 @@
 
 Cloudflare R2 பயன்படுத்தலாம், நீங்கள்:
 
-- ImgBed site ஏற்கனவே Cloudflare-ல் deploy செய்து, அதே Cloudflare கணக்கு-இன் R2 bucket-ல் கோப்புகள் சேமிக்க விரும்பினால்.
+- ImgHost site ஏற்கனவே Cloudflare-ல் deploy செய்து, அதே Cloudflare கணக்கு-இன் R2 bucket-ல் கோப்புகள் சேமிக்க விரும்பினால்.
 - தனியாக S3 endpoint, அணுகல் key, secret key அமைக்க விரும்பவில்லை என்றால்.
 - Worker அல்லது Pages R2 binding மூலம் குறைந்த setup-இல் reads/writes செல்ல வேண்டும் என்றால்.
 
 சுருக்கமாக:
 
-R2 சேனல் ImgBed நிர்வாகப் பலகையில் கைமுறையாக உருவாக்கப்படாது. முதலில் Cloudflare திட்டத்துக்கு R2 bucket bind செய்ய வேண்டும்; binding variable name கண்டிப்பாக `img_r2` ஆக இருக்க வேண்டும்.
+R2 சேனல் ImgHost நிர்வாகப் பலகையில் கைமுறையாக உருவாக்கப்படாது. முதலில் Cloudflare திட்டத்துக்கு R2 bucket bind செய்ய வேண்டும்; binding variable name கண்டிப்பாக `img_r2` ஆக இருக்க வேண்டும்.
 
 ## தொடங்குவதற்கு முன் தேவையானவை
 
 - Cloudflare கணக்கு.
 - ஏற்கனவே உருவாக்கப்பட்ட R2 bucket.
-- ImgBed deploy செய்யப்பட்ட Cloudflare திட்டம்-ஐ manage செய்ய permission.
+- ImgHost deploy செய்யப்பட்ட Cloudflare திட்டம்-ஐ manage செய்ய permission.
 
 ## Cloudflare-ல் கட்டமை செய்யவும்
 
@@ -31,7 +31,7 @@ R2 சேனல் ImgBed நிர்வாகப் பலகையில் �
 
 ![R2 bucket உருவாக்கவும்](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bucket-ஐ ImgBed திட்டத்துக்கு Bind செய்யவும்
+### 2. Bucket-ஐ ImgHost திட்டத்துக்கு Bind செய்யவும்
 
 deployment type அடிப்படையில் binding இடத்தைத் தேர்வு செய்யவும்:
 
@@ -51,9 +51,9 @@ Variable name சரியாக `img_r2` ஆகவே இருக்க வே
 
 ### 3. திட்டம்-ஐ மீண்டும் Deploy செய்யவும்
 
-binding சேமித்த பிறகு ImgBed-ஐ மீண்டும் deploy செய்யவும். அப்போதுதான் Worker அல்லது Pages runtime `img_r2` அணுக முடியும்.
+binding சேமித்த பிறகு ImgHost-ஐ மீண்டும் deploy செய்யவும். அப்போதுதான் Worker அல்லது Pages runtime `img_r2` அணுக முடியும்.
 
-## ImgBed-ல் என்ன தெரியும்
+## ImgHost-ல் என்ன தெரியும்
 
 R2 binding கிடைத்த பிறகு திறக்கவும்:
 
@@ -82,19 +82,19 @@ R2 binding கிடைத்த பிறகு திறக்கவும்:
 | Quota limit | capacity அடிப்படையில் இந்த R2 சேனல் பதிவேற்றத் தேர்வில் பங்கேற்க வேண்டுமா என்பதை கட்டுப்படுத்தும். | இல்லை |
 | Threshold | usage குறிப்பிட்ட percentage-ஐ அடைந்த பிறகு இந்த சேனலில் write செய்வதை நிறுத்தும். | quota limit இயக்கப்பட்டால் அவசியம் |
 
-Cloudflare dashboard-ல் கணக்கு information panel-இல் இருந்து கணக்கு ID-ஐ நகலெடுக்கலாம். ImgBed R2 quota usage-ஐ query/enforce செய்ய வேண்டும் என்றால் மட்டும் நிரப்பவும்.
+Cloudflare dashboard-ல் கணக்கு information panel-இல் இருந்து கணக்கு ID-ஐ நகலெடுக்கலாம். ImgHost R2 quota usage-ஐ query/enforce செய்ய வேண்டும் என்றால் மட்டும் நிரப்பவும்.
 
 ![கணக்கு ID-ஐ பெறவும்](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## அமைப்பு படிகள்
 
 1. Cloudflare-ல் R2 bucket உருவாக்கவும்.
-2. ImgBed திட்டம்-க்கான Cloudflare settings திறக்கவும்.
+2. ImgHost திட்டம்-க்கான Cloudflare settings திறக்கவும்.
 3. R2 bucket binding-ஐ சேர்க்கவும்.
 4. `Variable name`-ஐ `img_r2` ஆக அமைக்கவும்.
 5. உருவாக்கிய R2 bucket தேர்வு செய்யவும்.
-6. binding-ஐ சேமித்து ImgBed-ஐ மீண்டும் deploy செய்யவும்.
-7. ImgBed -> அமைப்பு அமைப்புகள் -> பதிவேற்ற அமைப்புகள்-க்கு திரும்பவும்.
+6. binding-ஐ சேமித்து ImgHost-ஐ மீண்டும் deploy செய்யவும்.
+7. ImgHost -> அமைப்பு அமைப்புகள் -> பதிவேற்ற அமைப்புகள்-க்கு திரும்பவும்.
 8. `Cloudflare R2` சேனல் தெரிகிறதா, இயக்கத்தில் உள்ளதா பார்க்கவும்.
 
 capacity அடிப்படையில் R2 பதிவேற்றம் selection-ல் பங்கேற்க வேண்டும் என்றால் quota limit enable செய்து கணக்கு ID, bucket name, quota limit, threshold நிரப்பி சேமி செய்யவும்.

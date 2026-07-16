@@ -8,8 +8,8 @@ Başlamadan önce şunları hazırlayın:
 | --- | --- |
 | Google hesabı | Google Cloud'a erişmek ve Google Drive'ı yetkilendirmek için |
 | Google Cloud projesi | Drive API'yi etkinleştirmek ve OAuth credentials oluşturmak için |
-| OAuth 2.0 client | ImgBed'in `Client ID`, `Client Secret` ve `Refresh Token` alması için |
-| ImgBed alan adınız | OAuth redirect URI için. Gerçekte kullandığınız alan adıyla eşleşmelidir. |
+| OAuth 2.0 client | ImgHost'in `Client ID`, `Client Secret` ve `Refresh Token` alması için |
+| ImgHost alan adınız | OAuth redirect URI için. Gerçekte kullandığınız alan adıyla eşleşmelidir. |
 
 ## Kurulum Adımları
 
@@ -38,7 +38,7 @@ Başlamadan önce şunları hazırlayın:
 2. Yeni client oluşturun.
 3. Application type değerini `Web application` yapın.
 4. Client için tanınabilir bir ad verin.
-5. Authorized JavaScript origins için ImgBed URL'nizi girin, örneğin:
+5. Authorized JavaScript origins için ImgHost URL'nizi girin, örneğin:
 
 ```text
 https://img.example.com
@@ -56,7 +56,7 @@ https://img.example.com/api/oauth/google/callback
 
 Client oluşturulduktan sonra şu değerleri kopyalayın:
 
-| Oluşturulan Değer | ImgBed Alanı |
+| Oluşturulan Değer | ImgHost Alanı |
 | --- | --- |
 | Client ID | `Client ID` |
 | Client Secret | `Client Secret` |
@@ -65,7 +65,7 @@ Client oluşturulduktan sonra şu değerleri kopyalayın:
 
 Yükleme Ayarları'nda `Google Drive` seçin ve şunları doldurun:
 
-| ImgBed Alanı | Ne girilir |
+| ImgHost Alanı | Ne girilir |
 | --- | --- |
 | Channel name | Tanınabilir bir ad, örneğin `Main Google Drive` |
 | Client ID | Google Cloud'dan alınan Client ID |
@@ -73,7 +73,7 @@ Yükleme Ayarları'nda `Google Drive` seçin ve şunları doldurun:
 | Refresh Token | Şimdilik boş bırakın. Sonraki adımda alınır. |
 | Root directory | İsteğe bağlı. Varsayılan `imgbed`. |
 
-![Client bilgilerini ImgBed'e yapıştırma](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
+![Client bilgilerini ImgHost'e yapıştırma](../../image/upload/google-drive/粘贴回添加新渠道配置.png)
 
 ## 5. Refresh Token Alın
 
@@ -82,7 +82,7 @@ Yükleme Ayarları'nda `Google Drive` seçin ve şunları doldurun:
 3. Yetkilendirme istemlerini tamamlayın.
 4. Callback sayfası bir `Refresh Token` gösterir.
 5. Bunu kopyalayın.
-6. ImgBed'e dönüp `Refresh Token` alanına yapıştırın.
+6. ImgHost'e dönüp `Refresh Token` alanına yapıştırın.
 
 ![Yetkilendirme sonrası Refresh Token kopyalama](../../image/upload/google-drive/授权完复制token.png)
 
@@ -102,11 +102,11 @@ Open Google Cloud
 -> If Audience is External, add your Google account to Test users
 -> Create a Web application OAuth client
 -> Use https://your-domain.com/api/oauth/google/callback as the redirect URI
--> Fill Client ID and Client Secret into ImgBed
+-> Fill Client ID and Client Secret into ImgHost
 -> Click Get Token
 -> Sign in with Google and authorize
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 -> Upload a test image
 ```
 

@@ -26,7 +26,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 ## စီမံခန့်ခွဲမှု Script များ ဒေါင်းလုဒ်လုပ်ခြင်း
 
-ImgBed စာတမ်းတွင် Node.js script သုံးခု ပါသည်။
+ImgHost စာတမ်းတွင် Node.js script သုံးခု ပါသည်။
 
 | Script | အသုံးပြုမှု |
 | --- | --- |
@@ -40,7 +40,7 @@ Script များသည် Node.js 18 သို့မဟုတ် ၎င်း
 
 | Parameter | လိုအပ် | ဖော်ပြချက် |
 | --- | --- | --- |
-| `--base-url <url>` | ဟုတ် | ImgBed site URL၊ ဥပမာ `https://image.ai6.me` |
+| `--base-url <url>` | ဟုတ် | ImgHost site URL၊ ဥပမာ `https://image.ai6.me` |
 | `--token <token>` | ဟုတ် | API Token။ `IMGBED_API_TOKEN` environment variable ကိုလည်း အသုံးပြုနိုင်သည် |
 | `--retries <n>` | မဟုတ် | ယာယီ မအောင်မြင်မှုအတွက် retry အကြိမ်ရေ။ မူလတန်ဖိုး `3` |
 | `--timeout-ms <n>` | မဟုတ် | request တစ်ခုစီ၏ timeout ကို millisecond ဖြင့် သတ်မှတ်သည်။ မူလတန်ဖိုး `180000` |

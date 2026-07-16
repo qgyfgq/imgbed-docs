@@ -7,7 +7,7 @@
 | المتطلب | الغرض |
 | --- | --- |
 | حساب GitLab | لإنشاء رمز وصول وامتلاك المشروع. |
-| GitLab Personal Access Token | يستخدمه ImgBed للوصول إلى GitLab API وإنشاء المشاريع ورفع الملفات إلى Generic Packages. |
+| GitLab Personal Access Token | يستخدمه ImgHost للوصول إلى GitLab API وإنشاء المشاريع ورفع الملفات إلى Generic Packages. |
 | اسم المشروع | يمكن إدخال اسم المشروع فقط، مثل `imgbed`. |
 
 ## خطوات الإعداد
@@ -26,7 +26,7 @@
 
 ![اختيار صلاحيات الرمز](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## الخطوة 2: املأ قناة GitLab Packages في ImgBed
+## الخطوة 2: املأ قناة GitLab Packages في ImgHost
 
 بعد اختيار `GitLab Packages` في إعدادات الرفع، املأ الحقول كما يلي:
 
@@ -48,9 +48,9 @@
 
 | سلوك النظام | الوصف |
 | --- | --- |
-| اسم مشروع قصير | يحدد ImgBed حساب GitLab الحالي ويوسّع القيمة إلى مسار مشروع كامل. |
-| مسار مشروع كامل | يستخدم ImgBed مسار `username/project` كما أُدخل. |
-| فحص المشروع | إذا استخدمت مسار الحساب الشخصي الحالي، ينشئ ImgBed المشروع تلقائيًا عند عدم وجوده. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
+| اسم مشروع قصير | يحدد ImgHost حساب GitLab الحالي ويوسّع القيمة إلى مسار مشروع كامل. |
+| مسار مشروع كامل | يستخدم ImgHost مسار `username/project` كما أُدخل. |
+| فحص المشروع | إذا استخدمت مسار الحساب الشخصي الحالي، ينشئ ImgHost المشروع تلقائيًا عند عدم وجوده. إذا أدخلت مسارًا كاملًا يدويًا، يستخدمه مباشرة. |
 | حالة العام/الخاص | تتم مزامنة ظهور المشروع حسب المفتاح الحالي. |
 
 ## قائمة تحقق سريعة
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

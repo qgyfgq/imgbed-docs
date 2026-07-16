@@ -1,6 +1,6 @@
 # Subir archivos con API Token
 
-La subida con API Token está pensada para scripts, tareas automatizadas y programas de terceros. No hace falta abrir la interfaz web: con la URL del sitio, el token, la ruta del archivo local y un canal de subida real, puedes subir el archivo a ImgBed y recibir su URL al terminar.
+La subida con API Token está pensada para scripts, tareas automatizadas y programas de terceros. No hace falta abrir la interfaz web: con la URL del sitio, el token, la ruta del archivo local y un canal de subida real, puedes subir el archivo a ImgHost y recibir su URL al terminar.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed, por ejemplo `https://image.ai6.me`. |
+| `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me`. |
 | `--token <token>` | Sí | API Token. También puedes usar la variable `IMGBED_API_TOKEN`. |
 | `--file <path>` | Sí | Ruta del archivo local. |
 | `--channel <key>` | Sí | Canal de subida. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed. |
+| `--base-url <url>` | Sí | URL del sitio ImgHost. |
 | `--token <token>` | Sí | API Token. También puedes usar `IMGBED_API_TOKEN`. |
 | `--file <path>` | Sí | Ruta del archivo local. |
 | `--channel <key>` | Sí | Canal de subida. |

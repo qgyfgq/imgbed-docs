@@ -1,6 +1,6 @@
 # Caricare file con API Token
 
-Il caricamento tramite API Token è pensato per script, automazioni e programmi di terze parti. Non serve aprire il sito: bastano indirizzo ImgBed, Token, percorso del file e canale reale di caricamento per inviare il file e ottenere il link finale.
+Il caricamento tramite API Token è pensato per script, automazioni e programmi di terze parti. Non serve aprire il sito: bastano indirizzo ImgHost, Token, percorso del file e canale reale di caricamento per inviare il file e ottenere il link finale.
 
 ![Modifica API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `--base-url <url>` | Sì | Indirizzo del sito ImgBed, ad esempio `https://image.ai6.me` |
+| `--base-url <url>` | Sì | Indirizzo del sito ImgHost, ad esempio `https://image.ai6.me` |
 | `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
 | `--file <path>` | Sì | Percorso del file locale |
 | `--channel <key>` | Sì | Canale di caricamento |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
-| `--base-url <url>` | Sì | Indirizzo del sito ImgBed |
+| `--base-url <url>` | Sì | Indirizzo del sito ImgHost |
 | `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
 | `--file <path>` | Sì | Percorso del file locale |
 | `--channel <key>` | Sì | Canale di caricamento |

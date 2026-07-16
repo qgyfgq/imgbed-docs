@@ -1,20 +1,20 @@
 ---
-description: "Tài liệu ImgBed tiếng Việt về lưu trữ hình ảnh và tệp trên Cloudflare, kênh tải lên, mã API, thư viện công khai, API ảnh ngẫu nhiên, sao lưu, OCR và thiết lập blog."
+description: "Tài liệu ImgHost tiếng Việt về lưu trữ hình ảnh và tệp trên Cloudflare, kênh tải lên, mã API, thư viện công khai, API ảnh ngẫu nhiên, sao lưu, OCR và thiết lập blog."
 ---
 
-# ImgBed
+# ImgHost
 
 Công cụ lưu trữ nội dung cá nhân toàn diện, xây dựng trên hệ sinh thái Cloudflare.
 
-ImgBed bắt đầu từ việc tải ảnh lên và quản lý liên kết. Giờ đây nó đã phát triển thành một giải pháp hoàn chỉnh để lưu trữ nội dung cá nhân. Bạn có thể dùng ImgBed để:
+ImgHost bắt đầu từ việc tải ảnh lên và quản lý liên kết. Giờ đây nó đã phát triển thành một giải pháp hoàn chỉnh để lưu trữ nội dung cá nhân. Bạn có thể dùng ImgHost để:
 
 - Tải tệp lên bất kỳ kênh lưu trữ nào bạn thích
 - Chia sẻ công khai hình ảnh và tệp ở mọi định dạng
 - Nhanh chóng dựng blog cá nhân trong một phút
 - Lưu tệp từ liên kết magnet chỉ với một cú nhấp
-- Tham gia liên minh node ImgBed và chia sẻ chỉ mục tệp mở
+- Tham gia liên minh node ImgHost và chia sẻ chỉ mục tệp mở
 
-Mục tiêu ban đầu của chúng tôi là giúp mọi người đều có một trang lưu trữ hình ảnh và chia sẻ tệp của riêng mình. Dù bạn đến từ quốc gia nào, sử dụng ngôn ngữ nào; dù bạn chỉ muốn lưu ảnh, sắp xếp album, chia sẻ tệp với bạn bè, hay muốn xây dựng một không gian lưu trữ ổn định cho blog, nội dung sáng tạo hoặc tài nguyên công khai, ImgBed luôn cố gắng hạ thấp rào cản nhiều nhất có thể để việc này trở nên tự do hơn, rõ ràng hơn và dễ bắt đầu hơn.
+Mục tiêu ban đầu của chúng tôi là giúp mọi người đều có một trang lưu trữ hình ảnh và chia sẻ tệp của riêng mình. Dù bạn đến từ quốc gia nào, sử dụng ngôn ngữ nào; dù bạn chỉ muốn lưu ảnh, sắp xếp album, chia sẻ tệp với bạn bè, hay muốn xây dựng một không gian lưu trữ ổn định cho blog, nội dung sáng tạo hoặc tài nguyên công khai, ImgHost luôn cố gắng hạ thấp rào cản nhiều nhất có thể để việc này trở nên tự do hơn, rõ ràng hơn và dễ bắt đầu hơn.
 
 ## Sức mạnh sẵn sàng dùng ngay
 
@@ -23,11 +23,11 @@ Mục tiêu ban đầu của chúng tôi là giúp mọi người đều có m�
 - 🧩 Thiết kế thuần mô-đun, mọi tính năng bật theo nhu cầu, không lãng phí tài nguyên
 - 🔐 Hỗ trợ API Token, chế độ truy cập và quy tắc danh sách để quản lý quyền nội dung chi tiết hơn
 
-Dự án này vẫn đang tiếp tục hoàn thiện. Khả năng của chúng tôi có giới hạn, nhưng chúng tôi sẽ cố hết sức để từng tính năng rõ ràng, ổn định và dễ dùng. Nếu ImgBed giúp bạn dễ dàng sở hữu nơi lưu ảnh, blog hoặc không gian chia sẻ tệp riêng, chúng tôi sẽ rất vui.
+Dự án này vẫn đang tiếp tục hoàn thiện. Khả năng của chúng tôi có giới hạn, nhưng chúng tôi sẽ cố hết sức để từng tính năng rõ ràng, ổn định và dễ dùng. Nếu ImgHost giúp bạn dễ dàng sở hữu nơi lưu ảnh, blog hoặc không gian chia sẻ tệp riêng, chúng tôi sẽ rất vui.
 
 ## Bắt đầu sử dụng
 
-Triển khai ImgBed qua <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Triển khai ImgBed"><img src="../image/部署按钮.png" alt="Triển khai ImgBed"></a> để nhanh chóng có dịch vụ lưu trữ ảnh và tệp của riêng bạn.
+Triển khai ImgHost qua <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Triển khai ImgHost"><img src="../image/部署按钮.png" alt="Triển khai ImgHost"></a> để nhanh chóng có dịch vụ lưu trữ ảnh và tệp của riêng bạn.
 
 ## Cảm ơn mã nguồn mở
 
@@ -48,5 +48,5 @@ Dự án này được phát triển tiếp dựa trên các dự án mã nguồ
 
 Nếu gặp sự cố trong quá trình sử dụng dự án này, vui lòng phản hồi qua GitHub Issues của chính dự án hoặc thông tin liên hệ bên dưới. Xin đừng liên hệ với tác giả hay người duy trì các dự án mã nguồn mở nêu trên để tránh làm phiền họ không cần thiết; đội ngũ duy trì dự án này sẽ chịu trách nhiệm xử lý các vấn đề liên quan.
 
-- 🐛 Lỗi hoặc đề xuất tính năng: gửi tại [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
+- 🐛 Lỗi hoặc đề xuất tính năng: gửi tại [GitHub Issues](https://github.com/axibayuit-a11y/imghost-docs/issues)
 - 📧 Liên hệ khác: axibayuit@gmail.com

@@ -1,6 +1,6 @@
 # Auflisten und Filtern mit API Token
 
-Das Listenskript mit API Token ist für Skripte, Automatisierungen und externe Programme gedacht, die Daten aus ImgBed lesen müssen. Es nutzt nur die Berechtigung `list`. Es lädt keine Dateien hoch, löscht keine Dateien, ändert keine Konfiguration und sperrt oder erlaubt keine Uploads für einzelne IP-Adressen.
+Das Listenskript mit API Token ist für Skripte, Automatisierungen und externe Programme gedacht, die Daten aus ImgHost lesen müssen. Es nutzt nur die Berechtigung `list`. Es lädt keine Dateien hoch, löscht keine Dateien, ändert keine Konfiguration und sperrt oder erlaubt keine Uploads für einzelne IP-Adressen.
 
 ![API Token bearbeiten](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Erforderlich ist Node.js 18 oder neuer.
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adresse der ImgBed-Website, zum Beispiel `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
 | `--retries <n>` | Nein | Wiederholungen bei vorübergehenden Fehlern; Standardwert `3` |
 | `--timeout-ms <n>` | Nein | Zeitlimit einer Anfrage; Standardwert `180000` |

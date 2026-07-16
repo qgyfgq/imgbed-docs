@@ -1,20 +1,20 @@
 ---
-description: "Documentação do ImgBed em português do Brasil para hospedar imagens e arquivos na Cloudflare, configurar canais de envio, tokens de API, galeria pública, API de imagem aleatória, backups, OCR e blog."
+description: "Documentação do ImgHost em português do Brasil para hospedar imagens e arquivos na Cloudflare, configurar canais de envio, tokens de API, galeria pública, API de imagem aleatória, backups, OCR e blog."
 ---
 
-# ImgBed
+# ImgHost
 
 Uma ferramenta completa de hospedagem de conteúdo pessoal baseada no ecossistema Cloudflare.
 
-O ImgBed começou com upload de imagens e gerenciamento de links. Hoje ele já se tornou uma solução completa para hospedar conteúdo pessoal. Com ele, você pode:
+O ImgHost começou com upload de imagens e gerenciamento de links. Hoje ele já se tornou uma solução completa para hospedar conteúdo pessoal. Com ele, você pode:
 
 - Enviar arquivos para qualquer canal de armazenamento que preferir
 - Compartilhar publicamente imagens e arquivos de qualquer formato
 - Montar um blog pessoal em um minuto
 - Salvar arquivos de links magnet com um clique
-- Entrar na federação de nós ImgBed e compartilhar índices de arquivos abertos
+- Entrar na federação de nós ImgHost e compartilhar índices de arquivos abertos
 
-Nosso objetivo inicial é permitir que cada pessoa tenha seu próprio site de hospedagem de imagens e compartilhamento de arquivos. Não importa de qual país você vem ou qual idioma usa: se você quer apenas salvar imagens, organizar álbuns, compartilhar arquivos com amigos, ou criar um espaço de hospedagem estável para um blog, conteúdos criativos ou recursos públicos, o ImgBed busca reduzir ao máximo a barreira de entrada e tornar essa experiência mais livre, mais clara e mais fácil de começar.
+Nosso objetivo inicial é permitir que cada pessoa tenha seu próprio site de hospedagem de imagens e compartilhamento de arquivos. Não importa de qual país você vem ou qual idioma usa: se você quer apenas salvar imagens, organizar álbuns, compartilhar arquivos com amigos, ou criar um espaço de hospedagem estável para um blog, conteúdos criativos ou recursos públicos, o ImgHost busca reduzir ao máximo a barreira de entrada e tornar essa experiência mais livre, mais clara e mais fácil de começar.
 
 ## Recursos poderosos prontos para uso
 
@@ -23,11 +23,11 @@ Nosso objetivo inicial é permitir que cada pessoa tenha seu próprio site de ho
 - 🧩 Design totalmente modular: ative cada recurso somente quando precisar, sem desperdiçar recursos
 - 🔐 Suporte a API Token, modos de acesso e regras de listas para gerenciar permissões de conteúdo com precisão
 
-Este projeto continua em evolução. Nossa capacidade é limitada, mas vamos nos esforçar ao máximo para deixar cada recurso claro, estável e fácil de usar. Se o ImgBed ajudar você a ter seu próprio host de imagens, blog ou espaço de compartilhamento de arquivos com mais facilidade, ficaremos muito felizes.
+Este projeto continua em evolução. Nossa capacidade é limitada, mas vamos nos esforçar ao máximo para deixar cada recurso claro, estável e fácil de usar. Se o ImgHost ajudar você a ter seu próprio host de imagens, blog ou espaço de compartilhamento de arquivos com mais facilidade, ficaremos muito felizes.
 
 ## Comece a usar
 
-Implante o ImgBed em <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Implantar ImgBed"><img src="../image/部署按钮.png" alt="Implantar ImgBed"></a> e tenha rapidamente seu próprio serviço de hospedagem de imagens e arquivos.
+Implante o ImgHost em <a class="imgbed-deploy-button" href="https://glow.ccwu.cc/reg/IMG-FREELY" target="_blank" rel="noopener noreferrer" aria-label="Implantar ImgHost"><img src="../image/部署按钮.png" alt="Implantar ImgHost"></a> e tenha rapidamente seu próprio serviço de hospedagem de imagens e arquivos.
 
 ## Agradecimentos ao código aberto
 
@@ -48,5 +48,5 @@ Este projeto foi desenvolvido a partir dos projetos de código aberto [CloudFlar
 
 Se você encontrar algum problema ao usar este projeto, informe-o pelas GitHub Issues deste projeto ou pelos dados de contato abaixo. Não entre em contato com os autores ou mantenedores dos projetos de código aberto citados acima, para evitar transtornos desnecessários; os mantenedores deste projeto são responsáveis por atender essas solicitações.
 
-- 🐛 Bugs ou sugestões: envie em [GitHub Issues](https://github.com/axibayuit-a11y/imgbed-docs/issues)
+- 🐛 Bugs ou sugestões: envie em [GitHub Issues](https://github.com/axibayuit-a11y/imghost-docs/issues)
 - 📧 Outro contato: axibayuit@gmail.com

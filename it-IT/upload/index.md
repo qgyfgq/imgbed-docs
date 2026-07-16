@@ -1,23 +1,23 @@
 # Impostazioni di caricamento
 
-Le impostazioni di caricamento collegano ImgBed ai tuoi canali di archiviazione. Dopo la configurazione, immagini e file caricati vengono salvati nel servizio scelto. ImgBed gestisce poi link di accesso, record dei file, anteprime, galleria pubblica, API immagine casuale, accesso WebDAV e flussi collegati.
+Le impostazioni di caricamento collegano ImgHost ai tuoi canali di archiviazione. Dopo la configurazione, immagini e file caricati vengono salvati nel servizio scelto. ImgHost gestisce poi link di accesso, record dei file, anteprime, galleria pubblica, API immagine casuale, accesso WebDAV e flussi collegati.
 
 Il canale migliore dipende dall'uso. Per iniziare in modo semplice, Telegram, Discord o GitHub Releases possono andare bene. Se contano di più capacità, velocità e stabilità nel tempo, valuta Cloudflare R2, S3, OneDrive, Google Drive, Dropbox, Yandex, pCloud o un tuo servizio WebDAV.
 
 ## Prima di iniziare
 
-> Prima di usare ImgBed per la prima volta, devi aprire la pagina di inizializzazione e fare clic su "Ricostruisci indice" per completare le tabelle D1 necessarie ed evitare errori nelle funzioni successive.
+> Prima di usare ImgHost per la prima volta, devi aprire la pagina di inizializzazione e fare clic su "Ricostruisci indice" per completare le tabelle D1 necessarie ed evitare errori nelle funzioni successive.
 >
 > ![Fare clic su Ricostruisci indice durante l’inizializzazione](../../image/初始化点击重建索引.png)
 
 ### Facoltativo: attivare la replica in lettura D1
 
-Nelle impostazioni del database D1 nel pannello Cloudflare, attiva la replica in lettura per velocizzare l’accesso alla gestione dei file, alla galleria pubblica e all’API per immagini casuali. ImgBed funziona normalmente anche senza questa opzione.
+Nelle impostazioni del database D1 nel pannello Cloudflare, attiva la replica in lettura per velocizzare l’accesso alla gestione dei file, alla galleria pubblica e all’API per immagini casuali. ImgHost funziona normalmente anche senza questa opzione.
 
 ![Attivare la replica in lettura D1](../../image/d1读取复制.png)
 
 - Prepara l'account di archiviazione o le credenziali API da usare.
-- Verifica che il dominio ImgBed sia raggiungibile, perché i canali OAuth richiedono URL di callback.
+- Verifica che il dominio ImgHost sia raggiungibile, perché i canali OAuth richiedono URL di callback.
 - Dopo aver aggiunto un canale, carica prima un'immagine di prova per controllare che salvataggio e apertura funzionino.
 
 ## Elenco canali
@@ -40,4 +40,4 @@ Nelle impostazioni del database D1 nel pannello Cloudflare, attiva la replica in
 
 - Quali informazioni servono prima di configurare ogni canale.
 - Come creare app, copiare chiavi o autorizzare token su piattaforme esterne.
-- Come inserire la configurazione in ImgBed e verificare che il caricamento funzioni.
+- Come inserire la configurazione in ImgHost e verificare che il caricamento funzioni.

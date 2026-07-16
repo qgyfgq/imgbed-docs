@@ -28,7 +28,7 @@ The newer IP geolocation flow supports multiple sources instead of relying on on
 
 Fill in only the services you need. You do not have to configure every field.
 
-If no key is provided, ImgBed still tries built-in free sources, but stability, language support, and precision may be lower than a service you configure yourself.
+If no key is provided, ImgHost still tries built-in free sources, but stability, language support, and precision may be lower than a service you configure yourself.
 
 ## Recommended Choices
 
@@ -57,9 +57,9 @@ Find the account ID in the MaxMind dashboard and generate a License Key from the
 
 ![MaxMind key config](../../image/other/ip定位/maxmind的key配置.png)
 
-After generation, paste the Account ID and License Key into ImgBed and save.
+After generation, paste the Account ID and License Key into ImgHost and save.
 
-MaxMind's free plan is suitable for everyday use, but it has request limits. If the quota is exceeded, ImgBed continues trying other available sources.
+MaxMind's free plan is suitable for everyday use, but it has request limits. If the quota is exceeded, ImgHost continues trying other available sources.
 
 ## ipapi Setup
 
@@ -69,9 +69,9 @@ Open the ipapi console and copy the API Key shown there.
 
 ![ipapi config](../../image/other/ip定位/ipapi配置.png)
 
-Paste it into the `ipapi Key` field in ImgBed and save.
+Paste it into the `ipapi Key` field in ImgHost and save.
 
-ipapi supports multilingual IP geolocation and is useful when you want addresses shown in a selected language. Its free plan also has request limits. If quota runs out, ImgBed continues trying other available sources.
+ipapi supports multilingual IP geolocation and is useful when you want addresses shown in a selected language. Its free plan also has request limits. If quota runs out, ImgHost continues trying other available sources.
 
 ## Tencent Map Key Setup
 

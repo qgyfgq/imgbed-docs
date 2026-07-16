@@ -6,7 +6,7 @@
 | --- | --- |
 | Akun Yandex | Digunakan untuk masuk dan mengotorisasi Yandex Disk |
 | Aplikasi OAuth Yandex | Digunakan untuk menghasilkan `Client ID` dan `Client Secret` |
-| Domain ImgBed Anda | Digunakan untuk URI pengalihan OAuth |
+| Domain ImgHost Anda | Digunakan untuk URI pengalihan OAuth |
 | Penyimpanan Yandex Disk yang tersedia | Digunakan sebagai lokasi penyimpanan berkas yang sebenarnya |
 
 ## Langkah Konfigurasi
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### Langkah 2: Konfirmasi Izin
 
-Untuk integrasi Yandex ImgBed saat ini, pertahankan empat izin berikut di bawah `Yandex.Disk REST API`:
+Untuk integrasi Yandex ImgHost saat ini, pertahankan empat izin berikut di bawah `Yandex.Disk REST API`:
 
 | Izin | Tujuan |
 | --- | --- |
-| `cloud_api:disk.app_folder` | Memungkinkan ImgBed menyimpan berkas di folder aplikasi |
+| `cloud_api:disk.app_folder` | Memungkinkan ImgHost menyimpan berkas di folder aplikasi |
 | `cloud_api:disk.read` | Membaca berkas dan tautan unduhan |
 | `cloud_api:disk.write` | Mengunggah berkas, membuat folder, dan menghapus berkas |
 | `Access to information about Yandex.Disk` | Membaca kuota disk dan ruang yang telah digunakan |
@@ -55,7 +55,7 @@ Fitur inti untuk unggah, unduh, hapus, dan kuota terutama bergantung pada empat 
 
 Setelah aplikasi dibuat, salin:
 
-| Kolom Yandex | Kolom ImgBed |
+| Kolom Yandex | Kolom ImgHost |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ Setelah aplikasi dibuat, salin:
 
 Di Pengaturan Unggah, pilih `Yandex`, lalu isi:
 
-| Kolom ImgBed | Yang Harus Diisi |
+| Kolom ImgHost | Yang Harus Diisi |
 | --- | --- |
 | Nama kanal | Nama yang mudah dikenali, misalnya `Main Yandex` |
 | Client ID | `Client ID` aplikasi Yandex |
@@ -78,12 +78,12 @@ Di Pengaturan Unggah, pilih `Yandex`, lalu isi:
 
 ### Langkah 5: Dapatkan Refresh Token
 
-1. Di ImgBed, klik `Get Token`.
+1. Di ImgHost, klik `Get Token`.
 2. Masuk ke akun Yandex yang ingin Anda hubungkan.
 3. Setujui permintaan otorisasi.
 4. Halaman callback akan menampilkan `Refresh Token`.
 5. Salin token tersebut.
-6. Kembali ke ImgBed dan tempelkan ke kolom `Refresh Token`.
+6. Kembali ke ImgHost dan tempelkan ke kolom `Refresh Token`.
 
 ![Menyalin refresh token setelah otorisasi](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## Referensi

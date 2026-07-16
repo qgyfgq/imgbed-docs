@@ -28,7 +28,7 @@ De nieuwere werkwijze voor IP-geolocatie ondersteunt meerdere bronnen, in plaats
 
 Vul alleen de diensten in die je nodig hebt. Je hoeft niet elk veld te configureren.
 
-Als je geen sleutel invult, probeert ImgBed nog steeds ingebouwde gratis bronnen, maar stabiliteit, taalondersteuning en nauwkeurigheid kunnen lager zijn dan bij een eigen geconfigureerde dienst.
+Als je geen sleutel invult, probeert ImgHost nog steeds ingebouwde gratis bronnen, maar stabiliteit, taalondersteuning en nauwkeurigheid kunnen lager zijn dan bij een eigen geconfigureerde dienst.
 
 ## Aanbevolen keuzes
 
@@ -57,9 +57,9 @@ Zoek de account-ID in het MaxMind-dashboard en genereer een License Key op de pa
 
 ![MaxMind key-configuratie](../../image/other/ip定位/maxmind的key配置.png)
 
-Plak na het genereren Account ID en License Key in ImgBed en sla op.
+Plak na het genereren Account ID en License Key in ImgHost en sla op.
 
-Het gratis plan van MaxMind is geschikt voor dagelijks gebruik, maar heeft aanvraaglimieten. Als het quotum is overschreden, blijft ImgBed andere beschikbare bronnen proberen.
+Het gratis plan van MaxMind is geschikt voor dagelijks gebruik, maar heeft aanvraaglimieten. Als het quotum is overschreden, blijft ImgHost andere beschikbare bronnen proberen.
 
 ## ipapi instellen
 
@@ -69,9 +69,9 @@ Open de ipapi-console en kopieer de API Key die daar wordt getoond.
 
 ![ipapi-configuratie](../../image/other/ip定位/ipapi配置.png)
 
-Plak deze in het veld `ipapi Key` in ImgBed en sla op.
+Plak deze in het veld `ipapi Key` in ImgHost en sla op.
 
-ipapi ondersteunt meertalige IP-geolocatie en is handig wanneer je adressen in een gekozen taal wilt tonen. Ook het gratis plan heeft aanvraaglimieten. Als het quotum opraakt, blijft ImgBed andere beschikbare bronnen proberen.
+ipapi ondersteunt meertalige IP-geolocatie en is handig wanneer je adressen in een gekozen taal wilt tonen. Ook het gratis plan heeft aanvraaglimieten. Als het quotum opraakt, blijft ImgHost andere beschikbare bronnen proberen.
 
 ## Tencent Map Key instellen
 

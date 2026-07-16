@@ -28,7 +28,7 @@ Il nuovo flusso di geolocalizzazione IP supporta più origini, invece di dipende
 
 Compila solo i servizi che ti servono. Non è necessario riempire tutti i campi.
 
-Se non fornisci alcuna chiave, ImgBed prova comunque a usare origini gratuite integrate, ma stabilità, supporto linguistico e precisione possono essere inferiori rispetto a un servizio configurato da te.
+Se non fornisci alcuna chiave, ImgHost prova comunque a usare origini gratuite integrate, ma stabilità, supporto linguistico e precisione possono essere inferiori rispetto a un servizio configurato da te.
 
 ## Scelte consigliate
 
@@ -57,9 +57,9 @@ Trova l'Account ID nella dashboard MaxMind e genera una License Key dalla pagina
 
 ![Configurazione chiave MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Dopo la generazione, incolla Account ID e License Key in ImgBed e salva.
+Dopo la generazione, incolla Account ID e License Key in ImgHost e salva.
 
-Il piano gratuito di MaxMind è adatto all'uso quotidiano, ma prevede limiti di richieste. Se la quota viene superata, ImgBed continua a provare le altre origini disponibili.
+Il piano gratuito di MaxMind è adatto all'uso quotidiano, ma prevede limiti di richieste. Se la quota viene superata, ImgHost continua a provare le altre origini disponibili.
 
 ## Configurare ipapi
 
@@ -69,9 +69,9 @@ Apri la console di ipapi e copia l'API Key mostrata.
 
 ![Configurazione ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Incollala nel campo `ipapi Key` in ImgBed e salva.
+Incollala nel campo `ipapi Key` in ImgHost e salva.
 
-ipapi supporta la geolocalizzazione IP multilingue ed è utile quando vuoi mostrare gli indirizzi nella lingua selezionata. Anche il piano gratuito prevede limiti di richieste. Se la quota si esaurisce, ImgBed continua a provare le altre origini disponibili.
+ipapi supporta la geolocalizzazione IP multilingue ed è utile quando vuoi mostrare gli indirizzi nella lingua selezionata. Anche il piano gratuito prevede limiti di richieste. Se la quota si esaurisce, ImgHost continua a provare le altre origini disponibili.
 
 ## Configurare Tencent Map Key
 

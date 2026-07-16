@@ -48,9 +48,9 @@
 
 ![App စကားဝှက် အသစ် သိမ်းခြင်း](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. ImgBed တွင် WebDAV Configuration ကိုဖြည့်ပါ
+### 2. ImgHost တွင် WebDAV Configuration ကိုဖြည့်ပါ
 
-ImgBed သို့ ပြန်သွားပြီး WebDAV ချန်နယ်တစ်ခု ထည့်ပါ။
+ImgHost သို့ ပြန်သွားပြီး WebDAV ချန်နယ်တစ်ခု ထည့်ပါ။
 
 | UI အကွက် | တန်ဖိုး |
 | --- | --- |
@@ -68,7 +68,7 @@ WebDAV ချန်နယ်သည် ယခု session-based chunked upload အ
 
 ဖိုင်အသေးများကို ဖိုင်တစ်ခုလုံးအဖြစ် အပ်လုဒ်လုပ်သည်။ 64 MiB ထက်ကြီးသော ဖိုင်များကို 10 MiB ခန့်ရှိသော chunk များအဖြစ် အလိုအလျောက် ခွဲပြီး remote chunk directory သို့ အပ်လုဒ်လုပ်သည်။
 
-WebDAV service သည် `partial update` သို့မဟုတ် offset-based write ကို ပံ့ပိုးရန် မလိုအပ်ပါ။ ImgBed သည် remote server ပေါ်တွင် chunk များကို ဖိုင်ကြီးတစ်ခုအဖြစ် merge မလုပ်ပါ။ အစားထိုးအနေဖြင့် chunk manifest ကိုသိမ်းပြီး ဖိုင်တောင်းဆိုသည့်အခါ chunk များကို အစဉ်လိုက်ဖတ်သည်။
+WebDAV service သည် `partial update` သို့မဟုတ် offset-based write ကို ပံ့ပိုးရန် မလိုအပ်ပါ။ ImgHost သည် remote server ပေါ်တွင် chunk များကို ဖိုင်ကြီးတစ်ခုအဖြစ် merge မလုပ်ပါ။ အစားထိုးအနေဖြင့် chunk manifest ကိုသိမ်းပြီး ဖိုင်တောင်းဆိုသည့်အခါ chunk များကို အစဉ်လိုက်ဖတ်သည်။
 
 လက်တွေ့တွင်-
 
@@ -77,7 +77,7 @@ WebDAV service သည် `partial update` သို့မဟုတ် offset-bas
 | 64 MiB သို့မဟုတ် ထို့ထက်ငယ် | ပုံမှန် upload | ဖိုင်တစ်ခုလုံး |
 | 64 MiB ထက်ကြီး | Real session chunked upload | Chunk file များစွာပါဝင်သော chunk directory |
 
-Chunk directory သည် remote storage layout ကိုသာ သက်ရောက်စေသည်။ ImgBed တွင်ရှိသော file URL ကို မပြောင်းလဲစေပါ။ အသုံးပြုသူများသည် မူရင်း `/file/...` link မှတစ်ဆင့် ဖိုင်ကို ဆက်လက်ဝင်ရောက်သည်။
+Chunk directory သည် remote storage layout ကိုသာ သက်ရောက်စေသည်။ ImgHost တွင်ရှိသော file URL ကို မပြောင်းလဲစေပါ။ အသုံးပြုသူများသည် မူရင်း `/file/...` link မှတစ်ဆင့် ဖိုင်ကို ဆက်လက်ဝင်ရောက်သည်။
 
 ## ပြင်ဆင်မှု အဆင့်များ
 
@@ -111,7 +111,7 @@ Chunk directory သည် remote storage layout ကိုသာ သက်ရေ�
 
 ဤသည်မှာ ဖိုင်ကြီးများအတွက် လက်ရှိ storage method ဖြစ်သည်။
 
-64 MiB ထက်ကြီးသော ဖိုင်များကို remote file ကြီးတစ်ခုအဖြစ် merge မလုပ်ပါ။ ၎င်းတို့ကို chunk directory အဖြစ် သိမ်းသည်။ ImgBed သည် chunk manifest ကိုမှတ်တမ်းတင်ပြီး chunk များကို အစဉ်လိုက်ဖတ်ခြင်းဖြင့် အကြောင်းအရာတစ်ခုလုံးကို ပြန်ပေးသည်။
+64 MiB ထက်ကြီးသော ဖိုင်များကို remote file ကြီးတစ်ခုအဖြစ် merge မလုပ်ပါ။ ၎င်းတို့ကို chunk directory အဖြစ် သိမ်းသည်။ ImgHost သည် chunk manifest ကိုမှတ်တမ်းတင်ပြီး chunk များကို အစဉ်လိုက်ဖတ်ခြင်းဖြင့် အကြောင်းအရာတစ်ခုလုံးကို ပြန်ပေးသည်။
 
 ### ဖိုင်ကြီး upload မအောင်မြင်ပါက ဘာကို အရင်စစ်သင့်သနည်း။
 

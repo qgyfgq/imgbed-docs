@@ -1,6 +1,6 @@
 # API Token でファイルをアップロードする
 
-API Token アップロードは、スクリプト、自動化タスク、外部プログラムから ImgBed にファイルを送るための機能です。Web 画面を開かなくても、サイト URL、Token、ローカルファイルのパス、実際のアップロードチャンネルを指定すれば、アップロード後にファイル URL を取得できます。
+API Token アップロードは、スクリプト、自動化タスク、外部プログラムから ImgHost にファイルを送るための機能です。Web 画面を開かなくても、サイト URL、Token、ローカルファイルのパス、実際のアップロードチャンネルを指定すれば、アップロード後にファイル URL を取得できます。
 
 ![API Token の編集](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
-| `--base-url <url>` | はい | ImgBed サイトの URL。例: `https://image.ai6.me` |
+| `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
 | `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
 | `--file <path>` | はい | ローカルファイルのパス。 |
 | `--channel <key>` | はい | アップロードチャンネル。 |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
-| `--base-url <url>` | はい | ImgBed サイトの URL。 |
+| `--base-url <url>` | はい | ImgHost サイトの URL。 |
 | `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
 | `--file <path>` | はい | ローカルファイルのパス。 |
 | `--channel <key>` | はい | アップロードチャンネル。 |

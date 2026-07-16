@@ -8,8 +8,8 @@ Les paramètres de page contrôlent l’affichage du site, les valeurs par défa
 | --- | --- |
 | Titre du site | Titre affiché dans l’onglet du navigateur. |
 | Icône du site | Petite icône affichée dans l’onglet du navigateur. |
-| Nom ImgBed | Nom affiché sur les pages de l’interface publique. |
-| Logo ImgBed | Image du logo affichée sur les pages de l’interface publique. |
+| Nom ImgHost | Nom affiché sur les pages de l’interface publique. |
+| Logo ImgHost | Image du logo affichée sur les pages de l’interface publique. |
 | Lien du logo | URL ouverte lors d’un clic sur le logo ou l’avatar. |
 | Intervalle de changement d’arrière-plan | Intervalle de rotation de plusieurs arrière-plans, en millisecondes. `60000` signifie 60 secondes. |
 | Opacité de l’arrière-plan | Opacité de l’image d’arrière-plan de `0` à `1`. Les valeurs plus faibles donnent un rendu plus clair. |
@@ -63,5 +63,5 @@ L’arrière-plan d’administration prend en charge les URL d’images. Plusieu
 | --- | --- |
 | Par défaut | Préfixe aléatoire basé sur l’heure + nom de fichier d’origine, par exemple `1760000000000_cat.png`. |
 | Préfixe uniquement | Préfixe aléatoire basé sur l’heure et extension uniquement, par exemple `1760000000000.png`. |
-| Nom d’origine uniquement | Conserve le nom de fichier d’origine, par exemple `cat.png`. En cas de doublon, ImgBed ajoute `(1)`, `(2)`, etc. |
+| Nom d’origine uniquement | Conserve le nom de fichier d’origine, par exemple `cat.png`. En cas de doublon, ImgHost ajoute `(1)`, `(2)`, etc. |
 | Lien court | Utilise un ID court de 8 caractères avec l’extension, par exemple `a1b2c3d4.png`. |

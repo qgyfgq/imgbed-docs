@@ -46,7 +46,7 @@ Node.js 18 or later is required to run the script.
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL, for example `https://image.ai6.me` |
+| `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me` |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable |
 | `--retries <n>` | No | Retry count for temporary failures. Defaults to `3` |
 | `--timeout-ms <n>` | No | Timeout for a single request. Defaults to `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Creating Folders
 
-ImgBed directories come from file paths, so there are no real empty directories. When the script creates a folder, it creates a placeholder file named `0.md` under the target directory so that backend file management and directory statistics can display the directory.
+ImgHost directories come from file paths, so there are no real empty directories. When the script creates a folder, it creates a placeholder file named `0.md` under the target directory so that backend file management and directory statistics can display the directory.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ The backend processes at most `15` files per request. The script defaults to `--
 
 ### Can It Create A Truly Empty Folder?
 
-ImgBed directories are derived from file paths, so there are no real empty directories. `--create-folder` creates a directory placeholder file named `0.md`, allowing the directory to appear in file management and directory statistics.
+ImgHost directories are derived from file paths, so there are no real empty directories. `--create-folder` creates a directory placeholder file named `0.md`, allowing the directory to appear in file management and directory statistics.
 
 ### How Long Can A Short-Lived Upload Token Last?
 

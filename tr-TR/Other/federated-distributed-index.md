@@ -1,6 +1,6 @@
 # Federasyon Dağıtık Dizini
 
-Federasyon dağıtık dizini, birden fazla ImgBed sitesinin dosya listelerini birbirleriyle paylaşmasını sağlar.
+Federasyon dağıtık dizini, birden fazla ImgHost sitesinin dosya listelerini birbirleriyle paylaşmasını sağlar.
 
 Basitçe:
 
@@ -23,7 +23,7 @@ Sayfada üç sekme bulunur:
 | Sekme | Amaç |
 | --- | --- |
 | Yerel düğüm | Düğümünüzü etkinleştirme, genel alan adını doğrulama, paylaşılan klasörleri seçme ve giden dizini güncelleme |
-| Katıldığım düğümler | Katıldığınız diğer ImgBed düğümlerini yönetme |
+| Katıldığım düğümler | Katıldığınız diğer ImgHost düğümlerini yönetme |
 | Bana katılmak isteyen düğümler | Düğümünüze katılmak isteyenlerin isteklerini yönetme |
 
 ## İlk Kurulum
@@ -32,7 +32,7 @@ Sayfada üç sekme bulunur:
 2. `Enable` seçeneğini açın.
 3. `Sync folders` altında paylaşılacak klasörleri seçin.
 4. `Update Outbound Index` öğesine tıklayın.
-5. ImgBed alan adı değişikliği algılarsa, devam etmeden önce geçerli alan adının doğru olduğunu onaylayın.
+5. ImgHost alan adı değişikliği algılarsa, devam etmeden önce geçerli alan adının doğru olduğunu onaylayın.
 
 Birden fazla eşitleme klasörü seçebilirsiniz.
 
@@ -44,7 +44,7 @@ Eşitleme klasörü listesi boşsa tüm klasörler paylaşılır.
 
 Genel alan adı, diğer düğümlerin düğümünüze erişmek için kullandığı site URL'sidir.
 
-ImgBed bunu otomatik olarak algılar. Elle yazmanız gerekmez. Dizini ilk kez güncellediğinizde ImgBed, geçerli erişim URL'sinin üretim alan adı olup olmadığını onaylamanızı ister.
+ImgHost bunu otomatik olarak algılar. Elle yazmanız gerekmez. Dizini ilk kez güncellediğinizde ImgHost, geçerli erişim URL'sinin üretim alan adı olup olmadığını onaylamanızı ister.
 
 Alan adını daha sonra değiştirirseniz dizin güncellemesi tekrar onay ister.
 
@@ -116,7 +116,7 @@ Katılım iptal edildikten sonra o düğümün federasyon dizini yerel sitenizde
 ### Davet Bağlantısı Oluşturma
 
 1. Yerel düğümün etkin olduğundan emin olun.
-2. ImgBed'in genel alan adını onaylaması için `Update Outbound Index` öğesine en az bir kez tıklayın.
+2. ImgHost'in genel alan adını onaylaması için `Update Outbound Index` öğesine en az bir kez tıklayın.
 3. `Nodes Joining Me` öğesini açın.
 4. `Reset Invitation Link` öğesine tıklayın.
 5. Davet bağlantısını kopyalayıp diğer sahibe gönderin.

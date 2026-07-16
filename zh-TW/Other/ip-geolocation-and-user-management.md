@@ -28,7 +28,7 @@ System Settings -> Other Settings -> IP Geolocation
 
 只需填寫你需要的服務，不必每個欄位都設定。
 
-如果沒有提供任何金鑰，ImgBed 仍會嘗試使用內建免費來源，但穩定性、語言支援和精準度可能不如你自行設定的服務。
+如果沒有提供任何金鑰，ImgHost 仍會嘗試使用內建免費來源，但穩定性、語言支援和精準度可能不如你自行設定的服務。
 
 ## 建議選擇
 
@@ -57,9 +57,9 @@ MaxMind License Key
 
 ![MaxMind 金鑰設定](../../image/other/ip定位/maxmind的key配置.png)
 
-產生後，將 Account ID 和 License Key 貼到 ImgBed 並儲存。
+產生後，將 Account ID 和 License Key 貼到 ImgHost 並儲存。
 
-MaxMind 免費方案適合日常使用，但有請求次數限制。若超過額度，ImgBed 會繼續嘗試其他可用來源。
+MaxMind 免費方案適合日常使用，但有請求次數限制。若超過額度，ImgHost 會繼續嘗試其他可用來源。
 
 ## ipapi 設定
 
@@ -69,9 +69,9 @@ ipapi 使用 APILayer API Key。
 
 ![ipapi 設定](../../image/other/ip定位/ipapi配置.png)
 
-將它貼到 ImgBed 的 `ipapi Key` 欄位並儲存。
+將它貼到 ImgHost 的 `ipapi Key` 欄位並儲存。
 
-ipapi 支援多語言 IP 地理定位，適合希望地址依指定語言顯示的情境。免費方案也有請求次數限制。若額度用完，ImgBed 會繼續嘗試其他可用來源。
+ipapi 支援多語言 IP 地理定位，適合希望地址依指定語言顯示的情境。免費方案也有請求次數限制。若額度用完，ImgHost 會繼續嘗試其他可用來源。
 
 ## Tencent Map Key 設定
 

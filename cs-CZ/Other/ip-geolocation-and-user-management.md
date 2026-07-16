@@ -28,7 +28,7 @@ Novější tok IP geolokace podporuje více zdrojů, místo aby se spoléhal na 
 
 Vyplňte jen služby, které potřebujete. Není nutné nastavovat každé pole.
 
-Pokud nezadáte žádný klíč, ImgBed se stále pokusí použít vestavěné bezplatné zdroje, ale stabilita, jazyková podpora a přesnost mohou být nižší než u služby, kterou nastavíte sami.
+Pokud nezadáte žádný klíč, ImgHost se stále pokusí použít vestavěné bezplatné zdroje, ale stabilita, jazyková podpora a přesnost mohou být nižší než u služby, kterou nastavíte sami.
 
 ## Doporučené volby
 
@@ -57,9 +57,9 @@ ID účtu najdete v ovládacím panelu MaxMind a licenční klíč vygenerujete 
 
 ![Konfigurace klíče MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Po vygenerování vložte ID účtu a licenční klíč do ImgBed a uložte.
+Po vygenerování vložte ID účtu a licenční klíč do ImgHost a uložte.
 
-Bezplatný plán MaxMind stačí pro běžné používání, ale má limity požadavků. Pokud je kvóta překročena, ImgBed pokračuje ve zkoušení dalších dostupných zdrojů.
+Bezplatný plán MaxMind stačí pro běžné používání, ale má limity požadavků. Pokud je kvóta překročena, ImgHost pokračuje ve zkoušení dalších dostupných zdrojů.
 
 ## Nastavení ipapi
 
@@ -69,9 +69,9 @@ Otevřete konzoli ipapi a zkopírujte zobrazený API Key.
 
 ![Konfigurace ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Vložte ho do pole `ipapi Key` v ImgBed a uložte.
+Vložte ho do pole `ipapi Key` v ImgHost a uložte.
 
-ipapi podporuje vícejazyčnou IP geolokaci a hodí se, když chcete zobrazovat adresy ve vybraném jazyce. Jeho bezplatný plán má také limity požadavků. Po vyčerpání kvóty ImgBed pokračuje ve zkoušení dalších dostupných zdrojů.
+ipapi podporuje vícejazyčnou IP geolokaci a hodí se, když chcete zobrazovat adresy ve vybraném jazyce. Jeho bezplatný plán má také limity požadavků. Po vyčerpání kvóty ImgHost pokračuje ve zkoušení dalších dostupných zdrojů.
 
 ## Nastavení klíče Tencent Map
 

@@ -64,7 +64,7 @@ Jika tidak ada file yang cocok setelah pemfilteran, API tidak mengembalikan hasi
 
 API Gambar Acak menyimpan cache kumpulan kandidat per direktori untuk meningkatkan kecepatan.
 
-Setelah file berubah, ImgBed memperbarui versi cache direktori, dan permintaan berikutnya membangun ulang kumpulan kandidat. Direktori kosong di-cache sebentar untuk menghindari kueri berulang.
+Setelah file berubah, ImgHost memperbarui versi cache direktori, dan permintaan berikutnya membangun ulang kumpulan kandidat. Direktori kosong di-cache sebentar untuk menghindari kueri berulang.
 
 ## Galeri Publik
 

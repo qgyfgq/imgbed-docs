@@ -6,7 +6,7 @@
 | --- | --- |
 | Dropbox အကောင့်တစ်ခု | Sign in ဝင်ရန်နှင့် app ကို authorize လုပ်ရန် အသုံးပြုသည် |
 | Dropbox app တစ်ခု | `App Key` နှင့် `App Secret` ထုတ်လုပ်ရန် အသုံးပြုသည် |
-| သင်၏ ImgBed ဒိုမိန်း | OAuth redirect URI အတွက် အသုံးပြုသည် |
+| သင်၏ ImgHost ဒိုမိန်း | OAuth redirect URI အတွက် အသုံးပြုသည် |
 | အသုံးပြုနိုင်သော Dropbox storage | လက်တွေ့ဖိုင်သိုလှောင်ရာနေရာအဖြစ် အသုံးပြုသည် |
 
 ## ပြင်ဆင်မှု အဆင့်များ
@@ -33,8 +33,8 @@ App folder
 
 | Access Type | အကြံပြုချက် |
 | --- | --- |
-| `App folder` | အကြံပြုသည်။ ၎င်းသည် ImgBed ၏ ဖိုင်သိမ်းဆည်းပုံနှင့် ကိုက်ညီသည်။ |
-| `Full Dropbox` | မအကြံပြုပါ။ ImgBed သည် အကောင့်တစ်ခုလုံးသို့ access မလိုအပ်ပါ။ |
+| `App folder` | အကြံပြုသည်။ ၎င်းသည် ImgHost ၏ ဖိုင်သိမ်းဆည်းပုံနှင့် ကိုက်ညီသည်။ |
+| `Full Dropbox` | မအကြံပြုပါ။ ImgHost သည် အကောင့်တစ်ခုလုံးသို့ access မလိုအပ်ပါ။ |
 
 ![Dropbox app ဖန်တီးခြင်း](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ Scope များရွေးပြီးပါက စာမျက်နှာ�
 
 Dropbox app စာမျက်နှာမှ အောက်ပါတန်ဖိုးနှစ်ခုကို သိမ်းထားပါ။
 
-| Dropbox အကွက် | ImgBed အကွက် |
+| Dropbox အကွက် | ImgHost အကွက် |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ Dropbox app စာမျက်နှာမှ အောက်ပါတန်ဖ�
 
 အပ်လုဒ် ဆက်တင်များ တွင် `Dropbox` ကိုရွေးပြီး အောက်ပါအတိုင်း ဖြည့်ပါ။
 
-| ImgBed အကွက် | ထည့်ရန်အရာ |
+| ImgHost အကွက် | ထည့်ရန်အရာ |
 | --- | --- |
 | ချန်နယ်အမည် | သင်မှတ်မိနိုင်သောအမည်၊ ဥပမာ `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ Dropbox app စာမျက်နှာမှ အောက်ပါတန်ဖ�
 
 ### အဆင့် 6: Refresh Token ရယူပါ
 
-1. ImgBed တွင် `Get Token` ကိုနှိပ်ပါ။
+1. ImgHost တွင် `Get Token` ကိုနှိပ်ပါ။
 2. ချိတ်ဆက်လိုသော Dropbox အကောင့်သို့ sign in ဝင်ပါ။
 3. Authorization prompt ကို approve လုပ်ပါ။
 4. Callback စာမျက်နှာတွင် `Refresh Token` ကိုပြမည်။
 5. ၎င်းကိုကူးယူပါ။
-6. ImgBed သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
+6. ImgHost သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
 
 ![Token ကူးယူခြင်း](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ Quota limit ဖွင့်ထားပါက quota query ကိုနှိပ�
 
 | ပြဿနာ | ဖြေရှင်းနည်း |
 | --- | --- |
-| ImgBed က configuration မပြည့်စုံဟု ပြသည် | `App Key`၊ `App Secret` နှင့် `Refresh Token` အားလုံး ဖြည့်ထားကြောင်း စစ်ဆေးပါ။ |
+| ImgHost က configuration မပြည့်စုံဟု ပြသည် | `App Key`၊ `App Secret` နှင့် `Refresh Token` အားလုံး ဖြည့်ထားကြောင်း စစ်ဆေးပါ။ |
 | Authorization အောင်မြင်သော်လည်း `Refresh Token` မပေါ်ပါ | `Get Token` ကို ထပ်နှိပ်ပြီး offline authorization flow ကို အသုံးပြုထားကြောင်း သေချာပါစေ။ |
 | Upload သည် `required scope 'files.content.write'` ဖြင့် မအောင်မြင်သည် | `files.content.write` ကို enable လုပ်ပါ၊ `Submit` ကိုနှိပ်ပါ၊ ထို့နောက် `Refresh Token` အသစ် ရယူပါ။ |
 | Callback မအောင်မြင်ပါ | Redirect URI သည် `https://your-domain.com/api/oauth/dropbox/callback` ဖြစ်ကြောင်း အတည်ပြုပါ။ |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## ကိုးကားချက်များ

@@ -1,12 +1,12 @@
 ---
-description: Official ImgBed documentation for Cloudflare image hosting, file hosting, storage channels, API tokens, public gallery, random image API, backups, OCR, and blog setup.
+description: Official ImgHost documentation for Cloudflare image hosting, file hosting, storage channels, API tokens, public gallery, random image API, backups, OCR, and blog setup.
 ---
 
-# ImgBed Docs
+# ImgHost Docs
 
 <RedirectHome />
 
-ImgBed is a self-hosted image hosting and file hosting project built around the Cloudflare ecosystem. The documentation covers deployment, storage channel setup, API Token workflows, public gallery settings, random image API usage, redundant backups, OCR, WebDAV access, and blog setup.
+ImgHost is a self-hosted image hosting and file hosting project built around the Cloudflare ecosystem. The documentation covers deployment, storage channel setup, API Token workflows, public gallery settings, random image API usage, redundant backups, OCR, WebDAV access, and blog setup.
 
 You are being redirected to your preferred documentation language. If the redirect does not start, choose a language below.
 
@@ -23,7 +23,7 @@ You are being redirected to your preferred documentation language. If the redire
 
 ## Core Guides
 
-- [Cloudflare ImgBed deployment and quick start](/en/)
+- [ImgHost deployment and quick start](/en/)
 - [Cloudflare 图床部署与快速开始](/cn/)
 - [Upload and storage channel setup](/en/upload/)
 - [上传渠道配置](/cn/upload/)

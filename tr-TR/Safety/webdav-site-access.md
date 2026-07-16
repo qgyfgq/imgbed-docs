@@ -1,9 +1,9 @@
 # WebDAV Site Access
-Güvenlik Ayarları içindeki WebDAV ayarı, ImgBed sitenizi bir WebDAV uç noktası olarak sunar.
+Güvenlik Ayarları içindeki WebDAV ayarı, ImgHost sitenizi bir WebDAV uç noktası olarak sunar.
 
-Etkinleştirildikten sonra Windows, macOS, mobil dosya yöneticileri veya WebDAV uyumlu herhangi bir istemciyle ImgBed dosyalarını uzak klasör gibi gezebilir, yükleyebilir, silebilir ve yönetebilirsiniz.
+Etkinleştirildikten sonra Windows, macOS, mobil dosya yöneticileri veya WebDAV uyumlu herhangi bir istemciyle ImgHost dosyalarını uzak klasör gibi gezebilir, yükleyebilir, silebilir ve yönetebilirsiniz.
 
-Bu, sitenin WebDAV erişim girişidir. Yükleme Ayarları içindeki WebDAV depolama kanalından farklıdır. Yükleme kanalı dosyaları üçüncü taraf bir WebDAV hizmetinde saklar. Bu ayar ise ImgBed sitenizin istemcilere WebDAV erişimi sağlamasına izin verir.
+Bu, sitenin WebDAV erişim girişidir. Yükleme Ayarları içindeki WebDAV depolama kanalından farklıdır. Yükleme kanalı dosyaları üçüncü taraf bir WebDAV hizmetinde saklar. Bu ayar ise ImgHost sitenizin istemcilere WebDAV erişimi sağlamasına izin verir.
 
 ## Nereden Yapılandırılır?
 
@@ -23,21 +23,21 @@ Kullanılabilir ayarlar:
 
 ## Bu Özellik Ne Yapar?
 
-WebDAV etkinleştirildikten sonra ImgBed sabit bir erişim URL'si sağlar:
+WebDAV etkinleştirildikten sonra ImgHost sabit bir erişim URL'si sağlar:
 
 ```text
 https://your-domain.com/dav
 ```
 
-ImgBed dosya dizininize bağlanmak için bu URL'yi kullanın.
+ImgHost dosya dizininize bağlanmak için bu URL'yi kullanın.
 
 İyi kullanım alanları:
 
-- ImgBed dosyalarını doğrudan bilgisayarınızın dosya yöneticisinden gezmek.
+- ImgHost dosyalarını doğrudan bilgisayarınızın dosya yöneticisinden gezmek.
 - Görselleri yüklemek için WebDAV klasörüne sürüklemek.
-- ImgBed klasörlerini yerel dosya yöneticinizden düzenlemek.
+- ImgHost klasörlerini yerel dosya yöneticinizden düzenlemek.
 - Görselleri eşitlemek veya yönetmek için WebDAV uyumlu yazılım kullanmak.
-- Yönetim panelini açmadan ImgBed içeriğine erişmek.
+- Yönetim panelini açmadan ImgHost içeriğine erişmek.
 
 ## Ayarlar
 
@@ -63,7 +63,7 @@ Yaygın seçenekler:
 
 | Mod | Açıklama |
 | --- | --- |
-| Akıllı yükleme | ImgBed bağlama göre seçim yapar. Normal kullanım için önerilir. |
+| Akıllı yükleme | ImgHost bağlama göre seçim yapar. Normal kullanım için önerilir. |
 | Özgün | Özgün görselleri tercih eder. |
 | Küçük görsel | Küçük görselleri tercih eder. Hızlı önizleme için kullanışlıdır. |
 
@@ -73,7 +73,7 @@ Emin değilseniz `Akıllı yükleme` değerini koruyun.
 
 Varsayılan kanal WebDAV yüklemeleri için kullanılır.
 
-Windows veya başka bir istemciden WebDAV dizinine dosya kopyaladığınızda ImgBed dosyaları seçili varsayılan yükleme kanalı üzerinden yükler.
+Windows veya başka bir istemciden WebDAV dizinine dosya kopyaladığınızda ImgHost dosyaları seçili varsayılan yükleme kanalı üzerinden yükler.
 
 Varsayılan kanal seçilmemişse gezinme çalışabilir, ancak yükleme başarısız olabilir.
 

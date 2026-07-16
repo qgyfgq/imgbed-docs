@@ -37,7 +37,7 @@ Für private Websites oder Websites mit Inhalten für Erwachsene kann der Erwach
 
 ## Was das Aktivieren der Moderation macht
 
-Wenn die Moderation aktiviert ist, ruft ImgBed beim Upload den ausgewählten Moderationsanbieter auf und speichert die erkannte Altersbewertung.
+Wenn die Moderation aktiviert ist, ruft ImgHost beim Upload den ausgewählten Moderationsanbieter auf und speichert die erkannte Altersbewertung.
 
 Hauptbewertungen:
 
@@ -66,7 +66,7 @@ Jeder Anbieter hat unterschiedliche Anforderungen:
 - nsfwjs benötigt normalerweise eine API-Endpunkt-URL.
 - Sightengine benötigt einen API user und ein API secret.
 
-Wählen Sie je nach Konto, Verfügbarkeit und Erkennungsqualität. Solange die Moderation aktiviert und korrekt konfiguriert ist, versucht ImgBed beim Upload eine Bildbewertung zu speichern.
+Wählen Sie je nach Konto, Verfügbarkeit und Erkennungsqualität. Solange die Moderation aktiviert und korrekt konfiguriert ist, versucht ImgHost beim Upload eine Bildbewertung zu speichern.
 
 ## Auswirkung auf die öffentliche Galerie
 
@@ -85,16 +85,16 @@ Das betrifft nur den normalen öffentlichen Zugriff. Der Administrationsbereich 
 
 Öffentliche Datei-URLs sind direkte Bildlinks, die von Besuchern geöffnet werden.
 
-Wenn die Dateibewertung im aktuellen Zugriffsmodus erlaubt ist, gibt ImgBed das Quellbild zurück.
+Wenn die Dateibewertung im aktuellen Zugriffsmodus erlaubt ist, gibt ImgHost das Quellbild zurück.
 
-Wenn die Bewertung über der erlaubten Stufe liegt, gibt der normale öffentliche Zugriff das Quellbild nicht zurück. Stattdessen gibt ImgBed das konfigurierte blockierte Ergebnis oder ein Platzhalterbild zurück.
+Wenn die Bewertung über der erlaubten Stufe liegt, gibt der normale öffentliche Zugriff das Quellbild nicht zurück. Stattdessen gibt ImgHost das konfigurierte blockierte Ergebnis oder ein Platzhalterbild zurück.
 
 Beispiel:
 
 - Der aktuelle Modus ist der Kindermodus.
 - Ein Bild ist mit R18 bewertet.
 - Ein Besucher öffnet die öffentliche URL direkt.
-- ImgBed gibt diesem Besucher das ursprüngliche R18-Bild nicht zurück.
+- ImgHost gibt diesem Besucher das ursprüngliche R18-Bild nicht zurück.
 
 ![Eingeschränktes Dateibild](../../image/Safety/文件受限图.png)
 

@@ -1,6 +1,6 @@
 # Listar y filtrar con API Token
 
-El script de listado con API Token sirve para que scripts, tareas automatizadas y programas de terceros lean datos de ImgBed. Solo usa el permiso `list`: no sube archivos, no elimina archivos, no cambia la configuración y tampoco bloquea ni permite la subida desde ninguna IP.
+El script de listado con API Token sirve para que scripts, tareas automatizadas y programas de terceros lean datos de ImgHost. Solo usa el permiso `list`: no sube archivos, no elimina archivos, no cambia la configuración y tampoco bloquea ni permite la subida desde ninguna IP.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Necesitas Node.js 18 o superior en el equipo local.
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed, por ejemplo `https://image.ai6.me`. |
+| `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me`. |
 | `--token <token>` | Sí | API Token. También puedes usar la variable de entorno `IMGBED_API_TOKEN`. |
 | `--retries <n>` | No | Reintentos ante fallos temporales. Por defecto `3`. |
 | `--timeout-ms <n>` | No | Tiempo de espera por petición. Por defecto `180000`. |

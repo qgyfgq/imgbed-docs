@@ -1,6 +1,6 @@
 # Blog
 
-O recurso de blog adiciona uma página de blog independente ao seu site ImgBed.
+O recurso de blog adiciona uma página de blog independente ao seu site ImgHost.
 
 Depois de ativado, os visitantes podem acessar:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Página inicial do blog](../../image/other/博客/博客首页.png)
 
-O blog foi adaptado do projeto de código aberto [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). O ImgBed o reescreve e o integra com Vue para que funcione como parte do site de hospedagem de imagens.
+O blog foi adaptado do projeto de código aberto [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). O ImgHost o reescreve e o integra com Vue para que funcione como parte do site de hospedagem de imagens.
 
 ## Onde configurar
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Aguarde a mensagem de sucesso.
 5. Abra `https://your-domain.com/blog/` para conferir o blog.
 
-Na primeira utilização, o ImgBed prepara um repositório privado na conta do GitHub escolhida:
+Na primeira utilização, o ImgHost prepara um repositório privado na conta do GitHub escolhida:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Fluxo comum:
 2. Entre no repositório `imgbed-blog-config`.
 3. Crie ou edite arquivos de posts.
 4. Faça commit das alterações.
-5. Volte ao painel administrativo do ImgBed e clique em `Update Blog`, ou clique três vezes no logotipo no canto superior esquerdo da página inicial do blog para disparar uma atualização.
+5. Volte ao painel administrativo do ImgHost e clique em `Update Blog`, ou clique três vezes no logotipo no canto superior esquerdo da página inicial do blog para disparar uma atualização.
 
 `Update Blog` não sobrescreve conteúdo que você já escreveu. A função serve principalmente para inicializar o repositório quando necessário e atualizar o cache do blog.
 
@@ -72,7 +72,7 @@ As estatísticas mostram visualizações de posts e visitas ao site, ajudando a 
 
 O blog sempre fica no caminho `/blog/`.
 
-Se o domínio do seu ImgBed for:
+Se o domínio do seu ImgHost for:
 
 ```text
 https://image.example.com

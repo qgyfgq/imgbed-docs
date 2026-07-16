@@ -1,6 +1,6 @@
 # API Token File Deletion
 
-API Token file deletion is intended for scripts, automation jobs, and third-party programs. You do not need to open the admin page. As long as you provide the site URL, token, and explicit file IDs, you can delete one or more files from ImgBed.
+API Token file deletion is intended for scripts, automation jobs, and third-party programs. You do not need to open the admin page. As long as you provide the site URL, token, and explicit file IDs, you can delete one or more files from ImgHost.
 
 Deletion is a write operation and really deletes data after the command runs. Use `imgbed-token-list.mjs` first to confirm the `fileId` values you want to delete, then pass those IDs to the deletion script.
 
@@ -63,7 +63,7 @@ After successful deletion, the backend automatically handles file indexes, direc
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Yes | ImgBed site URL, for example `https://image.ai6.me`. |
+| `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
 | `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
 | `--file-id <id>` | Yes | File ID to delete. You can pass it multiple times. |
 | `--strictness <strict\|soft>` | No | Deletion strictness. Defaults to `strict`. |
@@ -80,10 +80,10 @@ This script only deletes the explicit `--file-id` values you pass. It does not p
 
 | Mode | Description |
 | --- | --- |
-| `strict` | Default mode. If remote storage deletion fails, the ImgBed record is kept so you can retry or investigate. |
-| `soft` | If remote storage deletion fails, the ImgBed record is still cleaned up, and the result returns a warning. |
+| `strict` | Default mode. If remote storage deletion fails, the ImgHost record is kept so you can retry or investigate. |
+| `soft` | If remote storage deletion fails, the ImgHost record is still cleaned up, and the result returns a warning. |
 
-If the remote file must be deleted for the command to count as successful, use the default `strict` mode. If a remote platform can no longer delete the object and you only want to clean up the ImgBed record, use `soft`.
+If the remote file must be deleted for the command to count as successful, use the default `strict` mode. If a remote platform can no longer delete the object and you only want to clean up the ImgHost record, use `soft`.
 
 ## Examples
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Clean up the ImgBed record even when remote deletion fails:
+Clean up the ImgHost record even when remote deletion fails:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Check `fileId` Before Deleting
 
-The deletion script needs ImgBed file IDs. You can first use the listing script to inspect files in a directory:
+The deletion script needs ImgHost file IDs. You can first use the listing script to inspect files in a directory:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ The `name` field in the returned result is usually the `fileId` you can pass to 
 
 ### Why did deletion fail but the file is still in the list?
 
-When using the default `strict` mode, the ImgBed record is kept if remote storage deletion fails. This avoids deleting only the local index while the remote file still exists. After confirming that you only want to clean up the ImgBed record, retry the same `fileId` with `soft`.
+When using the default `strict` mode, the ImgHost record is kept if remote storage deletion fails. This avoids deleting only the local index while the remote file still exists. After confirming that you only want to clean up the ImgHost record, retry the same `fileId` with `soft`.
 
 ### Why are there warnings in the result?
 

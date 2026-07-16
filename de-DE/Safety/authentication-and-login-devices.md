@@ -1,6 +1,6 @@
 # Authentifizierung und Verwaltung angemeldeter Geräte
 
-Die Authentifizierungsverwaltung und die Verwaltung angemeldeter Geräte schützen den ImgBed-Administrationsbereich, den öffentlichen Upload-Einstieg und den WebDAV-Zugriff.
+Die Authentifizierungsverwaltung und die Verwaltung angemeldeter Geräte schützen den ImgHost-Administrationsbereich, den öffentlichen Upload-Einstieg und den WebDAV-Zugriff.
 
 Auf dieser Seite können Sie Zugangsdaten festlegen, angemeldete Geräte prüfen und alte Sitzungen bei Bedarf widerrufen.
 
@@ -42,7 +42,7 @@ Wenn ein Upload-Passwort konfiguriert ist:
 
 - Besucher müssen das Passwort eingeben, bevor sie die Upload-Seite nutzen.
 - Uploads sind erst möglich, nachdem das Passwort akzeptiert wurde.
-- Wenn benutzerseitige Gerätesitzungen aktiviert sind, zeichnet ImgBed dieses benutzerseitige Gerät auf.
+- Wenn benutzerseitige Gerätesitzungen aktiviert sind, zeichnet ImgHost dieses benutzerseitige Gerät auf.
 
 Eine Änderung des Upload-Passworts macht alte benutzerseitige Sitzungen ungültig. Besucher müssen das neue Passwort erneut eingeben.
 

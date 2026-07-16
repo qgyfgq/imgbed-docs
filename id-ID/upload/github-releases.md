@@ -7,7 +7,7 @@ Anda hanya memerlukan tiga hal:
 | Kebutuhan | Tujuan |
 | --- | --- |
 | Akun GitHub | Digunakan untuk membuat token akses dan memiliki repositori. |
-| GitHub Access Token | Digunakan oleh ImgBed untuk mengakses GitHub API, membuat release, dan mengunggah berkas. |
+| GitHub Access Token | Digunakan oleh ImgHost untuk mengakses GitHub API, membuat release, dan mengunggah berkas. |
 | Nama repositori | Anda dapat memasukkan nama repositori saja, misalnya `image`. |
 
 ## Langkah Konfigurasi
@@ -27,7 +27,7 @@ Anda hanya memerlukan tiga hal:
 
 ![Menambahkan izin GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## Langkah 2: Isi Kanal GitHub Releases di ImgBed
+## Langkah 2: Isi Kanal GitHub Releases di ImgHost
 
 Setelah memilih `GitHub Releases` di Pengaturan Unggah, isi kolom sebagai berikut:
 
@@ -49,9 +49,9 @@ Sistem akan menangani detail berikut:
 
 | Perilaku Sistem | Deskripsi |
 | --- | --- |
-| Nama repositori pendek | ImgBed mengidentifikasi akun GitHub saat ini dan memperluas nilainya menjadi jalur repositori lengkap. |
-| Jalur repositori lengkap | ImgBed menggunakan jalur `username/repository` persis seperti yang dimasukkan. |
-| Pemeriksaan repositori | Jika Anda menggunakan jalur akun pribadi saat ini, ImgBed otomatis membuat repositori saat belum ada. Jika Anda memasukkan jalur lengkap secara manual, ImgBed langsung menggunakan jalur tersebut. |
+| Nama repositori pendek | ImgHost mengidentifikasi akun GitHub saat ini dan memperluas nilainya menjadi jalur repositori lengkap. |
+| Jalur repositori lengkap | ImgHost menggunakan jalur `username/repository` persis seperti yang dimasukkan. |
+| Pemeriksaan repositori | Jika Anda menggunakan jalur akun pribadi saat ini, ImgHost otomatis membuat repositori saat belum ada. Jika Anda memasukkan jalur lengkap secara manual, ImgHost langsung menggunakan jalur tersebut. |
 | Status publik/privat | Visibilitas repositori disinkronkan sesuai sakelar saat ini. |
 
 ## Daftar Periksa Cepat
@@ -61,9 +61,9 @@ GitHub Releases bekerja seperti ini:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

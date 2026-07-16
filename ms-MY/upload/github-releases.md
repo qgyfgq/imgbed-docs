@@ -7,7 +7,7 @@ Anda hanya memerlukan tiga perkara:
 | Keperluan | Tujuan |
 | --- | --- |
 | Akaun GitHub | Digunakan untuk menjana access token dan memiliki repositori. |
-| GitHub Access Token | Digunakan oleh ImgBed untuk mengakses GitHub API, membuat release dan memuat naik fail. |
+| GitHub Access Token | Digunakan oleh ImgHost untuk mengakses GitHub API, membuat release dan memuat naik fail. |
 | Nama repositori | Anda boleh memasukkan nama repositori sahaja, contohnya `image`. |
 
 ## Langkah Persediaan
@@ -27,7 +27,7 @@ Anda hanya memerlukan tiga perkara:
 
 ![Tambah kebenaran GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## Langkah 2: Isi Saluran GitHub Releases Dalam ImgBed
+## Langkah 2: Isi Saluran GitHub Releases Dalam ImgHost
 
 Selepas memilih `GitHub Releases` dalam Tetapan Muat Naik, isi medan seperti berikut:
 
@@ -49,9 +49,9 @@ Sistem akan mengendalikan butiran berikut:
 
 | Kelakuan Sistem | Penerangan |
 | --- | --- |
-| Nama repositori pendek | ImgBed mengenal pasti akaun GitHub semasa dan mengembangkan nilai kepada laluan repositori penuh. |
-| Laluan repositori penuh | ImgBed menggunakan laluan `username/repository` tepat seperti yang dimasukkan. |
-| Semakan repositori | Jika anda menggunakan laluan akaun peribadi semasa, ImgBed membuat repositori secara automatik apabila ia tidak wujud. Jika anda memasukkan laluan penuh secara manual, ImgBed menggunakan laluan itu secara langsung. |
+| Nama repositori pendek | ImgHost mengenal pasti akaun GitHub semasa dan mengembangkan nilai kepada laluan repositori penuh. |
+| Laluan repositori penuh | ImgHost menggunakan laluan `username/repository` tepat seperti yang dimasukkan. |
+| Semakan repositori | Jika anda menggunakan laluan akaun peribadi semasa, ImgHost membuat repositori secara automatik apabila ia tidak wujud. Jika anda memasukkan laluan penuh secara manual, ImgHost menggunakan laluan itu secara langsung. |
 | Keadaan awam/peribadi | Keterlihatan repositori diselaraskan mengikut suis semasa. |
 
 ## Senarai Semak Pantas
@@ -61,9 +61,9 @@ GitHub Releases berfungsi seperti ini:
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

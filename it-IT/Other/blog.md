@@ -1,6 +1,6 @@
 # Blog
 
-La funzione Blog aggiunge una pagina blog indipendente al tuo sito ImgBed.
+La funzione Blog aggiunge una pagina blog indipendente al tuo sito ImgHost.
 
 Dopo l'abilitazione, i visitatori possono aprire:
 
@@ -10,7 +10,7 @@ https://your-domain.com/blog/
 
 ![Homepage blog](../../image/other/博客/博客首页.png)
 
-Il blog è adattato dal progetto open source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgBed lo riscrive e lo integra con Vue, così può funzionare come parte del sito di hosting di immagini.
+Il blog è adattato dal progetto open source [LyraVoid/Mizuki](https://github.com/LyraVoid/Mizuki). ImgHost lo riscrive e lo integra con Vue, così può funzionare come parte del sito di hosting di immagini.
 
 ## Dove configurarlo
 
@@ -30,7 +30,7 @@ System Settings -> Other Settings -> Blog
 4. Attendi il messaggio di conferma.
 5. Apri `https://your-domain.com/blog/` per visualizzare il blog.
 
-Al primo utilizzo, ImgBed prepara un repository GitHub privato nell'account selezionato:
+Al primo utilizzo, ImgHost prepara un repository GitHub privato nell'account selezionato:
 
 ```text
 imgbed-blog-config
@@ -52,7 +52,7 @@ Flusso tipico:
 2. Apri il repository privato `imgbed-blog-config`.
 3. Modifica o aggiungi file degli articoli.
 4. Esegui il commit delle modifiche.
-5. Torna nel pannello di amministrazione di ImgBed e clicca `Update Blog`, oppure clicca tre volte il logo nell'angolo in alto a sinistra della homepage del blog per avviare un aggiornamento.
+5. Torna nel pannello di amministrazione di ImgHost e clicca `Update Blog`, oppure clicca tre volte il logo nell'angolo in alto a sinistra della homepage del blog per avviare un aggiornamento.
 
 `Update Blog` non sovrascrive i contenuti che hai scritto. Inizializza il repository quando necessario e aggiorna la cache del blog.
 
@@ -72,7 +72,7 @@ Le statistiche mostrano le visualizzazioni degli articoli e le visite del sito, 
 
 Il blog è sempre disponibile nel percorso `/blog/`.
 
-Per esempio, se il dominio ImgBed è:
+Per esempio, se il dominio ImgHost è:
 
 ```text
 https://image.example.com

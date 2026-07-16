@@ -1,9 +1,9 @@
 # WebDAV přístup k webu
-Nastavení WebDAV v nastavení zabezpečení zpřístupní váš web ImgBed jako koncový bod WebDAV.
+Nastavení WebDAV v nastavení zabezpečení zpřístupní váš web ImgHost jako koncový bod WebDAV.
 
-Po zapnutí můžete pomocí Windows, macOS, mobilních správců souborů nebo libovolného WebDAV kompatibilního klienta procházet, nahrávat, mazat a spravovat soubory ImgBed jako vzdálenou složku.
+Po zapnutí můžete pomocí Windows, macOS, mobilních správců souborů nebo libovolného WebDAV kompatibilního klienta procházet, nahrávat, mazat a spravovat soubory ImgHost jako vzdálenou složku.
 
-Toto je WebDAV přístup k samotnému webu. Liší se od WebDAV úložného kanálu v nastavení nahrávání. Nahrávací kanál ukládá soubory do externí WebDAV služby. Toto nastavení naopak umožní, aby váš web ImgBed poskytoval WebDAV přístup klientům.
+Toto je WebDAV přístup k samotnému webu. Liší se od WebDAV úložného kanálu v nastavení nahrávání. Nahrávací kanál ukládá soubory do externí WebDAV služby. Toto nastavení naopak umožní, aby váš web ImgHost poskytoval WebDAV přístup klientům.
 
 ## Kde nastavit
 
@@ -23,21 +23,21 @@ Dostupná nastavení:
 
 ## Co tato funkce dělá
 
-Po zapnutí WebDAV poskytuje ImgBed pevný přístupový URL:
+Po zapnutí WebDAV poskytuje ImgHost pevný přístupový URL:
 
 ```text
 https://your-domain.com/dav
 ```
 
-Tento URL použijte k připojení ke katalogu souborů ImgBed.
+Tento URL použijte k připojení ke katalogu souborů ImgHost.
 
 Vhodné použití:
 
-- procházení souborů ImgBed přímo ze správce souborů v počítači.
+- procházení souborů ImgHost přímo ze správce souborů v počítači.
 - přetažení obrázků do WebDAV složky pro upload.
-- organizace složek ImgBed z lokálního správce souborů.
+- organizace složek ImgHost z lokálního správce souborů.
 - použití WebDAV kompatibilního softwaru pro synchronizaci nebo správu obrázků.
-- přístup k obsahu ImgBed bez otevírání administrace.
+- přístup k obsahu ImgHost bez otevírání administrace.
 
 ## Nastavení
 
@@ -63,7 +63,7 @@ Běžné volby:
 
 | Režim | Popis |
 | --- | --- |
-| Chytré načítání | ImgBed vybere podle kontextu. Doporučeno pro běžné použití. |
+| Chytré načítání | ImgHost vybere podle kontextu. Doporučeno pro běžné použití. |
 | Originál | Preferuje původní obrázky. |
 | Miniatura | Preferuje miniatury. Užitečné pro rychlý náhled. |
 
@@ -73,7 +73,7 @@ Pokud si nejste jistí, ponechte "Chytré načítání".
 
 Výchozí kanál se používá pro WebDAV nahrávání.
 
-Když z Windows nebo jiného klienta kopírujete soubory do WebDAV adresáře, ImgBed je nahraje přes vybraný výchozí nahrávací kanál.
+Když z Windows nebo jiného klienta kopírujete soubory do WebDAV adresáře, ImgHost je nahraje přes vybraný výchozí nahrávací kanál.
 
 Pokud není vybraný výchozí kanál, procházení může fungovat, ale nahrávání může selhat.
 

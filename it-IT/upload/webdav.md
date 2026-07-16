@@ -48,9 +48,9 @@ Dopo la creazione, copiala e salvala subito. Di norma viene mostrata una sola vo
 
 ![Salva la nuova password app](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Compila WebDAV in ImgBed
+### 2. Compila WebDAV in ImgHost
 
-Torna in ImgBed e aggiungi un canale WebDAV:
+Torna in ImgHost e aggiungi un canale WebDAV:
 
 | Campo UI | Valore |
 | --- | --- |
@@ -68,7 +68,7 @@ Il canale WebDAV usa un vero caricamento a blocchi basato su sessione.
 
 I file piccoli vengono caricati come un unico file completo. I file oltre 64 MiB vengono divisi automaticamente in parti da circa 10 MiB e caricati in una cartella remota dedicata ai blocchi.
 
-Il servizio WebDAV non deve supportare `partial update` né scritture basate su offset. ImgBed non unisce i blocchi in un unico file remoto: salva un manifest e, quando il file viene richiesto, legge i blocchi in ordine.
+Il servizio WebDAV non deve supportare `partial update` né scritture basate su offset. ImgHost non unisce i blocchi in un unico file remoto: salva un manifest e, quando il file viene richiesto, legge i blocchi in ordine.
 
 In pratica:
 
@@ -77,7 +77,7 @@ In pratica:
 | 64 MiB o meno | Caricamento normale | Un file completo |
 | Oltre 64 MiB | Caricamento a blocchi basato su sessione | Cartella con più file di blocco |
 
-La cartella dei blocchi riguarda solo la struttura nello storage remoto. L'URL in ImgBed non cambia: gli utenti continuano ad aprire il file tramite il link originale `/file/...`.
+La cartella dei blocchi riguarda solo la struttura nello storage remoto. L'URL in ImgHost non cambia: gli utenti continuano ad aprire il file tramite il link originale `/file/...`.
 
 ## Passaggi di configurazione
 
@@ -111,7 +111,7 @@ La cartella dei blocchi riguarda solo la struttura nello storage remoto. L'URL i
 
 È l'attuale metodo di archiviazione dei file grandi.
 
-I file oltre 64 MiB non vengono uniti in un unico file remoto. Sono salvati come cartella di blocchi. ImgBed registra il manifest e restituisce il contenuto completo leggendo i blocchi in ordine.
+I file oltre 64 MiB non vengono uniti in un unico file remoto. Sono salvati come cartella di blocchi. ImgHost registra il manifest e restituisce il contenuto completo leggendo i blocchi in ordine.
 
 ### Cosa controllo se il caricamento di file grandi fallisce?
 

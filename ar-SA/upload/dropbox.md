@@ -6,7 +6,7 @@
 | --- | --- |
 | حساب Dropbox | لتسجيل الدخول وتفويض التطبيق |
 | تطبيق Dropbox | لإنشاء `App Key` و `App Secret` |
-| نطاق ImgBed الخاص بك | لاستخدامه في عنوان إعادة توجيه OAuth |
+| نطاق ImgHost الخاص بك | لاستخدامه في عنوان إعادة توجيه OAuth |
 | مساحة Dropbox متاحة | موقع التخزين الفعلي للملفات |
 
 ## خطوات الإعداد
@@ -33,8 +33,8 @@ App folder
 
 | نوع الوصول | التوصية |
 | --- | --- |
-| `App folder` | موصى به. يناسب طريقة ImgBed في تخزين الملفات. |
-| `Full Dropbox` | غير موصى به. لا يحتاج ImgBed إلى الوصول إلى الحساب كاملًا. |
+| `App folder` | موصى به. يناسب طريقة ImgHost في تخزين الملفات. |
+| `Full Dropbox` | غير موصى به. لا يحتاج ImgHost إلى الوصول إلى الحساب كاملًا. |
 
 ![إنشاء تطبيق Dropbox](../../image/upload/dropbox/开发者创建应用.png)
 
@@ -77,7 +77,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 احفظ هاتين القيمتين من صفحة تطبيق Dropbox:
 
-| حقل Dropbox | حقل ImgBed |
+| حقل Dropbox | حقل ImgHost |
 | --- | --- |
 | `App key` | `App Key` |
 | `App secret` | `App Secret` |
@@ -86,7 +86,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 في إعدادات الرفع اختر `Dropbox` واملأ:
 
-| حقل ImgBed | ما الذي تدخله |
+| حقل ImgHost | ما الذي تدخله |
 | --- | --- |
 | اسم القناة | اسم واضح، مثل `Main Dropbox` |
 | App Key | Dropbox `App key` |
@@ -99,12 +99,12 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 ### الخطوة 6: احصل على Refresh Token
 
-1. في ImgBed اضغط الحصول على الرمز.
+1. في ImgHost اضغط الحصول على الرمز.
 2. سجّل الدخول إلى حساب Dropbox الذي تريد ربطه.
 3. وافق على طلب التفويض.
 4. ستعرض صفحة رد الاتصال قيمة `Refresh Token`.
 5. انسخها.
-6. ارجع إلى ImgBed والصقها في حقل `Refresh Token`.
+6. ارجع إلى ImgHost والصقها في حقل `Refresh Token`.
 
 ![نسخ الرمز](../../image/upload/dropbox/复制令牌.png)
 
@@ -125,7 +125,7 @@ https://your-domain.com/api/oauth/dropbox/callback
 
 | المشكلة | الحل |
 | --- | --- |
-| يقول ImgBed إن الإعداد غير مكتمل | تأكد من ملء `App Key` و `App Secret` و `Refresh Token`. |
+| يقول ImgHost إن الإعداد غير مكتمل | تأكد من ملء `App Key` و `App Secret` و `Refresh Token`. |
 | نجح التفويض لكن لا يظهر `Refresh Token` | اضغط الحصول على الرمز مرة أخرى وتأكد من استخدام مسار التفويض دون اتصال. |
 | يفشل الرفع برسالة `required scope 'files.content.write'` | فعّل `files.content.write`، واضغط زر الإرسال، ثم احصل على `Refresh Token` جديد. |
 | يفشل رد الاتصال | تأكد أن عنوان إعادة التوجيه هو `https://your-domain.com/api/oauth/dropbox/callback`. |
@@ -142,10 +142,10 @@ Open Dropbox App Console
 -> Optionally enable files.content.read
 -> Click Submit
 -> Copy App Key and App Secret
--> Fill them into ImgBed
+-> Fill them into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## مراجع

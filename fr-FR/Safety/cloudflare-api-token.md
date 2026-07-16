@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Les identifiants Cloudflare API permettent à ImgBed de purger la mémoire intermédiaire Cloudflare CDN après des modifications de fichiers.
+Les identifiants Cloudflare API permettent à ImgHost de purger la mémoire intermédiaire Cloudflare CDN après des modifications de fichiers.
 
 ![Paramètres Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare peut stocker en mémoire les URL publiques d’images.
 
 La mémoire intermédiaire accélère la diffusion des images, mais il peut aussi laisser un ancien contenu visible pendant un certain temps après la suppression, le blocage, le remplacement ou le déplacement d’un fichier.
 
-Une fois les identifiants Cloudflare API configurés, ImgBed tente de purger la mémoire intermédiaire Cloudflare associé lorsque ces opérations se terminent.
+Une fois les identifiants Cloudflare API configurés, ImgHost tente de purger la mémoire intermédiaire Cloudflare associé lorsque ces opérations se terminent.
 
 C’est utile lorsque :
 
@@ -36,18 +36,18 @@ C’est utile lorsque :
 
 ## Que se Passe-t-il si Vous le Laissez Vide
 
-ImgBed fonctionne normalement sans ce paramètre.
+ImgHost fonctionne normalement sans ce paramètre.
 
-La seule différence est qu’ImgBed ne purgera pas activement la mémoire intermédiaire Cloudflare CDN. Les visiteurs peuvent continuer à voir l’ancien contenu jusqu’à l’expiration naturelle de la mémoire intermédiaire Cloudflare.
+La seule différence est qu’ImgHost ne purgera pas activement la mémoire intermédiaire Cloudflare CDN. Les visiteurs peuvent continuer à voir l’ancien contenu jusqu’à l’expiration naturelle de la mémoire intermédiaire Cloudflare.
 
 ## Trouver le Zone ID
 
-Le Zone ID est l’identifiant de zone Cloudflare du site utilisé par votre domaine ImgBed.
+Le Zone ID est l’identifiant de zone Cloudflare du site utilisé par votre domaine ImgHost.
 
 1. Connectez-vous au tableau de bord Cloudflare.
-2. Ouvrez le site contenant votre domaine ImgBed.
+2. Ouvrez le site contenant votre domaine ImgHost.
 3. Recherchez `Zone ID` sur la page de présentation du site.
-4. Copiez-le dans le champ `Zone ID` d’ImgBed.
+4. Copiez-le dans le champ `Zone ID` d’ImgHost.
 
 Il s’agit du Zone ID du site, pas de l’ID du compte.
 
@@ -66,7 +66,7 @@ Saisissez votre Cloudflare Global API Key.
 3. Accédez à la page API Tokens.
 4. Recherchez `Global API Key`.
 5. Affichez-la et copiez-la.
-6. Collez-la dans le champ `API Key` d’ImgBed.
+6. Collez-la dans le champ `API Key` d’ImgHost.
 
 ![Afficher la Global API Key](../../image/Safety/查看全局令牌.png)
 
@@ -88,17 +88,17 @@ Si votre domaine n’utilise pas Cloudflare, ou si le délai de mémoire CDN ne 
 
 En général, non.
 
-Des identifiants incorrects empêchent seulement ImgBed de purger la mémoire intermédiaire Cloudflare. Le téléversement et l’accès normal aux fichiers devraient continuer à fonctionner.
+Des identifiants incorrects empêchent seulement ImgHost de purger la mémoire intermédiaire Cloudflare. Le téléversement et l’accès normal aux fichiers devraient continuer à fonctionner.
 
 ### Pourquoi une Image Supprimée Peut-elle Encore s’Ouvrir ?
 
 La raison la plus fréquente est que Cloudflare a encore l’ancien fichier en mémoire.
 
-Avec des identifiants Cloudflare API corrects, ImgBed purge la mémoire intermédiaire de l’URL associée lorsqu’un fichier est supprimé.
+Avec des identifiants Cloudflare API corrects, ImgHost purge la mémoire intermédiaire de l’URL associée lorsqu’un fichier est supprimé.
 
 ### Pourquoi Vois-je Encore l’Ancienne Image Après le Remplacement d’un Fichier ?
 
 C’est aussi généralement dû au mémoire CDN.
 
-Après configuration de ce paramètre, ImgBed tente de purger la mémoire intermédiaire de l’ancienne URL lorsqu’un fichier portant le même nom est écrasé.
+Après configuration de ce paramètre, ImgHost tente de purger la mémoire intermédiaire de l’ancienne URL lorsqu’un fichier portant le même nom est écrasé.
 

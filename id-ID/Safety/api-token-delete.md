@@ -1,6 +1,6 @@
 # Menghapus Berkas dengan API Token
 
-Penghapusan berkas melalui API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga. Anda tidak perlu membuka panel admin; cukup berikan alamat situs, API Token, dan ID berkas yang jelas untuk menghapus satu atau beberapa berkas dari ImgBed.
+Penghapusan berkas melalui API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga. Anda tidak perlu membuka panel admin; cukup berikan alamat situs, API Token, dan ID berkas yang jelas untuk menghapus satu atau beberapa berkas dari ImgHost.
 
 Penghapusan adalah operasi tulis. Setelah perintah dijalankan, data benar-benar dihapus. Sebaiknya periksa dahulu nilai `fileId` yang akan dihapus dengan `imgbed-token-list.mjs`, lalu kirim ID tersebut ke skrip penghapusan.
 
@@ -63,7 +63,7 @@ Setelah penghapusan berhasil, server otomatis menangani indeks berkas, statistik
 
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
-| `--base-url <url>` | Ya | Alamat situs ImgBed, misalnya `https://image.ai6.me` |
+| `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
 | `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Ya | ID berkas yang akan dihapus; dapat diberikan beberapa kali |
 | `--strictness <strict\|soft>` | Tidak | Ketegasan penghapusan; bawaan `strict` |
@@ -80,10 +80,10 @@ Skrip ini hanya menghapus nilai `--file-id` yang Anda berikan secara jelas. Skri
 
 | Mode | Keterangan |
 | --- | --- |
-| `strict` | Mode bawaan. Jika penghapusan di penyimpanan jarak jauh gagal, catatan ImgBed tetap disimpan agar dapat dicoba ulang atau diperiksa |
-| `soft` | Jika penghapusan di penyimpanan jarak jauh gagal, catatan ImgBed tetap dibersihkan dan hasilnya mengembalikan peringatan |
+| `strict` | Mode bawaan. Jika penghapusan di penyimpanan jarak jauh gagal, catatan ImgHost tetap disimpan agar dapat dicoba ulang atau diperiksa |
+| `soft` | Jika penghapusan di penyimpanan jarak jauh gagal, catatan ImgHost tetap dibersihkan dan hasilnya mengembalikan peringatan |
 
-Jika Anda ingin operasi dianggap berhasil hanya saat berkas jarak jauh benar-benar terhapus, gunakan mode bawaan `strict`. Jika suatu platform jarak jauh tidak lagi dapat menghapus berkas dan Anda hanya ingin membersihkan catatan ImgBed, gunakan `soft`.
+Jika Anda ingin operasi dianggap berhasil hanya saat berkas jarak jauh benar-benar terhapus, gunakan mode bawaan `strict`. Jika suatu platform jarak jauh tidak lagi dapat menghapus berkas dan Anda hanya ingin membersihkan catatan ImgHost, gunakan `soft`.
 
 ## Contoh Penggunaan
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Membersihkan catatan ImgBed meskipun penghapusan di penyimpanan jarak jauh gagal:
+Membersihkan catatan ImgHost meskipun penghapusan di penyimpanan jarak jauh gagal:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Periksa `fileId` Sebelum Menghapus
 
-Skrip penghapusan membutuhkan ID berkas ImgBed. Anda dapat memakai skrip daftar terlebih dahulu untuk melihat berkas di sebuah folder:
+Skrip penghapusan membutuhkan ID berkas ImgHost. Anda dapat memakai skrip daftar terlebih dahulu untuk melihat berkas di sebuah folder:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Bidang `name` pada hasil biasanya adalah `fileId` yang dapat diberikan ke skrip 
 
 ### Mengapa penghapusan gagal tetapi berkas masih ada di daftar?
 
-Saat memakai mode bawaan `strict`, catatan ImgBed tetap disimpan jika penghapusan di penyimpanan jarak jauh gagal. Ini mencegah kondisi ketika hanya indeks lokal yang terhapus, sedangkan berkas jarak jauh masih ada. Setelah yakin hanya ingin membersihkan catatan ImgBed, coba ulang `fileId` yang sama dengan `soft`.
+Saat memakai mode bawaan `strict`, catatan ImgHost tetap disimpan jika penghapusan di penyimpanan jarak jauh gagal. Ini mencegah kondisi ketika hanya indeks lokal yang terhapus, sedangkan berkas jarak jauh masih ada. Setelah yakin hanya ingin membersihkan catatan ImgHost, coba ulang `fileId` yang sama dengan `soft`.
 
 ### Mengapa Ada Peringatan dalam Hasil?
 

@@ -48,9 +48,9 @@ Kopieer en bewaar het nieuwe app-wachtwoord direct na het aanmaken. Meestal word
 
 ![Nieuw app-wachtwoord bewaren](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. Vul de WebDAV-configuratie in ImgBed in
+### 2. Vul de WebDAV-configuratie in ImgHost in
 
-Ga terug naar ImgBed en voeg een WebDAV-kanaal toe:
+Ga terug naar ImgHost en voeg een WebDAV-kanaal toe:
 
 | UI-veld | Waarde |
 | --- | --- |
@@ -68,7 +68,7 @@ Het WebDAV-kanaal gebruikt nu echte sessiegebaseerde chunk-upload.
 
 Kleine bestanden worden als één volledig bestand geüpload. Bestanden groter dan 64 MiB worden automatisch in delen van ongeveer 10 MiB gesplitst en naar een externe chunkmap geüpload.
 
-De WebDAV-dienst hoeft geen `partial update` of offset-gebaseerde schrijfacties te ondersteunen. ImgBed voegt de chunks op de externe server niet samen tot één groot bestand. In plaats daarvan bewaart ImgBed een chunkmanifest en leest het de chunks in volgorde wanneer het bestand wordt opgevraagd.
+De WebDAV-dienst hoeft geen `partial update` of offset-gebaseerde schrijfacties te ondersteunen. ImgHost voegt de chunks op de externe server niet samen tot één groot bestand. In plaats daarvan bewaart ImgHost een chunkmanifest en leest het de chunks in volgorde wanneer het bestand wordt opgevraagd.
 
 In de praktijk:
 
@@ -77,7 +77,7 @@ In de praktijk:
 | 64 MiB of kleiner | Normale upload | Eén volledig bestand |
 | Groter dan 64 MiB | Echte sessiegebaseerde chunk-upload | Een chunkmap met meerdere deelbestanden |
 
-De chunkmap beïnvloedt alleen de structuur in de externe opslag. De bestands-URL in ImgBed verandert niet. Gebruikers blijven het bestand openen via de oorspronkelijke `/file/...`-link.
+De chunkmap beïnvloedt alleen de structuur in de externe opslag. De bestands-URL in ImgHost verandert niet. Gebruikers blijven het bestand openen via de oorspronkelijke `/file/...`-link.
 
 ## Instelstappen
 
@@ -111,7 +111,7 @@ De chunkmap beïnvloedt alleen de structuur in de externe opslag. De bestands-UR
 
 Dit is de huidige opslagmethode voor grote bestanden.
 
-Bestanden groter dan 64 MiB worden niet samengevoegd tot één groot extern bestand. Ze worden opgeslagen als chunkmap. ImgBed bewaart het chunkmanifest en levert de volledige inhoud door de delen in volgorde te lezen.
+Bestanden groter dan 64 MiB worden niet samengevoegd tot één groot extern bestand. Ze worden opgeslagen als chunkmap. ImgHost bewaart het chunkmanifest en levert de volledige inhoud door de delen in volgorde te lezen.
 
 ### Wat controleer ik eerst als upload van grote bestanden mislukt?
 

@@ -46,7 +46,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed, por exemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
 | `--token <token>` | Sim | API Token; também pode usar a variável de ambiente `IMGBED_API_TOKEN` |
 | `--retries <n>` | Não | Número de tentativas para falhas temporárias; padrão `3` |
 | `--timeout-ms <n>` | Não | Timeout de uma requisição; padrão `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Criar pastas
 
-Os diretórios do ImgBed vêm dos caminhos de arquivo; não existem diretórios vazios reais. Ao criar uma pasta, o script cria um arquivo marcador `0.md` dentro do diretório de destino, para que o gerenciamento de arquivos e as estatísticas de diretórios possam exibir essa pasta.
+Os diretórios do ImgHost vêm dos caminhos de arquivo; não existem diretórios vazios reais. Ao criar uma pasta, o script cria um arquivo marcador `0.md` dentro do diretório de destino, para que o gerenciamento de arquivos e as estatísticas de diretórios possam exibir essa pasta.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ O backend processa no máximo `15` arquivos por requisição. O padrão do scrip
 
 ### É possível criar uma pasta realmente vazia
 
-Os diretórios do ImgBed são derivados de caminhos de arquivo; não existem diretórios vazios reais. `--create-folder` cria um arquivo marcador `0.md`, permitindo que a pasta apareça no gerenciamento de arquivos e nas estatísticas de diretórios.
+Os diretórios do ImgHost são derivados de caminhos de arquivo; não existem diretórios vazios reais. `--create-folder` cria um arquivo marcador `0.md`, permitindo que a pasta apareça no gerenciamento de arquivos e nas estatísticas de diretórios.
 
 ### Qual é a duração máxima de um Token temporário de upload
 

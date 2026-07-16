@@ -44,7 +44,7 @@
 5. Generate hoặc reset token trong trang `Bot`.
 6. Lưu token.
 
-Token này chính là `Bot Token` cần nhập trong ImgBed.
+Token này chính là `Bot Token` cần nhập trong ImgHost.
 
 ![View the bot token](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ Token này chính là `Bot Token` cần nhập trong ImgBed.
 5. Right-click tên channel.
 6. Nhấn Sao chép Channel ID.
 
-Số được sao chép là `Channel ID` mà ImgBed cần.
+Số được sao chép là `Channel ID` mà ImgHost cần.
 
 ![Enable developer mode](../../image/upload/discord/开启开发者权限.png)
 
 ![Sao chép channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. Điền Discord Channel trong ImgBed
+### 5. Điền Discord Channel trong ImgHost
 
 Quay lại channel configuration dialog và điền như sau:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

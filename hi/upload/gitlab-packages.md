@@ -7,7 +7,7 @@
 | आवश्यकता | उद्देश्य |
 | --- | --- |
 | GitLab खाता | एक्सेस टोकन बनाने और प्रोजेक्ट का मालिक होने के लिए। |
-| GitLab व्यक्तिगत एक्सेस टोकन | ImgBed को GitLab API तक पहुँचने, प्रोजेक्ट बनाने और Generic Packages में फ़ाइलें अपलोड करने के लिए। |
+| GitLab व्यक्तिगत एक्सेस टोकन | ImgHost को GitLab API तक पहुँचने, प्रोजेक्ट बनाने और Generic Packages में फ़ाइलें अपलोड करने के लिए। |
 | प्रोजेक्ट नाम | आप केवल प्रोजेक्ट नाम दर्ज कर सकते हैं, जैसे `imgbed`। |
 
 ## कॉन्फ़िगरेशन चरण
@@ -26,7 +26,7 @@
 
 ![टोकन अनुमतियाँ चुनें](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## चरण 2: ImgBed में GitLab Packages चैनल भरें
+## चरण 2: ImgHost में GitLab Packages चैनल भरें
 
 अपलोड सेटिंग्स में `GitLab Packages` चुनने के बाद फ़ील्ड इस तरह भरें:
 
@@ -48,9 +48,9 @@
 
 | सिस्टम व्यवहार | विवरण |
 | --- | --- |
-| छोटा प्रोजेक्ट नाम | ImgBed वर्तमान GitLab खाते को पहचानता है और मान को पूरे प्रोजेक्ट पथ में बदलता है। |
-| पूरा प्रोजेक्ट पथ | ImgBed `username/project` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
-| प्रोजेक्ट जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो प्रोजेक्ट न होने पर ImgBed उसे अपने आप बनाता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgBed उसी पथ का सीधे उपयोग करता है। |
+| छोटा प्रोजेक्ट नाम | ImgHost वर्तमान GitLab खाते को पहचानता है और मान को पूरे प्रोजेक्ट पथ में बदलता है। |
+| पूरा प्रोजेक्ट पथ | ImgHost `username/project` पथ को ठीक वैसे ही उपयोग करता है जैसे दर्ज किया गया है। |
+| प्रोजेक्ट जाँच | यदि आप वर्तमान व्यक्तिगत खाते का पथ उपयोग करते हैं, तो प्रोजेक्ट न होने पर ImgHost उसे अपने आप बनाता है। यदि पूरा पथ मैन्युअल रूप से दर्ज करें, तो ImgHost उसी पथ का सीधे उपयोग करता है। |
 | सार्वजनिक/निजी स्थिति | प्रोजेक्ट दृश्यता वर्तमान स्विच के अनुसार सिंक्रनाइज़ होती है। |
 
 ## त्वरित सूची
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

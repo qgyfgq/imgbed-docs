@@ -1,6 +1,6 @@
 # API Token 刪除檔案
 
-API Token 刪除檔案適合給腳本、自動化任務和第三方程式使用。你不需要打開後台頁面，只要帶上站點網址、Token 和明確的檔案 ID，就可以刪除 ImgBed 裡的單一或多個檔案。
+API Token 刪除檔案適合給腳本、自動化任務和第三方程式使用。你不需要打開後台頁面，只要帶上站點網址、Token 和明確的檔案 ID，就可以刪除 ImgHost 裡的單一或多個檔案。
 
 刪除是寫入操作，命令執行後會真的刪除資料。建議先用 `imgbed-token-list.mjs` 查清楚要刪除的 `fileId`，再把這些 ID 傳給刪除腳本。
 
@@ -63,7 +63,7 @@ Authorization: Bearer <token>
 
 | 參數 | 必填 | 說明 |
 | --- | --- | --- |
-| `--base-url <url>` | 是 | ImgBed 站點網址，例如 `https://image.ai6.me`。 |
+| `--base-url <url>` | 是 | ImgHost 站點網址，例如 `https://image.ai6.me`。 |
 | `--token <token>` | 是 | API Token；也可以使用 `IMGBED_API_TOKEN` 環境變數。 |
 | `--file-id <id>` | 是 | 要刪除的檔案 ID，可重複傳入多個。 |
 | `--strictness <strict\|soft>` | 否 | 刪除嚴格度，預設 `strict`。 |
@@ -80,10 +80,10 @@ Authorization: Bearer <token>
 
 | 模式 | 說明 |
 | --- | --- |
-| `strict` | 預設模式。遠端儲存刪除失敗時，ImgBed 記錄會保留，方便後續重試或排查。 |
-| `soft` | 遠端儲存刪除失敗時，也會繼續清理 ImgBed 記錄，並在結果裡回傳警告。 |
+| `strict` | 預設模式。遠端儲存刪除失敗時，ImgHost 記錄會保留，方便後續重試或排查。 |
+| `soft` | 遠端儲存刪除失敗時，也會繼續清理 ImgHost 記錄，並在結果裡回傳警告。 |
 
-如果你希望「遠端檔案必須刪掉才算成功」，使用預設的 `strict`。如果某個遠端平台已經無法刪除，但你只想清理 ImgBed 記錄，可以使用 `soft`。
+如果你希望「遠端檔案必須刪掉才算成功」，使用預設的 `strict`。如果某個遠端平台已經無法刪除，但你只想清理 ImgHost 記錄，可以使用 `soft`。
 
 ## 使用範例
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-遠端刪除失敗時仍清理 ImgBed 記錄：
+遠端刪除失敗時仍清理 ImgHost 記錄：
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## 刪除前先查 fileId
 
-刪除腳本需要的是 ImgBed 檔案 ID。可以先用列出腳本查看目錄裡的檔案：
+刪除腳本需要的是 ImgHost 檔案 ID。可以先用列出腳本查看目錄裡的檔案：
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ node imgbed-token-list.mjs `
 
 ### 為什麼刪除失敗但檔案還在清單裡？
 
-如果使用預設 `strict`，遠端儲存刪除失敗時，ImgBed 記錄會保留。這是為了避免只刪掉本地索引，遠端檔案卻還存在。確認可以只清理 ImgBed 記錄後，再用 `soft` 對同一個 `fileId` 重試。
+如果使用預設 `strict`，遠端儲存刪除失敗時，ImgHost 記錄會保留。這是為了避免只刪掉本地索引，遠端檔案卻還存在。確認可以只清理 ImgHost 記錄後，再用 `soft` 對同一個 `fileId` 重試。
 
 ### 為什麼結果裡有警告？
 

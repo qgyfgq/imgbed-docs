@@ -7,7 +7,7 @@
 | தேவை | பயன்பாடு |
 | --- | --- |
 | GitLab கணக்கு | அணுகல் டோக்கன் உருவாக்கவும் திட்டம் own செய்யவும் |
-| GitLab Personal அணுகல் டோக்கன் | ImgBed GitLab API அணுக, திட்டம்s உருவாக்க, Generic Packages-க்கு கோப்புகள் பதிவேற்றம் செய்ய |
+| GitLab Personal அணுகல் டோக்கன் | ImgHost GitLab API அணுக, திட்டம்s உருவாக்க, Generic Packages-க்கு கோப்புகள் பதிவேற்றம் செய்ய |
 | திட்டப் பெயர் | திட்டம் name மட்டும் கொடுக்கலாம், உதா. `imgbed` |
 
 ## அமைப்பு படிகள்
@@ -26,7 +26,7 @@
 
 ![Select டோக்கன் permissions](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## படி 2: ImgBed-ல் GitLab Packages சேனல் நிரப்பவும்
+## படி 2: ImgHost-ல் GitLab Packages சேனல் நிரப்பவும்
 
 பதிவேற்ற அமைப்புகள்-ல் `GitLab Packages` தேர்வு செய்த பிறகு:
 
@@ -48,9 +48,9 @@
 
 | அமைப்பு நடத்தை | விளக்கம் |
 | --- | --- |
-| குறுகிய திட்டப் பெயர் | ImgBed தற்போதைய GitLab கணக்கை கண்டறிந்து, அதை முழு திட்டப் பாதையாக விரிவாக்கும். |
+| குறுகிய திட்டப் பெயர் | ImgHost தற்போதைய GitLab கணக்கை கண்டறிந்து, அதை முழு திட்டப் பாதையாக விரிவாக்கும். |
 | முழு திட்டப் பாதை | `username/project` பாதை உள்ளிட்டபடியே பயன்படுத்தப்படும். |
-| திட்டச் சரிபார்ப்பு | தற்போதைய தனிப்பட்ட கணக்கு பாதையாக இருந்தால், திட்டம் இல்லாதபோது ImgBed அதை தானாக உருவாக்கும். முழு பாதை கைமுறையாக கொடுக்கப்பட்டிருந்தால், அதையே பயன்படுத்தும். |
+| திட்டச் சரிபார்ப்பு | தற்போதைய தனிப்பட்ட கணக்கு பாதையாக இருந்தால், திட்டம் இல்லாதபோது ImgHost அதை தானாக உருவாக்கும். முழு பாதை கைமுறையாக கொடுக்கப்பட்டிருந்தால், அதையே பயன்படுத்தும். |
 | Public/private நிலை | திட்ட visibility தற்போதைய switch படி ஒத்திசைக்கப்படும். |
 
 ## விரைவு சரிபார்ப்பு பட்டியல்
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

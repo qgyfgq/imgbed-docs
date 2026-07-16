@@ -1,6 +1,6 @@
 # Suppression de fichiers avec API Token
 
-La suppression de fichiers avec API Token est destinée aux scripts, tâches automatisées et programmes tiers. Vous n’avez pas besoin d’ouvrir le panneau d’administration : l’URL du site, l’API Token et les identifiants de fichiers précis suffisent pour supprimer un ou plusieurs fichiers dans ImgBed.
+La suppression de fichiers avec API Token est destinée aux scripts, tâches automatisées et programmes tiers. Vous n’avez pas besoin d’ouvrir le panneau d’administration : l’URL du site, l’API Token et les identifiants de fichiers précis suffisent pour supprimer un ou plusieurs fichiers dans ImgHost.
 
 La suppression est une opération d’écriture. Une fois la commande exécutée, les données sont réellement supprimées. Il est recommandé d’utiliser d’abord `imgbed-token-list.mjs` pour vérifier les valeurs `fileId` à supprimer, puis de transmettre ces identifiants au script de suppression.
 
@@ -63,7 +63,7 @@ Après une suppression réussie, le serveur met automatiquement à jour les inde
 
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
-| `--base-url <url>` | Oui | URL du site ImgBed, par exemple `https://image.ai6.me` |
+| `--base-url <url>` | Oui | URL du site ImgHost, par exemple `https://image.ai6.me` |
 | `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGBED_API_TOKEN` |
 | `--file-id <id>` | Oui | Identifiant du fichier à supprimer. Peut être indiqué plusieurs fois |
 | `--strictness <strict\|soft>` | Non | Niveau d’exigence de la suppression. Valeur par défaut : `strict` |
@@ -80,10 +80,10 @@ Ce script supprime uniquement les valeurs `--file-id` transmises explicitement. 
 
 | Mode | Description |
 | --- | --- |
-| `strict` | Mode par défaut. Si la suppression échoue sur le stockage distant, l’enregistrement ImgBed est conservé pour permettre une nouvelle tentative ou une vérification |
-| `soft` | Si la suppression échoue sur le stockage distant, l’enregistrement ImgBed est tout de même nettoyé et le résultat contient un avertissement |
+| `strict` | Mode par défaut. Si la suppression échoue sur le stockage distant, l’enregistrement ImgHost est conservé pour permettre une nouvelle tentative ou une vérification |
+| `soft` | Si la suppression échoue sur le stockage distant, l’enregistrement ImgHost est tout de même nettoyé et le résultat contient un avertissement |
 
-Si le fichier distant doit absolument être supprimé pour que l’opération soit considérée comme réussie, utilisez le mode par défaut `strict`. Si une plateforme distante ne permet plus la suppression et que vous voulez seulement nettoyer l’enregistrement ImgBed, utilisez `soft`.
+Si le fichier distant doit absolument être supprimé pour que l’opération soit considérée comme réussie, utilisez le mode par défaut `strict`. Si une plateforme distante ne permet plus la suppression et que vous voulez seulement nettoyer l’enregistrement ImgHost, utilisez `soft`.
 
 ## Exemples d’utilisation
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Nettoyer l’enregistrement ImgBed même si la suppression échoue sur le stockage distant :
+Nettoyer l’enregistrement ImgHost même si la suppression échoue sur le stockage distant :
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Vérifier `fileId` avant la suppression
 
-Le script de suppression a besoin de l’identifiant de fichier ImgBed. Vous pouvez d’abord utiliser le script de liste pour afficher les fichiers d’un dossier :
+Le script de suppression a besoin de l’identifiant de fichier ImgHost. Vous pouvez d’abord utiliser le script de liste pour afficher les fichiers d’un dossier :
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Le champ `name` du résultat est généralement le `fileId` que vous pouvez tran
 
 ### Pourquoi la suppression a-t-elle échoué alors que le fichier est encore dans la liste ?
 
-Avec le mode par défaut `strict`, l’enregistrement ImgBed est conservé si la suppression échoue sur le stockage distant. Cela évite de supprimer uniquement l’index local alors que le fichier distant existe toujours. Après avoir confirmé que vous voulez seulement nettoyer l’enregistrement ImgBed, réessayez le même `fileId` avec `soft`.
+Avec le mode par défaut `strict`, l’enregistrement ImgHost est conservé si la suppression échoue sur le stockage distant. Cela évite de supprimer uniquement l’index local alors que le fichier distant existe toujours. Après avoir confirmé que vous voulez seulement nettoyer l’enregistrement ImgHost, réessayez le même `fileId` avec `soft`.
 
 ### Pourquoi le résultat contient-il des avertissements ?
 

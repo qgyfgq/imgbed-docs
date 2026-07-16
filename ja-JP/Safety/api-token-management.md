@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
-| `--base-url <url>` | はい | ImgBed サイトの URL。例: `https://image.ai6.me` |
+| `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
 | `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
 | `--retries <n>` | いいえ | 一時的な失敗時の再試行回数。既定は `3`。 |
 | `--timeout-ms <n>` | いいえ | 1 回のリクエストのタイムアウト。既定は `180000`。 |

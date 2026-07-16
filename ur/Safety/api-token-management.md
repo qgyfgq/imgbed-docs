@@ -40,7 +40,7 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
-| `--base-url <url>` | ہاں | ImgBed سائٹ URL، مثلاً `https://image.ai6.me`۔ |
+| `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
 | `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--retries <n>` | نہیں | عارضی ناکامی پر دوبارہ کوششوں کی تعداد۔ طے شدہ قدر `3`۔ |
 | `--timeout-ms <n>` | نہیں | request timeout۔ طے شدہ قدر `180000`۔ |

@@ -8,8 +8,8 @@ Die Seiteneinstellungen steuern die Darstellung der Website, die Standardwerte d
 | --- | --- |
 | Website-Titel | Titel, der im Browser-Tab angezeigt wird. |
 | Website-Symbol | Kleines Symbol, das im Browser-Tab angezeigt wird. |
-| ImgBed-Name | Name, der auf den öffentlichen Seiten angezeigt wird. |
-| ImgBed-Logo | Logo-Bild, das auf den öffentlichen Seiten angezeigt wird. |
+| ImgHost-Name | Name, der auf den öffentlichen Seiten angezeigt wird. |
+| ImgHost-Logo | Logo-Bild, das auf den öffentlichen Seiten angezeigt wird. |
 | Logo-Link | URL, die beim Klicken auf das Logo oder das Profilbild geöffnet wird. |
 | Wechselintervall für Hintergrundbilder | Rotationsintervall für mehrere Hintergrundbilder in Millisekunden. `60000` bedeutet 60 Sekunden. |
 | Deckkraft des Hintergrunds | Deckkraft des Hintergrundbilds von `0` bis `1`. Niedrigere Werte wirken heller. |
@@ -63,5 +63,5 @@ Der Administrationshintergrund unterstützt Bild-URLs. Mehrere URLs können wie 
 | --- | --- |
 | Standard | Zeitbasierter Zufallspräfix + ursprünglicher Dateiname, z. B. `1760000000000_cat.png`. |
 | Nur Präfix | Nur zeitbasierter Zufallspräfix und Erweiterung, z. B. `1760000000000.png`. |
-| Nur ursprünglicher Name | Behält den ursprünglichen Dateinamen bei, z. B. `cat.png`. Bei Duplikaten fügt ImgBed `(1)`, `(2)` usw. hinzu. |
+| Nur ursprünglicher Name | Behält den ursprünglichen Dateinamen bei, z. B. `cat.png`. Bei Duplikaten fügt ImgHost `(1)`, `(2)` usw. hinzu. |
 | Kurzlink | Verwendet eine 8-stellige Kurz-ID mit Erweiterung, z. B. `a1b2c3d4.png`. |

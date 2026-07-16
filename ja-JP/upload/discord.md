@@ -44,7 +44,7 @@
 5. `Bot` ページで token を生成またはリセットします。
 6. token を保存します。
 
-この token が、ImgBed に入力する `Bot Token` です。
+この token が、ImgHost に入力する `Bot Token` です。
 
 ![bot token を表示する](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. チャンネル名を右クリックします。
 6. Copy Channel ID をクリックします。
 
-コピーした番号が、ImgBed で必要な `Channel ID` です。
+コピーした番号が、ImgHost で必要な `Channel ID` です。
 
 ![developer mode を有効にする](../../image/upload/discord/开启开发者权限.png)
 
 ![channel ID をコピーする](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed に Discord チャネルを入力する
+### 5. ImgHost に Discord チャネルを入力する
 
 チャネル設定ダイアログに戻り、次のように入力します。
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

@@ -37,7 +37,7 @@ Per siti privati o con contenuti per adulti, la modalità adulti può essere ada
 
 ## Cosa succede abilitando la moderazione
 
-Quando la moderazione è attiva, ImgBed chiama il fornitore scelto durante il caricamento e salva la classificazione rilevata.
+Quando la moderazione è attiva, ImgHost chiama il fornitore scelto durante il caricamento e salva la classificazione rilevata.
 
 Classificazioni principali:
 
@@ -66,7 +66,7 @@ Ogni fornitore ha requisiti diversi:
 - nsfwjs di solito richiede un URL del punto di accesso API.
 - Sightengine richiede API user e API secret.
 
-Scegli in base al tuo account, alla disponibilità e alla qualità del rilevamento. Se la moderazione è attiva e configurata correttamente, ImgBed prova a scrivere una classificazione durante il caricamento.
+Scegli in base al tuo account, alla disponibilità e alla qualità del rilevamento. Se la moderazione è attiva e configurata correttamente, ImgHost prova a scrivere una classificazione durante il caricamento.
 
 ## Effetto sulla galleria pubblica
 
@@ -85,16 +85,16 @@ Questo vale solo per l'accesso pubblico normale. Il pannello di amministrazione 
 
 Gli URL pubblici sono link diretti aperti dai visitatori.
 
-Se il classificazione del file è consentito dalla modalità corrente, ImgBed restituisce l'immagine di origine.
+Se il classificazione del file è consentito dalla modalità corrente, ImgHost restituisce l'immagine di origine.
 
-Se il classificazione supera il livello consentito, l'accesso pubblico normale non restituisce l'di origine. ImgBed restituisce invece il risultato bloccato o l'immagine sostitutiva configurata.
+Se il classificazione supera il livello consentito, l'accesso pubblico normale non restituisce l'di origine. ImgHost restituisce invece il risultato bloccato o l'immagine sostitutiva configurata.
 
 Esempio:
 
 - La modalità corrente è la modalità bambini.
 - Un'immagine è classificata R18.
 - Un visitatore apre direttamente l'URL pubblico.
-- ImgBed non restituisce a quel visitatore l'immagine R18 di origine.
+- ImgHost non restituisce a quel visitatore l'immagine R18 di origine.
 
 ![Immagine file limitata](../../image/Safety/文件受限图.png)
 

@@ -44,7 +44,7 @@
 5. Jana atau reset token pada halaman `Bot`.
 6. Simpan token tersebut.
 
-Token ini ialah `Bot Token` yang perlu anda masukkan dalam ImgBed.
+Token ini ialah `Bot Token` yang perlu anda masukkan dalam ImgHost.
 
 ![Lihat token bot](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@ Token ini ialah `Bot Token` yang perlu anda masukkan dalam ImgBed.
 5. Klik kanan nama saluran.
 6. Klik `Copy Channel ID`.
 
-Nombor yang disalin ialah `Channel ID` yang diperlukan oleh ImgBed.
+Nombor yang disalin ialah `Channel ID` yang diperlukan oleh ImgHost.
 
 ![Dayakan developer mode](../../image/upload/discord/开启开发者权限.png)
 
 ![Salin channel ID](../../image/upload/discord/复制群频道id.png)
 
-### 5. Isi Saluran Discord Dalam ImgBed
+### 5. Isi Saluran Discord Dalam ImgHost
 
 Kembali ke dialog konfigurasi saluran dan isi medan seperti berikut:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

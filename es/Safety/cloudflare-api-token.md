@@ -1,6 +1,6 @@
 # Cloudflare API Token
 
-Las credenciales de Cloudflare API permiten que ImgBed purgue la caché de Cloudflare CDN después de cambios en los archivos.
+Las credenciales de Cloudflare API permiten que ImgHost purgue la caché de Cloudflare CDN después de cambios en los archivos.
 
 ![Configuración de Cloudflare API Token](../../image/Safety/cloudflare%20api%20token截图.png)
 
@@ -24,7 +24,7 @@ Cloudflare puede almacenar en caché las URL de imágenes públicas.
 
 La caché hace que la entrega de imágenes sea más rápida, pero también puede dejar contenido obsoleto visible durante un tiempo después de eliminar, bloquear, reemplazar o mover un archivo.
 
-Después de configurar las credenciales de Cloudflare API, ImgBed intenta purgar la caché relacionada de Cloudflare cuando esas operaciones terminan.
+Después de configurar las credenciales de Cloudflare API, ImgHost intenta purgar la caché relacionada de Cloudflare cuando esas operaciones terminan.
 
 Es útil cuando:
 
@@ -36,18 +36,18 @@ Es útil cuando:
 
 ## Qué ocurre si lo deja vacío
 
-ImgBed sigue funcionando normalmente sin esta configuración.
+ImgHost sigue funcionando normalmente sin esta configuración.
 
-La única diferencia es que ImgBed no purgará activamente la caché de Cloudflare CDN. Los visitantes pueden seguir viendo contenido antiguo hasta que la caché de Cloudflare expire de forma natural.
+La única diferencia es que ImgHost no purgará activamente la caché de Cloudflare CDN. Los visitantes pueden seguir viendo contenido antiguo hasta que la caché de Cloudflare expire de forma natural.
 
 ## Cómo encontrar el Zone ID
 
-El Zone ID es el identificador de zona de Cloudflare del sitio usado por su dominio de ImgBed.
+El Zone ID es el identificador de zona de Cloudflare del sitio usado por su dominio de ImgHost.
 
 1. Inicie sesión en el panel de Cloudflare.
-2. Abra el sitio que contiene su dominio de ImgBed.
+2. Abra el sitio que contiene su dominio de ImgHost.
 3. Busque `Zone ID` en la página de resumen del sitio.
-4. Cópielo en el campo `Zone ID` de ImgBed.
+4. Cópielo en el campo `Zone ID` de ImgHost.
 
 Este es el Zone ID del sitio, no el ID de la cuenta.
 
@@ -66,7 +66,7 @@ Introduzca su Cloudflare Global API Key.
 3. Vaya a la página API Tokens.
 4. Busque `Global API Key`.
 5. Véalo y cópielo.
-6. Péguelo en el campo `API Key` de ImgBed.
+6. Péguelo en el campo `API Key` de ImgHost.
 
 ![Ver Global API Key](../../image/Safety/查看全局令牌.png)
 
@@ -88,17 +88,17 @@ Si su dominio no usa Cloudflare, o no le preocupa el retraso de la caché CDN, p
 
 Normalmente no.
 
-Unas credenciales incorrectas solo impiden que ImgBed purgue la caché de Cloudflare. La subida y el acceso normal a archivos deberían seguir funcionando.
+Unas credenciales incorrectas solo impiden que ImgHost purgue la caché de Cloudflare. La subida y el acceso normal a archivos deberían seguir funcionando.
 
 ### ¿Por qué una imagen eliminada todavía se puede abrir?
 
 La razón más común es que Cloudflare aún tiene el archivo antiguo en caché.
 
-Con credenciales correctas de Cloudflare API, ImgBed purga la caché de la URL relacionada cuando se elimina un archivo.
+Con credenciales correctas de Cloudflare API, ImgHost purga la caché de la URL relacionada cuando se elimina un archivo.
 
 ### ¿Por qué sigo viendo la imagen antigua después de reemplazar un archivo?
 
 Esto también suele deberse a la caché CDN.
 
-Después de configurar esta opción, ImgBed intenta purgar la caché de la URL antigua cuando se sobrescribe un archivo con el mismo nombre.
+Después de configurar esta opción, ImgHost intenta purgar la caché de la URL antigua cuando se sobrescribe un archivo con el mismo nombre.
 

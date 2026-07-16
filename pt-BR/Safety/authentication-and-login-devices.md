@@ -1,6 +1,6 @@
 # Autenticação e gerenciamento de dispositivos de login
 
-`Gerenciamento de autenticação` e `Gerenciamento de dispositivos de login` protegem o painel administrativo do ImgBed, a entrada pública de upload e o acesso WebDAV.
+`Gerenciamento de autenticação` e `Gerenciamento de dispositivos de login` protegem o painel administrativo do ImgHost, a entrada pública de upload e o acesso WebDAV.
 
 Use esta página para definir credenciais de acesso, revisar dispositivos conectados e revogar sessões antigas quando necessário.
 
@@ -42,7 +42,7 @@ Quando uma senha de upload está configurada:
 
 - Visitantes precisam informar a senha antes de usar a página de upload.
 - O upload só fica disponível depois que a senha é aceita.
-- Se as sessões de dispositivo do lado do usuário estiverem habilitadas, o ImgBed registra esse dispositivo do lado do usuário.
+- Se as sessões de dispositivo do lado do usuário estiverem habilitadas, o ImgHost registra esse dispositivo do lado do usuário.
 
 Alterar a senha de upload invalida sessões antigas do lado do usuário. Visitantes precisam informar a nova senha novamente.
 

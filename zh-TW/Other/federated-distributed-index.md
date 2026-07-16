@@ -1,6 +1,6 @@
 # 聯盟分散式索引
 
-聯盟分散式索引用來讓多個 ImgBed 網站彼此分享檔案清單。
+聯盟分散式索引用來讓多個 ImgHost 網站彼此分享檔案清單。
 
 簡單來說：
 
@@ -23,7 +23,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 | 分頁 | 用途 |
 | --- | --- |
 | 本機節點 | 啟用自己的節點、確認公開網域、選擇分享資料夾並更新出站索引 |
-| 我加入的節點 | 管理你已加入的其他 ImgBed 節點 |
+| 我加入的節點 | 管理你已加入的其他 ImgHost 節點 |
 | 加入我的節點 | 管理其他人想加入你節點的申請 |
 
 ## 第一次設定
@@ -32,7 +32,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 2. 開啟 `Enable`。
 3. 在 `Sync folders` 下選擇要分享的資料夾。
 4. 點選 `Update Outbound Index`。
-5. 如果 ImgBed 偵測到網域變更，請先確認目前網域正確再繼續。
+5. 如果 ImgHost 偵測到網域變更，請先確認目前網域正確再繼續。
 
 你可以選擇多個同步資料夾。
 
@@ -44,7 +44,7 @@ System Settings -> Other Settings -> Federated Distributed Index
 
 公開網域是其他節點用來存取你節點的網站 URL。
 
-ImgBed 會自動偵測，不需要手動輸入。第一次更新索引時，ImgBed 會要求你確認目前存取 URL 是否為正式網域。
+ImgHost 會自動偵測，不需要手動輸入。第一次更新索引時，ImgHost 會要求你確認目前存取 URL 是否為正式網域。
 
 如果之後更換網域，再更新索引時也會再次要求確認。
 
@@ -116,7 +116,7 @@ ImgBed 會自動偵測，不需要手動輸入。第一次更新索引時，ImgB
 ### 產生邀請連結
 
 1. 確認本機節點已啟用。
-2. 至少點選一次 `Update Outbound Index`，讓 ImgBed 確認公開網域。
+2. 至少點選一次 `Update Outbound Index`，讓 ImgHost 確認公開網域。
 3. 開啟 `Nodes Joining Me`。
 4. 點選 `Reset Invitation Link`。
 5. 複製邀請連結並傳給對方擁有者。

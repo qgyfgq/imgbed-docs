@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-Manage/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Manage/1.0 Node';
 const WRITE_ACTIONS = new Set([
   'set-metadata',
   'set-label',
@@ -31,7 +31,7 @@ const SHORT_UPLOAD_TOKEN_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const SHORT_UPLOAD_TOKEN_MAX_MINUTES = 1440;
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token manage tool
+  process.stdout.write(`ImgHost API Token manage tool
 
 Usage:
   node imgbed-token-manage.mjs --base-url <url> --token <token> --set-metadata --file-id <id> [--file-name <name>] [--read-source primary|backup] [--apply]
@@ -51,7 +51,7 @@ Usage:
   node imgbed-token-manage.mjs --base-url <url> --token <token> --delete-upload-token --token-id <id> [--apply]
 
 Required:
-  --base-url <url>              ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>              ImgHost site URL, for example https://image.ai6.me
   --token <token>               API Token with manage permission. You can also set IMGBED_API_TOKEN.
 
 Actions:

@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Activer les Limites de Fréquence
 
-Après l’activation de « Activer les limites de fréquence », ImgBed suit les téléversements récents par adresse IP de l’auteur du téléversement.
+Après l’activation de « Activer les limites de fréquence », ImgHost suit les téléversements récents par adresse IP de l’auteur du téléversement.
 
 Valeurs par défaut :
 

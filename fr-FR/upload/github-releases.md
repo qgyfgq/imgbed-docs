@@ -7,7 +7,7 @@ Vous n’avez besoin que de trois éléments :
 | Élément | Rôle |
 | --- | --- |
 | Compte GitHub | Utilisé pour générer un jeton d’accès et posséder le dépôt. |
-| Jeton d’accès GitHub | ImgBed l’utilise pour accéder à l’API GitHub, créer des versions et téléverser des fichiers. |
+| Jeton d’accès GitHub | ImgHost l’utilise pour accéder à l’API GitHub, créer des versions et téléverser des fichiers. |
 | Nom du dépôt | Vous pouvez saisir uniquement le nom du dépôt, par exemple `image`. |
 
 ## Étapes de configuration
@@ -27,7 +27,7 @@ Vous n’avez besoin que de trois éléments :
 
 ![Ajouter les permissions GitHub](../../image/upload/github-releases/添加github权限.png)
 
-## Étape 2 : compléter le canal GitHub Releases dans ImgBed
+## Étape 2 : compléter le canal GitHub Releases dans ImgHost
 
 Après avoir sélectionné `GitHub Releases` dans les paramètres de téléversement, remplissez les champs ainsi :
 
@@ -49,9 +49,9 @@ Le système gère ces détails :
 
 | Comportement du système | Description |
 | --- | --- |
-| Nom court du dépôt | ImgBed identifie le compte GitHub actuel et étend la valeur vers un chemin complet de dépôt. |
-| Chemin complet du dépôt | ImgBed utilise le chemin `username/repository` exactement tel qu’il a été saisi. |
-| Vérification du dépôt | Si vous utilisez le chemin du compte personnel actuel, ImgBed crée automatiquement le dépôt lorsqu’il n’existe pas. Si vous saisissez manuellement un chemin complet, ImgBed utilise directement ce chemin. |
+| Nom court du dépôt | ImgHost identifie le compte GitHub actuel et étend la valeur vers un chemin complet de dépôt. |
+| Chemin complet du dépôt | ImgHost utilise le chemin `username/repository` exactement tel qu’il a été saisi. |
+| Vérification du dépôt | Si vous utilisez le chemin du compte personnel actuel, ImgHost crée automatiquement le dépôt lorsqu’il n’existe pas. Si vous saisissez manuellement un chemin complet, ImgHost utilise directement ce chemin. |
 | État public/privé | La visibilité du dépôt est synchronisée selon l’interrupteur actuel. |
 
 ## Liste rapide
@@ -61,9 +61,9 @@ GitHub Releases fonctionne ainsi :
 ```text
 Sign in to GitHub
 -> Create an Access Token
--> Return to ImgBed and enter the token and repository name
+-> Return to ImgHost and enter the token and repository name
 -> Save
--> If only a repo name is entered, ImgBed adds the current username automatically
--> If username/repo is entered, ImgBed uses it as-is
+-> If only a repo name is entered, ImgHost adds the current username automatically
+-> If username/repo is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

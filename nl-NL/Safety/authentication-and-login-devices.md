@@ -1,6 +1,6 @@
 # Authenticatie en beheer van aanmeldapparaten
 
-`Authenticatiebeheer` en `Beheer van aanmeldapparaten` beschermen het ImgBed-beheer, de openbare uploadpagina en WebDAV-toegang.
+`Authenticatiebeheer` en `Beheer van aanmeldapparaten` beschermen het ImgHost-beheer, de openbare uploadpagina en WebDAV-toegang.
 
 Gebruik deze pagina om toegangsgegevens in te stellen, ingelogde apparaten te bekijken en oude sessies in te trekken wanneer dat nodig is.
 
@@ -42,7 +42,7 @@ Wanneer een uploadwachtwoord is ingesteld:
 
 - Bezoekers moeten het wachtwoord invoeren voordat ze de uploadpagina gebruiken.
 - Uploaden is pas beschikbaar nadat het wachtwoord is geaccepteerd.
-- Als apparaatsessies aan gebruikerszijde zijn ingeschakeld, registreert ImgBed dat apparaat.
+- Als apparaatsessies aan gebruikerszijde zijn ingeschakeld, registreert ImgHost dat apparaat.
 
 Als je het uploadwachtwoord wijzigt, worden oude gebruikerssessies ongeldig. Bezoekers moeten het nieuwe wachtwoord opnieuw invoeren.
 

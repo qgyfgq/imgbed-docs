@@ -8,8 +8,8 @@ Le impostazioni pagina controllano l'aspetto del sito, i valori predefiniti dell
 | --- | --- |
 | Titolo sito | Titolo mostrato nella scheda del browser. |
 | Icona sito | Piccola icona mostrata nella scheda del browser. |
-| Nome ImgBed | Nome mostrato nelle pagine dell'interfaccia pubblica. |
-| Logo ImgBed | Logo mostrato nelle pagine dell'interfaccia pubblica. |
+| Nome ImgHost | Nome mostrato nelle pagine dell'interfaccia pubblica. |
+| Logo ImgHost | Logo mostrato nelle pagine dell'interfaccia pubblica. |
 | Link logo | URL aperto cliccando il logo o l'immagine del profilo. |
 | Intervallo cambio sfondo | Intervallo di rotazione per più sfondi, in millisecondi. `60000` significa 60 secondi. |
 | Opacità sfondo | Opacità dell'immagine di sfondo da `0` a `1`. Valori più bassi sono più chiari. |
@@ -63,5 +63,5 @@ Lo sfondo amministrazione supporta URL immagine. Più URL possono essere separat
 | --- | --- |
 | Predefinito | Prefisso casuale basato sul tempo + nome file originale, per esempio `1760000000000_cat.png`. |
 | Solo prefisso | Solo prefisso casuale basato sul tempo ed estensione, per esempio `1760000000000.png`. |
-| Solo nome originale | Mantiene il nome originale, per esempio `cat.png`. Se duplicato, ImgBed aggiunge `(1)`, `(2)` e così via. |
+| Solo nome originale | Mantiene il nome originale, per esempio `cat.png`. Se duplicato, ImgHost aggiunge `(1)`, `(2)` e così via. |
 | Link breve | Usa un ID breve di 8 caratteri ed estensione, per esempio `a1b2c3d4.png`. |

@@ -38,7 +38,7 @@
 5. 続いて bot のユーザー名を入力します。ユーザー名は通常 `bot` で終わる必要があります。
 6. bot が作成されると、`@BotFather` が bot token を返します。
 
-この token が、ImgBed に入力する `Bot Token` です。
+この token が、ImgHost に入力する `Bot Token` です。
 
 ![bot token を保存する](../../image/upload/telegram/保存机器人令牌.png)
 
@@ -72,11 +72,11 @@
 4. メッセージピッカーで対象チャンネルを選択し、`@userinfobot` に送信します。
 5. `@userinfobot` が結果を返したら、`Id: -100...` と表示されている番号をコピーします。
 
-`-100` で始まる番号が、ImgBed で必要な `Session ID (Chat ID)` です。
+`-100` で始まる番号が、ImgHost で必要な `Session ID (Chat ID)` です。
 
 ![channel ID を取得する](../../image/upload/telegram/获取频道id.png)
 
-### 5. ImgBed に Telegram チャネルを入力する
+### 5. ImgHost に Telegram チャネルを入力する
 
 チャネル設定ダイアログに戻り、次のように入力します。
 
@@ -112,7 +112,7 @@ Create a bot with @BotFather
 -> Search for @userinfobot and choose Channel
 -> Forward any message from the channel to @userinfobot
 -> Copy the returned Id: -100...
--> Enter the Bot Token and Chat ID in ImgBed
+-> Enter the Bot Token and Chat ID in ImgHost
 -> Save and upload a test image
 ```
 

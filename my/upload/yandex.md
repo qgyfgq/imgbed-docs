@@ -6,7 +6,7 @@
 | --- | --- |
 | Yandex အကောင့်တစ်ခု | Sign in ဝင်ရန်နှင့် Yandex Disk ကို authorize လုပ်ရန် အသုံးပြုသည် |
 | Yandex OAuth app တစ်ခု | `Client ID` နှင့် `Client Secret` ထုတ်လုပ်ရန် အသုံးပြုသည် |
-| သင်၏ ImgBed ဒိုမိန်း | OAuth redirect URI အတွက် အသုံးပြုသည် |
+| သင်၏ ImgHost ဒိုမိန်း | OAuth redirect URI အတွက် အသုံးပြုသည် |
 | အသုံးပြုနိုင်သော Yandex Disk storage | လက်တွေ့ဖိုင်သိုလှောင်ရာနေရာအဖြစ် အသုံးပြုသည် |
 
 ## ပြင်ဆင်မှု အဆင့်များ
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### အဆင့် 2: Permission များကို အတည်ပြုပါ
 
-လက်ရှိ ImgBed Yandex integration အတွက် `Yandex.Disk REST API` အောက်တွင် အောက်ပါ permission လေးခုကို ထားရှိပါ။
+လက်ရှိ ImgHost Yandex integration အတွက် `Yandex.Disk REST API` အောက်တွင် အောက်ပါ permission လေးခုကို ထားရှိပါ။
 
 | Permission | ရည်ရွယ်ချက် |
 | --- | --- |
-| `cloud_api:disk.app_folder` | ImgBed ကို app folder ထဲတွင် ဖိုင်များသိမ်းခွင့်ပြုသည် |
+| `cloud_api:disk.app_folder` | ImgHost ကို app folder ထဲတွင် ဖိုင်များသိမ်းခွင့်ပြုသည် |
 | `cloud_api:disk.read` | ဖိုင်များနှင့် download link များကိုဖတ်သည် |
 | `cloud_api:disk.write` | ဖိုင်များကို အပ်လုဒ်လုပ်သည်၊ folder များဖန်တီးသည်၊ ဖိုင်များဖျက်သည် |
 | `Access to information about Yandex.Disk` | Disk quota နှင့် used space ကိုဖတ်သည် |
@@ -55,7 +55,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 App ဖန်တီးပြီးနောက် အောက်ပါတို့ကို ကူးယူပါ။
 
-| Yandex အကွက် | ImgBed အကွက် |
+| Yandex အကွက် | ImgHost အကွက် |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ App ဖန်တီးပြီးနောက် အောက်ပါတို
 
 အပ်လုဒ် ဆက်တင်များ တွင် `Yandex` ကိုရွေးပြီး အောက်ပါအတိုင်း ဖြည့်ပါ။
 
-| ImgBed အကွက် | ထည့်ရန်အရာ |
+| ImgHost အကွက် | ထည့်ရန်အရာ |
 | --- | --- |
 | ချန်နယ်အမည် | မှတ်မိလွယ်သောအမည်၊ ဥပမာ `Main Yandex` |
 | Client ID | Yandex app `Client ID` |
@@ -78,12 +78,12 @@ App ဖန်တီးပြီးနောက် အောက်ပါတို
 
 ### အဆင့် 5: Refresh Token ရယူပါ
 
-1. ImgBed တွင် `Get Token` ကိုနှိပ်ပါ။
+1. ImgHost တွင် `Get Token` ကိုနှိပ်ပါ။
 2. ချိတ်ဆက်လိုသော Yandex အကောင့်သို့ sign in ဝင်ပါ။
 3. Authorization prompt ကို approve လုပ်ပါ။
 4. Callback စာမျက်နှာတွင် `Refresh Token` ကိုပြမည်။
 5. ၎င်းကိုကူးယူပါ။
-6. ImgBed သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
+6. ImgHost သို့ ပြန်သွားပြီး `Refresh Token` အကွက်ထဲသို့ paste လုပ်ပါ။
 
 ![Authorization ပြီးနောက် refresh token ကူးယူခြင်း](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## ကိုးကားချက်များ

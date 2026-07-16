@@ -64,7 +64,7 @@ Wenn nach dem Filtern keine Datei passt, gibt die API kein passendes Ergebnis zu
 
 Die API für zufällige Bilder speichert Kandidatenpools pro Verzeichnis im Cache, um die Geschwindigkeit zu verbessern.
 
-Nach Dateiänderungen aktualisiert ImgBed die Cache-Version des Verzeichnisses, und spätere Anfragen bauen den Kandidatenpool neu auf. Leere Verzeichnisse werden kurz zwischengespeichert, um wiederholte Abfragen zu vermeiden.
+Nach Dateiänderungen aktualisiert ImgHost die Cache-Version des Verzeichnisses, und spätere Anfragen bauen den Kandidatenpool neu auf. Leere Verzeichnisse werden kurz zwischengespeichert, um wiederholte Abfragen zu vermeiden.
 
 ## Öffentliche Galerie
 

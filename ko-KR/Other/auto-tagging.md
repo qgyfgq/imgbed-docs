@@ -41,7 +41,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 3. 오른쪽 위의 점 세 개 메뉴를 클릭합니다.
 4. `Duplicate this Space`를 선택합니다.
 5. 기본 Space 이름을 유지하거나 `wd-tagger`처럼 원하는 이름을 선택합니다.
-6. 공개 범위를 `Public`으로 설정합니다. Public Space가 ImgBed에서 호출하기 더 쉽습니다.
+6. 공개 범위를 `Public`으로 설정합니다. Public Space가 ImgHost에서 호출하기 더 쉽습니다.
 7. 처음에는 기본 무료 하드웨어를 유지합니다. 대기열이 뚜렷해질 때만 나중에 업그레이드합니다.
 8. Space를 만들고 빌드가 끝날 때까지 기다립니다.
 
@@ -51,7 +51,7 @@ https://huggingface.co/spaces/SmilingWolf/wd-tagger
 https://huggingface.co/spaces/your-name/wd-tagger
 ```
 
-브라우저 URL을 복사해 ImgBed의 `Space URLs`에 붙여 넣습니다.
+브라우저 URL을 복사해 ImgHost의 `Space URLs`에 붙여 넣습니다.
 
 ## 여러 Space URL 입력하기
 
@@ -65,7 +65,7 @@ Space URL은 한 줄에 하나씩 입력합니다.
 | `https://huggingface.co/spaces/lintonxue00/wd-tagger` | 복사한 Space 페이지 URL입니다. |
 | `https://huggingface.co/spaces/your-name/wd-tagger` | 자신이 복제한 Space 페이지 URL입니다. |
 
-여러 URL을 입력할 수 있습니다. ImgBed는 여러 Space를 함께 사용하므로 속도가 향상될 수 있습니다.
+여러 URL을 입력할 수 있습니다. ImgHost는 여러 Space를 함께 사용하므로 속도가 향상될 수 있습니다.
 
 하나의 Space가 일시적으로 사용할 수 없는 상태여도 다른 Space가 처리를 계속할 수 있습니다.
 
@@ -103,13 +103,13 @@ Space URL은 한 줄에 하나씩 입력합니다.
 3. 태그 지정 시작을 클릭합니다.
 4. 진행이 완료될 때까지 기다립니다.
 
-대상 폴더가 비어 있으면 ImgBed는 모든 폴더를 처리합니다.
+대상 폴더가 비어 있으면 ImgHost는 모든 폴더를 처리합니다.
 
 일괄 태그 지정은 기존 이미지에 가장 적합합니다. 새 이미지에는 업로드 시 자동 태그 지정을 켜 두면 매번 수동으로 실행하지 않아도 됩니다.
 
 ## 업로드 시 자동 태그 지정
 
-업로드 시 자동 태그 지정을 켜면 새로 업로드된 이미지에 대해 ImgBed가 설정된 `Space URLs`를 자동으로 호출합니다.
+업로드 시 자동 태그 지정을 켜면 새로 업로드된 이미지에 대해 ImgHost가 설정된 `Space URLs`를 자동으로 호출합니다.
 
 장기 사용에 적합합니다.
 
@@ -121,19 +121,19 @@ Space에 대기열이 있어도 업로드 자체는 먼저 완료될 수 있으�
 
 태그, 방향, 등급, 너비, 높이가 이미 모두 있는 이미지는 불필요한 Space 호출을 피하기 위해 건너뜁니다.
 
-가능한 경우 ImgBed는 누락된 정보만 채웁니다. 예를 들어 방향만 누락된 경우 전체 콘텐츠 태그 지정 흐름을 호출하지 않고 방향 추가를 시도합니다.
+가능한 경우 ImgHost는 누락된 정보만 채웁니다. 예를 들어 방향만 누락된 경우 전체 콘텐츠 태그 지정 흐름을 호출하지 않고 방향 추가를 시도합니다.
 
 ## 자주 묻는 질문
 
 ### 왜 내 Space를 복제해야 하나요?
 
-공개 Space는 많은 사용자가 함께 사용합니다. 자신이 복제한 Space는 주로 자신의 ImgBed 사이트에서 사용되므로 일반적으로 더 빠르고 안정적입니다.
+공개 Space는 많은 사용자가 함께 사용합니다. 자신이 복제한 Space는 주로 자신의 ImgHost 사이트에서 사용되므로 일반적으로 더 빠르고 안정적입니다.
 
 ### Space가 계속 시작 중으로 표시됩니다
 
 처음 만든 후 또는 오랫동안 사용하지 않은 후에는 Space를 시작하는 데 시간이 걸릴 수 있습니다.
 
-먼저 자신의 Space 페이지를 엽니다. 이미지가 정상적으로 인식되는 것을 확인한 뒤 ImgBed로 돌아와 태그 지정을 시작하세요.
+먼저 자신의 Space 페이지를 엽니다. 이미지가 정상적으로 인식되는 것을 확인한 뒤 ImgHost로 돌아와 태그 지정을 시작하세요.
 
 ### Space URL은 어떻게 복사하나요?
 
@@ -172,7 +172,7 @@ Sign in to Hugging Face
 -> Duplicate this Space
 -> Wait for the Space to build
 -> Copy your Space URL
--> Fill Space URLs in ImgBed
+-> Fill Space URLs in ImgHost
 -> Choose model and thresholds
 -> Start tagging or enable auto-tag on upload
 ```

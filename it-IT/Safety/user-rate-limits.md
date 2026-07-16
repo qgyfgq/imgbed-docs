@@ -16,7 +16,7 @@ System Settings -> Security Settings -> Upload Management -> User Rate Limits
 
 ## Abilitare i limiti
 
-Dopo aver attivato `Abilita limiti di frequenza`, ImgBed tiene traccia dei caricamenti recenti in base all'indirizzo IP di chi carica.
+Dopo aver attivato `Abilita limiti di frequenza`, ImgHost tiene traccia dei caricamenti recenti in base all'indirizzo IP di chi carica.
 
 Valori predefiniti:
 

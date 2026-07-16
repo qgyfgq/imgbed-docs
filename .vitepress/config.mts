@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 import { sidebar } from './sidebar.mts'
 
 const siteUrl = 'https://md.ccwu.cc'
-const siteName = 'ImgBed Docs'
-const siteDescription = 'CloudFlare ImgBed documentation for deployment, storage channels, API tokens, public gallery, random image API, backups, OCR, and blog setup.'
+const siteName = 'ImgHost Docs'
+const siteDescription = 'ImgHost documentation for deployment, storage channels, API tokens, public gallery, random image API, backups, OCR, and blog setup.'
 
 function toCleanUrl(page: string) {
   const normalized = page.replace(/\\/g, '/')
@@ -179,10 +179,10 @@ export default defineConfig({
       level: [2, 3]
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/axibayuit-a11y/imgbed-docs' }
+      { icon: 'github', link: 'https://github.com/axibayuit-a11y/imghost-docs' }
     ],
     footer: {
-      message: 'Released as user documentation for CloudFlare ImgBed.'
+      message: 'Released as user documentation for ImgHost.'
     }
   }
 })

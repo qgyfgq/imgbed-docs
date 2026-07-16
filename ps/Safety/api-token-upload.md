@@ -1,6 +1,6 @@
 # د API Token له لارې د فایلونو پورته کول
 
-د API Token له لارې پورته کول د سکرېپټونو، اتومات کارونو او د درېيمې ډلې پروګرامونو لپاره دي. د ویب انٹرفېس خلاصولو ته اړتیا نشته. که د سایټ URL، token، د ځایي فایل لاره او یو رښتینی د پورته کولو چینل ورکړئ، فایل ImgBed ته پورته کېږي او ځواب به د فایل URL ولري.
+د API Token له لارې پورته کول د سکرېپټونو، اتومات کارونو او د درېيمې ډلې پروګرامونو لپاره دي. د ویب انٹرفېس خلاصولو ته اړتیا نشته. که د سایټ URL، token، د ځایي فایل لاره او یو رښتینی د پورته کولو چینل ورکړئ، فایل ImgHost ته پورته کېږي او ځواب به د فایل URL ولري.
 
 ![د API Token سمول](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
-| `--base-url <url>` | هو | د ImgBed سایټ URL، لکه `https://image.ai6.me`. |
+| `--base-url <url>` | هو | د ImgHost سایټ URL، لکه `https://image.ai6.me`. |
 | `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--file <path>` | هو | د ځایي فایل لاره. |
 | `--channel <key>` | هو | د پورته کولو چینل. |
@@ -135,7 +135,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
-| `--base-url <url>` | هو | د ImgBed سایټ URL. |
+| `--base-url <url>` | هو | د ImgHost سایټ URL. |
 | `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--file <path>` | هو | د ځایي فایل لاره. |
 | `--channel <key>` | هو | د پورته کولو چینل. |

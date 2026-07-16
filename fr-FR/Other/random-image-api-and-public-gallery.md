@@ -64,7 +64,7 @@ Si aucun fichier ne correspond après filtrage, l’API ne renvoie aucun résult
 
 L’API d’image aléatoire met en cache les ensembles candidats par répertoire afin d’améliorer la vitesse.
 
-Après une modification des fichiers, ImgBed met à jour la version du cache du répertoire, et les requêtes suivantes reconstruisent l’ensemble de candidats. Les répertoires vides sont mis en cache brièvement pour éviter les requêtes répétées.
+Après une modification des fichiers, ImgHost met à jour la version du cache du répertoire, et les requêtes suivantes reconstruisent l’ensemble de candidats. Les répertoires vides sont mis en cache brièvement pour éviter les requêtes répétées.
 
 ## Galerie publique
 

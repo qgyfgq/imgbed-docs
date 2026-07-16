@@ -44,7 +44,7 @@
 5. `Bot` पेज पर टोकन जनरेट या रीसेट करें।
 6. टोकन सहेजें।
 
-यही टोकन ImgBed में `Bot Token` के रूप में दर्ज करना है।
+यही टोकन ImgHost में `Bot Token` के रूप में दर्ज करना है।
 
 ![बॉट टोकन देखें](../../image/upload/discord/查看机器人令牌.png)
 
@@ -80,13 +80,13 @@
 5. चैनल नाम पर दायाँ क्लिक करें।
 6. `Copy Channel ID` पर क्लिक करें।
 
-कॉपी किया गया नंबर ImgBed के लिए आवश्यक `Channel ID` है।
+कॉपी किया गया नंबर ImgHost के लिए आवश्यक `Channel ID` है।
 
 ![Developer Mode सक्षम करें](../../image/upload/discord/开启开发者权限.png)
 
 ![Channel ID कॉपी करें](../../image/upload/discord/复制群频道id.png)
 
-### 5. ImgBed में Discord चैनल भरें
+### 5. ImgHost में Discord चैनल भरें
 
 चैनल कॉन्फ़िगरेशन संवाद पर लौटें और फ़ील्ड इस तरह भरें:
 
@@ -122,7 +122,7 @@ Create a Discord server
 -> Make sure the target text channel grants the same permissions
 -> Enable Developer Mode
 -> Right-click the target text channel and copy the Channel ID
--> Enter the Bot Token and Channel ID in ImgBed
+-> Enter the Bot Token and Channel ID in ImgHost
 -> Save and upload a test image
 ```
 

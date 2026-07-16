@@ -48,9 +48,9 @@ Kopieren Sie und speichern Sie das neue App-Passwort direkt nach dem Erstellen. 
 
 ![Neues App-Passwort speichern](../../image/upload/webdav/记住新应用程序密码.png)
 
-### 2. WebDAV-Konfiguration in ImgBed ausfüllen
+### 2. WebDAV-Konfiguration in ImgHost ausfüllen
 
-Kehren Sie zu ImgBed zurück und fügen Sie einen WebDAV-Kanal hinzu:
+Kehren Sie zu ImgHost zurück und fügen Sie einen WebDAV-Kanal hinzu:
 
 | UI-Feld | Wert |
 | --- | --- |
@@ -68,7 +68,7 @@ Der WebDAV-Kanal verwendet inzwischen echtes sitzungsbasiertes Chunk-Upload.
 
 Kleine Dateien werden als vollständige Einzeldatei hochgeladen. Dateien größer als 64 MiB werden automatisch in etwa 10 MiB große Teile aufgeteilt und in ein Remote-Chunk-Verzeichnis hochgeladen.
 
-Der WebDAV-Dienst muss keine `partial update`- oder Offset-basierten Schreibvorgänge unterstützen. ImgBed setzt die Chunks auf dem Remote-Server nicht wieder zu einer großen Datei zusammen. Stattdessen speichert ImgBed ein Chunk-Manifest und liest die Teile bei einem Dateiaufruf der Reihe nach aus.
+Der WebDAV-Dienst muss keine `partial update`- oder Offset-basierten Schreibvorgänge unterstützen. ImgHost setzt die Chunks auf dem Remote-Server nicht wieder zu einer großen Datei zusammen. Stattdessen speichert ImgHost ein Chunk-Manifest und liest die Teile bei einem Dateiaufruf der Reihe nach aus.
 
 Praktisch bedeutet das:
 
@@ -77,7 +77,7 @@ Praktisch bedeutet das:
 | 64 MiB oder kleiner | Normaler Upload | Eine vollständige Datei |
 | Größer als 64 MiB | Echtes sitzungsbasiertes Chunk-Upload | Ein Chunk-Verzeichnis mit mehreren Teil-Dateien |
 
-Das Chunk-Verzeichnis betrifft nur die Ablage im entfernten Speicher. Die Datei-URL in ImgBed ändert sich dadurch nicht. Nutzer öffnen die Datei weiterhin über den ursprünglichen `/file/...`-Link.
+Das Chunk-Verzeichnis betrifft nur die Ablage im entfernten Speicher. Die Datei-URL in ImgHost ändert sich dadurch nicht. Nutzer öffnen die Datei weiterhin über den ursprünglichen `/file/...`-Link.
 
 ## Einrichtungsschritte
 
@@ -111,7 +111,7 @@ Das Chunk-Verzeichnis betrifft nur die Ablage im entfernten Speicher. Die Datei-
 
 Das ist die aktuelle Speichermethode für große Dateien.
 
-Dateien über 64 MiB werden nicht zu einer einzelnen großen Remote-Datei zusammengefügt. Sie werden als Chunk-Verzeichnis gespeichert. ImgBed merkt sich das Chunk-Manifest und gibt den vollständigen Inhalt zurück, indem die Teile der Reihe nach gelesen werden.
+Dateien über 64 MiB werden nicht zu einer einzelnen großen Remote-Datei zusammengefügt. Sie werden als Chunk-Verzeichnis gespeichert. ImgHost merkt sich das Chunk-Manifest und gibt den vollständigen Inhalt zurück, indem die Teile der Reihe nach gelesen werden.
 
 ### Was sollte ich zuerst prüfen, wenn große Uploads fehlschlagen?
 

@@ -26,7 +26,7 @@ System Settings -> Other Settings -> Redundant Backup
 
 Dieser Einstieg eignet sich am besten, um Sicherungen für einen Ordner oder für alle Dateien gesammelt hinzuzufügen.
 
-Der Sicherungskanal kann manuell ausgewählt werden. Alternativ können Sie die automatische Umschaltung wählen und ImgBed einen passenden Sicherungskanal finden lassen.
+Der Sicherungskanal kann manuell ausgewählt werden. Alternativ können Sie die automatische Umschaltung wählen und ImgHost einen passenden Sicherungskanal finden lassen.
 
 ## Sicherung aus den Dateidetails
 
@@ -90,4 +90,4 @@ Solange die Sicherungsdatei verfügbar ist, funktionieren Bilder, Videos und Dow
 
 ## Was beim Löschen einer Datei passiert
 
-Wenn eine Datei gelöscht wird, löscht ImgBed sowohl die primäre Datei als auch die Sicherungsdatei.
+Wenn eine Datei gelöscht wird, löscht ImgHost sowohl die primäre Datei als auch die Sicherungsdatei.

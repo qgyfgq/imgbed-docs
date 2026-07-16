@@ -2,7 +2,7 @@
 
 ## எப்போது பொருத்தம்
 
-- உங்களிடம் pCloud கணக்கு உள்ளது; ImgBed படங்கள்-ஐ pCloud-ல் சேமிக்க வேண்டும்.
+- உங்களிடம் pCloud கணக்கு உள்ளது; ImgHost படங்கள்-ஐ pCloud-ல் சேமிக்க வேண்டும்.
 - pCloud கணக்கு email மற்றும் password-ஐ சேனல் சான்றுகள் ஆக பயன்படுத்துவது உங்களுக்கு ஏற்றதாக இருந்தால்.
 
 ## முதலில் தேவையானவை
@@ -70,7 +70,7 @@
 
 pCloud OAuth2 இயல்புநிலை ஆக self-சேவை இல்லை. அதை enable செய்ய pCloud-க்கு email செய்ய வேண்டும்.
 
-தற்போதைய pCloud OAuth2 flow ImgBed-க்கு தேவையான short-lived பதிவேற்றம் link workflow-ஐ support செய்யவில்லை. அதனால் இந்த சேனல் கணக்கு email/password login பயன்படுத்துகிறது.
+தற்போதைய pCloud OAuth2 flow ImgHost-க்கு தேவையான short-lived பதிவேற்றம் link workflow-ஐ support செய்யவில்லை. அதனால் இந்த சேனல் கணக்கு email/password login பயன்படுத்துகிறது.
 
 ### எந்த API Host பயன்படுத்த வேண்டும்?
 

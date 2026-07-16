@@ -28,7 +28,7 @@ Luồng định vị IP mới hỗ trợ nhiều nguồn thay vì phụ thuộc 
 
 Chỉ điền các dịch vụ bạn cần. Không cần cấu hình mọi trường.
 
-Nếu không cung cấp khóa nào, ImgBed vẫn sẽ thử các nguồn miễn phí tích hợp sẵn, nhưng độ ổn định, hỗ trợ ngôn ngữ và độ chính xác có thể thấp hơn dịch vụ bạn tự cấu hình.
+Nếu không cung cấp khóa nào, ImgHost vẫn sẽ thử các nguồn miễn phí tích hợp sẵn, nhưng độ ổn định, hỗ trợ ngôn ngữ và độ chính xác có thể thấp hơn dịch vụ bạn tự cấu hình.
 
 ## Lựa Chọn Khuyến Nghị
 
@@ -57,9 +57,9 @@ Tìm account ID trong bảng điều khiển MaxMind và tạo License Key từ 
 
 ![Cấu hình khóa MaxMind](../../image/other/ip定位/maxmind的key配置.png)
 
-Sau khi tạo, dán Account ID và License Key vào ImgBed rồi lưu.
+Sau khi tạo, dán Account ID và License Key vào ImgHost rồi lưu.
 
-Gói miễn phí của MaxMind phù hợp cho sử dụng hằng ngày, nhưng có giới hạn số yêu cầu. Nếu vượt hạn mức, ImgBed tiếp tục thử các nguồn khả dụng khác.
+Gói miễn phí của MaxMind phù hợp cho sử dụng hằng ngày, nhưng có giới hạn số yêu cầu. Nếu vượt hạn mức, ImgHost tiếp tục thử các nguồn khả dụng khác.
 
 ## Thiết Lập ipapi
 
@@ -69,9 +69,9 @@ Mở bảng điều khiển của ipapi và sao chép API Key hiển thị ở �
 
 ![Cấu hình ipapi](../../image/other/ip定位/ipapi配置.png)
 
-Dán vào trường `ipapi Key` trong ImgBed rồi lưu.
+Dán vào trường `ipapi Key` trong ImgHost rồi lưu.
 
-ipapi hỗ trợ định vị IP đa ngôn ngữ và hữu ích khi bạn muốn địa chỉ hiển thị bằng ngôn ngữ đã chọn. Gói miễn phí cũng có giới hạn số yêu cầu. Nếu hết hạn mức, ImgBed tiếp tục thử các nguồn khả dụng khác.
+ipapi hỗ trợ định vị IP đa ngôn ngữ và hữu ích khi bạn muốn địa chỉ hiển thị bằng ngôn ngữ đã chọn. Gói miễn phí cũng có giới hạn số yêu cầu. Nếu hết hạn mức, ImgHost tiếp tục thử các nguồn khả dụng khác.
 
 ## Thiết Lập Tencent Map Key
 

@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const USER_AGENT = 'ImgBed-Token-Federation/1.0 Node';
+const USER_AGENT = 'ImgHost-Token-Federation/1.0 Node';
 
 const WRITE_ACTIONS = new Set([
   'join',
@@ -36,7 +36,7 @@ const DELETE_ROUTES = Object.freeze({
 });
 
 function printHelp() {
-  process.stdout.write(`ImgBed API Token federation tool
+  process.stdout.write(`ImgHost API Token federation tool
 
 Usage:
   node imgbed-token-federation.mjs --base-url <url> --token <token> --status
@@ -51,7 +51,7 @@ Usage:
   node imgbed-token-federation.mjs --base-url <url> --token <token> --delete --direction outgoing|incoming --domain <url> [--apply]
 
 Required:
-  --base-url <url>       ImgBed site URL, for example https://image.ai6.me
+  --base-url <url>       ImgHost site URL, for example https://image.ai6.me
   --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
 
 Read actions:

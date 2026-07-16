@@ -2,7 +2,7 @@
 
 ## Paling Sesuai Untuk
 
-- Anda mempunyai akaun pCloud dan mahu ImgBed menyimpan imej dalam pCloud.
+- Anda mempunyai akaun pCloud dan mahu ImgHost menyimpan imej dalam pCloud.
 - Anda selesa menggunakan e-mel dan kata laluan akaun pCloud sebagai kelayakan saluran.
 
 ## Perkara Yang Diperlukan Dahulu
@@ -70,7 +70,7 @@ Pilih API host berdasarkan rantau akaun anda:
 
 pCloud OAuth2 bukan perkhidmatan kendiri secara lalai. Anda perlu menghantar e-mel kepada pCloud dan meminta mereka mendayakannya.
 
-Aliran OAuth2 pCloud semasa juga tidak menyokong aliran kerja pautan muat naik jangka pendek yang diperlukan oleh ImgBed. Oleh itu, saluran ini menggunakan log masuk e-mel dan kata laluan akaun.
+Aliran OAuth2 pCloud semasa juga tidak menyokong aliran kerja pautan muat naik jangka pendek yang diperlukan oleh ImgHost. Oleh itu, saluran ini menggunakan log masuk e-mel dan kata laluan akaun.
 
 ### API Host Mana Yang Patut Digunakan?
 

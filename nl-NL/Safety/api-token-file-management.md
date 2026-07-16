@@ -46,7 +46,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | Adres van de ImgBed-site, bijvoorbeeld `https://image.ai6.me` |
+| `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token; kan ook via de omgevingsvariabele `IMGBED_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out van één verzoek; standaard `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Mappen maken
 
-ImgBed-mappen komen voort uit bestandspaden; echte lege mappen bestaan niet. Wanneer het script een map maakt, maakt het in de doelmap een markeerbestand `0.md`, zodat de map zichtbaar wordt in bestandsbeheer en mapstatistieken.
+ImgHost-mappen komen voort uit bestandspaden; echte lege mappen bestaan niet. Wanneer het script een map maakt, maakt het in de doelmap een markeerbestand `0.md`, zodat de map zichtbaar wordt in bestandsbeheer en mapstatistieken.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ De backend verwerkt maximaal `15` bestanden per verzoek. Het script gebruikt sta
 
 ### Kan ik een echt lege map maken
 
-ImgBed-mappen worden afgeleid van bestandspaden; echte lege mappen bestaan niet. `--create-folder` maakt een markeerbestand `0.md`, zodat de map zichtbaar wordt in bestandsbeheer en mapstatistieken.
+ImgHost-mappen worden afgeleid van bestandspaden; echte lege mappen bestaan niet. `--create-folder` maakt een markeerbestand `0.md`, zodat de map zichtbaar wordt in bestandsbeheer en mapstatistieken.
 
 ### Hoe lang kan een kort geldig upload-Token maximaal geldig zijn
 

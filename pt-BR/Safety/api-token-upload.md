@@ -1,6 +1,6 @@
 # Upload de arquivos com API Token
 
-O upload com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros. Você não precisa abrir a página do site: basta informar o endereço do ImgBed, o Token, o caminho do arquivo e o canal real de upload para enviar o arquivo e receber o link final.
+O upload com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros. Você não precisa abrir a página do site: basta informar o endereço do ImgHost, o Token, o caminho do arquivo e o canal real de upload para enviar o arquivo e receber o link final.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑上传权限api.png)
 
@@ -69,7 +69,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed, por exemplo `https://image.ai6.me` |
+| `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
 | `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
 | `--file <path>` | Sim | Caminho do arquivo local |
 | `--channel <key>` | Sim | Canal de upload |
@@ -133,7 +133,7 @@ node imgbed-token-chunk-upload.mjs `
 
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
-| `--base-url <url>` | Sim | Endereço do ImgBed |
+| `--base-url <url>` | Sim | Endereço do ImgHost |
 | `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
 | `--file <path>` | Sim | Caminho do arquivo local |
 | `--channel <key>` | Sim | Canal de upload |

@@ -7,7 +7,7 @@
 | 必要なもの | 目的 |
 | --- | --- |
 | GitLab アカウント | アクセストークンを生成し、プロジェクトを所有するために使用します。 |
-| GitLab Personal Access Token | ImgBed が GitLab API にアクセスし、プロジェクトを作成し、Generic Packages にファイルをアップロードするために使用します。 |
+| GitLab Personal Access Token | ImgHost が GitLab API にアクセスし、プロジェクトを作成し、Generic Packages にファイルをアップロードするために使用します。 |
 | Project name | プロジェクト名だけを入力できます。例: `imgbed`。 |
 
 ## 設定手順
@@ -26,7 +26,7 @@
 
 ![token 権限を選択する](../../image/upload/gitlab-packages/勾选令牌权限.png)
 
-## 手順 2: ImgBed に GitLab Packages チャネルを入力する
+## 手順 2: ImgHost に GitLab Packages チャネルを入力する
 
 アップロード設定で `GitLab Packages` を選択したら、次のように入力します。
 
@@ -48,9 +48,9 @@
 
 | システム動作 | 説明 |
 | --- | --- |
-| 短い project name | ImgBed は現在の GitLab アカウントを識別し、値を完全なプロジェクトパスに展開します。 |
-| 完全な project path | ImgBed は `username/project` path を入力どおりに使用します。 |
-| project 確認 | 現在の個人アカウントパスを使用する場合、存在しなければ ImgBed がプロジェクトを自動作成します。完全なパスを手動入力した場合、ImgBed はそのパスを直接使用します。 |
+| 短い project name | ImgHost は現在の GitLab アカウントを識別し、値を完全なプロジェクトパスに展開します。 |
+| 完全な project path | ImgHost は `username/project` path を入力どおりに使用します。 |
+| project 確認 | 現在の個人アカウントパスを使用する場合、存在しなければ ImgHost がプロジェクトを自動作成します。完全なパスを手動入力した場合、ImgHost はそのパスを直接使用します。 |
 | 公開/非公開状態 | プロジェクトの可視性は現在のスイッチに従って同期されます。 |
 
 ## クイックチェックリスト
@@ -59,9 +59,9 @@
 Sign in to GitLab
 -> Create an Access Token
 -> Select only the api scope
--> Return to ImgBed and enter the token and project name
+-> Return to ImgHost and enter the token and project name
 -> Save
--> If only a project name is entered, ImgBed adds the current username automatically
--> If username/project is entered, ImgBed uses it as-is
+-> If only a project name is entered, ImgHost adds the current username automatically
+-> If username/project is entered, ImgHost uses it as-is
 -> Upload a test image
 ```

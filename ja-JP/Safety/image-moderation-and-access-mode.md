@@ -37,7 +37,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 
 ## モデレーションを有効にすると何が起きるか
 
-モデレーションが有効な場合、ImgBed はアップロード時に選択されたモデレーションプロバイダーを呼び出し、検出された年齢レーティングを保存します。
+モデレーションが有効な場合、ImgHost はアップロード時に選択されたモデレーションプロバイダーを呼び出し、検出された年齢レーティングを保存します。
 
 主なレーティング:
 
@@ -66,7 +66,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 - nsfwjs は通常 API エンドポイント URL が必要です。
 - Sightengine は API user と API secret が必要です。
 
-アカウント、利用可能性、検出品質に基づいて選択してください。モデレーションが有効で正しく設定されていれば、ImgBed はアップロード時に画像レーティングを書き込もうとします。
+アカウント、利用可能性、検出品質に基づいて選択してください。モデレーションが有効で正しく設定されていれば、ImgHost はアップロード時に画像レーティングを書き込もうとします。
 
 ## 公開ギャラリーへの影響
 
@@ -85,7 +85,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 
 公開ファイル URL は、訪問者が開く直接画像リンクです。
 
-ファイルのレーティングが現在のアクセスモードで許可されている場合、ImgBed は元画像を返します。
+ファイルのレーティングが現在のアクセスモードで許可されている場合、ImgHost は元画像を返します。
 
 レーティングが許可レベルより高い場合、通常の公開アクセスでは元画像を返しません。代わりに、設定済みのブロック結果またはブロック用フォールバック画像を返します。
 
@@ -94,7 +94,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 - 現在のモードは子どもモードです。
 - ある画像のレーティングが R18 です。
 - 訪問者が公開 URL を直接開きます。
-- ImgBed はその訪問者に R18 の元画像を返しません。
+- ImgHost はその訪問者に R18 の元画像を返しません。
 
 ![制限されたファイル画像](../../image/Safety/文件受限图.png)
 

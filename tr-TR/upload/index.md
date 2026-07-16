@@ -1,23 +1,23 @@
 # Yükleme ayarları
 
-Yükleme ayarları ImgBed'i kendi depolama kanallarınıza bağlar. Bir kanal yapılandırıldıktan sonra yüklenen görseller ve dosyalar seçtiğiniz hizmette saklanır. ImgBed erişim bağlantılarını, dosya kayıtlarını, önizlemeleri, herkese açık galeri özelliklerini, rastgele görsel API'sini, WebDAV erişimini ve ilgili iş akışlarını yönetir.
+Yükleme ayarları ImgHost'i kendi depolama kanallarınıza bağlar. Bir kanal yapılandırıldıktan sonra yüklenen görseller ve dosyalar seçtiğiniz hizmette saklanır. ImgHost erişim bağlantılarını, dosya kayıtlarını, önizlemeleri, herkese açık galeri özelliklerini, rastgele görsel API'sini, WebDAV erişimini ve ilgili iş akışlarını yönetir.
 
 Her kullanıcı için uygun kanal farklı olabilir. Basit bir başlangıç için Telegram, Discord veya GitHub Releases iyi seçeneklerdir. Kapasite, hız ve uzun vadeli kararlılık daha önemliyse Cloudflare R2, S3, OneDrive, Google Drive, Dropbox, Yandex, pCloud veya kendi WebDAV hizmetinizi değerlendirin.
 
 ## Başlamadan önce
 
-> ImgBed'i ilk kez kullanmadan önce, gerekli D1 veri tablolarını tamamlamak ve sonraki özelliklerde hata oluşmasını önlemek için başlatma sayfasına girip "Dizini yeniden oluştur" seçeneğine tıklamanız gerekir.
+> ImgHost'i ilk kez kullanmadan önce, gerekli D1 veri tablolarını tamamlamak ve sonraki özelliklerde hata oluşmasını önlemek için başlatma sayfasına girip "Dizini yeniden oluştur" seçeneğine tıklamanız gerekir.
 >
 > ![Başlatma sırasında Dizini yeniden oluştur seçeneğine tıklama](../../image/初始化点击重建索引.png)
 
 ### İsteğe bağlı: D1 okuma çoğaltmasını etkinleştirin
 
-Cloudflare panosundaki D1 veritabanı ayarlarından okuma çoğaltmasını etkinleştirerek dosya yönetimi, herkese açık galeri ve rastgele görsel API'sine erişimi hızlandırabilirsiniz. Bu özellik etkinleştirilmeden de ImgBed normal çalışır.
+Cloudflare panosundaki D1 veritabanı ayarlarından okuma çoğaltmasını etkinleştirerek dosya yönetimi, herkese açık galeri ve rastgele görsel API'sine erişimi hızlandırabilirsiniz. Bu özellik etkinleştirilmeden de ImgHost normal çalışır.
 
 ![D1 okuma çoğaltmasını etkinleştirin](../../image/d1读取复制.png)
 
 - Kullanacağınız depolama hesabını veya API bilgilerini hazırlayın.
-- ImgBed alan adınızın erişilebilir olduğundan emin olun; OAuth tabanlı kanallar callback URL ister.
+- ImgHost alan adınızın erişilebilir olduğundan emin olun; OAuth tabanlı kanallar callback URL ister.
 - Kanalı ekledikten sonra önce bir test görseli yükleyerek dosyanın kaydedilip açıldığını doğrulayın.
 
 ## Kanal listesi
@@ -40,4 +40,4 @@ Cloudflare panosundaki D1 veritabanı ayarlarından okuma çoğaltmasını etkin
 
 - Her yükleme kanalı için önceden gereken bilgiler.
 - Harici platformlarda uygulama oluşturma, anahtar kopyalama veya token yetkilendirme adımları.
-- Kanal yapılandırmasını ImgBed'e girme ve yüklemenin çalıştığını doğrulama.
+- Kanal yapılandırmasını ImgHost'e girme ve yüklemenin çalıştığını doğrulama.

@@ -1,6 +1,6 @@
 # Uwierzytelnianie i zarządzanie urządzeniami logowania
 
-`Zarządzanie uwierzytelnianiem` i `Zarządzanie urządzeniami logowania` chronią panel administracyjny ImgBed, publiczne wejście przesyłania i dostęp WebDAV.
+`Zarządzanie uwierzytelnianiem` i `Zarządzanie urządzeniami logowania` chronią panel administracyjny ImgHost, publiczne wejście przesyłania i dostęp WebDAV.
 
 Na tej stronie ustawiasz dane dostępu, sprawdzasz zalogowane urządzenia i unieważniasz stare sesje, gdy jest to potrzebne.
 
@@ -42,7 +42,7 @@ Po skonfigurowaniu hasła do przesyłania:
 
 - odwiedzający muszą wpisać hasło przed użyciem strony przesyłania.
 - przesyłanie jest dostępne dopiero po zaakceptowaniu hasła.
-- jeśli sesje urządzeń użytkownika są włączone, ImgBed zapisuje takie urządzenie.
+- jeśli sesje urządzeń użytkownika są włączone, ImgHost zapisuje takie urządzenie.
 
 Zmiana hasła do przesyłania unieważnia stare sesje użytkowników. Odwiedzający muszą wpisać nowe hasło ponownie.
 

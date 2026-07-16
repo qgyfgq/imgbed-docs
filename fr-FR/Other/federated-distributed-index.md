@@ -1,6 +1,6 @@
 # Index distribué fédéré
 
-L’index distribué fédéré permet à plusieurs sites ImgBed de partager leurs listes de fichiers entre eux.
+L’index distribué fédéré permet à plusieurs sites ImgHost de partager leurs listes de fichiers entre eux.
 
 En termes simples :
 
@@ -23,7 +23,7 @@ La page comporte trois onglets :
 | Onglet | Objectif |
 | --- | --- |
 | Nœud local | Activer votre nœud, confirmer le domaine public, sélectionner les dossiers partagés et mettre à jour l’index sortant |
-| Nœuds que j’ai rejoints | Gérer les autres nœuds ImgBed que vous avez rejoints |
+| Nœuds que j’ai rejoints | Gérer les autres nœuds ImgHost que vous avez rejoints |
 | Nœuds qui me rejoignent | Gérer les demandes d’autres personnes qui veulent rejoindre votre nœud |
 
 ## Configuration initiale
@@ -32,7 +32,7 @@ La page comporte trois onglets :
 2. Activez `Enable`.
 3. Sélectionnez les dossiers à partager dans `Sync folders`.
 4. Cliquez sur `Update Outbound Index`.
-5. Si ImgBed détecte un changement de domaine, confirmez que le domaine actuel est correct avant de continuer.
+5. Si ImgHost détecte un changement de domaine, confirmez que le domaine actuel est correct avant de continuer.
 
 Vous pouvez sélectionner plusieurs dossiers de synchronisation.
 
@@ -44,7 +44,7 @@ Si la liste des dossiers de synchronisation est vide, tous les dossiers sont par
 
 Le domaine public est l’URL du site que les autres nœuds utilisent pour accéder à votre nœud.
 
-ImgBed le détecte automatiquement. Vous n’avez pas besoin de le saisir manuellement. Lors de la première mise à jour de l’index, ImgBed vous demande de confirmer si l’URL d’accès actuelle est le domaine de production.
+ImgHost le détecte automatiquement. Vous n’avez pas besoin de le saisir manuellement. Lors de la première mise à jour de l’index, ImgHost vous demande de confirmer si l’URL d’accès actuelle est le domaine de production.
 
 Si vous changez de domaine plus tard, la mise à jour de l’index demandera à nouveau une confirmation.
 
@@ -116,7 +116,7 @@ Après le désabonnement, l’index fédéré de ce nœud est retiré de votre s
 ### Générer un lien d’invitation
 
 1. Assurez-vous que le nœud local est activé.
-2. Cliquez au moins une fois sur `Update Outbound Index` afin qu’ImgBed confirme le domaine public.
+2. Cliquez au moins une fois sur `Update Outbound Index` afin qu’ImgHost confirme le domaine public.
 3. Ouvrez `Nodes Joining Me`.
 4. Cliquez sur `Reset Invitation Link`.
 5. Copiez le lien d’invitation et envoyez-le à l’autre propriétaire.

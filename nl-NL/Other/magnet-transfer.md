@@ -2,7 +2,7 @@
 
 Magnetoverdracht downloadt bestanden vanaf een magnetlink en uploadt ze automatisch naar het cloudopslagkanaal dat je kiest.
 
-Dit is handig voor anime-afleveringen, video's, archieven en vergelijkbare bestanden. Plak een magnetlink en ImgBed maakt een downloadtaak op de achtergrond. Wanneer de download klaar is, wordt het bestand naar ImgBed geüpload en verschijnt de uiteindelijke link in de uploadlijst.
+Dit is handig voor anime-afleveringen, video's, archieven en vergelijkbare bestanden. Plak een magnetlink en ImgHost maakt een downloadtaak op de achtergrond. Wanneer de download klaar is, wordt het bestand naar ImgHost geüpload en verschijnt de uiteindelijke link in de uploadlijst.
 
 ![Magnetoverdracht](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Wanneer de instellingen klaar zijn, ga je terug naar de homepage en plak je een 
 1. Plak de magnetlink in het uploadveld op de homepage.
 2. Controleer dat de modus op `Transfer` staat.
 3. Klik op uploaden.
-4. Wacht tot ImgBed de magnettaak aanmaakt.
+4. Wacht tot ImgHost de magnettaak aanmaakt.
 5. Zodra de taak start, gebruik je het zwevende paneel `Magnet Tasks` rechtsonder om de voortgang te volgen.
 
 Downloaden en uploaden kunnen tijd kosten. De snelheid hangt af van de magnetbron, de GitHub-runtimeomgeving en het gekozen cloudopslagkanaal.
@@ -72,7 +72,7 @@ Veelvoorkomende statussen:
 
 ## Tips
 
-- Bevat een magnetlink meerdere bestanden, dan geeft ImgBed prioriteit aan het belangrijkste afgeronde bestand voor weergave.
+- Bevat een magnetlink meerdere bestanden, dan geeft ImgHost prioriteit aan het belangrijkste afgeronde bestand voor weergave.
 - Grote bestanden duren langer. Wacht tot de taak klaar is voordat je de pagina ververst.
 - Heeft de magnetbron geen beschikbare peers, dan kan de download erg langzaam zijn of mislukken.
 - Is het quotum van het cloudaccount opgebruikt, de autorisatie verlopen of de uploadmap verkeerd, dan kan de taak mislukken.

@@ -6,7 +6,7 @@
 | --- | --- |
 | Yandex 계정 | 로그인하고 Yandex Disk를 승인하는 데 사용합니다. |
 | Yandex OAuth 앱 | `Client ID`와 `Client Secret`을 생성하는 데 사용합니다. |
-| ImgBed 도메인 | OAuth redirect URI에 사용합니다. |
+| ImgHost 도메인 | OAuth redirect URI에 사용합니다. |
 | 사용 가능한 Yandex Disk 저장 공간 | 실제 파일 저장 위치로 사용합니다. |
 
 ## 설정 단계
@@ -31,11 +31,11 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### 단계 2: 권한 확인
 
-현재 ImgBed Yandex 연동에서는 `Yandex.Disk REST API` 아래의 다음 네 권한을 유지합니다.
+현재 ImgHost Yandex 연동에서는 `Yandex.Disk REST API` 아래의 다음 네 권한을 유지합니다.
 
 | 권한 | 목적 |
 | --- | --- |
-| `cloud_api:disk.app_folder` | ImgBed가 app folder에 파일을 저장할 수 있게 합니다. |
+| `cloud_api:disk.app_folder` | ImgHost가 app folder에 파일을 저장할 수 있게 합니다. |
 | `cloud_api:disk.read` | 파일과 다운로드 링크를 읽습니다. |
 | `cloud_api:disk.write` | 파일 업로드, 폴더 생성, 파일 삭제를 수행합니다. |
 | `Access to information about Yandex.Disk` | disk quota와 사용 공간을 읽습니다. |
@@ -55,7 +55,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 앱이 생성되면 다음을 복사합니다.
 
-| Yandex 필드 | ImgBed 필드 |
+| Yandex 필드 | ImgHost 필드 |
 | --- | --- |
 | `Client ID` | `Client ID` |
 | `Client Secret` | `Client Secret` |
@@ -66,7 +66,7 @@ https://your-domain.com/api/oauth/yandex/callback
 
 업로드 설정에서 `Yandex`를 선택하고 다음을 입력합니다.
 
-| ImgBed 필드 | 입력할 내용 |
+| ImgHost 필드 | 입력할 내용 |
 | --- | --- |
 | 채널 이름 | 알아보기 쉬운 이름. 예: `Main Yandex` |
 | Client ID | Yandex 앱 `Client ID` |
@@ -78,12 +78,12 @@ https://your-domain.com/api/oauth/yandex/callback
 
 ### 단계 5: Refresh Token 받기
 
-1. ImgBed에서 `Get Token`을 클릭합니다.
+1. ImgHost에서 `Get Token`을 클릭합니다.
 2. 연결할 Yandex 계정으로 로그인합니다.
 3. 승인 요청을 허용합니다.
 4. callback 페이지에 `Refresh Token`이 표시됩니다.
 5. 복사합니다.
-6. ImgBed로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
+6. ImgHost로 돌아가 `Refresh Token` 필드에 붙여 넣습니다.
 
 ![승인 후 refresh token 복사](../../image/upload/yandex/授权后复制刷新令牌.png)
 
@@ -99,10 +99,10 @@ Open Yandex OAuth Console
 -> Add https://your-domain.com/api/oauth/yandex/callback
 -> Confirm Yandex Disk permissions
 -> Copy Client ID and Client Secret
--> Fill Client ID / Client Secret into ImgBed
+-> Fill Client ID / Client Secret into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## 참고

@@ -46,7 +46,7 @@ Wymagany jest Node.js 18 lub nowszy zainstalowany lokalnie.
 
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
-| `--base-url <url>` | Tak | Adres ImgBed, np. `https://image.ai6.me` |
+| `--base-url <url>` | Tak | Adres ImgHost, np. `https://image.ai6.me` |
 | `--token <token>` | Tak | API Token; można użyć zmiennej środowiskowej `IMGBED_API_TOKEN` |
 | `--retries <n>` | Nie | Liczba ponowień przy błędach tymczasowych; domyślnie `3` |
 | `--timeout-ms <n>` | Nie | Limit czasu jednego żądania; domyślnie `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Tworzenie folderów
 
-Katalogi w ImgBed wynikają ze ścieżek plików; nie ma prawdziwych pustych katalogów. Gdy skrypt tworzy folder, tworzy w katalogu docelowym plik zastępczy `0.md`, dzięki czemu folder jest widoczny w zarządzaniu plikami i statystykach katalogów.
+Katalogi w ImgHost wynikają ze ścieżek plików; nie ma prawdziwych pustych katalogów. Gdy skrypt tworzy folder, tworzy w katalogu docelowym plik zastępczy `0.md`, dzięki czemu folder jest widoczny w zarządzaniu plikami i statystykach katalogów.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend przetwarza maksymalnie `15` plików w jednym żądaniu. Skrypt domyślni
 
 ### Czy można utworzyć naprawdę pusty folder
 
-Katalogi ImgBed są wyprowadzane ze ścieżek plików, więc prawdziwe puste foldery nie istnieją. `--create-folder` tworzy plik zastępczy katalogu `0.md`, dzięki czemu folder pojawia się w zarządzaniu plikami i statystykach katalogów.
+Katalogi ImgHost są wyprowadzane ze ścieżek plików, więc prawdziwe puste foldery nie istnieją. `--create-folder` tworzy plik zastępczy katalogu `0.md`, dzięki czemu folder pojawia się w zarządzaniu plikami i statystykach katalogów.
 
 ### Jak długo może działać krótkoterminowy Token przesyłania
 

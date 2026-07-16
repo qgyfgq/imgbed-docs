@@ -1,6 +1,6 @@
 # API Token ile dosya silme
 
-API Token ile silme betiği; betikler, otomasyon işleri ve üçüncü taraf programlar için uygundur. Yönetim panelini açmanız gerekmez: site adresini, Token değerini ve açık dosya ID'lerini vererek ImgBed içindeki bir veya birden fazla dosyayı silebilirsiniz.
+API Token ile silme betiği; betikler, otomasyon işleri ve üçüncü taraf programlar için uygundur. Yönetim panelini açmanız gerekmez: site adresini, Token değerini ve açık dosya ID'lerini vererek ImgHost içindeki bir veya birden fazla dosyayı silebilirsiniz.
 
 Silme işlemi veriyi değiştirir. Komut çalıştırıldıktan sonra dosyalar gerçekten silinir. Bu nedenle önce `imgbed-token-list.mjs` ile silinecek `fileId` değerlerini doğrulayın, ardından bu ID'leri silme betiğine verin.
 
@@ -63,7 +63,7 @@ Silme başarıyla tamamlandıktan sonra sunucu tarafı dosya dizinini, klasör i
 
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site adresi, örnek `https://image.ai6.me` |
+| `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
 | `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` da kullanılabilir |
 | `--file-id <id>` | Evet | Silinecek dosya ID'si; birden çok kez verilebilir |
 | `--strictness <strict\|soft>` | Hayır | Silme katılığı; varsayılan `strict` |
@@ -80,10 +80,10 @@ Bu betik yalnızca `--file-id` ile açıkça verilen dosyaları siler. Belirsiz 
 
 | Mod | Açıklama |
 | --- | --- |
-| `strict` | Varsayılan moddur. Uzak depolamada silme başarısız olursa ImgBed kaydı korunur; böylece daha sonra yeniden denemek veya sorunu incelemek kolaylaşır. |
-| `soft` | Uzak depolamada silme başarısız olsa bile ImgBed kaydı temizlenir ve sonuçta uyarı döndürülür. |
+| `strict` | Varsayılan moddur. Uzak depolamada silme başarısız olursa ImgHost kaydı korunur; böylece daha sonra yeniden denemek veya sorunu incelemek kolaylaşır. |
+| `soft` | Uzak depolamada silme başarısız olsa bile ImgHost kaydı temizlenir ve sonuçta uyarı döndürülür. |
 
-Uzak dosya gerçekten silinmeden işlemin başarılı sayılmasını istemiyorsanız varsayılan `strict` modunu kullanın. Uzak platform artık dosyayı silemiyor, ancak yalnızca ImgBed kaydını temizlemek istiyorsanız `soft` kullanabilirsiniz.
+Uzak dosya gerçekten silinmeden işlemin başarılı sayılmasını istemiyorsanız varsayılan `strict` modunu kullanın. Uzak platform artık dosyayı silemiyor, ancak yalnızca ImgHost kaydını temizlemek istiyorsanız `soft` kullanabilirsiniz.
 
 ## Kullanım örnekleri
 
@@ -116,7 +116,7 @@ node imgbed-token-delete.mjs `
   --file-id "photos/2026/c.txt"
 ```
 
-Uzak silme başarısız olsa bile ImgBed kaydını temizleme:
+Uzak silme başarısız olsa bile ImgHost kaydını temizleme:
 
 ```powershell
 node imgbed-token-delete.mjs `
@@ -147,7 +147,7 @@ node imgbed-token-delete.mjs `
 
 ## Silmeden önce fileId kontrolü
 
-Silme betiği ImgBed dosya ID'sine ihtiyaç duyar. Önce listeleme betiğiyle klasördeki dosyaları görebilirsiniz:
+Silme betiği ImgHost dosya ID'sine ihtiyaç duyar. Önce listeleme betiğiyle klasördeki dosyaları görebilirsiniz:
 
 ```powershell
 node imgbed-token-list.mjs `
@@ -165,7 +165,7 @@ Sonuçtaki `name` değeri genellikle silme betiğine verilebilen `fileId` değer
 
 ### Silme başarısız oldu ama dosya neden hala listede?
 
-Varsayılan `strict` modunda, uzak depolamada silme başarısız olursa ImgBed kaydı korunur. Bu, yerel dizinin silinip uzak dosyanın kalmasını önlemek içindir. Yalnızca ImgBed kaydını temizleyebileceğinizden eminseniz aynı `fileId` için `soft` ile tekrar deneyin.
+Varsayılan `strict` modunda, uzak depolamada silme başarısız olursa ImgHost kaydı korunur. Bu, yerel dizinin silinip uzak dosyanın kalmasını önlemek içindir. Yalnızca ImgHost kaydını temizleyebileceğinizden eminseniz aynı `fileId` için `soft` ile tekrar deneyin.
 
 ### Sonuçta neden uyarılar var?
 

@@ -46,7 +46,7 @@ Máy cục bộ cần cài Node.js 18 trở lên để chạy tập lệnh.
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
-| `--base-url <url>` | Có | URL trang ImgBed, ví dụ `https://image.ai6.me` |
+| `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me` |
 | `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN` |
 | `--retries <n>` | Không | Số lần thử lại khi gặp lỗi tạm thời. Mặc định là `3` |
 | `--timeout-ms <n>` | Không | Thời gian chờ cho một yêu cầu. Mặc định là `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Tạo thư mục
 
-Thư mục của ImgBed được suy ra từ đường dẫn tệp, bản thân không có thư mục rỗng thật sự. Khi tập lệnh tạo thư mục, nó sẽ tạo tệp giữ chỗ `0.md` trong thư mục đích để phần quản lý tệp và thống kê thư mục có thể hiển thị thư mục đó.
+Thư mục của ImgHost được suy ra từ đường dẫn tệp, bản thân không có thư mục rỗng thật sự. Khi tập lệnh tạo thư mục, nó sẽ tạo tệp giữ chỗ `0.md` trong thư mục đích để phần quản lý tệp và thống kê thư mục có thể hiển thị thư mục đó.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Backend xử lý tối đa `15` tệp trong một yêu cầu. Tập lệnh mặc
 
 ### Có thể tạo thư mục rỗng thật sự không
 
-Thư mục ImgBed được suy ra từ đường dẫn tệp, nên không có thư mục rỗng thật sự. `--create-folder` sẽ tạo tệp giữ chỗ `0.md` để thư mục đó hiển thị trong phần quản lý tệp và thống kê thư mục.
+Thư mục ImgHost được suy ra từ đường dẫn tệp, nên không có thư mục rỗng thật sự. `--create-folder` sẽ tạo tệp giữ chỗ `0.md` để thư mục đó hiển thị trong phần quản lý tệp và thống kê thư mục.
 
 ### Token tải lên ngắn hạn dài nhất bao lâu
 

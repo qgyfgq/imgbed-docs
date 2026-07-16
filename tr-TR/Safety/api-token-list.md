@@ -1,6 +1,6 @@
 # API Token ile listeleme ve filtreleme
 
-API Token ile listeleme betiği, ImgBed verilerini okuması gereken betikler, otomasyon işleri ve üçüncü taraf programlar için uygundur. Yalnızca `list` iznini kullanır; dosya yüklemez, dosya silmez, yapılandırmayı değiştirmez ve herhangi bir IP için yüklemeyi engellemez ya da izin vermez.
+API Token ile listeleme betiği, ImgHost verilerini okuması gereken betikler, otomasyon işleri ve üçüncü taraf programlar için uygundur. Yalnızca `list` iznini kullanır; dosya yüklemez, dosya silmez, yapılandırmayı değiştirmez ve herhangi bir IP için yüklemeyi engellemez ya da izin vermez.
 
 ![API Token düzenleme](../../image/Safety/apitoken/编辑列出权限api.png)
 
@@ -41,7 +41,7 @@ Node.js 18 veya üzeri gerekir.
 
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
-| `--base-url <url>` | Evet | ImgBed site adresi, örnek `https://image.ai6.me` |
+| `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
 | `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` da kullanılabilir |
 | `--retries <n>` | Hayır | Geçici hatalarda tekrar sayısı; varsayılan `3` |
 | `--timeout-ms <n>` | Hayır | Tek isteğin zaman aşımı; varsayılan `180000` |

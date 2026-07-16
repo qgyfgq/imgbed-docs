@@ -2,7 +2,7 @@
 
 Transfer z linków magnet pobiera pliki z linku magnet i automatycznie przesyła je do wybranego kanału przechowywania w chmurze.
 
-Przydaje się do przenoszenia odcinków anime, wideo, archiwów i podobnych plików. Wklejasz link magnet, a ImgBed tworzy zadanie pobierania w tle. Po zakończeniu pobierania plik jest przesyłany do ImgBed, a finalny link pojawia się na liście przesłanych plików.
+Przydaje się do przenoszenia odcinków anime, wideo, archiwów i podobnych plików. Wklejasz link magnet, a ImgHost tworzy zadanie pobierania w tle. Po zakończeniu pobierania plik jest przesyłany do ImgHost, a finalny link pojawia się na liście przesłanych plików.
 
 ![Transfer z linków magnet](../../image/other/磁力链接/磁力链接.png)
 
@@ -32,7 +32,7 @@ Po przygotowaniu ustawień wróć na stronę główną i wklej link magnet, aby 
 1. Wklej link magnet w polu przesyłania na stronie głównej.
 2. Upewnij się, że tryb to `Transfer`.
 3. Kliknij przycisk przesyłania.
-4. Poczekaj, aż ImgBed utworzy zadanie magnet.
+4. Poczekaj, aż ImgHost utworzy zadanie magnet.
 5. Po uruchomieniu zadania użyj pływającego panelu `Magnet Tasks` w prawym dolnym rogu, aby śledzić postęp.
 
 Pobieranie i przesyłanie mogą zająć czas. Szybkość zależy od zasobu magnet, środowiska uruchomieniowego GitHub i wybranego kanału przechowywania w chmurze.
@@ -72,7 +72,7 @@ Typowe statusy:
 
 ## Wskazówki
 
-- Jeśli link magnet zawiera wiele plików, ImgBed priorytetowo pokazuje główny ukończony plik.
+- Jeśli link magnet zawiera wiele plików, ImgHost priorytetowo pokazuje główny ukończony plik.
 - Przetwarzanie dużych plików trwa dłużej. Poczekaj na zakończenie zadania przed odświeżeniem strony.
 - Jeśli zasób magnet nie ma dostępnych peerów, może być bardzo wolny albo się nie udać.
 - Jeśli limit konta chmurowego został wyczerpany, autoryzacja wygasła albo katalog przesyłania jest błędny, zadanie może się nie udać.

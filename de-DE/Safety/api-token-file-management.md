@@ -46,7 +46,7 @@ Zum Ausführen des Skripts ist lokal Node.js 18 oder neuer erforderlich.
 
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `--base-url <url>` | Ja | URL der ImgBed-Website, zum Beispiel `https://image.ai6.me` |
+| `--base-url <url>` | Ja | URL der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
 | `--token <token>` | Ja | API Token. Alternativ kann die Umgebungsvariable `IMGBED_API_TOKEN` verwendet werden |
 | `--retries <n>` | Nein | Anzahl der Wiederholungen bei vorübergehenden Fehlern. Standardwert `3` |
 | `--timeout-ms <n>` | Nein | Zeitlimit für eine einzelne Anfrage. Standardwert `180000` |
@@ -369,7 +369,7 @@ node imgbed-token-manage.mjs `
 
 ## Ordner erstellen
 
-ImgBed-Verzeichnisse ergeben sich aus Dateipfaden; echte leere Verzeichnisse gibt es nicht. Wenn das Skript einen Ordner erstellt, legt es im Zielverzeichnis eine Platzhalterdatei `0.md` an. Dadurch erscheint das Verzeichnis in der Dateiverwaltung und in den Verzeichnisstatistiken.
+ImgHost-Verzeichnisse ergeben sich aus Dateipfaden; echte leere Verzeichnisse gibt es nicht. Wenn das Skript einen Ordner erstellt, legt es im Zielverzeichnis eine Platzhalterdatei `0.md` an. Dadurch erscheint das Verzeichnis in der Dateiverwaltung und in den Verzeichnisstatistiken.
 
 ```powershell
 node imgbed-token-manage.mjs `
@@ -572,7 +572,7 @@ Das Backend verarbeitet pro Anfrage höchstens `15` Dateien. Das Skript verwende
 
 ### Kann ein wirklich leerer Ordner erstellt werden?
 
-ImgBed-Verzeichnisse werden aus Dateipfaden abgeleitet; echte leere Verzeichnisse gibt es nicht. `--create-folder` erstellt die Platzhalterdatei `0.md`, damit das Verzeichnis in der Dateiverwaltung und in den Verzeichnisstatistiken sichtbar wird.
+ImgHost-Verzeichnisse werden aus Dateipfaden abgeleitet; echte leere Verzeichnisse gibt es nicht. `--create-folder` erstellt die Platzhalterdatei `0.md`, damit das Verzeichnis in der Dateiverwaltung und in den Verzeichnisstatistiken sichtbar wird.
 
 ### Wie lange kann ein kurzlebiger Upload-Token maximal gültig sein?
 

@@ -37,7 +37,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 
 ## 모더레이션을 활성화하면 일어나는 일
 
-모더레이션이 활성화되면 ImgBed는 업로드 시 선택된 모더레이션 제공자를 호출하고 감지된 연령 등급을 저장합니다.
+모더레이션이 활성화되면 ImgHost는 업로드 시 선택된 모더레이션 제공자를 호출하고 감지된 연령 등급을 저장합니다.
 
 주요 등급:
 
@@ -66,7 +66,7 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 - nsfwjs는 일반적으로 API 엔드포인트 URL이 필요합니다.
 - Sightengine은 API user와 API secret이 필요합니다.
 
-계정, 가용성, 감지 품질에 따라 선택하세요. 모더레이션이 활성화되고 올바르게 구성되어 있으면 ImgBed는 업로드 시 이미지 등급을 기록하려고 시도합니다.
+계정, 가용성, 감지 품질에 따라 선택하세요. 모더레이션이 활성화되고 올바르게 구성되어 있으면 ImgHost는 업로드 시 이미지 등급을 기록하려고 시도합니다.
 
 ## 공개 갤러리에 미치는 영향
 
@@ -85,16 +85,16 @@ System Settings -> Security Settings -> Upload Management -> Image Moderation
 
 공개 파일 URL은 방문자가 여는 직접 이미지 링크입니다.
 
-파일 등급이 현재 액세스 모드에서 허용되면 ImgBed는 원본 이미지를 반환합니다.
+파일 등급이 현재 액세스 모드에서 허용되면 ImgHost는 원본 이미지를 반환합니다.
 
-등급이 허용 수준보다 높으면 일반 공개 액세스는 원본 이미지를 반환하지 않습니다. 대신 ImgBed는 구성된 차단 결과 또는 차단용 대체 이미지를 반환합니다.
+등급이 허용 수준보다 높으면 일반 공개 액세스는 원본 이미지를 반환하지 않습니다. 대신 ImgHost는 구성된 차단 결과 또는 차단용 대체 이미지를 반환합니다.
 
 예:
 
 - 현재 모드는 아동 모드입니다.
 - 어떤 이미지의 등급이 R18입니다.
 - 방문자가 공개 URL을 직접 엽니다.
-- ImgBed는 해당 방문자에게 R18 원본 이미지를 반환하지 않습니다.
+- ImgHost는 해당 방문자에게 R18 원본 이미지를 반환하지 않습니다.
 
 ![제한된 파일 이미지](../../image/Safety/文件受限图.png)
 

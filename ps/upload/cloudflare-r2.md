@@ -4,19 +4,19 @@
 
 Cloudflare R2 هغه وخت وکاروئ چې:
 
-- ستاسې ImgBed site لا مخکې په Cloudflare کې deployed وي او فایلونه د هماغه Cloudflare حساب په R2 bucket کې ساتل غواړئ.
+- ستاسې ImgHost site لا مخکې په Cloudflare کې deployed وي او فایلونه د هماغه Cloudflare حساب په R2 bucket کې ساتل غواړئ.
 - نه غواړئ جلا S3 endpoint، لاسرسی key او secret key تنظیم کړئ.
 - غواړئ reads او writes د Worker یا Pages R2 binding له لارې په لږ setup سره ترسره شي.
 
 لنډه خبره:
 
-R2 چینل د ImgBed د اډمین پینل دننه په لاسي ډول نه جوړېږي. لومړی باید R2 bucket د Cloudflare پروژه سره bind کړئ، او binding variable name باید دقیقاً `img_r2` وي.
+R2 چینل د ImgHost د اډمین پینل دننه په لاسي ډول نه جوړېږي. لومړی باید R2 bucket د Cloudflare پروژه سره bind کړئ، او binding variable name باید دقیقاً `img_r2` وي.
 
 ## د پیل مخکې اړتیاوې
 
 - Cloudflare حساب.
 - یو موجود R2 bucket.
-- د هغه Cloudflare پروژه د مدیریت permission چې ImgBed پکې deployed دی.
+- د هغه Cloudflare پروژه د مدیریت permission چې ImgHost پکې deployed دی.
 
 ## په Cloudflare کې تنظیم کول
 
@@ -31,7 +31,7 @@ R2 چینل د ImgBed د اډمین پینل دننه په لاسي ډول نه 
 
 ![Create an R2 bucket](../../image/upload/cloudflare-r2/创建一个存储桶img-r2.png)
 
-### 2. Bucket د ImgBed پروژه سره Bind کړئ
+### 2. Bucket د ImgHost پروژه سره Bind کړئ
 
 د deployment type له مخې binding location وټاکئ:
 
@@ -51,9 +51,9 @@ Variable name باید دقیقاً `img_r2` وي. د R2 فایلونه اپلو
 
 ### 3. پروژه بیا Deploy کړئ
 
-د binding له خوندي وروسته ImgBed redeploy کړئ، څو Worker یا Pages runtime `img_r2` ته لاسرسی ولري.
+د binding له خوندي وروسته ImgHost redeploy کړئ، څو Worker یا Pages runtime `img_r2` ته لاسرسی ولري.
 
-## په ImgBed کې به څه ووینئ
+## په ImgHost کې به څه ووینئ
 
 کله چې R2 binding available شي، دا پرانیزئ:
 
@@ -82,19 +82,19 @@ system په اتومات ډول یو fixed چینل جوړوي:
 | Quota limit | کنټرولوي چې دا R2 چینل د capacity له مخې په اپلوډ selection کې ګډون وکړي که نه. | No |
 | Threshold | کله چې usage ټاکلي percentage ته ورسېږي، په دې چینل کې write بندوي. | اړین دی کله چې د کوټې محدودیتونه فعال وي |
 
-حساب ID د Cloudflare dashboard د حساب information panel څخه کاپي کولی شئ. یوازې هغه وخت یې ډک کړئ چې غواړئ ImgBed R2 کوټه usage query او enforce کړي.
+حساب ID د Cloudflare dashboard د حساب information panel څخه کاپي کولی شئ. یوازې هغه وخت یې ډک کړئ چې غواړئ ImgHost R2 کوټه usage query او enforce کړي.
 
 ![Get the حساب ID](../../image/upload/cloudflare-r2/获取账户id.png)
 
 ## د تنظیم ګامونه
 
 1. په Cloudflare کې R2 bucket جوړ کړئ.
-2. د ImgBed پروژه لپاره Cloudflare settings پرانیزئ.
+2. د ImgHost پروژه لپاره Cloudflare settings پرانیزئ.
 3. R2 bucket binding اضافه کړئ.
 4. `Variable name` ته `img_r2` ورکړئ.
 5. هغه R2 bucket وټاکئ چې جوړ کړی مو دی.
-6. binding خوندي کړئ او ImgBed redeploy کړئ.
-7. ImgBed -> د سیسټم تنظیمات -> د اپلوډ تنظیمات ته بېرته ولاړ شئ.
+6. binding خوندي کړئ او ImgHost redeploy کړئ.
+7. ImgHost -> د سیسټم تنظیمات -> د اپلوډ تنظیمات ته بېرته ولاړ شئ.
 8. وګورئ چې `Cloudflare R2` چینل ښکاري او enabled دی.
 
 که غواړئ R2 د capacity له مخې اپلوډ selection کې ګډون وکړي، کوټه limit enable کړئ، بیا حساب ID، bucket name، کوټه limit او threshold ولیکئ او خوندي یې کړئ.

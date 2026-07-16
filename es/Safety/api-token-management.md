@@ -40,7 +40,7 @@ Necesitas Node.js 18 o superior.
 
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
-| `--base-url <url>` | Sí | URL del sitio ImgBed, por ejemplo `https://image.ai6.me`. |
+| `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me`. |
 | `--token <token>` | Sí | API Token. También puedes usar `IMGBED_API_TOKEN`. |
 | `--retries <n>` | No | Reintentos ante fallos temporales. Por defecto `3`. |
 | `--timeout-ms <n>` | No | Timeout por petición. Por defecto `180000`. |

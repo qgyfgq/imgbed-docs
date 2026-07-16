@@ -5,7 +5,7 @@
 | প্রয়োজনীয় তথ্য | কেন লাগবে |
 | --- | --- |
 | Microsoft অ্যাকাউন্ট | Microsoft admin pages ব্যবহারের এবং OneDrive অনুমোদনের জন্য। |
-| আপনার ImgBed ডোমেইন | OAuth কলব্যাক URL হিসেবে ব্যবহার করতে। |
+| আপনার ImgHost ডোমেইন | OAuth কলব্যাক URL হিসেবে ব্যবহার করতে। |
 | app registration | `Client ID` এবং `Client Secret` তৈরি করতে। |
 | OneDrive অ্যাকাউন্ট | প্রকৃত ফাইল সংরক্ষণস্থল হিসেবে ব্যবহার হবে। |
 
@@ -52,7 +52,7 @@ form পূরণ শেষে register ক্লিক করুন।
 
 অ্যাপ তৈরি হলে overview পৃষ্ঠা থেকে এগুলো কপি করুন:
 
-| Microsoft ক্ষেত্র | ImgBed ক্ষেত্র |
+| Microsoft ক্ষেত্র | ImgHost ক্ষেত্র |
 | --- | --- |
 | `Application (client) ID` | `Client ID` |
 | `Directory (tenant) ID` | organizational accounts-এর `Tenant ID` |
@@ -80,14 +80,14 @@ form পূরণ শেষে register ক্লিক করুন।
 | অনুমতি | উদ্দেশ্য |
 | --- | --- |
 | `Files.ReadWrite.All` | ফাইল আপলোড, ফোল্ডার তৈরি এবং ফাইল মুছে ফেলে। |
-| `offline_access` | ImgBed-কে `Refresh Token` নিতে দেয়। |
+| `offline_access` | ImgHost-কে `Refresh Token` নিতে দেয়। |
 | `User.Read` | অ্যাকাউন্ট এবং quota information পড়ে। |
 
 ### ধাপ 6: OneDrive চ্যানেল পূরণ করুন
 
 আপলোড সেটিংস-এ `OneDrive` নির্বাচন করে পূরণ করুন:
 
-| ImgBed ক্ষেত্র | কী দেবেন |
+| ImgHost ক্ষেত্র | কী দেবেন |
 | --- | --- |
 | চ্যানেল নাম | সহজে চেনা যায় এমন নাম, যেমন `Main OneDrive`। |
 | Client ID | Microsoft `Application (client) ID`। |
@@ -101,7 +101,7 @@ form পূরণ শেষে register ক্লিক করুন।
 
 `Tenant ID` কীভাবে দেবেন:
 
-| নির্বাচিত অ্যাকাউন্ট ধরন | ImgBed `Tenant ID` |
+| নির্বাচিত অ্যাকাউন্ট ধরন | ImgHost `Tenant ID` |
 | --- | --- |
 | Personal accounts | `consumers` |
 | Personal + organizational accounts | `common` |
@@ -109,12 +109,12 @@ form পূরণ শেষে register ক্লিক করুন।
 
 ### ধাপ 7: Refresh Token নিন
 
-1. ImgBed-এ `Get Token` ক্লিক করুন।
+1. ImgHost-এ `Get Token` ক্লিক করুন।
 2. যে Microsoft অ্যাকাউন্ট যুক্ত করতে চান, সেটিতে সাইন ইন করুন।
 3. অনুমোদন বার্তা অনুমোদন করুন।
 4. কলব্যাক পৃষ্ঠা একটি `Refresh Token` দেখাবে।
 5. সেটি কপি করুন।
-6. ImgBed-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
+6. ImgHost-এ ফিরে `Refresh Token` ক্ষেত্র-এ paste করুন।
 
 ![refresh টোকেন কপি করা](../../image/upload/onedrive/复制刷新令牌.png)
 
@@ -135,10 +135,10 @@ Open portal.azure.com
 -> Check the callback URL in Authentication
 -> Create a Client Secret in Certificates & secrets
 -> Add permissions in API permissions
--> Fill Client ID / Client Secret / Tenant ID into ImgBed
+-> Fill Client ID / Client Secret / Tenant ID into ImgHost
 -> Click Get Token
 -> Copy the Refresh Token from the callback page
--> Paste it back into ImgBed and save
+-> Paste it back into ImgHost and save
 ```
 
 ## তথ্যসূত্র
