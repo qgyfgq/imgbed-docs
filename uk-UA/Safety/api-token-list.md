@@ -26,14 +26,14 @@ System Settings -> Security Settings -> API Token
 Token також можна зберегти у змінній середовища:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Завантаження скрипту
 
 | Скрипт | Призначення |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>скрипт списку і фільтрування</a> | Список файлів, список користувачів, список каналів завантаження, таблиця статистики каталогів |
+| <a href="/tools/imghost-token-list.mjs" download>скрипт списку і фільтрування</a> | Список файлів, список користувачів, список каналів завантаження, таблиця статистики каталогів |
 
 Для запуску скрипту потрібен Node.js 18 або новіший.
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | Параметр | Обов'язково | Опис |
 | --- | --- | --- |
 | `--base-url <url>` | Так | Адреса ImgHost, наприклад `https://image.ai6.me` |
-| `--token <token>` | Так | API Token; можна використовувати змінну середовища `IMGBED_API_TOKEN` |
+| `--token <token>` | Так | API Token; можна використовувати змінну середовища `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Ні | Повтори для тимчасових помилок; типово `3` |
 | `--timeout-ms <n>` | Ні | Таймаут одного запиту; типово `180000` |
 | `--output <pretty\|json>` | Ні | Формат виводу; типово `pretty`; для програмного виклику краще `json` |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 Вивести файли з керування файлами:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Вивести JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Прочитати лише кількість за поточними умовами фільтрування:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 Пошук PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Фільтр за IP завантаження і каналом:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Зберегти повний результат:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Вивести статистику завантажень для користувачів/IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Пошук певного IP або адреси:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Переглянути файли, завантажені з певного IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Вивести IP, яким заборонено завантаження:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Вивести користувачів, яким заборонено завантаження:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Пошук за ключовим словом адреси:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Сортування за кількістю завантажень:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Вивести знеособлену конфігурацію каналів завантаження:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 Вивести статистику каталогів:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Вивести повні шляхи каталогів і шукати за префіксом:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Типовий `pretty` зручний для перегляду людиною:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Якщо результат має обробляти інша програма, використовуйте `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Також можна зберегти повний результат:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 Виконайте:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Скрипт виведе всі дії та параметри.

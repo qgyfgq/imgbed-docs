@@ -19,14 +19,14 @@ API Token을 만들거나 수정할 때 이 Token에 관리가 허용되어 있�
 Token은 환경 변수에 넣을 수도 있습니다.
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 스크립트 다운로드
 
 | 스크립트 | 용도 |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>파일 관리 스크립트</a> | 파일 메타데이터, 검토 라벨, 파일 태그, 목록 상태, 이동, 이름 변경, 폴더 생성, IP 차단/복구, 단기 업로드 Token 생성과 삭제 |
+| <a href="/tools/imghost-token-manage.mjs" download>파일 관리 스크립트</a> | 파일 메타데이터, 검토 라벨, 파일 태그, 목록 상태, 이동, 이름 변경, 폴더 생성, IP 차단/복구, 단기 업로드 Token 생성과 삭제 |
 
 스크립트를 실행하려면 로컬에 Node.js 18 이상이 설치되어 있어야 합니다.
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 기능 | 스크립트 | 권한 |
 | --- | --- | --- |
-| 파일 업로드 | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| 파일 목록 조회, 파일 필터링, 사용자 통계 읽기 | `imgbed-token-list.mjs` | `list` |
-| 명시적으로 지정한 파일 삭제 | `imgbed-token-delete.mjs` | `delete` |
-| 파일 정보, 태그, 목록, 이동, 이름 변경, 폴더 생성, IP 차단, 단기 업로드 Token 생성 또는 삭제 | `imgbed-token-manage.mjs` | `manage` |
+| 파일 업로드 | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| 파일 목록 조회, 파일 필터링, 사용자 통계 읽기 | `imghost-token-list.mjs` | `list` |
+| 명시적으로 지정한 파일 삭제 | `imghost-token-delete.mjs` | `delete` |
+| 파일 정보, 태그, 목록, 이동, 이름 변경, 폴더 생성, IP 차단, 단기 업로드 Token 생성 또는 삭제 | `imghost-token-manage.mjs` | `manage` |
 | 업로드 채널, 보안 설정, 페이지 설정, 기타 설정, 연합 관계 편집 | 설정 관리 관련 스크립트 | `manage` |
 
-`imgbed-token-manage.mjs`는 파일 업로드, 파일 목록 조회, 파일 삭제를 수행하지 않습니다. `fileId`를 찾아야 할 때는 먼저 목록 조회 스크립트로 파일을 필터링하세요. 파일을 삭제해야 할 때는 명확한 `fileId`를 삭제 스크립트에 전달합니다.
+`imghost-token-manage.mjs`는 파일 업로드, 파일 목록 조회, 파일 삭제를 수행하지 않습니다. `fileId`를 찾아야 할 때는 먼저 목록 조회 스크립트로 파일을 필터링하세요. 파일을 삭제해야 할 때는 명확한 `fileId`를 삭제 스크립트에 전달합니다.
 
 ## 공통 매개변수
 
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 URL. 예: `https://image.ai6.me` |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다 |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다 |
 | `--retries <n>` | 아니요 | 일시적 실패 시 재시도 횟수. 기본값은 `3` |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000` |
 | `--output <pretty\|json>` | 아니요 | 출력 형식. 기본값은 `pretty`이며, 프로그램에서 호출할 때는 `json`을 권장합니다 |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 파일 관리 스크립트의 대부분 작업에는 `fileId`가 필요합니다. 먼저 목록 조회 스크립트로 확인할 수 있습니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 파일 메타데이터는 관리자 파일 관리 화면에 표시되는 파일 이름과 읽기 소스를 수정하는 데 사용됩니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 미리보기 결과가 올바른지 확인한 뒤 저장합니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ node imgbed-token-manage.mjs `
 검토 라벨 읽기:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 검토 라벨 설정:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 파일 태그 읽기:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 태그 추가:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 태그 제거:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 태그 덮어쓰기:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 태그 배치 추가:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 단일 파일을 허용 목록으로 설정:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 배치로 차단 목록에 추가:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 기본 목록 상태로 복원:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 파일 이동은 하나 이상의 파일을 대상 디렉터리로 옮깁니다. 백엔드는 단일 요청에서 최대 `15`개 파일을 처리합니다. 스크립트는 `--batch-size`에 따라 자동으로 여러 요청으로 나누어 순서대로 실행합니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 이름 변경은 명확한 기존 파일 ID와 새 파일 ID를 사용합니다. 새 파일 ID는 파일 이름만 바꿀 수도 있고 디렉터리를 동시에 바꿀 수도 있습니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 배치 이름 변경 시 `--old-file-id`와 `--new-file-id`를 반복해서 전달할 수 있습니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ node imgbed-token-manage.mjs `
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost의 디렉터리는 파일 경로에서 만들어지며 실제 빈 디렉터리는 없습니다. 스크립트가 폴더를 만들 때 대상 디렉터리 아래에 자리표시자 파일 `0.md`를 생성합니다. 이렇게 하면 관리자 파일 관리와 디렉터리 통계에서 해당 디렉터리가 표시됩니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 업로드 IP 차단:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 업로드 IP 복구:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 현재 업로드 금지 IP 목록 보기:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 관리 권한은 단기 업로드 전용 Token을 만들 수 있습니다. 이 Token은 항상 `upload` 권한만 가지며, `autoDelete`는 항상 `true`이고, 만료 시간은 최대 `1`일입니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ node imgbed-token-manage.mjs `
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 단기 업로드 Token 삭제:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 기본 `pretty` 출력은 사람이 확인하기에 적합합니다. 다른 프로그램에서 계속 처리해야 한다면 `--output json`을 사용하세요.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 전체 결과를 저장할 수도 있습니다.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ node imgbed-token-manage.mjs `
 
 ### 어떤 fileId를 전달해야 하는지 어떻게 알 수 있나요
 
-먼저 `imgbed-token-list.mjs --files`로 파일을 조회하세요. 반환 결과의 `name`이 일반적으로 파일 ID이며, 여기서 `--file-id`에 전달하는 값입니다.
+먼저 `imghost-token-list.mjs --files`로 파일을 조회하세요. 반환 결과의 `name`이 일반적으로 파일 ID이며, 여기서 `--file-id`에 전달하는 값입니다.
 
 ### 배치 작업은 한 번에 최대 몇 개 파일까지 처리하나요
 

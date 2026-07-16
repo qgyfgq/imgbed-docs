@@ -39,20 +39,20 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token federation tool
 
 Usage:
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --status
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --list [--direction outgoing|incoming|all]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --chat --direction outgoing|incoming --domain <url>
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --send-message --direction outgoing|incoming --domain <url> --text <message> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --join --invite-link <url> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --reapply --domain <url> --invite-code <code> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --accept --domain <url> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --deny --domain <url> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --cancel --direction outgoing|incoming --domain <url> [--apply]
-  node imgbed-token-federation.mjs --base-url <url> --token <token> --delete --direction outgoing|incoming --domain <url> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --status
+  node imghost-token-federation.mjs --base-url <url> --token <token> --list [--direction outgoing|incoming|all]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --chat --direction outgoing|incoming --domain <url>
+  node imghost-token-federation.mjs --base-url <url> --token <token> --send-message --direction outgoing|incoming --domain <url> --text <message> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --join --invite-link <url> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --reapply --domain <url> --invite-code <code> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --accept --domain <url> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --deny --domain <url> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --cancel --direction outgoing|incoming --domain <url> [--apply]
+  node imghost-token-federation.mjs --base-url <url> --token <token> --delete --direction outgoing|incoming --domain <url> [--apply]
 
 Required:
   --base-url <url>       ImgHost site URL, for example https://image.ai6.me
-  --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
+  --token <token>        API Token with manage permission. You can also set IMGHOST_API_TOKEN.
 
 Read actions:
   --status               Read local federation node status and both relation lists.
@@ -91,7 +91,7 @@ Tool options:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     action: '',
     direction: 'all',
     domain: '',
@@ -204,7 +204,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (!args.action) throw new Error('One action is required. Use --help to see actions.');
 
   if (args.action === 'join' && !args.inviteLink) throw new Error('--invite-link is required for --join');

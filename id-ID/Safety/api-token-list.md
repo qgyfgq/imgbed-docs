@@ -26,14 +26,14 @@ Saat membuat atau mengedit API Token, pastikan Token ini mengizinkan daftar. Skr
 API Token juga dapat disimpan dalam variabel lingkungan:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Mengunduh Skrip
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>skrip daftar dan filter</a> | Daftar pengelolaan berkas, daftar pengelolaan pengguna, daftar kanal unggahan, dan tabel statistik folder |
+| <a href="/tools/imghost-token-list.mjs" download>skrip daftar dan filter</a> | Daftar pengelolaan berkas, daftar pengelolaan pengguna, daftar kanal unggahan, dan tabel statistik folder |
 
 Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 
@@ -42,7 +42,7 @@ Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Tidak | Jumlah percobaan ulang saat gagal sementara; bawaan `3` |
 | `--timeout-ms <n>` | Tidak | Batas waktu satu permintaan; bawaan `180000` |
 | `--output <pretty\|json>` | Tidak | Bentuk keluaran; bawaan `pretty`; untuk diproses program, gunakan `json` |
@@ -54,7 +54,7 @@ Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 Menampilkan berkas di pengelolaan berkas:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Keluaran JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Membaca jumlah saja berdasarkan filter saat ini:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 Mencari PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Memfilter berdasarkan IP unggahan dan kanal:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Menyimpan hasil lengkap:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Menampilkan statistik unggahan pengguna/IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Mencari IP atau alamat:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Melihat rincian berkas yang diunggah dari IP tertentu:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Menampilkan IP yang diblokir dari unggahan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Menampilkan pengguna yang diblokir dari unggahan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Mencari berdasarkan kata kunci alamat:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Mengurutkan berdasarkan jumlah unggahan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Menampilkan konfigurasi kanal unggahan yang sudah disamarkan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Antarmuka ini tidak mengembalikan kunci rahasia, token penyegaran, token sementa
 Menampilkan statistik folder:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Menampilkan jalur folder lengkap dan mencari berdasarkan awalan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Keluaran bawaan `pretty` cocok dibaca manusia:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Jika ingin diproses program lain, gunakan `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Hasil lengkap juga dapat disimpan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ Daftar pengelolaan berkas, daftar pengelolaan pengguna, daftar kanal yang sudah 
 Jalankan:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Skrip akan menampilkan semua tindakan dan parameter.

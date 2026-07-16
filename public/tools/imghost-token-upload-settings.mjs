@@ -24,15 +24,15 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token upload settings tool
 
 Usage:
-  node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --list
-  node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --get --channel <key> [--channel-name <name>]
-  node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --upsert --channel <key> --channel-name <name> [--patch-json <path>] [--set key=value]
-  node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --delete --channel <key> --channel-name <name> [--apply]
-  node imgbed-token-upload-settings.mjs --base-url <url> --token <token> --load-balance <true|false> --channel <key> [--apply]
+  node imghost-token-upload-settings.mjs --base-url <url> --token <token> --list
+  node imghost-token-upload-settings.mjs --base-url <url> --token <token> --get --channel <key> [--channel-name <name>]
+  node imghost-token-upload-settings.mjs --base-url <url> --token <token> --upsert --channel <key> --channel-name <name> [--patch-json <path>] [--set key=value]
+  node imghost-token-upload-settings.mjs --base-url <url> --token <token> --delete --channel <key> --channel-name <name> [--apply]
+  node imghost-token-upload-settings.mjs --base-url <url> --token <token> --load-balance <true|false> --channel <key> [--apply]
 
 Required:
   --base-url <url>       ImgHost site URL, for example https://image.ai6.me
-  --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
+  --token <token>        API Token with manage permission. You can also set IMGHOST_API_TOKEN.
 
 Actions:
   --list                 List upload setting groups.
@@ -62,7 +62,7 @@ Tool options:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     action: '',
     channel: '',
     channelName: '',
@@ -158,7 +158,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (!args.action) throw new Error('One action is required: --list, --get, --upsert, --delete, or --load-balance');
   if (args.action !== 'list' && !args.channel) throw new Error('--channel is required');
   if (['upsert', 'delete'].includes(args.action) && !args.channelName) throw new Error('--channel-name is required');

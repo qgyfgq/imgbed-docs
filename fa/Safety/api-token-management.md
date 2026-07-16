@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 API Token را می‌توان در متغیر محیطی هم قرار داد:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## دانلود اسکریپت‌های مدیریت
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | اسکریپت | کاربرد |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>اسکریپت مدیریت تنظیمات آپلود</a> | مدیریت کانال‌های آپلود، کانال‌های فرعی و توازن بار |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>اسکریپت مدیریت تنظیمات سایت</a> | مدیریت تنظیمات امنیتی، تنظیمات صفحه‌ها و تنظیمات دیگر |
-| <a href="/tools/imgbed-token-federation.mjs" download>اسکریپت مدیریت روابط فدراسیون</a> | مدیریت کارهای سبک رابطه، درخواست‌های پیوستن و پیام‌ها |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>اسکریپت مدیریت تنظیمات آپلود</a> | مدیریت کانال‌های آپلود، کانال‌های فرعی و توازن بار |
+| <a href="/tools/imghost-token-site-settings.mjs" download>اسکریپت مدیریت تنظیمات سایت</a> | مدیریت تنظیمات امنیتی، تنظیمات صفحه‌ها و تنظیمات دیگر |
+| <a href="/tools/imghost-token-federation.mjs" download>اسکریپت مدیریت روابط فدراسیون</a> | مدیریت کارهای سبک رابطه، درخواست‌های پیوستن و پیام‌ها |
 
 برای اجرا، Node.js 18 یا نسخه جدیدتر لازم است.
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
 | `--base-url <url>` | بله | نشانی سایت ImgHost، مانند `https://image.ai6.me` |
-| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
+| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGHOST_API_TOKEN` هم استفاده کرد |
 | `--retries <n>` | خیر | تعداد تلاش دوباره هنگام خطای موقت؛ پیش‌فرض `3` |
 | `--timeout-ms <n>` | خیر | زمان مجاز هر درخواست بر حسب میلی‌ثانیه؛ پیش‌فرض `180000` |
 | `--output <pretty\|json>` | خیر | قالب خروجی؛ پیش‌فرض `pretty`، برای برنامه‌ها از `json` استفاده کنید |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 اسکریپت تنظیمات آپلود می‌تواند کانال‌های فرعی را فهرست کند، بخواند، ایجاد یا ویرایش کند، حذف کند و توازن بار یک کانال اصلی را روشن یا خاموش کند.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### پارامترهای تنظیمات آپلود
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 دیدن همه تنظیمات آپلود:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 خواندن تنظیمات کانال S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 خواندن یک کانال فرعی زیر S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 ایجاد یا ویرایش کانال فرعی WebDAV. نخست بدون `--apply` اجرا کنید و پیش‌نمایش را ببینید:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 پس از بررسی، همان دستور را با `--apply` اجرا کنید:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 حذف یک کانال فرعی:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 روشن کردن توازن بار برای S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 ابتدا بخش‌ها، زیربخش‌ها و فیلدهای قابل ویرایش را ببینید:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 خواندن تنظیمات اعلان به‌روزرسانی سیستم:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 تغییر ایمیل اعلان به‌روزرسانی سیستم. نخست بدون `--apply` اجرا کنید:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 پس از بررسی، با `--apply` ذخیره کنید:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 تغییر جلوه ستاره‌ها در صفحه مدیریت:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 تغییر زبان مکان‌یابی با IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 دیدن وضعیت گره محلی و هر دو فهرست رابطه:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 فقط دیدن گره‌هایی که شما به آن‌ها پیوسته‌اید:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 فقط دیدن گره‌هایی که به گره شما پیوسته‌اند:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 درخواست پیوستن با لینک دعوت. نخست بدون `--apply` اجرا کنید:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 پس از بررسی، ذخیره کنید:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 درخواست دوباره برای رابطه بی‌رکورد:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 پذیرش درخواست `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 رد درخواست `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 ارسال پیام به رابطه برقرارشده:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 لغو درخواست `outgoing` در انتظار:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 حذف رابطه پذیرفته‌شده `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 حذف رکورد نهایی `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

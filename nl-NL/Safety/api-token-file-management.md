@@ -19,14 +19,14 @@ Schrijfacties in het script voor bestandsbeheer zijn standaard een preview en wo
 Je kunt het Token ook in een omgevingsvariabele zetten:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Script downloaden
 
 | Script | Gebruik |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>Script voor bestandsbeheer</a> | Bestandsmetadata, moderatielabels, bestandstags, lijststatus, verplaatsen, hernoemen, mappen maken, IP blokkeren/toestaan en kort geldige upload-Tokens maken of verwijderen |
+| <a href="/tools/imghost-token-manage.mjs" download>Script voor bestandsbeheer</a> | Bestandsmetadata, moderatielabels, bestandstags, lijststatus, verplaatsen, hernoemen, mappen maken, IP blokkeren/toestaan en kort geldige upload-Tokens maken of verwijderen |
 
 Je hebt lokaal Node.js 18 of hoger nodig.
 
@@ -34,20 +34,20 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 
 | Mogelijkheid | Script | Machtiging |
 | --- | --- | --- |
-| Bestanden uploaden | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Bestanden tonen, bestanden filteren en gebruikersstatistieken lezen | `imgbed-token-list.mjs` | `list` |
-| Expliciet opgegeven bestanden verwijderen | `imgbed-token-delete.mjs` | `delete` |
-| Bestandsinformatie, tags en lijsten bewerken, verplaatsen, hernoemen, mappen maken, IP blokkeren en kort geldige upload-Tokens maken of verwijderen | `imgbed-token-manage.mjs` | `manage` |
+| Bestanden uploaden | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Bestanden tonen, bestanden filteren en gebruikersstatistieken lezen | `imghost-token-list.mjs` | `list` |
+| Expliciet opgegeven bestanden verwijderen | `imghost-token-delete.mjs` | `delete` |
+| Bestandsinformatie, tags en lijsten bewerken, verplaatsen, hernoemen, mappen maken, IP blokkeren en kort geldige upload-Tokens maken of verwijderen | `imghost-token-manage.mjs` | `manage` |
 | Uploadkanalen, beveiligingsinstellingen, pagina-instellingen, overige instellingen en federatierelaties bewerken | Scripts voor configuratiebeheer | `manage` |
 
-`imgbed-token-manage.mjs` uploadt geen bestanden, toont geen bestandslijsten en verwijdert geen bestanden. Als je een `fileId` moet vinden, gebruik dan eerst het lijstscript om bestanden te filteren. Als je een bestand wilt verwijderen, geef het expliciete `fileId` door aan het verwijderingsscript.
+`imghost-token-manage.mjs` uploadt geen bestanden, toont geen bestandslijsten en verwijdert geen bestanden. Als je een `fileId` moet vinden, gebruik dan eerst het lijstscript om bestanden te filteren. Als je een bestand wilt verwijderen, geef het expliciete `fileId` door aan het verwijderingsscript.
 
 ## Algemene parameters
 
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; kan ook via de omgevingsvariabele `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via de omgevingsvariabele `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out van één verzoek; standaard `180000` |
 | `--output <pretty\|json>` | Nee | Uitvoerformaat; standaard `pretty`. Gebruik voor programmatische verwerking bij voorkeur `json` |
@@ -61,7 +61,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 De meeste acties in het script voor bestandsbeheer hebben een `fileId` nodig. Je kunt dit eerst opvragen met het lijstscript:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Het veld `name` in het resultaat is meestal het `fileId` dat je aan het script v
 Bestandsmetadata worden gebruikt om de weergegeven bestandsnaam en de leesbron in het bestandsbeheer van het paneel te wijzigen.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Sla pas op nadat de preview klopt:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Moderatielabels komen overeen met de leeftijdsclassificatie van het bestand. Je 
 Moderatielabel lezen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Moderatielabel instellen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Bestandstags voegen doorzoekbare zakelijke labels aan bestanden toe. Het script 
 Bestandstags lezen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Tags toevoegen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Tags verwijderen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Tags vervangen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Tags in batch toevoegen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ De lijststatus bepaalt het toegangscontrole-gedrag van een bestand in de openbar
 Eén bestand op de toestaanlijst zetten:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Bestanden in batch aan de bloklijst toevoegen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Standaardlijststatus herstellen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Bestanden verplaatsen zet één of meer bestanden in de doelmap. De backend verwerkt maximaal `15` bestanden per verzoek. Het script splitst het werk automatisch op basis van `--batch-size` en voert de verzoeken op volgorde uit.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Hernoemen gebruikt expliciete oude en nieuwe bestands-ID's. Het nieuwe bestands-ID kan alleen de bestandsnaam wijzigen, of tegelijk ook de map veranderen.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Geef bij hernoemen in batch `--old-file-id` en `--new-file-id` herhaald mee:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Je kunt de mapping ook in een JSON-bestand zetten:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost-mappen komen voort uit bestandspaden; echte lege mappen bestaan niet. Wanneer het script een map maakt, maakt het in de doelmap een markeerbestand `0.md`, zodat de map zichtbaar wordt in bestandsbeheer en mapstatistieken.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Met de beheermachtiging kun je een IP toevoegen aan de lijst met geblokkeerde up
 Een upload-IP blokkeren:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Een upload-IP weer toestaan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 De huidige lijst met geblokkeerde upload-IP's bekijken:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 De beheermachtiging kan kort geldige Tokens maken die alleen voor upload zijn bedoeld. Dit Token heeft altijd alleen de machtiging `upload`, `autoDelete` is altijd `true` en de maximale vervaltijd is `1` dag.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Je kunt ook direct een tijdstempel in milliseconden doorgeven:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Bij het verwijderen van een kort geldig upload-Token moet je de `id` doorgeven d
 Een kort geldig upload-Token verwijderen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 De standaarduitvoer `pretty` is geschikt om handmatig te lezen. Gebruik `--output json` als een ander programma het resultaat moet verwerken:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Je kunt ook het volledige resultaat opslaan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Nee. Gebruik de uploadscripts om te uploaden, het lijstscript om te tonen en te 
 
 ### Hoe weet ik welk fileId ik moet doorgeven
 
-Vraag eerst bestanden op met `imgbed-token-list.mjs --files`. Het veld `name` in het resultaat is meestal het bestands-ID, dus de waarde voor `--file-id`.
+Vraag eerst bestanden op met `imghost-token-list.mjs --files`. Het veld `name` in het resultaat is meestal het bestands-ID, dus de waarde voor `--file-id`.
 
 ### Hoeveel bestanden kan een batchactie tegelijk verwerken
 

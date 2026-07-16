@@ -21,7 +21,7 @@ API Token ဖန်တီး သို့မဟုတ် တည်းဖြတ�
 API Token ကို environment variable ထဲတွင်လည်း ထားနိုင်သည်။
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## စီမံခန့်ခွဲမှု Script များ ဒေါင်းလုဒ်လုပ်ခြင်း
@@ -30,9 +30,9 @@ ImgHost စာတမ်းတွင် Node.js script သုံးခု ပါ�
 
 | Script | အသုံးပြုမှု |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>အပ်လုဒ်ဆက်တင်များ စီမံခန့်ခွဲရေးစခရစ်</a> | Upload channel များ၊ subchannel များနှင့် load balancing ကို စီမံရန် |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>ဆိုက်ဆက်တင်များ စီမံခန့်ခွဲရေးစခရစ်</a> | လုံခြုံရေး သတ်မှတ်ချက်များ၊ စာမျက်နှာ သတ်မှတ်ချက်များနှင့် အခြား သတ်မှတ်ချက်များကို စီမံရန် |
-| <a href="/tools/imgbed-token-federation.mjs" download>ဖက်ဒရေးရှင်းဆက်ဆံရေး စီမံခန့်ခွဲရေးစခရစ်</a> | ပေါ့ပါးသော ဆက်နွယ်မှု လုပ်ဆောင်ချက်များ၊ join requests နှင့် messages များကို စီမံရန် |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>အပ်လုဒ်ဆက်တင်များ စီမံခန့်ခွဲရေးစခရစ်</a> | Upload channel များ၊ subchannel များနှင့် load balancing ကို စီမံရန် |
+| <a href="/tools/imghost-token-site-settings.mjs" download>ဆိုက်ဆက်တင်များ စီမံခန့်ခွဲရေးစခရစ်</a> | လုံခြုံရေး သတ်မှတ်ချက်များ၊ စာမျက်နှာ သတ်မှတ်ချက်များနှင့် အခြား သတ်မှတ်ချက်များကို စီမံရန် |
+| <a href="/tools/imghost-token-federation.mjs" download>ဖက်ဒရေးရှင်းဆက်ဆံရေး စီမံခန့်ခွဲရေးစခရစ်</a> | ပေါ့ပါးသော ဆက်နွယ်မှု လုပ်ဆောင်ချက်များ၊ join requests နှင့် messages များကို စီမံရန် |
 
 Script များသည် Node.js 18 သို့မဟုတ် ၎င်းထက် အသစ် လိုအပ်သည်။
 
@@ -41,7 +41,7 @@ Script များသည် Node.js 18 သို့မဟုတ် ၎င်း
 | Parameter | လိုအပ် | ဖော်ပြချက် |
 | --- | --- | --- |
 | `--base-url <url>` | ဟုတ် | ImgHost site URL၊ ဥပမာ `https://image.ai6.me` |
-| `--token <token>` | ဟုတ် | API Token။ `IMGBED_API_TOKEN` environment variable ကိုလည်း အသုံးပြုနိုင်သည် |
+| `--token <token>` | ဟုတ် | API Token။ `IMGHOST_API_TOKEN` environment variable ကိုလည်း အသုံးပြုနိုင်သည် |
 | `--retries <n>` | မဟုတ် | ယာယီ မအောင်မြင်မှုအတွက် retry အကြိမ်ရေ။ မူလတန်ဖိုး `3` |
 | `--timeout-ms <n>` | မဟုတ် | request တစ်ခုစီ၏ timeout ကို millisecond ဖြင့် သတ်မှတ်သည်။ မူလတန်ဖိုး `180000` |
 | `--output <pretty\|json>` | မဟုတ် | Output format။ မူလတန်ဖိုး `pretty`၊ program integration အတွက် `json` သုံးပါ |
@@ -54,7 +54,7 @@ Script များသည် Node.js 18 သို့မဟုတ် ၎င်း
 Upload settings script သည် subchannel များကို list, read, create, edit, delete လုပ်နိုင်သည်။ ထို့အပြင် main channel အတွက် load balancing ကို ဖွင့်၊ ပိတ်နိုင်သည်။
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Upload Settings Parameter များ
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Upload settings အားလုံးကို စာရင်းပြရန်:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 channel ဖွဲ့စည်းမှုကို ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 S3 အောက်ရှိ သီးခြား subchannel ကို ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 WebDAV subchannel ကို ဖန်တီး သို့မဟုတ် တည်းဖြတ်ရန်။ Preview ကြည့်ရန် `--apply` မပါဘဲ အရင် run ပါ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Preview မှန်ကန်ပါက `--apply` ဖြင့် ထပ် run ပါ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Subchannel ကို ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 load balancing ကို ဖွင့်ရန်:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Field အများအပြား ပြောင်းရန် JSON file �
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Site settings script သည် အပိုင်းသုံးခုကို 
 တည်းဖြတ်နိုင်သော area, section, field များကို အရင် ကြည့်ပါ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 System update notification settings ကို ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Update notification email ကို ပြောင်းရန်။ `--apply` မပါဘဲ အရင် run ပါ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 ထို့နောက် `--apply` ဖြင့် သိမ်းပါ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Admin page ရှိ star effect ကို ပြောင်းရန်:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP geolocation language ကို ပြောင်းရန်:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Index publish, index pull, staged index deletion နှင့် domain change c
 Local node status နှင့် relationship list နှစ်ခုစလုံးကို ကြည့်ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 သင် follow လုပ်သော node များကိုသာ ပြရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 သင့် node ကို follow လုပ်သော node များကိုသာ ပြရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Invite link ဖြင့် join request ပို့ရန်။ `--apply` မပါဘဲ အရင် run ပါ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 စစ်ပြီးပါက သိမ်းပါ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Relationship မရှိသော record အတွက် reapply လုပ်ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 `incoming` request ကို လက်ခံရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 `incoming` request ကို ငြင်းရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 တည်ဆောက်ပြီးသော relationship သို့ message ပို့ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Pending `outgoing` request ကို cancel လုပ်ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Accepted `incoming` relationship ကို ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Final `incoming` record ကို ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

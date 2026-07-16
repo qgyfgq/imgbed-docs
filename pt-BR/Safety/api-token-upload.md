@@ -20,8 +20,8 @@ O repositório da documentação fornece dois scripts Node.js:
 
 | Script | Uso |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>script de upload único</a> | Chama `/upload` apenas uma vez; serve para arquivos pequenos e testes de conectividade |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>script de upload em partes</a> | Usa as APIs de partes, envio direto ou sessão da plataforma; serve para arquivos grandes |
+| <a href="/tools/imghost-token-single-upload.mjs" download>script de upload único</a> | Chama `/upload` apenas uma vez; serve para arquivos pequenos e testes de conectividade |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>script de upload em partes</a> | Usa as APIs de partes, envio direto ou sessão da plataforma; serve para arquivos grandes |
 
 É necessário ter Node.js 18 ou superior instalado na máquina local.
 
@@ -30,8 +30,8 @@ O repositório da documentação fornece dois scripts Node.js:
 Os dois scripts podem listar primeiro os canais disponíveis para o API Token atual:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Ao listar canais, não é preciso passar `--file` nem `--channel`. A resposta inclui o canal padrão, o parâmetro do canal principal, os nomes dos subcanais e se o balanceamento de carga está ativado. Chaves, tokens de atualização e outras configurações sensíveis não são retornados.
@@ -50,7 +50,7 @@ Para arquivos grandes, prefira o script de upload em partes. O upload único dep
 O script de upload único faz apenas uma requisição para `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Você também pode colocar o Token em uma variável de ambiente:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parâmetros do upload único
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
 | `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
-| `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
+| `--token <token>` | Sim | API Token; também pode usar a variável `IMGHOST_API_TOKEN` |
 | `--file <path>` | Sim | Caminho do arquivo local |
 | `--channel <key>` | Sim | Canal de upload |
 | `--folder <path>` | Não | Pasta de destino, por exemplo `photos/2026` ou `/user/` |
@@ -120,7 +120,7 @@ Quando o arquivo passa do limite, o script mostra o erro correspondente localmen
 O script de upload em partes usa primeiro o API Token para pedir ao servidor que resolva o destino do arquivo. Depois ele segue o fluxo de arquivo grande adequado para cada canal. O usuário não precisa implementar sessão, envio das partes, junção ou finalização por conta própria.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
 | `--base-url <url>` | Sim | Endereço do ImgHost |
-| `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
+| `--token <token>` | Sim | API Token; também pode usar a variável `IMGHOST_API_TOKEN` |
 | `--file <path>` | Sim | Caminho do arquivo local |
 | `--channel <key>` | Sim | Canal de upload |
 | `--folder <path>` | Não | Pasta de destino |

@@ -21,7 +21,7 @@ API Token を作成または編集するときは、管理権限を付与して�
 Token は環境変数にも設定できます。
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 管理スクリプトをダウンロードする
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | スクリプト | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>アップロード設定管理スクリプト</a> | アップロードチャンネル、子チャンネル、負荷分散を管理します。 |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>サイト設定管理スクリプト</a> | セキュリティ設定、ページ設定、その他設定を管理します。 |
-| <a href="/tools/imgbed-token-federation.mjs" download>フェデレーション関係管理スクリプト</a> | 軽量なフェデレーション関係操作、申請、メッセージを管理します。 |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>アップロード設定管理スクリプト</a> | アップロードチャンネル、子チャンネル、負荷分散を管理します。 |
+| <a href="/tools/imghost-token-site-settings.mjs" download>サイト設定管理スクリプト</a> | セキュリティ設定、ページ設定、その他設定を管理します。 |
+| <a href="/tools/imghost-token-federation.mjs" download>フェデレーション関係管理スクリプト</a> | 軽量なフェデレーション関係操作、申請、メッセージを管理します。 |
 
 実行には Node.js 18 以上が必要です。
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
 | `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
-| `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
+| `--token <token>` | はい | API Token。`IMGHOST_API_TOKEN` 環境変数も使えます。 |
 | `--retries <n>` | いいえ | 一時的な失敗時の再試行回数。既定は `3`。 |
 | `--timeout-ms <n>` | いいえ | 1 回のリクエストのタイムアウト。既定は `180000`。 |
 | `--output <pretty\|json>` | いいえ | 出力形式。既定は `pretty`。プログラムから使う場合は `json` が便利です。 |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 アップロード設定スクリプトでは、アップロード子チャンネルの一覧表示、読み取り、作成、編集、削除ができます。大チャンネル単位の負荷分散も切り替えられます。
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### アップロード設定のパラメータ
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 すべてのアップロード設定を表示します。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 チャンネル設定を読み取ります。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 S3 の子チャンネルを 1 つ読み取ります。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 子チャンネルを作成または編集します。最初は `--apply` を付けずにプレビューしてください。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 確認後に保存します。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 子チャンネルを削除します。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 の負荷分散を有効にします。
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 まず `--list-sections` で、編集できる領域、セクション、フィールドを確認してください。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 システム更新通知設定を読み取ります。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 システム更新通知メールを変更します。最初は `--apply` を付けずにプレビューしてください。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 確認後に保存します。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 管理画面の星空エフェクトを変更します。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP 位置情報の言語を変更します。
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 ローカルノード状態と双方の関係一覧を表示します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 outgoing ノードだけを表示します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 incoming ノードだけを表示します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 招待リンクから他ノードへの参加を申請します。最初は `--apply` を付けずにプレビューしてください。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 確認後に保存します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 記録なし関係を再申請します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 incoming 申請を承認します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 incoming 申請を拒否します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 確立済み関係にメッセージを送ります。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 outgoing の承認待ち申請を取り消します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 承認済み incoming 関係を削除します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 incoming の終端レコードを削除します。
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

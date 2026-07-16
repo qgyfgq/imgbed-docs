@@ -19,14 +19,14 @@ Les opérations d’écriture du script de gestion des fichiers sont en mode ape
 Vous pouvez aussi placer le Token dans une variable d’environnement :
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Télécharger le script
 
 | Script | Usage |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>script de gestion des fichiers</a> | Métadonnées de fichier, labels de modération, tags de fichier, état de liste, déplacement, renommage, création de dossier, blocage/rétablissement d’IP, création et suppression de Tokens de téléversement à courte durée de vie |
+| <a href="/tools/imghost-token-manage.mjs" download>script de gestion des fichiers</a> | Métadonnées de fichier, labels de modération, tags de fichier, état de liste, déplacement, renommage, création de dossier, blocage/rétablissement d’IP, création et suppression de Tokens de téléversement à courte durée de vie |
 
 Node.js 18 ou une version ultérieure doit être installé localement pour exécuter le script.
 
@@ -34,20 +34,20 @@ Node.js 18 ou une version ultérieure doit être installé localement pour exéc
 
 | Capacité | Script | Droit |
 | --- | --- | --- |
-| Téléverser des fichiers | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Lister des fichiers, filtrer des fichiers, lire les statistiques utilisateur | `imgbed-token-list.mjs` | `list` |
-| Supprimer des fichiers explicitement désignés | `imgbed-token-delete.mjs` | `delete` |
-| Modifier les informations, tags, listes, déplacer, renommer, créer des dossiers, bloquer des IP, créer ou supprimer des Tokens de téléversement à courte durée de vie | `imgbed-token-manage.mjs` | `manage` |
+| Téléverser des fichiers | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Lister des fichiers, filtrer des fichiers, lire les statistiques utilisateur | `imghost-token-list.mjs` | `list` |
+| Supprimer des fichiers explicitement désignés | `imghost-token-delete.mjs` | `delete` |
+| Modifier les informations, tags, listes, déplacer, renommer, créer des dossiers, bloquer des IP, créer ou supprimer des Tokens de téléversement à courte durée de vie | `imghost-token-manage.mjs` | `manage` |
 | Modifier les canaux de téléversement, les paramètres de sécurité, les paramètres de page, les autres paramètres et les relations fédérées | Scripts de gestion de configuration | `manage` |
 
-`imgbed-token-manage.mjs` ne téléverse pas, ne liste pas et ne supprime pas de fichiers. Pour trouver un `fileId`, filtrez d’abord les fichiers avec le script de liste. Pour supprimer un fichier, transmettez ensuite le `fileId` explicite au script de suppression.
+`imghost-token-manage.mjs` ne téléverse pas, ne liste pas et ne supprime pas de fichiers. Pour trouver un `fileId`, filtrez d’abord les fichiers avec le script de liste. Pour supprimer un fichier, transmettez ensuite le `fileId` explicite au script de suppression.
 
 ## Paramètres communs
 
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
 | `--base-url <url>` | Oui | URL du site ImgHost, par exemple `https://image.ai6.me` |
-| `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGBED_API_TOKEN` |
+| `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Non | Nombre de nouvelles tentatives en cas d’échec temporaire. Valeur par défaut : `3` |
 | `--timeout-ms <n>` | Non | Délai d’expiration d’une requête. Valeur par défaut : `180000` |
 | `--output <pretty\|json>` | Non | Format de sortie. Valeur par défaut : `pretty`; utilisez `json` pour les appels programmatiques |
@@ -61,7 +61,7 @@ Node.js 18 ou une version ultérieure doit être installé localement pour exéc
 La plupart des actions du script de gestion des fichiers nécessitent un `fileId`. Vous pouvez le rechercher d’abord avec le script de liste :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Le champ `name` du résultat retourné est généralement le `fileId` à transme
 Les métadonnées de fichier servent à modifier le nom affiché et la source de lecture dans la gestion des fichiers du panneau d’administration.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Après avoir vérifié que l’aperçu est correct, enregistrez :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Les labels de modération correspondent à la classification d’âge du fichier
 Lire le label de modération :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Définir le label de modération :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Les tags de fichier ajoutent aux fichiers des tags métier consultables. Le scri
 Lire les tags de fichier :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Ajouter des tags :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Retirer des tags :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Remplacer les tags :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Ajouter des tags par lots :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ L’état de liste détermine le comportement de contrôle d’accès du fichier
 Mettre un fichier en liste blanche :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Ajouter plusieurs fichiers à la liste noire :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Rétablir l’état de liste par défaut :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Le déplacement transfère un ou plusieurs fichiers vers le répertoire cible. Le backend traite au plus `15` fichiers par requête. Le script découpe automatiquement le travail selon `--batch-size` et exécute les requêtes dans l’ordre.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Le renommage utilise un ancien ID de fichier et un nouvel ID de fichier explicites. Le nouvel ID peut changer uniquement le nom du fichier, ou changer aussi le répertoire.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Pour un renommage par lots, répétez `--old-file-id` et `--new-file-id` :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Vous pouvez aussi écrire la correspondance dans un fichier JSON :
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 Les répertoires d’ImgHost proviennent des chemins de fichiers ; il n’existe pas de vrai répertoire vide. Quand le script crée un dossier, il crée un fichier d’espace réservé `0.md` dans le répertoire cible, afin que ce répertoire apparaisse dans la gestion des fichiers et les statistiques de répertoire.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Le droit de gestion permet d’ajouter une IP à la liste d’interdiction de t�
 Bloquer une IP de téléversement :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Rétablir une IP de téléversement :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Voir la liste actuelle des IP interdites de téléversement :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Le droit de gestion peut créer des Tokens dédiés au téléversement pour une courte durée. Ce Token n’a toujours que le droit `upload`, `autoDelete` vaut toujours `true`, et la durée maximale avant expiration est de `1` jour.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Vous pouvez aussi transmettre directement un horodatage en millisecondes :
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Pour supprimer un Token de téléversement à courte durée de vie, transmettez 
 Supprimer un Token de téléversement à courte durée de vie :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 La sortie `pretty` par défaut convient à une lecture humaine. Si un autre programme doit traiter le résultat, utilisez `--output json` :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Vous pouvez aussi enregistrer le résultat complet :
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Non. Le téléversement utilise les scripts de téléversement, la liste et le f
 
 ### Comment savoir quel fileId transmettre
 
-Utilisez d’abord `imgbed-token-list.mjs --files` pour interroger les fichiers. Le champ `name` dans le résultat retourné est généralement l’ID du fichier, c’est-à-dire la valeur à transmettre ici à `--file-id`.
+Utilisez d’abord `imghost-token-list.mjs --files` pour interroger les fichiers. Le champ `name` dans le résultat retourné est généralement l’ID du fichier, c’est-à-dire la valeur à transmettre ici à `--file-id`.
 
 ### Combien de fichiers une opération par lots peut-elle traiter en une fois
 

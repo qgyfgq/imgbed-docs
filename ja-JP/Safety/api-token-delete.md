@@ -2,7 +2,7 @@
 
 API Token 削除スクリプトは、スクリプト、自動化タスク、外部プログラムから ImgHost のファイルを削除するためのものです。管理画面を開かなくても、サイト URL、Token、削除対象の明確なファイル ID を指定すれば、ImgHost 内の 1 件または複数件のファイルを削除できます。
 
-削除は書き込み操作です。コマンドを実行すると、実際に削除が行われます。先に `imgbed-token-list.mjs` で削除対象の `fileId` を確認し、その ID を削除スクリプトへ渡してください。
+削除は書き込み操作です。コマンドを実行すると、実際に削除が行われます。先に `imghost-token-list.mjs` で削除対象の `fileId` を確認し、その ID を削除スクリプトへ渡してください。
 
 ![API Token の編集](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token を作成または編集するときは、その Token に削除権限
 Token は環境変数にも設定できます。
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 削除スクリプトをダウンロードする
 
 | スクリプト | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>ファイル削除スクリプト</a> | 明示的に指定した 1 件または複数件のファイル ID を削除します |
+| <a href="/tools/imghost-token-delete.mjs" download>ファイル削除スクリプト</a> | 明示的に指定した 1 件または複数件のファイル ID を削除します |
 
 実行には Node.js 18 以上が必要です。
 
@@ -64,7 +64,7 @@ API は NDJSON の進行状況ストリームを返します。よく使われ�
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
 | `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
-| `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
+| `--token <token>` | はい | API Token。`IMGHOST_API_TOKEN` 環境変数も使えます。 |
 | `--file-id <id>` | はい | 削除するファイル ID。複数回指定できます。 |
 | `--strictness <strict\|soft>` | いいえ | 削除の厳格さ。既定は `strict`。 |
 | `--batch-size <n>` | いいえ | 1 回のリクエストで削除する件数。既定は `15`、最大も `15`。 |
@@ -90,7 +90,7 @@ API は NDJSON の進行状況ストリームを返します。よく使われ�
 単一ファイルを削除する:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 環境変数の Token を使う:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 複数ファイルを削除する:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 リモート側の削除に失敗しても ImgHost の記録を削除する:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON で出力し、結果を保存する:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 1 回のリクエストで削除する件数を 5 件に制限する:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 削除スクリプトに必要なのは ImgHost のファイル ID です。先に一覧取得スクリプトで、ディレクトリ内のファイルを確認できます。
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

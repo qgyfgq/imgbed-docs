@@ -2,7 +2,7 @@
 
 La eliminación con API Token está pensada para scripts, tareas automatizadas y programas de terceros. No hace falta abrir el panel de administración: con la URL del sitio, el Token y los ID de archivo exactos, puedes eliminar uno o varios archivos de ImgHost.
 
-Eliminar es una operación de escritura y borra datos reales cuando se ejecuta el comando. Se recomienda usar primero `imgbed-token-list.mjs` para confirmar los valores de `fileId` que quieres borrar, y después pasarlos al script de eliminación.
+Eliminar es una operación de escritura y borra datos reales cuando se ejecuta el comando. Se recomienda usar primero `imghost-token-list.mjs` para confirmar los valores de `fileId` que quieres borrar, y después pasarlos al script de eliminación.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Al crear o editar el API Token, asegúrate de que el Token tenga permiso de elim
 También puedes poner el Token en una variable de entorno:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Descargar el script
 
 | Script | Uso |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>script de eliminación de archivos</a> | Elimina uno o varios ID de archivo indicados de forma explícita. |
+| <a href="/tools/imghost-token-delete.mjs" download>script de eliminación de archivos</a> | Elimina uno o varios ID de archivo indicados de forma explícita. |
 
 Necesitas Node.js 18 o superior en el equipo local.
 
@@ -64,7 +64,7 @@ Después de una eliminación correcta, el servidor actualiza automáticamente lo
 | Parámetro | Obligatorio | Descripción |
 | --- | --- | --- |
 | `--base-url <url>` | Sí | URL del sitio ImgHost, por ejemplo `https://image.ai6.me`. |
-| `--token <token>` | Sí | API Token. También puedes usar la variable de entorno `IMGBED_API_TOKEN`. |
+| `--token <token>` | Sí | API Token. También puedes usar la variable de entorno `IMGHOST_API_TOKEN`. |
 | `--file-id <id>` | Sí | ID del archivo que quieres eliminar. Puedes pasarlo varias veces. |
 | `--strictness <strict\|soft>` | No | Nivel de rigor de eliminación. Por defecto es `strict`. |
 | `--batch-size <n>` | No | Cantidad de archivos por petición. Por defecto `15`, máximo `15`. |
@@ -90,7 +90,7 @@ Si necesitas que el archivo remoto se elimine para considerar correcta la operac
 Eliminar un archivo:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Usar el Token desde una variable de entorno:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Eliminar varios archivos:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Limpiar el registro de ImgHost aunque falle la eliminación remota:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Generar JSON y guardar el resultado:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Limitar cada petición a 5 archivos:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 El script de eliminación necesita ID de archivo de ImgHost. Puedes usar primero el script de listado para revisar los archivos de un directorio:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

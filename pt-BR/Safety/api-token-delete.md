@@ -2,7 +2,7 @@
 
 O script de exclusão com API Token é indicado para scripts, tarefas automatizadas e programas de terceiros. Você não precisa abrir o painel administrativo: basta informar o endereço do site, o Token e IDs de arquivo claros para excluir um ou vários arquivos do ImgHost.
 
-Excluir é uma operação de gravação. Depois que o comando é executado, os arquivos são realmente removidos. Por isso, confira primeiro os `fileId` que deseja excluir com `imgbed-token-list.mjs` e só depois passe esses IDs para o script de exclusão.
+Excluir é uma operação de gravação. Depois que o comando é executado, os arquivos são realmente removidos. Por isso, confira primeiro os `fileId` que deseja excluir com `imghost-token-list.mjs` e só depois passe esses IDs para o script de exclusão.
 
 ![Editar API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Ao criar ou editar um API Token, confirme se esse Token tem permissão para excl
 Você também pode colocar o Token em uma variável de ambiente:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Baixar o script
 
 | Script | Uso |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>script de exclusão de arquivos</a> | Exclui um ou vários IDs de arquivo informados explicitamente |
+| <a href="/tools/imghost-token-delete.mjs" download>script de exclusão de arquivos</a> | Exclui um ou vários IDs de arquivo informados explicitamente |
 
 É necessário ter Node.js 18 ou superior instalado na máquina local.
 
@@ -64,7 +64,7 @@ Depois de uma exclusão bem-sucedida, o servidor também atualiza automaticament
 | Parâmetro | Obrigatório | Descrição |
 | --- | --- | --- |
 | `--base-url <url>` | Sim | Endereço do ImgHost, por exemplo `https://image.ai6.me` |
-| `--token <token>` | Sim | API Token; também pode usar a variável `IMGBED_API_TOKEN` |
+| `--token <token>` | Sim | API Token; também pode usar a variável `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Sim | ID do arquivo a excluir; pode ser informado várias vezes |
 | `--strictness <strict\|soft>` | Não | Rigor da exclusão; padrão `strict` |
 | `--batch-size <n>` | Não | Número de arquivos por requisição; padrão `15`, máximo `15` |
@@ -90,7 +90,7 @@ Se você quer considerar a operação bem-sucedida somente quando o arquivo remo
 Excluir um arquivo:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Usar o Token da variável de ambiente:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Excluir vários arquivos:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Limpar o registro do ImgHost mesmo se a exclusão remota falhar:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Emitir JSON e salvar o resultado:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Limitar cada requisição a 5 arquivos:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 O script de exclusão precisa do ID do arquivo no ImgHost. Você pode usar primeiro o script de listagem para ver os arquivos em um diretório:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

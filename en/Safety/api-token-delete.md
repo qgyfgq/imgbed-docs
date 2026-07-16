@@ -2,7 +2,7 @@
 
 API Token file deletion is intended for scripts, automation jobs, and third-party programs. You do not need to open the admin page. As long as you provide the site URL, token, and explicit file IDs, you can delete one or more files from ImgHost.
 
-Deletion is a write operation and really deletes data after the command runs. Use `imgbed-token-list.mjs` first to confirm the `fileId` values you want to delete, then pass those IDs to the deletion script.
+Deletion is a write operation and really deletes data after the command runs. Use `imghost-token-list.mjs` first to confirm the `fileId` values you want to delete, then pass those IDs to the deletion script.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ When creating or editing the API Token, make sure the token allows deletion. Thi
 You can also place the token in an environment variable:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Download The Script
 
 | Script | Purpose |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>file deletion script</a> | Delete one or more explicitly specified file IDs. |
+| <a href="/tools/imghost-token-delete.mjs" download>file deletion script</a> | Delete one or more explicitly specified file IDs. |
 
 Node.js 18 or later is required.
 
@@ -64,7 +64,7 @@ After successful deletion, the backend automatically handles file indexes, direc
 | Parameter | Required | Description |
 | --- | --- | --- |
 | `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
-| `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
+| `--token <token>` | Yes | API Token. You can also use the `IMGHOST_API_TOKEN` environment variable. |
 | `--file-id <id>` | Yes | File ID to delete. You can pass it multiple times. |
 | `--strictness <strict\|soft>` | No | Deletion strictness. Defaults to `strict`. |
 | `--batch-size <n>` | No | Number of files per request. Defaults to `15`, maximum `15`. |
@@ -90,7 +90,7 @@ If the remote file must be deleted for the command to count as successful, use t
 Delete one file:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Use the token from the environment variable:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Delete multiple files:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Clean up the ImgHost record even when remote deletion fails:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Output JSON and save the result:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Limit each request to 5 files:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 The deletion script needs ImgHost file IDs. You can first use the listing script to inspect files in a directory:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

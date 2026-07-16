@@ -20,8 +20,8 @@ De documentatie bevat twee Node.js-scripts:
 
 | Script | Gebruik |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>Script voor enkele upload</a> | Roept één keer `/upload` aan; geschikt voor kleine bestanden en API-tests |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>Script voor upload in delen</a> | Gebruikt chunk-, direct-upload- of platformsessies; geschikt voor grote bestanden |
+| <a href="/tools/imghost-token-single-upload.mjs" download>Script voor enkele upload</a> | Roept één keer `/upload` aan; geschikt voor kleine bestanden en API-tests |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>Script voor upload in delen</a> | Gebruikt chunk-, direct-upload- of platformsessies; geschikt voor grote bestanden |
 
 Je hebt lokaal Node.js 18 of hoger nodig.
 
@@ -30,8 +30,8 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 Beide scripts kunnen eerst tonen welke uploadkanalen het huidige API Token mag gebruiken:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Voor deze modus zijn `--file` en `--channel` niet nodig. Het resultaat bevat het standaardkanaal, de parameter van het hoofdkanaal, namen van subkanalen en of load balancing is ingeschakeld. Sleutels, vernieuwingstokens en andere gevoelige configuratie worden niet teruggegeven.
@@ -50,7 +50,7 @@ Gebruik bij grotere bestanden bij voorkeur het script voor upload in delen. Een 
 Het script voor een enkele upload doet één verzoek naar `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Je kunt het Token ook in een omgevingsvariabele zetten:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parameters voor enkele upload
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ja | Pad naar het lokale bestand |
 | `--channel <key>` | Ja | Uploadkanaal |
 | `--folder <path>` | Nee | Doelmap, bijvoorbeeld `photos/2026` of `/user/` |
@@ -120,7 +120,7 @@ Als het bestand groter is, toont het script lokaal de bijbehorende fout. Voor an
 Het script voor upload in delen vraagt eerst met het API Token aan de server om het uploaddoel te bepalen. Daarna volgt het per kanaal het grote-bestandenproces. Je hoeft sessies, delen, samenvoegen of afronden niet zelf te schrijven.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site |
-| `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ja | Pad naar het lokale bestand |
 | `--channel <key>` | Ja | Uploadkanaal |
 | `--folder <path>` | Nee | Doelmap |

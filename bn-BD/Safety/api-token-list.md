@@ -26,14 +26,14 @@ API Token তৈরি বা সম্পাদনা করার সময় �
 token পরিবেশ চলকেও রাখা যায়:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## স্ক্রিপ্ট ডাউনলোড
 
 | স্ক্রিপ্ট | উদ্দেশ্য |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>তালিকা ও ফিল্টার স্ক্রিপ্ট</a> | ফাইল ম্যানেজার তালিকা, ব্যবহারকারী ব্যবস্থাপনা তালিকা, আপলোড চ্যানেল তালিকা এবং ডিরেক্টরি পরিসংখ্যান. |
+| <a href="/tools/imghost-token-list.mjs" download>তালিকা ও ফিল্টার স্ক্রিপ্ট</a> | ফাইল ম্যানেজার তালিকা, ব্যবহারকারী ব্যবস্থাপনা তালিকা, আপলোড চ্যানেল তালিকা এবং ডিরেক্টরি পরিসংখ্যান. |
 
 Node.js 18 বা তার নতুন সংস্করণ প্রয়োজন.
 
@@ -42,7 +42,7 @@ Node.js 18 বা তার নতুন সংস্করণ প্রয়ো�
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
 | `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL, যেমন `https://image.ai6.me`. |
-| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
+| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGHOST_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--retries <n>` | না | সাময়িক ব্যর্থতায় পুনরায় চেষ্টার সংখ্যা. ডিফল্ট `3`. |
 | `--timeout-ms <n>` | না | প্রতিটি অনুরোধের সময়সীমা. ডিফল্ট `180000`. |
 | `--output <pretty\|json>` | না | আউটপুটের ধরন. ডিফল্ট `pretty`; প্রোগ্রামের জন্য `json` ব্যবহার করুন. |
@@ -54,7 +54,7 @@ Node.js 18 বা তার নতুন সংস্করণ প্রয়ো�
 ফাইল ব্যবস্থাপনার ফাইল তালিকা দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON আউটপুট:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 বর্তমান ফিল্টারের অধীনে শুধু সংখ্যা পড়া:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF খোঁজা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 আপলোড IP এবং চ্যানেল দিয়ে ফিল্টার:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 পূর্ণ ফলাফল সংরক্ষণ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 ব্যবহারকারী/IP আপলোড পরিসংখ্যান দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 কোনো IP বা ঠিকানা খোঁজা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 একটি IP থেকে আপলোড করা ফাইল দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 ব্লক করা আপলোড IP তালিকা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 আপলোড থেকে ব্লক করা ব্যবহারকারী দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 ঠিকানার কীওয়ার্ড দিয়ে খোঁজা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 আপলোড সংখ্যা দিয়ে সাজানো:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 সংবেদনশীল তথ্য সরানো আপলোড চ্যানেল কনফিগারেশন দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 ডিরেক্টরি পরিসংখ্যান দেখা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 পূর্ণ ডিরেক্টরি পথ দেখানো এবং prefix দিয়ে খোঁজা:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 ডিফল্ট `pretty` আউটপুট মানুষ পড়ে দেখার জন্য উপযোগী:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 অন্য প্রোগ্রামের জন্য `--output json` ব্যবহার করুন:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 পূর্ণ ফলাফলও সংরক্ষণ করা যায়:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 চালান:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 স্ক্রিপ্ট সব কাজ এবং পরামিতি দেখাবে.

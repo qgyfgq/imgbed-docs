@@ -19,14 +19,14 @@ Các thao tác ghi trong tập lệnh quản lý tệp mặc định đều ở 
 Bạn cũng có thể đặt Token vào biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Tải tập lệnh
 
 | Tập lệnh | Mục đích |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>tập lệnh quản lý tệp</a> | Siêu dữ liệu tệp, nhãn kiểm duyệt, thẻ tệp, trạng thái danh sách, di chuyển, đổi tên, tạo thư mục, chặn/khôi phục IP, tạo và xóa Token tải lên ngắn hạn |
+| <a href="/tools/imghost-token-manage.mjs" download>tập lệnh quản lý tệp</a> | Siêu dữ liệu tệp, nhãn kiểm duyệt, thẻ tệp, trạng thái danh sách, di chuyển, đổi tên, tạo thư mục, chặn/khôi phục IP, tạo và xóa Token tải lên ngắn hạn |
 
 Máy cục bộ cần cài Node.js 18 trở lên để chạy tập lệnh.
 
@@ -34,20 +34,20 @@ Máy cục bộ cần cài Node.js 18 trở lên để chạy tập lệnh.
 
 | Khả năng | Tập lệnh | Quyền |
 | --- | --- | --- |
-| Tải tệp lên | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Liệt kê tệp, lọc tệp, đọc thống kê người dùng | `imgbed-token-list.mjs` | `list` |
-| Xóa tệp được chỉ định rõ ràng | `imgbed-token-delete.mjs` | `delete` |
-| Chỉnh sửa thông tin tệp, thẻ, danh sách, di chuyển, đổi tên, tạo thư mục, chặn IP, tạo hoặc xóa Token tải lên ngắn hạn | `imgbed-token-manage.mjs` | `manage` |
+| Tải tệp lên | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Liệt kê tệp, lọc tệp, đọc thống kê người dùng | `imghost-token-list.mjs` | `list` |
+| Xóa tệp được chỉ định rõ ràng | `imghost-token-delete.mjs` | `delete` |
+| Chỉnh sửa thông tin tệp, thẻ, danh sách, di chuyển, đổi tên, tạo thư mục, chặn IP, tạo hoặc xóa Token tải lên ngắn hạn | `imghost-token-manage.mjs` | `manage` |
 | Chỉnh sửa kênh tải lên, cài đặt bảo mật, cài đặt trang, cài đặt khác, quan hệ liên kết | Các tập lệnh quản lý cấu hình | `manage` |
 
-`imgbed-token-manage.mjs` không tải tệp lên, không liệt kê tệp và không xóa tệp. Khi cần tìm `fileId`, hãy dùng tập lệnh liệt kê để lọc tệp trước. Khi cần xóa tệp, hãy chuyển `fileId` rõ ràng cho tập lệnh xóa.
+`imghost-token-manage.mjs` không tải tệp lên, không liệt kê tệp và không xóa tệp. Khi cần tìm `fileId`, hãy dùng tập lệnh liệt kê để lọc tệp trước. Khi cần xóa tệp, hãy chuyển `fileId` rõ ràng cho tập lệnh xóa.
 
 ## Tham số chung
 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me` |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN` |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Không | Số lần thử lại khi gặp lỗi tạm thời. Mặc định là `3` |
 | `--timeout-ms <n>` | Không | Thời gian chờ cho một yêu cầu. Mặc định là `180000` |
 | `--output <pretty\|json>` | Không | Định dạng đầu ra. Mặc định là `pretty`; nên dùng `json` khi gọi từ chương trình |
@@ -61,7 +61,7 @@ Máy cục bộ cần cài Node.js 18 trở lên để chạy tập lệnh.
 Phần lớn thao tác của tập lệnh quản lý tệp cần `fileId`. Bạn có thể tra cứu trước bằng tập lệnh liệt kê:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Trường `name` trong kết quả trả về thường chính là `fileId` có 
 Siêu dữ liệu tệp dùng để sửa tên hiển thị và nguồn đọc trong phần quản lý tệp của trang quản trị.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Sau khi xác nhận kết quả xem trước là đúng, lưu thay đổi:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Nhãn kiểm duyệt tương ứng với phân loại độ tuổi của tệp. 
 Đọc nhãn kiểm duyệt:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Đặt nhãn kiểm duyệt:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Thẻ tệp dùng để gắn các thẻ nghiệp vụ có thể tìm kiếm cho
 Đọc thẻ tệp:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Thêm thẻ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Xóa thẻ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Ghi đè thẻ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Thêm thẻ hàng loạt:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ Trạng thái danh sách quyết định cách kiểm soát truy cập của t�
 Đặt một tệp vào danh sách trắng:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Thêm hàng loạt vào danh sách đen:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Khôi phục trạng thái danh sách mặc định:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Di chuyển tệp sẽ chuyển một hoặc nhiều tệp vào thư mục đích. Backend xử lý tối đa `15` tệp trong một yêu cầu. Tập lệnh sẽ tự động chia theo `--batch-size` thành nhiều yêu cầu và thực hiện tuần tự.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Đổi tên dùng ID tệp cũ và ID tệp mới được chỉ định rõ ràng. ID tệp mới có thể chỉ đổi tên tệp, hoặc đồng thời đổi cả thư mục.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Khi đổi tên hàng loạt, có thể truyền lặp lại `--old-file-id` và `--new-file-id`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Bạn cũng có thể ghi ánh xạ vào tệp JSON:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 Thư mục của ImgHost được suy ra từ đường dẫn tệp, bản thân không có thư mục rỗng thật sự. Khi tập lệnh tạo thư mục, nó sẽ tạo tệp giữ chỗ `0.md` trong thư mục đích để phần quản lý tệp và thống kê thư mục có thể hiển thị thư mục đó.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Quyền quản lý có thể thêm một IP vào danh sách cấm tải lên, ho
 Chặn một IP tải lên:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Khôi phục một IP tải lên:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Xem danh sách IP đang bị cấm tải lên:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Quyền quản lý có thể tạo Token chuyên dùng để tải lên trong thời gian ngắn. Token này cố định chỉ có quyền `upload`, `autoDelete` cố định là `true`, và thời gian hết hạn dài nhất là `1` ngày.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Bạn cũng có thể truyền trực tiếp dấu thời gian mili giây:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Khi xóa Token tải lên ngắn hạn, cần truyền `id` do API tạo trả v
 Xóa Token tải lên ngắn hạn:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 Đầu ra mặc định `pretty` phù hợp để người vận hành đọc. Nếu muốn chương trình khác xử lý tiếp, dùng `--output json`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Bạn cũng có thể lưu kết quả đầy đủ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Không. Tải lên dùng tập lệnh tải lên, liệt kê và lọc dùng t�
 
 ### Làm sao biết nên truyền fileId nào
 
-Trước tiên dùng `imgbed-token-list.mjs --files` để tra cứu tệp. Trường `name` trong kết quả trả về thường là ID tệp, cũng chính là giá trị truyền cho `--file-id` ở đây.
+Trước tiên dùng `imghost-token-list.mjs --files` để tra cứu tệp. Trường `name` trong kết quả trả về thường là ID tệp, cũng chính là giá trị truyền cho `--file-id` ở đây.
 
 ### Một thao tác hàng loạt xử lý tối đa bao nhiêu tệp
 

@@ -21,7 +21,7 @@ API Token을 만들거나 수정할 때 관리 권한을 켜세요. 관리 권�
 Token은 환경 변수에 넣을 수도 있습니다.
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 관리 스크립트 다운로드
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 스크립트 | 용도 |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>업로드 설정 관리 스크립트</a> | 업로드 채널, 하위 채널, 부하 분산을 관리합니다. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>사이트 설정 관리 스크립트</a> | 보안 설정, 페이지 설정, 기타 설정을 관리합니다. |
-| <a href="/tools/imgbed-token-federation.mjs" download>연합 관계 관리 스크립트</a> | 가벼운 연합 관계 작업, 신청, 메시지를 관리합니다. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>업로드 설정 관리 스크립트</a> | 업로드 채널, 하위 채널, 부하 분산을 관리합니다. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>사이트 설정 관리 스크립트</a> | 보안 설정, 페이지 설정, 기타 설정을 관리합니다. |
+| <a href="/tools/imghost-token-federation.mjs" download>연합 관계 관리 스크립트</a> | 가벼운 연합 관계 작업, 신청, 메시지를 관리합니다. |
 
 실행하려면 Node.js 18 이상이 필요합니다.
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--retries <n>` | 아니요 | 일시적 실패 재시도 횟수. 기본값은 `3`입니다. |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000`입니다. |
 | `--output <pretty\|json>` | 아니요 | 출력 형식. 기본값은 `pretty`이며, 프로그램에서 처리할 때는 `json`이 편합니다. |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 업로드 설정 스크립트는 업로드 하위 채널의 목록 조회, 읽기, 생성, 수정, 삭제를 처리합니다. 특정 상위 채널의 부하 분산도 전환할 수 있습니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### 업로드 설정 매개변수
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 모든 업로드 설정을 나열합니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 채널 설정을 읽습니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 S3의 특정 하위 채널을 읽습니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 하위 채널을 만들거나 수정합니다. 처음에는 `--apply` 없이 실행해 미리보기를 확인하세요.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 확인 후 저장합니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 하위 채널을 삭제합니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 부하 분산을 켭니다.
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 먼저 `--list-sections`로 현재 스크립트가 지원하는 영역, 섹션, 필드를 확인하세요.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 시스템 업데이트 알림 설정을 읽습니다.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 시스템 업데이트 알림 이메일을 변경합니다. 처음에는 `--apply` 없이 실행해 미리보기를 확인하세요.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 확인 후 저장합니다.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 관리자 페이지의 별빛 효과를 변경합니다.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP 위치 정보 언어를 변경합니다.
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 로컬 노드 상태와 양쪽 관계 목록을 봅니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 내가 가입한 노드만 봅니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 내 노드에 가입한 노드만 봅니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 초대 링크로 다른 노드에 가입 신청합니다. 처음에는 `--apply` 없이 실행해 미리보기를 확인하세요.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 확인 후 저장합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 기록 없음 관계를 재신청합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 incoming 신청을 승인합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 incoming 신청을 거절합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 이미 맺어진 관계에 메시지를 보냅니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 outgoing 대기 신청을 취소합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 승인된 incoming 관계를 제거합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 incoming 종료 기록을 삭제합니다.
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

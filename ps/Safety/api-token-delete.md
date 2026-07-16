@@ -2,7 +2,7 @@
 
 د API Token د ړنګولو سکریپټ د سکریپټونو، اتومات کارونو او بهرنیو پروګرامونو لپاره کارېږي. د ادارې پاڼه خلاصولو ته اړتیا نشته؛ د سایټ پته، Token او روښانه فایل ID ورکړئ، او د ImgHost دننه یو یا څو فایلونه ړنګ کړئ.
 
-ړنګول د بدلون راوستلو عمل دی. کله چې امر وچلېږي، فایلونه په رښتیا ړنګېږي. ښه ده چې لومړی په `imgbed-token-list.mjs` سره د ړنګولو لپاره اړین `fileId` کره وګورئ، بیا هغه ID د ړنګولو سکریپټ ته ورکړئ.
+ړنګول د بدلون راوستلو عمل دی. کله چې امر وچلېږي، فایلونه په رښتیا ړنګېږي. ښه ده چې لومړی په `imghost-token-list.mjs` سره د ړنګولو لپاره اړین `fileId` کره وګورئ، بیا هغه ID د ړنګولو سکریپټ ته ورکړئ.
 
 ![API Token سمول](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ System Settings -> Security Settings -> API Token
 Token په چاپېریالي متغیر کې هم اېښودل کېدای شي:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## سکریپټ ښکته کول
 
 | سکریپټ | کار |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>د فایل ړنګولو سکریپټ</a> | یو یا څو په ښکاره ټاکل شوي فایل ID ړنګوي |
+| <a href="/tools/imghost-token-delete.mjs" download>د فایل ړنګولو سکریپټ</a> | یو یا څو په ښکاره ټاکل شوي فایل ID ړنګوي |
 
 د چلولو لپاره Node.js 18 یا تر هغه نوی بڼه پکار ده.
 
@@ -64,7 +64,7 @@ API د NDJSON د پرمختګ بهیر بېرته ورکوي. عامې پېښې 
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
 | `--base-url <url>` | هو | د ImgHost سایټ پته، لکه `https://image.ai6.me` |
-| `--token <token>` | هو | API Token؛ `IMGBED_API_TOKEN` هم کارول کېدای شي |
+| `--token <token>` | هو | API Token؛ `IMGHOST_API_TOKEN` هم کارول کېدای شي |
 | `--file-id <id>` | هو | د ړنګولو فایل ID؛ څو ځله ورکول کېدای شي |
 | `--strictness <strict\|soft>` | نه | د ړنګولو سختوالی؛ بنسټیز ارزښت `strict` دی |
 | `--batch-size <n>` | نه | په یوه غوښتنه کې د ړنګېدونکو فایلونو شمېر؛ بنسټیز ارزښت `15` او اعظمي هم `15` دی |
@@ -90,7 +90,7 @@ API د NDJSON د پرمختګ بهیر بېرته ورکوي. عامې پېښې 
 یو فایل ړنګول:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 له چاپېریالي متغیر څخه Token کارول:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 څو فایلونه ړنګول:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 که لیرې ړنګول ناکام شي هم د ImgHost ثبت پاکول:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON وتنه او پایله ساتل:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 په یوه غوښتنه کې ړنګول ۵ فایلونو ته محدودول:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 د ړنګولو سکریپټ د ImgHost فایل ID ته اړتیا لري. د پوښۍ فایلونه لومړی د لړلیک سکریپټ په وسیله کتلای شئ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

@@ -20,8 +20,8 @@ System Settings -> Security Settings -> API Token
 
 | السكربت | الغرض |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>سكربت الرفع بطلب واحد</a> | يستدعي `/upload` مرة واحدة. مفيد للملفات الصغيرة واختبارات الاتصال. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>سكربت الرفع المجزأ</a> | يستخدم التجزئة عبر API Token أو الرفع المباشر أو جلسات الرفع الخاصة بالمنصة. موصى به للملفات الكبيرة. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>سكربت الرفع بطلب واحد</a> | يستدعي `/upload` مرة واحدة. مفيد للملفات الصغيرة واختبارات الاتصال. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>سكربت الرفع المجزأ</a> | يستخدم التجزئة عبر API Token أو الرفع المباشر أو جلسات الرفع الخاصة بالمنصة. موصى به للملفات الكبيرة. |
 
 يتطلب ذلك Node.js 18 أو إصدارًا أحدث.
 
@@ -30,8 +30,8 @@ System Settings -> Security Settings -> API Token
 يستطيع كلا السكربتين عرض قنوات الرفع المتاحة لـ API Token الحالي:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 عند عرض القنوات، لا تكون `--file` و`--channel` مطلوبتين. تتضمن الاستجابة قناة الرفع الافتراضية، ومفاتيح قنوات الرفع، وأسماء القنوات الفرعية، وحالة موازنة الحمل. ولا تُعاد الأسرار أو رموز التحديث أو أي قيم إعدادات حساسة أخرى.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 يرسل سكربت الرفع بطلب واحد طلبًا واحدًا إلى `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 يمكنك أيضًا وضع الرمز في متغير بيئة:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### معلمات الرفع بطلب واحد
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | المعلمة | إلزامية | الوصف |
 | --- | --- | --- |
 | `--base-url <url>` | نعم | عنوان موقع ImgHost، مثل `https://image.ai6.me`. |
-| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGBED_API_TOKEN`. |
+| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGHOST_API_TOKEN`. |
 | `--file <path>` | نعم | مسار الملف المحلي. |
 | `--channel <key>` | نعم | قناة الرفع. |
 | `--folder <path>` | لا | مجلد الرفع، مثل `photos/2026` أو `/user/`. |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 يطلب سكربت الرفع المجزأ أولًا من الخادم الخلفي تحديد الملف الهدف، ثم يتبع مسار الملفات الكبيرة للقناة المحددة. لا تحتاج إلى كتابة طلبات جلسة التجزئة أو الدمج أو الإكمال بنفسك.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | المعلمة | إلزامية | الوصف |
 | --- | --- | --- |
 | `--base-url <url>` | نعم | عنوان موقع ImgHost. |
-| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGBED_API_TOKEN`. |
+| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGHOST_API_TOKEN`. |
 | `--file <path>` | نعم | مسار الملف المحلي. |
 | `--channel <key>` | نعم | قناة الرفع. |
 | `--folder <path>` | لا | مجلد الرفع. |

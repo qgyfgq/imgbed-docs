@@ -19,14 +19,14 @@ Dosya yönetimi betiğindeki yazma işlemleri varsayılan olarak önizleme modun
 Token ortam değişkenine de konabilir:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Betiği indirme
 
 | Betik | Kullanım |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>Dosya yönetimi betiği</a> | Dosya meta verileri, denetim etiketleri, dosya etiketleri, liste durumu, taşıma, yeniden adlandırma, klasör oluşturma, IP engelleme/geri açma, kısa süreli yükleme Token oluşturma ve silme |
+| <a href="/tools/imghost-token-manage.mjs" download>Dosya yönetimi betiği</a> | Dosya meta verileri, denetim etiketleri, dosya etiketleri, liste durumu, taşıma, yeniden adlandırma, klasör oluşturma, IP engelleme/geri açma, kısa süreli yükleme Token oluşturma ve silme |
 
 Betiği çalıştırmak için yerel makinede Node.js 18 veya üzeri gerekir.
 
@@ -34,20 +34,20 @@ Betiği çalıştırmak için yerel makinede Node.js 18 veya üzeri gerekir.
 
 | Yetkinlik | Betik | İzin |
 | --- | --- | --- |
-| Dosya yükleme | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Dosya listeleme, dosya filtreleme ve kullanıcı istatistiklerini okuma | `imgbed-token-list.mjs` | `list` |
-| Açıkça belirtilen dosyaları silme | `imgbed-token-delete.mjs` | `delete` |
-| Dosya bilgilerini, etiketleri ve listeleri düzenleme, taşıma, yeniden adlandırma, klasör oluşturma, IP engelleme ve kısa süreli yükleme Token oluşturma veya silme | `imgbed-token-manage.mjs` | `manage` |
+| Dosya yükleme | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Dosya listeleme, dosya filtreleme ve kullanıcı istatistiklerini okuma | `imghost-token-list.mjs` | `list` |
+| Açıkça belirtilen dosyaları silme | `imghost-token-delete.mjs` | `delete` |
+| Dosya bilgilerini, etiketleri ve listeleri düzenleme, taşıma, yeniden adlandırma, klasör oluşturma, IP engelleme ve kısa süreli yükleme Token oluşturma veya silme | `imghost-token-manage.mjs` | `manage` |
 | Yükleme kanallarını, güvenlik ayarlarını, sayfa ayarlarını, diğer ayarları ve federasyon ilişkilerini düzenleme | Yapılandırma yönetimi betikleri | `manage` |
 
-`imgbed-token-manage.mjs` dosya yüklemez, dosya listelemez ve dosya silmez. Bir `fileId` bulmanız gerekiyorsa önce listeleme betiğiyle dosyaları filtreleyin. Bir dosyayı silmeniz gerekiyorsa açık `fileId` değerini silme betiğine verin.
+`imghost-token-manage.mjs` dosya yüklemez, dosya listelemez ve dosya silmez. Bir `fileId` bulmanız gerekiyorsa önce listeleme betiğiyle dosyaları filtreleyin. Bir dosyayı silmeniz gerekiyorsa açık `fileId` değerini silme betiğine verin.
 
 ## Genel parametreler
 
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
-| `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` ortam değişkeni de kullanılabilir |
+| `--token <token>` | Evet | API Token; `IMGHOST_API_TOKEN` ortam değişkeni de kullanılabilir |
 | `--retries <n>` | Hayır | Geçici hatalarda tekrar sayısı; varsayılan `3` |
 | `--timeout-ms <n>` | Hayır | Tek isteğin zaman aşımı; varsayılan `180000` |
 | `--output <pretty\|json>` | Hayır | Çıktı formatı; varsayılan `pretty`. Programlı kullanım için `json` önerilir |
@@ -61,7 +61,7 @@ Betiği çalıştırmak için yerel makinede Node.js 18 veya üzeri gerekir.
 Dosya yönetimi betiğindeki çoğu işlem `fileId` gerektirir. Önce listeleme betiğiyle sorgulayabilirsiniz:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Dönen sonuçtaki `name` alanı genellikle dosya yönetimi betiğine verilebilec
 Dosya meta verileri, yönetim panelindeki dosya yönetiminde görünen dosya adını ve okuma kaynağını değiştirmek için kullanılır.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Önizleme doğruysa kaydedin:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Denetim etiketleri dosyanın yaş sınıflandırmasına karşılık gelir. Önce
 Denetim etiketini okuma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Denetim etiketini ayarlama:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Dosya etiketleri, dosyalara aranabilir iş etiketleri eklemek için kullanılır
 Dosya etiketlerini okuma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Etiket ekleme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Etiket kaldırma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Etiketlerin üzerine yazma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Toplu etiket ekleme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ Liste durumu, herkese açık erişim modunda dosyanın erişim kontrolü davran�
 Tek bir dosyayı beyaz listeye alma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Dosyaları toplu olarak kara listeye ekleme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Varsayılan liste durumunu geri yükleme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Dosya taşıma, bir veya daha fazla dosyayı hedef klasöre taşır. Backend tek istekte en fazla `15` dosya işler. Betik işi `--batch-size` değerine göre otomatik böler ve istekleri sırayla yürütür.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Yeniden adlandırma, açık eski dosya ID'si ve yeni dosya ID'si kullanır. Yeni dosya ID'si yalnızca dosya adını değiştirebilir veya aynı anda klasörü de değiştirebilir.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Toplu yeniden adlandırmada `--old-file-id` ve `--new-file-id` parametrelerini tekrar tekrar verin:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Eşlemeyi bir JSON dosyasına da yazabilirsiniz:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost klasörleri dosya yollarından türetilir; gerçek boş klasör yoktur. Betik klasör oluştururken hedef klasörde `0.md` adlı bir yer tutucu dosya oluşturur. Böylece bu klasör dosya yönetiminde ve klasör istatistiklerinde görünebilir.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Yönetim izniyle bir IP'yi yükleme engel listesine ekleyebilir veya bu listeden
 Bir yükleme IP'sini engelleme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Bir yükleme IP'sini geri açma:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Geçerli yükleme engel IP listesini görüntüleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Yönetim izni kısa süreli, yalnızca yükleme amaçlı Token oluşturabilir. Bu Token her zaman yalnızca `upload` iznine sahiptir, `autoDelete` her zaman `true` olur ve en uzun sona erme süresi `1` gündür.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Milisaniye zaman damgasını doğrudan da verebilirsiniz:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Kısa süreli yükleme Token'ı silerken oluşturma API'sinin döndürdüğü `i
 Kısa süreli yükleme Token'ı silme:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 Varsayılan `pretty` çıktısı insan tarafından okumaya uygundur. Sonucu başka bir program işleyecekse `--output json` kullanın:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Tam sonucu da kaydedebilirsiniz:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Hayır. Yükleme için yükleme betiklerini, listeleme ve filtreleme için liste
 
 ### Hangi fileId değerini vereceğimi nasıl bilirim
 
-Önce `imgbed-token-list.mjs --files` ile dosyaları sorgulayın. Dönen sonuçtaki `name` alanı genellikle dosya ID'sidir; burada `--file-id` olarak verilen değer budur.
+Önce `imghost-token-list.mjs --files` ile dosyaları sorgulayın. Dönen sonuçtaki `name` alanı genellikle dosya ID'sidir; burada `--file-id` olarak verilen değer budur.
 
 ### Toplu işlem tek seferde en fazla kaç dosya işleyebilir
 

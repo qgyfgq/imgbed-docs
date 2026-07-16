@@ -2,7 +2,7 @@
 
 Xóa tệp bằng API Token dành cho tập lệnh, tác vụ tự động và chương trình của bên thứ ba. Bạn không cần mở trang quản trị. Chỉ cần cung cấp URL trang, token và các file ID rõ ràng, bạn có thể xóa một hoặc nhiều tệp khỏi ImgHost.
 
-Xóa là thao tác ghi và sẽ thực sự xóa dữ liệu sau khi lệnh chạy. Trước tiên hãy dùng `imgbed-token-list.mjs` để xác nhận các giá trị `fileId` bạn muốn xóa, rồi truyền các ID đó cho tập lệnh xóa.
+Xóa là thao tác ghi và sẽ thực sự xóa dữ liệu sau khi lệnh chạy. Trước tiên hãy dùng `imghost-token-list.mjs` để xác nhận các giá trị `fileId` bạn muốn xóa, rồi truyền các ID đó cho tập lệnh xóa.
 
 ![Chỉnh sửa API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Khi tạo hoặc chỉnh sửa API Token, hãy bảo đảm token cho phép xóa
 Bạn cũng có thể đặt token trong biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Tải tập lệnh
 
 | Tập lệnh | Mục đích |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>tập lệnh xóa tệp</a> | Xóa một hoặc nhiều file ID được chỉ định rõ ràng. |
+| <a href="/tools/imghost-token-delete.mjs" download>tập lệnh xóa tệp</a> | Xóa một hoặc nhiều file ID được chỉ định rõ ràng. |
 
 Yêu cầu Node.js 18 trở lên.
 
@@ -64,7 +64,7 @@ Sau khi xóa thành công, phần phụ trợ tự động xử lý chỉ mục 
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN`. |
 | `--file-id <id>` | Có | File ID cần xóa. Bạn có thể truyền nhiều lần. |
 | `--strictness <strict\|soft>` | Không | Mức nghiêm ngặt khi xóa. Mặc định là `strict`. |
 | `--batch-size <n>` | Không | Số tệp mỗi yêu cầu. Mặc định là `15`, tối đa `15`. |
@@ -90,7 +90,7 @@ Nếu tệp từ xa phải được xóa thì lệnh mới được xem là thà
 Xóa một tệp:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Dùng token từ biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Xóa nhiều tệp:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Dọn dẹp bản ghi ImgHost ngay cả khi xóa từ xa thất bại:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Xuất JSON và lưu kết quả:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Giới hạn mỗi yêu cầu ở 5 tệp:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Tập lệnh xóa cần file ID của ImgHost. Trước tiên bạn có thể dùng tập lệnh liệt kê để xem tệp trong một thư mục:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

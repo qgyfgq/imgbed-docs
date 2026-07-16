@@ -131,13 +131,13 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token site settings tool
 
 Usage:
-  node imgbed-token-site-settings.mjs --base-url <url> --token <token> --list-sections
-  node imgbed-token-site-settings.mjs --base-url <url> --token <token> --get --area <security|page|others> --section <name>
-  node imgbed-token-site-settings.mjs --base-url <url> --token <token> --area <security|page|others> --section <name> --set key=value [--apply]
+  node imghost-token-site-settings.mjs --base-url <url> --token <token> --list-sections
+  node imghost-token-site-settings.mjs --base-url <url> --token <token> --get --area <security|page|others> --section <name>
+  node imghost-token-site-settings.mjs --base-url <url> --token <token> --area <security|page|others> --section <name> --set key=value [--apply]
 
 Required:
   --base-url <url>       ImgHost site URL, for example https://image.ai6.me
-  --token <token>        API Token with manage permission. You can also set IMGBED_API_TOKEN.
+  --token <token>        API Token with manage permission. You can also set IMGHOST_API_TOKEN.
 
 Actions:
   --list-sections        List editable areas, sections, and fields.
@@ -166,7 +166,7 @@ Notes:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     action: '',
     area: '',
     section: '',
@@ -248,7 +248,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (!args.action) throw new Error('One action is required: --list-sections, --get, or --set');
   if (args.action === 'list-sections') return;
   if (!args.area) throw new Error('--area is required');

@@ -20,8 +20,8 @@ Dokümantasyon paketi iki Node.js betiği sağlar:
 
 | Betik | Amaç |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>Tek istekli yükleme betiği</a> | `/upload` öğesini bir kez çağırır. Küçük dosyalar ve bağlantı testleri için kullanışlıdır. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>Parçalı yükleme betiği</a> | API Token parçalama, doğrudan yükleme veya platform yükleme oturumlarını kullanır. Büyük dosyalar için önerilir. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>Tek istekli yükleme betiği</a> | `/upload` öğesini bir kez çağırır. Küçük dosyalar ve bağlantı testleri için kullanışlıdır. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>Parçalı yükleme betiği</a> | API Token parçalama, doğrudan yükleme veya platform yükleme oturumlarını kullanır. Büyük dosyalar için önerilir. |
 
 Node.js 18 veya üzeri gerekir.
 
@@ -30,8 +30,8 @@ Node.js 18 veya üzeri gerekir.
 Her iki betik de geçerli API Token tarafından kullanılabilen yükleme kanallarını listeleyebilir:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Kanallar listelenirken `--file` ve `--channel` gerekli değildir. Yanıt varsayılan yükleme kanalını, yükleme kanalı key değerlerini, alt kanal adlarını ve yük dengeleme durumunu içerir. Gizli değerler, yenileme token değerleri ve diğer hassas yapılandırma değerleri döndürülmez.
@@ -50,7 +50,7 @@ Daha büyük dosyalar için önce parçalı yükleme betiğini kullanın. Tek is
 Tek istekli betik `/upload` öğesine bir istek gönderir.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token değerini bir ortam değişkenine de koyabilirsiniz:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Tek İstekli Yükleme Parametreleri
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site URL'si, örneğin `https://image.ai6.me`. |
-| `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
+| `--token <token>` | Evet | API Token. `IMGHOST_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--file <path>` | Evet | Yerel dosya yolu. |
 | `--channel <key>` | Evet | Yükleme kanalı. |
 | `--folder <path>` | Hayır | Yükleme klasörü, örneğin `photos/2026` veya `/user/`. |
@@ -122,7 +122,7 @@ Bir dosya bu sınırlardan birini aşarsa betik eşleşen hatayı yerel olarak b
 Parçalı yükleme betiği önce hedef dosyayı çözmek için sunucu tarafına sorar, ardından seçilen kanalın büyük dosya akışını izler. Parça oturumu, birleştirme veya tamamlama isteklerini kendiniz yazmanız gerekmez.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site URL'si. |
-| `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
+| `--token <token>` | Evet | API Token. `IMGHOST_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--file <path>` | Evet | Yerel dosya yolu. |
 | `--channel <key>` | Evet | Yükleme kanalı. |
 | `--folder <path>` | Hayır | Yükleme klasörü. |

@@ -21,7 +21,7 @@ Schrijfacties van de drie beheerscripts zijn standaard een preview en slaan niet
 Je kunt het Token ook in een omgevingsvariabele zetten:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Beheerscripts downloaden
@@ -30,9 +30,9 @@ De documentatie bevat drie Node.js-scripts:
 
 | Script | Gebruik |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>Script voor uploadinstellingen</a> | Beheert uploadkanalen, subkanalen en load balancing |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>Script voor site-instellingen</a> | Beheert beveiliging, pagina's en overige instellingen |
-| <a href="/tools/imgbed-token-federation.mjs" download>Script voor federatierelaties</a> | Beheert lichte relatieacties, aanvragen en berichten |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>Script voor uploadinstellingen</a> | Beheert uploadkanalen, subkanalen en load balancing |
+| <a href="/tools/imghost-token-site-settings.mjs" download>Script voor site-instellingen</a> | Beheert beveiliging, pagina's en overige instellingen |
+| <a href="/tools/imghost-token-federation.mjs" download>Script voor federatierelaties</a> | Beheert lichte relatieacties, aanvragen en berichten |
 
 Je hebt lokaal Node.js 18 of hoger nodig.
 
@@ -41,7 +41,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out per verzoek; standaard `180000` |
 | `--output <pretty\|json>` | Nee | Uitvoerformaat; standaard `pretty`; gebruik `json` voor automatisering |
@@ -54,7 +54,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 Het script voor uploadinstellingen kan subkanalen tonen, lezen, maken of bewerken en verwijderen. Het kan ook load balancing voor een hoofdkanaal wijzigen.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Parameters voor uploadinstellingen
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Alle uploadinstellingen tonen:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3-configuratie lezen:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Een specifiek S3-subkanaal lezen:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Een subkanaal maken of bewerken. Voer eerst zonder `--apply` uit om de preview te bekijken:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Sla daarna op:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Een subkanaal verwijderen:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Load balancing voor S3 inschakelen:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Voor complexere bulkvelden kun je eerst een JSON-bestand maken en daarna `--patc
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Het script voor site-instellingen beheert drie gebieden:
 Gebruik eerst `--list-sections` om te zien welke gebieden, secties en velden het script ondersteunt:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ In het gebied `page` gebruikt `--set` het id van de paginaoptie, bijvoorbeeld `s
 Systeemupdate-meldingen lezen:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Het e-mailadres voor systeemupdates wijzigen. Voer eerst zonder `--apply` uit:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Sla daarna op:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Sterreneffect op de beheerderspagina wijzigen:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Taal voor IP-geolocatie wijzigen:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Indexen bijwerken, federatie-indexen verwijderen en domeinwijzigingen bevestigen
 Lokale status en relaties tonen:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Alleen nodes waaraan ik deelneem tonen:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Alleen nodes die aan mijn node deelnemen tonen:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Aanvragen via uitnodigingslink. Voer eerst zonder `--apply` uit:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Sla daarna op:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Opnieuw aanvragen voor een record zonder relatie:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Een aanvraag naar jouw node accepteren:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Een aanvraag naar jouw node weigeren:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Een bericht sturen naar een node met bestaande relatie:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Een pending `outgoing`-aanvraag annuleren:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Een geaccepteerde `incoming`-relatie verwijderen:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Een afgesloten `incoming`-record verwijderen:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

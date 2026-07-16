@@ -20,8 +20,8 @@ Dokumentasi ImgHost menyediakan dua skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>skrip unggahan satu permintaan</a> | Memanggil `/upload` satu kali saja; cocok untuk berkas kecil dan uji koneksi antarmuka |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>skrip unggahan bertahap</a> | Memakai unggahan bertahap, unggahan langsung, atau sesi platform sesuai kanal; cocok untuk berkas besar |
+| <a href="/tools/imghost-token-single-upload.mjs" download>skrip unggahan satu permintaan</a> | Memanggil `/upload` satu kali saja; cocok untuk berkas kecil dan uji koneksi antarmuka |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>skrip unggahan bertahap</a> | Memakai unggahan bertahap, unggahan langsung, atau sesi platform sesuai kanal; cocok untuk berkas besar |
 
 Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 
@@ -30,8 +30,8 @@ Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 Kedua skrip dapat menampilkan kanal unggahan yang tersedia untuk API Token saat ini:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Pada mode ini, `--file` dan `--channel` tidak diperlukan. Hasilnya berisi kanal bawaan, kunci kanal utama, nama subkanal, dan status penyeimbangan beban. Kunci rahasia, token penyegaran, dan konfigurasi sensitif tidak dikembalikan.
@@ -50,7 +50,7 @@ Untuk berkas besar, gunakan skrip unggahan bertahap terlebih dahulu. Unggahan sa
 Skrip ini mengirim seluruh berkas ke `/upload` dalam satu permintaan:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 API Token juga dapat disimpan dalam variabel lingkungan:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parameter Unggahan Satu Permintaan
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ya | Jalur berkas lokal |
 | `--channel <key>` | Ya | Kanal unggahan nyata |
 | `--folder <path>` | Tidak | Folder tujuan, misalnya `photos/2026` atau `/user/` |
@@ -120,7 +120,7 @@ Jika ukuran berkas melewati batas, skrip menampilkan galat lokal sebelum mengiri
 Skrip unggahan bertahap terlebih dahulu meminta server menentukan tujuan unggahan memakai API Token, lalu menjalankan alur berkas besar milik kanal yang dipilih. Pengguna tidak perlu menulis sendiri pembuatan sesi, pengiriman bagian, penggabungan, atau permintaan penyelesaian.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat situs ImgHost |
-| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ya | Jalur berkas lokal |
 | `--channel <key>` | Ya | Kanal unggahan nyata |
 | `--folder <path>` | Tidak | Folder tujuan |

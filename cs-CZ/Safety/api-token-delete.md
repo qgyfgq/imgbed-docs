@@ -2,7 +2,7 @@
 
 Mazání souborů přes API Token je určené pro skripty, automatizaci a externí programy. Není nutné otevírat administraci; stačí zadat adresu webu, API Token a konkrétní ID souborů. Tak lze z ImgHost smazat jeden nebo více souborů.
 
-Mazání je zápisová operace a po spuštění příkazu se data skutečně odstraní. Doporučuje se nejdříve pomocí `imgbed-token-list.mjs` ověřit, které hodnoty `fileId` chcete smazat, a teprve potom je předat mazacímu skriptu.
+Mazání je zápisová operace a po spuštění příkazu se data skutečně odstraní. Doporučuje se nejdříve pomocí `imghost-token-list.mjs` ověřit, které hodnoty `fileId` chcete smazat, a teprve potom je předat mazacímu skriptu.
 
 ![Upravit API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Při vytvoření nebo úpravě API Token zkontrolujte, že má povolené mazán�
 API Token lze zadat také proměnnou prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Stažení skriptu
 
 | Skript | Účel |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>skript pro mazání souborů</a> | Smaže jedno nebo více výslovně zadaných ID souborů |
+| <a href="/tools/imghost-token-delete.mjs" download>skript pro mazání souborů</a> | Smaže jedno nebo více výslovně zadaných ID souborů |
 
 Na místním počítači je potřeba Node.js 18 nebo novější.
 
@@ -64,7 +64,7 @@ Po úspěšném smazání server automaticky zpracuje indexy souborů, statistik
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Ano | ID souboru ke smazání; lze zadat opakovaně |
 | `--strictness <strict\|soft>` | Ne | Přísnost mazání; výchozí hodnota je `strict` |
 | `--batch-size <n>` | Ne | Počet mazaných souborů v jednom požadavku; výchozí hodnota `15`, maximum `15` |
@@ -90,7 +90,7 @@ Pokud má být operace úspěšná pouze tehdy, když se smaže i vzdálený sou
 Smazání jednoho souboru:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Použití API Token z proměnné prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Smazání více souborů:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Vyčištění záznamu v ImgHost i při selhání mazání ve vzdáleném úložišti:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Výstup JSON a uložení výsledku:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Omezení jednoho požadavku na 5 souborů:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Mazací skript potřebuje ID souboru v ImgHost. Nejprve můžete pomocí vypisovacího skriptu zobrazit soubory ve složce:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

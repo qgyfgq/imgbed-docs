@@ -21,7 +21,7 @@ API Token তৈরি বা সম্পাদনা করার সময় �
 token পরিবেশ চলকেও রাখা যায়:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ব্যবস্থাপনা স্ক্রিপ্ট ডাউনলোড
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | স্ক্রিপ্ট | উদ্দেশ্য |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>আপলোড সেটিংস ব্যবস্থাপনা স্ক্রিপ্ট</a> | আপলোড চ্যানেল, উপ-চ্যানেল এবং লোড ব্যাল্যান্সিং পরিচালনা. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>সাইট সেটিংস ব্যবস্থাপনা স্ক্রিপ্ট</a> | নিরাপত্তা সেটিংস, পাতা সেটিংস এবং অন্যান্য সেটিংস পরিচালনা. |
-| <a href="/tools/imgbed-token-federation.mjs" download>ফেডারেশন সম্পর্ক ব্যবস্থাপনা স্ক্রিপ্ট</a> | হালকা ফেডারেশন সম্পর্কের কাজ, অনুরোধ এবং বার্তা পরিচালনা. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>আপলোড সেটিংস ব্যবস্থাপনা স্ক্রিপ্ট</a> | আপলোড চ্যানেল, উপ-চ্যানেল এবং লোড ব্যাল্যান্সিং পরিচালনা. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>সাইট সেটিংস ব্যবস্থাপনা স্ক্রিপ্ট</a> | নিরাপত্তা সেটিংস, পাতা সেটিংস এবং অন্যান্য সেটিংস পরিচালনা. |
+| <a href="/tools/imghost-token-federation.mjs" download>ফেডারেশন সম্পর্ক ব্যবস্থাপনা স্ক্রিপ্ট</a> | হালকা ফেডারেশন সম্পর্কের কাজ, অনুরোধ এবং বার্তা পরিচালনা. |
 
 Node.js 18 বা তার নতুন সংস্করণ প্রয়োজন.
 
@@ -41,7 +41,7 @@ Node.js 18 বা তার নতুন সংস্করণ প্রয়ো�
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
 | `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL, যেমন `https://image.ai6.me`. |
-| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
+| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGHOST_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--retries <n>` | না | সাময়িক ব্যর্থতায় পুনরায় চেষ্টার সংখ্যা. ডিফল্ট `3`. |
 | `--timeout-ms <n>` | না | অনুরোধের সময়সীমা. ডিফল্ট `180000`. |
 | `--output <pretty\|json>` | না | আউটপুটের ধরন. ডিফল্ট `pretty`; প্রোগ্রামের জন্য `json` ব্যবহার করুন. |
@@ -54,7 +54,7 @@ Node.js 18 বা তার নতুন সংস্করণ প্রয়ো�
 আপলোড সেটিংস স্ক্রিপ্ট আপলোড উপ-চ্যানেলের তালিকা দেখায়, পড়ে, তৈরি করে, সম্পাদনা করে এবং মুছে ফেলে. এটি একটি শীর্ষ-স্তরের আপলোড চ্যানেলের লোড ব্যাল্যান্সিং চালু বা বন্ধও করতে পারে.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### আপলোড সেটিংসের পরামিতি
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 সব আপলোড সেটিংস তালিকা করা:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 চ্যানেল কনফিগারেশন পড়া:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 একটি S3 উপ-চ্যানেল পড়া:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 একটি উপ-চ্যানেল তৈরি বা সম্পাদনা করা. পূর্বরূপ দেখতে আগে `--apply` ছাড়া চালান:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 নিশ্চিত হলে সংরক্ষণ করুন:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 একটি উপ-চ্যানেল মুছে ফেলা:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 load balancing চালু করা:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 সম্পাদনাযোগ্য এলাকা, বিভাগ এবং ক্ষেত্র দেখতে আগে `--list-sections` ব্যবহার করুন:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 system update notification সেটিংস পড়া:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 system update notification ইমেল বদলানো. পূর্বরূপ দেখতে আগে `--apply` ছাড়া চালান:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 নিশ্চিত হলে সংরক্ষণ করুন:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 অ্যাডমিন পৃষ্ঠার star effect বদলানো:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP geolocation ভাষা বদলানো:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 local node status এবং দুই relation তালিকা দেখা:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 শুধু outgoing nodes তালিকা:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 শুধু incoming nodes তালিকা:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 অন্য নোডে join request করা. পূর্বরূপ দেখতে আগে `--apply` ছাড়া চালান:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 নিশ্চিত হলে সংরক্ষণ করুন:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 no-record relation-এর জন্য reapply:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 incoming request গ্রহণ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 incoming request প্রত্যাখ্যান:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 প্রতিষ্ঠিত relation-এ message পাঠানো:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 outgoing pending request বাতিল:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 accepted incoming relation সরানো:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 incoming terminal record মুছে ফেলা:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

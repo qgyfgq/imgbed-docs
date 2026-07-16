@@ -19,7 +19,7 @@ API Token 配置管理适合给自动化脚本、运维工具或第三方控制�
 也可以把 Token 放到环境变量里：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
+$env:IMGHOST_API_TOKEN="你的 API Token"
 ```
 
 ## 下载管理脚本
@@ -28,9 +28,9 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 
 | 脚本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>上传设置管理脚本</a> | 管理上传渠道、子渠道和负载均衡 |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>站点设置管理脚本</a> | 管理安全设置、页面设置和其他设置 |
-| <a href="/tools/imgbed-token-federation.mjs" download>联盟关系管理脚本</a> | 管理联盟轻量关系动作、申请和留言 |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>上传设置管理脚本</a> | 管理上传渠道、子渠道和负载均衡 |
+| <a href="/tools/imghost-token-site-settings.mjs" download>站点设置管理脚本</a> | 管理安全设置、页面设置和其他设置 |
+| <a href="/tools/imghost-token-federation.mjs" download>联盟关系管理脚本</a> | 管理联盟轻量关系动作、申请和留言 |
 
 运行脚本需要本机安装 Node.js 18 或更高版本。
 
@@ -39,7 +39,7 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--retries <n>` | 否 | 临时失败重试次数，默认 `3` |
 | `--timeout-ms <n>` | 否 | 单个请求超时时间，默认 `180000` |
 | `--output <pretty\|json>` | 否 | 输出格式，默认 `pretty`；程序调用可用 `json` |
@@ -52,7 +52,7 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 上传设置脚本用于列出、读取、新增或编辑、删除上传子渠道，也可以切换某个大渠道的负载均衡。
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://你的域名" --token "你的 API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://你的域名" --token "你的 API Token" --list
 ```
 
 ### 上传设置参数
@@ -93,7 +93,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://你的域名" --token 
 列出全部上传设置：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --list
@@ -102,7 +102,7 @@ node imgbed-token-upload-settings.mjs `
 读取 S3 渠道配置：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get `
@@ -112,7 +112,7 @@ node imgbed-token-upload-settings.mjs `
 读取 S3 下某个子渠道：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get `
@@ -123,7 +123,7 @@ node imgbed-token-upload-settings.mjs `
 新增或编辑一个子渠道。第一次执行不加 `--apply`，只查看预览：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --upsert `
@@ -136,7 +136,7 @@ node imgbed-token-upload-settings.mjs `
 确认无误后再保存：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --upsert `
@@ -150,7 +150,7 @@ node imgbed-token-upload-settings.mjs `
 删除一个子渠道：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --delete `
@@ -162,7 +162,7 @@ node imgbed-token-upload-settings.mjs `
 开启 S3 负载均衡：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --load-balance true `
@@ -180,7 +180,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --upsert `
@@ -203,7 +203,7 @@ node imgbed-token-upload-settings.mjs `
 先用 `--list-sections` 查看当前脚本支持的区域、分区和字段：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --list-sections
@@ -227,7 +227,7 @@ node imgbed-token-site-settings.mjs `
 读取系统更新通知设置：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get `
@@ -238,7 +238,7 @@ node imgbed-token-site-settings.mjs `
 修改系统更新通知邮箱。第一次执行不加 `--apply`，只查看预览：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --area security `
@@ -249,7 +249,7 @@ node imgbed-token-site-settings.mjs `
 确认无误后再保存：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --area security `
@@ -261,7 +261,7 @@ node imgbed-token-site-settings.mjs `
 修改后台页面星空效果：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --area page `
@@ -273,7 +273,7 @@ node imgbed-token-site-settings.mjs `
 修改 IP 归属地语言：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --area others `
@@ -333,7 +333,7 @@ node imgbed-token-site-settings.mjs `
 查看本地节点状态和双方关系列表：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --status
@@ -342,7 +342,7 @@ node imgbed-token-federation.mjs `
 只列出我加入的节点：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --list `
@@ -352,7 +352,7 @@ node imgbed-token-federation.mjs `
 只列出加入我的节点：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --list `
@@ -362,7 +362,7 @@ node imgbed-token-federation.mjs `
 通过邀请链接申请加入其他节点。第一次执行不加 `--apply`，只查看预览：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --join `
@@ -372,7 +372,7 @@ node imgbed-token-federation.mjs `
 确认无误后再保存：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --join `
@@ -383,7 +383,7 @@ node imgbed-token-federation.mjs `
 对无关系记录重新申请：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --reapply `
@@ -395,7 +395,7 @@ node imgbed-token-federation.mjs `
 同意加入我的节点请求：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --accept `
@@ -406,7 +406,7 @@ node imgbed-token-federation.mjs `
 拒绝加入我的节点请求：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --deny `
@@ -417,7 +417,7 @@ node imgbed-token-federation.mjs `
 给已建立关系的节点留言：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --send-message `
@@ -430,7 +430,7 @@ node imgbed-token-federation.mjs `
 取消 outgoing 待同意申请：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --cancel `
@@ -442,7 +442,7 @@ node imgbed-token-federation.mjs `
 移除 incoming 已接受关系：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --cancel `
@@ -454,7 +454,7 @@ node imgbed-token-federation.mjs `
 删除 incoming 终态记录：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --delete `

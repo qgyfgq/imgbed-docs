@@ -20,8 +20,8 @@ Gói tài liệu cung cấp hai tập lệnh Node.js:
 
 | Tập lệnh | Mục đích |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>tập lệnh tải lên một yêu cầu</a> | Gọi `/upload` một lần. Hữu ích cho tệp nhỏ và kiểm tra kết nối. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>tập lệnh tải lên theo phần</a> | Dùng chia phần bằng API Token, tải trực tiếp hoặc phiên tải lên của nền tảng. Khuyến nghị cho tệp lớn. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>tập lệnh tải lên một yêu cầu</a> | Gọi `/upload` một lần. Hữu ích cho tệp nhỏ và kiểm tra kết nối. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>tập lệnh tải lên theo phần</a> | Dùng chia phần bằng API Token, tải trực tiếp hoặc phiên tải lên của nền tảng. Khuyến nghị cho tệp lớn. |
 
 Yêu cầu Node.js 18 trở lên.
 
@@ -30,8 +30,8 @@ Yêu cầu Node.js 18 trở lên.
 Cả hai tập lệnh đều có thể liệt kê các kênh tải lên khả dụng với API Token hiện tại:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Khi liệt kê kênh, không cần `--file` và `--channel`. Phản hồi bao gồm kênh tải lên mặc định, key kênh tải lên, tên kênh con và trạng thái cân bằng tải. Secret, token làm mới và các giá trị cấu hình nhạy cảm khác không được trả về.
@@ -50,7 +50,7 @@ Với tệp lớn hơn, hãy dùng tập lệnh tải lên theo phần trước.
 Tập lệnh một yêu cầu gửi một yêu cầu tới `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Bạn cũng có thể đặt token trong biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Tham số tải lên một yêu cầu
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Có | Đường dẫn tệp cục bộ. |
 | `--channel <key>` | Có | Kênh tải lên. |
 | `--folder <path>` | Không | Thư mục tải lên, ví dụ `photos/2026` hoặc `/user/`. |
@@ -122,7 +122,7 @@ Khi tệp vượt một trong các giới hạn này, tập lệnh báo lỗi t�
 Tập lệnh tải lên theo phần trước tiên yêu cầu phần phụ trợ phân giải tệp đích, rồi đi theo luồng tệp lớn cho kênh đã chọn. Bạn không cần tự viết yêu cầu phiên chia phần, hợp nhất hoặc hoàn tất.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost. |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Có | Đường dẫn tệp cục bộ. |
 | `--channel <key>` | Có | Kênh tải lên. |
 | `--folder <path>` | Không | Thư mục tải lên. |

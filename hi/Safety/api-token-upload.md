@@ -20,8 +20,8 @@ ImgHost दस्तावेज़ में Node.js पर आधारित 
 
 | स्क्रिप्ट | उपयोग |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>एक अनुरोध वाली अपलोड स्क्रिप्ट</a> | केवल एक बार `/upload` को बुलाती है; छोटी फ़ाइलों और इंटरफ़ेस जाँच के लिए उपयुक्त |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>खंडों में अपलोड करने वाली स्क्रिप्ट</a> | चैनल के अनुसार खंडों में अपलोड, सीधा अपलोड या प्लेटफ़ॉर्म सत्र उपयोग करती है; बड़ी फ़ाइलों के लिए उपयुक्त |
+| <a href="/tools/imghost-token-single-upload.mjs" download>एक अनुरोध वाली अपलोड स्क्रिप्ट</a> | केवल एक बार `/upload` को बुलाती है; छोटी फ़ाइलों और इंटरफ़ेस जाँच के लिए उपयुक्त |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>खंडों में अपलोड करने वाली स्क्रिप्ट</a> | चैनल के अनुसार खंडों में अपलोड, सीधा अपलोड या प्लेटफ़ॉर्म सत्र उपयोग करती है; बड़ी फ़ाइलों के लिए उपयुक्त |
 
 स्क्रिप्ट चलाने के लिए स्थानीय मशीन पर Node.js 18 या उससे नया संस्करण चाहिए।
 
@@ -30,8 +30,8 @@ ImgHost दस्तावेज़ में Node.js पर आधारित 
 दोनों स्क्रिप्ट वर्तमान API Token से उपलब्ध अपलोड चैनल पहले दिखा सकती हैं:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 इस मोड में `--file` और `--channel` देना आवश्यक नहीं है। परिणाम में डिफ़ॉल्ट अपलोड चैनल, मुख्य चैनल कुंजी, उप-चैनलों के नाम और भार संतुलन की स्थिति मिलती है। गुप्त कुंजियाँ, रीफ़्रेश टोकन या संवेदनशील सेटिंग्स वापस नहीं आतीं।
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 यह स्क्रिप्ट पूरी फ़ाइल को एक ही अनुरोध में `/upload` पर भेजती है:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 API Token को परिवेश चर में भी रखा जा सकता है:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### एक अनुरोध वाले अपलोड के पैरामीटर
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | पैरामीटर | आवश्यक | विवरण |
 | --- | --- | --- |
 | `--base-url <url>` | हाँ | ImgHost साइट का पता, जैसे `https://image.ai6.me` |
-| `--token <token>` | हाँ | API Token; `IMGBED_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
+| `--token <token>` | हाँ | API Token; `IMGHOST_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
 | `--file <path>` | हाँ | स्थानीय फ़ाइल का मार्ग |
 | `--channel <key>` | हाँ | वास्तविक अपलोड चैनल |
 | `--folder <path>` | नहीं | अपलोड फ़ोल्डर, जैसे `photos/2026` या `/user/` |
@@ -120,7 +120,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 खंडों में अपलोड वाली स्क्रिप्ट पहले API Token से सर्वर से अपलोड लक्ष्य तय करवाती है, फिर चुने हुए चैनल का बड़ा फ़ाइल मार्ग उपयोग करती है। उपयोगकर्ता को स्वयं सत्र बनाना, खंड भेजना, जोड़ना या पूर्णता अनुरोध लिखना नहीं पड़ता।
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | पैरामीटर | आवश्यक | विवरण |
 | --- | --- | --- |
 | `--base-url <url>` | हाँ | ImgHost साइट का पता |
-| `--token <token>` | हाँ | API Token; `IMGBED_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
+| `--token <token>` | हाँ | API Token; `IMGHOST_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
 | `--file <path>` | हाँ | स्थानीय फ़ाइल का मार्ग |
 | `--channel <key>` | हाँ | वास्तविक अपलोड चैनल |
 | `--folder <path>` | नहीं | अपलोड फ़ोल्डर |

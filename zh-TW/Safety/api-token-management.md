@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 也可以把 Token 放到環境變數裡：
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 下載管理腳本
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 腳本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>上傳設定管理腳本</a> | 管理上傳渠道、子渠道和負載平衡 |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>站台設定管理腳本</a> | 管理安全設定、頁面設定和其他設定 |
-| <a href="/tools/imgbed-token-federation.mjs" download>聯盟關係管理腳本</a> | 管理聯盟輕量關係動作、申請和留言 |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>上傳設定管理腳本</a> | 管理上傳渠道、子渠道和負載平衡 |
+| <a href="/tools/imghost-token-site-settings.mjs" download>站台設定管理腳本</a> | 管理安全設定、頁面設定和其他設定 |
+| <a href="/tools/imghost-token-federation.mjs" download>聯盟關係管理腳本</a> | 管理聯盟輕量關係動作、申請和留言 |
 
 執行腳本需要本機安裝 Node.js 18 或更高版本。
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | 參數 | 必填 | 說明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 圖床站台位址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以使用 `IMGBED_API_TOKEN` 環境變數 |
+| `--token <token>` | 是 | API Token；也可以使用 `IMGHOST_API_TOKEN` 環境變數 |
 | `--retries <n>` | 否 | 暫時失敗重試次數，預設 `3` |
 | `--timeout-ms <n>` | 否 | 單個請求逾時時間，預設 `180000` |
 | `--output <pretty\|json>` | 否 | 輸出格式，預設 `pretty`；程式呼叫可用 `json` |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 上傳設定腳本用於列出、讀取、新增或編輯、刪除上傳子渠道，也可以切換某個大渠道的負載平衡。
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### 上傳設定參數
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 列出全部上傳設定：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 讀取 S3 渠道設定：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 讀取 S3 下某個子渠道：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 新增或編輯一個子渠道。第一次執行不加 `--apply`，只查看預覽：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 確認無誤後再儲存：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 刪除一個子渠道：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 開啟 S3 負載平衡：
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 先用 `--list-sections` 查看目前腳本支援的區域、分區和欄位：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 讀取系統更新通知設定：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 修改系統更新通知信箱。第一次執行不加 `--apply`，只查看預覽：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 確認無誤後再儲存：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 修改後台頁面星空效果：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 修改 IP 歸屬地語言：
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 查看本地節點狀態和雙方關係清單：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 只列出我加入的節點：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 只列出加入我的節點：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 透過邀請連結申請加入其他節點。第一次執行不加 `--apply`，只查看預覽：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 確認無誤後再儲存：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 對無關係記錄重新申請：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 同意加入我的節點請求：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 拒絕加入我的節點請求：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 給已建立關係的節點留言：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 取消 outgoing 待同意申請：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 移除 incoming 已接受關係：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 刪除 incoming 終態記錄：
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

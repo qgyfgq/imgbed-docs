@@ -26,14 +26,14 @@ API Token ကို ဖန်တီးခြင်း သို့မဟုတ�
 Token ကို ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းတွင်လည်း ထားနိုင်သည်။
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## စခရစ် ဒေါင်းလုဒ်လုပ်ရန်
 
 | စခရစ် | အသုံးပြုရန်နေရာ |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>စာရင်းကြည့်ခြင်းနှင့် စစ်ထုတ်ခြင်းစခရစ်</a> | ဖိုင်စီမံမှုစာရင်း၊ အသုံးပြုသူစီမံမှုစာရင်း၊ အပ်လုဒ်ချန်နယ်စာရင်း၊ ဒါရိုက်ထရီစာရင်းအင်းဇယား |
+| <a href="/tools/imghost-token-list.mjs" download>စာရင်းကြည့်ခြင်းနှင့် စစ်ထုတ်ခြင်းစခရစ်</a> | ဖိုင်စီမံမှုစာရင်း၊ အသုံးပြုသူစီမံမှုစာရင်း၊ အပ်လုဒ်ချန်နယ်စာရင်း၊ ဒါရိုက်ထရီစာရင်းအင်းဇယား |
 
 အသုံးပြုရန် Node.js 18 သို့မဟုတ် ၎င်းထက်အသစ်သော ဗားရှင်း လိုအပ်သည်။
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | ပါရာမီတာ | လိုအပ်မှု | ရှင်းလင်းချက် |
 | --- | --- | --- |
 | `--base-url <url>` | လိုအပ် | ImgHost ဆိုက် URL။ ဥပမာ `https://image.ai6.me` |
-| `--token <token>` | လိုအပ် | API Token။ `IMGBED_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
+| `--token <token>` | လိုအပ် | API Token။ `IMGHOST_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
 | `--retries <n>` | မလိုအပ် | ယာယီမအောင်မြင်ပါက ပြန်ကြိုးစားမည့် အကြိမ်ရေ။ မူရင်းတန်ဖိုး `3`။ |
 | `--timeout-ms <n>` | မလိုအပ် | တောင်းဆိုမှုတစ်ကြိမ်၏ အချိန်ကန့်သတ်ချက်။ မူရင်းတန်ဖိုး `180000`။ |
 | `--output <pretty\|json>` | မလိုအပ် | ထုတ်ပြပုံ။ မူရင်းတန်ဖိုး `pretty`။ ပရိုဂရမ်မှ အသုံးပြုမည်ဆိုပါက `json` ကို အကြံပြုသည်။ |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 ဖိုင်စီမံမှုထဲရှိ ဖိုင်များကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON အဖြစ် ထုတ်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 လက်ရှိ စစ်ထုတ်အခြေအနေအောက်ရှိ အရေအတွက်ကိုသာ ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF ကို ရှာရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 အပ်လုဒ် IP နှင့် ချန်နယ်အလိုက် စစ်ထုတ်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 ရလဒ်အပြည့်အစုံ သိမ်းရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 အသုံးပြုသူ/IP အပ်လုဒ်စာရင်းအင်းကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 IP တစ်ခု သို့မဟုတ် နေရာတစ်ခုကို ရှာရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 IP တစ်ခုမှ တင်ထားသော ဖိုင်အသေးစိတ်ကို ကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 အပ်လုဒ်တင်ခွင့် ပိတ်ထားသော IP များကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 အပ်လုဒ်တင်ခွင့် ပိတ်ထားသော အသုံးပြုသူများကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 နေရာဆိုင်ရာ သော့ချက်စာလုံးဖြင့် ရှာရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 အပ်လုဒ်အကြိမ်ရေအလိုက် စီရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 လျှို့ဝှက်အချက်အလက်များ ဖယ်ရှားထားသော အပ်လုဒ်ချန်နယ်ပြင်ဆင်ချက်များကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 ဒါရိုက်ထရီစာရင်းအင်းကို စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 ဒါရိုက်ထရီလမ်းကြောင်းအပြည့်အစုံကို စာရင်းကြည့်ပြီး အစပိုင်းလမ်းကြောင်းဖြင့် ရှာရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 မူရင်း `pretty` ထုတ်ပြပုံသည် လူဖတ်ရန် သင့်တော်သည်။
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 အခြားပရိုဂရမ်တွင် ကိုင်တွယ်ရန်လိုပါက `--output json` ကို သုံးပါ။
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 ရလဒ်အပြည့်အစုံကို သိမ်းနိုင်သည်။
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 အောက်ပါတို့ကို လုပ်ဆောင်ပါ။
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 စခရစ်သည် လုပ်ဆောင်ချက်များနှင့် ပါရာမီတာအားလုံးကို ပြပေးသည်။

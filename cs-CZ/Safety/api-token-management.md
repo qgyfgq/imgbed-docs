@@ -21,7 +21,7 @@ Všechny tři správcovské skripty zapisují ve výchozím stavu pouze jako ná
 API Token lze zadat také proměnnou prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Stažení správcovských skriptů
@@ -30,9 +30,9 @@ Dokumentace ImgHost obsahuje tři skripty pro Node.js:
 
 | Skript | Účel |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>skript pro správu nahrávacích nastavení</a> | Správa nahrávacích kanálů, podkanálů a vyvažování zátěže |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>skript pro správu nastavení webu</a> | Správa zabezpečení, nastavení stránek a dalších nastavení |
-| <a href="/tools/imgbed-token-federation.mjs" download>skript pro správu federačních vztahů</a> | Správa lehkých vztahových akcí, žádostí o připojení a zpráv |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>skript pro správu nahrávacích nastavení</a> | Správa nahrávacích kanálů, podkanálů a vyvažování zátěže |
+| <a href="/tools/imghost-token-site-settings.mjs" download>skript pro správu nastavení webu</a> | Správa zabezpečení, nastavení stránek a dalších nastavení |
+| <a href="/tools/imghost-token-federation.mjs" download>skript pro správu federačních vztahů</a> | Správa lehkých vztahových akcí, žádostí o připojení a zpráv |
 
 Na místním počítači je potřeba Node.js 18 nebo novější.
 
@@ -41,7 +41,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit každého požadavku v milisekundách; výchozí hodnota `180000` |
 | `--output <pretty\|json>` | Ne | Formát výstupu; výchozí hodnota `pretty`, pro zpracování programem použijte `json` |
@@ -54,7 +54,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 Skript pro nastavení nahrávání umí vypsat, přečíst, vytvořit, upravit a smazat podkanál. Umí také zapnout nebo vypnout vyvažování zátěže pro hlavní kanál.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Parametry nastavení nahrávání
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Vypsání všech nahrávacích nastavení:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Přečtení konfigurace kanálu S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Přečtení konkrétního podkanálu pod S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Vytvoření nebo úprava podkanálu WebDAV. Nejprve spusťte bez `--apply` a zkontrolujte náhled:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Po kontrole spusťte stejný příkaz s `--apply`:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Smazání podkanálu:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Zapnutí vyvažování zátěže pro S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ U složitějších úprav můžete nejprve připravit soubor JSON a předat ho p
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Skript pro nastavení webu spravuje tři oblasti:
 Nejdříve si vypište podporované oblasti, sekce a pole:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ V oblasti `page` používá `--set` identifikátor položky stránky, napříkla
 Přečtení nastavení oznámení o aktualizaci systému:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Změna e-mailu pro oznámení o aktualizaci systému. Nejprve spusťte bez `--apply` a zkontrolujte náhled:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Po kontrole spusťte s `--apply`:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Zapnutí hvězdného efektu na administrační stránce:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Změna jazyka pro určování polohy podle IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Publikování indexů, stahování indexů, hromadné mazání indexů a potvrze
 Zobrazení stavu místního uzlu a obou seznamů vztahů:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Zobrazení jen uzlů, ke kterým jste se připojili:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Zobrazení jen uzlů připojených k vám:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Žádost o připojení přes pozvánkový odkaz. Nejprve spusťte bez `--apply` a zkontrolujte náhled:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Po kontrole spusťte s `--apply`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Opakovaná žádost u záznamu bez vztahu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Přijetí žádosti doručené vašemu uzlu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Odmítnutí žádosti doručené vašemu uzlu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Odeslání zprávy uzlu s navázaným vztahem:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Zrušení čekající žádosti `outgoing`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Odstranění přijatého vztahu `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Smazání konečného záznamu `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

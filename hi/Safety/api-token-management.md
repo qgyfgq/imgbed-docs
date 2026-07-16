@@ -21,7 +21,7 @@ API Token बनाते या संपादित करते समय �
 API Token को परिवेश चर में भी रखा जा सकता है:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## प्रबंधन स्क्रिप्ट डाउनलोड करें
@@ -30,9 +30,9 @@ ImgHost दस्तावेज़ में Node.js पर आधारित 
 
 | स्क्रिप्ट | उपयोग |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>अपलोड सेटिंग्स प्रबंधन स्क्रिप्ट</a> | अपलोड चैनल, उप-चैनल और भार संतुलन प्रबंधित करती है |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>साइट सेटिंग्स प्रबंधन स्क्रिप्ट</a> | सुरक्षा सेटिंग्स, पृष्ठ सेटिंग्स और अन्य सेटिंग्स प्रबंधित करती है |
-| <a href="/tools/imgbed-token-federation.mjs" download>फ़ेडरेशन संबंध प्रबंधन स्क्रिप्ट</a> | हल्के संबंध कार्य, जुड़ने के अनुरोध और संदेश प्रबंधित करती है |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>अपलोड सेटिंग्स प्रबंधन स्क्रिप्ट</a> | अपलोड चैनल, उप-चैनल और भार संतुलन प्रबंधित करती है |
+| <a href="/tools/imghost-token-site-settings.mjs" download>साइट सेटिंग्स प्रबंधन स्क्रिप्ट</a> | सुरक्षा सेटिंग्स, पृष्ठ सेटिंग्स और अन्य सेटिंग्स प्रबंधित करती है |
+| <a href="/tools/imghost-token-federation.mjs" download>फ़ेडरेशन संबंध प्रबंधन स्क्रिप्ट</a> | हल्के संबंध कार्य, जुड़ने के अनुरोध और संदेश प्रबंधित करती है |
 
 स्क्रिप्ट चलाने के लिए स्थानीय मशीन पर Node.js 18 या उससे नया संस्करण चाहिए।
 
@@ -41,7 +41,7 @@ ImgHost दस्तावेज़ में Node.js पर आधारित 
 | पैरामीटर | आवश्यक | विवरण |
 | --- | --- | --- |
 | `--base-url <url>` | हाँ | ImgHost साइट का पता, जैसे `https://image.ai6.me` |
-| `--token <token>` | हाँ | API Token; `IMGBED_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
+| `--token <token>` | हाँ | API Token; `IMGHOST_API_TOKEN` परिवेश चर भी उपयोग कर सकते हैं |
 | `--retries <n>` | नहीं | अस्थायी त्रुटि पर दोबारा प्रयासों की संख्या; डिफ़ॉल्ट `3` |
 | `--timeout-ms <n>` | नहीं | हर अनुरोध की समयसीमा, मिलीसेकंड में; डिफ़ॉल्ट `180000` |
 | `--output <pretty\|json>` | नहीं | आउटपुट का रूप; डिफ़ॉल्ट `pretty`, प्रोग्राम के लिए `json` उपयोग करें |
@@ -54,7 +54,7 @@ ImgHost दस्तावेज़ में Node.js पर आधारित 
 अपलोड सेटिंग्स स्क्रिप्ट उप-चैनल सूचीबद्ध कर सकती है, पढ़ सकती है, बना या संपादित कर सकती है, हटा सकती है और किसी मुख्य चैनल का भार संतुलन चालू या बंद कर सकती है।
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### अपलोड सेटिंग्स के पैरामीटर
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 सभी अपलोड सेटिंग्स देखना:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 चैनल सेटिंग्स पढ़ना:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 S3 के नीचे किसी खास उप-चैनल को पढ़ना:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 WebDAV उप-चैनल बनाना या संपादित करना। पहले `--apply` के बिना चलाकर पूर्वावलोकन देखें:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 सही लगे तो वही आदेश `--apply` के साथ चलाएँ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 उप-चैनल हटाना:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 का भार संतुलन चालू करना:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 पहले समर्थित क्षेत्र, अनुभाग और फ़ील्ड देखें:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 सिस्टम अपडेट सूचना सेटिंग पढ़ना:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 सिस्टम अपडेट सूचना ईमेल बदलना। पहले `--apply` के बिना चलाएँ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 फिर `--apply` के साथ सहेजें:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 व्यवस्थापक पृष्ठ का तारों वाला प्रभाव बदलना:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP स्थान की भाषा बदलना:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 स्थानीय नोड स्थिति और दोनों संबंध सूचियाँ देखना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 केवल वे नोड देखना जिनसे आप जुड़े हैं:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 केवल वे नोड देखना जो आपके नोड से जुड़े हैं:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 निमंत्रण लिंक से जुड़ने का अनुरोध। पहले `--apply` के बिना चलाएँ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 जाँच के बाद सहेजें:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 बिना संबंध वाले रिकॉर्ड पर फिर से अनुरोध:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 `incoming` अनुरोध स्वीकार करना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 `incoming` अनुरोध अस्वीकार करना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 स्थापित संबंध वाले नोड को संदेश भेजना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 प्रतीक्षारत `outgoing` अनुरोध रद्द करना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 स्वीकार किया गया `incoming` संबंध हटाना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 अंतिम अवस्था वाला `incoming` रिकॉर्ड हटाना:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

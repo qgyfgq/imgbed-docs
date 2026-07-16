@@ -19,14 +19,14 @@ API Token بناتے یا ترمیم کرتے وقت یقین کر لیں کہ �
 Token کو ماحول کے متغیر میں بھی رکھا جا سکتا ہے:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## اسکرپٹ ڈاؤن لوڈ کریں
 
 | اسکرپٹ | استعمال |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>فائل مینجمنٹ اسکرپٹ</a> | فائل metadata، moderation labels، فائل ٹیگز، فہرست کی حالت، منتقلی، نام بدلنا، فولڈر بنانا، IP بند/بحال کرنا، عارضی اپ لوڈ Token بنانا اور حذف کرنا |
+| <a href="/tools/imghost-token-manage.mjs" download>فائل مینجمنٹ اسکرپٹ</a> | فائل metadata، moderation labels، فائل ٹیگز، فہرست کی حالت، منتقلی، نام بدلنا، فولڈر بنانا، IP بند/بحال کرنا، عارضی اپ لوڈ Token بنانا اور حذف کرنا |
 
 اسکرپٹ چلانے کے لیے مقامی مشین پر Node.js 18 یا اس سے نیا ورژن درکار ہے۔
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | قابلیت | اسکرپٹ | اجازت |
 | --- | --- | --- |
-| فائل اپ لوڈ کرنا | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| فائلیں دکھانا، فائلیں فلٹر کرنا، صارف کے اعداد و شمار پڑھنا | `imgbed-token-list.mjs` | `list` |
-| واضح طور پر دی گئی فائلیں حذف کرنا | `imgbed-token-delete.mjs` | `delete` |
-| فائل معلومات، ٹیگز، فہرست، منتقلی، نام بدلنا، فولڈر بنانا، IP بند کرنا، عارضی اپ لوڈ Token بنانا یا حذف کرنا | `imgbed-token-manage.mjs` | `manage` |
+| فائل اپ لوڈ کرنا | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| فائلیں دکھانا، فائلیں فلٹر کرنا، صارف کے اعداد و شمار پڑھنا | `imghost-token-list.mjs` | `list` |
+| واضح طور پر دی گئی فائلیں حذف کرنا | `imghost-token-delete.mjs` | `delete` |
+| فائل معلومات، ٹیگز، فہرست، منتقلی، نام بدلنا، فولڈر بنانا، IP بند کرنا، عارضی اپ لوڈ Token بنانا یا حذف کرنا | `imghost-token-manage.mjs` | `manage` |
 | اپ لوڈ چینلز، سیکیورٹی ترتیبات، صفحہ ترتیبات، دیگر ترتیبات اور federation تعلقات میں ترمیم | ترتیب مینجمنٹ کے متعلقہ اسکرپٹس | `manage` |
 
-`imgbed-token-manage.mjs` فائل اپ لوڈ نہیں کرتا، فائلوں کی فہرست نہیں بناتا اور فائل حذف نہیں کرتا۔ اگر `fileId` تلاش کرنا ہو تو پہلے فہرست والے اسکرپٹ سے فائلیں فلٹر کریں؛ اگر فائل حذف کرنی ہو تو واضح `fileId` حذف کرنے والے اسکرپٹ کو دیں۔
+`imghost-token-manage.mjs` فائل اپ لوڈ نہیں کرتا، فائلوں کی فہرست نہیں بناتا اور فائل حذف نہیں کرتا۔ اگر `fileId` تلاش کرنا ہو تو پہلے فہرست والے اسکرپٹ سے فائلیں فلٹر کریں؛ اگر فائل حذف کرنی ہو تو واضح `fileId` حذف کرنے والے اسکرپٹ کو دیں۔
 
 ## عام پیرامیٹرز
 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ کا پتہ، مثلاً `https://image.ai6.me` |
-| `--token <token>` | ہاں | API Token؛ `IMGBED_API_TOKEN` ماحول متغیر بھی استعمال کیا جا سکتا ہے |
+| `--token <token>` | ہاں | API Token؛ `IMGHOST_API_TOKEN` ماحول متغیر بھی استعمال کیا جا سکتا ہے |
 | `--retries <n>` | نہیں | عارضی ناکامی پر دوبارہ کوششوں کی تعداد؛ طے شدہ قدر `3` |
 | `--timeout-ms <n>` | نہیں | ایک درخواست کی وقت حد؛ طے شدہ قدر `180000` |
 | `--output <pretty\|json>` | نہیں | output format؛ طے شدہ قدر `pretty` ہے۔ پروگرام سے استعمال کے لیے `json` بہتر ہے |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 فائل مینجمنٹ اسکرپٹ کے زیادہ تر کاموں کے لیے `fileId` چاہیے۔ پہلے فہرست والے اسکرپٹ سے تلاش کر سکتے ہیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 فائل metadata سے ایڈمن فائل مینجمنٹ میں دکھنے والا فائل نام اور read source بدلا جاتا ہے۔
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 preview درست ہونے کے بعد محفوظ کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ moderation labels فائل کی عمر کی درجہ بندی سے متعلق ہ
 moderation label پڑھیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 moderation label مقرر کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 فائل ٹیگز پڑھیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 ٹیگز شامل کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 ٹیگز ہٹائیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 ٹیگز بدل دیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 batch میں ٹیگز شامل کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 ایک فائل کو whitelist میں رکھیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 batch میں blacklist میں شامل کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 فہرست کی طے شدہ حالت بحال کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 منتقلی ایک یا زیادہ فائلوں کو ہدف فولڈر میں لے جاتی ہے۔ backend ایک درخواست میں زیادہ سے زیادہ `15` فائلیں سنبھالتا ہے، اور اسکرپٹ `--batch-size` کے مطابق کام کو خودکار طور پر کئی درخواستوں میں تقسیم کر کے ترتیب سے چلاتا ہے۔
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 نام بدلنے کے لیے پرانی فائل ID اور نئی فائل ID واضح طور پر دی جاتی ہیں۔ نئی فائل ID صرف فائل نام بھی بدل سکتی ہے اور ساتھ ہی فولڈر بھی بدل سکتی ہے۔
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 batch نام بدلنے کے لیے `--old-file-id` اور `--new-file-id` کو بار بار دے سکتے ہیں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ mapping کو JSON فائل میں بھی لکھا جا سکتا ہے:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost میں فولڈر فائل path سے بنتے ہیں؛ حقیقی خالی فولڈر موجود نہیں ہوتا۔ اسکرپٹ فولڈر بناتے وقت ہدف فولڈر میں `0.md` نام کی placeholder فائل بناتا ہے، تاکہ یہ فولڈر فائل مینجمنٹ اور فولڈر statistics میں دکھ سکے۔
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 کسی اپ لوڈ IP کو بند کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 کسی اپ لوڈ IP کو بحال کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 موجودہ upload block IP list دیکھیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 انتظامی اجازت مختصر مدت کے upload-only Token بنا سکتی ہے۔ اس Token کے پاس ہمیشہ صرف `upload` اجازت ہوتی ہے، `autoDelete` ہمیشہ `true` ہوتا ہے، اور ختم ہونے کی زیادہ سے زیادہ مدت `1` دن ہے۔
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ millisecond timestamp براہ راست بھی دیا جا سکتا ہے:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 عارضی اپ لوڈ Token حذف کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 طے شدہ `pretty` output انسان کے پڑھنے کے لیے مناسب ہے۔ اگر نتیجہ کسی دوسرے پروگرام کو دینا ہو تو `--output json` استعمال کریں:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 مکمل نتیجہ محفوظ بھی کیا جا سکتا ہے:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ batch move، batch rename اور batch list کارروائیاں backend سے و
 
 ### کیسے معلوم ہو کہ کون سا fileId دینا ہے؟
 
-پہلے `imgbed-token-list.mjs --files` سے فائلیں تلاش کریں۔ واپس آنے والے نتیجے میں `name` عموماً file ID ہوتا ہے، یعنی وہی قدر جو یہاں `--file-id` کے طور پر دی جاتی ہے۔
+پہلے `imghost-token-list.mjs --files` سے فائلیں تلاش کریں۔ واپس آنے والے نتیجے میں `name` عموماً file ID ہوتا ہے، یعنی وہی قدر جو یہاں `--file-id` کے طور پر دی جاتی ہے۔
 
 ### batch operation میں ایک بار زیادہ سے زیادہ کتنی فائلیں ہو سکتی ہیں؟
 

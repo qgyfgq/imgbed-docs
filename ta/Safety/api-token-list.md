@@ -26,14 +26,14 @@ API Token உருவாக்கும் போது அல்லது த�
 Token-ஐ சூழல் மாறியிலும் வைக்கலாம்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ஸ்கிரிப்டைப் பதிவிறக்குதல்
 
 | ஸ்கிரிப்ட் | நோக்கம் |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>பட்டியலிடல் மற்றும் வடிகட்டல் ஸ்கிரிப்ட்</a> | கோப்பு மேலாண்மை பட்டியல், பயனர் மேலாண்மை பட்டியல், பதிவேற்ற சேனல் பட்டியல் மற்றும் அடைவு புள்ளிவிவரங்கள். |
+| <a href="/tools/imghost-token-list.mjs" download>பட்டியலிடல் மற்றும் வடிகட்டல் ஸ்கிரிப்ட்</a> | கோப்பு மேலாண்மை பட்டியல், பயனர் மேலாண்மை பட்டியல், பதிவேற்ற சேனல் பட்டியல் மற்றும் அடைவு புள்ளிவிவரங்கள். |
 
 Node.js 18 அல்லது அதற்கு மேல் தேவை.
 
@@ -42,7 +42,7 @@ Node.js 18 அல்லது அதற்கு மேல் தேவை.
 | அளவுரு | கட்டாயம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள URL, உதாரணமாக `https://image.ai6.me`. |
-| `--token <token>` | ஆம் | API Token. `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
+| `--token <token>` | ஆம் | API Token. `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
 | `--retries <n>` | இல்லை | தற்காலிக தோல்விகளுக்கான மீண்டும் முயற்சி எண்ணிக்கை. இயல்புநிலை `3`. |
 | `--timeout-ms <n>` | இல்லை | ஒவ்வொரு கோரிக்கைக்கும் நேரவரம்பு. இயல்புநிலை `180000`. |
 | `--output <pretty\|json>` | இல்லை | வெளியீட்டு வடிவம். இயல்புநிலை `pretty`; நிரல்களுக்கு `json` பயன்படுத்தவும். |
@@ -54,7 +54,7 @@ Node.js 18 அல்லது அதற்கு மேல் தேவை.
 கோப்பு மேலாண்மையில் உள்ள கோப்புகளைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON வெளியீடு:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 தற்போதைய வடிகட்டிகளின் கீழ் எண்ணிக்கையை மட்டும் படித்தல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF-களைத் தேடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 பதிவேற்ற IP மற்றும் சேனலின்படி வடிகட்டுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 முழு முடிவைச் சேமித்தல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 பயனர்/IP பதிவேற்ற புள்ளிவிவரங்களைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 ஒரு IP அல்லது முகவரியைத் தேடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 ஒரு IP மூலம் பதிவேற்றப்பட்ட கோப்புகளைப் பார்க்குதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 பதிவேற்றம் தடுக்கப்பட்ட IP-களைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 பதிவேற்றம் தடுக்கப்பட்ட பயனர்களைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 முகவரி சொல்லின்படி தேடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 பதிவேற்ற எண்ணிக்கையின்படி வரிசைப்படுத்துதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 சுத்திகரிக்கப்பட்ட பதிவேற்ற சேனல் அமைப்பைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 அடைவு புள்ளிவிவரங்களைப் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 முழு அடைவு பாதைகளைப் பட்டியலிட்டு முன்னொட்டின்படி தேடுதல்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 இயல்புநிலை `pretty` வெளியீடு மனிதர்கள் வாசிக்க ஏற்றது:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 மற்ற நிரல்கள் முடிவைப் பயன்படுத்த வேண்டுமெனில், `--output json` பயன்படுத்தவும்:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 முழு முடிவையும் சேமிக்கலாம்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 இயக்கவும்:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 ஸ்கிரிப்ட் எல்லா செயல்களையும் அளவுருக்களையும் பட்டியலிடும்.

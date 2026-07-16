@@ -20,8 +20,8 @@ La documentazione include due script Node.js:
 
 | Script | Uso |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>script di caricamento singolo</a> | Chiama `/upload` una sola volta; adatto a file piccoli e test di connettività |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>script di caricamento a blocchi</a> | Usa API a blocchi, caricamento diretto o sessioni della piattaforma; adatto a file grandi |
+| <a href="/tools/imghost-token-single-upload.mjs" download>script di caricamento singolo</a> | Chiama `/upload` una sola volta; adatto a file piccoli e test di connettività |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>script di caricamento a blocchi</a> | Usa API a blocchi, caricamento diretto o sessioni della piattaforma; adatto a file grandi |
 
 Serve Node.js 18 o superiore installato in locale.
 
@@ -30,8 +30,8 @@ Serve Node.js 18 o superiore installato in locale.
 Entrambi gli script possono elencare i canali disponibili per il Token corrente:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 In questa modalità non servono `--file` e `--channel`. La risposta contiene il canale predefinito, il parametro del canale principale, i nomi dei sottocanali e lo stato del bilanciamento del carico. Non vengono restituiti segreti, token di aggiornamento o altre configurazioni sensibili.
@@ -50,7 +50,7 @@ Per file grandi usa di preferenza lo script a blocchi. Il caricamento singolo di
 Lo script di caricamento singolo invia una sola richiesta a `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Puoi anche mettere il Token in una variabile d'ambiente:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parametri del caricamento singolo
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
 | `--base-url <url>` | Sì | Indirizzo del sito ImgHost, ad esempio `https://image.ai6.me` |
-| `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
+| `--token <token>` | Sì | API Token; in alternativa usa `IMGHOST_API_TOKEN` |
 | `--file <path>` | Sì | Percorso del file locale |
 | `--channel <key>` | Sì | Canale di caricamento |
 | `--folder <path>` | No | Cartella di destinazione, ad esempio `photos/2026` o `/user/` |
@@ -120,7 +120,7 @@ Se il file supera il limite, lo script mostra subito l'errore locale corrisponde
 Lo script a blocchi usa prima l'API Token per far risolvere al server la destinazione del file, poi segue il flusso per file grandi del canale scelto. Non devi implementare a mano sessioni, blocchi, unione o completamento.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
 | `--base-url <url>` | Sì | Indirizzo del sito ImgHost |
-| `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
+| `--token <token>` | Sì | API Token; in alternativa usa `IMGHOST_API_TOKEN` |
 | `--file <path>` | Sì | Percorso del file locale |
 | `--channel <key>` | Sì | Canale di caricamento |
 | `--folder <path>` | No | Cartella di destinazione |

@@ -26,14 +26,14 @@ API Token بناتے یا ترمیم کرتے وقت یقینی بنائیں ک�
 آپ token کو environment variable میں بھی رکھ سکتے ہیں:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## اسکرپٹ ڈاؤن لوڈ کریں
 
 | اسکرپٹ | مقصد |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>فہرست سازی اور فلٹرنگ اسکرپٹ</a> | فائل مینیجر فہرست، صارف انتظام فہرست، اپ لوڈ چینل فہرست، اور ڈائریکٹری statistics۔ |
+| <a href="/tools/imghost-token-list.mjs" download>فہرست سازی اور فلٹرنگ اسکرپٹ</a> | فائل مینیجر فہرست، صارف انتظام فہرست، اپ لوڈ چینل فہرست، اور ڈائریکٹری statistics۔ |
 
 Node.js 18 یا بعد کا ورژن درکار ہے۔
 
@@ -42,7 +42,7 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
-| `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
+| `--token <token>` | ہاں | API Token۔ آپ `IMGHOST_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--retries <n>` | نہیں | عارضی ناکامی پر دوبارہ کوششوں کی تعداد۔ طے شدہ قدر `3`۔ |
 | `--timeout-ms <n>` | نہیں | ہر درخواست کا timeout۔ طے شدہ قدر `180000`۔ |
 | `--output <pretty\|json>` | نہیں | output format۔ طے شدہ قدر `pretty`؛ پروگراموں کے لیے `json` استعمال کریں۔ |
@@ -54,7 +54,7 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 فائل مینجمنٹ میں فائلیں list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON output:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 موجودہ filters کے تحت صرف count پڑھیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDFs تلاش کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 upload IP اور channel سے filter کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 مکمل نتیجہ محفوظ کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 صارف/IP اپ لوڈ statistics list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 IP یا address تلاش کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 ایک IP سے اپ لوڈ کی گئی فائلیں دیکھیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 بلاک شدہ upload IPs list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 اپ لوڈ سے بلاک صارفین list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 address keyword سے تلاش کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 upload count کے مطابق sort کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 حساس معلومات سے پاک اپ لوڈ چینل configuration list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 ڈائریکٹری statistics list کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 full directory paths list کریں اور prefix سے تلاش کریں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 طے شدہ `pretty` output انسانی پڑھنے کے لیے مناسب ہے:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 دوسرے پروگراموں کے لیے `--output json` استعمال کریں:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 آپ مکمل نتیجہ بھی محفوظ کر سکتے ہیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 چلائیں:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 اسکرپٹ تمام actions اور parameters list کرے گا۔

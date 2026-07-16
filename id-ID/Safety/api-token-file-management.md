@@ -19,14 +19,14 @@ Operasi tulis dalam skrip manajemen file secara default berada dalam mode pratin
 Token juga dapat diletakkan di variabel lingkungan:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Mengunduh Skrip
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>skrip manajemen file</a> | Metadata file, label moderasi, tag file, status daftar, pemindahan, penggantian nama, pembuatan folder, pemblokiran/pemulihan IP, serta pembuatan dan penghapusan Token unggahan jangka pendek |
+| <a href="/tools/imghost-token-manage.mjs" download>skrip manajemen file</a> | Metadata file, label moderasi, tag file, status daftar, pemindahan, penggantian nama, pembuatan folder, pemblokiran/pemulihan IP, serta pembuatan dan penghapusan Token unggahan jangka pendek |
 
 Untuk menjalankan skrip, Node.js 18 atau versi yang lebih baru harus terpasang di komputer lokal.
 
@@ -34,20 +34,20 @@ Untuk menjalankan skrip, Node.js 18 atau versi yang lebih baru harus terpasang d
 
 | Kemampuan | Skrip | Izin |
 | --- | --- | --- |
-| Mengunggah file | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Menampilkan daftar file, memfilter file, membaca statistik pengguna | `imgbed-token-list.mjs` | `list` |
-| Menghapus file yang ditentukan secara eksplisit | `imgbed-token-delete.mjs` | `delete` |
-| Mengedit informasi file, tag, daftar, memindahkan, mengganti nama, membuat folder, memblokir IP, membuat atau menghapus Token unggahan jangka pendek | `imgbed-token-manage.mjs` | `manage` |
+| Mengunggah file | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Menampilkan daftar file, memfilter file, membaca statistik pengguna | `imghost-token-list.mjs` | `list` |
+| Menghapus file yang ditentukan secara eksplisit | `imghost-token-delete.mjs` | `delete` |
+| Mengedit informasi file, tag, daftar, memindahkan, mengganti nama, membuat folder, memblokir IP, membuat atau menghapus Token unggahan jangka pendek | `imghost-token-manage.mjs` | `manage` |
 | Mengedit kanal unggahan, pengaturan keamanan, pengaturan halaman, pengaturan lain, relasi federasi | Skrip terkait manajemen konfigurasi | `manage` |
 
-`imgbed-token-manage.mjs` tidak mengunggah file, menampilkan daftar file, atau menghapus file. Jika perlu mencari `fileId`, gunakan skrip daftar untuk memfilter file terlebih dahulu. Jika perlu menghapus file, berikan `fileId` yang jelas ke skrip penghapusan.
+`imghost-token-manage.mjs` tidak mengunggah file, menampilkan daftar file, atau menghapus file. Jika perlu mencari `fileId`, gunakan skrip daftar untuk memfilter file terlebih dahulu. Jika perlu menghapus file, berikan `fileId` yang jelas ke skrip penghapusan.
 
 ## Parameter Umum
 
 | Parameter | Wajib | Deskripsi |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | URL situs ImgHost, misalnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token. Anda juga dapat menggunakan variabel lingkungan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token. Anda juga dapat menggunakan variabel lingkungan `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Tidak | Jumlah percobaan ulang untuk kegagalan sementara. Default `3` |
 | `--timeout-ms <n>` | Tidak | Batas waktu untuk satu permintaan. Default `180000` |
 | `--output <pretty\|json>` | Tidak | Format keluaran. Default `pretty`; untuk pemanggilan program, disarankan memakai `json` |
@@ -61,7 +61,7 @@ Untuk menjalankan skrip, Node.js 18 atau versi yang lebih baru harus terpasang d
 Sebagian besar tindakan pada skrip manajemen file membutuhkan `fileId`. Anda dapat mencarinya lebih dulu dengan skrip daftar:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Nilai `name` pada hasil yang dikembalikan biasanya adalah `fileId` yang dapat di
 Metadata file digunakan untuk mengubah nama file yang ditampilkan dan sumber baca di pengelolaan file panel admin.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Setelah memastikan hasil pratinjau sudah benar, simpan perubahan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Label moderasi sesuai dengan klasifikasi usia file. Anda dapat membaca label saa
 Membaca label moderasi:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Mengatur label moderasi:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Tag file digunakan untuk menambahkan tag bisnis yang dapat dicari ke file. Skrip
 Membaca tag file:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Menambahkan tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Menghapus tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Menimpa tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Menambahkan tag secara batch:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ Status daftar menentukan perilaku kontrol akses file dalam mode akses publik. St
 Menetapkan satu file ke daftar putih:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Menambahkan ke daftar hitam secara batch:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Mengembalikan status daftar default:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Pemindahan file akan memindahkan satu atau beberapa file ke direktori tujuan. Backend memproses maksimal `15` file dalam satu permintaan. Skrip akan otomatis memecah pekerjaan sesuai `--batch-size` menjadi beberapa permintaan dan menjalankannya berurutan.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Penggantian nama memakai ID file lama dan ID file baru yang jelas. ID file baru dapat hanya mengubah nama file, atau sekaligus mengubah direktori.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Saat mengganti nama secara batch, `--old-file-id` dan `--new-file-id` dapat diberikan berulang:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Pemetaan juga dapat ditulis ke file JSON:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 Direktori ImgHost berasal dari path file, sehingga tidak ada direktori kosong yang benar-benar berdiri sendiri. Saat skrip membuat folder, skrip akan membuat file placeholder `0.md` di direktori tujuan agar direktori tersebut muncul di pengelolaan file dan statistik direktori.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Dengan izin manajemen, IP tertentu dapat dimasukkan ke daftar larangan unggah, d
 Memblokir IP unggahan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Memulihkan IP unggahan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Melihat daftar IP yang saat ini dilarang mengunggah:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Izin manajemen dapat membuat Token khusus unggahan jangka pendek. Token ini selalu hanya memiliki izin `upload`, `autoDelete` selalu `true`, dan waktu kedaluwarsa paling lama `1` hari.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Anda juga dapat langsung memberikan timestamp milidetik:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Saat menghapus Token unggahan jangka pendek, berikan `id` yang dikembalikan oleh
 Menghapus Token unggahan jangka pendek:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 Keluaran default `pretty` cocok untuk dibaca manusia. Jika hasil akan diproses oleh program lain, gunakan `--output json`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Anda juga dapat menyimpan hasil lengkap:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Tidak. Unggahan memakai skrip unggahan, daftar dan filter memakai skrip daftar, 
 
 ### Bagaimana mengetahui fileId yang harus diberikan
 
-Gunakan `imgbed-token-list.mjs --files` terlebih dahulu untuk mencari file. Nilai `name` pada hasil yang dikembalikan biasanya adalah ID file, yaitu nilai yang diberikan ke `--file-id` di sini.
+Gunakan `imghost-token-list.mjs --files` terlebih dahulu untuk mencari file. Nilai `name` pada hasil yang dikembalikan biasanya adalah ID file, yaitu nilai yang diberikan ke `--file-id` di sini.
 
 ### Operasi batch sekali jalan maksimal berapa file
 

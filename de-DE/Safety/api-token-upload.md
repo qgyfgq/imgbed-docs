@@ -20,8 +20,8 @@ Die ImgHost-Dokumentation enthält zwei Node.js-Skripte:
 
 | Skript | Zweck |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>Skript für Hochladen mit einer Anfrage</a> | Ruft `/upload` nur einmal auf; geeignet für kleine Dateien und Schnittstellentests |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>Skript für Hochladen in Teilen</a> | Nutzt je nach Kanal Teilübertragung, direkte Übertragung oder eine Plattform-Sitzung; geeignet für große Dateien |
+| <a href="/tools/imghost-token-single-upload.mjs" download>Skript für Hochladen mit einer Anfrage</a> | Ruft `/upload` nur einmal auf; geeignet für kleine Dateien und Schnittstellentests |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>Skript für Hochladen in Teilen</a> | Nutzt je nach Kanal Teilübertragung, direkte Übertragung oder eine Plattform-Sitzung; geeignet für große Dateien |
 
 Erforderlich ist Node.js 18 oder neuer.
 
@@ -30,8 +30,8 @@ Erforderlich ist Node.js 18 oder neuer.
 Beide Skripte können zuerst die für den aktuellen API Token verfügbaren Hochladekanäle anzeigen:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 In diesem Modus sind `--file` und `--channel` nicht erforderlich. Die Ausgabe enthält den Standardkanal, den Schlüssel des Hauptkanals, die Namen der Unterkanäle und den Status der Lastverteilung. Geheime Schlüssel, Aktualisierungstoken und andere sensible Einstellungen werden nicht zurückgegeben.
@@ -50,7 +50,7 @@ Für große Dateien sollte zuerst das Skript für Hochladen in Teilen verwendet 
 Dieses Skript sendet die vollständige Datei in einer Anfrage an `/upload`:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Der API Token kann auch als Umgebungsvariable gesetzt werden:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parameter für Hochladen mit einer Anfrage
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
+| `--token <token>` | Ja | API Token; alternativ kann `IMGHOST_API_TOKEN` genutzt werden |
 | `--file <path>` | Ja | Lokaler Dateipfad |
 | `--channel <key>` | Ja | Echter Hochladekanal |
 | `--folder <path>` | Nein | Zielordner, zum Beispiel `photos/2026` oder `/user/` |
@@ -120,7 +120,7 @@ Bei Überschreitung zeigt das Skript lokal einen Fehler an. Für andere Kanäle 
 Das Skript für Hochladen in Teilen lässt zunächst die Serverseite per API Token das Ziel bestimmen und nutzt danach den Großdateipfad des gewählten Kanals. Der Benutzer muss keine Sitzung erstellen, keine Teile selbst senden, nichts zusammenführen und keinen Abschlussaufruf schreiben.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adresse der ImgHost-Website |
-| `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
+| `--token <token>` | Ja | API Token; alternativ kann `IMGHOST_API_TOKEN` genutzt werden |
 | `--file <path>` | Ja | Lokaler Dateipfad |
 | `--channel <key>` | Ja | Echter Hochladekanal |
 | `--folder <path>` | Nein | Zielordner |

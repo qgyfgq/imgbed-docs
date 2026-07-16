@@ -21,7 +21,7 @@ Le azioni di scrittura dei tre script di gestione sono in anteprima per impostaz
 Puoi anche mettere il Token in una variabile d'ambiente:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Scaricare gli script di gestione
@@ -30,9 +30,9 @@ La documentazione include tre script Node.js:
 
 | Script | Uso |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>script per le impostazioni di caricamento</a> | Gestisce canali di caricamento, sottocanali e bilanciamento del carico |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>script per le impostazioni del sito</a> | Gestisce sicurezza, pagine e altre impostazioni |
-| <a href="/tools/imgbed-token-federation.mjs" download>script di federazione</a> | Gestisce azioni leggere di relazione, richieste e messaggi |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>script per le impostazioni di caricamento</a> | Gestisce canali di caricamento, sottocanali e bilanciamento del carico |
+| <a href="/tools/imghost-token-site-settings.mjs" download>script per le impostazioni del sito</a> | Gestisce sicurezza, pagine e altre impostazioni |
+| <a href="/tools/imghost-token-federation.mjs" download>script di federazione</a> | Gestisce azioni leggere di relazione, richieste e messaggi |
 
 Serve Node.js 18 o superiore installato in locale.
 
@@ -41,7 +41,7 @@ Serve Node.js 18 o superiore installato in locale.
 | Parametro | Obbligatorio | Descrizione |
 | --- | --- | --- |
 | `--base-url <url>` | Sì | Indirizzo del sito ImgHost, ad esempio `https://image.ai6.me` |
-| `--token <token>` | Sì | API Token; in alternativa usa `IMGBED_API_TOKEN` |
+| `--token <token>` | Sì | API Token; in alternativa usa `IMGHOST_API_TOKEN` |
 | `--retries <n>` | No | Tentativi per errori temporanei; predefinito `3` |
 | `--timeout-ms <n>` | No | Tempo limite di ogni richiesta; predefinito `180000` |
 | `--output <pretty\|json>` | No | Formato di output; predefinito `pretty`; `json` è utile per automazione |
@@ -54,7 +54,7 @@ Serve Node.js 18 o superiore installato in locale.
 Lo script delle impostazioni di caricamento elenca, legge, crea o modifica ed elimina sottocanali di caricamento. Può anche attivare o disattivare il bilanciamento del carico di un canale principale.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Parametri delle impostazioni di caricamento
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Elencare tutte le impostazioni di caricamento:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Leggere la configurazione del canale S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Leggere un sottocanale S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Creare o modificare un sottocanale. Prima esegui senza `--apply` per vedere l'anteprima:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Poi salva:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Eliminare un sottocanale:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Attivare il bilanciamento del carico per S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Per modificare campi complessi in blocco, prepara un file JSON e usa `--patch-js
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Lo script delle impostazioni del sito gestisce tre aree:
 Usa prima `--list-sections` per vedere aree, sezioni e campi supportati:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ Nell'area `page`, `--set` usa l'id della voce di pagina, ad esempio `starsEffect
 Leggere le notifiche di aggiornamento del sistema:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Modificare l'email delle notifiche di aggiornamento. Prima esegui senza `--apply`:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Poi salva:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Modificare l'effetto stelle nella pagina admin:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Modificare la lingua della geolocalizzazione IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Aggiornare indici, eliminare indici di federazione e confermare cambi di dominio
 Vedere stato locale e relazioni:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Elencare solo i nodi a cui mi sono unito:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Elencare solo i nodi uniti al mio:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Richiedere adesione tramite link invito. Prima esegui senza `--apply`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Poi salva:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Rifare richiesta per un record senza relazione:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Accettare una richiesta verso il tuo nodo:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Rifiutare una richiesta verso il tuo nodo:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Inviare un messaggio a un nodo con relazione stabilita:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Annullare una richiesta `outgoing` pending:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Rimuovere una relazione `incoming` accettata:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Eliminare un record `incoming` terminale:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

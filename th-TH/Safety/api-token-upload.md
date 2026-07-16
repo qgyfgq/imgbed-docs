@@ -20,8 +20,8 @@ System Settings -> Security Settings -> API Token
 
 | สคริปต์ | วัตถุประสงค์ |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>สคริปต์อัปโหลดแบบคำขอเดียว</a> | เรียก `/upload` หนึ่งครั้ง เหมาะสำหรับไฟล์ขนาดเล็กและการทดสอบการเชื่อมต่อ |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>สคริปต์อัปโหลดแบบแบ่งส่วน</a> | ใช้การแบ่งส่วนผ่าน API Token, การอัปโหลดโดยตรง หรือเซสชันอัปโหลดของแพลตฟอร์ม แนะนำสำหรับไฟล์ขนาดใหญ่ |
+| <a href="/tools/imghost-token-single-upload.mjs" download>สคริปต์อัปโหลดแบบคำขอเดียว</a> | เรียก `/upload` หนึ่งครั้ง เหมาะสำหรับไฟล์ขนาดเล็กและการทดสอบการเชื่อมต่อ |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>สคริปต์อัปโหลดแบบแบ่งส่วน</a> | ใช้การแบ่งส่วนผ่าน API Token, การอัปโหลดโดยตรง หรือเซสชันอัปโหลดของแพลตฟอร์ม แนะนำสำหรับไฟล์ขนาดใหญ่ |
 
 ต้องใช้ Node.js 18 หรือใหม่กว่า
 
@@ -30,8 +30,8 @@ System Settings -> Security Settings -> API Token
 สคริปต์ทั้งสองสามารถแสดงช่องทางอัปโหลดที่ API Token ปัจจุบันใช้ได้:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 เมื่อแสดงช่องทาง ไม่จำเป็นต้องใช้ `--file` และ `--channel` ผลตอบกลับจะมีช่องทางอัปโหลดเริ่มต้น, key ของช่องทางอัปโหลด, ชื่อช่องทางย่อย และสถานะการกระจายโหลด ความลับ token สำหรับรีเฟรช และค่าการตั้งค่าที่ละเอียดอ่อนอื่น ๆ จะไม่ถูกส่งกลับ
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 สคริปต์แบบคำขอเดียวจะส่งคำขอหนึ่งครั้งไปยัง `/upload`
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 คุณสามารถใส่ token ไว้ในตัวแปรสภาพแวดล้อมได้ด้วย:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### พารามิเตอร์แบบคำขอเดียว
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
 | `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost เช่น `https://image.ai6.me` |
-| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
+| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGHOST_API_TOKEN` ได้ด้วย |
 | `--file <path>` | ใช่ | เส้นทางไฟล์ในเครื่อง |
 | `--channel <key>` | ใช่ | ช่องทางอัปโหลด |
 | `--folder <path>` | ไม่ | โฟลเดอร์อัปโหลด เช่น `photos/2026` หรือ `/user/` |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 สคริปต์อัปโหลดแบบแบ่งส่วนจะขอให้ฝั่งเซิร์ฟเวอร์ระบุไฟล์เป้าหมายก่อน จากนั้นจึงทำตามขั้นตอนไฟล์ขนาดใหญ่ของช่องทางที่เลือก คุณไม่จำเป็นต้องเขียนคำขอสร้างเซสชันส่วนย่อย รวมส่วน หรือเสร็จสิ้นเอง
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
 | `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost |
-| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
+| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGHOST_API_TOKEN` ได้ด้วย |
 | `--file <path>` | ใช่ | เส้นทางไฟล์ในเครื่อง |
 | `--channel <key>` | ใช่ | ช่องทางอัปโหลด |
 | `--folder <path>` | ไม่ | โฟลเดอร์อัปโหลด |

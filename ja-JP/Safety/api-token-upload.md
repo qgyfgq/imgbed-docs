@@ -20,8 +20,8 @@ API Token を作成または編集するときは、アップロード権限を�
 
 | スクリプト | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>単発アップロードスクリプト</a> | `/upload` を 1 回だけ呼びます。小さなファイルや接続確認に向いています。 |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>分割アップロードスクリプト</a> | API Token の分割、直アップロード、または各プラットフォームのアップロードセッションを使います。大きなファイル向けです。 |
+| <a href="/tools/imghost-token-single-upload.mjs" download>単発アップロードスクリプト</a> | `/upload` を 1 回だけ呼びます。小さなファイルや接続確認に向いています。 |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>分割アップロードスクリプト</a> | API Token の分割、直アップロード、または各プラットフォームのアップロードセッションを使います。大きなファイル向けです。 |
 
 実行には Node.js 18 以上が必要です。
 
@@ -30,8 +30,8 @@ API Token を作成または編集するときは、アップロード権限を�
 どちらのスクリプトでも、現在の API Token で使えるアップロードチャンネルを先に確認できます。
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 チャンネル一覧を取得するだけなら、`--file` と `--channel` は不要です。返される内容には、既定アップロードチャンネル、大チャンネルのキー、子チャンネル名、負荷分散の状態が含まれます。秘密鍵、更新トークンなどの機密設定は返されません。
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 単発アップロードスクリプトは `/upload` へ 1 回だけリクエストします。
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token は環境変数にも設定できます。
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### 単発アップロードのパラメータ
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
 | `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
-| `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
+| `--token <token>` | はい | API Token。`IMGHOST_API_TOKEN` 環境変数も使えます。 |
 | `--file <path>` | はい | ローカルファイルのパス。 |
 | `--channel <key>` | はい | アップロードチャンネル。 |
 | `--folder <path>` | いいえ | アップロード先フォルダ。例: `photos/2026` または `/user/` |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 分割アップロードスクリプトは、まず API Token でサーバー側にアップロード先を解決させ、その後チャンネルに合った大容量アップロード手順を実行します。分割セッション、結合、完了リクエストを自分で実装する必要はありません。
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
 | `--base-url <url>` | はい | ImgHost サイトの URL。 |
-| `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
+| `--token <token>` | はい | API Token。`IMGHOST_API_TOKEN` 環境変数も使えます。 |
 | `--file <path>` | はい | ローカルファイルのパス。 |
 | `--channel <key>` | はい | アップロードチャンネル。 |
 | `--folder <path>` | いいえ | アップロード先フォルダ。 |

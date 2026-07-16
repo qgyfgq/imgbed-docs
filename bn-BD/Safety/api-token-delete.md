@@ -2,7 +2,7 @@
 
 API Token দিয়ে ফাইল মুছে ফেলা স্ক্রিপ্ট, স্বয়ংক্রিয় কাজ এবং তৃতীয় পক্ষের প্রোগ্রামের জন্য তৈরি. অ্যাডমিন পাতা খুলতে হবে না. সাইটের URL, token এবং স্পষ্ট ফাইল ID দিলে ImgHost থেকে এক বা একাধিক ফাইল মুছে ফেলা যায়.
 
-মুছে ফেলা একটি লেখার কাজ এবং কমান্ড চালানোর পর ডেটা সত্যিই মুছে যায়. আগে `imgbed-token-list.mjs` ব্যবহার করে যে `fileId` মানগুলো মুছতে চান সেগুলো নিশ্চিত করুন, তারপর সেই IDগুলো মুছে ফেলার স্ক্রিপ্টে দিন.
+মুছে ফেলা একটি লেখার কাজ এবং কমান্ড চালানোর পর ডেটা সত্যিই মুছে যায়. আগে `imghost-token-list.mjs` ব্যবহার করে যে `fileId` মানগুলো মুছতে চান সেগুলো নিশ্চিত করুন, তারপর সেই IDগুলো মুছে ফেলার স্ক্রিপ্টে দিন.
 
 ![API Token সম্পাদনা](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token তৈরি বা সম্পাদনা করার সময় �
 token পরিবেশ চলকেও রাখা যায়:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## স্ক্রিপ্ট ডাউনলোড
 
 | স্ক্রিপ্ট | উদ্দেশ্য |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>ফাইল মুছে ফেলার স্ক্রিপ্ট</a> | স্পষ্টভাবে দেওয়া এক বা একাধিক ফাইল ID মুছে ফেলা. |
+| <a href="/tools/imghost-token-delete.mjs" download>ফাইল মুছে ফেলার স্ক্রিপ্ট</a> | স্পষ্টভাবে দেওয়া এক বা একাধিক ফাইল ID মুছে ফেলা. |
 
 Node.js 18 বা তার নতুন সংস্করণ প্রয়োজন.
 
@@ -64,7 +64,7 @@ API একটি NDJSON অগ্রগতি স্ট্রিম ফেরত
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
 | `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL, যেমন `https://image.ai6.me`. |
-| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
+| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGHOST_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--file-id <id>` | হ্যাঁ | মুছে ফেলার ফাইল ID. একাধিকবার দেওয়া যায়. |
 | `--strictness <strict\|soft>` | না | মুছে ফেলার কঠোরতা. ডিফল্ট `strict`. |
 | `--batch-size <n>` | না | প্রতি অনুরোধে ফাইল সংখ্যা. ডিফল্ট `15`, সর্বোচ্চ `15`. |
@@ -90,7 +90,7 @@ API একটি NDJSON অগ্রগতি স্ট্রিম ফেরত
 একটি ফাইল মুছে ফেলা:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 পরিবেশ চলক থেকে token ব্যবহার:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 একাধিক ফাইল মুছে ফেলা:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 দূরবর্তী মুছে ফেলা ব্যর্থ হলেও ImgHost রেকর্ড পরিষ্কার করা:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON আউটপুট দিয়ে ফলাফল সংরক্ষণ:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 প্রতিটি অনুরোধ 5 ফাইলে সীমিত করা:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 মুছে ফেলার স্ক্রিপ্টে ImgHost ফাইল ID লাগে. আগে তালিকা স্ক্রিপ্ট দিয়ে কোনো ডিরেক্টরির ফাইল পরীক্ষা করতে পারেন:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

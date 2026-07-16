@@ -96,17 +96,17 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token list tool
 
 Usage:
-  node imgbed-token-list.mjs --base-url <url> --token <token> --files [filters]
-  node imgbed-token-list.mjs --base-url <url> --token <token> --file-summary [filters]
-  node imgbed-token-list.mjs --base-url <url> --token <token> --channels
-  node imgbed-token-list.mjs --base-url <url> --token <token> --directories [directory filters]
-  node imgbed-token-list.mjs --base-url <url> --token <token> --users [filters]
-  node imgbed-token-list.mjs --base-url <url> --token <token> --user-detail --ip <ip> [filters]
-  node imgbed-token-list.mjs --base-url <url> --token <token> --blocked-ips
+  node imghost-token-list.mjs --base-url <url> --token <token> --files [filters]
+  node imghost-token-list.mjs --base-url <url> --token <token> --file-summary [filters]
+  node imghost-token-list.mjs --base-url <url> --token <token> --channels
+  node imghost-token-list.mjs --base-url <url> --token <token> --directories [directory filters]
+  node imghost-token-list.mjs --base-url <url> --token <token> --users [filters]
+  node imghost-token-list.mjs --base-url <url> --token <token> --user-detail --ip <ip> [filters]
+  node imghost-token-list.mjs --base-url <url> --token <token> --blocked-ips
 
 Required:
   --base-url <url>             ImgHost site URL, for example https://image.ai6.me
-  --token <token>              API Token with list permission. You can also set IMGBED_API_TOKEN.
+  --token <token>              API Token with list permission. You can also set IMGHOST_API_TOKEN.
 
 Actions:
   --files                      List files from /api/manage/list.
@@ -176,7 +176,7 @@ Notes:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     action: '',
     retries: 3,
     timeoutMs: 180000,
@@ -354,7 +354,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (!args.action) throw new Error('One action is required. Use --help to see actions.');
   if (args.action === 'user-detail' && !String(args.params.ip || '').trim()) {
     throw new Error('--ip is required for --user-detail');

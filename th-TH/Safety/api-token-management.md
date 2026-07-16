@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 คุณสามารถใส่ token ไว้ในตัวแปรสภาพแวดล้อมได้ด้วย:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ดาวน์โหลดสคริปต์จัดการ
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | สคริปต์ | วัตถุประสงค์ |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>สคริปต์จัดการการตั้งค่าอัปโหลด</a> | จัดการช่องทางอัปโหลด ช่องทางย่อย และการกระจายโหลด |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>สคริปต์จัดการการตั้งค่าไซต์</a> | จัดการการตั้งค่าความปลอดภัย การตั้งค่าหน้า และการตั้งค่าอื่น ๆ |
-| <a href="/tools/imgbed-token-federation.mjs" download>สคริปต์จัดการความสัมพันธ์สหพันธ์</a> | จัดการการดำเนินการเบาของความสัมพันธ์สหพันธ์ คำขอ และข้อความ |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>สคริปต์จัดการการตั้งค่าอัปโหลด</a> | จัดการช่องทางอัปโหลด ช่องทางย่อย และการกระจายโหลด |
+| <a href="/tools/imghost-token-site-settings.mjs" download>สคริปต์จัดการการตั้งค่าไซต์</a> | จัดการการตั้งค่าความปลอดภัย การตั้งค่าหน้า และการตั้งค่าอื่น ๆ |
+| <a href="/tools/imghost-token-federation.mjs" download>สคริปต์จัดการความสัมพันธ์สหพันธ์</a> | จัดการการดำเนินการเบาของความสัมพันธ์สหพันธ์ คำขอ และข้อความ |
 
 ต้องใช้ Node.js 18 หรือใหม่กว่า
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
 | `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost เช่น `https://image.ai6.me` |
-| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
+| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGHOST_API_TOKEN` ได้ด้วย |
 | `--retries <n>` | ไม่ | จำนวนครั้งที่ลองใหม่เมื่อเกิดความล้มเหลวชั่วคราว ค่าเริ่มต้นคือ `3` |
 | `--timeout-ms <n>` | ไม่ | เวลาหมดอายุคำขอ ค่าเริ่มต้นคือ `180000` |
 | `--output <pretty\|json>` | ไม่ | รูปแบบผลลัพธ์ ค่าเริ่มต้นคือ `pretty`; ใช้ `json` สำหรับโปรแกรม |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 สคริปต์การตั้งค่าอัปโหลดจะแสดง อ่าน สร้าง แก้ไข และลบช่องทางย่อยของการอัปโหลดได้ และยังเปิดหรือปิดการกระจายโหลดของช่องทางอัปโหลดระดับบนหนึ่งช่องทางได้
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### พารามิเตอร์การตั้งค่าอัปโหลด
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 แสดงการตั้งค่าอัปโหลดทั้งหมด:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 อ่านการกำหนดค่าช่องทาง S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 อ่านช่องทางย่อย S3 หนึ่งรายการ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 สร้างหรือแก้ไขช่องทางย่อยหนึ่งรายการ เรียกใช้โดยไม่มี `--apply` ก่อนเพื่อดูตัวอย่าง:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 จากนั้นบันทึกหลังจากยืนยันแล้ว:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 ลบช่องทางย่อยหนึ่งรายการ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 เปิดการกระจายโหลด S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 ใช้ `--list-sections` ก่อนเพื่อดูพื้นที่ ส่วน และฟิลด์ที่แก้ไขได้:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 อ่านการตั้งค่าการแจ้งเตือนอัปเดตระบบ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 เปลี่ยนอีเมลแจ้งเตือนอัปเดตระบบ เรียกใช้โดยไม่มี `--apply` ก่อนเพื่อดูตัวอย่าง:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 จากนั้นบันทึกหลังจากยืนยันแล้ว:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 เปลี่ยนเอฟเฟกต์ดาวบนหน้าผู้ดูแลระบบ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 เปลี่ยนภาษาตำแหน่งทางภูมิศาสตร์ของ IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 ดูสถานะโหนดภายในและรายการความสัมพันธ์ทั้งสองฝั่ง:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 แสดงเฉพาะโหนดขาออก:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 แสดงเฉพาะโหนดขาเข้า:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 ขอเข้าร่วมโหนดอื่น เรียกใช้โดยไม่มี `--apply` ก่อนเพื่อดูตัวอย่าง:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 จากนั้นบันทึกหลังจากยืนยันแล้ว:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 สมัครซ้ำสำหรับความสัมพันธ์ที่ไม่มีบันทึก:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 ยอมรับคำขอขาเข้า:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 ปฏิเสธคำขอขาเข้า:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 ส่งข้อความถึงความสัมพันธ์ที่ตั้งขึ้นแล้ว:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 ยกเลิกคำขอขาออกที่รอดำเนินการ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 ลบความสัมพันธ์ขาเข้าที่ได้รับการยอมรับ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 ลบบันทึกขาเข้าที่สิ้นสุดแล้ว:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

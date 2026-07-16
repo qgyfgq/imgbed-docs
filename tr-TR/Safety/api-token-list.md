@@ -26,14 +26,14 @@ API Token oluştururken veya düzenlerken bu Token için listeleme izninin açı
 Token ortam değişkenine de konabilir:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Betiği indirme
 
 | Betik | Kullanım |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>Listeleme ve filtreleme betiği</a> | Dosya yönetimi listesi, kullanıcı yönetimi listesi, yükleme kanalı listesi, klasör istatistik tablosu |
+| <a href="/tools/imghost-token-list.mjs" download>Listeleme ve filtreleme betiği</a> | Dosya yönetimi listesi, kullanıcı yönetimi listesi, yükleme kanalı listesi, klasör istatistik tablosu |
 
 Node.js 18 veya üzeri gerekir.
 
@@ -42,7 +42,7 @@ Node.js 18 veya üzeri gerekir.
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
-| `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` da kullanılabilir |
+| `--token <token>` | Evet | API Token; `IMGHOST_API_TOKEN` da kullanılabilir |
 | `--retries <n>` | Hayır | Geçici hatalarda tekrar sayısı; varsayılan `3` |
 | `--timeout-ms <n>` | Hayır | Tek isteğin zaman aşımı; varsayılan `180000` |
 | `--output <pretty\|json>` | Hayır | Çıktı formatı; varsayılan `pretty`. Programlı kullanım için `json` önerilir |
@@ -54,7 +54,7 @@ Node.js 18 veya üzeri gerekir.
 Dosya yönetimindeki dosyaları listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON çıktısı verme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Geçerli filtre koşullarındaki sayıyı okuma:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF arama:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Yükleme IP'sine ve kanala göre filtreleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Tam sonucu kaydetme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Kullanıcı/IP yükleme istatistiklerini listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Belirli bir IP veya konum arama:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Belirli bir IP tarafından yüklenen dosya ayrıntılarını görme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Yüklemesi engellenen IP'leri listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Yüklemesi engellenen kullanıcıları listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Konum anahtar kelimesiyle arama:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Yükleme sayısına göre sıralama:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Hassas bilgileri çıkarılmış yükleme kanalı yapılandırmasını listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Bu API gizli anahtarları, yenileme token değerlerini, geçici token değerleri
 Klasör istatistiklerini listeleme:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Tam klasör yollarını listeleme ve ön ekle arama:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Varsayılan `pretty` çıktısı insan tarafından okumaya uygundur:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Sonucu başka bir program işleyecekse `--output json` kullanın:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Tam sonuç da kaydedilebilir:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ Dosya yönetimi listesi, kullanıcı yönetimi listesi, hassas bilgileri çıkar
 Şunu çalıştırın:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Betik tüm işlemleri ve parametreleri gösterir.

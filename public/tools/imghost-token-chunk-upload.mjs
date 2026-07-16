@@ -29,12 +29,12 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token upload tool
 
 Usage:
-  node imgbed-token-chunk-upload.mjs --base-url <url> --token <token> --file <path> --channel <key>
-  node imgbed-token-chunk-upload.mjs --base-url <url> --token <token> --list-channels
+  node imghost-token-chunk-upload.mjs --base-url <url> --token <token> --file <path> --channel <key>
+  node imghost-token-chunk-upload.mjs --base-url <url> --token <token> --list-channels
 
 Required:
   --base-url <url>       ImgHost site URL, for example https://image.ai6.me
-  --token <token>        API Token. You can also set IMGBED_API_TOKEN.
+  --token <token>        API Token. You can also set IMGHOST_API_TOKEN.
   --file <path>          Local file path.
   --channel <key>        Upload channel:
                          telegram, discord, cfr2, github, gitlab, webdav,
@@ -66,7 +66,7 @@ Notes:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     file: '',
     channel: '',
     uploadFolder: '',
@@ -152,7 +152,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (args.listChannels) return;
   if (!args.file) throw new Error('--file is required');
   if (!args.channel) throw new Error('--channel is required');

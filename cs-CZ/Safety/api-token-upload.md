@@ -20,8 +20,8 @@ Dokumentace ImgHost obsahuje dva skripty pro Node.js:
 
 | Skript | Účel |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>skript pro nahrání jedním požadavkem</a> | Zavolá `/upload` pouze jednou; hodí se pro malé soubory a zkoušku rozhraní |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>skript pro nahrávání po částech</a> | Podle kanálu použije nahrávání po částech, přímé nahrávání nebo relaci dané platformy; hodí se pro velké soubory |
+| <a href="/tools/imghost-token-single-upload.mjs" download>skript pro nahrání jedním požadavkem</a> | Zavolá `/upload` pouze jednou; hodí se pro malé soubory a zkoušku rozhraní |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>skript pro nahrávání po částech</a> | Podle kanálu použije nahrávání po částech, přímé nahrávání nebo relaci dané platformy; hodí se pro velké soubory |
 
 Na místním počítači je potřeba Node.js 18 nebo novější.
 
@@ -30,8 +30,8 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 Oba skripty umějí před nahráváním vypsat kanály dostupné pro aktuální API Token:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 V tomto režimu není potřeba zadávat `--file` ani `--channel`. Výsledek obsahuje výchozí nahrávací kanál, klíč hlavního kanálu, názvy podkanálů a stav vyvažování zátěže. Tajné klíče, obnovovací tokeny ani citlivá konfigurace se nevracejí.
@@ -50,7 +50,7 @@ U velkých souborů nejdříve použijte skript pro nahrávání po částech. N
 Tento skript pošle celý soubor do `/upload` v jednom požadavku:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 API Token lze zadat také proměnnou prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parametry nahrání jedním požadavkem
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ano | Cesta k místnímu souboru |
 | `--channel <key>` | Ano | Skutečný nahrávací kanál |
 | `--folder <path>` | Ne | Cílová složka, například `photos/2026` nebo `/user/` |
@@ -120,7 +120,7 @@ Při překročení limitu skript vypíše místní chybu ještě před odeslán�
 Skript pro nahrávání po částech nejprve pomocí API Token požádá serverovou stranu o určení cíle nahrání a potom použije cestu pro velké soubory daného kanálu. Uživatel nemusí ručně vytvářet relaci, posílat části, spojovat soubor ani posílat dokončovací požadavek.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ano | Cesta k místnímu souboru |
 | `--channel <key>` | Ano | Skutečný nahrávací kanál |
 | `--folder <path>` | Ne | Cílová složka |

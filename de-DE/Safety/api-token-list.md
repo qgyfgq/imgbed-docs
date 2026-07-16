@@ -26,14 +26,14 @@ Beim Erstellen oder Bearbeiten des API Token muss die Berechtigung zum Auflisten
 Der API Token kann auch als Umgebungsvariable gesetzt werden:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Skript herunterladen
 
 | Skript | Zweck |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>Skript zum Auflisten und Filtern</a> | Dateiverwaltung auflisten, Benutzerverwaltung auflisten, Hochladekanäle auflisten und Ordnerstatistiken lesen |
+| <a href="/tools/imghost-token-list.mjs" download>Skript zum Auflisten und Filtern</a> | Dateiverwaltung auflisten, Benutzerverwaltung auflisten, Hochladekanäle auflisten und Ordnerstatistiken lesen |
 
 Erforderlich ist Node.js 18 oder neuer.
 
@@ -42,7 +42,7 @@ Erforderlich ist Node.js 18 oder neuer.
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
+| `--token <token>` | Ja | API Token; alternativ kann `IMGHOST_API_TOKEN` genutzt werden |
 | `--retries <n>` | Nein | Wiederholungen bei vorübergehenden Fehlern; Standardwert `3` |
 | `--timeout-ms <n>` | Nein | Zeitlimit einer Anfrage; Standardwert `180000` |
 | `--output <pretty\|json>` | Nein | Ausgabeformat; Standardwert `pretty`; für Programmaufrufe empfiehlt sich `json` |
@@ -54,7 +54,7 @@ Erforderlich ist Node.js 18 oder neuer.
 Dateien in der Dateiverwaltung auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON ausgeben:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Nur die Anzahl unter den aktuellen Filterbedingungen lesen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF suchen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Nach Upload-IP und Kanal filtern:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Vollständiges Ergebnis speichern:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Upload-Statistiken nach Benutzer oder IP auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Nach einer IP oder Adresse suchen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Dateien anzeigen, die von einer bestimmten IP hochgeladen wurden:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 IP-Adressen mit Upload-Sperre auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Benutzer mit Upload-Sperre auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Nach einem Adressbegriff suchen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Nach Upload-Anzahl sortieren:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Bereinigte Konfiguration der Hochladekanäle auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Diese Schnittstelle gibt keine geheimen Schlüssel, Aktualisierungstoken, tempor
 Ordnerstatistiken auflisten:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Vollständige Ordnerpfade auflisten und nach Präfix suchen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Die Standardausgabe `pretty` eignet sich zum Lesen durch Menschen:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Für die Verarbeitung durch andere Programme verwende `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Das vollständige Ergebnis kann ebenfalls gespeichert werden:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ Dateiverwaltung auflisten, Benutzerverwaltung auflisten, bereinigte Kanallisten 
 Führe aus:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Das Skript listet alle Aktionen und Parameter auf.

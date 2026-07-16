@@ -2,7 +2,7 @@
 
 Skrip padam melalui API Token sesuai untuk skrip, automasi dan aplikasi pihak ketiga. Anda tidak perlu membuka panel pentadbir; cukup berikan alamat laman, Token dan ID fail yang jelas untuk memadam satu atau beberapa fail dalam ImgHost.
 
-Pemadaman ialah operasi tulis. Selepas arahan dijalankan, fail benar-benar akan dipadam. Sebaiknya semak dahulu `fileId` yang hendak dipadam dengan `imgbed-token-list.mjs`, kemudian serahkan ID tersebut kepada skrip padam.
+Pemadaman ialah operasi tulis. Selepas arahan dijalankan, fail benar-benar akan dipadam. Sebaiknya semak dahulu `fileId` yang hendak dipadam dengan `imghost-token-list.mjs`, kemudian serahkan ID tersebut kepada skrip padam.
 
 ![Sunting API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Semasa mencipta atau mengedit API Token, pastikan Token tersebut dibenarkan untu
 Token juga boleh diletakkan dalam pemboleh ubah persekitaran:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Muat turun skrip
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>skrip padam fail</a> | Memadam satu atau beberapa ID fail yang dinyatakan dengan jelas |
+| <a href="/tools/imghost-token-delete.mjs" download>skrip padam fail</a> | Memadam satu atau beberapa ID fail yang dinyatakan dengan jelas |
 
 Skrip ini memerlukan Node.js 18 atau lebih baharu.
 
@@ -64,7 +64,7 @@ Selepas pemadaman berjaya, pelayan turut mengurus indeks fail, statistik direkto
 | Parameter | Wajib | Maksud |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat laman ImgHost, contohnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token; boleh diganti dengan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token; boleh diganti dengan `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Ya | ID fail yang hendak dipadam; boleh dihantar berulang kali |
 | `--strictness <strict\|soft>` | Tidak | Tahap ketegasan pemadaman; lalai `strict` |
 | `--batch-size <n>` | Tidak | Jumlah fail untuk satu permintaan; lalai `15`, maksimum `15` |
@@ -90,7 +90,7 @@ Jika anda mahu pemadaman hanya dianggap berjaya apabila fail jauh turut dipadam,
 Padam satu fail:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Gunakan Token daripada pemboleh ubah persekitaran:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Padam beberapa fail:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Bersihkan rekod ImgHost walaupun pemadaman jauh gagal:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Keluarkan JSON dan simpan keputusan:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Hadkan satu permintaan kepada 5 fail:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Skrip padam memerlukan ID fail ImgHost. Anda boleh menggunakan skrip senarai untuk melihat fail dalam direktori terlebih dahulu:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

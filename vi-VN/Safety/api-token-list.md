@@ -26,14 +26,14 @@ Khi tạo hoặc chỉnh sửa API Token, hãy bảo đảm token cho phép li�
 Bạn cũng có thể đặt token trong biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Tải tập lệnh
 
 | Tập lệnh | Mục đích |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>tập lệnh liệt kê và lọc</a> | Liệt kê trong trình quản lý tệp, liệt kê trong quản lý người dùng, danh sách kênh tải lên và thống kê thư mục. |
+| <a href="/tools/imghost-token-list.mjs" download>tập lệnh liệt kê và lọc</a> | Liệt kê trong trình quản lý tệp, liệt kê trong quản lý người dùng, danh sách kênh tải lên và thống kê thư mục. |
 
 Yêu cầu Node.js 18 trở lên.
 
@@ -42,7 +42,7 @@ Yêu cầu Node.js 18 trở lên.
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | Không | Số lần thử lại khi lỗi tạm thời. Mặc định là `3`. |
 | `--timeout-ms <n>` | Không | Thời gian chờ cho mỗi yêu cầu. Mặc định là `180000`. |
 | `--output <pretty\|json>` | Không | Định dạng đầu ra. Mặc định là `pretty`; dùng `json` cho chương trình. |
@@ -54,7 +54,7 @@ Yêu cầu Node.js 18 trở lên.
 Liệt kê tệp trong quản lý tệp:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Xuất JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Chỉ đọc số lượng theo các bộ lọc hiện tại:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 Tìm PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Lọc theo IP tải lên và kênh:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Lưu toàn bộ kết quả:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Liệt kê thống kê tải lên của người dùng/IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Tìm một IP hoặc địa chỉ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Xem tệp do một IP tải lên:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Liệt kê IP bị chặn tải lên:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Liệt kê người dùng bị chặn tải lên:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Tìm theo từ khóa địa chỉ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Sắp xếp theo số lượt tải lên:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Liệt kê cấu hình kênh tải lên đã loại bỏ dữ liệu nhạy cảm:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ API này không trả về secret, token làm mới, access token, mật khẩu 
 Liệt kê thống kê thư mục:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Liệt kê đường dẫn thư mục đầy đủ và tìm theo tiền tố:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Đầu ra `pretty` mặc định phù hợp để người đọc:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Với chương trình khác, dùng `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Bạn cũng có thể lưu toàn bộ kết quả:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ Liệt kê trong trình quản lý tệp, liệt kê trong quản lý người d
 Chạy:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Tập lệnh sẽ liệt kê tất cả thao tác và tham số.

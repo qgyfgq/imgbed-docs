@@ -2,7 +2,7 @@
 
 API Token 삭제 스크립트는 스크립트, 자동화 작업, 외부 프로그램에서 ImgHost 파일을 삭제할 때 사용합니다. 관리자 화면을 열지 않아도 사이트 주소, Token, 명확한 파일 ID를 전달하면 ImgHost 안의 파일을 하나 또는 여러 개 삭제할 수 있습니다.
 
-삭제는 쓰기 작업입니다. 명령을 실행하면 실제로 파일이 삭제됩니다. 먼저 `imgbed-token-list.mjs`로 삭제할 `fileId`를 정확히 확인한 뒤, 그 ID를 삭제 스크립트에 전달하는 것을 권장합니다.
+삭제는 쓰기 작업입니다. 명령을 실행하면 실제로 파일이 삭제됩니다. 먼저 `imghost-token-list.mjs`로 삭제할 `fileId`를 정확히 확인한 뒤, 그 ID를 삭제 스크립트에 전달하는 것을 권장합니다.
 
 ![API Token 편집](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token을 만들거나 수정할 때 이 Token에 삭제 권한이 있는지 
 Token은 환경 변수에 넣을 수도 있습니다.
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 삭제 스크립트 다운로드
 
 | 스크립트 | 용도 |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>파일 삭제 스크립트</a> | 명확히 지정한 파일 ID를 하나 또는 여러 개 삭제합니다 |
+| <a href="/tools/imghost-token-delete.mjs" download>파일 삭제 스크립트</a> | 명확히 지정한 파일 ID를 하나 또는 여러 개 삭제합니다 |
 
 실행하려면 Node.js 18 이상이 필요합니다.
 
@@ -64,7 +64,7 @@ API는 NDJSON 진행 스트림을 반환합니다. 자주 나오는 이벤트에
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--file-id <id>` | 예 | 삭제할 파일 ID. 여러 번 전달할 수 있습니다. |
 | `--strictness <strict\|soft>` | 아니요 | 삭제 엄격도. 기본값은 `strict`입니다. |
 | `--batch-size <n>` | 아니요 | 요청 한 번에 삭제할 파일 수. 기본값은 `15`, 최대값도 `15`입니다. |
@@ -90,7 +90,7 @@ API는 NDJSON 진행 스트림을 반환합니다. 자주 나오는 이벤트에
 파일 하나 삭제:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 환경 변수의 Token 사용:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 파일 여러 개 삭제:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 원격 삭제가 실패해도 ImgHost 기록 정리:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON으로 출력하고 결과 저장:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 요청 한 번에 삭제할 파일 수를 5개로 제한:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 삭제 스크립트에 필요한 값은 ImgHost 파일 ID입니다. 먼저 목록 스크립트로 디렉터리 안의 파일을 확인할 수 있습니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

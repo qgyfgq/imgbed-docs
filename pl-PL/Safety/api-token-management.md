@@ -21,7 +21,7 @@ Wszystkie trzy skrypty zarządzania domyślnie używają trybu próbnego dla ope
 Token możesz także umieścić w zmiennej środowiskowej:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Pobieranie skryptów zarządzania
@@ -30,9 +30,9 @@ Pakiet dokumentacji udostępnia trzy skrypty Node.js:
 
 | Skrypt | Przeznaczenie |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>skrypt zarządzania ustawieniami przesyłania</a> | Zarządza kanałami przesyłania, kanałami podrzędnymi i równoważeniem obciążenia. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>skrypt zarządzania ustawieniami witryny</a> | Zarządza ustawieniami bezpieczeństwa, ustawieniami stron i innymi ustawieniami. |
-| <a href="/tools/imgbed-token-federation.mjs" download>skrypt zarządzania relacjami federacji</a> | Zarządza lekkimi akcjami relacji federacji, żądaniami i wiadomościami. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>skrypt zarządzania ustawieniami przesyłania</a> | Zarządza kanałami przesyłania, kanałami podrzędnymi i równoważeniem obciążenia. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>skrypt zarządzania ustawieniami witryny</a> | Zarządza ustawieniami bezpieczeństwa, ustawieniami stron i innymi ustawieniami. |
+| <a href="/tools/imghost-token-federation.mjs" download>skrypt zarządzania relacjami federacji</a> | Zarządza lekkimi akcjami relacji federacji, żądaniami i wiadomościami. |
 
 Wymagany jest Node.js 18 lub nowszy.
 
@@ -41,7 +41,7 @@ Wymagany jest Node.js 18 lub nowszy.
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
 | `--base-url <url>` | Tak | Adres URL witryny ImgHost, na przykład `https://image.ai6.me`. |
-| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGBED_API_TOKEN`. |
+| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | Nie | Liczba ponowień przy błędach tymczasowych. Domyślnie `3`. |
 | `--timeout-ms <n>` | Nie | Limit czasu żądania. Domyślnie `180000`. |
 | `--output <pretty\|json>` | Nie | Format wyjścia. Domyślnie `pretty`; dla programów używaj `json`. |
@@ -54,7 +54,7 @@ Wymagany jest Node.js 18 lub nowszy.
 Skrypt ustawień przesyłania wyświetla, odczytuje, tworzy, edytuje i usuwa podrzędne kanały przesyłania. Może też przełączać równoważenie obciążenia dla jednego kanału przesyłania najwyższego poziomu.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Parametry ustawień przesyłania
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Wyświetlenie wszystkich ustawień przesyłania:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Odczyt konfiguracji kanału S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Odczyt jednego kanału podrzędnego S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Tworzenie lub edycja jednego kanału podrzędnego. Najpierw uruchom bez `--apply`, aby zobaczyć podgląd:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Następnie zapisz po potwierdzeniu:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Usunięcie jednego kanału podrzędnego:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Włączenie równoważenia obciążenia S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ W przypadku złożonych pól zapisz plik JSON i przekaż go przez `--patch-json`
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Skrypt ustawień witryny zarządza trzema obszarami konfiguracji:
 Najpierw użyj `--list-sections`, aby zobaczyć edytowalne obszary, sekcje i pola:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ Dla obszaru `page` parametr `--set` używa identyfikatorów elementów konfigura
 Odczyt ustawień powiadomień o aktualizacjach systemu:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Zmiana adresu e-mail powiadomień o aktualizacjach systemu. Najpierw uruchom bez `--apply`, aby zobaczyć podgląd:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Następnie zapisz po potwierdzeniu:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Zmiana efektu gwiazd na stronie administratora:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Zmiana języka geolokalizacji IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Aktualizacja indeksu, usuwanie indeksu federacji i potwierdzenie zmiany domeny z
 Wyświetlenie statusu lokalnego węzła i obu list relacji:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Wyświetlenie tylko węzłów wychodzących:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Wyświetlenie tylko węzłów przychodzących:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Żądanie dołączenia do innego węzła. Najpierw uruchom bez `--apply`, aby zobaczyć podgląd:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Następnie zapisz po potwierdzeniu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Ponowne zgłoszenie dla relacji bez rekordu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Akceptacja żądania przychodzącego:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Odrzucenie żądania przychodzącego:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Wysłanie wiadomości do ustanowionej relacji:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Anulowanie wychodzącego oczekującego żądania:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Usunięcie zaakceptowanej relacji przychodzącej:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Usunięcie końcowego rekordu przychodzącego:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

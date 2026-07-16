@@ -19,14 +19,14 @@ API Token உருவாக்கும்போதோ திருத்து
 Token-ஐ சூழல் மாறியிலும் வைக்கலாம்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ஸ்கிரிப்ட் பதிவிறக்கம்
 
 | ஸ்கிரிப்ட் | பயன்பாடு |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>கோப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | கோப்பு metadata, moderation labels, கோப்பு குறிச்சொற்கள், பட்டியல் நிலை, நகர்த்தல், பெயர் மாற்றம், கோப்புறை உருவாக்கம், IP தடை/மீட்பு, குறுகிய கால upload Token உருவாக்கம் மற்றும் நீக்கம் |
+| <a href="/tools/imghost-token-manage.mjs" download>கோப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | கோப்பு metadata, moderation labels, கோப்பு குறிச்சொற்கள், பட்டியல் நிலை, நகர்த்தல், பெயர் மாற்றம், கோப்புறை உருவாக்கம், IP தடை/மீட்பு, குறுகிய கால upload Token உருவாக்கம் மற்றும் நீக்கம் |
 
 ஸ்கிரிப்டை இயக்க உள்ளூர் கணினியில் Node.js 18 அல்லது அதற்கு மேற்பட்ட பதிப்பு தேவை.
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | திறன் | ஸ்கிரிப்ட் | அனுமதி |
 | --- | --- | --- |
-| கோப்பை மேலேற்றுதல் | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| கோப்புகளைப் பட்டியலிடுதல், கோப்புகளை வடிகட்டுதல், பயனர் புள்ளிவிவரங்களைப் படித்தல் | `imgbed-token-list.mjs` | `list` |
-| தெளிவாகக் குறிப்பிடப்பட்ட கோப்புகளை நீக்குதல் | `imgbed-token-delete.mjs` | `delete` |
-| கோப்பு தகவல், குறிச்சொற்கள், பட்டியல், நகர்த்தல், பெயர் மாற்றம், கோப்புறை உருவாக்கம், IP தடை, குறுகிய கால upload Token உருவாக்கம் அல்லது நீக்கம் | `imgbed-token-manage.mjs` | `manage` |
+| கோப்பை மேலேற்றுதல் | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| கோப்புகளைப் பட்டியலிடுதல், கோப்புகளை வடிகட்டுதல், பயனர் புள்ளிவிவரங்களைப் படித்தல் | `imghost-token-list.mjs` | `list` |
+| தெளிவாகக் குறிப்பிடப்பட்ட கோப்புகளை நீக்குதல் | `imghost-token-delete.mjs` | `delete` |
+| கோப்பு தகவல், குறிச்சொற்கள், பட்டியல், நகர்த்தல், பெயர் மாற்றம், கோப்புறை உருவாக்கம், IP தடை, குறுகிய கால upload Token உருவாக்கம் அல்லது நீக்கம் | `imghost-token-manage.mjs` | `manage` |
 | upload சேனல்கள், பாதுகாப்பு அமைப்புகள், பக்க அமைப்புகள், பிற அமைப்புகள் மற்றும் federation உறவுகளைத் திருத்துதல் | அமைப்பு மேலாண்மை தொடர்பான ஸ்கிரிப்ட்கள் | `manage` |
 
-`imgbed-token-manage.mjs` கோப்பை மேலேற்றாது, கோப்புகளைப் பட்டியலிடாது, கோப்புகளை நீக்காது. `fileId` தேவைப்பட்டால் முதலில் பட்டியல் ஸ்கிரிப்டைப் பயன்படுத்தி கோப்புகளை வடிகட்டவும்; கோப்பை நீக்க வேண்டும் என்றால் தெளிவான `fileId`-ஐ நீக்கல் ஸ்கிரிப்டிற்கு வழங்கவும்.
+`imghost-token-manage.mjs` கோப்பை மேலேற்றாது, கோப்புகளைப் பட்டியலிடாது, கோப்புகளை நீக்காது. `fileId` தேவைப்பட்டால் முதலில் பட்டியல் ஸ்கிரிப்டைப் பயன்படுத்தி கோப்புகளை வடிகட்டவும்; கோப்பை நீக்க வேண்டும் என்றால் தெளிவான `fileId`-ஐ நீக்கல் ஸ்கிரிப்டிற்கு வழங்கவும்.
 
 ## பொதுப் பராமீட்டர்கள்
 
 | பராமீட்டர் | அவசியம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள முகவரி, உதாரணம் `https://image.ai6.me` |
-| `--token <token>` | ஆம் | API Token; `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம் |
+| `--token <token>` | ஆம் | API Token; `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம் |
 | `--retries <n>` | இல்லை | தற்காலிக தோல்விக்குப் பிறகு மீண்டும் முயற்சிக்கும் எண்ணிக்கை; இயல்பு `3` |
 | `--timeout-ms <n>` | இல்லை | ஒவ்வொரு கோரிக்கைக்கும் நேரவரம்பு; இயல்பு `180000` |
 | `--output <pretty\|json>` | இல்லை | வெளியீட்டு வடிவம்; இயல்பு `pretty`. நிரலால் பயன்படுத்த `json` பரிந்துரைக்கப்படுகிறது |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 கோப்பு மேலாண்மை ஸ்கிரிப்டின் பெரும்பாலான செயல்களுக்கு `fileId` தேவை. முதலில் பட்டியல் ஸ்கிரிப்டால் தேடலாம்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 கோப்பு metadata நிர்வாகப் பலகையின் கோப்பு மேலாண்மையில் காட்டப்படும் கோப்புப் பெயரும் read source-உம் மாற்றப் பயன்படுகிறது.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 preview சரியாக இருப்பதை உறுதிசெய்த பிறகு சேமிக்கவும்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ moderation labels கோப்பின் வயது வகைப்பாட
 moderation label படித்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 moderation label அமைத்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 கோப்பு குறிச்சொற்களைப் படித்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 குறிச்சொற்கள் சேர்த்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 குறிச்சொற்கள் அகற்றல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 குறிச்சொற்களை மாற்றீடு செய்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 தொகுதியாக குறிச்சொற்கள் சேர்த்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 ஒரு கோப்பை வெள்ளை பட்டியலாக அமைத்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 தொகுதியாக கருப்பு பட்டியலில் சேர்த்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 இயல்புநிலை பட்டியல் நிலையை மீட்டமைத்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 நகர்த்துதல் ஒரு அல்லது பல கோப்புகளை இலக்கு அடைவிற்கு நகர்த்தும். பின்னணி சேவை ஒவ்வொரு கோரிக்கையிலும் அதிகபட்சம் `15` கோப்புகள் வரை செயல்படுத்தும்; ஸ்கிரிப்ட் `--batch-size` படி பணியை பல கோரிக்கைகளாகப் பிரித்து வரிசையாக இயக்கும்.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 பெயர் மாற்றம் பழைய கோப்பு ID மற்றும் புதிய கோப்பு ID-ஐத் தெளிவாகப் பயன்படுத்துகிறது. புதிய கோப்பு ID கோப்புப் பெயரை மட்டும் மாற்றலாம், அல்லது அதே நேரத்தில் அடைவையும் மாற்றலாம்.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 தொகுதியாக பெயர் மாற்றும்போது `--old-file-id` மற்றும் `--new-file-id`-ஐ மீண்டும் மீண்டும் வழங்கலாம்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ mapping-ஐ JSON கோப்பிலும் எழுதலாம்:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost அடைவுகள் கோப்பு பாதைகளிலிருந்து பெறப்படுகின்றன; உண்மையான காலியான அடைவு கிடையாது. ஸ்கிரிப்ட் கோப்புறை உருவாக்கும்போது, இலக்கு அடைவில் `0.md` என்ற placeholder கோப்பை உருவாக்குகிறது. இதனால் அந்த அடைவு கோப்பு மேலாண்மை மற்றும் அடைவு புள்ளிவிவரங்களில் தோன்றும்.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 ஒரு upload IP-ஐத் தடைசெய்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 ஒரு upload IP-ஐ மீண்டும் அனுமதித்தல்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 தற்போதைய தடைசெய்யப்பட்ட upload IP பட்டியலைப் பார்க்க:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 மேலாண்மை அனுமதி குறுகிய கால, upload-only Token உருவாக்க முடியும். இந்த Token எப்போதும் `upload` அனுமதியை மட்டும் கொண்டிருக்கும், `autoDelete` எப்போதும் `true`, அதிகபட்ச காலாவதி நேரம் `1` நாள்.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ millisecond timestamp-ஐ நேரடியாகவும் வழங்க�
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 குறுகிய கால upload Token நீக்கம்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 இயல்புநிலை `pretty` வெளியீடு மனிதர் படிக்க ஏற்றது. மற்றொரு நிரலுக்குத் தர வேண்டுமெனில் `--output json` பயன்படுத்தவும்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 முழு முடிவையும் சேமிக்கலாம்:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ node imgbed-token-manage.mjs `
 
 ### எந்த fileId கொடுக்க வேண்டும் என்பதை எப்படி அறியலாம்?
 
-முதலில் `imgbed-token-list.mjs --files` கொண்டு கோப்புகளைத் தேடுங்கள். திரும்பும் முடிவில் உள்ள `name` பொதுவாக கோப்பு ID; அதுவே இங்கே `--file-id` ஆக வழங்கப்படும்.
+முதலில் `imghost-token-list.mjs --files` கொண்டு கோப்புகளைத் தேடுங்கள். திரும்பும் முடிவில் உள்ள `name` பொதுவாக கோப்பு ID; அதுவே இங்கே `--file-id` ஆக வழங்கப்படும்.
 
 ### ஒரு தொகுதி செயல்பாட்டில் அதிகபட்சம் எத்தனை கோப்புகள்?
 

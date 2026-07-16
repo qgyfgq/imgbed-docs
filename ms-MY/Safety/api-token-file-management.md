@@ -19,14 +19,14 @@ Operasi tulis dalam skrip pengurusan fail menggunakan mod pratonton secara lalai
 Token juga boleh diletakkan dalam pemboleh ubah persekitaran:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Muat Turun Skrip
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>skrip pengurusan fail</a> | Metadata fail, label semakan, tag fail, status senarai, pindah, nama semula, cipta folder, sekat/pulih IP, cipta dan padam Token muat naik jangka pendek |
+| <a href="/tools/imghost-token-manage.mjs" download>skrip pengurusan fail</a> | Metadata fail, label semakan, tag fail, status senarai, pindah, nama semula, cipta folder, sekat/pulih IP, cipta dan padam Token muat naik jangka pendek |
 
 Untuk menjalankan skrip, komputer setempat perlu memasang Node.js 18 atau versi lebih baharu.
 
@@ -34,20 +34,20 @@ Untuk menjalankan skrip, komputer setempat perlu memasang Node.js 18 atau versi 
 
 | Keupayaan | Skrip | Kebenaran |
 | --- | --- | --- |
-| Muat naik fail | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Senaraikan fail, tapis fail, baca statistik pengguna | `imgbed-token-list.mjs` | `list` |
-| Padam fail yang dinyatakan dengan jelas | `imgbed-token-delete.mjs` | `delete` |
-| Sunting maklumat fail, tag, senarai, pindah, nama semula, cipta folder, sekat IP, cipta atau padam Token muat naik jangka pendek | `imgbed-token-manage.mjs` | `manage` |
+| Muat naik fail | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Senaraikan fail, tapis fail, baca statistik pengguna | `imghost-token-list.mjs` | `list` |
+| Padam fail yang dinyatakan dengan jelas | `imghost-token-delete.mjs` | `delete` |
+| Sunting maklumat fail, tag, senarai, pindah, nama semula, cipta folder, sekat IP, cipta atau padam Token muat naik jangka pendek | `imghost-token-manage.mjs` | `manage` |
 | Sunting saluran muat naik, tetapan keselamatan, tetapan halaman, tetapan lain, hubungan federasi | Skrip berkaitan pengurusan konfigurasi | `manage` |
 
-`imgbed-token-manage.mjs` tidak memuat naik fail, tidak menyenaraikan fail dan tidak memadam fail. Jika perlu mencari `fileId`, gunakan skrip senarai untuk menapis fail terlebih dahulu. Jika perlu memadam fail, berikan `fileId` yang jelas kepada skrip pemadaman.
+`imghost-token-manage.mjs` tidak memuat naik fail, tidak menyenaraikan fail dan tidak memadam fail. Jika perlu mencari `fileId`, gunakan skrip senarai untuk menapis fail terlebih dahulu. Jika perlu memadam fail, berikan `fileId` yang jelas kepada skrip pemadaman.
 
 ## Parameter Umum
 
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Tidak | Bilangan cubaan semula untuk kegagalan sementara. Lalai `3` |
 | `--timeout-ms <n>` | Tidak | Had masa untuk satu permintaan. Lalai `180000` |
 | `--output <pretty\|json>` | Tidak | Format output. Lalai `pretty`; untuk panggilan program, disarankan guna `json` |
@@ -61,7 +61,7 @@ Untuk menjalankan skrip, komputer setempat perlu memasang Node.js 18 atau versi 
 Kebanyakan tindakan dalam skrip pengurusan fail memerlukan `fileId`. Anda boleh menyemaknya dahulu dengan skrip senarai:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Nilai `name` dalam keputusan yang dikembalikan biasanya ialah `fileId` yang bole
 Metadata fail digunakan untuk mengubah nama fail yang dipaparkan dan sumber bacaan dalam pengurusan fail panel pentadbir.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Selepas memastikan keputusan pratonton betul, simpan perubahan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Label semakan sepadan dengan penarafan umur fail. Anda boleh membaca label semas
 Baca label semakan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Tetapkan label semakan:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Tag fail digunakan untuk menambah tag perniagaan yang boleh dicari pada fail. Sk
 Baca tag fail:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Tambah tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Buang tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Ganti tag:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Tambah tag secara kelompok:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ Status senarai menentukan tingkah laku kawalan akses fail dalam mod akses awam. 
 Tetapkan satu fail sebagai senarai putih:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Tambah kepada senarai hitam secara kelompok:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Pulihkan status senarai lalai:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Memindahkan fail akan memindahkan satu atau lebih fail ke direktori sasaran. Backend memproses maksimum `15` fail dalam satu permintaan. Skrip akan memecahkan kerja secara automatik mengikut `--batch-size` kepada beberapa permintaan dan menjalankannya mengikut turutan.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Nama semula menggunakan ID fail lama dan ID fail baharu yang jelas. ID fail baharu boleh hanya menukar nama fail, atau menukar direktori pada masa yang sama.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Untuk nama semula secara kelompok, `--old-file-id` dan `--new-file-id` boleh diberikan berulang kali:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Pemetaan juga boleh ditulis ke fail JSON:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 Direktori ImgHost berasal daripada laluan fail, jadi tiada direktori kosong sebenar. Apabila skrip mencipta folder, ia akan mencipta fail pemegang tempat `0.md` dalam direktori sasaran supaya direktori itu boleh dipaparkan dalam pengurusan fail dan statistik direktori.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Kebenaran pengurusan boleh menambah IP tertentu ke dalam senarai larangan muat n
 Sekat IP muat naik:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Pulihkan IP muat naik:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Lihat senarai IP yang sedang dilarang memuat naik:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Kebenaran pengurusan boleh mencipta Token khusus muat naik yang bersifat jangka pendek. Token ini sentiasa hanya mempunyai kebenaran `upload`, `autoDelete` sentiasa `true`, dan tempoh tamat tempoh maksimum ialah `1` hari.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Anda juga boleh memberikan cap masa milisaat secara langsung:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Semasa memadam Token muat naik jangka pendek, berikan `id` yang dikembalikan ole
 Padam Token muat naik jangka pendek:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 Output lalai `pretty` sesuai untuk bacaan manusia. Jika mahu diproses oleh program lain, gunakan `--output json`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Anda juga boleh menyimpan keputusan penuh:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Tidak. Muat naik menggunakan skrip muat naik, senarai dan tapisan menggunakan sk
 
 ### Bagaimana mengetahui fileId yang perlu diberikan
 
-Gunakan `imgbed-token-list.mjs --files` untuk mencari fail terlebih dahulu. Nilai `name` dalam keputusan yang dikembalikan biasanya ialah ID fail, iaitu nilai yang diberikan kepada `--file-id` di sini.
+Gunakan `imghost-token-list.mjs --files` untuk mencari fail terlebih dahulu. Nilai `name` dalam keputusan yang dikembalikan biasanya ialah ID fail, iaitu nilai yang diberikan kepada `--file-id` di sini.
 
 ### Operasi kelompok sekali jalan maksimum berapa fail
 

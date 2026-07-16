@@ -26,14 +26,14 @@ System Settings -> Security Settings -> API Token
 คุณสามารถใส่ token ไว้ในตัวแปรสภาพแวดล้อมได้ด้วย:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ดาวน์โหลดสคริปต์
 
 | สคริปต์ | วัตถุประสงค์ |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>สคริปต์แสดงรายการและกรอง</a> | รายการตัวจัดการไฟล์, รายการจัดการผู้ใช้, รายการช่องทางอัปโหลด และสถิติไดเรกทอรี |
+| <a href="/tools/imghost-token-list.mjs" download>สคริปต์แสดงรายการและกรอง</a> | รายการตัวจัดการไฟล์, รายการจัดการผู้ใช้, รายการช่องทางอัปโหลด และสถิติไดเรกทอรี |
 
 ต้องใช้ Node.js 18 หรือใหม่กว่า
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
 | `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost เช่น `https://image.ai6.me` |
-| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
+| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGHOST_API_TOKEN` ได้ด้วย |
 | `--retries <n>` | ไม่ | จำนวนครั้งที่ลองใหม่เมื่อเกิดความล้มเหลวชั่วคราว ค่าเริ่มต้นคือ `3` |
 | `--timeout-ms <n>` | ไม่ | เวลาหมดอายุของแต่ละคำขอ ค่าเริ่มต้นคือ `180000` |
 | `--output <pretty\|json>` | ไม่ | รูปแบบผลลัพธ์ ค่าเริ่มต้นคือ `pretty`; ใช้ `json` สำหรับโปรแกรม |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 แสดงรายการไฟล์ในส่วนจัดการไฟล์:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 ส่งออก JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 อ่านเฉพาะจำนวนภายใต้ตัวกรองปัจจุบัน:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 ค้นหา PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 กรองตาม IP อัปโหลดและช่องทาง:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 บันทึกผลลัพธ์ทั้งหมด:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 แสดงสถิติการอัปโหลดของผู้ใช้/IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 ค้นหา IP หรือที่อยู่:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 ดูไฟล์ที่อัปโหลดโดย IP หนึ่งรายการ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 แสดง IP ที่ถูกบล็อกไม่ให้อัปโหลด:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 แสดงผู้ใช้ที่ถูกบล็อกไม่ให้อัปโหลด:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 ค้นหาด้วยคำสำคัญของที่อยู่:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 เรียงตามจำนวนการอัปโหลด:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 แสดงการตั้งค่าช่องทางอัปโหลดที่ผ่านการกรองข้อมูลลับแล้ว:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ API นี้ไม่ส่งคืนความลับ token สำหร
 แสดงสถิติไดเรกทอรี:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 แสดงเส้นทางไดเรกทอรีแบบเต็มและค้นหาด้วยคำนำหน้า:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 ผลลัพธ์ `pretty` เริ่มต้นเหมาะสำหรับให้คนอ่าน:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 หากโปรแกรมอื่นต้องประมวลผลผลลัพธ์ ให้ใช้ `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 คุณยังสามารถบันทึกผลลัพธ์ทั้งหมดได้:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 เรียกใช้:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 สคริปต์จะแสดงการดำเนินการและพารามิเตอร์ทั้งหมด

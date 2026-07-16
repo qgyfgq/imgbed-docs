@@ -2,7 +2,7 @@
 
 Das Löschen per API Token ist für Skripte, Automatisierungen und externe Programme gedacht. Der Administrationsbereich muss nicht geöffnet werden: Website-Adresse, API Token und konkrete Datei-IDs reichen aus, um eine oder mehrere Dateien aus ImgHost zu löschen.
 
-Löschen ist eine schreibende Operation. Nach Ausführung des Befehls werden die Daten tatsächlich entfernt. Prüfe am besten zuerst mit `imgbed-token-list.mjs`, welche `fileId`-Werte gelöscht werden sollen, und übergib diese IDs danach an das Löschskript.
+Löschen ist eine schreibende Operation. Nach Ausführung des Befehls werden die Daten tatsächlich entfernt. Prüfe am besten zuerst mit `imghost-token-list.mjs`, welche `fileId`-Werte gelöscht werden sollen, und übergib diese IDs danach an das Löschskript.
 
 ![API Token bearbeiten](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Beim Erstellen oder Bearbeiten des API Token muss die Berechtigung zum Löschen 
 Der API Token kann auch als Umgebungsvariable gesetzt werden:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Skript herunterladen
 
 | Skript | Zweck |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>Skript zum Löschen von Dateien</a> | Löscht eine oder mehrere ausdrücklich angegebene Datei-IDs |
+| <a href="/tools/imghost-token-delete.mjs" download>Skript zum Löschen von Dateien</a> | Löscht eine oder mehrere ausdrücklich angegebene Datei-IDs |
 
 Erforderlich ist Node.js 18 oder neuer.
 
@@ -64,7 +64,7 @@ Nach erfolgreichem Löschen verarbeitet die Serverseite automatisch Dateiindizes
 | Parameter | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adresse der ImgHost-Website, zum Beispiel `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; alternativ kann `IMGBED_API_TOKEN` genutzt werden |
+| `--token <token>` | Ja | API Token; alternativ kann `IMGHOST_API_TOKEN` genutzt werden |
 | `--file-id <id>` | Ja | Datei-ID, die gelöscht werden soll; kann mehrfach angegeben werden |
 | `--strictness <strict\|soft>` | Nein | Löschstrenge; Standardwert `strict` |
 | `--batch-size <n>` | Nein | Anzahl der Dateien pro Anfrage; Standardwert `15`, Maximum `15` |
@@ -90,7 +90,7 @@ Wenn der entfernte Dateiinhalt zwingend gelöscht werden muss, damit die Aktion 
 Eine Datei löschen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 API Token aus der Umgebungsvariable verwenden:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Mehrere Dateien löschen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 ImgHost-Eintrag auch bei fehlgeschlagenem Löschen im entfernten Speicher bereinigen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON ausgeben und Ergebnis speichern:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Pro Anfrage höchstens 5 Dateien löschen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Das Löschskript benötigt die ImgHost-Datei-ID. Mit dem Listenskript kannst du zuerst die Dateien in einem Ordner ansehen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

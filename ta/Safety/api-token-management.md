@@ -21,7 +21,7 @@ API Token உருவாக்கும் போது அல்லது த�
 Token-ஐ சூழல் மாறியிலும் வைக்கலாம்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## மேலாண்மை ஸ்கிரிப்ட்களைப் பதிவிறக்குதல்
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | ஸ்கிரிப்ட் | நோக்கம் |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>பதிவேற்ற அமைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | பதிவேற்ற சேனல்கள், துணை சேனல்கள் மற்றும் சுமை சமநிலையை நிர்வகிக்கும். |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>தள அமைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | பாதுகாப்பு அமைப்புகள், பக்க அமைப்புகள் மற்றும் பிற அமைப்புகளை நிர்வகிக்கும். |
-| <a href="/tools/imgbed-token-federation.mjs" download>கூட்டமைப்பு இணைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | இலகு கூட்டமைப்பு இணைப்பு செயல்கள், கோரிக்கைகள் மற்றும் செய்திகளை நிர்வகிக்கும். |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>பதிவேற்ற அமைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | பதிவேற்ற சேனல்கள், துணை சேனல்கள் மற்றும் சுமை சமநிலையை நிர்வகிக்கும். |
+| <a href="/tools/imghost-token-site-settings.mjs" download>தள அமைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | பாதுகாப்பு அமைப்புகள், பக்க அமைப்புகள் மற்றும் பிற அமைப்புகளை நிர்வகிக்கும். |
+| <a href="/tools/imghost-token-federation.mjs" download>கூட்டமைப்பு இணைப்பு மேலாண்மை ஸ்கிரிப்ட்</a> | இலகு கூட்டமைப்பு இணைப்பு செயல்கள், கோரிக்கைகள் மற்றும் செய்திகளை நிர்வகிக்கும். |
 
 Node.js 18 அல்லது அதற்கு மேல் தேவை.
 
@@ -41,7 +41,7 @@ Node.js 18 அல்லது அதற்கு மேல் தேவை.
 | அளவுரு | கட்டாயம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள URL, உதாரணமாக `https://image.ai6.me`. |
-| `--token <token>` | ஆம் | API Token. `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
+| `--token <token>` | ஆம் | API Token. `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
 | `--retries <n>` | இல்லை | தற்காலிக தோல்விகளுக்கான மீண்டும் முயற்சி எண்ணிக்கை. இயல்புநிலை `3`. |
 | `--timeout-ms <n>` | இல்லை | கோரிக்கை நேரவரம்பு. இயல்புநிலை `180000`. |
 | `--output <pretty\|json>` | இல்லை | வெளியீட்டு வடிவம். இயல்புநிலை `pretty`; நிரல்களுக்கு `json` பயன்படுத்தவும். |
@@ -54,7 +54,7 @@ Node.js 18 அல்லது அதற்கு மேல் தேவை.
 பதிவேற்ற அமைப்பு ஸ்கிரிப்ட் பதிவேற்ற துணை சேனல்களைப் பட்டியலிடும், படிக்கும், உருவாக்கும், திருத்தும் மற்றும் நீக்கும். ஒரு மேல் நிலை பதிவேற்ற சேனலுக்கான சுமை சமநிலையையும் இயக்கவோ அணைக்கவோ முடியும்.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### பதிவேற்ற அமைப்பு அளவுருக்கள்
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 அனைத்து பதிவேற்ற அமைப்புகளையும் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 சேனல் அமைப்பைப் படித்தல்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 ஒரு S3 துணை சேனலைப் படித்தல்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 ஒரு துணை சேனலை உருவாக்குதல் அல்லது திருத்துதல். முதலில் `--apply` இன்றி இயக்கி முன்னோட்டத்தைப் பார்க்கவும்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 உறுதிசெய்த பிறகு சேமிக்கவும்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 ஒரு துணை சேனலை நீக்குதல்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 சுமை சமநிலையை இயக்குதல்:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 திருத்தக்கூடிய பகுதிகள், பிரிவுகள் மற்றும் புலங்களைப் பார்க்க முதலில் `--list-sections` பயன்படுத்தவும்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 கணினி புதுப்பிப்பு அறிவிப்பு அமைப்புகளைப் படித்தல்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 கணினி புதுப்பிப்பு அறிவிப்பு மின்னஞ்சலை மாற்றுதல். முதலில் `--apply` இன்றி இயக்கி முன்னோட்டத்தைப் பார்க்கவும்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 உறுதிசெய்த பிறகு சேமிக்கவும்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 நிர்வாகி பக்க நட்சத்திர விளைவை மாற்றுதல்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP புவியிடம் மொழியை மாற்றுதல்:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 உள்ளூர் கணு நிலையும் இரு இணைப்பு பட்டியல்களையும் பார்க்குதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 வெளியேறும் கணுக்களை மட்டும் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 உள்ளே வரும் கணுக்களை மட்டும் பட்டியலிடுதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 மற்றொரு கணுவில் சேர கோரிக்கை விடுதல். முதலில் `--apply` இன்றி இயக்கி முன்னோட்டத்தைப் பார்க்கவும்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 உறுதிசெய்த பிறகு சேமிக்கவும்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 பதிவு இல்லாத இணைப்புக்கு மீண்டும் விண்ணப்பித்தல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 உள்ளே வரும் கோரிக்கையை ஏற்குதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 உள்ளே வரும் கோரிக்கையை மறுத்தல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 நிறுவப்பட்ட இணைப்புக்கு செய்தி அனுப்புதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 வெளியேறும் நிலுவை கோரிக்கையை ரத்து செய்தல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 ஏற்கப்பட்ட உள்ளே வரும் இணைப்பை அகற்றுதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 முடிவடைந்த உள்ளே வரும் பதிவை நீக்குதல்:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

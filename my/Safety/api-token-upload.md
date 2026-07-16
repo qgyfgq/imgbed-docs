@@ -20,8 +20,8 @@ API Token ကို ဖန်တီးခြင်း သို့မဟုတ�
 
 | စခရစ် | အသုံးပြုရန်နေရာ |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>တစ်ကြိမ်တည်း အပ်လုဒ်စခရစ်</a> | `/upload` ကို တစ်ကြိမ်သာ ခေါ်သည်။ ဖိုင်သေးများနှင့် ချိတ်ဆက်မှုစမ်းသပ်ရန် သင့်တော်သည်။ |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>အပိုင်းခွဲ အပ်လုဒ်စခရစ်</a> | API Token ဖြင့် အပိုင်းခွဲခြင်း၊ တိုက်ရိုက်တင်ခြင်း သို့မဟုတ် သက်ဆိုင်ရာ ပလက်ဖောင်း၏ အပ်လုဒ်ဆက်ရှင်ကို အသုံးပြုသည်။ ဖိုင်ကြီးများအတွက် သင့်တော်သည်။ |
+| <a href="/tools/imghost-token-single-upload.mjs" download>တစ်ကြိမ်တည်း အပ်လုဒ်စခရစ်</a> | `/upload` ကို တစ်ကြိမ်သာ ခေါ်သည်။ ဖိုင်သေးများနှင့် ချိတ်ဆက်မှုစမ်းသပ်ရန် သင့်တော်သည်။ |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>အပိုင်းခွဲ အပ်လုဒ်စခရစ်</a> | API Token ဖြင့် အပိုင်းခွဲခြင်း၊ တိုက်ရိုက်တင်ခြင်း သို့မဟုတ် သက်ဆိုင်ရာ ပလက်ဖောင်း၏ အပ်လုဒ်ဆက်ရှင်ကို အသုံးပြုသည်။ ဖိုင်ကြီးများအတွက် သင့်တော်သည်။ |
 
 အသုံးပြုရန် Node.js 18 သို့မဟုတ် ၎င်းထက်အသစ်သော ဗားရှင်း လိုအပ်သည်။
 
@@ -30,8 +30,8 @@ API Token ကို ဖန်တီးခြင်း သို့မဟုတ�
 စခရစ်နှစ်ခုလုံးတွင် လက်ရှိ API Token ဖြင့် အသုံးပြုနိုင်သော အပ်လုဒ်ချန်နယ်များကို ကြိုတင်ကြည့်နိုင်သည်။
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 ချန်နယ်စာရင်းကိုသာ ကြည့်မည်ဆိုပါက `--file` နှင့် `--channel` မလိုပါ။ ပြန်လာသော အချက်အလက်တွင် မူရင်းအပ်လုဒ်ချန်နယ်၊ ချန်နယ်ကီး၊ ချန်နယ်ခွဲအမည်များနှင့် ဝန်ခွဲဖြန့်မှုအခြေအနေ ပါဝင်သည်။ လျှို့ဝှက်ကီး၊ အသစ်ပြန်ယူသော Token စသည့် လုံခြုံရေးဆိုင်ရာ ပြင်ဆင်ချက်များကို မပြန်ပေးပါ။
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 တစ်ကြိမ်တည်း အပ်လုဒ်စခရစ်သည် `/upload` သို့ တောင်းဆိုမှုတစ်ကြိမ်သာ ပို့သည်။
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token ကို ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းတွင်လည်း ထားနိုင်သည်။
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### တစ်ကြိမ်တည်း အပ်လုဒ် ပါရာမီတာများ
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | ပါရာမီတာ | လိုအပ်မှု | ရှင်းလင်းချက် |
 | --- | --- | --- |
 | `--base-url <url>` | လိုအပ် | ImgHost ဆိုက် URL။ ဥပမာ `https://image.ai6.me` |
-| `--token <token>` | လိုအပ် | API Token။ `IMGBED_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
+| `--token <token>` | လိုအပ် | API Token။ `IMGHOST_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
 | `--file <path>` | လိုအပ် | စက်တွင်းဖိုင်လမ်းကြောင်း။ |
 | `--channel <key>` | လိုအပ် | အမှန်တကယ် အသုံးပြုမည့် အပ်လုဒ်ချန်နယ်။ |
 | `--folder <path>` | မလိုအပ် | တင်မည့်ဖိုင်တွဲ။ ဥပမာ `photos/2026` သို့မဟုတ် `/user/` |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 အပိုင်းခွဲ အပ်လုဒ်စခရစ်သည် API Token ဖြင့် ဆာဗာဘက်တွင် အပ်လုဒ်ပစ်မှတ်ကို ဦးစွာဆုံးဖြတ်စေပြီးနောက် ရွေးထားသောချန်နယ်နှင့် ကိုက်ညီသော ဖိုင်ကြီးတင်ပို့ရေးလုပ်ငန်းစဉ်ကို ဆက်လုပ်သည်။ အသုံးပြုသူက ဆက်ရှင်ဖန်တီးခြင်း၊ အပိုင်းများပို့ခြင်း၊ ပေါင်းစည်းခြင်း သို့မဟုတ် ပြီးဆုံးကြောင်းတောင်းဆိုမှုကို ကိုယ်တိုင်ရေးရန် မလိုပါ။
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | ပါရာမီတာ | လိုအပ်မှု | ရှင်းလင်းချက် |
 | --- | --- | --- |
 | `--base-url <url>` | လိုအပ် | ImgHost ဆိုက် URL။ |
-| `--token <token>` | လိုအပ် | API Token။ `IMGBED_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
+| `--token <token>` | လိုအပ် | API Token။ `IMGHOST_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
 | `--file <path>` | လိုအပ် | စက်တွင်းဖိုင်လမ်းကြောင်း။ |
 | `--channel <key>` | လိုအပ် | အမှန်တကယ် အသုံးပြုမည့် အပ်လုဒ်ချန်နယ်။ |
 | `--folder <path>` | မလိုအပ် | တင်မည့်ဖိုင်တွဲ။ |

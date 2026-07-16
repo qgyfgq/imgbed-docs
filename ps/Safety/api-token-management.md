@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 Token په چاپېریالي متغیر کې هم اېښودل کېدای شي:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## د مدیریت سکرېپټونه کښته کول
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | سکرېپټ | موخه |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>د پورته کولو تنظیماتو د مدیریت سکرېپټ</a> | د پورته کولو چینلونه، فرعي چینلونه او د بار-وېش مدیریت کوي. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>د سایټ د تنظیماتو د مدیریت سکرېپټ</a> | د امنیت تنظیمات، د پاڼو تنظیمات او نور تنظیمات مدیریت کوي. |
-| <a href="/tools/imgbed-token-federation.mjs" download>د فدراسیون اړیکو د مدیریت سکرېپټ</a> | د فدراسیون د سپکو اړیکو کړنې، غوښتنې او پیغامونه مدیریت کوي. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>د پورته کولو تنظیماتو د مدیریت سکرېپټ</a> | د پورته کولو چینلونه، فرعي چینلونه او د بار-وېش مدیریت کوي. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>د سایټ د تنظیماتو د مدیریت سکرېپټ</a> | د امنیت تنظیمات، د پاڼو تنظیمات او نور تنظیمات مدیریت کوي. |
+| <a href="/tools/imghost-token-federation.mjs" download>د فدراسیون اړیکو د مدیریت سکرېپټ</a> | د فدراسیون د سپکو اړیکو کړنې، غوښتنې او پیغامونه مدیریت کوي. |
 
 Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 
@@ -41,7 +41,7 @@ Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
 | `--base-url <url>` | هو | د ImgHost سایټ URL، لکه `https://image.ai6.me`. |
-| `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
+| `--token <token>` | هو | API Token. د `IMGHOST_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--retries <n>` | نه | د لنډمهاله ناکامۍ د بیا هڅو شمېر. اصلي ارزښت `3` دی. |
 | `--timeout-ms <n>` | نه | د غوښتنې د وخت حد. اصلي ارزښت `180000` دی. |
 | `--output <pretty\|json>` | نه | د وتنې بڼه. اصلي ارزښت `pretty` دی؛ د پروګرامونو لپاره `json` وکاروئ. |
@@ -54,7 +54,7 @@ Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 د پورته کولو د تنظیماتو سکرېپټ د پورته کولو فرعي چینلونه لېستوي، لولي، جوړوي، سموي او حذفوي. دا د یوه اصلي د پورته کولو چینل لپاره د بار-وېش بدلول هم کولای شي.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### د پورته کولو د تنظیماتو پارامترونه
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 ټول د پورته کولو تنظیمات لېست کړئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 د S3 چینل تنظیمات ولولئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 یو S3 فرعي چینل ولولئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 یو فرعي چینل جوړ یا سم کړئ. لومړی یې بې له `--apply` وچلوئ، څو مخکتنه ووینئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 له تایید وروسته یې خوندي کړئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 یو فرعي چینل حذف کړئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 د S3 بار-وېش فعال کړئ:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 لومړی `--list-sections` وکاروئ، څو د سمولو وړ برخې، سکشنونه او فیلډونه ووینئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 د سیسټم د تازه‌والي د خبرتیا تنظیمات ولولئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 د سیسټم د تازه‌والي د خبرتیا برېښنالیک بدل کړئ. لومړی بې له `--apply` وچلوئ، څو مخکتنه ووینئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 له تایید وروسته یې خوندي کړئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 د مدیر پاڼې د ستورو اثر بدل کړئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 د IP جغرافیایي ځای ژبه بدل کړئ:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 د ځایي نوډ حالت او دواړه د اړیکو لېستونه وګورئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 یوازې وتلي نوډونه لېست کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 یوازې راتلونکي نوډونه لېست کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 بل نوډ ته د یوځای کېدو غوښتنه. لومړی بې له `--apply` وچلوئ، څو مخکتنه ووینئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 له تایید وروسته یې خوندي کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 د بې‌ریکارډه اړیکې لپاره بیا غوښتنه:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 راتلونکې غوښتنه ومنئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 راتلونکې غوښتنه رد کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 یوې جوړې شوې اړیکې ته پیغام ولېږئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 وتلې انتظار غوښتنه لغوه کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 منل شوې راتلونکې اړیکه لرې کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 د راتلونکي پای ریکارډ حذف کړئ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

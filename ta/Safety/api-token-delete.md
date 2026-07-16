@@ -2,7 +2,7 @@
 
 API Token மூலம் கோப்புகளை நீக்குவது ஸ்கிரிப்ட்கள், தானியக்கப் பணிகள் மற்றும் மூன்றாம் தரப்பு நிரல்களுக்காக வடிவமைக்கப்பட்டுள்ளது. நிர்வாகப் பக்கத்தைத் திறக்க தேவையில்லை. தள URL, token மற்றும் தெளிவான கோப்பு ID-களை வழங்கினால், ImgHost-இலிருந்து ஒரு கோப்பையோ பல கோப்புகளையோ நீக்கலாம்.
 
-நீக்கம் என்பது எழுதும் செயல்; கட்டளை இயக்கப்பட்ட பிறகு தரவு உண்மையாகவே நீக்கப்படும். முதலில் `imgbed-token-list.mjs` பயன்படுத்தி நீக்க வேண்டிய `fileId` மதிப்புகளை உறுதிப்படுத்தி, பின்னர் அந்த ID-களை நீக்க ஸ்கிரிப்டுக்கு வழங்கவும்.
+நீக்கம் என்பது எழுதும் செயல்; கட்டளை இயக்கப்பட்ட பிறகு தரவு உண்மையாகவே நீக்கப்படும். முதலில் `imghost-token-list.mjs` பயன்படுத்தி நீக்க வேண்டிய `fileId` மதிப்புகளை உறுதிப்படுத்தி, பின்னர் அந்த ID-களை நீக்க ஸ்கிரிப்டுக்கு வழங்கவும்.
 
 ![API Token திருத்துதல்](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token உருவாக்கும் போது அல்லது த�
 Token-ஐ சூழல் மாறியிலும் வைக்கலாம்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ஸ்கிரிப்டைப் பதிவிறக்குதல்
 
 | ஸ்கிரிப்ட் | நோக்கம் |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>கோப்பு நீக்க ஸ்கிரிப்ட்</a> | தெளிவாகக் குறிப்பிடப்பட்ட ஒரு அல்லது பல கோப்பு ID-களை நீக்கும். |
+| <a href="/tools/imghost-token-delete.mjs" download>கோப்பு நீக்க ஸ்கிரிப்ட்</a> | தெளிவாகக் குறிப்பிடப்பட்ட ஒரு அல்லது பல கோப்பு ID-களை நீக்கும். |
 
 Node.js 18 அல்லது அதற்கு மேல் தேவை.
 
@@ -64,7 +64,7 @@ API NDJSON முன்னேற்ற ஓட்டத்தைத் திர�
 | அளவுரு | கட்டாயம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள URL, உதாரணமாக `https://image.ai6.me`. |
-| `--token <token>` | ஆம் | API Token. `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
+| `--token <token>` | ஆம் | API Token. `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
 | `--file-id <id>` | ஆம் | நீக்க வேண்டிய கோப்பு ID. இதை பல முறை வழங்கலாம். |
 | `--strictness <strict\|soft>` | இல்லை | நீக்கத்தின் கடுமை. இயல்புநிலை `strict`. |
 | `--batch-size <n>` | இல்லை | ஒரு கோரிக்கைக்கு கோப்புகளின் எண்ணிக்கை. இயல்புநிலை `15`, அதிகபட்சம் `15`. |
@@ -90,7 +90,7 @@ API NDJSON முன்னேற்ற ஓட்டத்தைத் திர�
 ஒரு கோப்பை நீக்குதல்:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 சூழல் மாறியிலிருந்து Token பயன்படுத்துதல்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 பல கோப்புகளை நீக்குதல்:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 தொலை நீக்கம் தோல்வியடைந்தாலும் ImgHost பதிவை சுத்தம் செய்தல்:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON வெளியீட்டையும் முடிவைச் சேமித்தலையும் பயன்படுத்துதல்:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 ஒவ்வொரு கோரிக்கையையும் 5 கோப்புகளுக்கு மட்டுப்படுத்துதல்:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 நீக்க ஸ்கிரிப்டுக்கு ImgHost கோப்பு ID-கள் தேவை. முதலில் பட்டியல் ஸ்கிரிப்டைப் பயன்படுத்தி ஒரு அடைவில் உள்ள கோப்புகளைப் பார்க்கலாம்:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

@@ -19,14 +19,14 @@ API Token ဖန်တီးခြင်း သို့မဟုတ် ပြ�
 Token ကို ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းထဲတွင်လည်း ထားနိုင်သည်။
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## စခရစ် ဒေါင်းလုဒ်လုပ်ရန်
 
 | စခရစ် | အသုံးပြုရန်နေရာ |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>ဖိုင်စီမံခန့်ခွဲရေးစခရစ်</a> | ဖိုင် metadata၊ moderation labels၊ ဖိုင် tag များ၊ list အခြေအနေ၊ ရွှေ့ခြင်း၊ အမည်ပြောင်းခြင်း၊ ဖိုလ်ဒါဖန်တီးခြင်း၊ IP ပိတ်/ပြန်ဖွင့်ခြင်း၊ အချိန်တို upload Token ဖန်တီးခြင်းနှင့် ဖျက်ခြင်း |
+| <a href="/tools/imghost-token-manage.mjs" download>ဖိုင်စီမံခန့်ခွဲရေးစခရစ်</a> | ဖိုင် metadata၊ moderation labels၊ ဖိုင် tag များ၊ list အခြေအနေ၊ ရွှေ့ခြင်း၊ အမည်ပြောင်းခြင်း၊ ဖိုလ်ဒါဖန်တီးခြင်း၊ IP ပိတ်/ပြန်ဖွင့်ခြင်း၊ အချိန်တို upload Token ဖန်တီးခြင်းနှင့် ဖျက်ခြင်း |
 
 စခရစ်ကို run ရန် စက်တွင်းတွင် Node.js 18 သို့မဟုတ် ၎င်းထက်အသစ်သော ဗားရှင်း လိုအပ်သည်။
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | လုပ်ဆောင်နိုင်မှု | စခရစ် | ခွင့်ပြုချက် |
 | --- | --- | --- |
-| ဖိုင်အပ်လုဒ်တင်ခြင်း | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| ဖိုင်စာရင်းပြခြင်း၊ ဖိုင်စစ်ထုတ်ခြင်း၊ အသုံးပြုသူစာရင်းအင်း ဖတ်ခြင်း | `imgbed-token-list.mjs` | `list` |
-| သတ်မှတ်ထားသော ဖိုင်များကို ဖျက်ခြင်း | `imgbed-token-delete.mjs` | `delete` |
-| ဖိုင်အချက်အလက်၊ tag များ၊ list များ၊ ရွှေ့ခြင်း၊ အမည်ပြောင်းခြင်း၊ ဖိုလ်ဒါဖန်တီးခြင်း၊ IP ပိတ်ခြင်း၊ အချိန်တို upload Token ဖန်တီးခြင်း သို့မဟုတ် ဖျက်ခြင်း | `imgbed-token-manage.mjs` | `manage` |
+| ဖိုင်အပ်လုဒ်တင်ခြင်း | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| ဖိုင်စာရင်းပြခြင်း၊ ဖိုင်စစ်ထုတ်ခြင်း၊ အသုံးပြုသူစာရင်းအင်း ဖတ်ခြင်း | `imghost-token-list.mjs` | `list` |
+| သတ်မှတ်ထားသော ဖိုင်များကို ဖျက်ခြင်း | `imghost-token-delete.mjs` | `delete` |
+| ဖိုင်အချက်အလက်၊ tag များ၊ list များ၊ ရွှေ့ခြင်း၊ အမည်ပြောင်းခြင်း၊ ဖိုလ်ဒါဖန်တီးခြင်း၊ IP ပိတ်ခြင်း၊ အချိန်တို upload Token ဖန်တီးခြင်း သို့မဟုတ် ဖျက်ခြင်း | `imghost-token-manage.mjs` | `manage` |
 | upload channel များ၊ လုံခြုံရေး setting များ၊ စာမျက်နှာ setting များ၊ အခြား setting များနှင့် federation ဆက်ဆံရေးများ ပြင်ဆင်ခြင်း | configuration management ဆိုင်ရာ စခရစ်များ | `manage` |
 
-`imgbed-token-manage.mjs` သည် ဖိုင်မအပ်လုဒ်တင်ပါ၊ ဖိုင်စာရင်းမပြပါ၊ ဖိုင်မဖျက်ပါ။ `fileId` ရှာရန် လိုအပ်ပါက ပထမဦးစွာ list စခရစ်ဖြင့် ဖိုင်များကို စစ်ထုတ်ပါ။ ဖိုင်ဖျက်ရန် လိုအပ်ပါက တိကျသော `fileId` ကို delete စခရစ်သို့ ပေးပါ။
+`imghost-token-manage.mjs` သည် ဖိုင်မအပ်လုဒ်တင်ပါ၊ ဖိုင်စာရင်းမပြပါ၊ ဖိုင်မဖျက်ပါ။ `fileId` ရှာရန် လိုအပ်ပါက ပထမဦးစွာ list စခရစ်ဖြင့် ဖိုင်များကို စစ်ထုတ်ပါ။ ဖိုင်ဖျက်ရန် လိုအပ်ပါက တိကျသော `fileId` ကို delete စခရစ်သို့ ပေးပါ။
 
 ## အထွေထွေ parameter များ
 
 | parameter | လိုအပ်မှု | ရှင်းလင်းချက် |
 | --- | --- | --- |
 | `--base-url <url>` | လိုအပ် | ImgHost site လိပ်စာ။ ဥပမာ `https://image.ai6.me` |
-| `--token <token>` | လိုအပ် | API Token။ `IMGBED_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည် |
+| `--token <token>` | လိုအပ် | API Token။ `IMGHOST_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည် |
 | `--retries <n>` | မလိုအပ် | ယာယီမအောင်မြင်ပါက ပြန်ကြိုးစားမည့် အကြိမ်ရေ။ မူရင်း `3` |
 | `--timeout-ms <n>` | မလိုအပ် | တောင်းဆိုမှုတစ်ကြိမ်၏ အချိန်ကန့်သတ်ချက်။ မူရင်း `180000` |
 | `--output <pretty\|json>` | မလိုအပ် | output ပုံစံ။ မူရင်း `pretty` ဖြစ်သည်။ program မှ ဆက်လက်အသုံးပြုရန် `json` ကို အကြံပြုသည် |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 ဖိုင်စီမံခန့်ခွဲရေးစခရစ်၏ လုပ်ဆောင်ချက်အများစုသည် `fileId` လိုအပ်သည်။ ပထမဦးစွာ list စခရစ်ဖြင့် မေးမြန်းနိုင်သည်။
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 ဖိုင် metadata ကို စီမံခန့်ခွဲရေး panel ၏ ဖိုင်စီမံခန့်ခွဲရေးတွင် ပြသမည့် ဖိုင်အမည်နှင့် read source ပြောင်းရန် အသုံးပြုသည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 preview ရလဒ်မှန်ကန်ကြောင်း အတည်ပြုပြီးနောက် သိမ်းဆည်းပါ။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ moderation labels သည် ဖိုင်၏ အသက်အရွယ် အ�
 moderation label ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 moderation label သတ်မှတ်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 ဖိုင် tag များ ဖတ်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 tag များ ထည့်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 tag များ ဖယ်ရှားရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 tag များ အစားထိုးရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 batch ဖြင့် tag များ ထည့်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ list အခြေအနေသည် public access mode အတွင်း ဖိ
 ဖိုင်တစ်ခုကို whitelist အဖြစ် သတ်မှတ်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 batch ဖြင့် blacklist ထဲ ထည့်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 မူရင်း list အခြေအနေ ပြန်ထားရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 ဖိုင်ရွှေ့ခြင်းသည် ဖိုင်တစ်ခု သို့မဟုတ် ဖိုင်များစွာကို ရည်မှန်းထားသော ဖိုလ်ဒါသို့ ရွှေ့သည်။ backend သည် တောင်းဆိုမှုတစ်ကြိမ်တွင် အများဆုံး `15` ဖိုင်ကိုသာ လုပ်ဆောင်ပြီး စခရစ်သည် `--batch-size` အတိုင်း တောင်းဆိုမှုများစွာအဖြစ် အလိုအလျောက် ခွဲ၍ အစဉ်လိုက် လုပ်ဆောင်သည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 အမည်ပြောင်းရာတွင် ဖိုင် ID အဟောင်းနှင့် ဖိုင် ID အသစ်ကို တိကျစွာ အသုံးပြုသည်။ ဖိုင် ID အသစ်သည် ဖိုင်အမည်ကိုသာ ပြောင်းနိုင်သလို ဖိုလ်ဒါကိုပါ တစ်ပြိုင်နက် ပြောင်းနိုင်သည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 batch အနေဖြင့် အမည်ပြောင်းရာတွင် `--old-file-id` နှင့် `--new-file-id` ကို အကြိမ်ကြိမ် ပေးနိုင်သည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ mapping ကို JSON ဖိုင်ထဲတွင်လည်း ရေး�
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 ImgHost ၏ ဖိုလ်ဒါများသည် ဖိုင် path များမှ ဖြစ်ပေါ်လာသောကြောင့် အမှန်တကယ် ဗလာဖိုလ်ဒါ မရှိပါ။ စခရစ်သည် ဖိုလ်ဒါဖန်တီးသောအခါ ရည်မှန်းထားသော ဖိုလ်ဒါအောက်တွင် `0.md` အမည်ရှိ placeholder ဖိုင်တစ်ခုကို ဖန်တီးပြီး ထိုဖိုလ်ဒါကို ဖိုင်စီမံခန့်ခွဲရေးနှင့် ဖိုလ်ဒါစာရင်းအင်းတွင် ပြသနိုင်စေသည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 upload IP တစ်ခု ပိတ်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 upload IP တစ်ခု ပြန်ဖွင့်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 လက်ရှိ upload ပိတ်ထားသော IP စာရင်းကြည့်ရန်:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 စီမံခန့်ခွဲခွင့်သည် upload အတွက်သာ အသုံးပြုမည့် အချိန်တို Token ကို ဖန်တီးနိုင်သည်။ ဤ Token တွင် `upload` ခွင့်ပြုချက်သာ အမြဲပါရှိပြီး `autoDelete` သည် အမြဲ `true` ဖြစ်သည်။ သက်တမ်းကုန်ချိန် အများဆုံးမှာ `1` ရက် ဖြစ်သည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ millisecond timestamp ကို တိုက်ရိုက် ပေးနိ�
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 အချိန်တို upload Token ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 မူရင်း `pretty` output သည် လူဖတ်ရန် သင့်တော်သည်။ အခြား program ဖြင့် ဆက်လက်လုပ်ဆောင်ရန် `--output json` ကို အသုံးပြုပါ။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 ရလဒ်အပြည့်အစုံကိုလည်း သိမ်းဆည်းနိုင်သည်။
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ batch move၊ batch rename နှင့် batch list လုပ်ဆောင�
 
 ### ဘယ် fileId ပေးရမလဲ ဘယ်လိုသိနိုင်မလဲ
 
-ပထမဦးစွာ `imgbed-token-list.mjs --files` ဖြင့် ဖိုင်များကို ရှာပါ။ ပြန်လာသောရလဒ်ရှိ `name` သည် ပုံမှန်အားဖြင့် ဖိုင် ID ဖြစ်ပြီး ဤနေရာတွင် `--file-id` အဖြစ် ပေးရမည့် တန်ဖိုးဖြစ်သည်။
+ပထမဦးစွာ `imghost-token-list.mjs --files` ဖြင့် ဖိုင်များကို ရှာပါ။ ပြန်လာသောရလဒ်ရှိ `name` သည် ပုံမှန်အားဖြင့် ဖိုင် ID ဖြစ်ပြီး ဤနေရာတွင် `--file-id` အဖြစ် ပေးရမည့် တန်ဖိုးဖြစ်သည်။
 
 ### batch operation တစ်ကြိမ်တွင် အများဆုံး ဖိုင်ဘယ်နှခု လုပ်နိုင်သလဲ
 

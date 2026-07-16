@@ -26,14 +26,14 @@ Lors de la création ou de la modification de l’API Token, vérifiez qu’il d
 Vous pouvez aussi placer le token dans une variable d’environnement :
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Télécharger le script
 
 | Script | Utilisation |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>script de liste et de filtrage</a> | Liste de la gestion des fichiers, liste de la gestion des utilisateurs, liste des canaux de téléversement et statistiques de dossiers |
+| <a href="/tools/imghost-token-list.mjs" download>script de liste et de filtrage</a> | Liste de la gestion des fichiers, liste de la gestion des utilisateurs, liste des canaux de téléversement et statistiques de dossiers |
 
 Node.js 18 ou plus récent est nécessaire.
 
@@ -42,7 +42,7 @@ Node.js 18 ou plus récent est nécessaire.
 | Paramètre | Obligatoire | Description |
 | --- | --- | --- |
 | `--base-url <url>` | Oui | URL du site ImgHost, par exemple `https://image.ai6.me` |
-| `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGBED_API_TOKEN` |
+| `--token <token>` | Oui | API Token. Vous pouvez aussi utiliser la variable d’environnement `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Non | Nombre de tentatives en cas d’échec temporaire. Valeur par défaut : `3` |
 | `--timeout-ms <n>` | Non | Délai maximal d’une requête. Valeur par défaut : `180000` |
 | `--output <pretty\|json>` | Non | Format de sortie. Valeur par défaut : `pretty` ; pour un traitement par programme, utilisez `json` |
@@ -54,7 +54,7 @@ Node.js 18 ou plus récent est nécessaire.
 Lister les fichiers de la gestion des fichiers :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Sortie JSON :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Lire uniquement le nombre selon les filtres actuels :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 Rechercher des PDF :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Filtrer par IP de téléversement et par canal :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Enregistrer le résultat complet :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Lister les statistiques de téléversement par utilisateur ou IP :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Rechercher une IP ou une adresse :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Voir les fichiers téléversés depuis une IP :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Lister les IP interdites de téléversement :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Lister les utilisateurs interdits de téléversement :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Rechercher par mot-clé d’adresse :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Trier par nombre de téléversements :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Lister la configuration des canaux de téléversement après masquage des données sensibles :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Cette interface ne renvoie pas les clés secrètes, jetons d’actualisation, je
 Lister les statistiques de dossiers :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Lister les chemins complets des dossiers et rechercher par préfixe :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 La sortie par défaut `pretty` convient à la lecture humaine :
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Pour un traitement par un autre programme, utilisez `--output json` :
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Vous pouvez aussi enregistrer le résultat complet :
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ La liste de la gestion des fichiers, la liste de la gestion des utilisateurs, le
 Exécutez :
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Le script affiche toutes les actions et tous les paramètres.

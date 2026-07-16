@@ -20,8 +20,8 @@ System Settings -> Security Settings -> API Token
 
 | سکرېپټ | موخه |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>د یوې غوښتنې د پورته کولو سکرېپټ</a> | `/upload` یو ځل غږوي. د وړو فایلونو او د اړیکې د ازموینو لپاره ګټور دی. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>د ټوټه-ټوټه پورته کولو سکرېپټ</a> | د API Token ټوټه کول، مستقیم پورته کول یا د پلاتفورم د پورته کولو ناستې کاروي. د لویو فایلونو لپاره سپارښتنه کېږي. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>د یوې غوښتنې د پورته کولو سکرېپټ</a> | `/upload` یو ځل غږوي. د وړو فایلونو او د اړیکې د ازموینو لپاره ګټور دی. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>د ټوټه-ټوټه پورته کولو سکرېپټ</a> | د API Token ټوټه کول، مستقیم پورته کول یا د پلاتفورم د پورته کولو ناستې کاروي. د لویو فایلونو لپاره سپارښتنه کېږي. |
 
 Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 
@@ -30,8 +30,8 @@ Node.js 18 یا تر هغه نوی نسخه اړینه ده.
 دواړه سکرېپټونه کولی شي هغه د پورته کولو چینلونه ولېستي چې اوسني API Token ته شته:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 د چینلونو د لېست کولو پر مهال `--file` او `--channel` اړین نه دي. ځواب کې د پورته کولو اصلي چینل، د پورته کولو چینل کلیدونه، د فرعي چینل نومونه او د بار-وېش حالت راځي. پټ ارزښتونه، د تازه کولو ټوکنونه او نور حساس تنظیمي ارزښتونه نه راستنېږي.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 د یوې غوښتنې سکرېپټ `/upload` ته یوه غوښتنه لېږي.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token په چاپېریالي متغیر کې هم اېښودل کېدای شي:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### د یوې غوښتنې پارامترونه
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
 | `--base-url <url>` | هو | د ImgHost سایټ URL، لکه `https://image.ai6.me`. |
-| `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
+| `--token <token>` | هو | API Token. د `IMGHOST_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--file <path>` | هو | د ځایي فایل لاره. |
 | `--channel <key>` | هو | د پورته کولو چینل. |
 | `--folder <path>` | نه | د پورته کولو پوښۍ، لکه `photos/2026` یا `/user/`. |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 د ټوټه-ټوټه پورته کولو سکرېپټ لومړی له سرور اړخ څخه د هدف فایل حل غواړي، بیا د ټاکلي چینل د لوی فایل جریان تعقیبوي. تاسو اړتیا نه لرئ چې د ټوټه-ناستې، یوځای کولو یا بشپړولو غوښتنې پخپله ولیکئ.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
 | `--base-url <url>` | هو | د ImgHost سایټ URL. |
-| `--token <token>` | هو | API Token. د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
+| `--token <token>` | هو | API Token. د `IMGHOST_API_TOKEN` چاپېریالي متغیر هم کارولای شئ. |
 | `--file <path>` | هو | د ځایي فایل لاره. |
 | `--channel <key>` | هو | د پورته کولو چینل. |
 | `--folder <path>` | نه | د پورته کولو پوښۍ. |

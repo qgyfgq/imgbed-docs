@@ -2,7 +2,7 @@
 
 Penghapusan berkas melalui API Token ditujukan untuk skrip, pekerjaan otomatis, dan aplikasi pihak ketiga. Anda tidak perlu membuka panel admin; cukup berikan alamat situs, API Token, dan ID berkas yang jelas untuk menghapus satu atau beberapa berkas dari ImgHost.
 
-Penghapusan adalah operasi tulis. Setelah perintah dijalankan, data benar-benar dihapus. Sebaiknya periksa dahulu nilai `fileId` yang akan dihapus dengan `imgbed-token-list.mjs`, lalu kirim ID tersebut ke skrip penghapusan.
+Penghapusan adalah operasi tulis. Setelah perintah dijalankan, data benar-benar dihapus. Sebaiknya periksa dahulu nilai `fileId` yang akan dihapus dengan `imghost-token-list.mjs`, lalu kirim ID tersebut ke skrip penghapusan.
 
 ![Edit API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Saat membuat atau mengedit API Token, pastikan Token ini mengizinkan penghapusan
 API Token juga dapat disimpan dalam variabel lingkungan:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Mengunduh Skrip
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>skrip penghapus berkas</a> | Menghapus satu atau beberapa ID berkas yang ditentukan secara jelas |
+| <a href="/tools/imghost-token-delete.mjs" download>skrip penghapus berkas</a> | Menghapus satu atau beberapa ID berkas yang ditentukan secara jelas |
 
 Skrip membutuhkan Node.js 18 atau versi yang lebih baru.
 
@@ -64,7 +64,7 @@ Setelah penghapusan berhasil, server otomatis menangani indeks berkas, statistik
 | Parameter | Wajib | Keterangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat situs ImgHost, misalnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token; dapat diganti dengan variabel lingkungan `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Ya | ID berkas yang akan dihapus; dapat diberikan beberapa kali |
 | `--strictness <strict\|soft>` | Tidak | Ketegasan penghapusan; bawaan `strict` |
 | `--batch-size <n>` | Tidak | Jumlah berkas yang dihapus per permintaan; bawaan `15`, maksimum `15` |
@@ -90,7 +90,7 @@ Jika Anda ingin operasi dianggap berhasil hanya saat berkas jarak jauh benar-ben
 Menghapus satu berkas:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Menggunakan API Token dari variabel lingkungan:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Menghapus beberapa berkas:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Membersihkan catatan ImgHost meskipun penghapusan di penyimpanan jarak jauh gagal:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Mengeluarkan JSON dan menyimpan hasil:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Membatasi setiap permintaan untuk menghapus 5 berkas:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Skrip penghapusan membutuhkan ID berkas ImgHost. Anda dapat memakai skrip daftar terlebih dahulu untuk melihat berkas di sebuah folder:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

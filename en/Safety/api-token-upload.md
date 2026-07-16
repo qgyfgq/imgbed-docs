@@ -20,8 +20,8 @@ The documentation package provides two Node.js scripts:
 
 | Script | Purpose |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>single-request upload script</a> | Calls `/upload` once. Useful for small files and connectivity tests. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>chunked upload script</a> | Uses API Token chunking, direct upload, or platform upload sessions. Recommended for large files. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>single-request upload script</a> | Calls `/upload` once. Useful for small files and connectivity tests. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>chunked upload script</a> | Uses API Token chunking, direct upload, or platform upload sessions. Recommended for large files. |
 
 Node.js 18 or later is required.
 
@@ -30,8 +30,8 @@ Node.js 18 or later is required.
 Both scripts can list the upload channels available to the current API Token:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 When listing channels, `--file` and `--channel` are not required. The response includes the default upload channel, upload channel keys, child channel names, and load-balance status. Secrets, refresh tokens, and other sensitive configuration values are not returned.
@@ -50,7 +50,7 @@ For larger files, use the chunked upload script first. Single-request uploads ar
 The single-request script sends one request to `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 You can also place the token in an environment variable:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Single-Request Parameters
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parameter | Required | Description |
 | --- | --- | --- |
 | `--base-url <url>` | Yes | ImgHost site URL, for example `https://image.ai6.me`. |
-| `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
+| `--token <token>` | Yes | API Token. You can also use the `IMGHOST_API_TOKEN` environment variable. |
 | `--file <path>` | Yes | Local file path. |
 | `--channel <key>` | Yes | Upload channel. |
 | `--folder <path>` | No | Upload folder, for example `photos/2026` or `/user/`. |
@@ -122,7 +122,7 @@ When a file exceeds one of these limits, the script reports the matching error l
 The chunked upload script first asks the backend to resolve the target file and then follows the large-file flow for the selected channel. You do not need to write chunk session, merge, or completion requests yourself.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parameter | Required | Description |
 | --- | --- | --- |
 | `--base-url <url>` | Yes | ImgHost site URL. |
-| `--token <token>` | Yes | API Token. You can also use the `IMGBED_API_TOKEN` environment variable. |
+| `--token <token>` | Yes | API Token. You can also use the `IMGHOST_API_TOKEN` environment variable. |
 | `--file <path>` | Yes | Local file path. |
 | `--channel <key>` | Yes | Upload channel. |
 | `--folder <path>` | No | Upload folder. |

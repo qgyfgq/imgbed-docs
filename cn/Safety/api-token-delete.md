@@ -2,7 +2,7 @@
 
 API Token 删除文件适合给脚本、自动化任务和第三方程序使用。它不需要打开后台页面，只要带上站点地址、Token 和明确的文件 ID，就可以删除图床里的单个或多个文件。
 
-删除是写入操作，命令执行后就会真实删除。建议先用 `imgbed-token-list.mjs` 查清楚要删除的 `fileId`，再把这些 ID 传给删除脚本。
+删除是写入操作，命令执行后就会真实删除。建议先用 `imghost-token-list.mjs` 查清楚要删除的 `fileId`，再把这些 ID 传给删除脚本。
 
 ![编辑 API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -17,14 +17,14 @@ API Token 删除文件适合给脚本、自动化任务和第三方程序使用�
 也可以把 Token 放到环境变量里：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
+$env:IMGHOST_API_TOKEN="你的 API Token"
 ```
 
 ## 下载脚本
 
 | 脚本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>删除文件脚本</a> | 删除一个或多个明确指定的文件 ID |
+| <a href="/tools/imghost-token-delete.mjs" download>删除文件脚本</a> | 删除一个或多个明确指定的文件 ID |
 
 运行脚本需要本机安装 Node.js 18 或更高版本。
 
@@ -62,7 +62,7 @@ Authorization: Bearer <token>
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--file-id <id>` | 是 | 要删除的文件 ID，可重复传多个 |
 | `--strictness <strict\|soft>` | 否 | 删除严格度，默认 `strict` |
 | `--batch-size <n>` | 否 | 每个请求删除的文件数，默认 `15`，最大 `15` |
@@ -88,7 +88,7 @@ Authorization: Bearer <token>
 删除单个文件：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --file-id "photos/2026/a.txt"
@@ -97,9 +97,9 @@ node imgbed-token-delete.mjs `
 使用环境变量中的 Token：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
+$env:IMGHOST_API_TOKEN="你的 API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --file-id "photos/2026/a.txt"
 ```
@@ -107,7 +107,7 @@ node imgbed-token-delete.mjs `
 删除多个文件：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -117,7 +117,7 @@ node imgbed-token-delete.mjs `
 远端删除失败时仍清理图床记录：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -126,7 +126,7 @@ node imgbed-token-delete.mjs `
 输出 JSON 并保存结果：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -136,7 +136,7 @@ node imgbed-token-delete.mjs `
 限制每次请求删除 5 个文件：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://你的域名" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -148,7 +148,7 @@ node imgbed-token-delete.mjs `
 删除脚本需要的是图床文件 ID。可以先用列出脚本查看目录里的文件：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `

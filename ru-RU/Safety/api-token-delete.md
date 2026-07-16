@@ -2,7 +2,7 @@
 
 Скрипт удаления через API Token предназначен для скриптов, автоматизации и сторонних программ. Панель администратора открывать не нужно: достаточно передать адрес сайта, Token и точный ID файла, чтобы удалить один или несколько файлов из ImgHost.
 
-Удаление изменяет данные. После выполнения команды файлы действительно будут удалены. Поэтому сначала проверьте нужные `fileId` через `imgbed-token-list.mjs`, а затем передайте эти ID в скрипт удаления.
+Удаление изменяет данные. После выполнения команды файлы действительно будут удалены. Поэтому сначала проверьте нужные `fileId` через `imghost-token-list.mjs`, а затем передайте эти ID в скрипт удаления.
 
 ![Редактирование API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ System Settings -> Security Settings -> API Token
 Token можно также поместить в переменную окружения:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Скачать скрипт
 
 | Скрипт | Назначение |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>скрипт удаления файлов</a> | Удаляет один или несколько явно указанных ID файлов |
+| <a href="/tools/imghost-token-delete.mjs" download>скрипт удаления файлов</a> | Удаляет один или несколько явно указанных ID файлов |
 
 Требуется Node.js 18 или новее.
 
@@ -64,7 +64,7 @@ API возвращает поток хода выполнения в форма�
 | Параметр | Обязателен | Описание |
 | --- | --- | --- |
 | `--base-url <url>` | Да | Адрес ImgHost, например `https://image.ai6.me` |
-| `--token <token>` | Да | API Token; можно использовать `IMGBED_API_TOKEN` |
+| `--token <token>` | Да | API Token; можно использовать `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Да | ID файла для удаления; можно указать несколько раз |
 | `--strictness <strict\|soft>` | Нет | Строгость удаления; по умолчанию `strict` |
 | `--batch-size <n>` | Нет | Число файлов в одном запросе; по умолчанию `15`, максимум `15` |
@@ -90,7 +90,7 @@ API возвращает поток хода выполнения в форма�
 Удалить один файл:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Использовать Token из переменной окружения:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Удалить несколько файлов:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Очистить запись ImgHost, даже если удаление в удаленном хранилище не удалось:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 Вывести JSON и сохранить результат:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Ограничить один запрос 5 файлами:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Скрипту удаления нужен ID файла в ImgHost. Сначала можно посмотреть файлы в каталоге через скрипт списка:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

@@ -18,8 +18,8 @@ API Token 上传适合给脚本、自动化任务和第三方程序使用。它�
 
 | 脚本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>单次上传脚本</a> | 只调用一次 `/upload`，适合小文件和接口连通性测试 |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>分块上传脚本</a> | 使用 API Token 的分块、直传或平台会话接口，适合大文件 |
+| <a href="/tools/imghost-token-single-upload.mjs" download>单次上传脚本</a> | 只调用一次 `/upload`，适合小文件和接口连通性测试 |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>分块上传脚本</a> | 使用 API Token 的分块、直传或平台会话接口，适合大文件 |
 
 运行脚本需要本机安装 Node.js 18 或更高版本。
 
@@ -28,8 +28,8 @@ API Token 上传适合给脚本、自动化任务和第三方程序使用。它�
 两个脚本都支持先列出当前 API Token 可用的上传渠道：
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://你的域名" --token "你的 API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://你的域名" --token "你的 API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://你的域名" --token "你的 API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://你的域名" --token "你的 API Token" --list-channels
 ```
 
 列出渠道时不需要传 `--file` 和 `--channel`。返回内容包含默认上传渠道、大渠道参数、子渠道名称和是否开启负载均衡，不会返回密钥、刷新令牌等敏感配置。
@@ -48,7 +48,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://你的域名" --token "�
 单次上传脚本只请求一次 `/upload`。
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --file "D:\test\image.png" `
@@ -59,8 +59,8 @@ node imgbed-token-single-upload.mjs `
 也可以把 Token 放到环境变量里：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
-node imgbed-token-single-upload.mjs --base-url "https://你的域名" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="你的 API Token"
+node imghost-token-single-upload.mjs --base-url "https://你的域名" --file "D:\test\image.png" --channel s3
 ```
 
 ### 单次上传参数
@@ -68,7 +68,7 @@ node imgbed-token-single-upload.mjs --base-url "https://你的域名" --file "D:
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--file <path>` | 是 | 本地文件路径 |
 | `--channel <key>` | 是 | 上传渠道 |
 | `--folder <path>` | 否 | 上传目录，例如 `photos/2026` 或 `/user/` |
@@ -118,7 +118,7 @@ node imgbed-token-single-upload.mjs --base-url "https://你的域名" --file "D:
 分块上传脚本会先用 API Token 请求后端解析文件目标，再按渠道走对应的大文件上传流程。用户不需要自己写分块会话、合并和完成请求。
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --file "D:\test\video.zip" `
@@ -132,7 +132,7 @@ node imgbed-token-chunk-upload.mjs `
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址 |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--file <path>` | 是 | 本地文件路径 |
 | `--channel <key>` | 是 | 上传渠道 |
 | `--folder <path>` | 否 | 上传目录 |

@@ -20,8 +20,8 @@ API Token তৈরি বা সম্পাদনা করার সময় �
 
 | স্ক্রিপ্ট | উদ্দেশ্য |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>একক অনুরোধের আপলোড স্ক্রিপ্ট</a> | একবার `/upload` ডাকে. ছোট ফাইল এবং সংযোগ পরীক্ষার জন্য উপযোগী. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>খণ্ডভিত্তিক আপলোড স্ক্রিপ্ট</a> | API Token খণ্ডায়ন, সরাসরি আপলোড বা প্ল্যাটফর্মের আপলোড সেশন ব্যবহার করে. বড় ফাইলের জন্য সুপারিশকৃত. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>একক অনুরোধের আপলোড স্ক্রিপ্ট</a> | একবার `/upload` ডাকে. ছোট ফাইল এবং সংযোগ পরীক্ষার জন্য উপযোগী. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>খণ্ডভিত্তিক আপলোড স্ক্রিপ্ট</a> | API Token খণ্ডায়ন, সরাসরি আপলোড বা প্ল্যাটফর্মের আপলোড সেশন ব্যবহার করে. বড় ফাইলের জন্য সুপারিশকৃত. |
 
 Node.js 18 বা তার নতুন সংস্করণ প্রয়োজন.
 
@@ -30,8 +30,8 @@ Node.js 18 বা তার নতুন সংস্করণ প্রয়ো�
 দুটি স্ক্রিপ্টই বর্তমান API Token-এর জন্য উপলব্ধ আপলোড চ্যানেল দেখাতে পারে:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 চ্যানেল দেখানোর সময় `--file` এবং `--channel` প্রয়োজন নেই. প্রতিক্রিয়ায় ডিফল্ট আপলোড চ্যানেল, আপলোড চ্যানেলের key, উপ-চ্যানেলের নাম এবং লোড ব্যাল্যান্সিংয়ের অবস্থা থাকে. গোপন কী, রিফ্রেশ টোকেন এবং অন্যান্য সংবেদনশীল কনফিগারেশন মান ফেরত আসে না.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 একক অনুরোধের স্ক্রিপ্ট `/upload`-এ একটি অনুরোধ পাঠায়.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 token পরিবেশ চলকেও রাখা যায়:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### একক অনুরোধের পরামিতি
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
 | `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL, যেমন `https://image.ai6.me`. |
-| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
+| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGHOST_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--file <path>` | হ্যাঁ | স্থানীয় ফাইলের পথ. |
 | `--channel <key>` | হ্যাঁ | আপলোড চ্যানেল. |
 | `--folder <path>` | না | আপলোড ফোল্ডার, যেমন `photos/2026` বা `/user/`. |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 খণ্ডভিত্তিক আপলোড স্ক্রিপ্ট আগে ব্যাকএন্ডকে লক্ষ্য ফাইল নির্ধারণ করতে বলে, তারপর নির্বাচিত চ্যানেলের বড় ফাইল প্রবাহ অনুসরণ করে. আপনাকে নিজে chunk session, merge বা completion অনুরোধ লিখতে হবে না.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | পরামিতি | আবশ্যিক | বর্ণনা |
 | --- | --- | --- |
 | `--base-url <url>` | হ্যাঁ | ImgHost সাইটের URL. |
-| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGBED_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
+| `--token <token>` | হ্যাঁ | API Token. চাইলে `IMGHOST_API_TOKEN` পরিবেশ চলক ব্যবহার করতে পারেন. |
 | `--file <path>` | হ্যাঁ | স্থানীয় ফাইলের পথ. |
 | `--channel <key>` | হ্যাঁ | আপলোড চ্যানেল. |
 | `--folder <path>` | না | আপলোড ফোল্ডার. |

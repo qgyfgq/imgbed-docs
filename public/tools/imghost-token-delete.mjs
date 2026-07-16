@@ -10,11 +10,11 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token delete tool
 
 Usage:
-  node imgbed-token-delete.mjs --base-url <url> --token <token> --file-id <id> [--file-id <id> ...]
+  node imghost-token-delete.mjs --base-url <url> --token <token> --file-id <id> [--file-id <id> ...]
 
 Required:
   --base-url <url>          ImgHost site URL, for example https://image.ai6.me
-  --token <token>           API Token with delete permission. You can also set IMGBED_API_TOKEN.
+  --token <token>           API Token with delete permission. You can also set IMGHOST_API_TOKEN.
   --file-id <id>            File ID to delete. Repeat this option to delete multiple files.
 
 Delete options:
@@ -32,7 +32,7 @@ Tool options:
   -h, --help                Show this help.
 
 Notes:
-  - This script only deletes explicit file IDs. Use imgbed-token-list.mjs to find file IDs first.
+  - This script only deletes explicit file IDs. Use imghost-token-list.mjs to find file IDs first.
   - The backend delete API returns NDJSON progress events; this script summarizes those events.
 `);
 }
@@ -40,7 +40,7 @@ Notes:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     fileIds: [],
     strictness: 'strict',
     batchSize: 15,
@@ -117,7 +117,7 @@ function parseArgs(argv) {
 function validateArgs(args) {
   if (args.help) return;
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (args.fileIds.length === 0) throw new Error('--file-id is required');
 }
 

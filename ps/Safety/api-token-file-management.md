@@ -19,14 +19,14 @@ System Settings → Security Settings → API Token
 Token په چاپېریالي متغیر کې هم اېښودلای شئ:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## سکرېپټ کښته کول
 
 | سکرېپټ | کارونه |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>د فایل ادارې سکرېپټ</a> | د فایل metadata، د څارنې لیبلونه، د فایل ټګونه، د لېست حالت، لېږد، نوم بدلول، د پوښۍ جوړول، د IP بندول/بېرته فعالول، او د لنډمهاله پورته کولو Token جوړول او حذفول |
+| <a href="/tools/imghost-token-manage.mjs" download>د فایل ادارې سکرېپټ</a> | د فایل metadata، د څارنې لیبلونه، د فایل ټګونه، د لېست حالت، لېږد، نوم بدلول، د پوښۍ جوړول، د IP بندول/بېرته فعالول، او د لنډمهاله پورته کولو Token جوړول او حذفول |
 
 د سکرېپټ د چلولو لپاره Node.js 18 یا تر هغه نوی نسخه په خپل ماشین کې اړینه ده.
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | وړتیا | سکرېپټ | اجازه |
 | --- | --- | --- |
-| فایل پورته کول | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| فایلونه لېست کول، فایلونه چاڼول، د کارونکي شمېرې لوستل | `imgbed-token-list.mjs` | `list` |
-| په څرګند ډول ټاکل شوي فایلونه حذفول | `imgbed-token-delete.mjs` | `delete` |
-| د فایل معلومات، ټګونه، لېستونه، لېږد، نوم بدلول، پوښۍ جوړول، IP بندول، د لنډمهاله پورته کولو Token جوړول یا حذفول | `imgbed-token-manage.mjs` | `manage` |
+| فایل پورته کول | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| فایلونه لېست کول، فایلونه چاڼول، د کارونکي شمېرې لوستل | `imghost-token-list.mjs` | `list` |
+| په څرګند ډول ټاکل شوي فایلونه حذفول | `imghost-token-delete.mjs` | `delete` |
+| د فایل معلومات، ټګونه، لېستونه، لېږد، نوم بدلول، پوښۍ جوړول، IP بندول، د لنډمهاله پورته کولو Token جوړول یا حذفول | `imghost-token-manage.mjs` | `manage` |
 | د پورته کولو چینلونه، امنیتي تنظیمات، د پاڼې تنظیمات، نور تنظیمات او د فدراسیون اړیکې سمول | د تنظیماتو د ادارې اړوند سکرېپټونه | `manage` |
 
-`imgbed-token-manage.mjs` فایل نه پورته کوي، فایلونه نه لېست کوي او فایل نه حذف کوي. که `fileId` موندل غواړئ، لومړی د لېست سکرېپټ وکاروئ او فایلونه چاڼ کړئ؛ که فایل حذفول غواړئ، څرګند `fileId` د حذف سکرېپټ ته ورکړئ.
+`imghost-token-manage.mjs` فایل نه پورته کوي، فایلونه نه لېست کوي او فایل نه حذف کوي. که `fileId` موندل غواړئ، لومړی د لېست سکرېپټ وکاروئ او فایلونه چاڼ کړئ؛ که فایل حذفول غواړئ، څرګند `fileId` د حذف سکرېپټ ته ورکړئ.
 
 ## عام پارامترونه
 
 | پارامتر | اړین | تشریح |
 | --- | --- | --- |
 | `--base-url <url>` | هو | د ImgHost سایټ پته، لکه `https://image.ai6.me` |
-| `--token <token>` | هو | API Token؛ د `IMGBED_API_TOKEN` چاپېریالي متغیر هم کارولای شئ |
+| `--token <token>` | هو | API Token؛ د `IMGHOST_API_TOKEN` چاپېریالي متغیر هم کارولای شئ |
 | `--retries <n>` | نه | د لنډمهاله ناکامۍ د بیا هڅو شمېر؛ تلواله `3` |
 | `--timeout-ms <n>` | نه | د یوې غوښتنې وخت‌حد؛ تلواله `180000` |
 | `--output <pretty\|json>` | نه | د پایلې بڼه؛ تلواله `pretty` ده. د پروګرامي کارونې لپاره `json` غوره دی |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 د فایل ادارې ډېری کارونه `fileId` ته اړتیا لري. لومړی یې د لېست سکرېپټ له لارې پلټلی شئ:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 د فایل metadata د ادارې په فایل‌اداره کې ښکاره کېدونکی نوم او د لوستلو سرچینه بدلوي.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 له سمې مخکتنې وروسته یې خوندي کړئ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ node imgbed-token-manage.mjs `
 د څارنې لیبل لوستل:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 د څارنې لیبل ټاکل:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 د فایل ټګونه لوستل:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 ټګونه زیاتول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 ټګونه لرې کول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 ټګونه ځایناستي کول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 په ډله‌ییز ډول ټګونه زیاتول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 یو فایل سپین لېست ته اچول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 په ډله‌ییز ډول تور لېست ته زیاتول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 د لېست تلواله حالت بېرته راوستل:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 د فایل لېږد یو یا څو فایلونه هدف پوښۍ ته وړي. backend په یوه غوښتنه کې تر `15` فایلونو پورې پروسس کوي، او سکرېپټ د `--batch-size` له مخې کار په څو غوښتنو ویشي او په ترتیب یې چلوي.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 نوم بدلول د پخواني فایل ID او نوي فایل ID په څرګند ډول کاروي. نوی فایل ID یوازې د فایل نوم بدلولی شي، یا ورسره پوښۍ هم بدلولی شي.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 د ډله‌ییز نوم بدلولو لپاره `--old-file-id` او `--new-file-id` څو ځله ورکړئ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ mapping په JSON فایل کې هم لیکلی شئ:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 د ImgHost پوښۍ د فایل له مسیرونو څخه راځي، نو رښتینې تشه پوښۍ نه لري. کله چې سکرېپټ پوښۍ جوړوي، په هدف پوښۍ کې `0.md` نومې ځای‌نیونکی فایل جوړوي، څو دا پوښۍ د فایلونو په اداره او د پوښیو په شمېرنو کې ښکاره شي.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 یو د پورته کولو IP بندول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 یو د پورته کولو IP بېرته فعالول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 د اوسني بند شوي پورته کولو IP لېست لیدل:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 د ادارې اجازه کولای شي لنډمهاله، یوازې د پورته کولو Token جوړ کړي. دغه Token تل یوازې `upload` اجازه لري، `autoDelete` تل `true` وي، او ډېر د پای وخت یې `1` ورځ ده.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ millisecond timestamp هم مستقیم ورکولای شئ:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 لنډمهاله د پورته کولو Token حذفول:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 تلواله `pretty` پایله د انسان د لوستلو لپاره مناسبه ده. که بل پروګرام یې پروسس کوي، `--output json` وکاروئ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 بشپړه پایله هم خوندي کولای شئ:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ node imgbed-token-manage.mjs `
 
 ### څنګه پوه شم کوم fileId ورکړم؟
 
-لومړی د `imgbed-token-list.mjs --files` له لارې فایلونه وپلټئ. په ستنېدونکي ځواب کې `name` عموماً د فایل ID وي، یعنې هماغه ارزښت چې دلته `--file-id` ته ورکول کېږي.
+لومړی د `imghost-token-list.mjs --files` له لارې فایلونه وپلټئ. په ستنېدونکي ځواب کې `name` عموماً د فایل ID وي، یعنې هماغه ارزښت چې دلته `--file-id` ته ورکول کېږي.
 
 ### په یوه ډله‌ییز کار کې تر ټولو ډېر څو فایلونه وي؟
 

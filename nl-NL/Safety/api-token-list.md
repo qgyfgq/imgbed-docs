@@ -26,14 +26,14 @@ Controleer bij het maken of bewerken van een API Token dat lijsten lezen is toeg
 Je kunt het Token ook in een omgevingsvariabele zetten:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Script downloaden
 
 | Script | Gebruik |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>Script voor lijsten en filteren</a> | Lijst in bestandsbeheer, lijst in gebruikersbeheer, lijst met uploadkanalen, mapstatistiektabel |
+| <a href="/tools/imghost-token-list.mjs" download>Script voor lijsten en filteren</a> | Lijst in bestandsbeheer, lijst in gebruikersbeheer, lijst met uploadkanalen, mapstatistiektabel |
 
 Je hebt lokaal Node.js 18 of hoger nodig.
 
@@ -42,7 +42,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Nee | Aantal pogingen bij tijdelijke fouten; standaard `3` |
 | `--timeout-ms <n>` | Nee | Time-out van één verzoek; standaard `180000` |
 | `--output <pretty\|json>` | Nee | Uitvoerformaat; standaard `pretty`. Gebruik voor programmatische verwerking bij voorkeur `json` |
@@ -54,7 +54,7 @@ Je hebt lokaal Node.js 18 of hoger nodig.
 Bestanden uit bestandsbeheer tonen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Uitvoeren als JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Alleen het aantal binnen de huidige filters lezen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF zoeken:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Filteren op upload-IP en kanaal:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Volledig resultaat opslaan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Uploadstatistieken van gebruikers/IP-adressen tonen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Een IP-adres of locatie zoeken:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Details bekijken van bestanden die door een bepaald IP-adres zijn geüpload:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Geblokkeerde upload-IP-adressen tonen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Gebruikers tonen die niet mogen uploaden:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Zoeken op locatietrefwoord:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Sorteren op aantal uploads:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Afgeschermde configuratie van uploadkanalen tonen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Deze API geeft geen sleutels, vernieuwingstokens, tijdelijke tokens, wachtwoorde
 Mapstatistieken tonen:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Volledige mappaden tonen en zoeken op voorvoegsel:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 De standaarduitvoer `pretty` is geschikt om handmatig te lezen:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Gebruik `--output json` als een ander programma het resultaat moet verwerken:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Je kunt het volledige resultaat ook opslaan:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ De lijst in bestandsbeheer, de lijst in gebruikersbeheer, de afgeschermde kanaal
 Voer dit uit:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Het script toont alle acties en parameters.

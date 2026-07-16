@@ -26,14 +26,14 @@ Při vytvoření nebo úpravě API Token zkontrolujte, že má povolený výpis.
 API Token lze zadat také proměnnou prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Stažení skriptu
 
 | Skript | Účel |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>skript pro výpis a filtrování</a> | Výpis správy souborů, výpis správy uživatelů, seznam nahrávacích kanálů a tabulka statistik složek |
+| <a href="/tools/imghost-token-list.mjs" download>skript pro výpis a filtrování</a> | Výpis správy souborů, výpis správy uživatelů, seznam nahrávacích kanálů a tabulka statistik složek |
 
 Na místním počítači je potřeba Node.js 18 nebo novější.
 
@@ -42,7 +42,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit jednoho požadavku; výchozí hodnota `180000` |
 | `--output <pretty\|json>` | Ne | Formát výstupu; výchozí hodnota `pretty`; pro zpracování programem použijte `json` |
@@ -54,7 +54,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 Výpis souborů ve správě souborů:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 Výstup JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 Načtení pouze počtu podle aktuálních filtrů:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 Hledání PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 Filtrování podle nahrávací IP adresy a kanálu:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 Uložení úplného výsledku:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 Výpis statistik nahrávání podle uživatele nebo IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 Hledání IP adresy nebo adresy:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 Zobrazení souborů nahraných z konkrétní IP adresy:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 Výpis IP adres se zakázaným nahráváním:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 Výpis uživatelů se zakázaným nahráváním:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 Hledání podle slova v adrese:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 Řazení podle počtu nahrání:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 Výpis konfigurace nahrávacích kanálů bez citlivých údajů:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ Toto rozhraní nevrací tajné klíče, obnovovací tokeny, dočasné tokeny, he
 Výpis statistik složek:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 Výpis úplných cest složek a hledání podle předpony:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 Výchozí výstup `pretty` se hodí pro ruční čtení:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 Pro zpracování jiným programem použijte `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 Lze uložit také úplný výsledek:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ Výpis správy souborů, výpis správy uživatelů, seznamy kanálů bez citliv
 Spusťte:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 Skript vypíše všechny akce a parametry.

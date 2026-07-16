@@ -21,7 +21,7 @@ Cả ba tập lệnh quản lý đều mặc định dùng chế độ chạy th
 Bạn cũng có thể đặt token trong biến môi trường:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Tải tập lệnh quản lý
@@ -30,9 +30,9 @@ Gói tài liệu cung cấp ba tập lệnh Node.js:
 
 | Tập lệnh | Mục đích |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>tập lệnh quản lý cài đặt tải lên</a> | Quản lý kênh tải lên, kênh con và cân bằng tải. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>tập lệnh quản lý cài đặt trang</a> | Quản lý cài đặt bảo mật, cài đặt trang và cài đặt khác. |
-| <a href="/tools/imgbed-token-federation.mjs" download>tập lệnh quản lý quan hệ liên kết</a> | Quản lý các thao tác, yêu cầu và tin nhắn quan hệ liên kết nhẹ. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>tập lệnh quản lý cài đặt tải lên</a> | Quản lý kênh tải lên, kênh con và cân bằng tải. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>tập lệnh quản lý cài đặt trang</a> | Quản lý cài đặt bảo mật, cài đặt trang và cài đặt khác. |
+| <a href="/tools/imghost-token-federation.mjs" download>tập lệnh quản lý quan hệ liên kết</a> | Quản lý các thao tác, yêu cầu và tin nhắn quan hệ liên kết nhẹ. |
 
 Yêu cầu Node.js 18 trở lên.
 
@@ -41,7 +41,7 @@ Yêu cầu Node.js 18 trở lên.
 | Tham số | Bắt buộc | Mô tả |
 | --- | --- | --- |
 | `--base-url <url>` | Có | URL trang ImgHost, ví dụ `https://image.ai6.me`. |
-| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGBED_API_TOKEN`. |
+| `--token <token>` | Có | API Token. Bạn cũng có thể dùng biến môi trường `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | Không | Số lần thử lại khi lỗi tạm thời. Mặc định là `3`. |
 | `--timeout-ms <n>` | Không | Thời gian chờ yêu cầu. Mặc định là `180000`. |
 | `--output <pretty\|json>` | Không | Định dạng đầu ra. Mặc định là `pretty`; dùng `json` cho chương trình. |
@@ -54,7 +54,7 @@ Yêu cầu Node.js 18 trở lên.
 Tập lệnh cài đặt tải lên liệt kê, đọc, tạo, chỉnh sửa và xóa kênh con tải lên. Nó cũng có thể bật hoặc tắt cân bằng tải cho một kênh tải lên cấp cao.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Tham số cài đặt tải lên
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Liệt kê tất cả cài đặt tải lên:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Đọc cấu hình kênh S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Đọc một kênh con S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Tạo hoặc chỉnh sửa một kênh con. Chạy lần đầu không có `--apply` để xem trước:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Sau khi xác nhận, lưu thay đổi:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Xóa một kênh con:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Bật cân bằng tải S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Với trường phức tạp, hãy viết một tệp JSON và truyền bằng `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Tập lệnh cài đặt trang quản lý ba khu vực cấu hình:
 Dùng `--list-sections` trước để xem các khu vực, phần và trường có thể chỉnh sửa:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ Với khu vực `page`, `--set` dùng ID mục cấu hình trang, ví dụ `star
 Đọc cài đặt thông báo cập nhật hệ thống:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Thay đổi email thông báo cập nhật hệ thống. Chạy trước không có `--apply` để xem trước:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Sau khi xác nhận, lưu thay đổi:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Thay đổi hiệu ứng sao của trang quản trị:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Thay đổi ngôn ngữ định vị địa lý IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Cập nhật chỉ mục, xóa chỉ mục liên kết và xác nhận thay đ�
 Xem trạng thái nút cục bộ và cả hai danh sách quan hệ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Chỉ liệt kê nút đi:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Chỉ liệt kê nút đến:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Yêu cầu tham gia một nút khác. Chạy trước không có `--apply` để xem trước:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Sau khi xác nhận, lưu thay đổi:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Đăng ký lại cho quan hệ không có bản ghi:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Chấp nhận yêu cầu nút đến:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Từ chối yêu cầu nút đến:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Gửi tin nhắn cho quan hệ đã thiết lập:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Hủy yêu cầu nút đi đang chờ:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Xóa quan hệ nút đến đã chấp nhận:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Xóa bản ghi kết thúc của nút đến:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

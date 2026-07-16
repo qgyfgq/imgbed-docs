@@ -20,8 +20,8 @@ API Token بناتے یا ترمیم کرتے وقت یقینی بنائیں ک�
 
 | اسکرپٹ | مقصد |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>ایک درخواست اپ لوڈ اسکرپٹ</a> | `/upload` کو ایک بار call کرتا ہے۔ چھوٹی فائلوں اور connectivity tests کے لیے مفید۔ |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>حصوں میں اپ لوڈ اسکرپٹ</a> | API Token chunking، direct upload، یا platform upload sessions استعمال کرتا ہے۔ بڑی فائلوں کے لیے تجویز کردہ۔ |
+| <a href="/tools/imghost-token-single-upload.mjs" download>ایک درخواست اپ لوڈ اسکرپٹ</a> | `/upload` کو ایک بار call کرتا ہے۔ چھوٹی فائلوں اور connectivity tests کے لیے مفید۔ |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>حصوں میں اپ لوڈ اسکرپٹ</a> | API Token chunking، direct upload، یا platform upload sessions استعمال کرتا ہے۔ بڑی فائلوں کے لیے تجویز کردہ۔ |
 
 Node.js 18 یا بعد کا ورژن درکار ہے۔
 
@@ -30,8 +30,8 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 دونوں اسکرپٹس موجودہ API Token کو دستیاب اپ لوڈ چینلز list کر سکتے ہیں:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 چینلز list کرتے وقت `--file` اور `--channel` ضروری نہیں ہوتے۔ response میں default upload channel، upload channel keys، child channel names، اور load-balance status شامل ہوتے ہیں۔ secrets، ریفریش ٹوکنز، اور دیگر sensitive configuration values واپس نہیں کی جاتیں۔
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 single-request script `/upload` کو ایک درخواست بھیجتا ہے۔
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 آپ token کو environment variable میں بھی رکھ سکتے ہیں:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### ایک درخواست والے اپ لوڈ کے پیرامیٹرز
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
-| `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
+| `--token <token>` | ہاں | API Token۔ آپ `IMGHOST_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file <path>` | ہاں | مقامی فائل path۔ |
 | `--channel <key>` | ہاں | اپ لوڈ چینل۔ |
 | `--folder <path>` | نہیں | اپ لوڈ folder، مثلاً `photos/2026` یا `/user/`۔ |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 chunked upload script پہلے بیک اینڈ سے target file resolve کراتا ہے، پھر selected channel کے لیے large-file flow follow کرتا ہے۔ آپ کو chunk session، merge، یا completion requests خود لکھنے کی ضرورت نہیں۔
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ URL۔ |
-| `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
+| `--token <token>` | ہاں | API Token۔ آپ `IMGHOST_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file <path>` | ہاں | مقامی فائل path۔ |
 | `--channel <key>` | ہاں | اپ لوڈ چینل۔ |
 | `--folder <path>` | نہیں | اپ لوڈ folder۔ |

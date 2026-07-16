@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 Token також можна помістити в змінну середовища:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Завантаження скриптів керування
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | Скрипт | Призначення |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>скрипт керування налаштуваннями завантаження</a> | Керує каналами завантаження, дочірніми каналами та балансуванням навантаження. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>скрипт керування налаштуваннями сайту</a> | Керує налаштуваннями безпеки, сторінок та іншими налаштуваннями. |
-| <a href="/tools/imgbed-token-federation.mjs" download>скрипт керування федеративними зв'язками</a> | Керує легкими діями федеративних зв'язків, запитами та повідомленнями. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>скрипт керування налаштуваннями завантаження</a> | Керує каналами завантаження, дочірніми каналами та балансуванням навантаження. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>скрипт керування налаштуваннями сайту</a> | Керує налаштуваннями безпеки, сторінок та іншими налаштуваннями. |
+| <a href="/tools/imghost-token-federation.mjs" download>скрипт керування федеративними зв'язками</a> | Керує легкими діями федеративних зв'язків, запитами та повідомленнями. |
 
 Потрібен Node.js 18 або новіший.
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | Параметр | Обов'язково | Опис |
 | --- | --- | --- |
 | `--base-url <url>` | Так | URL сайту ImgHost, наприклад `https://image.ai6.me`. |
-| `--token <token>` | Так | API Token. Також можна використати змінну середовища `IMGBED_API_TOKEN`. |
+| `--token <token>` | Так | API Token. Також можна використати змінну середовища `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | Ні | Кількість повторів для тимчасових помилок. Типово `3`. |
 | `--timeout-ms <n>` | Ні | Тайм-аут запиту. Типово `180000`. |
 | `--output <pretty\|json>` | Ні | Формат виводу. Типово `pretty`; для програм використовуйте `json`. |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 Скрипт налаштувань завантаження показує, читає, створює, редагує та видаляє дочірні канали завантаження. Він також може вмикати або вимикати балансування навантаження для одного каналу завантаження верхнього рівня.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Параметри налаштувань завантаження
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Показати всі налаштування завантаження:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Прочитати конфігурацію каналу S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Прочитати один дочірній канал S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Створити або змінити один дочірній канал. Спершу запустіть без `--apply`, щоб побачити попередній результат:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Потім збережіть після перевірки:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Видалити один дочірній канал:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Увімкнути балансування навантаження S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 Спершу використайте `--list-sections`, щоб побачити редаговані області, розділи й поля:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 Прочитати налаштування сповіщень про оновлення системи:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Змінити email сповіщень про оновлення системи. Спершу запустіть без `--apply`, щоб побачити попередній результат:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Потім збережіть після перевірки:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Змінити ефект зірок на сторінці адміністратора:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Змінити мову IP-геолокації:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 Переглянути стан локального вузла та обидва списки зв'язків:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Показати лише вихідні вузли:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Показати лише вхідні вузли:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Подати запит на приєднання до іншого вузла. Спершу запустіть без `--apply`, щоб побачити попередній результат:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Потім збережіть після перевірки:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Повторна заявка для зв'язку без запису:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Прийняти вхідний запит:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Відхилити вхідний запит:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Надіслати повідомлення встановленому зв'язку:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Скасувати вихідний очікуваний запит:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Видалити прийнятий вхідний зв'язок:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Видалити завершений вхідний запис:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

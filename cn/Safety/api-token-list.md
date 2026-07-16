@@ -24,14 +24,14 @@ API Token 列出脚本适合给脚本、自动化任务和第三方程序读取�
 也可以把 Token 放到环境变量里：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
+$env:IMGHOST_API_TOKEN="你的 API Token"
 ```
 
 ## 下载脚本
 
 | 脚本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>列出和筛选脚本</a> | 文件管理列出、用户管理列出、上传渠道列表、目录统计表 |
+| <a href="/tools/imghost-token-list.mjs" download>列出和筛选脚本</a> | 文件管理列出、用户管理列出、上传渠道列表、目录统计表 |
 
 运行脚本需要本机安装 Node.js 18 或更高版本。
 
@@ -40,7 +40,7 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--retries <n>` | 否 | 临时失败重试次数，默认 `3` |
 | `--timeout-ms <n>` | 否 | 单个请求超时时间，默认 `180000` |
 | `--output <pretty\|json>` | 否 | 输出格式，默认 `pretty`；程序调用建议用 `json` |
@@ -52,7 +52,7 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 列出文件管理中的文件：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -62,7 +62,7 @@ node imgbed-token-list.mjs `
 输出 JSON：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -73,7 +73,7 @@ node imgbed-token-list.mjs `
 只读取当前筛选条件下的数量：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --file-summary `
@@ -120,7 +120,7 @@ node imgbed-token-list.mjs `
 搜索 PDF：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -132,7 +132,7 @@ node imgbed-token-list.mjs `
 按上传 IP 和渠道筛选：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -144,7 +144,7 @@ node imgbed-token-list.mjs `
 保存完整结果：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -158,7 +158,7 @@ node imgbed-token-list.mjs `
 列出用户/IP 上传统计：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -168,7 +168,7 @@ node imgbed-token-list.mjs `
 搜索某个 IP 或地址：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -178,7 +178,7 @@ node imgbed-token-list.mjs `
 查看某个 IP 上传的文件明细：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --user-detail `
@@ -189,7 +189,7 @@ node imgbed-token-list.mjs `
 列出禁止上传 IP：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --blocked-ips
@@ -222,7 +222,7 @@ node imgbed-token-list.mjs `
 列出禁止上传的用户：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -232,7 +232,7 @@ node imgbed-token-list.mjs `
 按地址关键词搜索：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -242,7 +242,7 @@ node imgbed-token-list.mjs `
 按上传次数排序：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -255,7 +255,7 @@ node imgbed-token-list.mjs `
 列出脱敏后的上传渠道配置：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --channels
@@ -283,7 +283,7 @@ node imgbed-token-list.mjs `
 列出目录统计：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --directories `
@@ -293,7 +293,7 @@ node imgbed-token-list.mjs `
 列出完整目录路径并搜索前缀：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --directories `
@@ -320,19 +320,19 @@ node imgbed-token-list.mjs `
 默认 `pretty` 输出适合人工查看：
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://你的域名" --token "你的 API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://你的域名" --token "你的 API Token" --users --count 5
 ```
 
 如果要给其他程序处理，使用 `--output json`：
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://你的域名" --token "你的 API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://你的域名" --token "你的 API Token" --users --count 5 --output json
 ```
 
 也可以保存完整结果：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --users `
@@ -356,7 +356,7 @@ node imgbed-token-list.mjs `
 执行：
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 脚本会列出所有动作和参数。

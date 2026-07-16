@@ -21,7 +21,7 @@ Semua tindakan tulis dalam tiga skrip pengurusan hanya memaparkan pratonton seca
 API Token juga boleh disimpan dalam pemboleh ubah persekitaran:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Muat Turun Skrip Pengurusan
@@ -30,9 +30,9 @@ Dokumentasi ImgHost menyediakan tiga skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>skrip pengurusan tetapan muat naik</a> | Mengurus saluran muat naik, subsaluran dan pengimbangan beban |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>skrip pengurusan tetapan tapak</a> | Mengurus tetapan keselamatan, tetapan halaman dan tetapan lain |
-| <a href="/tools/imgbed-token-federation.mjs" download>skrip pengurusan hubungan federasi</a> | Mengurus tindakan hubungan ringan, permintaan menyertai dan mesej |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>skrip pengurusan tetapan muat naik</a> | Mengurus saluran muat naik, subsaluran dan pengimbangan beban |
+| <a href="/tools/imghost-token-site-settings.mjs" download>skrip pengurusan tetapan tapak</a> | Mengurus tetapan keselamatan, tetapan halaman dan tetapan lain |
+| <a href="/tools/imghost-token-federation.mjs" download>skrip pengurusan hubungan federasi</a> | Mengurus tindakan hubungan ringan, permintaan menyertai dan mesej |
 
 Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 
@@ -41,7 +41,7 @@ Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Tidak | Bilangan cubaan semula untuk kegagalan sementara; lalai `3` |
 | `--timeout-ms <n>` | Tidak | Had masa setiap permintaan dalam milisaat; lalai `180000` |
 | `--output <pretty\|json>` | Tidak | Format output; lalai `pretty`, gunakan `json` untuk integrasi program |
@@ -54,7 +54,7 @@ Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 Skrip tetapan muat naik boleh menyenaraikan, membaca, mencipta, mengedit dan memadam subsaluran. Skrip ini juga boleh menghidupkan atau mematikan pengimbangan beban pada saluran utama.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Parameter Tetapan Muat Naik
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Menyenaraikan semua tetapan muat naik:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 Membaca konfigurasi saluran S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Membaca subsaluran tertentu di bawah S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Mencipta atau mengedit subsaluran WebDAV. Jalankan dahulu tanpa `--apply` untuk melihat pratonton:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Jika pratonton sudah betul, jalankan sekali lagi dengan `--apply`:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Memadam subsaluran:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 Menghidupkan pengimbangan beban S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Untuk perubahan beberapa medan yang lebih rumit, sediakan fail JSON kemudian gun
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Skrip tetapan tapak mengurus tiga kawasan:
 Mulakan dengan melihat kawasan, bahagian dan medan yang boleh diedit:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ Dalam kawasan `page`, `--set` menggunakan ID tetapan halaman, contohnya `starsEf
 Membaca tetapan pemberitahuan kemas kini sistem:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Mengubah e-mel pemberitahuan kemas kini. Jalankan dahulu tanpa `--apply`:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Kemudian simpan dengan `--apply`:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Mengubah kesan bintang pada halaman pentadbir:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 Mengubah bahasa geolokasi IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Penerbitan indeks, penarikan indeks, pemadaman indeks secara berperingkat dan pe
 Melihat status nod tempatan dan kedua-dua senarai hubungan:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Hanya menyenaraikan nod yang anda ikuti:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Hanya menyenaraikan nod yang mengikuti nod anda:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Memohon menyertai melalui pautan jemputan. Jalankan dahulu tanpa `--apply`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Selepas disemak, simpan:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Memohon semula untuk rekod tanpa hubungan:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Menerima permintaan `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Menolak permintaan `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Menghantar mesej kepada hubungan yang telah terbentuk:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Membatalkan permintaan `outgoing` yang menunggu:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Memadam hubungan `incoming` yang telah diterima:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Memadam rekod akhir `incoming`:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

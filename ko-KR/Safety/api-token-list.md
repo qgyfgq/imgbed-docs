@@ -26,14 +26,14 @@ API Token을 만들거나 수정할 때 이 Token에 목록 조회 권한이 있
 Token은 환경 변수에 넣을 수도 있습니다.
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 목록 조회 스크립트 다운로드
 
 | 스크립트 | 용도 |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>목록 조회와 필터링 스크립트</a> | 파일 관리 목록 조회, 사용자 관리 목록 조회, 업로드 채널 목록, 디렉터리 통계표 |
+| <a href="/tools/imghost-token-list.mjs" download>목록 조회와 필터링 스크립트</a> | 파일 관리 목록 조회, 사용자 관리 목록 조회, 업로드 채널 목록, 디렉터리 통계표 |
 
 실행하려면 Node.js 18 이상이 필요합니다.
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--retries <n>` | 아니요 | 일시적 실패 재시도 횟수. 기본값은 `3`입니다. |
 | `--timeout-ms <n>` | 아니요 | 단일 요청 제한 시간. 기본값은 `180000`입니다. |
 | `--output <pretty\|json>` | 아니요 | 출력 형식. 기본값은 `pretty`입니다. 프로그램에서 처리할 때는 `json`을 권장합니다. |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 파일 관리의 파일을 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON으로 출력합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 현재 필터 조건에 해당하는 개수만 읽습니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF 검색:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 업로드 IP와 채널로 필터링:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 전체 결과 저장:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 사용자/IP 업로드 통계를 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 특정 IP 또는 지역을 검색합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 특정 IP가 업로드한 파일 상세 내역을 봅니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 업로드 금지 IP를 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 업로드 금지 사용자를 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 지역 키워드로 검색합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 업로드 횟수순으로 정렬합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 민감한 정보를 제외한 업로드 채널 설정을 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 디렉터리 통계를 조회합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 전체 디렉터리 경로를 조회하고 접두사로 검색합니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 기본값인 `pretty` 출력은 사람이 확인하기에 적합합니다.
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 다른 프로그램에서 처리하려면 `--output json`을 사용하세요.
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 전체 결과를 저장할 수도 있습니다.
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 다음을 실행하세요.
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 스크립트가 모든 작업과 매개변수를 표시합니다.

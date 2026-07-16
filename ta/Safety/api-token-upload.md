@@ -20,8 +20,8 @@ API Token உருவாக்கும் போது அல்லது த�
 
 | ஸ்கிரிப்ட் | நோக்கம் |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>ஒற்றை கோரிக்கை பதிவேற்ற ஸ்கிரிப்ட்</a> | `/upload`-ஐ ஒருமுறை அழைக்கும். சிறிய கோப்புகள் மற்றும் இணைப்பு சோதனைகளுக்கு பயனுள்ளது. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>துண்டாக்கிய பதிவேற்ற ஸ்கிரிப்ட்</a> | API Token துண்டாக்கம், நேரடி பதிவேற்றம் அல்லது தள பதிவேற்ற அமர்வுகளைப் பயன்படுத்தும். பெரிய கோப்புகளுக்கு பரிந்துரைக்கப்படுகிறது. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>ஒற்றை கோரிக்கை பதிவேற்ற ஸ்கிரிப்ட்</a> | `/upload`-ஐ ஒருமுறை அழைக்கும். சிறிய கோப்புகள் மற்றும் இணைப்பு சோதனைகளுக்கு பயனுள்ளது. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>துண்டாக்கிய பதிவேற்ற ஸ்கிரிப்ட்</a> | API Token துண்டாக்கம், நேரடி பதிவேற்றம் அல்லது தள பதிவேற்ற அமர்வுகளைப் பயன்படுத்தும். பெரிய கோப்புகளுக்கு பரிந்துரைக்கப்படுகிறது. |
 
 Node.js 18 அல்லது அதற்கு மேல் தேவை.
 
@@ -30,8 +30,8 @@ Node.js 18 அல்லது அதற்கு மேல் தேவை.
 இரு ஸ்கிரிப்ட்களும் தற்போதைய API Token-க்கு கிடைக்கும் பதிவேற்ற சேனல்களைப் பட்டியலிட முடியும்:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 சேனல்களைப் பட்டியலிடும்போது `--file` மற்றும் `--channel` தேவையில்லை. பதிலில் இயல்புநிலை பதிவேற்ற சேனல், பதிவேற்ற சேனல் key-கள், துணை சேனல் பெயர்கள் மற்றும் சுமை சமநிலை நிலை அடங்கும். ரகசியங்கள், புதுப்பிப்பு token-கள் மற்றும் பிற உணர்வுப்பூர்வ அமைப்பு மதிப்புகள் திருப்பி வழங்கப்படாது.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 ஒற்றை கோரிக்கை ஸ்கிரிப்ட் `/upload`-க்கு ஒரு கோரிக்கையை அனுப்பும்.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token-ஐ சூழல் மாறியிலும் வைக்கலாம்:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### ஒற்றை கோரிக்கை அளவுருக்கள்
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | அளவுரு | கட்டாயம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள URL, உதாரணமாக `https://image.ai6.me`. |
-| `--token <token>` | ஆம் | API Token. `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
+| `--token <token>` | ஆம் | API Token. `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
 | `--file <path>` | ஆம் | உள்ளூர் கோப்பு பாதை. |
 | `--channel <key>` | ஆம் | பதிவேற்ற சேனல். |
 | `--folder <path>` | இல்லை | பதிவேற்ற கோப்புறை, உதாரணமாக `photos/2026` அல்லது `/user/`. |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 துண்டாக்கிய பதிவேற்ற ஸ்கிரிப்ட் முதலில் இலக்கு கோப்பை தீர்மானிக்க பின்தளத்தைக் கேட்டு, பிறகு தேர்ந்தெடுக்கப்பட்ட சேனலுக்கான பெரிய கோப்பு ஓட்டத்தைப் பின்பற்றும். துண்டு அமர்வு, இணைப்பு அல்லது நிறைவு கோரிக்கைகளை நீங்கள் தனியாக எழுத தேவையில்லை.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | அளவுரு | கட்டாயம் | விளக்கம் |
 | --- | --- | --- |
 | `--base-url <url>` | ஆம் | ImgHost தள URL. |
-| `--token <token>` | ஆம் | API Token. `IMGBED_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
+| `--token <token>` | ஆம் | API Token. `IMGHOST_API_TOKEN` சூழல் மாறியையும் பயன்படுத்தலாம். |
 | `--file <path>` | ஆம் | உள்ளூர் கோப்பு பாதை. |
 | `--channel <key>` | ஆம் | பதிவேற்ற சேனல். |
 | `--folder <path>` | இல்லை | பதிவேற்ற கோப்புறை. |

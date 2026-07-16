@@ -34,25 +34,25 @@ function printHelp() {
   process.stdout.write(`ImgHost API Token manage tool
 
 Usage:
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --set-metadata --file-id <id> [--file-name <name>] [--read-source primary|backup] [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --get-label --file-id <id>
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --set-label --file-id <id> --label all-ages|r12|r16|r18|None [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --get-tags --file-id <id>
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --add-tags --file-id <id> --tag <tag> [--tag <tag> ...] [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --batch-tags --file-id <id> [--file-id <id> ...] --tag-action set|add|remove --tag <tag> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --set-list-type --file-id <id> --list-type None|White|Block [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --batch-list-type --file-id <id> [--file-id <id> ...] --list-type None|White|Block [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --move --file-id <id> [--file-id <id> ...] --target-path <dir> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --rename --old-file-id <id> --new-file-id <id> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --create-folder --parent-directory <dir> --folder-name <name> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --block-ip <ip> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --allow-ip <ip> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --create-upload-token --name <name> --owner <owner> --default-upload-channel <key> --expires-in-minutes <n> [--apply]
-  node imgbed-token-manage.mjs --base-url <url> --token <token> --delete-upload-token --token-id <id> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --set-metadata --file-id <id> [--file-name <name>] [--read-source primary|backup] [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --get-label --file-id <id>
+  node imghost-token-manage.mjs --base-url <url> --token <token> --set-label --file-id <id> --label all-ages|r12|r16|r18|None [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --get-tags --file-id <id>
+  node imghost-token-manage.mjs --base-url <url> --token <token> --add-tags --file-id <id> --tag <tag> [--tag <tag> ...] [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --batch-tags --file-id <id> [--file-id <id> ...] --tag-action set|add|remove --tag <tag> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --set-list-type --file-id <id> --list-type None|White|Block [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --batch-list-type --file-id <id> [--file-id <id> ...] --list-type None|White|Block [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --move --file-id <id> [--file-id <id> ...] --target-path <dir> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --rename --old-file-id <id> --new-file-id <id> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --create-folder --parent-directory <dir> --folder-name <name> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --block-ip <ip> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --allow-ip <ip> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --create-upload-token --name <name> --owner <owner> --default-upload-channel <key> --expires-in-minutes <n> [--apply]
+  node imghost-token-manage.mjs --base-url <url> --token <token> --delete-upload-token --token-id <id> [--apply]
 
 Required:
   --base-url <url>              ImgHost site URL, for example https://image.ai6.me
-  --token <token>               API Token with manage permission. You can also set IMGBED_API_TOKEN.
+  --token <token>               API Token with manage permission. You can also set IMGHOST_API_TOKEN.
 
 Actions:
   --set-metadata                Update FileName and/or ReadSource for one file.
@@ -115,7 +115,7 @@ Notes:
 function parseArgs(argv) {
   const args = {
     baseUrl: '',
-    token: process.env.IMGBED_API_TOKEN || '',
+    token: process.env.IMGHOST_API_TOKEN || '',
     action: '',
     fileIds: [],
     oldFileIds: [],
@@ -410,7 +410,7 @@ function validateArgs(args) {
   if (!args.action) throw new Error('One action is required. Use --help for examples.');
   if (!READ_ACTIONS.has(args.action) && !WRITE_ACTIONS.has(args.action)) throw new Error(`Unsupported action: ${args.action}`);
   if (!args.baseUrl) throw new Error('--base-url is required');
-  if (!args.token) throw new Error('--token is required, or set IMGBED_API_TOKEN');
+  if (!args.token) throw new Error('--token is required, or set IMGHOST_API_TOKEN');
   if (!Number.isInteger(args.batchSize) || args.batchSize < 1 || args.batchSize > BATCH_LIMIT) {
     throw new Error(`--batch-size must be between 1 and ${BATCH_LIMIT}`);
   }

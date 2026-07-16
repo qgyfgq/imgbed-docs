@@ -20,8 +20,8 @@ System Settings -> Security Settings -> API Token
 
 | Скрипт | Назначение |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>скрипт загрузки одним запросом</a> | Один раз вызывает `/upload`. Подходит для небольших файлов и проверки соединения. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>скрипт загрузки частями</a> | Использует разбиение через API Token, прямую загрузку или сессии загрузки платформы. Рекомендуется для больших файлов. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>скрипт загрузки одним запросом</a> | Один раз вызывает `/upload`. Подходит для небольших файлов и проверки соединения. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>скрипт загрузки частями</a> | Использует разбиение через API Token, прямую загрузку или сессии загрузки платформы. Рекомендуется для больших файлов. |
 
 Требуется Node.js 18 или новее.
 
@@ -30,8 +30,8 @@ System Settings -> Security Settings -> API Token
 Оба скрипта могут вывести каналы загрузки, доступные текущему API Token:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 При выводе списка каналов `--file` и `--channel` не требуются. Ответ содержит канал загрузки по умолчанию, ключи каналов, имена дочерних каналов и состояние балансировки нагрузки. Секреты, токены обновления и другие чувствительные значения конфигурации не возвращаются.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 Скрипт загрузки одним запросом отправляет один запрос в `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token также можно поместить в переменную окружения:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Параметры загрузки одним запросом
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Параметр | Обязателен | Описание |
 | --- | --- | --- |
 | `--base-url <url>` | Да | URL сайта ImgHost, например `https://image.ai6.me`. |
-| `--token <token>` | Да | API Token. Также можно использовать переменную окружения `IMGBED_API_TOKEN`. |
+| `--token <token>` | Да | API Token. Также можно использовать переменную окружения `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Да | Путь к локальному файлу. |
 | `--channel <key>` | Да | Канал загрузки. |
 | `--folder <path>` | Нет | Папка загрузки, например `photos/2026` или `/user/`. |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 Скрипт загрузки частями сначала просит сервер определить целевой файл, а затем выполняет поток для больших файлов выбранного канала. Вам не нужно самостоятельно писать запросы создания сессии загрузки частями, слияния или завершения.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | Параметр | Обязателен | Описание |
 | --- | --- | --- |
 | `--base-url <url>` | Да | URL сайта ImgHost. |
-| `--token <token>` | Да | API Token. Также можно использовать переменную окружения `IMGBED_API_TOKEN`. |
+| `--token <token>` | Да | API Token. Также можно использовать переменную окружения `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Да | Путь к локальному файлу. |
 | `--channel <key>` | Да | Канал загрузки. |
 | `--folder <path>` | Нет | Папка загрузки. |

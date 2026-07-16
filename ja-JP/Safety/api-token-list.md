@@ -26,14 +26,14 @@ API Token を作成または編集するときは、その Token に一覧取得
 Token は環境変数にも設定できます。
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 一覧取得スクリプトをダウンロードする
 
 | スクリプト | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>一覧取得と絞り込みスクリプト</a> | ファイル管理の一覧取得、ユーザー管理の一覧取得、アップロードチャンネル一覧、ディレクトリ統計表 |
+| <a href="/tools/imghost-token-list.mjs" download>一覧取得と絞り込みスクリプト</a> | ファイル管理の一覧取得、ユーザー管理の一覧取得、アップロードチャンネル一覧、ディレクトリ統計表 |
 
 実行には Node.js 18 以上が必要です。
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | パラメータ | 必須 | 説明 |
 | --- | --- | --- |
 | `--base-url <url>` | はい | ImgHost サイトの URL。例: `https://image.ai6.me` |
-| `--token <token>` | はい | API Token。`IMGBED_API_TOKEN` 環境変数も使えます。 |
+| `--token <token>` | はい | API Token。`IMGHOST_API_TOKEN` 環境変数も使えます。 |
 | `--retries <n>` | いいえ | 一時的な失敗時の再試行回数。既定は `3`。 |
 | `--timeout-ms <n>` | いいえ | 1 回のリクエストのタイムアウト。既定は `180000`。 |
 | `--output <pretty\|json>` | いいえ | 出力形式。既定は `pretty`。プログラムから扱う場合は `json` を推奨します。 |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 ファイル管理内のファイルを一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 JSON で出力する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 現在の絞り込み条件に合う件数だけを読み取る:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 PDF を検索する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 アップロード元 IP とチャンネルで絞り込む:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 完全な結果を保存する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 ユーザー/IP のアップロード統計を一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 特定の IP または地域を検索する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 特定 IP がアップロードしたファイルの明細を見る:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 アップロード禁止 IP を一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 アップロード禁止のユーザーを一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 地域キーワードで検索する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 アップロード回数で並べ替える:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 秘密情報を除いたアップロードチャンネル設定を一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 ディレクトリ統計を一覧取得する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 完全なディレクトリパスを一覧取得し、接頭辞で検索する:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 既定の `pretty` 出力は、人が確認しやすい形式です。
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 他のプログラムで処理する場合は、`--output json` を使います。
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 完全な結果を保存することもできます。
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 次を実行してください。
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 スクリプトがすべての操作とパラメータを表示します。

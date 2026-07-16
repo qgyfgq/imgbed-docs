@@ -2,7 +2,7 @@
 
 Verwijderen met een API Token is bedoeld voor scripts, automatisering en programma's van derden. Je hoeft het beheerpaneel niet te openen: met het siteadres, het Token en duidelijke bestands-ID's kun je één of meerdere bestanden uit ImgHost verwijderen.
 
-Verwijderen is een schrijfactie. Nadat de opdracht is uitgevoerd, worden de bestanden echt verwijderd. Controleer daarom eerst met `imgbed-token-list.mjs` welke `fileId` je wilt verwijderen en geef die ID's daarna door aan het verwijderingsscript.
+Verwijderen is een schrijfactie. Nadat de opdracht is uitgevoerd, worden de bestanden echt verwijderd. Controleer daarom eerst met `imghost-token-list.mjs` welke `fileId` je wilt verwijderen en geef die ID's daarna door aan het verwijderingsscript.
 
 ![API Token bewerken](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ Controleer bij het maken of bewerken van een API Token dat verwijderen is toeges
 Je kunt het Token ook in een omgevingsvariabele zetten:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Script downloaden
 
 | Script | Gebruik |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>Script voor bestanden verwijderen</a> | Verwijdert één of meerdere expliciet opgegeven bestands-ID's |
+| <a href="/tools/imghost-token-delete.mjs" download>Script voor bestanden verwijderen</a> | Verwijdert één of meerdere expliciet opgegeven bestands-ID's |
 
 Je hebt lokaal Node.js 18 of hoger nodig.
 
@@ -64,7 +64,7 @@ Na een geslaagde verwijdering werkt de server automatisch de bestandsindex, maps
 | Parameter | Verplicht | Beschrijving |
 | --- | --- | --- |
 | `--base-url <url>` | Ja | Adres van de ImgHost-site, bijvoorbeeld `https://image.ai6.me` |
-| `--token <token>` | Ja | API Token; kan ook via `IMGBED_API_TOKEN` |
+| `--token <token>` | Ja | API Token; kan ook via `IMGHOST_API_TOKEN` |
 | `--file-id <id>` | Ja | Bestands-ID dat je wilt verwijderen; kan meerdere keren worden opgegeven |
 | `--strictness <strict\|soft>` | Nee | Striktheid van de verwijdering; standaard `strict` |
 | `--batch-size <n>` | Nee | Aantal bestanden per verzoek; standaard `15`, maximaal `15` |
@@ -90,7 +90,7 @@ Wil je dat de actie alleen slaagt wanneer het externe bestand ook echt is verwij
 Eén bestand verwijderen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Token uit de omgevingsvariabele gebruiken:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Meerdere bestanden verwijderen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 ImgHost-record opschonen ook als externe verwijdering mislukt:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON uitvoeren en het resultaat opslaan:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Per verzoek maximaal 5 bestanden verwijderen:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Het verwijderingsscript heeft de ImgHost-bestands-ID nodig. Je kunt eerst met het lijstscript de bestanden in een map bekijken:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

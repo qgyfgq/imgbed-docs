@@ -21,7 +21,7 @@ API Token بناتے یا ترمیم کرتے وقت یقینی بنائیں ک�
 آپ token کو environment variable میں بھی رکھ سکتے ہیں:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## انتظامی اسکرپٹس ڈاؤن لوڈ کریں
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | اسکرپٹ | مقصد |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>اپ لوڈ ترتیبات مینجمنٹ اسکرپٹ</a> | اپ لوڈ چینلز، child channels، اور load balancing manage کریں۔ |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>سائٹ ترتیبات مینجمنٹ اسکرپٹ</a> | security settings، page settings، اور other settings manage کریں۔ |
-| <a href="/tools/imgbed-token-federation.mjs" download>فیڈریشن تعلقات مینجمنٹ اسکرپٹ</a> | lightweight federation relation actions، requests، اور messages manage کریں۔ |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>اپ لوڈ ترتیبات مینجمنٹ اسکرپٹ</a> | اپ لوڈ چینلز، child channels، اور load balancing manage کریں۔ |
+| <a href="/tools/imghost-token-site-settings.mjs" download>سائٹ ترتیبات مینجمنٹ اسکرپٹ</a> | security settings، page settings، اور other settings manage کریں۔ |
+| <a href="/tools/imghost-token-federation.mjs" download>فیڈریشن تعلقات مینجمنٹ اسکرپٹ</a> | lightweight federation relation actions، requests، اور messages manage کریں۔ |
 
 Node.js 18 یا بعد کا ورژن درکار ہے۔
 
@@ -41,7 +41,7 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
-| `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
+| `--token <token>` | ہاں | API Token۔ آپ `IMGHOST_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--retries <n>` | نہیں | عارضی ناکامی پر دوبارہ کوششوں کی تعداد۔ طے شدہ قدر `3`۔ |
 | `--timeout-ms <n>` | نہیں | request timeout۔ طے شدہ قدر `180000`۔ |
 | `--output <pretty\|json>` | نہیں | output format۔ طے شدہ قدر `pretty`؛ programs کے لیے `json` استعمال کریں۔ |
@@ -54,7 +54,7 @@ Node.js 18 یا بعد کا ورژن درکار ہے۔
 upload settings script upload child channels کو list، read، create، edit، اور delete کرتا ہے۔ یہ ایک top-level upload channel کے لیے load balancing بھی toggle کر سکتا ہے۔
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### اپ لوڈ ترتیبات کے پیرامیٹرز
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 تمام upload settings list کریں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 channel configuration پڑھیں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 ایک S3 child channel پڑھیں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 ایک child channel create یا edit کریں۔ preview کے لیے پہلے اسے `--apply` کے بغیر چلائیں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 تصدیق کے بعد save کریں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 ایک child channel delete کریں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 load balancing فعال کریں:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ complex fields کے لیے JSON file لکھیں اور `--patch-json` کے سا�
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ site settings script تین configuration areas manage کرتا ہے:
 editable areas، sections، اور fields دیکھنے کے لیے پہلے `--list-sections` استعمال کریں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 system update notification settings پڑھیں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 system update notification email تبدیل کریں۔ preview کے لیے پہلے `--apply` کے بغیر چلائیں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 تصدیق کے بعد save کریں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 admin page star effect تبدیل کریں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP geolocation language تبدیل کریں:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Index update، federation index deletion، اور domain-change confirmation م�
 local node status اور دونوں relation lists دیکھیں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 صرف outgoing nodes list کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 صرف incoming nodes list کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 کسی دوسرے node میں join request دیں۔ preview کے لیے پہلے `--apply` کے بغیر چلائیں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 تصدیق کے بعد save کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 no-record relation کے لیے reapply کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 incoming request accept کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 incoming request deny کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 established relation کو message بھیجیں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 outgoing pending request cancel کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 accepted incoming relation remove کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 incoming terminal record delete کریں:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

@@ -26,14 +26,14 @@ System Settings -> Security Settings -> API Token
 يمكنك أيضًا وضع الرمز في متغير بيئة:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## تنزيل السكربت
 
 | السكربت | الغرض |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>سكربت العرض والتصفية</a> | عرض مدير الملفات، وعرض إدارة المستخدمين، وقائمة قنوات الرفع، وإحصاءات المجلدات. |
+| <a href="/tools/imghost-token-list.mjs" download>سكربت العرض والتصفية</a> | عرض مدير الملفات، وعرض إدارة المستخدمين، وقائمة قنوات الرفع، وإحصاءات المجلدات. |
 
 يتطلب ذلك Node.js 18 أو إصدارًا أحدث.
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | المعلمة | إلزامية | الوصف |
 | --- | --- | --- |
 | `--base-url <url>` | نعم | عنوان موقع ImgHost، مثل `https://image.ai6.me`. |
-| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGBED_API_TOKEN`. |
+| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | لا | عدد إعادة المحاولة عند الفشل المؤقت. القيمة الافتراضية `3`. |
 | `--timeout-ms <n>` | لا | مهلة كل طلب. القيمة الافتراضية `180000`. |
 | `--output <pretty\|json>` | لا | صيغة الإخراج. القيمة الافتراضية `pretty`؛ استخدم `json` للبرامج. |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 عرض الملفات في إدارة الملفات:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 إخراج JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 قراءة العدد فقط ضمن عوامل التصفية الحالية:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 البحث عن ملفات PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 التصفية حسب IP الرفع والقناة:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 حفظ النتيجة الكاملة:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 عرض إحصاءات رفع المستخدمين أو عناوين IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 البحث عن IP أو عنوان:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 عرض الملفات التي رفعها IP واحد:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 عرض عناوين IP المحظورة من الرفع:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 عرض المستخدمين المحظورين من الرفع:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 البحث بكلمة من العنوان:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 الفرز حسب عدد مرات الرفع:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 عرض إعدادات قنوات الرفع بعد تنقيحها:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 عرض إحصاءات المجلدات:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 عرض مسارات المجلدات الكاملة والبحث حسب البادئة:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 صيغة الإخراج الافتراضية `pretty` مناسبة للقراءة البشرية:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 للبرامج الأخرى، استخدم `--output json`:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 يمكنك أيضًا حفظ النتيجة الكاملة:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 شغّل:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 سيعرض السكربت كل الإجراءات والمعلمات.

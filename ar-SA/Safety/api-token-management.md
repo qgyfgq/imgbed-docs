@@ -21,7 +21,7 @@ System Settings -> Security Settings -> API Token
 يمكنك أيضًا وضع الرمز في متغير بيئة:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## تنزيل سكربتات الإدارة
@@ -30,9 +30,9 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | السكربت | الغرض |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>سكربت إدارة إعدادات الرفع</a> | إدارة قنوات الرفع، والقنوات الفرعية، وموازنة الحمل. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>سكربت إدارة إعدادات الموقع</a> | إدارة إعدادات الأمان، وإعدادات الصفحات، والإعدادات الأخرى. |
-| <a href="/tools/imgbed-token-federation.mjs" download>سكربت إدارة علاقات الاتحاد</a> | إدارة إجراءات علاقات الاتحاد الخفيفة، والطلبات، والرسائل. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>سكربت إدارة إعدادات الرفع</a> | إدارة قنوات الرفع، والقنوات الفرعية، وموازنة الحمل. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>سكربت إدارة إعدادات الموقع</a> | إدارة إعدادات الأمان، وإعدادات الصفحات، والإعدادات الأخرى. |
+| <a href="/tools/imghost-token-federation.mjs" download>سكربت إدارة علاقات الاتحاد</a> | إدارة إجراءات علاقات الاتحاد الخفيفة، والطلبات، والرسائل. |
 
 يتطلب ذلك Node.js 18 أو إصدارًا أحدث.
 
@@ -41,7 +41,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | المعلمة | إلزامية | الوصف |
 | --- | --- | --- |
 | `--base-url <url>` | نعم | عنوان موقع ImgHost، مثل `https://image.ai6.me`. |
-| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGBED_API_TOKEN`. |
+| `--token <token>` | نعم | API Token. يمكنك أيضًا استخدام متغير البيئة `IMGHOST_API_TOKEN`. |
 | `--retries <n>` | لا | عدد إعادة المحاولة عند الفشل المؤقت. القيمة الافتراضية `3`. |
 | `--timeout-ms <n>` | لا | مهلة الطلب. القيمة الافتراضية `180000`. |
 | `--output <pretty\|json>` | لا | صيغة الإخراج. القيمة الافتراضية `pretty`؛ استخدم `json` للبرامج. |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 يعرض سكربت إعدادات الرفع قنوات الرفع الفرعية ويقرأها وينشئها ويعدلها ويحذفها. ويمكنه أيضًا تبديل موازنة الحمل لقناة رفع واحدة على المستوى الأعلى.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### معلمات إعدادات الرفع
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 عرض جميع إعدادات الرفع:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 قراءة إعدادات قناة S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 قراءة قناة فرعية واحدة ضمن S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 إنشاء قناة فرعية واحدة أو تعديلها. شغّل الأمر أولًا من دون `--apply` لمعاينة النتيجة:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 ثم احفظ بعد التأكد:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 حذف قناة فرعية واحدة:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 تفعيل موازنة الحمل لـ S3:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ node imgbed-token-upload-settings.mjs `
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ node imgbed-token-upload-settings.mjs `
 استخدم `--list-sections` أولًا لعرض المناطق والأقسام والحقول القابلة للتعديل:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 قراءة إعدادات إشعار تحديث النظام:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 تغيير بريد إشعار تحديث النظام. شغّل الأمر أولًا من دون `--apply` لمعاينة النتيجة:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 ثم احفظ بعد التأكد:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 تغيير تأثير النجوم في صفحة الإدارة:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 تغيير لغة تحديد الموقع الجغرافي حسب IP:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ node imgbed-token-site-settings.mjs `
 عرض حالة العقدة المحلية وقائمتي العلاقات:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 عرض العقد الصادرة فقط:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 عرض العقد الواردة فقط:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 طلب الانضمام إلى عقدة أخرى. شغّل الأمر أولًا من دون `--apply` لمعاينة النتيجة:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 ثم احفظ بعد التأكد:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 إعادة التقديم لعلاقة بلا سجل:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 قبول طلب وارد:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 رفض طلب وارد:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 إرسال رسالة إلى علاقة قائمة:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 إلغاء طلب outgoing معلّق:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 إزالة علاقة incoming مقبولة:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 حذف سجل incoming نهائي:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

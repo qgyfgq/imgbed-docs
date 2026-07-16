@@ -26,14 +26,14 @@ System Settings -> Security Settings -> API Token
 API Token را می‌توان در متغیر محیطی هم قرار داد:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## دانلود اسکریپت
 
 | اسکریپت | کاربرد |
 | --- | --- |
-| <a href="/tools/imgbed-token-list.mjs" download>اسکریپت فهرست‌گیری و فیلتر</a> | فهرست مدیریت فایل، فهرست مدیریت کاربران، فهرست کانال‌های آپلود و جدول آمار پوشه‌ها |
+| <a href="/tools/imghost-token-list.mjs" download>اسکریپت فهرست‌گیری و فیلتر</a> | فهرست مدیریت فایل، فهرست مدیریت کاربران، فهرست کانال‌های آپلود و جدول آمار پوشه‌ها |
 
 برای اجرا، Node.js 18 یا نسخه جدیدتر لازم است.
 
@@ -42,7 +42,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
 | `--base-url <url>` | بله | نشانی سایت ImgHost، مانند `https://image.ai6.me` |
-| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
+| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGHOST_API_TOKEN` هم استفاده کرد |
 | `--retries <n>` | خیر | تعداد تلاش دوباره هنگام خطای موقت؛ پیش‌فرض `3` |
 | `--timeout-ms <n>` | خیر | زمان مجاز یک درخواست؛ پیش‌فرض `180000` |
 | `--output <pretty\|json>` | خیر | قالب خروجی؛ پیش‌فرض `pretty`؛ برای پردازش برنامه‌ای بهتر است `json` استفاده شود |
@@ -54,7 +54,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 نمایش فایل‌های مدیریت فایل:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -64,7 +64,7 @@ node imgbed-token-list.mjs `
 خروجی JSON:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -75,7 +75,7 @@ node imgbed-token-list.mjs `
 خواندن فقط تعداد در شرایط فیلتر فعلی:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-summary `
@@ -122,7 +122,7 @@ node imgbed-token-list.mjs `
 جست‌وجوی PDF:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -134,7 +134,7 @@ node imgbed-token-list.mjs `
 فیلتر بر اساس IP آپلود و کانال:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -146,7 +146,7 @@ node imgbed-token-list.mjs `
 ذخیره نتیجه کامل:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -160,7 +160,7 @@ node imgbed-token-list.mjs `
 نمایش آمار آپلود کاربر/IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -170,7 +170,7 @@ node imgbed-token-list.mjs `
 جست‌وجوی یک IP یا نشانی:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -180,7 +180,7 @@ node imgbed-token-list.mjs `
 دیدن جزئیات فایل‌های آپلودشده از یک IP:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --user-detail `
@@ -191,7 +191,7 @@ node imgbed-token-list.mjs `
 نمایش IPهای ممنوع از آپلود:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -224,7 +224,7 @@ node imgbed-token-list.mjs `
 نمایش کاربران ممنوع از آپلود:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -234,7 +234,7 @@ node imgbed-token-list.mjs `
 جست‌وجو با کلیدواژه نشانی:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -244,7 +244,7 @@ node imgbed-token-list.mjs `
 مرتب‌سازی بر اساس تعداد آپلود:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -257,7 +257,7 @@ node imgbed-token-list.mjs `
 نمایش پیکربندی کانال‌های آپلود پس از حذف اطلاعات حساس:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --channels
@@ -285,7 +285,7 @@ node imgbed-token-list.mjs `
 نمایش آمار پوشه‌ها:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -295,7 +295,7 @@ node imgbed-token-list.mjs `
 نمایش مسیر کامل پوشه‌ها و جست‌وجو با پیشوند:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --directories `
@@ -322,19 +322,19 @@ node imgbed-token-list.mjs `
 خروجی پیش‌فرض `pretty` برای خواندن دستی مناسب است:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5
 ```
 
 اگر می‌خواهید نتیجه را به برنامه دیگری بدهید، از `--output json` استفاده کنید:
 
 ```powershell
-node imgbed-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
+node imghost-token-list.mjs --base-url "https://your-domain" --token "your API Token" --users --count 5 --output json
 ```
 
 می‌توانید نتیجه کامل را هم ذخیره کنید:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --users `
@@ -358,7 +358,7 @@ node imgbed-token-list.mjs `
 اجرا کنید:
 
 ```powershell
-node imgbed-token-list.mjs --help
+node imghost-token-list.mjs --help
 ```
 
 اسکریپت همه عملیات و پارامترها را نشان می‌دهد.

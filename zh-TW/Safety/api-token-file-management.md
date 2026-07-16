@@ -19,14 +19,14 @@ API Token 檔案管理適合給腳本、自動化任務和第三方管理面板�
 也可以把 Token 放到環境變數裡：
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 下載腳本
 
 | 腳本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>檔案管理腳本</a> | 檔案中繼資料、審查標籤、檔案標籤、名單狀態、移動、重新命名、建立資料夾、IP 停用/恢復、短期上傳 Token 建立和刪除 |
+| <a href="/tools/imghost-token-manage.mjs" download>檔案管理腳本</a> | 檔案中繼資料、審查標籤、檔案標籤、名單狀態、移動、重新命名、建立資料夾、IP 停用/恢復、短期上傳 Token 建立和刪除 |
 
 執行腳本需要本機安裝 Node.js 18 或更高版本。
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="your API Token"
 
 | 能力 | 腳本 | 權限 |
 | --- | --- | --- |
-| 上傳檔案 | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| 列出檔案、篩選檔案、讀取使用者統計 | `imgbed-token-list.mjs` | `list` |
-| 刪除明確指定的檔案 | `imgbed-token-delete.mjs` | `delete` |
-| 編輯檔案資訊、標籤、名單、移動、重新命名、建立資料夾、停用 IP、建立或刪除短期上傳 Token | `imgbed-token-manage.mjs` | `manage` |
+| 上傳檔案 | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| 列出檔案、篩選檔案、讀取使用者統計 | `imghost-token-list.mjs` | `list` |
+| 刪除明確指定的檔案 | `imghost-token-delete.mjs` | `delete` |
+| 編輯檔案資訊、標籤、名單、移動、重新命名、建立資料夾、停用 IP、建立或刪除短期上傳 Token | `imghost-token-manage.mjs` | `manage` |
 | 編輯上傳渠道、安全設定、頁面設定、其他設定、聯盟關係 | 設定管理相關腳本 | `manage` |
 
-`imgbed-token-manage.mjs` 不會上傳檔案、列出檔案或刪除檔案。需要查找 `fileId` 時，先用列出腳本篩選檔案；需要刪除檔案時，再把明確的 `fileId` 交給刪除腳本。
+`imghost-token-manage.mjs` 不會上傳檔案、列出檔案或刪除檔案。需要查找 `fileId` 時，先用列出腳本篩選檔案；需要刪除檔案時，再把明確的 `fileId` 交給刪除腳本。
 
 ## 通用參數
 
 | 參數 | 必填 | 說明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 圖床站台位址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以使用 `IMGBED_API_TOKEN` 環境變數 |
+| `--token <token>` | 是 | API Token；也可以使用 `IMGHOST_API_TOKEN` 環境變數 |
 | `--retries <n>` | 否 | 暫時失敗重試次數，預設 `3` |
 | `--timeout-ms <n>` | 否 | 單個請求逾時時間，預設 `180000` |
 | `--output <pretty\|json>` | 否 | 輸出格式，預設 `pretty`；程式呼叫建議使用 `json` |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="your API Token"
 檔案管理腳本多數動作都需要 `fileId`。可以先用列出腳本查詢：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 檔案中繼資料用於修改後台檔案管理裡顯示的檔名和讀取來源。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 確認預覽結果無誤後再儲存：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ node imgbed-token-manage.mjs `
 讀取審查標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 設定審查標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 讀取檔案標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 追加標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 移除標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 覆蓋標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 批次新增標籤：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 設定單一檔案為白名單：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 批次加入黑名單：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 恢復預設名單狀態：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 移動檔案會把一個或多個檔案移動到目標目錄。後端單次請求最多處理 `15` 個檔案，腳本會依照 `--batch-size` 自動拆成多個請求順序執行。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 重新命名使用明確的舊檔案 ID 和新檔案 ID。新檔案 ID 可以只改檔名，也可以同時改變目錄。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 批次重新命名時，可以重複傳 `--old-file-id` 和 `--new-file-id`：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ node imgbed-token-manage.mjs `
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 圖床的目錄來自檔案路徑，本身沒有真正的空目錄。腳本建立資料夾時，會在目標目錄下建立一個佔位檔案 `0.md`，讓後台檔案管理和目錄統計可以顯示這個目錄。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 停用某個上傳 IP：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 恢復某個上傳 IP：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 查看目前禁止上傳 IP 清單：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 管理權限可以建立短期的上傳專用 Token。這個 Token 固定只有 `upload` 權限，`autoDelete` 固定為 `true`，過期時間最長 `1` 天。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ node imgbed-token-manage.mjs `
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 刪除短期上傳 Token：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 預設 `pretty` 輸出適合人工查看。如果要給其他程式繼續處理，使用 `--output json`：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 也可以儲存完整結果：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ node imgbed-token-manage.mjs `
 
 ### 怎麼知道要傳哪個 fileId
 
-先用 `imgbed-token-list.mjs --files` 查詢檔案。返回結果裡的 `name` 通常就是檔案 ID，也就是這裡的 `--file-id`。
+先用 `imghost-token-list.mjs --files` 查詢檔案。返回結果裡的 `name` 通常就是檔案 ID，也就是這裡的 `--file-id`。
 
 ### 批次操作一次最多多少個檔案
 

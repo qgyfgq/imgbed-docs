@@ -2,7 +2,7 @@
 
 การลบไฟล์ผ่าน API Token เหมาะสำหรับสคริปต์ งานอัตโนมัติ และโปรแกรมของบุคคลที่สาม คุณไม่จำเป็นต้องเปิดหน้าผู้ดูแลระบบ เพียงระบุ URL ของไซต์, token และ ID ไฟล์ที่ชัดเจน ก็สามารถลบไฟล์หนึ่งไฟล์หรือหลายไฟล์จาก ImgHost ได้
 
-การลบเป็นการดำเนินการเขียน และจะลบข้อมูลจริงหลังจากคำสั่งทำงาน ใช้ `imgbed-token-list.mjs` ก่อนเพื่อยืนยันค่า `fileId` ที่ต้องการลบ แล้วจึงส่ง ID เหล่านั้นให้สคริปต์ลบ
+การลบเป็นการดำเนินการเขียน และจะลบข้อมูลจริงหลังจากคำสั่งทำงาน ใช้ `imghost-token-list.mjs` ก่อนเพื่อยืนยันค่า `fileId` ที่ต้องการลบ แล้วจึงส่ง ID เหล่านั้นให้สคริปต์ลบ
 
 ![แก้ไข API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ System Settings -> Security Settings -> API Token
 คุณสามารถใส่ Token ไว้ในตัวแปรสภาพแวดล้อมได้ด้วย:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## ดาวน์โหลดสคริปต์
 
 | สคริปต์ | วัตถุประสงค์ |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>สคริปต์ลบไฟล์</a> | ลบ ID ไฟล์หนึ่งรายการหรือหลายรายการที่ระบุไว้อย่างชัดเจน |
+| <a href="/tools/imghost-token-delete.mjs" download>สคริปต์ลบไฟล์</a> | ลบ ID ไฟล์หนึ่งรายการหรือหลายรายการที่ระบุไว้อย่างชัดเจน |
 
 ต้องใช้ Node.js 18 หรือใหม่กว่า
 
@@ -64,7 +64,7 @@ API ส่งคืนสตรีมความคืบหน้าแบบ 
 | พารามิเตอร์ | จำเป็น | คำอธิบาย |
 | --- | --- | --- |
 | `--base-url <url>` | ใช่ | URL ของไซต์ ImgHost เช่น `https://image.ai6.me` |
-| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGBED_API_TOKEN` ได้ด้วย |
+| `--token <token>` | ใช่ | API Token สามารถใช้ตัวแปรสภาพแวดล้อม `IMGHOST_API_TOKEN` ได้ด้วย |
 | `--file-id <id>` | ใช่ | ID ไฟล์ที่จะลบ สามารถส่งซ้ำหลายครั้งได้ |
 | `--strictness <strict\|soft>` | ไม่ | ความเข้มงวดในการลบ ค่าเริ่มต้นคือ `strict` |
 | `--batch-size <n>` | ไม่ | จำนวนไฟล์ต่อคำขอ ค่าเริ่มต้นคือ `15`, สูงสุด `15` |
@@ -90,7 +90,7 @@ API ส่งคืนสตรีมความคืบหน้าแบบ 
 ลบไฟล์หนึ่งไฟล์:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 ใช้ Token จากตัวแปรสภาพแวดล้อม:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 ลบหลายไฟล์:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 ล้างบันทึก ImgHost แม้การลบระยะไกลล้มเหลว:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 ส่งออก JSON และบันทึกผลลัพธ์:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 จำกัดแต่ละคำขอไว้ที่ 5 ไฟล์:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 สคริปต์ลบต้องใช้ ID ไฟล์ของ ImgHost คุณสามารถใช้สคริปต์รายการเพื่อตรวจสอบไฟล์ในไดเรกทอรีก่อน:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

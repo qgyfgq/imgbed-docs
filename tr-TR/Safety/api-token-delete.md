@@ -2,7 +2,7 @@
 
 API Token ile silme betiği; betikler, otomasyon işleri ve üçüncü taraf programlar için uygundur. Yönetim panelini açmanız gerekmez: site adresini, Token değerini ve açık dosya ID'lerini vererek ImgHost içindeki bir veya birden fazla dosyayı silebilirsiniz.
 
-Silme işlemi veriyi değiştirir. Komut çalıştırıldıktan sonra dosyalar gerçekten silinir. Bu nedenle önce `imgbed-token-list.mjs` ile silinecek `fileId` değerlerini doğrulayın, ardından bu ID'leri silme betiğine verin.
+Silme işlemi veriyi değiştirir. Komut çalıştırıldıktan sonra dosyalar gerçekten silinir. Bu nedenle önce `imghost-token-list.mjs` ile silinecek `fileId` değerlerini doğrulayın, ardından bu ID'leri silme betiğine verin.
 
 ![API Token düzenle](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token oluştururken veya düzenlerken bu Token için silme izninin açık ol
 Token ortam değişkenine de konabilir:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Betiği indirme
 
 | Betik | Kullanım |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>Dosya silme betiği</a> | Açıkça belirtilen bir veya birden fazla dosya ID'sini siler |
+| <a href="/tools/imghost-token-delete.mjs" download>Dosya silme betiği</a> | Açıkça belirtilen bir veya birden fazla dosya ID'sini siler |
 
 Node.js 18 veya üzeri gerekir.
 
@@ -64,7 +64,7 @@ Silme başarıyla tamamlandıktan sonra sunucu tarafı dosya dizinini, klasör i
 | Parametre | Zorunlu | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site adresi, örnek `https://image.ai6.me` |
-| `--token <token>` | Evet | API Token; `IMGBED_API_TOKEN` da kullanılabilir |
+| `--token <token>` | Evet | API Token; `IMGHOST_API_TOKEN` da kullanılabilir |
 | `--file-id <id>` | Evet | Silinecek dosya ID'si; birden çok kez verilebilir |
 | `--strictness <strict\|soft>` | Hayır | Silme katılığı; varsayılan `strict` |
 | `--batch-size <n>` | Hayır | Tek istekte silinecek dosya sayısı; varsayılan `15`, en fazla `15` |
@@ -90,7 +90,7 @@ Uzak dosya gerçekten silinmeden işlemin başarılı sayılmasını istemiyorsa
 Tek dosya silme:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 Ortam değişkenindeki Token değerini kullanma:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 Birden fazla dosya silme:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 Uzak silme başarısız olsa bile ImgHost kaydını temizleme:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON çıktısı verip sonucu kaydetme:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 Tek istekte silinecek dosya sayısını 5 ile sınırlama:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 Silme betiği ImgHost dosya ID'sine ihtiyaç duyar. Önce listeleme betiğiyle klasördeki dosyaları görebilirsiniz:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

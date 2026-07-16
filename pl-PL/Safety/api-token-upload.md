@@ -20,8 +20,8 @@ Pakiet dokumentacji udostępnia dwa skrypty Node.js:
 
 | Skrypt | Przeznaczenie |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>skrypt przesyłania pojedynczym żądaniem</a> | Wywołuje `/upload` jeden raz. Przydatny przy małych plikach i testach łączności. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>skrypt przesyłania fragmentami</a> | Używa fragmentowania przez API Token, przesyłania bezpośredniego albo sesji przesyłania platformy. Zalecany dla dużych plików. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>skrypt przesyłania pojedynczym żądaniem</a> | Wywołuje `/upload` jeden raz. Przydatny przy małych plikach i testach łączności. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>skrypt przesyłania fragmentami</a> | Używa fragmentowania przez API Token, przesyłania bezpośredniego albo sesji przesyłania platformy. Zalecany dla dużych plików. |
 
 Wymagany jest Node.js 18 lub nowszy.
 
@@ -30,8 +30,8 @@ Wymagany jest Node.js 18 lub nowszy.
 Oba skrypty mogą wyświetlić kanały przesyłania dostępne dla bieżącego API Token:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Podczas wyświetlania kanałów `--file` i `--channel` nie są wymagane. Odpowiedź zawiera domyślny kanał przesyłania, klucze kanałów przesyłania, nazwy kanałów podrzędnych oraz stan równoważenia obciążenia. Sekrety, tokeny odświeżania i inne poufne wartości konfiguracji nie są zwracane.
@@ -50,7 +50,7 @@ W przypadku większych plików w pierwszej kolejności używaj skryptu przesyła
 Skrypt przesyłania pojedynczym żądaniem wysyła jedno żądanie do `/upload`.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token możesz także umieścić w zmiennej środowiskowej:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parametry przesyłania pojedynczym żądaniem
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
 | `--base-url <url>` | Tak | Adres URL witryny ImgHost, na przykład `https://image.ai6.me`. |
-| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGBED_API_TOKEN`. |
+| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Tak | Lokalna ścieżka pliku. |
 | `--channel <key>` | Tak | Kanał przesyłania. |
 | `--folder <path>` | Nie | Folder przesyłania, na przykład `photos/2026` albo `/user/`. |
@@ -122,7 +122,7 @@ Gdy plik przekroczy jeden z tych limitów, skrypt zgłosi odpowiedni błąd loka
 Skrypt przesyłania fragmentami najpierw prosi serwer o ustalenie pliku docelowego, a następnie wykonuje przepływ dużych plików dla wybranego kanału. Nie musisz samodzielnie pisać żądań sesji fragmentowania, scalania ani kończenia operacji.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parametr | Wymagany | Opis |
 | --- | --- | --- |
 | `--base-url <url>` | Tak | Adres URL witryny ImgHost. |
-| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGBED_API_TOKEN`. |
+| `--token <token>` | Tak | API Token. Możesz też użyć zmiennej środowiskowej `IMGHOST_API_TOKEN`. |
 | `--file <path>` | Tak | Lokalna ścieżka pliku. |
 | `--channel <key>` | Tak | Kanał przesyłania. |
 | `--folder <path>` | Nie | Folder przesyłania. |

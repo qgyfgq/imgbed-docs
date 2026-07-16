@@ -19,14 +19,14 @@ Zápisové operace ve skriptu pro správu souborů jsou ve výchozím stavu jen 
 Token lze zadat také proměnnou prostředí:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Stažení skriptu
 
 | Skript | Účel |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>skript pro správu souborů</a> | Metadata souborů, moderační štítky, tagy souborů, stav seznamu, přesun, přejmenování, vytváření složek, blokování/obnovení IP a vytváření nebo mazání krátkodobých nahrávacích Tokenů |
+| <a href="/tools/imghost-token-manage.mjs" download>skript pro správu souborů</a> | Metadata souborů, moderační štítky, tagy souborů, stav seznamu, přesun, přejmenování, vytváření složek, blokování/obnovení IP a vytváření nebo mazání krátkodobých nahrávacích Tokenů |
 
 Na místním počítači je potřeba Node.js 18 nebo novější.
 
@@ -34,20 +34,20 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 
 | Možnost | Skript | Oprávnění |
 | --- | --- | --- |
-| Nahrávání souborů | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| Výpis souborů, filtrování souborů a čtení statistik uživatelů | `imgbed-token-list.mjs` | `list` |
-| Mazání výslovně určených souborů | `imgbed-token-delete.mjs` | `delete` |
-| Úprava informací o souborech, tagů a seznamů, přesun, přejmenování, vytváření složek, blokování IP a vytváření nebo mazání krátkodobých nahrávacích Tokenů | `imgbed-token-manage.mjs` | `manage` |
+| Nahrávání souborů | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| Výpis souborů, filtrování souborů a čtení statistik uživatelů | `imghost-token-list.mjs` | `list` |
+| Mazání výslovně určených souborů | `imghost-token-delete.mjs` | `delete` |
+| Úprava informací o souborech, tagů a seznamů, přesun, přejmenování, vytváření složek, blokování IP a vytváření nebo mazání krátkodobých nahrávacích Tokenů | `imghost-token-manage.mjs` | `manage` |
 | Úprava nahrávacích kanálů, zabezpečení, nastavení stránek, dalších nastavení a federačních vztahů | Skripty pro správu konfigurace | `manage` |
 
-`imgbed-token-manage.mjs` nenahrává soubory, nevypisuje soubory a nemaže soubory. Pokud potřebujete najít `fileId`, nejprve použijte skript pro výpis a soubory vyfiltrujte. Pokud potřebujete soubor smazat, předejte konkrétní `fileId` skriptu pro mazání.
+`imghost-token-manage.mjs` nenahrává soubory, nevypisuje soubory a nemaže soubory. Pokud potřebujete najít `fileId`, nejprve použijte skript pro výpis a soubory vyfiltrujte. Pokud potřebujete soubor smazat, předejte konkrétní `fileId` skriptu pro mazání.
 
 ## Obecné parametry
 
 | Parametr | Povinné | Popis |
 | --- | --- | --- |
 | `--base-url <url>` | Ano | Adresa webu ImgHost, například `https://image.ai6.me` |
-| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGBED_API_TOKEN` |
+| `--token <token>` | Ano | API Token; lze použít také proměnnou prostředí `IMGHOST_API_TOKEN` |
 | `--retries <n>` | Ne | Počet opakování při dočasné chybě; výchozí hodnota `3` |
 | `--timeout-ms <n>` | Ne | Časový limit jednoho požadavku; výchozí hodnota `180000` |
 | `--output <pretty\|json>` | Ne | Formát výstupu; výchozí hodnota `pretty`; pro zpracování programem použijte `json` |
@@ -61,7 +61,7 @@ Na místním počítači je potřeba Node.js 18 nebo novější.
 Většina akcí ve skriptu pro správu souborů vyžaduje `fileId`. Nejprve ho můžete zjistit skriptem pro výpis:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
@@ -77,7 +77,7 @@ Pole `name` ve vráceném výsledku je obvykle `fileId`, které lze předat skri
 Metadata souboru slouží ke změně zobrazovaného názvu souboru a zdroje čtení ve správě souborů v administraci.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 Po kontrole náhledu změnu uložte:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ Moderační štítky odpovídají věkovému hodnocení souboru. Aktuální št�
 Přečtení moderačního štítku:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 Nastavení moderačního štítku:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-label `
@@ -152,7 +152,7 @@ Tagy souborů slouží k přidání vyhledatelných pracovních značek k soubor
 Přečtení tagů souboru:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 Přidání tagů:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 Odebrání tagů:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 Přepsání tagů:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 Dávkové přidání tagů:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ Stav seznamu určuje chování řízení přístupu k souboru v režimu veřejn�
 Nastavení jednoho souboru na bílou listinu:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 Dávkové přidání na černou listinu:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 Obnovení výchozího stavu seznamu:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 Přesun souborů přesune jeden nebo více souborů do cílové složky. Backend zpracuje nejvýše `15` souborů v jednom požadavku. Skript práci automaticky rozdělí podle `--batch-size` a požadavky provede postupně.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 Přejmenování používá výslovné staré ID souboru a nové ID souboru. Nové ID může změnit jen název souboru nebo současně změnit i složku.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 Při dávkovém přejmenování opakovaně předávejte `--old-file-id` a `--new-file-id`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -349,7 +349,7 @@ Mapování lze zapsat také do souboru JSON:
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 Složky v ImgHost vycházejí z cest souborů, takže skutečné prázdné složky neexistují. Když skript vytvoří složku, vytvoří v cílové složce zástupný soubor `0.md`, aby se složka zobrazila ve správě souborů a ve statistikách složek.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ Oprávnění ke správě může přidat IP adresu na seznam zakázaného nahráv
 Zablokování nahrávací IP adresy:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 Obnovení nahrávací IP adresy:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 Zobrazení aktuálního seznamu IP adres se zakázaným nahráváním:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 Oprávnění ke správě může vytvářet krátkodobé Tokeny určené pouze pro nahrávání. Takový Token má vždy jen oprávnění `upload`, `autoDelete` je vždy `true` a nejdelší doba platnosti je `1` den.
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ Lze také předat přímo časové razítko v milisekundách:
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ Při mazání krátkodobého nahrávacího Tokenu je nutné předat `id` vrácen
 Smazání krátkodobého nahrávacího Tokenu:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer your API Token
 Výchozí výstup `pretty` je vhodný pro čtení člověkem. Pokud má výsledek zpracovat jiný program, použijte `--output json`:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 Lze uložit také celý výsledek:
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ Ne. Pro nahrávání použijte nahrávací skripty, pro výpis a filtrování sk
 
 ### Jak zjistím, které fileId mám předat
 
-Nejprve vyhledejte soubory pomocí `imgbed-token-list.mjs --files`. Pole `name` ve výsledku je obvykle ID souboru, tedy hodnota pro `--file-id`.
+Nejprve vyhledejte soubory pomocí `imghost-token-list.mjs --files`. Pole `name` ve výsledku je obvykle ID souboru, tedy hodnota pro `--file-id`.
 
 ### Kolik souborů může dávková operace zpracovat najednou
 

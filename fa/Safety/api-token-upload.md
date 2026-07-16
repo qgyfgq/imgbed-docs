@@ -20,8 +20,8 @@ System Settings -> Security Settings -> API Token
 
 | اسکریپت | کاربرد |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>اسکریپت آپلود با یک درخواست</a> | فقط یک بار `/upload` را فراخوانی می‌کند؛ مناسب فایل‌های کوچک و آزمون اتصال رابط |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>اسکریپت آپلود بخش‌بخش</a> | بسته به کانال از آپلود بخش‌بخش، آپلود مستقیم یا نشست پلتفرم استفاده می‌کند؛ مناسب فایل‌های بزرگ |
+| <a href="/tools/imghost-token-single-upload.mjs" download>اسکریپت آپلود با یک درخواست</a> | فقط یک بار `/upload` را فراخوانی می‌کند؛ مناسب فایل‌های کوچک و آزمون اتصال رابط |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>اسکریپت آپلود بخش‌بخش</a> | بسته به کانال از آپلود بخش‌بخش، آپلود مستقیم یا نشست پلتفرم استفاده می‌کند؛ مناسب فایل‌های بزرگ |
 
 برای اجرا، Node.js 18 یا نسخه جدیدتر لازم است.
 
@@ -30,8 +30,8 @@ System Settings -> Security Settings -> API Token
 هر دو اسکریپت می‌توانند پیش از آپلود، کانال‌های قابل استفاده برای API Token فعلی را نشان دهند:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 در این حالت نیازی به `--file` و `--channel` نیست. نتیجه شامل کانال پیش‌فرض، کلید کانال اصلی، نام کانال‌های فرعی و وضعیت توازن بار است. کلیدهای محرمانه، توکن‌های تازه‌سازی یا تنظیمات حساس برگردانده نمی‌شوند.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 این اسکریپت کل فایل را در یک درخواست به `/upload` می‌فرستد:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 API Token را می‌توان در متغیر محیطی هم قرار داد:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### پارامترهای آپلود با یک درخواست
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
 | `--base-url <url>` | بله | نشانی سایت ImgHost، مانند `https://image.ai6.me` |
-| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
+| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGHOST_API_TOKEN` هم استفاده کرد |
 | `--file <path>` | بله | مسیر فایل محلی |
 | `--channel <key>` | بله | کانال واقعی آپلود |
 | `--folder <path>` | خیر | پوشه مقصد، مانند `photos/2026` یا `/user/` |
@@ -120,7 +120,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 اسکریپت آپلود بخش‌بخش ابتدا با API Token از سمت سرور می‌خواهد مقصد آپلود را تعیین کند، سپس مسیر فایل بزرگ مربوط به کانال انتخاب‌شده را اجرا می‌کند. کاربر لازم نیست خودش نشست بسازد، بخش‌ها را بفرستد، فایل را ادغام کند یا درخواست تکمیل بنویسد.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | پارامتر | ضروری | توضیح |
 | --- | --- | --- |
 | `--base-url <url>` | بله | نشانی سایت ImgHost |
-| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGBED_API_TOKEN` هم استفاده کرد |
+| `--token <token>` | بله | API Token؛ می‌توان از متغیر محیطی `IMGHOST_API_TOKEN` هم استفاده کرد |
 | `--file <path>` | بله | مسیر فایل محلی |
 | `--channel <key>` | بله | کانال واقعی آپلود |
 | `--folder <path>` | خیر | پوشه مقصد |

@@ -20,8 +20,8 @@ Dokumentasi ImgHost menyediakan dua skrip Node.js:
 
 | Skrip | Kegunaan |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>skrip muat naik satu permintaan</a> | Memanggil `/upload` sekali sahaja; sesuai untuk fail kecil dan ujian sambungan antara muka |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>skrip muat naik berbahagi</a> | Menggunakan muat naik berbahagi, muat naik langsung atau sesi platform mengikut saluran; sesuai untuk fail besar |
+| <a href="/tools/imghost-token-single-upload.mjs" download>skrip muat naik satu permintaan</a> | Memanggil `/upload` sekali sahaja; sesuai untuk fail kecil dan ujian sambungan antara muka |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>skrip muat naik berbahagi</a> | Menggunakan muat naik berbahagi, muat naik langsung atau sesi platform mengikut saluran; sesuai untuk fail besar |
 
 Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 
@@ -30,8 +30,8 @@ Skrip memerlukan Node.js 18 atau versi yang lebih baharu.
 Kedua-dua skrip boleh menyenaraikan saluran muat naik yang tersedia untuk API Token semasa:
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 Dalam mod ini, `--file` dan `--channel` tidak diperlukan. Hasilnya mengandungi saluran lalai, kunci saluran utama, nama subsaluran dan status pengimbangan beban. Kunci rahsia, token segar semula dan konfigurasi sensitif tidak dikembalikan.
@@ -50,7 +50,7 @@ Untuk fail besar, gunakan skrip muat naik berbahagi terlebih dahulu. Muat naik s
 Skrip ini menghantar keseluruhan fail ke `/upload` dalam satu permintaan:
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 API Token juga boleh disimpan dalam pemboleh ubah persekitaran:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### Parameter Muat Naik Satu Permintaan
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | URL tapak ImgHost, contohnya `https://image.ai6.me` |
-| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ya | Laluan fail tempatan |
 | `--channel <key>` | Ya | Saluran muat naik sebenar |
 | `--folder <path>` | Tidak | Folder destinasi, contohnya `photos/2026` atau `/user/` |
@@ -120,7 +120,7 @@ Jika saiz fail melebihi had, skrip memaparkan ralat tempatan sebelum menghantar 
 Skrip muat naik berbahagi terlebih dahulu meminta pelayan menentukan destinasi muat naik menggunakan API Token, kemudian menjalankan aliran fail besar milik saluran yang dipilih. Pengguna tidak perlu menulis sendiri pembuatan sesi, penghantaran bahagian, penggabungan atau permintaan penyelesaian.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -134,7 +134,7 @@ node imgbed-token-chunk-upload.mjs `
 | Parameter | Wajib | Penerangan |
 | --- | --- | --- |
 | `--base-url <url>` | Ya | Alamat tapak ImgHost |
-| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGBED_API_TOKEN` |
+| `--token <token>` | Ya | API Token. Anda juga boleh menggunakan pemboleh ubah persekitaran `IMGHOST_API_TOKEN` |
 | `--file <path>` | Ya | Laluan fail tempatan |
 | `--channel <key>` | Ya | Saluran muat naik sebenar |
 | `--folder <path>` | Tidak | Folder destinasi |

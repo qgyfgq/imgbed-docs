@@ -20,8 +20,8 @@ API Token을 만들거나 수정할 때 업로드 권한을 켜고, 실제 기�
 
 | 스크립트 | 용도 |
 | --- | --- |
-| <a href="/tools/imgbed-token-single-upload.mjs" download>단일 요청 업로드 스크립트</a> | `/upload`를 한 번만 호출합니다. 작은 파일이나 연결 테스트에 적합합니다. |
-| <a href="/tools/imgbed-token-chunk-upload.mjs" download>분할 업로드 스크립트</a> | API Token의 분할 업로드, 직접 업로드, 플랫폼 업로드 세션을 사용합니다. 큰 파일에 적합합니다. |
+| <a href="/tools/imghost-token-single-upload.mjs" download>단일 요청 업로드 스크립트</a> | `/upload`를 한 번만 호출합니다. 작은 파일이나 연결 테스트에 적합합니다. |
+| <a href="/tools/imghost-token-chunk-upload.mjs" download>분할 업로드 스크립트</a> | API Token의 분할 업로드, 직접 업로드, 플랫폼 업로드 세션을 사용합니다. 큰 파일에 적합합니다. |
 
 실행하려면 Node.js 18 이상이 필요합니다.
 
@@ -30,8 +30,8 @@ API Token을 만들거나 수정할 때 업로드 권한을 켜고, 실제 기�
 두 스크립트 모두 현재 API Token으로 사용할 수 있는 업로드 채널을 먼저 확인할 수 있습니다.
 
 ```powershell
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
-node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
+node imghost-token-chunk-upload.mjs --base-url "https://your-domain" --token "your API Token" --list-channels
 ```
 
 채널 목록만 볼 때는 `--file`과 `--channel`이 필요 없습니다. 응답에는 기본 업로드 채널, 채널 키, 하위 채널 이름, 부하 분산 상태가 포함됩니다. 비밀 키, 갱신 토큰 같은 민감한 설정은 반환되지 않습니다.
@@ -50,7 +50,7 @@ node imgbed-token-chunk-upload.mjs --base-url "https://your-domain" --token "you
 단일 요청 스크립트는 `/upload`로 한 번만 요청합니다.
 
 ```powershell
-node imgbed-token-single-upload.mjs `
+node imghost-token-single-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\image.png" `
@@ -61,8 +61,8 @@ node imgbed-token-single-upload.mjs `
 Token은 환경 변수에 넣을 수도 있습니다.
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
-node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
+$env:IMGHOST_API_TOKEN="your API Token"
+node imghost-token-single-upload.mjs --base-url "https://your-domain" --file "D:\test\image.png" --channel s3
 ```
 
 ### 단일 요청 매개변수
@@ -70,7 +70,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 주소. 예: `https://image.ai6.me` |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--file <path>` | 예 | 로컬 파일 경로 |
 | `--channel <key>` | 예 | 업로드 채널 |
 | `--folder <path>` | 아니요 | 업로드 폴더. 예: `photos/2026` 또는 `/user/` |
@@ -122,7 +122,7 @@ node imgbed-token-single-upload.mjs --base-url "https://your-domain" --file "D:\
 분할 업로드 스크립트는 먼저 API Token으로 서버 쪽에서 파일 대상을 해석하게 한 뒤, 선택한 채널에 맞는 대용량 업로드 흐름을 실행합니다. 사용자가 직접 분할 세션, 병합, 완료 요청을 작성할 필요가 없습니다.
 
 ```powershell
-node imgbed-token-chunk-upload.mjs `
+node imghost-token-chunk-upload.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file "D:\test\video.zip" `
@@ -136,7 +136,7 @@ node imgbed-token-chunk-upload.mjs `
 | 매개변수 | 필수 | 설명 |
 | --- | --- | --- |
 | `--base-url <url>` | 예 | ImgHost 사이트 주소 |
-| `--token <token>` | 예 | API Token. `IMGBED_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
+| `--token <token>` | 예 | API Token. `IMGHOST_API_TOKEN` 환경 변수도 사용할 수 있습니다. |
 | `--file <path>` | 예 | 로컬 파일 경로 |
 | `--channel <key>` | 예 | 업로드 채널 |
 | `--folder <path>` | 아니요 | 업로드 폴더 |

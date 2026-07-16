@@ -2,7 +2,7 @@
 
 API Token فائل حذف کاری اسکرپٹس، خودکار کاموں، اور فریق ثالث پروگراموں کے لیے ہے۔ آپ کو ایڈمن صفحہ کھولنے کی ضرورت نہیں۔ جب تک آپ سائٹ URL، token، اور واضح file IDs فراہم کرتے ہیں، آپ ImgHost سے ایک یا زیادہ فائلیں حذف کر سکتے ہیں۔
 
-حذف کاری ایک write operation ہے اور کمانڈ چلنے کے بعد واقعی ڈیٹا حذف کرتی ہے۔ پہلے `imgbed-token-list.mjs` استعمال کر کے ان `fileId` قدروں کی تصدیق کریں جنہیں آپ حذف کرنا چاہتے ہیں، پھر وہ IDs حذف کاری اسکرپٹ کو دیں۔
+حذف کاری ایک write operation ہے اور کمانڈ چلنے کے بعد واقعی ڈیٹا حذف کرتی ہے۔ پہلے `imghost-token-list.mjs` استعمال کر کے ان `fileId` قدروں کی تصدیق کریں جنہیں آپ حذف کرنا چاہتے ہیں، پھر وہ IDs حذف کاری اسکرپٹ کو دیں۔
 
 ![API Token میں ترمیم](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token بناتے یا ترمیم کرتے وقت یقینی بنائیں ک�
 آپ token کو environment variable میں بھی رکھ سکتے ہیں:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## اسکرپٹ ڈاؤن لوڈ کریں
 
 | اسکرپٹ | مقصد |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>فائل حذف کاری اسکرپٹ</a> | ایک یا زیادہ واضح طور پر دی گئی file IDs حذف کریں۔ |
+| <a href="/tools/imghost-token-delete.mjs" download>فائل حذف کاری اسکرپٹ</a> | ایک یا زیادہ واضح طور پر دی گئی file IDs حذف کریں۔ |
 
 Node.js 18 یا بعد کا ورژن درکار ہے۔
 
@@ -64,7 +64,7 @@ API ایک NDJSON progress stream واپس کرتا ہے۔ عام events میں 
 | پیرامیٹر | ضروری | وضاحت |
 | --- | --- | --- |
 | `--base-url <url>` | ہاں | ImgHost سائٹ URL، مثلاً `https://image.ai6.me`۔ |
-| `--token <token>` | ہاں | API Token۔ آپ `IMGBED_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
+| `--token <token>` | ہاں | API Token۔ آپ `IMGHOST_API_TOKEN` environment variable بھی استعمال کر سکتے ہیں۔ |
 | `--file-id <id>` | ہاں | حذف کرنے کے لیے file ID۔ آپ اسے کئی بار دے سکتے ہیں۔ |
 | `--strictness <strict\|soft>` | نہیں | حذف کاری کی سختی۔ طے شدہ قدر `strict` ہے۔ |
 | `--batch-size <n>` | نہیں | ہر درخواست میں فائلوں کی تعداد۔ طے شدہ قدر `15`، زیادہ سے زیادہ `15`۔ |
@@ -90,7 +90,7 @@ API ایک NDJSON progress stream واپس کرتا ہے۔ عام events میں 
 ایک فائل حذف کریں:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 environment variable سے token استعمال کریں:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 متعدد فائلیں حذف کریں:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 remote deletion ناکام ہونے پر بھی ImgHost record صاف کریں:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON output دیں اور نتیجہ محفوظ کریں:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 ہر درخواست کو 5 فائلوں تک محدود کریں:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 حذف کاری اسکرپٹ کو ImgHost file IDs درکار ہوتی ہیں۔ آپ پہلے listing script سے کسی directory میں فائلیں دیکھ سکتے ہیں:
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

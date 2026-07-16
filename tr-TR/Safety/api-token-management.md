@@ -21,7 +21,7 @@ API Token oluştururken veya düzenlerken yönetim izni olduğundan emin olun. Y
 Token değerini bir ortam değişkenine de koyabilirsiniz:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## Yönetim Betiklerini İndirme
@@ -30,9 +30,9 @@ Dokümantasyon paketi üç Node.js betiği sağlar:
 
 | Betik | Amaç |
 | --- | --- |
-| <a href="/tools/imgbed-token-upload-settings.mjs" download>Yükleme ayarları yönetim betiği</a> | Yükleme kanallarını, alt kanalları ve yük dengelemeyi yönetir. |
-| <a href="/tools/imgbed-token-site-settings.mjs" download>Site ayarları yönetim betiği</a> | Güvenlik ayarlarını, sayfa ayarlarını ve diğer ayarları yönetir. |
-| <a href="/tools/imgbed-token-federation.mjs" download>Federasyon ilişkisi yönetim betiği</a> | Hafif federasyon ilişkisi işlemlerini, istekleri ve mesajları yönetir. |
+| <a href="/tools/imghost-token-upload-settings.mjs" download>Yükleme ayarları yönetim betiği</a> | Yükleme kanallarını, alt kanalları ve yük dengelemeyi yönetir. |
+| <a href="/tools/imghost-token-site-settings.mjs" download>Site ayarları yönetim betiği</a> | Güvenlik ayarlarını, sayfa ayarlarını ve diğer ayarları yönetir. |
+| <a href="/tools/imghost-token-federation.mjs" download>Federasyon ilişkisi yönetim betiği</a> | Hafif federasyon ilişkisi işlemlerini, istekleri ve mesajları yönetir. |
 
 Node.js 18 veya üzeri gerekir.
 
@@ -41,7 +41,7 @@ Node.js 18 veya üzeri gerekir.
 | Parametre | Gerekli | Açıklama |
 | --- | --- | --- |
 | `--base-url <url>` | Evet | ImgHost site URL'si, örneğin `https://image.ai6.me`. |
-| `--token <token>` | Evet | API Token. `IMGBED_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
+| `--token <token>` | Evet | API Token. `IMGHOST_API_TOKEN` ortam değişkenini de kullanabilirsiniz. |
 | `--retries <n>` | Hayır | Geçici hata yeniden deneme sayısı. Varsayılan `3`. |
 | `--timeout-ms <n>` | Hayır | İstek zaman aşımı. Varsayılan `180000`. |
 | `--output <pretty\|json>` | Hayır | Çıktı biçimi. Varsayılan `pretty`; programlar için `json` kullanın. |
@@ -54,7 +54,7 @@ Node.js 18 veya üzeri gerekir.
 Yükleme ayarları betiği yükleme alt kanallarını listeler, okur, oluşturur, düzenler ve siler. Ayrıca bir üst düzey yükleme kanalı için yük dengelemeyi açıp kapatabilir.
 
 ```powershell
-node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
+node imghost-token-upload-settings.mjs --base-url "https://your-domain" --token "your API Token" --list
 ```
 
 ### Yükleme Ayarları Parametreleri
@@ -95,7 +95,7 @@ node imgbed-token-upload-settings.mjs --base-url "https://your-domain" --token "
 Tüm yükleme ayarlarını listeleme:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list
@@ -104,7 +104,7 @@ node imgbed-token-upload-settings.mjs `
 S3 kanal yapılandırmasını okuma:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -114,7 +114,7 @@ node imgbed-token-upload-settings.mjs `
 Bir S3 alt kanalını okuma:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -125,7 +125,7 @@ node imgbed-token-upload-settings.mjs `
 Bir alt kanal oluşturma veya düzenleme. Önce `--apply` olmadan çalıştırıp önizleyin:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -138,7 +138,7 @@ node imgbed-token-upload-settings.mjs `
 Onayladıktan sonra kaydedin:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -152,7 +152,7 @@ node imgbed-token-upload-settings.mjs `
 Bir alt kanalı silme:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `
@@ -164,7 +164,7 @@ node imgbed-token-upload-settings.mjs `
 S3 yük dengelemeyi etkinleştirme:
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --load-balance true `
@@ -182,7 +182,7 @@ Karmaşık alanlar için bir JSON dosyası yazıp `--patch-json` ile verin:
 ```
 
 ```powershell
-node imgbed-token-upload-settings.mjs `
+node imghost-token-upload-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --upsert `
@@ -205,7 +205,7 @@ Site ayarları betiği üç yapılandırma alanını yönetir:
 Düzenlenebilir alanları, bölümleri ve alanları görmek için önce `--list-sections` kullanın:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list-sections
@@ -229,7 +229,7 @@ node imgbed-token-site-settings.mjs `
 Sistem güncelleme bildirimi ayarlarını okuma:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --get `
@@ -240,7 +240,7 @@ node imgbed-token-site-settings.mjs `
 Sistem güncelleme bildirimi e-postasını değiştirme. Önce `--apply` olmadan çalıştırıp önizleyin:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -251,7 +251,7 @@ node imgbed-token-site-settings.mjs `
 Onayladıktan sonra kaydedin:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area security `
@@ -263,7 +263,7 @@ node imgbed-token-site-settings.mjs `
 Yönetici sayfasındaki yıldız efektini değiştirme:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area page `
@@ -275,7 +275,7 @@ node imgbed-token-site-settings.mjs `
 IP coğrafi konum dilini değiştirme:
 
 ```powershell
-node imgbed-token-site-settings.mjs `
+node imghost-token-site-settings.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --area others `
@@ -335,7 +335,7 @@ Dizin güncelleme, federasyon dizini silme ve alan adı değişikliği onayı ta
 Yerel düğüm durumunu ve iki ilişki listesini görme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --status
@@ -344,7 +344,7 @@ node imgbed-token-federation.mjs `
 Yalnızca giden düğümleri listeleme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -354,7 +354,7 @@ node imgbed-token-federation.mjs `
 Yalnızca gelen düğümleri listeleme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --list `
@@ -364,7 +364,7 @@ node imgbed-token-federation.mjs `
 Başka bir düğüme katılma isteği gönderme. Önce `--apply` olmadan çalıştırıp önizleyin:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -374,7 +374,7 @@ node imgbed-token-federation.mjs `
 Onayladıktan sonra kaydedin:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --join `
@@ -385,7 +385,7 @@ node imgbed-token-federation.mjs `
 Kayıtsız ilişki için yeniden başvurma:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --reapply `
@@ -397,7 +397,7 @@ node imgbed-token-federation.mjs `
 Gelen isteği kabul etme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --accept `
@@ -408,7 +408,7 @@ node imgbed-token-federation.mjs `
 Gelen isteği reddetme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --deny `
@@ -419,7 +419,7 @@ node imgbed-token-federation.mjs `
 Kurulmuş bir ilişkiye mesaj gönderme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --send-message `
@@ -432,7 +432,7 @@ node imgbed-token-federation.mjs `
 Giden bekleyen isteği iptal etme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -444,7 +444,7 @@ node imgbed-token-federation.mjs `
 Kabul edilmiş gelen ilişkiyi kaldırma:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --cancel `
@@ -456,7 +456,7 @@ node imgbed-token-federation.mjs `
 Sonlanmış gelen kaydı silme:
 
 ```powershell
-node imgbed-token-federation.mjs `
+node imghost-token-federation.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --delete `

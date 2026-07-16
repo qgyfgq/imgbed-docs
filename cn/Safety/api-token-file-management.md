@@ -19,14 +19,14 @@ API Token 文件管理适合给脚本、自动化任务和第三方管理面板�
 也可以把 Token 放到环境变量里：
 
 ```powershell
-$env:IMGBED_API_TOKEN="你的 API Token"
+$env:IMGHOST_API_TOKEN="你的 API Token"
 ```
 
 ## 下载脚本
 
 | 脚本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-manage.mjs" download>文件管理脚本</a> | 文件元数据、审查标签、文件标签、名单状态、移动、重命名、创建文件夹、IP 禁用/恢复、短期上传 Token 创建和删除 |
+| <a href="/tools/imghost-token-manage.mjs" download>文件管理脚本</a> | 文件元数据、审查标签、文件标签、名单状态、移动、重命名、创建文件夹、IP 禁用/恢复、短期上传 Token 创建和删除 |
 
 运行脚本需要本机安装 Node.js 18 或更高版本。
 
@@ -34,20 +34,20 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 
 | 能力 | 脚本 | 权限 |
 | --- | --- | --- |
-| 上传文件 | `imgbed-token-single-upload.mjs` / `imgbed-token-chunk-upload.mjs` | `upload` |
-| 列出文件、筛选文件、读取用户统计 | `imgbed-token-list.mjs` | `list` |
-| 删除明确指定的文件 | `imgbed-token-delete.mjs` | `delete` |
-| 编辑文件信息、标签、名单、移动、重命名、建文件夹、禁用 IP、创建或删除短期上传 Token | `imgbed-token-manage.mjs` | `manage` |
+| 上传文件 | `imghost-token-single-upload.mjs` / `imghost-token-chunk-upload.mjs` | `upload` |
+| 列出文件、筛选文件、读取用户统计 | `imghost-token-list.mjs` | `list` |
+| 删除明确指定的文件 | `imghost-token-delete.mjs` | `delete` |
+| 编辑文件信息、标签、名单、移动、重命名、建文件夹、禁用 IP、创建或删除短期上传 Token | `imghost-token-manage.mjs` | `manage` |
 | 编辑上传渠道、安全设置、页面设置、其他设置、联盟关系 | 配置管理相关脚本 | `manage` |
 
-`imgbed-token-manage.mjs` 不会上传文件、列出文件或删除文件。需要查找 `fileId` 时，先用列出脚本筛选文件；需要删除文件时，再把明确的 `fileId` 交给删除脚本。
+`imghost-token-manage.mjs` 不会上传文件、列出文件或删除文件。需要查找 `fileId` 时，先用列出脚本筛选文件；需要删除文件时，再把明确的 `fileId` 交给删除脚本。
 
 ## 通用参数
 
 | 参数 | 必填 | 说明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | 图床站点地址，例如 `https://image.ai6.me` |
-| `--token <token>` | 是 | API Token；也可以用 `IMGBED_API_TOKEN` 环境变量 |
+| `--token <token>` | 是 | API Token；也可以用 `IMGHOST_API_TOKEN` 环境变量 |
 | `--retries <n>` | 否 | 临时失败重试次数，默认 `3` |
 | `--timeout-ms <n>` | 否 | 单个请求超时时间，默认 `180000` |
 | `--output <pretty\|json>` | 否 | 输出格式，默认 `pretty`；程序调用建议用 `json` |
@@ -61,7 +61,7 @@ $env:IMGBED_API_TOKEN="你的 API Token"
 文件管理脚本多数动作都需要 `fileId`。可以先用列出脚本查询：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --files `
@@ -77,7 +77,7 @@ node imgbed-token-list.mjs `
 文件元数据用于修改后台文件管理里显示的文件名和读取来源。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-metadata `
@@ -89,7 +89,7 @@ node imgbed-token-manage.mjs `
 确认预览结果无误后再保存：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-metadata `
@@ -117,7 +117,7 @@ node imgbed-token-manage.mjs `
 读取审查标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get-label `
@@ -127,7 +127,7 @@ node imgbed-token-manage.mjs `
 设置审查标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-label `
@@ -152,7 +152,7 @@ node imgbed-token-manage.mjs `
 读取文件标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get-tags `
@@ -162,7 +162,7 @@ node imgbed-token-manage.mjs `
 追加标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --add-tags `
@@ -175,7 +175,7 @@ node imgbed-token-manage.mjs `
 移除标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --remove-tags `
@@ -187,7 +187,7 @@ node imgbed-token-manage.mjs `
 覆盖标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-tags `
@@ -200,7 +200,7 @@ node imgbed-token-manage.mjs `
 批量添加标签：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --batch-tags `
@@ -238,7 +238,7 @@ node imgbed-token-manage.mjs `
 设置单个文件为白名单：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-list-type `
@@ -250,7 +250,7 @@ node imgbed-token-manage.mjs `
 批量加入黑名单：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --batch-list-type `
@@ -263,7 +263,7 @@ node imgbed-token-manage.mjs `
 恢复默认名单状态：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --set-list-type `
@@ -286,7 +286,7 @@ node imgbed-token-manage.mjs `
 移动文件会把一个或多个文件移动到目标目录。后端单次请求最多处理 `15` 个文件，脚本会按 `--batch-size` 自动拆成多个请求顺序执行。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --move `
@@ -310,7 +310,7 @@ node imgbed-token-manage.mjs `
 重命名使用明确的旧文件 ID 和新文件 ID。新文件 ID 可以只改文件名，也可以同时改变目录。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --rename `
@@ -322,7 +322,7 @@ node imgbed-token-manage.mjs `
 批量重命名时，可以重复传 `--old-file-id` 和 `--new-file-id`：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --rename `
@@ -349,7 +349,7 @@ node imgbed-token-manage.mjs `
 ```
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --rename `
@@ -372,7 +372,7 @@ node imgbed-token-manage.mjs `
 图床的目录来自文件路径，本身没有真正的空目录。脚本创建文件夹时，会在目标目录下创建一个占位文件 `0.md`，这样后台文件管理和目录统计就能显示这个目录。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --create-folder `
@@ -396,7 +396,7 @@ node imgbed-token-manage.mjs `
 禁用某个上传 IP：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --block-ip "67.159.48.149" `
@@ -406,7 +406,7 @@ node imgbed-token-manage.mjs `
 恢复某个上传 IP：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --allow-ip "67.159.48.149" `
@@ -416,7 +416,7 @@ node imgbed-token-manage.mjs `
 查看当前禁止上传 IP 列表：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --blocked-ips
@@ -434,7 +434,7 @@ node imgbed-token-list.mjs `
 管理权限可以创建短期的上传专用 Token。这个 Token 固定只有 `upload` 权限，`autoDelete` 固定为 `true`，过期时间最长 `1` 天。
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --create-upload-token `
@@ -451,7 +451,7 @@ node imgbed-token-manage.mjs `
 ```powershell
 $expiresAt = [DateTimeOffset]::UtcNow.AddHours(12).ToUnixTimeMilliseconds()
 
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --create-upload-token `
@@ -473,7 +473,7 @@ node imgbed-token-manage.mjs `
 删除短期上传 Token：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --delete-upload-token `
@@ -530,7 +530,7 @@ Authorization: Bearer 你的 API Token
 默认 `pretty` 输出适合人工查看。如果要给其他程序继续处理，使用 `--output json`：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get-tags `
@@ -541,7 +541,7 @@ node imgbed-token-manage.mjs `
 也可以保存完整结果：
 
 ```powershell
-node imgbed-token-manage.mjs `
+node imghost-token-manage.mjs `
   --base-url "https://你的域名" `
   --token "你的 API Token" `
   --get-tags `
@@ -564,7 +564,7 @@ node imgbed-token-manage.mjs `
 
 ### 怎么知道要传哪个 fileId
 
-先用 `imgbed-token-list.mjs --files` 查询文件。返回结果里的 `name` 通常就是文件 ID，也就是这里的 `--file-id`。
+先用 `imghost-token-list.mjs --files` 查询文件。返回结果里的 `name` 通常就是文件 ID，也就是这里的 `--file-id`。
 
 ### 批量操作一次最多多少个文件
 

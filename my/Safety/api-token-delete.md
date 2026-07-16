@@ -2,7 +2,7 @@
 
 API Token ဖျက်ခြင်းစခရစ်သည် စခရစ်၊ အလိုအလျောက်လုပ်ငန်းစဉ်များနှင့် ပြင်ပပရိုဂရမ်များမှ ImgHost ထဲရှိ ဖိုင်များကို ဖျက်ရန် အသုံးပြုသည်။ စီမံခန့်ခွဲရေးမျက်နှာပြင်ကို ဖွင့်ရန် မလိုပါ။ ဆိုက်လိပ်စာ၊ Token နှင့် တိကျသော ဖိုင် ID ကို ပေးလိုက်လျှင် ImgHost ထဲရှိ ဖိုင်တစ်ခု သို့မဟုတ် ဖိုင်အများအပြားကို ဖျက်နိုင်သည်။
 
-ဖျက်ခြင်းသည် ရေးသားပြောင်းလဲသော လုပ်ဆောင်ချက်ဖြစ်သည်။ အမိန့်ကို လုပ်ဆောင်ပြီးသည်နှင့် ဖိုင်များကို တကယ်ဖျက်မည်။ ထို့ကြောင့် `imgbed-token-list.mjs` ဖြင့် ဖျက်လိုသော `fileId` ကို အရင်စစ်ပြီးမှ ထို ID များကို ဖျက်ခြင်းစခရစ်သို့ ပေးရန် အကြံပြုသည်။
+ဖျက်ခြင်းသည် ရေးသားပြောင်းလဲသော လုပ်ဆောင်ချက်ဖြစ်သည်။ အမိန့်ကို လုပ်ဆောင်ပြီးသည်နှင့် ဖိုင်များကို တကယ်ဖျက်မည်။ ထို့ကြောင့် `imghost-token-list.mjs` ဖြင့် ဖျက်လိုသော `fileId` ကို အရင်စစ်ပြီးမှ ထို ID များကို ဖျက်ခြင်းစခရစ်သို့ ပေးရန် အကြံပြုသည်။
 
 ![API Token ပြင်ဆင်ခြင်း](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ API Token ကို ဖန်တီးခြင်း သို့မဟုတ�
 Token ကို ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းတွင်လည်း ထားနိုင်သည်။
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## စခရစ် ဒေါင်းလုဒ်လုပ်ရန်
 
 | စခရစ် | အသုံးပြုရန်နေရာ |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>ဖိုင်ဖျက်ခြင်းစခရစ်</a> | တိတိကျကျ သတ်မှတ်ထားသော ဖိုင် ID တစ်ခု သို့မဟုတ် အများအပြားကို ဖျက်ရန် |
+| <a href="/tools/imghost-token-delete.mjs" download>ဖိုင်ဖျက်ခြင်းစခရစ်</a> | တိတိကျကျ သတ်မှတ်ထားသော ဖိုင် ID တစ်ခု သို့မဟုတ် အများအပြားကို ဖျက်ရန် |
 
 အသုံးပြုရန် Node.js 18 သို့မဟုတ် ၎င်းထက်အသစ်သော ဗားရှင်း လိုအပ်သည်။
 
@@ -64,7 +64,7 @@ API သည် NDJSON တိုးတက်မှုစီးကြောင်�
 | ပါရာမီတာ | လိုအပ်မှု | ရှင်းလင်းချက် |
 | --- | --- | --- |
 | `--base-url <url>` | လိုအပ် | ImgHost ဆိုက် URL။ ဥပမာ `https://image.ai6.me` |
-| `--token <token>` | လိုအပ် | API Token။ `IMGBED_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
+| `--token <token>` | လိုအပ် | API Token။ `IMGHOST_API_TOKEN` ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းကိုလည်း သုံးနိုင်သည်။ |
 | `--file-id <id>` | လိုအပ် | ဖျက်လိုသော ဖိုင် ID။ အကြိမ်များစွာ ပေးနိုင်သည်။ |
 | `--strictness <strict\|soft>` | မလိုအပ် | ဖျက်ခြင်း၏ တင်းကျပ်မှု။ မူရင်းတန်ဖိုး `strict`။ |
 | `--batch-size <n>` | မလိုအပ် | တောင်းဆိုမှုတစ်ကြိမ်တွင် ဖျက်မည့် ဖိုင်အရေအတွက်။ မူရင်းတန်ဖိုး `15`၊ အများဆုံး `15`။ |
@@ -90,7 +90,7 @@ API သည် NDJSON တိုးတက်မှုစီးကြောင်�
 ဖိုင်တစ်ခု ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 ပတ်ဝန်းကျင်ပြောင်းလဲကိန်းထဲရှိ Token ကို သုံးရန်:
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 ဖိုင်အများအပြား ဖျက်ရန်:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 အဝေးဘက်ဖျက်ခြင်းမအောင်မြင်သော်လည်း ImgHost မှတ်တမ်းကို ရှင်းရန်:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 JSON အဖြစ် ထုတ်ပြီး ရလဒ်သိမ်းရန်:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 တောင်းဆိုမှုတစ်ကြိမ်တွင် ဖျက်မည့် ဖိုင်ကို ၅ ခုသာ ကန့်သတ်ရန်:
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 ဖျက်ခြင်းစခရစ်အတွက် လိုအပ်သည်မှာ ImgHost ဖိုင် ID ဖြစ်သည်။ ဒါရိုက်ထရီထဲရှိ ဖိုင်များကို စာရင်းစခရစ်ဖြင့် အရင်ကြည့်နိုင်သည်။
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `

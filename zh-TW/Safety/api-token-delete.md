@@ -2,7 +2,7 @@
 
 API Token 刪除檔案適合給腳本、自動化任務和第三方程式使用。你不需要打開後台頁面，只要帶上站點網址、Token 和明確的檔案 ID，就可以刪除 ImgHost 裡的單一或多個檔案。
 
-刪除是寫入操作，命令執行後會真的刪除資料。建議先用 `imgbed-token-list.mjs` 查清楚要刪除的 `fileId`，再把這些 ID 傳給刪除腳本。
+刪除是寫入操作，命令執行後會真的刪除資料。建議先用 `imghost-token-list.mjs` 查清楚要刪除的 `fileId`，再把這些 ID 傳給刪除腳本。
 
 ![編輯 API Token](../../image/Safety/apitoken/编辑删除权限api.png)
 
@@ -19,14 +19,14 @@ System Settings -> Security Settings -> API Token
 你也可以把 Token 放到環境變數：
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 ```
 
 ## 下載腳本
 
 | 腳本 | 用途 |
 | --- | --- |
-| <a href="/tools/imgbed-token-delete.mjs" download>刪除檔案腳本</a> | 刪除一個或多個明確指定的檔案 ID。 |
+| <a href="/tools/imghost-token-delete.mjs" download>刪除檔案腳本</a> | 刪除一個或多個明確指定的檔案 ID。 |
 
 執行腳本需要本機安裝 Node.js 18 或更新版本。
 
@@ -64,7 +64,7 @@ Authorization: Bearer <token>
 | 參數 | 必填 | 說明 |
 | --- | --- | --- |
 | `--base-url <url>` | 是 | ImgHost 站點網址，例如 `https://image.ai6.me`。 |
-| `--token <token>` | 是 | API Token；也可以使用 `IMGBED_API_TOKEN` 環境變數。 |
+| `--token <token>` | 是 | API Token；也可以使用 `IMGHOST_API_TOKEN` 環境變數。 |
 | `--file-id <id>` | 是 | 要刪除的檔案 ID，可重複傳入多個。 |
 | `--strictness <strict\|soft>` | 否 | 刪除嚴格度，預設 `strict`。 |
 | `--batch-size <n>` | 否 | 每個請求刪除的檔案數，預設 `15`，最大 `15`。 |
@@ -90,7 +90,7 @@ Authorization: Bearer <token>
 刪除單一檔案：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --file-id "photos/2026/a.txt"
@@ -99,9 +99,9 @@ node imgbed-token-delete.mjs `
 使用環境變數中的 Token：
 
 ```powershell
-$env:IMGBED_API_TOKEN="your API Token"
+$env:IMGHOST_API_TOKEN="your API Token"
 
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt"
 ```
@@ -109,7 +109,7 @@ node imgbed-token-delete.mjs `
 刪除多個檔案：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -119,7 +119,7 @@ node imgbed-token-delete.mjs `
 遠端刪除失敗時仍清理 ImgHost 記錄：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --strictness soft
@@ -128,7 +128,7 @@ node imgbed-token-delete.mjs `
 輸出 JSON 並儲存結果：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --output json `
@@ -138,7 +138,7 @@ node imgbed-token-delete.mjs `
 限制每次請求刪除 5 個檔案：
 
 ```powershell
-node imgbed-token-delete.mjs `
+node imghost-token-delete.mjs `
   --base-url "https://your-domain" `
   --file-id "photos/2026/a.txt" `
   --file-id "photos/2026/b.txt" `
@@ -150,7 +150,7 @@ node imgbed-token-delete.mjs `
 刪除腳本需要的是 ImgHost 檔案 ID。可以先用列出腳本查看目錄裡的檔案：
 
 ```powershell
-node imgbed-token-list.mjs `
+node imghost-token-list.mjs `
   --base-url "https://your-domain" `
   --token "your API Token" `
   --files `
