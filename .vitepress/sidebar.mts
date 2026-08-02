@@ -68,7 +68,7 @@ const pageItems = [
   'Page/sponsor-coffee'
 ] as const
 
-const sectionLabels: Record<string, Record<string, string>> = {
+export const sectionLabels: Record<string, Record<string, string>> = {
   en: { upload: 'Upload', safety: 'Safety', other: 'Other', page: 'Page' },
   cn: { upload: '上传', safety: '安全', other: '其他', page: '页面' },
   'zh-TW': { upload: '上傳', safety: '安全', other: '其他', page: '頁面' },
@@ -153,13 +153,16 @@ function buildSidebar(prefix: string): DefaultTheme.SidebarItem[] {
   ]
 }
 
+// 英文是根语言，前缀为 '/'，Markdown 直接放在仓库根目录。
+// VitePress 按路径段数从多到少匹配侧边栏键，带语言前缀的 '/xx/' 都比 '/' 长，
+// 所以 /cn/upload/s3 会先命中 '/cn/'，只有无前缀的英文路径才落到 '/'。
 export const sidebar: DefaultTheme.Sidebar = {
+  '/': buildSidebar('/'),
   '/ar-SA/': buildSidebar('/ar-SA/'),
   '/bn-BD/': buildSidebar('/bn-BD/'),
   '/cn/': buildSidebar('/cn/'),
   '/cs-CZ/': buildSidebar('/cs-CZ/'),
   '/de-DE/': buildSidebar('/de-DE/'),
-  '/en/': buildSidebar('/en/'),
   '/es/': buildSidebar('/es/'),
   '/fa/': buildSidebar('/fa/'),
   '/fr-FR/': buildSidebar('/fr-FR/'),
